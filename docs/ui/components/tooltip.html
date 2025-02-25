@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ink UI - Web Components Meets Atomic Styles.</title>
+  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
+  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@stackpress" />
+  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
+  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
+  <link rel="favicon" href="/ink/favicon.ico" />
+  <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="/ink/styles/global.css" />
+  <link rel="stylesheet" type="text/css" href="/ink/build/client/7cd1ee9ef73e2da47d66.css" /><script data-template type="text/json">{"props":{"title":"Ink Documentation"},"env":{"PUBLIC_ENV":"development","BUILD_ID":"7cd1ee9ef73e2da47d66"}}</script>
+  <script src="/ink/build/client/7cd1ee9ef73e2da47d66.js"></script>
+  
+    <script src="/dev.js"></script>
+  
+</head>
+  <body class="light bg-t-0 tx-t-1 tx-arial">
+    <panel-layout>
+      <header><menu class="flex flex-center-y px-20 py-15 m-0 bg-t-1">
+  
+    <i class="fas fa-fw fa-bars cursor-pointer py-5 pr-10 none md-inline-block tx-t-1" ></i>
+    <div class="flex-grow"></div>
+  
+  <nav class="flex flex-center-y">
+    <a class="tx-primary" href="/ink/docs/index.html">Docs</a>
+    <a class="tx-t-1 tx-5xl ml-10" href="https://github.com/stackpress/ink" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <a class="bg-h-cb3837 pill tx-t-1 tx-lg ml-5 p-5 tx-center" href="https://www.npmjs.com/package/@stackpress/ink" target="_blank">
+      <i class="fab fa-npm tx-white"></i>
+    </a>
+  </nav>
+</menu></header>
+      <aside left><header class="flex flex-center-y bg-t-2 py-15 pr-5 pl-10">
+  <a href="/ink">
+    <img class="h-26 mr-10" src="/ink/ink-icon.png" alt="Ink Logo" />
+  </a>
+  <h3 class="flex-grow m-0 tx-upper">
+    <a class="tx-primary" href="/ink">Ink</a>
+  </h3>
+  <i class="fas fa-fw fa-chevron-left cursor-pointer none md-inline-block" ></i>
+</header>
+<nav class="bg-t-1 scroll-auto h-calc-full-60">
+  <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-0 pt-20 pb-10 pl-10 tx-upper">
+    Introduction
+  </h6>
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/index.html">
+      Documentation
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/getting-started.html">
+      Getting Started
+    </a>
+  
+
+  <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper">
+    Features
+  </h6>
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/markup-syntax.html">
+      Markup Syntax
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/state-management.html">
+      State Management
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/component-strategy.html">
+      Component Strategy
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/compiler-api.html">
+      Compiler API
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/client-api.html">
+      Client API
+    </a>
+  
+
+  <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper">
+    Usage
+  </h6>
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/template-engine.html">
+      Template Engine
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/single-page.html">
+      Single Page App
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/static-site.html">
+      Static Site Generator
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/component-publisher.html">
+      Component Publisher
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/developer-tools.html">
+      Developer Tools
+    </a>
+  
+
+
+    <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper">
+    UI
+  </h6>
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/ui/index.html">
+      Components
+    </a>
+  
+  
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/state-management.html">
+      Elements
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/docs/client-api.html">
+      Forms
+    </a>
+  
+</nav></aside>
+
+
+      <aside right>
+        <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
+            On this page
+          </h6>
+          <nav class="tx-14 tx-lh-32">
+            <a class="block tx-t-0" href="#pager#">Tab</a>
+            <nav class="pl-20">
+              <a class="block tx-t-1" href="#props">Props</a>
+              <a class="block tx-t-1" href="#PaginationExample">Pagination Example</a>
+              <a class="block tx-t-1" href="#CustomRangeAndPageSelection">Custom Range and Page Selection</a>
+              <a class="block tx-t-1" href="#CustomControlsAndStyles">Custom Controls and Styles</a>
+              <a class="block tx-t-1" href="#PaginationWithNoForwardOrRewind">Pagination with No Forward or Rewind</a>
+              
+            </nav>
+          </nav>
+        </menu>
+      </aside>
+
+
+
+      <main>
+        <nav class="p-10 bg-t-3">
+          <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
+        </nav>
+        <api-docs>
+
+
+        
+        <a name="pager"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">
+             Tooltips
+          </h1>
+          <ide-app title="Editor" class="py-20 ">
+            <ide-code class="scroll-y-auto" lang="js" trim>
+              import Badge from '@stackpress/ink-ui/element/panel';
+            </ide-code>
+          </ide-app>
+
+                <a name="props"></a>
+                <h2 class="tx-primary tx-upper tx-30 py-20">
+                Props
+                </h2>
+
+                    <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+                    <table-head>Property</table-head>
+                    <table-head>Type</table-head>
+                    <table-head>Required</table-head>
+                    <table-head>Notes</table-head>
+
+                    <table-row>
+                        <table-col>top</table-col>
+                        <table-col>Boolean/String/Number</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Positions the tooltip at the top. Can be a boolean, number (px), or string (e.g., "10px").</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>bottom</table-col>
+                        <table-col>Boolean/String/Number</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Positions the tooltip at the bottom. Can be a boolean, number (px), or string (e.g., "10px").</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>left</table-col>
+                        <table-col>Boolean/String/Number</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Positions the tooltip to the left. Can be a boolean, number (px), or string (e.g., "10px").</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>right</table-col>
+                        <table-col>Boolean/String/Number</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Positions the tooltip to the right. Can be a boolean, number (px), or string (e.g., "10px").</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>color</table-col>
+                        <table-col>String</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Sets the tooltip text color (e.g., "info", "primary", "success").</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>white</table-col>
+                        <table-col>Boolean</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Sets the tooltip text to white.</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>black</table-col>
+                        <table-col>Boolean</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Sets the tooltip text to black.</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>info</table-col>
+                        <table-col>Boolean</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Sets the tooltip text to an informational color (blue).</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>warning</table-col>
+                        <table-col>Boolean</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Sets the tooltip text to a warning color (yellow).</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>success</table-col>
+                        <table-col>Boolean</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Sets the tooltip text to a success color (green).</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>error</table-col>
+                        <table-col>Boolean</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Sets the tooltip text to an error color (red).</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>muted</table-col>
+                        <table-col>Boolean</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Sets the tooltip text to a muted color (gray).</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>primary</table-col>
+                        <table-col>Boolean</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Sets the tooltip text to a primary color (brand color).</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>secondary</table-col>
+                        <table-col>Boolean</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Sets the tooltip text to a secondary color.</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>curved</table-col>
+                        <table-col>Boolean</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Applies a curved border to the tooltip.</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>curve</table-col>
+                        <table-col>Number</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Specifies the radius of the tooltip's border.</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>center</table-col>
+                        <table-col>Boolean</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Centers the tooltip text.</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>padding</table-col>
+                        <table-col>Number</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Sets the padding inside the tooltip (in pixels).</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>opacity</table-col>
+                        <table-col>Number</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Adjusts the opacity of the tooltip (0-100).</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>width</table-col>
+                        <table-col>String/Number</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Sets the width of the tooltip. If "auto", it adjusts automatically. Can also be a number (px).</table-col>
+                    </table-row>
+
+                    <table-row>
+                        <table-col>background</table-col>
+                        <table-col>String</table-col>
+                        <table-col>No</table-col>
+                        <table-col>Sets the background color of the tooltip.</table-col>
+                    </table-row>
+
+                    </layout-table>
+
+
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Tooltip with Info Background
+</h2>
+
+<div class="mb-10">
+  This example demonstrates a tooltip with an info background. It appears above the text with curved corners, some padding, and an opacity of 80%. The tooltip shows when you hover over the "Hover me!" text, positioned above it.
+</div>
+
+<!-- Boxed Tooltip Example -->
+<div class="bg-t-3 h-120 flex flex-center p-20 mb-20">
+  <div class="tx-center tooltip-trigger">
+    Hover me!
+    <element-tip background-info curved top="-30" left="50" padding="5" opacity="80" width="150">
+      This is the first and last name
+    </element-tip>
+  </div>
+</div>
+
+<ide-code class="mb-10" trim >
+  &lt;element-tip 
+    background-info
+    curved
+    top="-30"
+    left="50"
+    padding="5"
+    opacity="80"
+    width="150"
+  &gt;
+    This is the first and last name
+  &lt;/element-tip&gt;
+</ide-code>
+
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Tooltip with Success Background
+</h2>
+
+<div class="mb-10">
+  This example shows a tooltip with a success background (green). The tooltip is positioned to the bottom-right of the element, with a subtle curve and padding.
+</div>
+
+<!-- Boxed Tooltip Example -->
+<div class="bg-t-3 h-120 flex flex-center p-20 mb-20">
+  <div class="tx-center tooltip-trigger">
+    Hover me to see success tooltip!
+    <element-tip background-success curved bottom="10" right="10" padding="10" opacity="90">
+      Successfully completed!
+    </element-tip>
+  </div>
+</div>
+
+<ide-code class="mb-10" trim >
+  &lt;element-tip 
+    background-success
+    curved
+    bottom="10"
+    right="10"
+    padding="10"
+    opacity="90"
+  &gt;
+    Successfully completed!
+  &lt;/element-tip&gt;
+</ide-code>
+
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Tooltip with Error Background
+</h2>
+
+<div class="mb-10">
+  This example demonstrates a tooltip with an error background (red) that appears on hover. The tooltip has custom width, and the text is displayed with some padding and a background color. It appears above the text and is aligned centrally.
+</div>
+
+<!-- Boxed Tooltip Example -->
+<div class="bg-t-3 h-120 flex flex-center p-20 mb-20">
+  <div class="tx-center tooltip-trigger">
+    Hover me to see error tooltip!
+    <element-tip background-error curved top="20" left="50" padding="8" opacity="95" width="180">
+      An error has occurred.
+    </element-tip>
+  </div>
+</div>
+
+<ide-code class="mb-10" trim >
+  &lt;element-tip 
+    background-error
+    curved
+    top="20"
+    left="50"
+    padding="8"
+    opacity="95"
+    width="180"
+  &gt;
+    An error has occurred.
+  &lt;/element-tip&gt;
+</ide-code>
+
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Tooltip with Warning Background
+</h2>
+
+<div class="mb-10">
+  This example features a tooltip with a warning background (yellow). It appears to the right of the trigger element and has a larger font size for better visibility.
+</div>
+
+<!-- Boxed Tooltip Example -->
+<div class="bg-t-3 h-120 flex flex-center p-20 mb-20">
+  <div class="tx-center tooltip-trigger">
+    Hover me to see warning tooltip!
+    <element-tip background-warning curved right="20" padding="12" opacity="85" width="200">
+      Please take caution!
+    </element-tip>
+  </div>
+</div>
+
+<ide-code class="mb-10" trim >
+  &lt;element-tip 
+    background-warning
+    curved
+    right="20"
+    padding="12"
+    opacity="85"
+    width="200"
+  &gt;
+    Please take caution!
+  &lt;/element-tip&gt;
+</ide-code>
+
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Tooltip with Centered Text and Curved Border
+</h2>
+
+<div class="mb-10">
+  This example demonstrates a tooltip with a centered alignment, and the tooltip has a curved border. The tooltip will be displayed above the text, with subtle styling.
+</div>
+
+<!-- Boxed Tooltip Example -->
+<div class="bg-t-3 h-120 flex flex-center p-20 mb-20">
+  <div class="tx-center tooltip-trigger">
+    Hover over me!
+    <element-tip background-muted curved top="-20" padding="8" opacity="80" width="120" center>
+      Information about this text.
+    </element-tip>
+  </div>
+</div>
+
+<ide-code class="mb-10" trim >
+  &lt;element-tip 
+    background-muted
+    curved
+    top="-20"
+    padding="8"
+    opacity="80"
+    width="120"
+    center
+  &gt;
+    Information about this text.
+  &lt;/element-tip&gt;
+</ide-code>
+
+
+
+
+
+            
+
+            <nav class="flex">
+            <a class="tx-primary py-40" href="/ink/ui/components/tab.html">
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>
+              Tab
+            </a>
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/alert.html">
+              Alert
+              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+            </a>
+          </nav>
+          <footer class="foot"></footer>
+        </api-docs>
+      </main>
+    </panel-layout>
+  </body>
+</html>

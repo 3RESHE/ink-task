@@ -65,7 +65,7 @@
                 </element-alert>
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/components/alert.html"
               >
                 Alerts
@@ -76,7 +76,7 @@
                 <element-badge warning curved class="mb-10">999</element-badge>
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/components/badge.html"
               >
                 Badges
@@ -96,12 +96,13 @@
                 />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/components/crumbs.html"
               >
                 Crumbs
               </a>
             </div>
+            
             <div class="basis-third-10 lg-basis-half-10 md-basis-full">
               <div class="bg-t-3 h-120 flex flex-center">
                 <element-icon name="info-circle" class="tx-info" />
@@ -110,7 +111,7 @@
                 <element-icon name="check-circle" class="tx-success" />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/components/icon.html"
               >
                 Icons
@@ -124,7 +125,7 @@
                 <element-loader error dashed thickness={10} size={10} speed={1500} />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/components/loader.html"
               >
                 Loaders
@@ -138,7 +139,7 @@
                 </element-alert>
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/components/notify.html"
               >
                 Notify
@@ -165,10 +166,10 @@
                 />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/components/pager.html"
               >
-                Pagers
+                Pager
               </a>
             </div>
             <div class="basis-third-10 lg-basis-half-10 md-basis-full">
@@ -181,7 +182,7 @@
                 </div>
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/components/panel.html"
               >
                 Panels
@@ -192,7 +193,7 @@
                 <element-progress width={50} info class="bg-muted rounded tx-13 h-20 tx-lh-20 w-full-20" />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/components/progress.html"
               >
                 Progress Bars
@@ -230,7 +231,7 @@
                 </element-tab>
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/components/tab.html"
               >
                 Tabs
@@ -264,14 +265,16 @@
                 </table-layout>
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/components/table.html"
               >
                 Tables
               </a>
             </div>
             <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+             
               <div class="bg-t-3 h-120 flex flex-center">
+               <div class="tx-center"> Hover me! </div>
                 <element-tip 
                   background-info 
                   curved 
@@ -279,9 +282,11 @@
                   left="50" 
                   padding="5"
                 >This is the first and last name</element-tip>
+                
               </div>
+                
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/components/tooltip.html"
               >
                 Tooltips

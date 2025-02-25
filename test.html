@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breadcrumb Component - Free ReactJS UI</title>
+    <meta name="description" content="Breadcrumbs in FRUI help users navigate through different levels of an application.">
+    <link rel="stylesheet" href="/_next/static/css/c38d523ddcf17629.css">
+</head>
+<body>
+    <section class="p-3 bg-b2">
+        <nav>
+            <div class="hidden md:flex items-center whitespace-nowrap overflow-x-auto">
+                <i class="fas fa-fw fa-icons inline-block mr-1 text-t1"></i>
+                <a class="inline-flex items-center text-t2" href="/component">Components</a>
+                <i class="fas fa-fw fa-chevron-right mx-1 text-t1"></i>
+                <span class="inline-flex items-center font-semibold text-t1">Breadcrumb</span>
+            </div>
+        </nav>
+    </section>
+
+    <h2 id="props" class="uppercase font-bold text-lg mt-8">Props</h2>
+    <table class="frui-tbl">
+        <thead>
+            <tr>
+                <th class="frui-tbl-head text-left bg-b3">Name</th>
+                <th class="frui-tbl-head text-left bg-b3">Type</th>
+                <th class="frui-tbl-head text-center bg-b3">Required</th>
+                <th class="frui-tbl-head text-left bg-b3">Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="frui-tbl-row">
+                <td class="frui-tbl-col bg-b2">items</td>
+                <td class="frui-tbl-col bg-b2">array</td>
+                <td class="frui-tbl-col bg-b2 text-center">Yes</td>
+                <td class="frui-tbl-col bg-b2">List of breadcrumb links</td>
+            </tr>
+            <tr class="frui-tbl-row">
+                <td class="frui-tbl-col bg-b1">separator</td>
+                <td class="frui-tbl-col bg-b1">string</td>
+                <td class="frui-tbl-col bg-b1 text-center">No</td>
+                <td class="frui-tbl-col bg-b1">Custom separator (default is "/")</td>
+            </tr>
+            <tr class="frui-tbl-row">
+                <td class="frui-tbl-col bg-b2">className</td>
+                <td class="frui-tbl-col bg-b2">string</td>
+                <td class="frui-tbl-col bg-b2 text-center">No</td>
+                <td class="frui-tbl-col bg-b2">Custom CSS classes</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="examples" class="uppercase font-bold text-lg mt-8">Examples</h2>
+    <div class="flex text-sm bg-black mt-2">
+        <pre class="flex-grow !p-4 !bg-transparent" style="display:block;overflow-x:auto;padding:0.5em;background:#444;color:#ddd">
+            <code class="language-typescript">&lt;Breadcrumb items={[{label: 'Home', href: '/'}, {label: 'Category', href: '/category'}, {label: 'Current Page'}]} /&gt;</code>
+        </pre>
+        <div class="text-sm p-4 text-gray-400 cursor-pointer whitespace-nowrap">
+            <i class="fas fa-copy"></i> Copy
+        </div>
+    </div>
+    
+    <h2 id="custom" class="uppercase font-bold text-lg mt-8">Custom Separator</h2>
+    <div class="flex text-sm bg-black mt-2">
+        <pre class="flex-grow !p-4 !bg-transparent" style="display:block;overflow-x:auto;padding:0.5em;background:#444;color:#ddd">
+            <code class="language-typescript">&lt;Breadcrumb items={[{label: 'Home', href: '/'}, {label: 'Category', href: '/category'}, {label: 'Current Page'}]} separator="&gt;" /&gt;</code>
+        </pre>
+        <div class="text-sm p-4 text-gray-400 cursor-pointer whitespace-nowrap">
+            <i class="fas fa-copy"></i> Copy
+        </div>
+    </div>
+</body>
+</html>

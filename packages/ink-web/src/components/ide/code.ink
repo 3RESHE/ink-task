@@ -14,13 +14,19 @@
   :host([inline]) > pre > code {
     display: inline !important;
   }
-  .snippet {
-    background-color: #000000;
-    color: #ABB2BF;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+
+.snippet {
+  background-color: #000000;
+  color: #ABB2BF;
+  height: 100%;
+  width: 100%; /* Ensures the background extends fully */
+  margin: 0;
+  padding: 0;
+  display: block;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: pre; /* Preserves spacing */
+}
+
 
   .line-numbers {
     position: relative;
@@ -70,9 +76,13 @@
     padding-right: 0.8em;
     text-align: right;
   }
-  .pad {
-    padding: 5px;
-  }
+
+.pad {
+  padding: 10px;
+  width: 100%; /* Ensures the padding applies fully */
+  box-sizing: border-box; /* Prevents overflow due to padding */
+}
+
 
   .terminal {
     background-color: #000000;
@@ -144,5 +154,6 @@
   </if>
 <else />
   <span>????</span>
+
 </if>
 
