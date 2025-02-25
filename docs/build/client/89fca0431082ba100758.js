@@ -3942,12 +3942,11 @@ var InkAPI = (() => {
   background-color: #000000;
   color: #ABB2BF;
   height: 100%;
-  width: 100%; /* Ensures the background extends fully */
+
   margin: 0;
   padding: 0;
   display: block;
-  overflow-x: auto; /* Enables horizontal scrolling */
-  white-space: pre; /* Preserves spacing */
+
 }
 
 

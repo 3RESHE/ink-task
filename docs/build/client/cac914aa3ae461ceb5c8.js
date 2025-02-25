@@ -757,7 +757,7 @@ var InkAPI = (() => {
         decoder.innerHTML = value;
         return decoder.value;
       };
-      var ClientRegistry10 = class _ClientRegistry {
+      var ClientRegistry9 = class _ClientRegistry {
         static get elements() {
           return this._elements;
         }
@@ -875,8 +875,8 @@ var InkAPI = (() => {
           return Array.from(children4).filter((child) => typeof child !== "undefined").map((child) => typeof child === "string" ? this.createText(child) : child instanceof Element_1.default ? child.element : child);
         }
       };
-      ClientRegistry10._elements = /* @__PURE__ */ new Map();
-      exports.default = ClientRegistry10;
+      ClientRegistry9._elements = /* @__PURE__ */ new Map();
+      exports.default = ClientRegistry9;
     }
   });
 
@@ -958,7 +958,7 @@ var InkAPI = (() => {
       var Registry_1 = __importDefault(require_Registry());
       var Emitter_1 = __importDefault(require_Emitter());
       var data_1 = __importDefault(require_data());
-      var ClientComponent9 = class _ClientComponent extends HTMLElement {
+      var ClientComponent8 = class _ClientComponent extends HTMLElement {
         static get registered() {
           return customElements.getName(this);
         }
@@ -1005,8 +1005,8 @@ var InkAPI = (() => {
         get virtual() {
           return this._virtual;
         }
-        set props(props4) {
-          this.setAttributes(props4);
+        set props(props3) {
+          this.setAttributes(props3);
         }
         set definition(definition) {
           this._definition = definition;
@@ -1279,7 +1279,7 @@ var InkAPI = (() => {
           }
         }
       };
-      exports.default = ClientComponent9;
+      exports.default = ClientComponent8;
     }
   });
 
@@ -1384,8 +1384,8 @@ var InkAPI = (() => {
       "use strict";
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.default = color;
-      function color(props4, styles, initial = false, selector = ":host", property = "color") {
-        const { color: color2, white, black, info, warning, success, error, muted, primary, secondary, theme } = props4;
+      function color(props3, styles, initial = false, selector = ":host", property = "color") {
+        const { color: color2, white, black, info, warning, success, error, muted, primary, secondary, theme } = props3;
         const style = color2 ? color2 : theme ? `var(--${theme})` : white ? "var(--white)" : black ? "var(--black)" : info ? "var(--info)" : warning ? "var(--warning)" : success ? "var(--success)" : error ? "var(--error)" : muted ? "var(--muted)" : primary ? "var(--primary)" : secondary ? "var(--secondary)" : initial;
         if (style) {
           styles.add(selector, property, style);
@@ -1401,8 +1401,8 @@ var InkAPI = (() => {
       "use strict";
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.default = curve;
-      function curve(props4, styles, initial = false, selector = ":host") {
-        const { curve: curve2, curved, rounded, pill } = props4;
+      function curve(props3, styles, initial = false, selector = ":host") {
+        const { curve: curve2, curved, rounded, pill } = props3;
         const style = curve2 ? `${curve2}px` : curved ? "4px" : rounded ? "12px" : pill ? "10000px" : initial;
         if (style) {
           styles.add(selector, "border-radius", style);
@@ -1419,8 +1419,8 @@ var InkAPI = (() => {
       "use strict";
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.default = display;
-      function display(props4, styles, initial = false, selector = ":host") {
-        const { flex, none, inline, block, "inline-block": iblock, "inline-flex": iflex } = props4;
+      function display(props3, styles, initial = false, selector = ":host") {
+        const { flex, none, inline, block, "inline-block": iblock, "inline-flex": iflex } = props3;
         const style = flex ? "flex" : none ? "none" : block ? "block" : inline ? "inline" : iflex ? "inline-flex" : iblock ? "inline-block" : initial;
         if (style) {
           styles.add(selector, "display", style);
@@ -1436,8 +1436,8 @@ var InkAPI = (() => {
       "use strict";
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.default = size;
-      function size(props4, styles, initial = false, selector = ":host", property = "font-size") {
-        const { size: size2, xs, sm, md, lg, xl, xl2, xl3, xl4, xl5 } = props4;
+      function size(props3, styles, initial = false, selector = ":host", property = "font-size") {
+        const { size: size2, xs, sm, md, lg, xl, xl2, xl3, xl4, xl5 } = props3;
         const style = size2 ? `${size2}px` : xs ? "8px" : sm ? "12px" : md ? "16px" : lg ? "20px" : xl ? "24px" : xl2 ? "28px" : xl3 ? "32px" : xl4 ? "36px" : xl5 ? "40px" : initial;
         if (style) {
           styles.add(selector, property, style);
@@ -1532,10 +1532,10 @@ var InkAPI = (() => {
         return mod && mod.__esModule ? mod : { "default": mod };
       };
       Object.defineProperty(exports, "__esModule", { value: true });
-      exports.default = props4;
+      exports.default = props3;
       var component_1 = __importDefault(require_component());
       var data_1 = __importDefault(require_data());
-      function props4(pointer = null) {
+      function props3(pointer = null) {
         const component = (0, component_1.default)(pointer, true);
         if (typeof component === "string") {
           return data_1.default.get("props") || {};
@@ -1553,11 +1553,11 @@ var InkAPI = (() => {
         return mod && mod.__esModule ? mod : { "default": mod };
       };
       Object.defineProperty(exports, "__esModule", { value: true });
-      exports.classlist = classlist3;
+      exports.classlist = classlist2;
       exports.default = classnames;
       var component_1 = __importDefault(require_component());
       var props_1 = __importDefault(require_props());
-      function classlist3(pointer = null) {
+      function classlist2(pointer = null) {
         var _a;
         if (pointer === "body") {
           return document.body.classList;
@@ -1615,7 +1615,7 @@ var InkAPI = (() => {
       };
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.SignalRegistry = void 0;
-      exports.default = signal2;
+      exports.default = signal;
       var component_1 = __importDefault(require_component());
       var SignalRegistry = class _SignalRegistry {
         static observe(component, value) {
@@ -1674,7 +1674,7 @@ var InkAPI = (() => {
       };
       exports.SignalRegistry = SignalRegistry;
       SignalRegistry._observers = /* @__PURE__ */ new Map();
-      function signal2(value, pointer = null) {
+      function signal(value, pointer = null) {
         const component = (0, component_1.default)(pointer);
         if (!component.initiated) {
           return SignalRegistry.observe(component, value);
@@ -3550,11 +3550,11 @@ var InkAPI = (() => {
     }
   });
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\state-management.ink
-  var state_management_exports = {};
-  __export(state_management_exports, {
+  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\markup-syntax.ink
+  var markup_syntax_exports = {};
+  __export(markup_syntax_exports, {
     BUILD_ID: () => BUILD_ID,
-    ClientRegistry: () => import_Registry9.default,
+    ClientRegistry: () => import_Registry8.default,
     TemplateDocument: () => TemplateDocument,
     components: () => components,
     data: () => import_data.default,
@@ -3563,7 +3563,7 @@ var InkAPI = (() => {
   });
   var import_Document = __toESM(require_Document());
   var import_Document2 = __toESM(require_Document2());
-  var import_Registry9 = __toESM(require_Registry());
+  var import_Registry8 = __toESM(require_Registry());
   var import_Emitter = __toESM(require_Emitter());
   var import_data = __toESM(require_data());
 
@@ -3837,16 +3837,66 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\ui.ink
-  var import_Registry6 = __toESM(require_Registry());
-  var import_Component6 = __toESM(require_Component());
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\code.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\app.ink
   var import_Registry5 = __toESM(require_Registry());
   var import_Component5 = __toESM(require_Component());
-  var import_prismjs = __toESM(require_prism());
   var import_ink2 = __toESM(require_ink());
-  var Code_5387662ecbed97347dd0 = class extends import_Component5.default {
+  var App_4ec139eab67151540039 = class extends import_Component5.default {
+    static id = "4ec139eab67151540039";
+    static tagname = "app";
+    static classname = "App_4ec139eab67151540039";
+    styles() {
+      return ``;
+    }
+    template() {
+      const { title, height } = (0, import_ink2.props)();
+      const style = height ? `height:${height}px` : "";
+      return () => [
+        import_Registry5.default.createText(`
+`, false),
+        import_Registry5.default.createElement("div", { "class": `curved scroll-hidden shadow-0-0-10-0-0-0-5` }, [
+          import_Registry5.default.createText(`
+  `, false),
+          import_Registry5.default.createElement("div", { "class": `relative flex flex-center-y gap-10 p-10 bg-t-1 tx-c-999999 tx-16` }, [
+            import_Registry5.default.createText(`
+    `, false),
+            import_Registry5.default.createElement("span", { "class": `bg-h-999999 pill h-10 w-10` }, []).element,
+            import_Registry5.default.createText(`
+    `, false),
+            import_Registry5.default.createElement("span", { "class": `bg-h-999999 pill h-10 w-10` }, []).element,
+            import_Registry5.default.createText(`
+    `, false),
+            import_Registry5.default.createElement("span", { "class": `bg-h-999999 pill h-10 w-10` }, []).element,
+            import_Registry5.default.createText(`
+    `, false),
+            import_Registry5.default.createElement("span", { "class": `flex flex-center h-full w-full absolute top-0 left-0` }, [
+              import_Registry5.default.createText(`
+      `, false),
+              ...this._toNodeList(title),
+              import_Registry5.default.createText(`
+    `, false)
+            ]).element,
+            import_Registry5.default.createText(`
+  `, false)
+          ]).element,
+          import_Registry5.default.createText(`
+  `, false),
+          import_Registry5.default.createElement("div", { "class": `bg-black tx-t-1 relative`, "style": style }, [
+            ...this._toNodeList((0, import_ink2.children)())
+          ]).element,
+          import_Registry5.default.createText(`
+`, false)
+        ]).element
+      ];
+    }
+  };
+
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\code.ink
+  var import_Registry6 = __toESM(require_Registry());
+  var import_Component6 = __toESM(require_Component());
+  var import_prismjs = __toESM(require_prism());
+  var import_ink3 = __toESM(require_ink());
+  var Code_5387662ecbed97347dd0 = class extends import_Component6.default {
     static id = "5387662ecbed97347dd0";
     static tagname = "code";
     static classname = "Code_5387662ecbed97347dd0";
@@ -3957,7 +4007,7 @@ var InkAPI = (() => {
         rtrim = false,
         detab = 0
       } = config;
-      const childlist = (0, import_ink2.children)();
+      const childlist = (0, import_ink3.children)();
       let snippet = childlist[0]?.textContent || "";
       if (detab) {
         snippet = snippet.replace(
@@ -3990,2659 +4040,69 @@ var InkAPI = (() => {
         }
       };
       return () => [
-        import_Registry5.default.createElement("link", { "rel": `stylesheet`, "href": `https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism.min.css` }).element,
-        import_Registry5.default.createText(`
+        import_Registry6.default.createElement("link", { "rel": `stylesheet`, "href": `https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism.min.css` }).element,
+        import_Registry6.default.createText(`
 `, false),
-        import_Registry5.default.createElement("link", { "rel": `stylesheet`, "href": `https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-tomorrow.min.css` }).element,
-        import_Registry5.default.createText(`
+        import_Registry6.default.createElement("link", { "rel": `stylesheet`, "href": `https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-tomorrow.min.css` }).element,
+        import_Registry6.default.createText(`
 `, false),
         ...!!(lang === "bash") ? [
-          import_Registry5.default.createText(`
+          import_Registry6.default.createText(`
   `, false),
-          import_Registry5.default.createElement("div", { "class": `terminal` }, [
-            import_Registry5.default.createElement("span", {}, [
-              import_Registry5.default.createText(`$`, false)
+          import_Registry6.default.createElement("div", { "class": `terminal` }, [
+            import_Registry6.default.createElement("span", {}, [
+              import_Registry6.default.createText(`$`, false)
             ]).element,
-            import_Registry5.default.createText(` `, false),
+            import_Registry6.default.createText(` `, false),
             ...this._toNodeList(childlist)
           ]).element,
-          import_Registry5.default.createText(`
+          import_Registry6.default.createText(`
 `, false)
         ] : !!snippet ? [
           ,
-          import_Registry5.default.createText(`
+          import_Registry6.default.createText(`
   `, false),
           ...!!numbers ? [
-            import_Registry5.default.createText(`
+            import_Registry6.default.createText(`
     `, false),
-            import_Registry5.default.createElement("pre", { "class": `snippet line-numbers` }, [
-              import_Registry5.default.createElement("code", { "mount": highlight }, []).element
+            import_Registry6.default.createElement("pre", { "class": `snippet line-numbers` }, [
+              import_Registry6.default.createElement("code", { "mount": highlight }, []).element
             ]).element,
-            import_Registry5.default.createText(`
+            import_Registry6.default.createText(`
   `, false)
           ] : true ? [
             ,
-            import_Registry5.default.createText(`
+            import_Registry6.default.createText(`
     `, false),
-            import_Registry5.default.createElement("pre", { "class": `snippet pad` }, [
-              import_Registry5.default.createElement("code", { "mount": highlight }, []).element
+            import_Registry6.default.createElement("pre", { "class": `snippet pad` }, [
+              import_Registry6.default.createElement("code", { "mount": highlight }, []).element
             ]).element,
-            import_Registry5.default.createText(`
+            import_Registry6.default.createText(`
   `, false)
           ] : [],
-          import_Registry5.default.createText(`
+          import_Registry6.default.createText(`
 `, false)
         ] : true ? [
           ,
-          import_Registry5.default.createText(`
+          import_Registry6.default.createText(`
   `, false),
-          import_Registry5.default.createElement("span", {}, [
-            import_Registry5.default.createText(`????`, false)
+          import_Registry6.default.createElement("span", {}, [
+            import_Registry6.default.createText(`????`, false)
           ]).element,
-          import_Registry5.default.createText(`
+          import_Registry6.default.createText(`
 
 `, false)
         ] : [],
-        import_Registry5.default.createText(`
-
-`, false)
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\ui.ink
-  var import_ink3 = __toESM(require_ink());
-
-  // src/components/api/types.json
-  var types_default = {
-    Asset: {
-      type: {
-        kind: "property",
-        list: false,
-        type: ["text/html", "text/javascript", "text/css", "text/plain"],
-        description: "The MIME type of the build file asset"
-      },
-      content: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The source code of the build file asset."
-      }
-    },
-    Path: {
-      path: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The file path",
-        example: "'/path/to/file'"
-      },
-      type: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The type of path.",
-        example: "'file'"
-      }
-    },
-    Config: {
-      brand: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The brand prefixed before the component tag name.",
-        example: "'ink'"
-      },
-      cwd: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The project's current working directory (cwd).",
-        example: "'/path/to/project'"
-      },
-      fs: {
-        kind: "property",
-        list: false,
-        type: "FileSystem",
-        description: "The file system being used to read/write files.",
-        example: "import fs from 'fs';\n\nfs"
-      },
-      emitter: {
-        kind: "property",
-        list: false,
-        type: "EventEmitter",
-        description: "The NodeJS EventEmitter instance being used.",
-        example: "import EventEmitter from 'events';\n\nnew EventEmitter();"
-      },
-      "name?": {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "Custom name of component."
-      },
-      "type?": {
-        kind: "property",
-        list: false,
-        type: ["document", "component", "template"],
-        description: "Type of component"
-      },
-      "minify?": {
-        kind: "property",
-        list: false,
-        type: "boolean",
-        description: "Whether to minify the generated JavaScript code."
-      },
-      "tsconfig?": {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The location of the used tsconfig.json.",
-        example: "'/path/to/tsconfig.json'"
-      },
-      "extname?": {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The component file extension.",
-        example: "'.ink'"
-      }
-    },
-    Import: {
-      typeOnly: {
-        kind: "property",
-        list: false,
-        type: "boolean",
-        description: "Should import as type only.",
-        example: "import type { Foo } from 'bar';"
-      },
-      "names?": {
-        kind: "property",
-        list: true,
-        type: "string",
-        description: "All the names imported",
-        example: "import { Foo, Bar } from 'foobar';"
-      },
-      default: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The default import name",
-        example: "import foo from 'bar';"
-      },
-      source: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The file path where names are imported from.",
-        example: "import * from 'foobar';"
-      }
-    },
-    Build: {
-      source: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "Returns the generated JavaScript source code.",
-        example: "compiler.import('./docs/api.ink').source; //server js code"
-      },
-      InkDocument: {
-        kind: "property",
-        list: false,
-        type: "ServerDocumentClass",
-        description: "Returns a server document class that can be instantiated.",
-        example: "new (compiler.import('./docs/api.ink').InkDocument);"
-      },
-      document: {
-        kind: "property",
-        list: false,
-        type: "ServerDocument",
-        description: "Returns the default instantiated document used to render the final HTML markup.",
-        example: "compiler.import('./docs/api.ink').document.render(); //<html>...</html>"
-      }
-    },
-    CacheOptions: {
-      buildPath: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The absolute path the build directory",
-        example: "'/path/to/build'"
-      },
-      "manifestFile?": {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The name of the manifest file.",
-        example: "'manifest.json'"
-      },
-      "environment?": {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The environment mode that will determine the cache strategy.",
-        example: "'production' | 'development'"
-      }
-    },
-    Component: {
-      ast: {
-        kind: "property",
-        list: false,
-        type: "AST",
-        description: "Returns an abstract syntax tree (AST) interpretation of the component.",
-        example: "component.ast.markup;"
-      },
-      brand: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "Returns the brand prefixed before the component tag name.",
-        example: "component.brand; //--> 'ink'"
-      },
-      classname: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "Returns the suggested class name of the component.",
-        example: "component.classname; //--> 'Button_abc123'"
-      },
-      components: {
-        kind: "property",
-        list: true,
-        type: "Component",
-        description: "Returns a list of child components imported by this component.",
-        example: "component.components[0].brand; //--> 'ink'"
-      },
-      contents: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "Returns the raw ink source code.",
-        example: "component.contents;"
-      },
-      cwd: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "Returns the project's current working directory (cwd).",
-        example: "component.cwd; //--> '/path/to/project'"
-      },
-      dependencies: {
-        kind: "property",
-        list: true,
-        type: "{ path: string, type: string }",
-        description: "Returns all the files this component imports sorted by type.",
-        example: "component.dependencies; //--> [{ type: 'file', path: './random/file' }, ...]"
-      },
-      dirname: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "Returns the directory name where this component file exists.",
-        example: "component.dirname;"
-      },
-      fs: {
-        kind: "property",
-        list: false,
-        type: "FileSystem",
-        description: "Returns the file system being used to read/write files.",
-        example: "component.fs;"
-      },
-      id: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "Returns a unique component ID used for build files.",
-        example: "component.id;"
-      },
-      imports: {
-        kind: "property",
-        list: true,
-        type: "Import",
-        description: "Returns the files imported by this component. This does not include any component files.",
-        example: "component.imports;"
-      },
-      markup: {
-        kind: "property",
-        list: true,
-        type: "Token",
-        description: "Returns the markup abstract syntax tree.",
-        example: "component.markup;"
-      },
-      loader: {
-        kind: "property",
-        list: false,
-        type: "FileLoader",
-        description: "Returns the file loader used to resolve paths of imported files.",
-        example: "component.loader.absolute('./path/to/some/file');"
-      },
-      parent: {
-        kind: "property",
-        list: false,
-        type: "Component|null",
-        description: "Returns the parent component, if any.",
-        example: "component.parent;"
-      },
-      registry: {
-        kind: "property",
-        list: false,
-        type: "Record<string, Component>",
-        description: "Returns all child components and sub-child components.",
-        example: "component.registry;"
-      },
-      relative: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "Returns the source file path relative to the current working directory (cwd).",
-        example: "component.contents;"
-      },
-      source: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "Returns the source file path. This may or may not be the absolute path.",
-        example: "component.source;"
-      },
-      scripts: {
-        kind: "property",
-        list: true,
-        type: "string",
-        description: "Returns all the collective JavaScript in the ink source file.",
-        example: "component.scripts;"
-      },
-      styles: {
-        kind: "property",
-        list: true,
-        type: "string",
-        description: "Returns all the collective CSS styles in the ink source file.",
-        example: "component.styles;"
-      },
-      tagname: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "Returns the suggested HTML tag name.",
-        example: "component.tagname;"
-      },
-      type: {
-        kind: "property",
-        list: false,
-        type: ["document", "component", "template"],
-        description: "Returns type of component. Will transpile depending on the type.",
-        example: "component.type;"
-      }
-    },
-    EventEmitter: {
-      render: {
-        kind: "event",
-        params: {
-          builder: {
-            kind: "property",
-            list: false,
-            type: "DocumentBuilder"
-          },
-          build: {
-            kind: "property",
-            list: false,
-            type: "Build"
-          },
-          props: {
-            kind: "property",
-            list: false,
-            type: "Hash"
-          }
-        },
-        data: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Triggers before the document is rendered.",
-        example: "compiler.emitter.on('render', e => {\n  const { builder, build, props } = e.params;\n  //...\n  e.data = 'new html...';\n});"
-      },
-      rendered: {
-        kind: "event",
-        params: {
-          builder: {
-            kind: "property",
-            list: false,
-            type: "DocumentBuilder"
-          },
-          build: {
-            kind: "property",
-            list: false,
-            type: "Build"
-          },
-          props: {
-            kind: "property",
-            list: false,
-            type: "Hash"
-          },
-          html: {
-            kind: "property",
-            list: false,
-            type: "string"
-          }
-        },
-        data: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Triggers after the document is rendered.",
-        example: "compiler.emitter.on('rendered', e => {\n  const { builder, build, props, html } = e.params;\n  //...\n  e.data = 'new html...';\n});"
-      },
-      build: {
-        kind: "event",
-        params: {
-          builder: {
-            kind: "property",
-            list: false,
-            type: "DocumentBuilder"
-          }
-        },
-        data: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Triggers before the document is built.",
-        example: "compiler.emitter.on('build', e => {\n  const { builder } = e.params;\n  //...\n  e.data = 'new ink source...';\n});"
-      },
-      built: {
-        kind: "event",
-        params: {
-          builder: {
-            kind: "property",
-            list: false,
-            type: "DocumentBuilder"
-          },
-          build: {
-            kind: "property",
-            list: false,
-            type: "Build"
-          }
-        },
-        data: {
-          kind: "property",
-          list: false,
-          type: "Build"
-        },
-        description: "Triggers after the document is built.",
-        example: "compiler.emitter.on('built', e => {\n  const { builder, build } = e.params;\n  //...\n  e.data = { ...build };\n});"
-      },
-      "build-client": {
-        kind: "event",
-        params: {
-          builder: {
-            kind: "property",
-            list: false,
-            type: "DocumentBuilder"
-          }
-        },
-        data: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Triggers before the client js is rendered.",
-        example: "compiler.emitter.on('build-client', e => {\n  const { builder } = e.params;\n  //...\n  e.data = 'new ink source...';\n});"
-      },
-      "built-client": {
-        kind: "event",
-        params: {
-          builder: {
-            kind: "property",
-            list: false,
-            type: "DocumentBuilder"
-          },
-          build: {
-            kind: "property",
-            list: false,
-            type: "Build"
-          }
-        },
-        data: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Triggers after the client js is rendered.",
-        example: "compiler.emitter.on('built-client', e => {\n  const { builder, build } = e.params;\n  //...\n  e.data = 'new client js...';\n});"
-      },
-      "build-markup": {
-        kind: "event",
-        params: {
-          builder: {
-            kind: "property",
-            list: false,
-            type: "DocumentBuilder"
-          }
-        },
-        data: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Triggers before markup is rendered.",
-        example: "compiler.emitter.on('build-markup', e => {\n  const { builder } = e.params;\n  //...\n  e.data = 'new ink source...';\n});"
-      },
-      "built-markup": {
-        kind: "event",
-        params: {
-          builder: {
-            kind: "property",
-            list: false,
-            type: "DocumentBuilder"
-          },
-          build: {
-            kind: "property",
-            list: false,
-            type: "Build"
-          }
-        },
-        data: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Triggers after markup is rendered.",
-        example: "compiler.emitter.on('built-markup', e => {\n  const { builder, build } = e.params;\n  //...\n  e.data = 'new markup...';\n});"
-      },
-      "build-server": {
-        kind: "event",
-        params: {
-          builder: {
-            kind: "property",
-            list: false,
-            type: "DocumentBuilder"
-          }
-        },
-        data: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Triggers before the server js is rendered.",
-        example: "compiler.emitter.on('build-server', e => {\n  const { builder } = e.params;\n  //...\n  e.data = 'new ink source...';\n});"
-      },
-      "built-server": {
-        kind: "event",
-        params: {
-          builder: {
-            kind: "property",
-            list: false,
-            type: "DocumentBuilder"
-          },
-          build: {
-            kind: "property",
-            list: false,
-            type: "Build"
-          }
-        },
-        data: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Triggers after the server js is rendered.",
-        example: "compiler.emitter.on('built-server', e => {\n  const { builder, build } = e.params;\n  //...\n  e.data = 'new server js...';\n});"
-      },
-      "build-styles": {
-        kind: "event",
-        params: {
-          builder: {
-            kind: "property",
-            list: false,
-            type: "DocumentBuilder"
-          }
-        },
-        data: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Triggers before the css styles are rendered.",
-        example: "compiler.emitter.on('build-styles', e => {\n  const { builder } = e.params;\n  //...\n  e.data = 'new ink source...';\n});"
-      },
-      "built-styles": {
-        kind: "event",
-        params: {
-          builder: {
-            kind: "property",
-            list: false,
-            type: "DocumentBuilder"
-          },
-          build: {
-            kind: "property",
-            list: false,
-            type: "Build"
-          }
-        },
-        data: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Triggers after the css styles is rendered.",
-        example: "compiler.emitter.on('built-styles', e => {\n  const { builder, build } = e.params;\n  //...\n  e.data = 'new css...';\n});"
-      },
-      "manifest-load": {
-        kind: "event",
-        params: {
-          manifest: {
-            kind: "property",
-            list: false,
-            type: "DocumentManifest"
-          },
-          map: {
-            kind: "property",
-            list: false,
-            type: "Map<string, string>"
-          }
-        },
-        data: {
-          kind: "property",
-          list: false,
-          type: "Map<string, string>"
-        },
-        description: "Triggers before the manifest is loaded.",
-        example: "compiler.emitter.on('manifest-load', e => {\n  const { manifest, map } = e.params;\n  //...\n  e.data = new Map<string, string>();\n});"
-      },
-      "manifest-resolve": {
-        kind: "event",
-        params: {
-          manifest: {
-            kind: "property",
-            list: false,
-            type: "DocumentManifest"
-          },
-          id: {
-            kind: "property",
-            list: false,
-            type: "string"
-          }
-        },
-        description: "Triggers before a build ID is resolved.",
-        example: "compiler.emitter.on('manifest-resolve', e => {\n  const { manifest, id } = e.params;\n  //...\n});"
-      },
-      "manifest-resolved": {
-        kind: "event",
-        params: {
-          manifest: {
-            kind: "property",
-            list: false,
-            type: "DocumentManifest"
-          },
-          id: {
-            kind: "property",
-            list: false,
-            type: "string"
-          },
-          path: {
-            kind: "property",
-            list: false,
-            type: "string"
-          }
-        },
-        data: {
-          kind: "property",
-          list: false,
-          type: "Map<string, string>"
-        },
-        description: "Triggers after a build ID/entry is set.",
-        example: "compiler.emitter.on('manifest-resolved', e => {\n  const { manifest, id, path } = e.params;\n  //...\n});"
-      },
-      "manifest-unresolved": {
-        kind: "event",
-        params: {
-          manifest: {
-            kind: "property",
-            list: false,
-            type: "DocumentManifest"
-          },
-          id: {
-            kind: "property",
-            list: false,
-            type: "string"
-          },
-          path: {
-            kind: "property",
-            list: false,
-            type: "string|undefined"
-          }
-        },
-        data: {
-          kind: "property",
-          list: false,
-          type: "Map<string, string>"
-        },
-        description: "Triggers after a build ID is deleted.",
-        example: "compiler.emitter.on('manifest-unresolved', e => {\n  const { manifest, id, path } = e.params;\n  //...\n});"
-      }
-    },
-    DocumentManifest: {
-      emitter: {
-        kind: "property",
-        list: false,
-        type: "EventEmitter",
-        description: "The NodeJS EventEmitter instance being used.",
-        example: "compiler.manifest.emitter.on('render', e => {\n  console.log(e.params);\n});"
-      },
-      registry: {
-        kind: "property",
-        list: false,
-        type: "Map<string, string>",
-        description: "The manifest registry used to map build IDs to document entry files.",
-        example: "compiler.manifest.registry.entries();"
-      },
-      builder: {
-        kind: "function",
-        async: false,
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "id",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "DocumentBuilder"
-        },
-        description: "Returns a document builder given the build id.",
-        example: "compiler.manifest.builder('abc123');"
-      },
-      delete: {
-        kind: "function",
-        async: false,
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "id",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "DocumentManifest"
-        },
-        description: "Removes an entry file from the manifest given the build id.",
-        example: "compiler.manifest.delete('abc123');"
-      },
-      entries: {
-        kind: "function",
-        async: false,
-        args: [],
-        returns: {
-          kind: "property",
-          list: true,
-          type: "[ string, string ]"
-        },
-        description: "Returns an array of build IDs and entry file paths.",
-        example: "compiler.manifest.entries();"
-      },
-      get: {
-        kind: "function",
-        async: false,
-        args: [
-          {
-            kind: "property",
-            name: "id",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns the entry file path given the build id.",
-        example: "compiler.manifest.get('abc123');"
-      },
-      has: {
-        kind: "function",
-        async: false,
-        args: [
-          {
-            kind: "property",
-            name: "id",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "boolean"
-        },
-        description: "Returns true if the build id exists in the manifest.",
-        example: "compiler.manifest.has('abc123');"
-      },
-      load: {
-        kind: "function",
-        async: false,
-        args: [
-          {
-            kind: "property",
-            name: "manifest",
-            type: "Record<string, string>"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "DocumentManifest"
-        },
-        description: "Loads an entire manifest object to the registry.",
-        example: "compiler.manifest.load({ abc123: '/path/to/entry.ink' });"
-      },
-      keys: {
-        kind: "function",
-        async: false,
-        args: [],
-        returns: {
-          kind: "property",
-          list: true,
-          type: "string"
-        },
-        description: "Returns an array of build IDs.",
-        example: "compiler.manifest.keys();"
-      },
-      set: {
-        kind: "function",
-        async: false,
-        args: [
-          {
-            kind: "property",
-            name: "id",
-            type: "string"
-          },
-          {
-            kind: "property",
-            name: "path",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "DocumentManifest"
-        },
-        description: "Sets an entry file path to the manifest given the build id.",
-        example: "compiler.manifest.set('abc123', '/path/to/entry.ink');"
-      },
-      toJson: {
-        kind: "function",
-        async: false,
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns the manifest as a JSON string.",
-        example: "compiler.manifest.toJson();"
-      },
-      values: {
-        kind: "function",
-        async: false,
-        args: [],
-        returns: {
-          kind: "property",
-          list: true,
-          type: "string"
-        },
-        description: "Returns an array of entry file paths.",
-        example: "compiler.manifest.values();"
-      }
-    },
-    DocumentTranspiler: {
-      directive: {
-        kind: "function",
-        async: false,
-        args: [
-          {
-            kind: "property",
-            name: "directive",
-            type: "DirectiveInterface"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "DocumentTranspiler"
-        },
-        description: "Adds a directive that transpiles custom markup tags like if/elif/else, each, try/catch.",
-        example: "compiler.fromSource('./docs/api.ink').transpiler.directive(CustomDirective);"
-      },
-      transpile: {
-        kind: "function",
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "SourceFile"
-        }
-      },
-      description: "Converts a ink file to server-side JavaScript.",
-      example: "compiler.fromSource('./docs/api.ink').transpiler.transpile();"
-    },
-    DocumentBuilder: {
-      document: {
-        kind: "property",
-        list: false,
-        type: "Component",
-        description: "Returns a document component with various meta information, used for transpilation.",
-        example: "compiler.fromSource('./docs/api.ink').document.classname; //--> 'Index_abc123'"
-      },
-      emitter: {
-        kind: "property",
-        list: false,
-        type: "EventEmitter",
-        description: "The NodeJS EventEmitter instance being used.",
-        example: "compiler.fromSource('./docs/api.ink').emitter.on('render', e => {\n  console.log(e.params);\n});"
-      },
-      extnames: {
-        kind: "property",
-        list: true,
-        type: "string",
-        description: "Returns the file extensions that are recognized to parse as Ink components.",
-        example: "compiler.fromSource('./docs/api.ink').extnames; //--> [ 'ink' ]"
-      },
-      transpiler: {
-        kind: "property",
-        list: false,
-        type: "DocumentTranspiler",
-        description: "Returns a transpiler used to convert a ink file to server-side JavaScript.",
-        example: "compiler.fromSource('./docs/api.ink').transpiler.transpile();"
-      },
-      tsconfig: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "Returns the location of the used tsconfig.json.",
-        example: "compiler.fromSource('./docs/api.ink').tsconfig; //--> /path/to/tsconfig.json"
-      },
-      build: {
-        kind: "function",
-        async: true,
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "Build"
-        },
-        description: "Generates the server-side component and brings it into the runtime.",
-        example: "compiler.fromSource('./docs/api.ink').build();"
-      },
-      client: {
-        kind: "function",
-        async: true,
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Generates the browser-side JavaScript.",
-        example: "compiler.fromSource('./docs/api.ink').client(); //client js code"
-      },
-      component: {
-        kind: "function",
-        async: true,
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Generates the source file as an independent component.",
-        example: "compiler.fromSource('./docs/my-button.ink').component(); //component js code"
-      },
-      markup: {
-        kind: "function",
-        async: true,
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Generates the html markup.",
-        example: "compiler.fromSource('./docs/api.ink').markup(); //<html>...</html>"
-      },
-      server: {
-        kind: "function",
-        async: true,
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Generates the server-side JavaScript.",
-        example: "compiler.fromSource('./docs/api.ink').markup(); //server js code"
-      },
-      styles: {
-        kind: "function",
-        async: true,
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Generates the css styles.",
-        example: "compiler.fromSource('./docs/api.ink').styles(); //css code"
-      }
-    },
-    ServerDocumentClass: {
-      component: {
-        kind: "property",
-        list: false,
-        type: "[ string, string ]",
-        description: "Returns the component tag name and class name.",
-        example: "compiler.import('./docs/api.ink').InkDocument.component; //--> [ 'tui-button', 'TuiButton_abc123' ]"
-      },
-      new: {
-        kind: "function",
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "ServerDocument"
-        },
-        description: "Instantiates the server document class on the server-side used to render the final HTML.",
-        example: "new (compiler.import('./docs/api.ink').InkDocument);"
-      }
-    },
-    ServerDocument: {
-      id: {
-        kind: "function",
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns a unique document ID used to map the build cache.",
-        example: "compiler.import('./docs/api.ink').document.id(); //--> 'abc123'"
-      },
-      styles: {
-        kind: "function",
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns the css styles for this document.",
-        example: "compiler.import('./docs/api.ink').document.styles(); //css styles"
-      },
-      template: {
-        template: "function",
-        args: [],
-        returns: {
-          kind: "property",
-          list: true,
-          type: "Element"
-        },
-        description: "Returns an array of Element children and sub-children.",
-        example: "compiler.import('./docs/api.ink').document.template();"
-      },
-      render: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            name: "props",
-            type: "Record<string, any>"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns the final document HTML markup.",
-        example: "compiler.import('./docs/api.ink').document.render();"
-      }
-    },
-    InkOptions: {
-      "brand?": {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The brand prefixed before the component tag name.",
-        example: "const compiler = ink({ brand: 'ink' });"
-      },
-      "cwd?": {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The project's current working directory (cwd).",
-        example: "const compiler = ink({ cwd: '/path/to/project' });'"
-      },
-      "fs?": {
-        kind: "property",
-        list: false,
-        type: "FileSystem",
-        description: "The file system being used to read/write files.",
-        example: "import fs from 'fs';\n\nconst compiler = ink({ fs });'"
-      },
-      "emitter?": {
-        kind: "property",
-        list: false,
-        type: "EventEmitter",
-        description: "The NodeJS EventEmitter instance being used.",
-        example: "import emitter from 'events';\n\nconst compiler = ink({ emitter });'"
-      },
-      "minify?": {
-        kind: "property",
-        list: false,
-        type: "boolean",
-        description: "Whether to minify the generated JavaScript code.",
-        example: "const compiler = ink({ minify: true });'"
-      },
-      "tsconfig?": {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The location of the used tsconfig.json.",
-        example: "const compiler = ink({ tsconfig: '/path/to/tsconfig.json' });'"
-      },
-      "extname?": {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The component file extension.",
-        example: "const compiler = ink({ extname: '.ink' });'"
-      }
-    },
-    InkCompiler: {
-      config: {
-        kind: "property",
-        list: false,
-        type: "Config",
-        description: "The Ink configuration",
-        example: "compiler.config.brand; //--> 'ink'"
-      },
-      fs: {
-        kind: "property",
-        list: false,
-        type: "FileSystem",
-        description: "The file system being used.",
-        example: "compiler.fs.readFileSync('some/file', 'utf8');"
-      },
-      emitter: {
-        kind: "property",
-        list: false,
-        type: "EventEmitter",
-        description: "The NodeJS EventEmitter instance being used.",
-        example: "compiler.emitter.on('render', e => {\n  console.log(e.params);\n});"
-      },
-      manifest: {
-        kind: "property",
-        list: false,
-        type: "DocumentManifest",
-        description: "The manifest registry used to map build IDs to document entry files.",
-        example: "compiler.manifest.entries();"
-      },
-      component: {
-        kind: "function",
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "Component"
-        }
-      },
-      fromId: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "id",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "DocumentBuilder"
-        },
-        description: "Returns a new DocumentBuilder instance given a build ID.",
-        example: "compiler.fromId('abc123').build();"
-      },
-      fromCache: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "cacheFile",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "Build"
-        },
-        description: "Returns build information from a compiled template.",
-        example: "compiler.fromCache('/path/to/build/abc123.js').document.render();"
-      },
-      fromSource: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "sourceFile",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "DocumentBuilder"
-        },
-        description: "Returns a new DocumentBuilder instance given a template source file.",
-        example: "compiler.fromSource('./docs/api.ink').build();"
-      },
-      use: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "options",
-            type: "Function"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "InkCompiler"
-        },
-        description: "Enables a default build cache strategy.",
-        example: "compiler.use(plugin)"
-      },
-      asset: {
-        kind: "function",
-        async: true,
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "assetFile",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "Asset"
-        },
-        description: "Returns a compiled build asset, given an asset file name.",
-        example: "compiler.asset('abc123.css'); //--> { type: 'text/css', content: '...' }"
-      },
-      client: {
-        kind: "function",
-        async: true,
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "sourceFile",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns a compiled client script, given the the template source file.",
-        example: "compiler.client('./docs/api.ink'); //client script"
-      },
-      import: {
-        kind: "function",
-        async: true,
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "sourceFile",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "Build"
-        },
-        description: "Returns build information, given the the template source file.",
-        example: "compiler.import('/path/to/build/abc123.js').document.render();"
-      },
-      markup: {
-        kind: "function",
-        async: true,
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "sourceFile",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns a compiled markup, given the the template source file.",
-        example: "compiler.markup('./docs/api.ink'); //--> <html>...</html>"
-      },
-      render: {
-        kind: "function",
-        async: true,
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "sourceFile",
-            type: "string"
-          },
-          {
-            kind: "property",
-            list: false,
-            name: "props",
-            type: "Hash"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns the final HTML markup, given the the template source file.",
-        example: "compiler.render('./docs/api.ink', {\n  title: 'API Documentation'\n});"
-      },
-      server: {
-        kind: "function",
-        async: true,
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "sourceFile",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns compiled server code, given the the template source file.",
-        example: "compiler.server('./docs/api.ink'); // server script"
-      },
-      styles: {
-        kind: "function",
-        async: true,
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "sourceFile",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns compiled css styles, given the the template source file.",
-        example: "compiler.styles('./docs/api.ink'); //css styles"
-      }
-    },
-    InkComponent: {
-      attr: {
-        kind: "property",
-        list: false,
-        type: "Hash",
-        description: "Returns only the valid HTML tag attributes (string and true).",
-        example: "this.attr; //--> { disabled: true, type: 'button' }"
-      },
-      props: {
-        kind: "property",
-        list: false,
-        type: "Hash",
-        description: "Returns all the attributes assigned to the component.",
-        example: "this.props; //--> { disabled: true, count: 4, click: handleClick }"
-      },
-      metadata: {
-        kind: "property",
-        list: false,
-        type: "[ string, string ]",
-        description: "Returns the tag and class name of the component.",
-        example: "this.metadata; //--> [ 'fancy-button', 'FancyButton_abc123' ]"
-      },
-      styles: {
-        kind: "function",
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns the css styles used in the component.",
-        example: "this.styles(); //css styles"
-      },
-      template: {
-        kind: "function",
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "Node[]"
-        },
-        description: "Returns a function that returns an array of elements, text nodes and web components",
-        example: "this.template(); //--> () => [ Element, Text, Element, ... ]"
-      },
-      render: {
-        kind: "function",
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Renders the children and returns the final HTML markup.",
-        example: "this.render(); //--> '<p>...</p>'"
-      }
-    },
-    ClientRegistry: {
-      elements: {
-        kind: "property",
-        list: false,
-        type: "Map<Element, InkElement>",
-        description: "Returns a map of elements used in the DOM.",
-        example: "InkAPI.ClientRegistry.elements.get(component);"
-      },
-      createComponent: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "tagname",
-            type: "string"
-          },
-          {
-            kind: "property",
-            list: false,
-            name: "component",
-            type: "InkComponent"
-          },
-          {
-            kind: "property",
-            list: false,
-            name: "props",
-            type: "Hash"
-          },
-          {
-            kind: "property",
-            list: false,
-            name: "children>",
-            type: "Node[]"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "InkElement"
-        },
-        description: "Creates a InkElement from a web component class.",
-        example: "InkAPI.ClientRegistry.createComponent('fancy-button', InkComponent, { title: 'Hello' }, children);"
-      },
-      createElement: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "tagname",
-            type: "string"
-          },
-          {
-            kind: "property",
-            list: false,
-            name: "props",
-            type: "Hash"
-          },
-          {
-            kind: "property",
-            list: false,
-            name: "children>",
-            type: "Node[]"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "InkElement"
-        },
-        description: "Creates a InkElement from a string tag name.",
-        example: "InkAPI.ClientRegistry.createElement('a', { href: '/' }, children);"
-      },
-      createText: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "text",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "TextNode"
-        },
-        description: "Creates a TextNode from a raw string.",
-        example: "InkAPI.ClientRegistry.createText('foo');"
-      },
-      get: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "element",
-            type: "Element"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "InkElement"
-        },
-        description: "Returns a InkElement given a DOM element.",
-        example: "InkAPI.ClientRegistry.get(element)"
-      },
-      has: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "element",
-            type: "Element"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "boolean"
-        },
-        description: "Returns true if the given element exists in the registry",
-        example: "InkAPI.ClientRegistry.has(element)"
-      },
-      map: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "callback",
-            type: "Function"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: true,
-          type: "T"
-        },
-        description: "Like array map for registry returns an array of whatever the callback returns.",
-        example: "InkAPI.ClientRegistry.map((ink, element) => [ink, element]);"
-      },
-      register: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "element",
-            type: "InkElement"
-          },
-          {
-            kind: "property",
-            list: false,
-            name: "props",
-            type: "Hash"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "InkElement"
-        },
-        description: "Registers a InkElement to the registry.",
-        example: "InkAPI.ClientRegistry.register(element, { foo: 'bar' });"
-      }
-    },
-    InkElement: {
-      attributes: {
-        kind: "property",
-        list: false,
-        type: "Hash",
-        description: "Returns all the attributes assigned to the element.",
-        example: "element.attributes; //--> { href: '/', title: 'Home' }"
-      },
-      element: {
-        kind: "property",
-        list: false,
-        type: "Element",
-        description: "Returns the DOM element.",
-        example: "element.element; //--> <a href='/' title='Home'>"
-      },
-      hasAttribute: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "name",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "boolean"
-        },
-        description: "Returns true if the element has the given attribute.",
-        example: "element.hasAttribute('href');"
-      },
-      getAttribute: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "name",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "unknown"
-        },
-        description: "Returns the value of the given attribute.",
-        example: "element.getAttribute('href');"
-      },
-      removeAttribute: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "name",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "InkElement"
-        },
-        description: "Removes the given attribute from the element.",
-        example: "element.removeAttribute('href');"
-      },
-      setAttribute: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "name",
-            type: "string"
-          },
-          {
-            kind: "property",
-            list: false,
-            name: "value",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "InkElement"
-        },
-        description: "Sets the given attribute to the element.",
-        example: "element.setAttribute('href', '/');"
-      },
-      setAttributes: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "attributes",
-            type: "Hash"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "InkElement"
-        },
-        description: "Sets multiple attributes to the element.",
-        example: "element.setAttributes({ href: '/', title: 'Home' });"
-      }
-    },
-    InkEmitter: {
-      emit: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "event",
-            type: "string"
-          },
-          {
-            kind: "property",
-            list: false,
-            name: "target",
-            type: "T"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "InkEmitter"
-        },
-        description: "Emits an event with optional parameters.",
-        example: "emitter.emit('click', { x: 10, y: 20 });"
-      },
-      unbind: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "event",
-            type: "string"
-          },
-          {
-            kind: "property",
-            list: false,
-            name: "listener",
-            type: "Function"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "InkEmitter"
-        },
-        description: "Removes an event listener.",
-        example: "emitter.unbind('click', handleClick);"
-      },
-      on: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "event",
-            type: "string"
-          },
-          {
-            kind: "property",
-            list: false,
-            name: "listener",
-            type: "Function"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "InkEmitter"
-        },
-        description: "Adds an event listener.",
-        example: "emitter.on('click', handleClick);"
-      },
-      once: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "event",
-            type: "string"
-          },
-          {
-            kind: "property",
-            list: false,
-            name: "listener",
-            type: "Function"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "InkEmitter"
-        },
-        description: "Adds an event listener that only fires once.",
-        example: "emitter.once('click', handleClick);"
-      }
-    },
-    InkAPI: {
-      BUILD_ID: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The unique build ID used to map the build cache.",
-        example: "InkAPI.BUILD_ID; //--> 'abc123'"
-      },
-      InkComponent: {
-        kind: "property",
-        list: false,
-        type: "InkComponent",
-        description: "The Ink component class used to create custom elements.",
-        example: "new InkAPI.InkComponent();"
-      },
-      InkElement: {
-        kind: "property",
-        list: false,
-        type: "InkElement",
-        description: "The Ink element class used to create custom elements.",
-        example: "new InkAPI.InkElement(\n  document.createElement('a'),\n  { href: '/' }\n); ]"
-      },
-      InkEmitter: {
-        kind: "property",
-        list: false,
-        type: "InkEmitter",
-        description: "The Ink emitter class used to create custom events.",
-        example: "new InkAPI.InkEmitter();"
-      },
-      InkException: {
-        kind: "property",
-        list: false,
-        type: "InkException",
-        description: "The Ink exception class used to create custom errors.",
-        example: "throw InkAPI.InkException.for('error message');"
-      },
-      ClientRegistry: {
-        kind: "property",
-        list: false,
-        type: "ClientRegistry",
-        description: "The Ink registry class used to store custom elements.",
-        example: "new InkAPI.ClientRegistry.createElement('a', { href: '/' });"
-      },
-      children: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "component",
-            type: "InkComponent"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: true,
-          type: "Node"
-        },
-        description: "Returns an array of child nodes.",
-        example: "InkAPI.children(component); //--> [ Element, Text, Element, ... ]"
-      },
-      components: {
-        kind: "property",
-        list: false,
-        type: "Record<string, InkComponent>",
-        description: "Returns an object of Ink components classes used in the DOM.",
-        example: "new InkAPI.components['fancy-button']; //--> InkComponent"
-      },
-      data: {
-        kind: "property",
-        list: false,
-        type: "InkDataMap",
-        description: "The Ink data map used to bring server side data to the client.",
-        example: "InkAPI.data.get('props');"
-      },
-      emitter: {
-        kind: "property",
-        list: false,
-        type: "InkEmitter",
-        description: "The Ink emitter class used to create custom events.",
-        example: "InkAPI.emitter.on('click', () => {});"
-      },
-      props: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "component",
-            type: "InkComponent"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: true,
-          type: "Hash"
-        },
-        description: "Returns an object of component attributes",
-        example: "InkAPI.props(component); //--> { foo: 'bar', count: 4 }"
-      },
-      signal: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "component",
-            type: "InkComponent"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "Signal"
-        },
-        description: "Returns a signal object used to re-render components whenever its value changes",
-        example: "const count = InkAPI.signal(1, component)"
-      }
-    },
-    "Render Methods": {
-      asset: {
-        kind: "function",
-        async: true,
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "assetFile",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "Asset"
-        },
-        description: "Returns a compiled build asset, given an asset file name.",
-        example: "await compiler.asset('abc123.css'); //--> { type: 'text/css', content: '...' }"
-      },
-      client: {
-        kind: "function",
-        async: true,
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "sourceFile",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns a compiled client script, given the the template source file.",
-        example: "await compiler.client('./docs/api.ink'); //client script"
-      },
-      markup: {
-        kind: "function",
-        async: true,
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "sourceFile",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns a compiled markup, given the the template source file.",
-        example: "await compiler.markup('./docs/api.ink'); //--> <html>...</html>"
-      },
-      render: {
-        kind: "function",
-        async: true,
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "sourceFile",
-            type: "string"
-          },
-          {
-            kind: "property",
-            list: false,
-            name: "props",
-            type: "Hash"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns the final HTML markup, given the the template source file.",
-        example: "await compiler.render('./docs/api.ink', {\n  title: 'API Documentation'\n});"
-      },
-      server: {
-        kind: "function",
-        async: true,
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "sourceFile",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns compiled server code, given the the template source file.",
-        example: "await compiler.server('./docs/api.ink'); // server script"
-      },
-      styles: {
-        kind: "function",
-        async: true,
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "sourceFile",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "string"
-        },
-        description: "Returns compiled css styles, given the the template source file.",
-        example: "await compiler.styles('./docs/api.ink'); //css styles"
-      }
-    },
-    DeveloperOptions: {
-      "cwd?": {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The current working directory",
-        example: "const { refresh, router } = dev({ cwd: process.cwd() })"
-      },
-      "emitter?": {
-        kind: "property",
-        list: false,
-        type: "EventEmitter",
-        description: "The NodeJS EventEmitter instance being used.",
-        example: "import emitter from 'events';\n\nconst { refresh, router } = dev({ emitter });'"
-      },
-      "include?": {
-        kind: "property",
-        list: true,
-        type: "string",
-        description: "An array of extension names to watch for",
-        example: "const { refresh, router } = dev({ include: [ '.js', '.ts', '.ink', '.ink' ] });'"
-      },
-      "ignore?": {
-        kind: "property",
-        list: true,
-        type: "(string|RegExp)",
-        description: "An array of extension names to ignore",
-        example: "const { refresh, router } = dev({ ignore: [ '*.test.*' ] });'"
-      },
-      "route?": {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The route path to use for the client watcher",
-        example: "const { refresh, router } = dev({ route: '/__ink_dev__' })"
-      },
-      "tsconfig?": {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The path to the tsconfig.json file",
-        example: "const { refresh, router } = dev({ tsconfig: '/path/to/tsconfig.json' })"
-      },
-      "extname?": {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "the component file extension",
-        example: "const { refresh, router } = dev({ extname: '.ink' })"
-      }
-    },
-    RefreshServer: {
-      cwd: {
-        kind: "property",
-        list: false,
-        type: "string",
-        description: "The current working directory",
-        example: "refresh.cwd"
-      },
-      emitter: {
-        kind: "property",
-        list: false,
-        type: "EventEmitter",
-        description: "The NodeJS EventEmitter instance being used.",
-        example: "refresh.emitter.on('render', e => {\n  console.log(e.params);\n});"
-      },
-      sync: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            name: "builder",
-            list: false,
-            type: "DocumentBuilder"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "void"
-        },
-        description: "Registers a document builder to a client watcher list",
-        example: "refresh.emitter.on('render', e => {\n  console.log(e.params);\n});"
-      },
-      close: {
-        kind: "function",
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "RefreshServer"
-        },
-        description: "Closes the server and stops the watchers.",
-        example: "refresh.close();"
-      },
-      refresh: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "filePath",
-            type: "string"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "Promise<RefreshServer>"
-        },
-        description: "Whenever a file is changed this will be called to instruct each client watcher how to update their document.",
-        example: "await refresh.refresh('/some/file.ink');"
-      },
-      wait: {
-        kind: "function",
-        args: [
-          {
-            kind: "property",
-            list: false,
-            name: "req",
-            type: "Request"
-          },
-          {
-            kind: "property",
-            list: false,
-            name: "res",
-            type: "Response"
-          }
-        ],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "RefreshServer"
-        },
-        description: "Opens a connection to the server via SSE and waits for changes.",
-        example: "refresh.wait(req, res);"
-      },
-      watch: {
-        kind: "function",
-        args: [],
-        returns: {
-          kind: "property",
-          list: false,
-          type: "RefreshServer"
-        },
-        description: "Starts the server that watches for file changes.",
-        example: "refresh.watch();"
-      }
-    },
-    "Developer Tools": {
-      refresh: {
-        kind: "property",
-        list: false,
-        type: "RefreshServer",
-        description: "The refresh server instance used to update clients.",
-        example: "const { refresh } = dev();\nrefresh.sync(builder);"
-      },
-      router: {
-        kind: "property",
-        list: false,
-        type: "Function",
-        description: "HTTP middleware to handle developer tool routes like '/dev.js' and '/__ink_dev__'.",
-        example: "const { router } = dev();\napp.use(router);"
-      }
-    },
-    "Express Developer Tools": {
-      refresh: {
-        kind: "property",
-        list: false,
-        type: "RefreshServer",
-        description: "The refresh server instance used to update clients.",
-        example: "const { refresh } = dev();\nrefresh.sync(builder);"
-      },
-      router: {
-        kind: "property",
-        list: false,
-        type: "Function",
-        description: "Express middleware to handle developer tool routes like '/dev.js' and '/__ink_dev__'.",
-        example: "const { router } = dev();\napp.use(router);"
-      },
-      view: {
-        kind: "property",
-        list: false,
-        type: "Function",
-        description: "Middleware used to setup an express view engine.",
-        example: "const { view } = dev();\napp.engine('ink', view(compiler));"
-      }
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\ui.ink
-  var Ui_2b08d18966ac07e0669a = class extends import_Component6.default {
-    static id = "2b08d18966ac07e0669a";
-    static tagname = "ui";
-    static classname = "Ui_2b08d18966ac07e0669a";
-    styles() {
-      return ``;
-    }
-    template() {
-      (0, import_ink3.classlist)().add(
-        "block",
-        "my-40",
-        "scroll-hidden",
-        "curved",
-        "shadow-0-0-10-0-0-0-5"
-      );
-      const { start = "InkCompiler" } = (0, import_ink3.props)();
-      const paths = (0, import_ink3.signal)([start]);
-      const active = (0, import_ink3.signal)(start);
-      const next = (e) => {
-        const type = e.target.getAttribute("data-type");
-        paths.value = [...paths.value, type];
-        active.value = type;
-      };
-      const prev = () => {
-        paths.value = paths.value.slice(0, paths.value.length - 1);
-        active.value = paths.value[paths.value.length - 1];
-      };
-      return () => [
         import_Registry6.default.createText(`
-`, false),
-        import_Registry6.default.createElement("h3", { "class": `tx-secondary bg-t-2 tx-16 m-0 p-10` }, [
-          import_Registry6.default.createText(`
-  `, false),
-          ...!!(paths.value.length > 1) ? [
-            import_Registry6.default.createText(`
-    `, false),
-            import_Registry6.default.createElement("a", { "class": `tx-t-1 cursor-pointer`, "click": prev }, [
-              import_Registry6.default.createText(`
-      `, false),
-              import_Registry6.default.createElement("i", { "class": `fas fa-arrow-left` }, []).element,
-              import_Registry6.default.createText(`
-    `, false)
-            ]).element,
-            import_Registry6.default.createText(`
-  `, false)
-          ] : [],
-          import_Registry6.default.createText(`
-  API: `, false),
-          ...this._toNodeList(active.value),
-          import_Registry6.default.createText(`
-`, false)
-        ]).element,
-        import_Registry6.default.createText(`
-`, false),
-        import_Registry6.default.createElement("div", { "class": `bg-t-0 p-10` }, [
-          import_Registry6.default.createText(`
-  `, false),
-          import_Registry6.default.createElement("div", { "class": `relative mb-20 scroll-auto` }, [
-            import_Registry6.default.createText(`
-    `, false),
-            import_Registry6.default.createElement("table", { "class": `w-full b-collapse` }, [
-              import_Registry6.default.createText(`
-      `, false),
-              import_Registry6.default.createElement("thead", {}, [
-                import_Registry6.default.createText(`
-        `, false),
-                import_Registry6.default.createElement("th", { "class": `p-10 tx-left tx-upper` }, [
-                  import_Registry6.default.createText(`Property`, false)
-                ]).element,
-                import_Registry6.default.createText(`
-        `, false),
-                ...!active.value.includes("Emitter") ? [
-                  import_Registry6.default.createText(`
-          `, false),
-                  import_Registry6.default.createElement("th", { "class": `p-10 tx-left tx-upper` }, [
-                    import_Registry6.default.createText(`Returns`, false)
-                  ]).element,
-                  import_Registry6.default.createText(`
-        `, false)
-                ] : [],
-                import_Registry6.default.createText(`
-        `, false),
-                import_Registry6.default.createElement("th", { "class": `p-10 tx-left tx-upper` }, [
-                  import_Registry6.default.createText(`Description`, false)
-                ]).element,
-                import_Registry6.default.createText(`
-      `, false)
-              ]).element,
-              import_Registry6.default.createText(`
-      `, false),
-              import_Registry6.default.createElement("tbody", {}, [
-                import_Registry6.default.createText(`
-        `, false),
-                ...Object.entries(types_default[active.value]).map(([key, prop]) => [
-                  import_Registry6.default.createText(`
-          `, false),
-                  import_Registry6.default.createElement("tr", {}, [
-                    import_Registry6.default.createText(`
-            `, false),
-                    ...!!(prop.kind === "property") ? [
-                      import_Registry6.default.createText(`
-              `, false),
-                      import_Registry6.default.createElement("td", { "class": `tx-primary tx-top tx-nowrap b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
-                        import_Registry6.default.createText(`
-                `, false),
-                        ...this._toNodeList(key),
-                        import_Registry6.default.createText(`
-              `, false)
-                      ]).element,
-                      import_Registry6.default.createText(`
-              `, false),
-                      ...!!types_default[prop.type] ? [
-                        import_Registry6.default.createText(`
-                `, false),
-                        import_Registry6.default.createElement("td", { "class": `tx-top tx-nowrap b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
-                          import_Registry6.default.createText(`
-                  `, false),
-                          import_Registry6.default.createElement("a", { "class": `tx-underline tx-info cursor-pointer`, "data-type": prop.type, "click": next }, [
-                            import_Registry6.default.createText(`
-                    `, false),
-                            ...this._toNodeList(prop.type),
-                            import_Registry6.default.createText(`
-                  `, false)
-                          ]).element,
-                          ...this._toNodeList(prop.list ? "[]" : ""),
-                          import_Registry6.default.createText(`
-                `, false)
-                        ]).element,
-                        import_Registry6.default.createText(`
-              `, false)
-                      ] : true ? [
-                        ,
-                        import_Registry6.default.createText(`
-                `, false),
-                        import_Registry6.default.createElement("td", { "class": `tx-top tx-nowrap b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
-                          import_Registry6.default.createText(`
-                  `, false),
-                          ...this._toNodeList(prop.type),
-                          ...this._toNodeList(prop.list ? "[]" : ""),
-                          import_Registry6.default.createText(`
-                `, false)
-                        ]).element,
-                        import_Registry6.default.createText(`
-              `, false)
-                      ] : [],
-                      import_Registry6.default.createText(`
-            `, false)
-                    ] : !!(prop.kind === "function") ? [
-                      ,
-                      import_Registry6.default.createText(`
-              `, false),
-                      import_Registry6.default.createElement("td", { "class": `tx-primary tx-top b-solid b-t-2 bx-0 bb-0 bt-1 p-10`, "nowrap": true }, [
-                        import_Registry6.default.createText(`
-                `, false),
-                        ...this._toNodeList(key),
-                        import_Registry6.default.createText(`(
-                  `, false),
-                        ...Object.entries(prop.args).map(([index, arg]) => [
-                          import_Registry6.default.createText(`
-                    `, false),
-                          ...!!(index > 0) ? [
-                            import_Registry6.default.createText(`, `, false)
-                          ] : [],
-                          import_Registry6.default.createText(`
-                    `, false),
-                          ...this._toNodeList(arg.name),
-                          import_Registry6.default.createText(`: 
-                    `, false),
-                          ...!!types_default[arg.type] ? [
-                            import_Registry6.default.createText(`
-                      `, false),
-                            import_Registry6.default.createElement("a", { "class": `tx-underline tx-info cursor-pointer`, "data-type": arg.type, "click": next }, [
-                              import_Registry6.default.createText(`
-                        `, false),
-                              ...this._toNodeList(arg.type),
-                              import_Registry6.default.createText(`
-                      `, false)
-                            ]).element,
-                            ...this._toNodeList(arg.list ? "[]" : ""),
-                            import_Registry6.default.createText(`
-                    `, false)
-                          ] : true ? [
-                            ,
-                            import_Registry6.default.createText(`
-                      `, false),
-                            ...this._toNodeList(arg.type),
-                            ...this._toNodeList(arg.list ? "[]" : ""),
-                            import_Registry6.default.createText(`
-                    `, false)
-                          ] : [],
-                          import_Registry6.default.createText(`
-                  `, false)
-                        ]).flat(),
-                        import_Registry6.default.createText(`
-                )
-              `, false)
-                      ]).element,
-                      import_Registry6.default.createText(`
-              `, false),
-                      ...!!types_default[prop.returns.type] ? [
-                        import_Registry6.default.createText(`
-                `, false),
-                        import_Registry6.default.createElement("td", { "class": `tx-top tx-nowrap b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
-                          import_Registry6.default.createText(`
-                  `, false),
-                          import_Registry6.default.createElement("a", { "class": `tx-underline tx-info cursor-pointer`, "data-type": prop.returns.type, "click": next }, [
-                            import_Registry6.default.createText(`
-                    `, false),
-                            ...this._toNodeList(prop.returns.type),
-                            import_Registry6.default.createText(`
-                  `, false)
-                          ]).element,
-                          ...this._toNodeList(prop.returns.list ? "[]" : ""),
-                          import_Registry6.default.createText(`
-                `, false)
-                        ]).element,
-                        import_Registry6.default.createText(`
-              `, false)
-                      ] : true ? [
-                        ,
-                        import_Registry6.default.createText(`
-                `, false),
-                        import_Registry6.default.createElement("td", { "class": `tx-top tx-nowrap b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
-                          import_Registry6.default.createText(`
-                  `, false),
-                          ...this._toNodeList(prop.returns.type),
-                          ...this._toNodeList(prop.returns.list ? "[]" : ""),
-                          import_Registry6.default.createText(`
-                `, false)
-                        ]).element,
-                        import_Registry6.default.createText(`
-              `, false)
-                      ] : [],
-                      import_Registry6.default.createText(`
-            `, false)
-                    ] : !!(prop.kind === "event") ? [
-                      ,
-                      import_Registry6.default.createText(`
-              `, false),
-                      import_Registry6.default.createElement("td", { "class": `tx-primary tx-top b-solid b-t-2 bx-0 bb-0 bt-1 p-10`, "nowrap": true }, [
-                        import_Registry6.default.createText(`
-                `, false),
-                        ...this._toNodeList(`on('${key}', (event: Event) => void)`),
-                        import_Registry6.default.createText(`
-              `, false)
-                      ]).element,
-                      import_Registry6.default.createText(`
-            `, false)
-                    ] : [],
-                    import_Registry6.default.createText(`
-            `, false),
-                    import_Registry6.default.createElement("td", { "class": `tx-top tx-lh-24 b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
-                      import_Registry6.default.createText(`
-              `, false),
-                      ...!!prop.description ? [
-                        import_Registry6.default.createText(`
-                `, false),
-                        import_Registry6.default.createElement("p", { "class": `pb-10` }, [
-                          ...this._toNodeList(prop.description)
-                        ]).element,
-                        import_Registry6.default.createText(`
-                `, false),
-                        ...!!prop.example ? [
-                          import_Registry6.default.createText(`
-                  `, false),
-                          import_Registry6.default.createElement("h5", {}, [
-                            import_Registry6.default.createText(`Example`, false)
-                          ]).element,
-                          import_Registry6.default.createText(`
-                  `, false),
-                          import_Registry6.default.createComponent("api-ide-code", Code_5387662ecbed97347dd0, { "lang": `js` }, [
-                            ...this._toNodeList(prop.example)
-                          ]).element,
-                          import_Registry6.default.createText(` 
-                `, false)
-                        ] : [],
-                        import_Registry6.default.createText(`
-              `, false)
-                      ] : [],
-                      import_Registry6.default.createText(`
-            `, false)
-                    ]).element,
-                    import_Registry6.default.createText(`
-          `, false)
-                  ]).element,
-                  import_Registry6.default.createText(`
-        `, false)
-                ]).flat(),
-                import_Registry6.default.createText(`
-      `, false)
-              ]).element,
-              import_Registry6.default.createText(`
-    `, false)
-            ]).element,
-            import_Registry6.default.createText(`
-  `, false)
-          ]).element,
-          import_Registry6.default.createText(`
-`, false)
-        ]).element
-      ];
-    }
-  };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\app.ink
-  var import_Registry7 = __toESM(require_Registry());
-  var import_Component7 = __toESM(require_Component());
-  var import_ink4 = __toESM(require_ink());
-  var App_4ec139eab67151540039 = class extends import_Component7.default {
-    static id = "4ec139eab67151540039";
-    static tagname = "app";
-    static classname = "App_4ec139eab67151540039";
-    styles() {
-      return ``;
-    }
-    template() {
-      const { title, height } = (0, import_ink4.props)();
-      const style = height ? `height:${height}px` : "";
-      return () => [
-        import_Registry7.default.createText(`
-`, false),
-        import_Registry7.default.createElement("div", { "class": `curved scroll-hidden shadow-0-0-10-0-0-0-5` }, [
-          import_Registry7.default.createText(`
-  `, false),
-          import_Registry7.default.createElement("div", { "class": `relative flex flex-center-y gap-10 p-10 bg-t-1 tx-c-999999 tx-16` }, [
-            import_Registry7.default.createText(`
-    `, false),
-            import_Registry7.default.createElement("span", { "class": `bg-h-999999 pill h-10 w-10` }, []).element,
-            import_Registry7.default.createText(`
-    `, false),
-            import_Registry7.default.createElement("span", { "class": `bg-h-999999 pill h-10 w-10` }, []).element,
-            import_Registry7.default.createText(`
-    `, false),
-            import_Registry7.default.createElement("span", { "class": `bg-h-999999 pill h-10 w-10` }, []).element,
-            import_Registry7.default.createText(`
-    `, false),
-            import_Registry7.default.createElement("span", { "class": `flex flex-center h-full w-full absolute top-0 left-0` }, [
-              import_Registry7.default.createText(`
-      `, false),
-              ...this._toNodeList(title),
-              import_Registry7.default.createText(`
-    `, false)
-            ]).element,
-            import_Registry7.default.createText(`
-  `, false)
-          ]).element,
-          import_Registry7.default.createText(`
-  `, false),
-          import_Registry7.default.createElement("div", { "class": `bg-black tx-t-1 relative`, "style": style }, [
-            ...this._toNodeList((0, import_ink4.children)())
-          ]).element,
-          import_Registry7.default.createText(`
 `, false)
-        ]).element
       ];
     }
   };
 
   // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
-  var import_Registry8 = __toESM(require_Registry());
-  var import_Component8 = __toESM(require_Component());
+  var import_Registry7 = __toESM(require_Registry());
+  var import_Component7 = __toESM(require_Component());
 
   // src/components/i18n/index.ts
   var _ = function(phrase, ...variables) {
@@ -6657,7 +4117,7 @@ var InkAPI = (() => {
   };
 
   // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
-  var Translate_794a00a5e900fca28310 = class extends import_Component8.default {
+  var Translate_794a00a5e900fca28310 = class extends import_Component7.default {
     static id = "794a00a5e900fca28310";
     static tagname = "translate";
     static classname = "Translate_794a00a5e900fca28310";
@@ -6692,57 +4152,57 @@ var InkAPI = (() => {
         }
       }
       return () => [
-        import_Registry8.default.createText(`
+        import_Registry7.default.createText(`
     `, false),
         ...!!p ? [
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
       `, false),
-          import_Registry8.default.createElement("p", {}, [
+          import_Registry7.default.createElement("p", {}, [
             ...this._toNodeList(translations)
           ]).element,
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
     `, false)
         ] : !!li ? [
           ,
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
       `, false),
-          import_Registry8.default.createElement("li", {}, [
+          import_Registry7.default.createElement("li", {}, [
             ...this._toNodeList(translations)
           ]).element,
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
     `, false)
         ] : !!div ? [
           ,
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
       `, false),
-          import_Registry8.default.createElement("div", {}, [
+          import_Registry7.default.createElement("div", {}, [
             ...this._toNodeList(translations)
           ]).element,
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
     `, false)
         ] : true ? [
           ,
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
       `, false),
           ...this._toNodeList(translations),
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
     `, false)
         ] : []
       ];
     }
   };
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\state-management.ink
-  var import_ink5 = __toESM(require_ink());
+  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\markup-syntax.ink
+  var import_ink4 = __toESM(require_ink());
   var TemplateDocument = class _TemplateDocument extends import_Document2.default {
     static sync() {
       const document2 = new _TemplateDocument();
       return document2.sync();
     }
     template() {
-      const url = "/docs/state-management.html";
-      const title = _("State Management - Ink reactive web component template engine.");
-      const description = _("Learn how to manage states in Ink.");
+      const url = "/docs/markup-syntax.html";
+      const title = _("Markup Syntax - Ink reactive web component template engine.");
+      const description = _("Learn how to write markup in Ink.");
       const toggle = () => {
         document.getElementsByTagName("panel-layout")[0].toggle("left");
       };
@@ -6812,16 +4272,16 @@ var InkAPI = (() => {
               import_Document.default.createElement("link", { "rel": `stylesheet`, "type": `text/css`, "href": `/ink/styles/global.css` }),
               import_Document.default.createText(`
   `, false),
-              import_Document.default.createElement("link", { "rel": `stylesheet`, "type": `text/css`, "href": `/ink/build/client/${(0, import_ink5.env)("BUILD_ID")}.css` }),
+              import_Document.default.createElement("link", { "rel": `stylesheet`, "type": `text/css`, "href": `/ink/build/client/${(0, import_ink4.env)("BUILD_ID")}.css` }),
               import_Document.default.createElement("script", { "data-template": true, "type": `text/json` }, [
                 import_Document.default.createText(`__TEMPLATE_DATA__`, true)
               ]),
               import_Document.default.createText(`
   `, false),
-              import_Document.default.createElement("script", { "src": `/ink/build/client/${(0, import_ink5.env)("BUILD_ID")}.js` }),
+              import_Document.default.createElement("script", { "src": `/ink/build/client/${(0, import_ink4.env)("BUILD_ID")}.js` }),
               import_Document.default.createText(`
   `, false),
-              ...!!((0, import_ink5.env)("PUBLIC_ENV") === "development") ? [
+              ...!!((0, import_ink4.env)("PUBLIC_ENV") === "development") ? [
                 import_Document.default.createText(`
     `, false),
                 import_Document.default.createElement("script", { "src": `/dev.js` }),
@@ -7423,43 +4883,54 @@ var InkAPI = (() => {
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#props` }, [
-                      ...this._toNodeList(_("Props"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#imports` }, [
+                      ...this._toNodeList(_("Imports"))
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#signals` }, [
-                      ...this._toNodeList(_("Signals"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#styles` }, [
+                      ...this._toNodeList(_("Styles"))
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#events` }, [
-                      ...this._toNodeList(_("Events"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#scripts` }, [
+                      ...this._toNodeList(_("Scripts"))
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#classnames` }, [
-                      ...this._toNodeList(_("Class Names"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#markup` }, [
+                      ...this._toNodeList(_("Markup"))
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#children` }, [
-                      ...this._toNodeList(_("Children"))
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#component` }, [
-                      ...this._toNodeList(_("Component"))
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#env` }, [
-                      ...this._toNodeList(_("Env Variables"))
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#this` }, [
-                      ...this._toNodeList(_("this"))
+                    import_Document.default.createElement("nav", { "class": `pl-20` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#tagnames` }, [
+                        ...this._toNodeList(_("Tag Names"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#attributes` }, [
+                        ...this._toNodeList(_("Attributes"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#conditionals` }, [
+                        ...this._toNodeList(_("Conditionals"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#iterations` }, [
+                        ...this._toNodeList(_("Iterations"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#trycatch` }, [
+                        ...this._toNodeList(_("Try/Catch"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -7481,39 +4952,325 @@ var InkAPI = (() => {
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_("State Management")),
+                    ...this._toNodeList(_("Markup Syntax")),
                     import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            Components are the building blocks of Ink files. Documents 
+            and page level markup are written in 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      import_Document.default.createText(`.ink`, false)
+                    ]),
+                    import_Document.default.createText(` files. Components 
+            and templates are written in 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      import_Document.default.createText(`.ink`, false)
+                    ]),
+                    import_Document.default.createText(` files. In both 
+            cases, the code is written in a superset of HTML.
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
                     import_Document.default.createText(`
-            Ink provides several ways to manage properties and states 
-            in your components.
+            The four sections that make up a ink file \u2014 imports, 
+            script, styles and markup \u2014 are all optional and can be 
+            used in any order.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-app", { "title": `Code Structure`, "class": `py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("ide-code", { "numbers": true, "detab": 14 }, [
+                      ...this._toNodeList(`
+              <!-- imports go here -->
+
+              <style>
+                /* styles go here */
+              </style>
+
+              <script>
+                // logic goes here
+              <\/script>
+              
+              <!-- HTML goes here -->
+            `)
+                    ]),
+                    import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `props` }, []),
+                  import_Document.default.createElement("a", { "name": `imports` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_("Props")),
+                    ...this._toNodeList(_("Imports")),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "lang": `js`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            import { props } from '@stackpress/ink';
-            const { title, description } = props();
-          `)
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            Imports are used to include additional components, templates 
+            and stylesheets in the current component. Components can 
+            be imported as a `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      import_Document.default.createText(`template`, false)
+                    ]),
+                    import_Document.default.createText(` or 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      import_Document.default.createText(`component`, false)
+                    ]),
+                    import_Document.default.createText(` type.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-app", { "title": `Import Examples`, "class": `py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("ide-code", { "class": `scroll-auto`, "numbers": true, "trim": true, "detab": 14 }, [
+                      ...this._toNodeList(`
+              <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/prism.min.css" />
+              <link rel="stylesheet" type="text/css" href="/styles/layout.css" />
+              <link rel="import" type="template" href="@/components/html-head.ink" />
+              <link rel="import" type="component" href="@/components/i18n/translate.ink" name="i18n-translate" />
+
+              <style>
+                /* styles go here */
+              </style>
+
+              <script>
+                // logic goes here
+              <\/script>
+              
+              <!-- HTML goes here -->
+            `)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            The `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      import_Document.default.createText(`rel`, false)
+                    ]),
+                    import_Document.default.createText(` attribute 
+            specifies the relationship between the current document and 
+            the linked resource. 
+            
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      import_Document.default.createText(`rel="import"`, false)
+                    ]),
+                    import_Document.default.createText(` denotes
+            that the imported resource is a component or template.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            The `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      import_Document.default.createText(`type`, false)
+                    ]),
+                    import_Document.default.createText(` 
+            attribute specifies the type of the linked resource. 
+            
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      import_Document.default.createText(`type="component"`, false)
+                    ]),
+                    import_Document.default.createText(` 
+            imports a web component that can be used as regular markup
+            with attributes and children. 
+            
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      import_Document.default.createText(`type="template"`, false)
+                    ]),
+                    import_Document.default.createText(` 
+            imports a template partial that can be included in the current 
+            markup. Template partials do not process attributes or children
+            if given.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            The 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      import_Document.default.createText(`href`, false)
+                    ]),
+                    import_Document.default.createText(` attribute specifies
+            the URL of the linked resource. The 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      import_Document.default.createText(`name`, false)
+                    ]),
+                    import_Document.default.createText(`
+            attribute specifies the tag name of the imported component or template.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `styles` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Styles")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            CSS styles inside a `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<style>`)
+                    ]),
+                    import_Document.default.createText(` 
+            block enables the native `, false),
+                    import_Document.default.createElement("a", { "target": `_blank`, "href": `https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM` }, [
+                      import_Document.default.createText(`shadow DOM`, false)
+                    ]),
+                    import_Document.default.createText(` and will be scoped only to that component. 
+            Additionally styles defined outside of the component such as 
+            global styles will not affect the component.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            External stylesheets can be imported using the 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<link>`)
+                    ]),
+                    import_Document.default.createText(` tag or using 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`@import()`)
+                    ]),
+                    import_Document.default.createText(` CSS directive. 
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            You can use host selectors to style an element from within 
+            a component. The `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`:host`)
+                    ]),
+                    import_Document.default.createText(` 
+            pseudo-class always applies styles to the root element of the 
+            web component.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-app", { "title": `Using :host`, "class": `py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("ide-code", { "numbers": true, "trim": true, "detab": 14 }, [
+                      ...this._toNodeList(`
+              <style>
+                :host {
+                  display: block;
+                }
+              </style>
+            `)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            You can also add conditional styles using the 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`:host`)
+                    ]),
+                    import_Document.default.createText(` selector function. 
+            This can be used to style the host so long as it matches the 
+            given selector. For example, it can be used to select for 
+            hosts that have a given attribute or class.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-app", { "title": `:host Conditionals`, "class": `py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("ide-code", { "numbers": true, "trim": true, "detab": 14 }, [
+                      ...this._toNodeList(`
+              <style>
+                :host([active]) {
+                  background-color: #333;
+                  color: #FFF;
+                }
+                :host(.active) {
+                  background-color: #333;
+                  color: #FFF;
+                }
+              </style>
+            `)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `scripts` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Scripts")),
+                    import_Document.default.createText(`
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
@@ -7521,23 +5278,31 @@ var InkAPI = (() => {
                   import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
                     import_Document.default.createText(`
             The `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`props`, false)
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<script>`)
                     ]),
-                    import_Document.default.createText(` function can be used to access the 
-            properties of a component.
+                    import_Document.default.createText(` block is used 
+            to write TypeScript logic for the component. The script block 
+            can be used to define variables, functions, and event listeners.
+            Variables declared (or imported) at the top level are 
+            'visible' from the component's markup. 
           `, false)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `signals` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Top-Level Variables`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_("Signals")),
+                    import_Document.default.createElement("ide-code", { "numbers": true, "trim": true, "detab": 14 }, [
+                      ...this._toNodeList(`
+              <script>
+                const title = 'Hello World';
+              <\/script>
+
+              <h1>{title}</h1>
+            `)
+                    ]),
                     import_Document.default.createText(`
           `, false)
                   ]),
@@ -7546,12 +5311,464 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
                     import_Document.default.createText(`
-            Ink provides a reactive state management system that allows 
-            you to manage states in your components. The system is based 
-            on signals, which are reactive variables that can be used to 
-            store and update data. Signals can be used to store any type 
-            of data, including numbers, strings, objects, arrays, and even 
-            functions.
+            The `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<script>`)
+                    ]),
+                    import_Document.default.createText(` block can also 
+            be used to import variables from other components to be used
+            in the markup.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-app", { "title": `Importing Files`, "class": `py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("ide-code", { "class": `scroll-auto`, "numbers": true, "trim": true, "detab": 14 }, [
+                      ...this._toNodeList(`
+              <script>
+                import getTitle from './getTitle';
+                const title = getTitle();
+              <\/script>
+
+              <h1 title={title}>{title}</h1>
+            `)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            You can use `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`@/`)
+                    ]),
+                    import_Document.default.createText(` to prefix the 
+            current working directory. This is useful when importing
+            files completely in a separate directory in your project
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-app", { "title": `@ Imports`, "class": `py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("ide-code", { "class": `scroll-auto`, "numbers": true, "trim": true, "detab": 14 }, [
+                      ...this._toNodeList(`
+              <script>
+                import getTitle from '@/data/getTitle';
+                const title = getTitle();
+              <\/script>
+
+              <h1 title={title}>{title}</h1>
+            `)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `markup` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Markup")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            In order to be closer to the native, Ink follows the same 
+            standards and conventions as HTML5 web components. Ink 
+            components are compiled to native web components that possibly 
+            can be used in other projects any modern browser.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `tagnames` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h3", { "class": `tx-t-1 tx-upper tx-22 pt-40 pb-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Tag Names")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            For web components it's recommended that tag names must have 
+            at least one dash (-) in them. As such you probably want to 
+            name your element with two distinct words like 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`i18n-translate`)
+                    ]),
+                    import_Document.default.createText(`. You can 
+            use as many dashes as you want, you're not limited to one. 
+            Some specific rules to follow in order to make a valid tag 
+            name:
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ul", {}, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("i18n-translate", { "li": true, "trim": true, "class": `my-10 tx-lh-24` }, [
+                      import_Document.default.createText(`
+              It must use all lowercase characters of the alphabet (a-z).
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("i18n-translate", { "li": true, "trim": true, "class": `my-10 tx-lh-24` }, [
+                      import_Document.default.createText(`
+              It must contain at least one dash (-). Ink will 
+              auto prefix component names based on your configuration.
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("i18n-translate", { "li": true, "trim": true, "class": `my-10 tx-lh-24` }, [
+                      import_Document.default.createText(`
+              It must not be an already reserved tag name including 
+              `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        import_Document.default.createText(`annotation-xml`, false)
+                      ]),
+                      import_Document.default.createText(`,
+              `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        import_Document.default.createText(`color-profile`, false)
+                      ]),
+                      import_Document.default.createText(`,
+              `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        import_Document.default.createText(`font-face`, false)
+                      ]),
+                      import_Document.default.createText(`,
+              `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        import_Document.default.createText(`font-face-src`, false)
+                      ]),
+                      import_Document.default.createText(`,
+              `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        import_Document.default.createText(`font-face-uri`, false)
+                      ]),
+                      import_Document.default.createText(`,
+              `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        import_Document.default.createText(`font-face-format`, false)
+                      ]),
+                      import_Document.default.createText(`,
+              `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        import_Document.default.createText(`font-face-name`, false)
+                      ]),
+                      import_Document.default.createText(`, and 
+              `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        import_Document.default.createText(`missing-glyph`, false)
+                      ]),
+                      import_Document.default.createText(`.
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("i18n-translate", { "li": true, "trim": true, "class": `my-10 tx-lh-24` }, [
+                      import_Document.default.createText(`
+              It must not contain symbols, like =, @, $.
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("i18n-translate", { "li": true, "trim": true, "class": `my-10 tx-lh-24` }, [
+                      import_Document.default.createText(`
+              It can contain underscores, and numbers.
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("i18n-translate", { "li": true, "trim": true, "class": `my-10 tx-lh-24` }, [
+                      import_Document.default.createText(`
+              It can contain characters from different alphabets, 
+              such as \xE9, \xF0, \xF6, \u7231.
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            Additionally, Ink works best with correct markup. The 
+            following standards should be followed:
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ul", {}, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("i18n-translate", { "li": true, "trim": true, "class": `my-10 tx-lh-24` }, [
+                      import_Document.default.createText(`
+              Self closing tags like 
+              `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        ...this._toNodeList(`<img />`)
+                      ]),
+                      import_Document.default.createText(`,
+              `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        ...this._toNodeList(`<link />`)
+                      ]),
+                      import_Document.default.createText(`,
+              `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        ...this._toNodeList(`<meta />`)
+                      ]),
+                      import_Document.default.createText(`,
+              `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        ...this._toNodeList(`<input />`)
+                      ]),
+                      import_Document.default.createText(`
+              must have a slash before the closing.
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("i18n-translate", { "li": true, "trim": true, "class": `my-10 tx-lh-24` }, [
+                      import_Document.default.createText(`
+              When using tables, rows should be wrapped in a 
+              `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        ...this._toNodeList(`<tbody>`)
+                      ]),
+                      import_Document.default.createText(` tag and cells
+              should be wrapped in a `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        ...this._toNodeList(`<tr>`)
+                      ]),
+                      import_Document.default.createText(` 
+              tag. ie. `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        ...this._toNodeList(`<table><tbody><tr><td>`)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("i18n-translate", { "li": true, "trim": true, "class": `my-10 tx-lh-24` }, [
+                      import_Document.default.createText(`
+              When using lists, items should be wrapped in a 
+              `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        ...this._toNodeList(`<ul>`)
+                      ]),
+                      import_Document.default.createText(` or 
+              `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        ...this._toNodeList(`<ol>`)
+                      ]),
+                      import_Document.default.createText(` tags.
+              ie. `, false),
+                      import_Document.default.createElement("ide-code", { "inline": true }, [
+                        ...this._toNodeList(`<ul><li>`)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("element-alert", { "solid": true, "curved": true, "secondary": true, "class": `my-20 tx-lh-24` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("element-icon", { "name": `exclamation-triangle` }),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("strong", {}, [
+                      import_Document.default.createText(`Warning:`, false)
+                    ]),
+                    import_Document.default.createText(` Any markup auto corrected by browser will cause data syncing 
+            issues with Ink.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            Ink components can loosely be self closing
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<i18n-translate />`)
+                    ]),
+                    import_Document.default.createText(`
+            or expressed as a block
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<i18n-translate></i18n-translate>`)
+                    ]),
+                    import_Document.default.createText(`.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `attributes` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h3", { "class": `tx-t-1 tx-upper tx-22 pt-40 pb-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Attributes")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-app", { "title": `Markup Expressions` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("ide-code", { "class": `scroll-auto`, "numbers": true, "trim": true, "detab": 14 }, [
+                      ...this._toNodeList(`
+              <a title={title} {href} {...attributes}>
+                {title}
+              </a>
+              <i18n-translate title=title>
+                {detail}
+              </i18n-translate>
+            `)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            Attributes can be bound to expressions using the 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`{}`)
+                    ]),
+                    import_Document.default.createText(` syntax. 
+            Expressions can be variables, functions, or any valid 
+            JavaScript expression. By default, attributes work exactly 
+            like their HTML counterparts.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `scroll-auto bg-black` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("ide-code", { "trim": true }, [
+                      ...this._toNodeList(`
+              <button type="button" disabled>Submit</button>
+            `)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            Traditional HTML attributes can be assigned string values or 
+            no value evaluates as `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`true`)
+                    ]),
+                    import_Document.default.createText(`.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-code", { "trim": true }, [
+                    ...this._toNodeList(`
+            <a title={title}>Click</a>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            Attributes can be assigned variable names.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-code", { "trim": true }, [
+                    ...this._toNodeList(`
+            <a title=title>Click</a>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            Variable names do not need to be wrapped in curly braces
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`{}`)
+                    ]),
+                    import_Document.default.createText(`.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-code", { "trim": true }, [
+                    ...this._toNodeList(`
+            <a {title}>Click</a>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            Attributes with the same name as a variable can be assigned
+            by just wrapping curly braces. ie. 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`{title}`)
+                    ]),
+                    import_Document.default.createText(`.
           `, false)
                   ]),
                   import_Document.default.createText(`
@@ -7563,59 +5780,19 @@ var InkAPI = (() => {
                     import_Document.default.createElement("ide-code", { "trim": true, "detab": 14 }, [
                       ...this._toNodeList(`
               <script>
-                import { signal } from '@stackpress/ink';
-                const count = signal<number>(1);
+                const attributes = { target: '_blank' };
               <\/script>
-              <em class=classlist>Count #{count.value}</em>
+              <a {...attributes}>Click</a>
             `)
                     ]),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
                     import_Document.default.createText(`
-            To create a signal, you can use the 
-            `, false),
-                    import_Document.default.createElement("ide-code", { "type": `javascript`, "inline": true }, [
-                      ...this._toNodeList(`signal()`)
-                    ]),
-                    import_Document.default.createText(` 
-            function, which takes an initial value as an argument. Signals 
-            can be read and updated using the `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`value`, false)
-                    ]),
-                    import_Document.default.createText(` property. 
-            Setting the value will trigger a re-render of the component.
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
-                    import_Document.default.createText(`
-            Signals can be used in your components to manage states and 
-            trigger updates when the state changes. You can use signals to 
-            store data that needs to be shared between components, or to 
-            trigger side effects when the state changes. Signals can also 
-            be used to store data that needs to be persisted across page 
-            reloads, such as form data or user preferences.
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("a", { "name": `events` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Events")),
-                    import_Document.default.createText(`
+            Spread operators can be used to assign multiple attributes.
           `, false)
                   ]),
                   import_Document.default.createText(`
@@ -7624,543 +5801,100 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `scroll-auto bg-black` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "trim": true, "number": true, "detab": 14 }, [
+                    import_Document.default.createElement("ide-code", { "numbers": true, "trim": true, "detab": 14 }, [
                       ...this._toNodeList(`
               <script>
-                import { signal } from '@stackpress/ink';
-                const count = signal<number>(1);
-                const add = e => count.value++;
+                let count = 10
+                const metadata = { foo: 'bar', baz: 1, qux: true };
+                const data = () => metadata
               <\/script>
-
-              <button click=add>{count.value}</button>
-
-              <button dblclick=add>{count.value}</button>
-              <button mousedown=add>{count.value}</button>
-              <button mouseup=add>{count.value}</button>
-              <button mousemove=add>{count.value}</button>
-              <button mouseover=add>{count.value}</button>
-              <button mouseout=add>{count.value}</button>
-              <button wheel=add>{count.value}</button>
-              <button keydown=add>{count.value}</button>
-              <button keypress=add>{count.value}</button>
-              <button keyup=add>{count.value}</button>
+              <a {count} get={data} data-meta={metadata} disable={count < 10}>
+                Click
+              </a>
             `)
                     ]),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
                     import_Document.default.createText(`
-            For example, you can use the `, false),
+            You can assign any valid JavaScript expression to an attribute.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `conditionals` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h3", { "class": `tx-t-1 tx-upper tx-22 pt-40 pb-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Conditionals")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-app", { "title": `Conditionals`, "class": `py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("ide-code", { "class": `scroll-auto`, "numbers": true, "trim": true, "detab": 14 }, [
+                      ...this._toNodeList(`
+              <if true={count > 10}>
+                <p>Count is greater than 10</p>
+              <elif true={count < 5} />
+                <p>Count is less than 5</p>
+              <else />
+                <p>Count is between 5 and 10</p>
+              </if>
+            `)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            Conditionals can be used to show or hide elements based on 
+            the value of a variable.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `scroll-auto bg-black` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("ide-code", { "numbers": true, "trim": true, "detab": 14 }, [
+                      ...this._toNodeList(`
+              <if true={count > 10}>
+                <p>Count is greater than 10</p>
+              </if>
+            `)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            The basic syntax for an if statement looks like this and can be 
+            `, false),
                     import_Document.default.createElement("ide-code", { "inline": true }, [
-                      import_Document.default.createText(`click`, false)
+                      ...this._toNodeList(`truesy`)
                     ]),
-                    import_Document.default.createText(` 
-            attribute assigned to a function to trigger a function when 
-            the element is clicked. In combination with updating a signal, 
-            can trigger a re-render of the component. The following event 
-            attributes are supported.
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `col-2` }, [
-                    import_Document.default.createText(`
+                    import_Document.default.createText(` or 
             `, false),
-                    import_Document.default.createElement("div", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Mouse Events"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`click`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`dblclick`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`mousedown`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`mouseup`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`mousemove`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`mouseover`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`mouseout`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`wheel`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Keyboard Events"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`keydown`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`keypress`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`keyup`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Form Events"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`blur`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`change`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`contextmenu`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`focus`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`input`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`submit`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`invalid`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`reset`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`search`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`select`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Clipboard Events"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`copy`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`cut`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`paste`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Transition Events"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`transitionend`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`falsey`)
                     ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Drag Events"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`drag`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`dragstart`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`dragend`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`dragover`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`dragenter`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`dragleave`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`drop`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`scroll`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Media Events"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`durationchange`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`ended`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`error`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`loadeddata`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`loadedmetadata`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`loadstart`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`pause`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`play`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`playing`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`progress`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`ratechange`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`seeked`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`seeking`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`stalled`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`suspend`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`timeupdate`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`volumechange`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`waiting`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Animation Events"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`animationstart`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`animationend`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`animationiteration`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("a", { "name": `classnames` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Class Names")),
-                    import_Document.default.createText(`
+                    import_Document.default.createText(`.
           `, false)
                   ]),
                   import_Document.default.createText(`
@@ -8169,51 +5903,11 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `scroll-auto bg-black` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "lang": `js`, "trim": true, "detab": 14 }, [
+                    import_Document.default.createElement("ide-code", { "numbers": true, "trim": true, "detab": 14 }, [
                       ...this._toNodeList(`
-              import { classnames } from '@stackpress/ink';
-              const classlist = classnames(); //--> 'class1 class2 class3'
-            `)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
-                    import_Document.default.createText(`
-            The `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`classnames`, false)
-                    ]),
-                    import_Document.default.createText(` function can be used to generate 
-            a list of class names based on the properties of an object.
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("a", { "name": `children` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Children")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `scroll-auto bg-black` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("ide-code", { "lang": `js`, "trim": true, "detab": 14 }, [
-                      ...this._toNodeList(`
-              import { children } from '@stackpress/ink';
-              const childlist = children(); //--> Node[]
+              <if false={count > 10}>
+                <p>Count is not greater than 10</p>
+              </if>
             `)
                     ]),
                     import_Document.default.createText(`
@@ -8223,25 +5917,12 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
                     import_Document.default.createText(`
-            The `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`children`, false)
+            You can also use the `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`false`)
                     ]),
-                    import_Document.default.createText(` function can be used to render 
-            child components in a parent component.
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("a", { "name": `component` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
                     import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Component")),
-                    import_Document.default.createText(`
+            attribute to negate the condition.
           `, false)
                   ]),
                   import_Document.default.createText(`
@@ -8250,11 +5931,13 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `scroll-auto bg-black` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "lang": `js`, "trim": true, "detab": 14 }, [
+                    import_Document.default.createElement("ide-code", { "numbers": true, "trim": true, "detab": 14 }, [
                       ...this._toNodeList(`
-              import { component } from '@stackpress/ink';
-              const button = component(); //--> HTMLElement
-              console.log(button.querySelector('span'));
+              <if true={count > 10}>
+                <p>Count is greater than 10</p>
+              <else />
+                <p>Count is less than or equal to 10</p>
+              </if>
             `)
                     ]),
                     import_Document.default.createText(`
@@ -8264,39 +5947,23 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
                     import_Document.default.createText(`
-            For other edge cases, the `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`component`, false)
+            You can use the `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`else`)
                     ]),
-                    import_Document.default.createText(` function 
-            can be used to get raw access to the component's 
-            functionality.
+                    import_Document.default.createText(` block to 
+            show content when the condition is false.
           `, false)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `env` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Environment Variables")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "numbers": true, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <script>
-              import { env } from '@stackpress/ink';
-              const { BUILD_ID, NODE_ENV } = env();
-            <\/script>
-            <if true={NODE_ENV === 'development'}>
-              <p>Development mode</p>
+            <if true={count > 10}>
+              <p>Count is greater than 10</p>
+            <elif true={count < 5} />
+              <p>Count is less than 5</p>
             </if>
           `)
                   ]),
@@ -8304,44 +5971,162 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
                     import_Document.default.createText(`
-            The `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`env`, false)
+            You can use the `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`elif`)
                     ]),
-                    import_Document.default.createText(` function can be used to access environment 
-            variables in a component.
+                    import_Document.default.createText(` block to 
+            show content when the previous condition is false.
           `, false)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `this` }, []),
+                  import_Document.default.createElement("a", { "name": `iterations` }, []),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
+                  import_Document.default.createElement("h3", { "class": `tx-t-1 tx-upper tx-22 pt-40 pb-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_("this")),
+                    ...this._toNodeList(_("Iterations")),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `What's this`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Each`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "numbers": true, "detab": 14 }, [
+                    import_Document.default.createElement("ide-code", { "class": `scroll-auto`, "numbers": true, "trim": true, "detab": 14 }, [
                       ...this._toNodeList(`
-              <script>
-                this.props;
-                this.style;
-                this.classList;
-                this.parentNode;
-                this.innerHTML;
-                this.appendChild();
-                this.querySelector('p');
-              <\/script>
+              <each key=index value=article from=articles>
+                <h1>#{index + 1} {article.title}</h1>
+                <p>{article.body}</p>
+              </each>
+            `)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            The `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<each>`)
+                    ]),
+                    import_Document.default.createText(` block can be used 
+            to iterate over an array of items or objects.
+            The `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`from`)
+                    ]),
+                    import_Document.default.createText(` attribute value is 
+            required and can be an array, object or JavaScript expression 
+            that evaluates to an array or object. Both the 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`key`)
+                    ]),
+                    import_Document.default.createText(` and 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`value`)
+                    ]),
+                    import_Document.default.createText(` attributes are optional.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `scroll-auto bg-black` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("ide-code", { "numbers": true, "trim": true, "detab": 14 }, [
+                      ...this._toNodeList(`
+              <each value={article} from={articles}>
+                <h1>{article.title}</h1>
+                <p>{article.body}</p>
+              </each>
+            `)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            The value of `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`value`)
+                    ]),
+                    import_Document.default.createText(`, in this 
+            case `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`article`)
+                    ]),
+                    import_Document.default.createText(` can be used 
+            only with in the block. This can be any valid JavaScript 
+            variable name.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-code", { "numbers": true, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <each key={index} from={[1, 2, 3]}>
+              <h1>#{index} ???</h1>
+            </each>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            The value of `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`key`)
+                    ]),
+                    import_Document.default.createText(`, in this 
+            case `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`index`)
+                    ]),
+                    import_Document.default.createText(` can be used 
+            only with in the block. This can be any valid JavaScript 
+            variable name.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `trycatch` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h3", { "class": `tx-t-1 tx-upper tx-22 pt-40 pb-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Try/Catch")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-app", { "title": `Try/Catch Example`, "class": `py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("ide-code", { "numbers": true, "trim": true, "detab": 14 }, [
+                      ...this._toNodeList(`
+              <try>
+                <p>{mayCauseError()}</p>
+              <catch error={e} />
+                <p>Error: {e.message}</p>
+              </try>
             `)
                     ]),
                     import_Document.default.createText(`
@@ -8352,75 +6137,40 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
                     import_Document.default.createText(`
+            The `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<try><catch>`)
+                    ]),
+                    import_Document.default.createText(` block can 
+            be used to catch errors that occur in the block. The 
             `, false),
                     import_Document.default.createElement("ide-code", { "inline": true }, [
-                      import_Document.default.createText(`this`, false)
+                      ...this._toNodeList(`<catch>`)
                     ]),
-                    import_Document.default.createText(` refers to the 
-            `, false),
-                    import_Document.default.createElement("ide-code", { "inline": true }, [
-                      import_Document.default.createText(`InkComponent`, false)
-                    ]),
-                    import_Document.default.createText(` that extends 
-            `, false),
-                    import_Document.default.createElement("ide-code", { "inline": true }, [
-                      import_Document.default.createText(`HTMLElement`, false)
-                    ]),
-                    import_Document.default.createText(`. This means all
-            components in Ink are in fact are HTML elements and has
-            access to the common functionality like 
-            `, false),
-                    import_Document.default.createElement("ide-code", { "inline": true }, [
-                      import_Document.default.createText(`innerHTML`, false)
-                    ]),
-                    import_Document.default.createText(` and
-            `, false),
-                    import_Document.default.createElement("ide-code", { "inline": true }, [
-                      ...this._toNodeList(`querySelector()`)
-                    ]),
-                    import_Document.default.createText(` to name a 
-            few. `, false),
-                    import_Document.default.createElement("ide-code", { "inline": true }, [
-                      import_Document.default.createText(`InkComponent`, false)
-                    ]),
-                    import_Document.default.createText(` has the
-            additional following properties and methods that you can access
-            using `, false),
-                    import_Document.default.createElement("ide-code", { "inline": true }, [
-                      import_Document.default.createText(`this`, false)
-                    ]),
-                    import_Document.default.createText(`.
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
+                    import_Document.default.createText(` block is required and 
+            can be used to handle the error.
 
-          `, false),
-                  import_Document.default.createElement("api-ui", { "start": `InkComponent` }),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("element-alert", { "curved": true, "info": true, "class": `py-20 tx-lh-24` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-icon", { "name": `info-circle` }),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("strong", {}, [
-                      import_Document.default.createText(`Info:`, false)
+            The value of `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`error`)
                     ]),
-                    import_Document.default.createText(` You can discover more methods and properties
-            of the `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`HTMLElement`, false)
-                    ]),
-                    import_Document.default.createText(` class on the
+                    import_Document.default.createText(`, in the  
             `, false),
-                    import_Document.default.createElement("a", { "target": `_blank`, "class": `tx-white tx-underline`, "href": `https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement` }, [
-                      import_Document.default.createText(`
-              MDN Web Docs
-            `, false)
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<catch>`)
                     ]),
-                    import_Document.default.createText(`.
+                    import_Document.default.createText(` block in this case
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`e`)
+                    ]),
+                    import_Document.default.createText(` is an 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "lang": `js`, "inline": true }, [
+                      ...this._toNodeList(`Error`)
+                    ]),
+                    import_Document.default.createText(` object
+            that can only be used with in the block. 
           `, false)
                   ]),
                   import_Document.default.createText(`
@@ -8429,22 +6179,22 @@ var InkAPI = (() => {
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/docs/markup-syntax.html` }, [
+                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/docs/getting-started.html` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Markup Syntax")),
+                      ...this._toNodeList(_("Getting Started")),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/docs/component-strategy.html` }, [
+                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/docs/state-management.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Component Strategy")),
+                      ...this._toNodeList(_("State Management")),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
@@ -8480,8 +6230,6 @@ var InkAPI = (() => {
     "ElementAlert_ba827f6c1d3753161701": Alert_ba827f6c1d3753161701,
     "ElementIcon_33cb84912ffcb000a388": Icon_33cb84912ffcb000a388,
     "ApiDocs_0ab1bce486b32e7cdafc": Docs_0ab1bce486b32e7cdafc,
-    "ApiUi_2b08d18966ac07e0669a": Ui_2b08d18966ac07e0669a,
-    "ApiIdeCode_5387662ecbed97347dd0": Code_5387662ecbed97347dd0,
     "IdeApp_4ec139eab67151540039": App_4ec139eab67151540039,
     "IdeCode_5387662ecbed97347dd0": Code_5387662ecbed97347dd0,
     "I18nTranslate_794a00a5e900fca28310": Translate_794a00a5e900fca28310
@@ -8491,12 +6239,11 @@ var InkAPI = (() => {
     "element-alert": Alert_ba827f6c1d3753161701,
     "element-icon": Icon_33cb84912ffcb000a388,
     "api-docs": Docs_0ab1bce486b32e7cdafc,
-    "api-ui": Ui_2b08d18966ac07e0669a,
     "ide-app": App_4ec139eab67151540039,
     "ide-code": Code_5387662ecbed97347dd0,
     "i18n-translate": Translate_794a00a5e900fca28310
   };
-  var BUILD_ID = "26ff2a9b16548efdd1a0";
+  var BUILD_ID = "cac914aa3ae461ceb5c8";
   import_Emitter.default.once("ready", () => {
     TemplateDocument.sync();
     for (const [tagname, definition] of Object.entries(elements)) {
@@ -8506,7 +6253,7 @@ var InkAPI = (() => {
     }
     import_Emitter.default.emit("mounted", document.body);
   });
-  return __toCommonJS(state_management_exports);
+  return __toCommonJS(markup_syntax_exports);
 })();
 /*! Bundled license information:
 

@@ -179,13 +179,13 @@ var InkAPI = (() => {
         set parent(parent) {
           this._parent = parent;
         }
-        constructor(name, attributes = {}, children4 = []) {
+        constructor(name, attributes = {}, children7 = []) {
           super();
           this.type = 1;
           this._parent = null;
           this.name = name;
           this._attributes = new Map(Object.entries(attributes));
-          this.children = new Set(children4.filter(Boolean));
+          this.children = new Set(children7.filter(Boolean));
         }
         appendChild(child) {
           this.children.add(child);
@@ -231,8 +231,8 @@ var InkAPI = (() => {
           if (selfClosingTags.includes(this.name)) {
             return `<${this.name}${attributes} />`;
           }
-          const children4 = Array.from(this.children.values()).map((child) => child.toString()).join("");
-          return `<${this.name}${attributes}>${children4}</${this.name}>`;
+          const children7 = Array.from(this.children.values()).map((child) => child.toString()).join("");
+          return `<${this.name}${attributes}>${children7}</${this.name}>`;
         }
         _flatten(markup, nodes) {
           markup.forEach((node) => {
@@ -315,8 +315,8 @@ var InkAPI = (() => {
           }
           return node;
         }
-        static createElement(name, attributes = {}, children4 = [], parent) {
-          const element = new Element_1.default(name, attributes, children4);
+        static createElement(name, attributes = {}, children7 = [], parent) {
+          const element = new Element_1.default(name, attributes, children7);
           if (parent) {
             element.parent = parent;
           }
@@ -332,11 +332,11 @@ var InkAPI = (() => {
         static import(data2, parent) {
           return data2.map((node) => {
             const { value } = node;
-            const { name, attributes, children: children4 } = node;
+            const { name, attributes, children: children7 } = node;
             switch (node.type) {
               case 1:
                 const element = this.createElement(name, attributes, [], parent);
-                _Document.import(children4, element).forEach((child) => element.appendChild(child));
+                _Document.import(children7, element).forEach((child) => element.appendChild(child));
                 return element;
               case 3:
                 return this.createText(value, true, parent);
@@ -348,8 +348,8 @@ var InkAPI = (() => {
             return null;
           }).filter(Boolean);
         }
-        static load(children4) {
-          return new _Document(children4);
+        static load(children7) {
+          return new _Document(children7);
         }
         get childList() {
           return Array.from(this.children);
@@ -360,8 +360,8 @@ var InkAPI = (() => {
         get nodes() {
           return Array.from(this.children).map((child) => child instanceof Element_1.default ? child.nodes : [child]).flat();
         }
-        constructor(children4) {
-          this.children = new Set(children4.filter(Boolean));
+        constructor(children7) {
+          this.children = new Set(children7.filter(Boolean));
         }
         export() {
           return this.childList.map((child) => child.export());
@@ -757,15 +757,15 @@ var InkAPI = (() => {
         decoder.innerHTML = value;
         return decoder.value;
       };
-      var ClientRegistry10 = class _ClientRegistry {
+      var ClientRegistry14 = class _ClientRegistry {
         static get elements() {
           return this._elements;
         }
-        static createComponent(tagname, definition, attributes = {}, children4 = []) {
+        static createComponent(tagname, definition, attributes = {}, children7 = []) {
           var _a;
           const { registered } = definition;
           if (!registered && !((_a = (0, client_1.default)()) === null || _a === void 0 ? void 0 : _a.elements[tagname])) {
-            return this.createVirtualComponent(tagname, definition, attributes, children4);
+            return this.createVirtualComponent(tagname, definition, attributes, children7);
           }
           const name = registered || tagname;
           const component = document.createElement(name);
@@ -784,10 +784,10 @@ var InkAPI = (() => {
               component.setAttribute(name2, "");
             }
           }
-          this._cleanChildren(children4).forEach((child) => component.appendChild(child));
+          this._cleanChildren(children7).forEach((child) => component.appendChild(child));
           return element;
         }
-        static createElement(name, attributes = {}, children4 = []) {
+        static createElement(name, attributes = {}, children7 = []) {
           const element = document.createElement(name);
           for (const [name2, value] of Object.entries(attributes)) {
             if (typeof value === "string") {
@@ -796,13 +796,13 @@ var InkAPI = (() => {
               element.setAttribute(name2, "");
             }
           }
-          this._cleanChildren(children4).forEach((child) => element.appendChild(child));
+          this._cleanChildren(children7).forEach((child) => element.appendChild(child));
           return this.register(element, attributes);
         }
         static createText(value, escape = true) {
           return document.createTextNode(decode(value));
         }
-        static createVirtualComponent(tagname, definition, attributes = {}, children4 = []) {
+        static createVirtualComponent(tagname, definition, attributes = {}, children7 = []) {
           const component = document.createElement(tagname);
           component.definition = definition;
           Object.setPrototypeOf(component, definition.prototype);
@@ -813,18 +813,18 @@ var InkAPI = (() => {
           if (definition.observedAttributes) {
             component.constructor.observedAttributes = definition.observedAttributes;
           }
-          component.register(attributes, children4);
+          component.register(attributes, children7);
           return component.element;
         }
         static cloneElement(node, andChildren = false) {
           var _a;
           const component = node;
           if (component.definition) {
-            const children4 = component.originalChildren || [];
-            return this.createComponent(component.nodeName.toLowerCase(), component.definition, component.props || {}, andChildren ? children4.map((element) => this.cloneElement(element, andChildren)) : []).element;
+            const children7 = component.originalChildren || [];
+            return this.createComponent(component.nodeName.toLowerCase(), component.definition, component.props || {}, andChildren ? children7.map((element) => this.cloneElement(element, andChildren)) : []).element;
           } else if (node instanceof HTMLElement) {
-            const children4 = Array.from(node.childNodes);
-            return this.createElement(node.nodeName.toLowerCase(), this.has(node) ? (_a = this.get(node)) === null || _a === void 0 ? void 0 : _a.attributes : Object.fromEntries(Array.from(node.attributes).map((attribute) => [attribute.name, attribute.value])), andChildren ? children4.map((element) => this.cloneElement(element, andChildren)) : []).element;
+            const children7 = Array.from(node.childNodes);
+            return this.createElement(node.nodeName.toLowerCase(), this.has(node) ? (_a = this.get(node)) === null || _a === void 0 ? void 0 : _a.attributes : Object.fromEntries(Array.from(node.attributes).map((attribute) => [attribute.name, attribute.value])), andChildren ? children7.map((element) => this.cloneElement(element, andChildren)) : []).element;
           }
           return node.cloneNode(andChildren);
         }
@@ -871,12 +871,12 @@ var InkAPI = (() => {
           }
           return node;
         }
-        static _cleanChildren(children4) {
-          return Array.from(children4).filter((child) => typeof child !== "undefined").map((child) => typeof child === "string" ? this.createText(child) : child instanceof Element_1.default ? child.element : child);
+        static _cleanChildren(children7) {
+          return Array.from(children7).filter((child) => typeof child !== "undefined").map((child) => typeof child === "string" ? this.createText(child) : child instanceof Element_1.default ? child.element : child);
         }
       };
-      ClientRegistry10._elements = /* @__PURE__ */ new Map();
-      exports.default = ClientRegistry10;
+      ClientRegistry14._elements = /* @__PURE__ */ new Map();
+      exports.default = ClientRegistry14;
     }
   });
 
@@ -958,7 +958,7 @@ var InkAPI = (() => {
       var Registry_1 = __importDefault(require_Registry());
       var Emitter_1 = __importDefault(require_Emitter());
       var data_1 = __importDefault(require_data());
-      var ClientComponent9 = class _ClientComponent extends HTMLElement {
+      var ClientComponent13 = class _ClientComponent extends HTMLElement {
         static get registered() {
           return customElements.getName(this);
         }
@@ -1011,9 +1011,9 @@ var InkAPI = (() => {
         set definition(definition) {
           this._definition = definition;
         }
-        set originalChildren(children4) {
+        set originalChildren(children7) {
           if (typeof this._children === "undefined") {
-            this._children = this._cleanChildren(children4 || []);
+            this._children = this._cleanChildren(children7 || []);
           }
         }
         constructor() {
@@ -1062,11 +1062,11 @@ var InkAPI = (() => {
           this.wait();
           this.emit("connect", this);
         }
-        createComponent(tagname, definition, attributes = {}, children4 = []) {
-          return Registry_1.default.createComponent(tagname, definition, attributes, children4);
+        createComponent(tagname, definition, attributes = {}, children7 = []) {
+          return Registry_1.default.createComponent(tagname, definition, attributes, children7);
         }
-        createElement(name, attributes = {}, children4 = []) {
-          return Registry_1.default.createElement(name, attributes, children4);
+        createElement(name, attributes = {}, children7 = []) {
+          return Registry_1.default.createElement(name, attributes, children7);
         }
         disconnectedCallback() {
           this.emit("disconnect", this);
@@ -1120,7 +1120,7 @@ var InkAPI = (() => {
           this.on(event, unbinder);
           return this;
         }
-        register(attributes = {}, children4 = []) {
+        register(attributes = {}, children7 = []) {
           if (Registry_1.default.has(this)) {
             const element = Registry_1.default.get(this);
             element.setAttributes(attributes);
@@ -1132,7 +1132,7 @@ var InkAPI = (() => {
               super.setAttribute(name, value === "" || value === name || value === true ? true : value);
             }
           }
-          this._children = this._cleanChildren(children4);
+          this._children = this._cleanChildren(children7);
           this._children.forEach((child) => this.appendChild(child));
           this._virtual = true;
           this.connectedCallback();
@@ -1164,10 +1164,10 @@ var InkAPI = (() => {
           } else {
             Emitter_1.default.emit("unmounted", this);
           }
-          const children4 = this._template().filter(Boolean);
+          const children7 = this._template().filter(Boolean);
           const styles = this.styles();
           const mode = styles.length === 0 ? "light" : "shadow";
-          const { light, shadow } = this._getChildren(children4, mode);
+          const { light, shadow } = this._getChildren(children7, mode);
           if (shadow.length === 0 && mode === "light") {
             this.textContent = "";
             light.forEach((child) => this.appendChild(child));
@@ -1232,21 +1232,21 @@ var InkAPI = (() => {
             Emitter_1.default.on("ready", next);
           }
         }
-        _cleanChildren(children4) {
-          return Array.from(children4).filter((child) => typeof child !== "undefined").map((child) => typeof child === "string" ? Registry_1.default.createText(child) : child instanceof Element_1.default ? child.element : child);
+        _cleanChildren(children7) {
+          return Array.from(children7).filter((child) => typeof child !== "undefined").map((child) => typeof child === "string" ? Registry_1.default.createText(child) : child instanceof Element_1.default ? child.element : child);
         }
-        _getChildren(children4, mode) {
-          const anyNodes = this._getTemplateNodes(children4);
-          const lightNodes = this._getTemplateNodes(children4, "light");
-          const shadowNodes = this._getTemplateNodes(children4, "shadow");
-          const defaultNodes = anyNodes.length > 0 ? anyNodes : children4;
+        _getChildren(children7, mode) {
+          const anyNodes = this._getTemplateNodes(children7);
+          const lightNodes = this._getTemplateNodes(children7, "light");
+          const shadowNodes = this._getTemplateNodes(children7, "shadow");
+          const defaultNodes = anyNodes.length > 0 ? anyNodes : children7;
           return {
             light: lightNodes.length > 0 ? lightNodes : mode === "light" ? defaultNodes : [],
             shadow: shadowNodes.length > 0 ? shadowNodes : mode === "shadow" ? defaultNodes : []
           };
         }
-        _getTemplateNodes(children4, type) {
-          const template = children4.find((child) => this._isTemplate(child, type));
+        _getTemplateNodes(children7, type) {
+          const template = children7.find((child) => this._isTemplate(child, type));
           if (!template)
             return [];
           return Array.from(template.childNodes || []);
@@ -1279,7 +1279,7 @@ var InkAPI = (() => {
           }
         }
       };
-      exports.default = ClientComponent9;
+      exports.default = ClientComponent13;
     }
   });
 
@@ -1339,9 +1339,9 @@ var InkAPI = (() => {
       exports.styleset = styleset;
       var StyleMap_1 = __importDefault(require_StyleMap());
       function styleset(styles = {}) {
-        return new StyleSet3(Object.entries(styles));
+        return new StyleSet4(Object.entries(styles));
       }
-      var StyleSet3 = class extends Map {
+      var StyleSet4 = class extends Map {
         add(selector, property, values) {
           if (!this.has(selector)) {
             this.set(selector, new StyleMap_1.default());
@@ -1374,7 +1374,7 @@ var InkAPI = (() => {
           return styleset2.join("");
         }
       };
-      exports.default = StyleSet3;
+      exports.default = StyleSet4;
     }
   });
 
@@ -1553,11 +1553,11 @@ var InkAPI = (() => {
         return mod && mod.__esModule ? mod : { "default": mod };
       };
       Object.defineProperty(exports, "__esModule", { value: true });
-      exports.classlist = classlist3;
+      exports.classlist = classlist6;
       exports.default = classnames;
       var component_1 = __importDefault(require_component());
       var props_1 = __importDefault(require_props());
-      function classlist3(pointer = null) {
+      function classlist6(pointer = null) {
         var _a;
         if (pointer === "body") {
           return document.body.classList;
@@ -1585,21 +1585,21 @@ var InkAPI = (() => {
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.innerHTML = innerHTML;
       exports.innerText = innerText;
-      exports.default = children4;
+      exports.default = children7;
       var component_1 = __importDefault(require_component());
       function innerHTML(pointer = null) {
-        const inner = children4(pointer);
+        const inner = children7(pointer);
         const wrapper = document.createElement("template");
         wrapper.append(...inner.map((child) => child.cloneNode(true)));
         return wrapper.innerHTML;
       }
       function innerText(pointer = null) {
-        const inner = children4(pointer);
+        const inner = children7(pointer);
         const wrapper = document.createElement("template");
         wrapper.append(...inner.map((child) => child.cloneNode(true)));
         return wrapper.innerText;
       }
-      function children4(pointer = null) {
+      function children7(pointer = null) {
         const component = (0, component_1.default)(pointer, true);
         return typeof component !== "string" && component ? component.originalChildren || [] : [];
       }
@@ -3550,11 +3550,11 @@ var InkAPI = (() => {
     }
   });
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\state-management.ink
-  var state_management_exports = {};
-  __export(state_management_exports, {
+  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\component-strategy.ink
+  var component_strategy_exports = {};
+  __export(component_strategy_exports, {
     BUILD_ID: () => BUILD_ID,
-    ClientRegistry: () => import_Registry9.default,
+    ClientRegistry: () => import_Registry13.default,
     TemplateDocument: () => TemplateDocument,
     components: () => components,
     data: () => import_data.default,
@@ -3563,7 +3563,7 @@ var InkAPI = (() => {
   });
   var import_Document = __toESM(require_Document());
   var import_Document2 = __toESM(require_Document2());
-  var import_Registry9 = __toESM(require_Registry());
+  var import_Registry13 = __toESM(require_Registry());
   var import_Emitter = __toESM(require_Emitter());
   var import_data = __toESM(require_data());
 
@@ -3808,11 +3808,84 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\docs.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\tab.ink
   var import_Registry4 = __toESM(require_Registry());
   var import_Component4 = __toESM(require_Component());
+  var import_StyleSet3 = __toESM(require_StyleSet());
+  var Tab_773b62de7e46341aea2d = class extends import_Component4.default {
+    static id = "773b62de7e46341aea2d";
+    static tagname = "tab";
+    static classname = "Tab_773b62de7e46341aea2d";
+    styles() {
+      return ``;
+    }
+    template() {
+      const handlers = {
+        init: () => {
+          const on = this.hasAttribute("on");
+          this.classList.remove(...on ? inactiveList : activeList);
+          this.classList.add(...on ? activeList : inactiveList);
+          Array.from(document.querySelectorAll(selector)).forEach((content) => {
+            content.style.display = on ? "block" : "none";
+          });
+        },
+        activate: () => {
+          Array.from(document.querySelectorAll(`[group="${group}"]`)).forEach((tab) => {
+            const subselector = tab.getAttribute("selector");
+            if (selector === subselector && !tab.hasAttribute("on")) {
+              tab.setAttribute("on", "");
+              Array.from(document.querySelectorAll(selector)).forEach((content) => {
+                content.style.display = "block";
+              });
+              typeof tab.render === "function" && tab.render();
+            } else if (selector !== subselector && tab.hasAttribute("on")) {
+              tab.removeAttribute("on");
+              Array.from(document.querySelectorAll(subselector)).forEach((content) => {
+                content.style.display = "none";
+              });
+              typeof tab.render === "function" && tab.render();
+            }
+          });
+        }
+      };
+      const {
+        group,
+        selector = "",
+        active = "",
+        inactive = "",
+        //dont need these
+        style,
+        "class": _2,
+        //get the rest
+        ...attributes
+      } = this.props;
+      const activeList = active.split(" ");
+      const inactiveList = inactive.split(" ");
+      const styles = new import_StyleSet3.default();
+      this.styles = () => styles.toString();
+      styles.add(":host", "cursor", "pointer");
+      styles.add("a", "display", "block");
+      styles.add("a", "height", "100%");
+      styles.add("a", "width", "100%");
+      return () => [
+        import_Registry4.default.createText(`
+`, false),
+        import_Registry4.default.createElement("a", { ...attributes, "click": handlers.activate, "mount": handlers.init }, [
+          import_Registry4.default.createText(`
+  `, false),
+          import_Registry4.default.createElement("slot", {}, []).element,
+          import_Registry4.default.createText(`
+`, false)
+        ]).element
+      ];
+    }
+  };
+
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\docs.ink
+  var import_Registry5 = __toESM(require_Registry());
+  var import_Component5 = __toESM(require_Component());
   var import_ink = __toESM(require_ink());
-  var Docs_0ab1bce486b32e7cdafc = class extends import_Component4.default {
+  var Docs_0ab1bce486b32e7cdafc = class extends import_Component5.default {
     static id = "0ab1bce486b32e7cdafc";
     static tagname = "docs";
     static classname = "Docs_0ab1bce486b32e7cdafc";
@@ -3828,9 +3901,9 @@ var InkAPI = (() => {
         "scroll-x-hidden"
       );
       return () => [
-        import_Registry4.default.createText(`
+        import_Registry5.default.createText(`
 `, false),
-        import_Registry4.default.createElement("article", { "class": `block p-10 tx-t-1` }, [
+        import_Registry5.default.createElement("article", { "class": `block p-10 tx-t-1` }, [
           ...this._toNodeList((0, import_ink.children)())
         ]).element
       ];
@@ -3838,15 +3911,15 @@ var InkAPI = (() => {
   };
 
   // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\ui.ink
-  var import_Registry6 = __toESM(require_Registry());
-  var import_Component6 = __toESM(require_Component());
+  var import_Registry7 = __toESM(require_Registry());
+  var import_Component7 = __toESM(require_Component());
 
   // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\code.ink
-  var import_Registry5 = __toESM(require_Registry());
-  var import_Component5 = __toESM(require_Component());
+  var import_Registry6 = __toESM(require_Registry());
+  var import_Component6 = __toESM(require_Component());
   var import_prismjs = __toESM(require_prism());
   var import_ink2 = __toESM(require_ink());
-  var Code_5387662ecbed97347dd0 = class extends import_Component5.default {
+  var Code_5387662ecbed97347dd0 = class extends import_Component6.default {
     static id = "5387662ecbed97347dd0";
     static tagname = "code";
     static classname = "Code_5387662ecbed97347dd0";
@@ -3869,12 +3942,11 @@ var InkAPI = (() => {
   background-color: #000000;
   color: #ABB2BF;
   height: 100%;
-  width: 100%; /* Ensures the background extends fully */
+
   margin: 0;
   padding: 0;
   display: block;
-  overflow-x: auto; /* Enables horizontal scrolling */
-  white-space: pre; /* Preserves spacing */
+
 }
 
 
@@ -3990,60 +4062,60 @@ var InkAPI = (() => {
         }
       };
       return () => [
-        import_Registry5.default.createElement("link", { "rel": `stylesheet`, "href": `https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism.min.css` }).element,
-        import_Registry5.default.createText(`
+        import_Registry6.default.createElement("link", { "rel": `stylesheet`, "href": `https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism.min.css` }).element,
+        import_Registry6.default.createText(`
 `, false),
-        import_Registry5.default.createElement("link", { "rel": `stylesheet`, "href": `https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-tomorrow.min.css` }).element,
-        import_Registry5.default.createText(`
+        import_Registry6.default.createElement("link", { "rel": `stylesheet`, "href": `https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-tomorrow.min.css` }).element,
+        import_Registry6.default.createText(`
 `, false),
         ...!!(lang === "bash") ? [
-          import_Registry5.default.createText(`
+          import_Registry6.default.createText(`
   `, false),
-          import_Registry5.default.createElement("div", { "class": `terminal` }, [
-            import_Registry5.default.createElement("span", {}, [
-              import_Registry5.default.createText(`$`, false)
+          import_Registry6.default.createElement("div", { "class": `terminal` }, [
+            import_Registry6.default.createElement("span", {}, [
+              import_Registry6.default.createText(`$`, false)
             ]).element,
-            import_Registry5.default.createText(` `, false),
+            import_Registry6.default.createText(` `, false),
             ...this._toNodeList(childlist)
           ]).element,
-          import_Registry5.default.createText(`
+          import_Registry6.default.createText(`
 `, false)
         ] : !!snippet ? [
           ,
-          import_Registry5.default.createText(`
+          import_Registry6.default.createText(`
   `, false),
           ...!!numbers ? [
-            import_Registry5.default.createText(`
+            import_Registry6.default.createText(`
     `, false),
-            import_Registry5.default.createElement("pre", { "class": `snippet line-numbers` }, [
-              import_Registry5.default.createElement("code", { "mount": highlight }, []).element
+            import_Registry6.default.createElement("pre", { "class": `snippet line-numbers` }, [
+              import_Registry6.default.createElement("code", { "mount": highlight }, []).element
             ]).element,
-            import_Registry5.default.createText(`
+            import_Registry6.default.createText(`
   `, false)
           ] : true ? [
             ,
-            import_Registry5.default.createText(`
+            import_Registry6.default.createText(`
     `, false),
-            import_Registry5.default.createElement("pre", { "class": `snippet pad` }, [
-              import_Registry5.default.createElement("code", { "mount": highlight }, []).element
+            import_Registry6.default.createElement("pre", { "class": `snippet pad` }, [
+              import_Registry6.default.createElement("code", { "mount": highlight }, []).element
             ]).element,
-            import_Registry5.default.createText(`
+            import_Registry6.default.createText(`
   `, false)
           ] : [],
-          import_Registry5.default.createText(`
+          import_Registry6.default.createText(`
 `, false)
         ] : true ? [
           ,
-          import_Registry5.default.createText(`
+          import_Registry6.default.createText(`
   `, false),
-          import_Registry5.default.createElement("span", {}, [
-            import_Registry5.default.createText(`????`, false)
+          import_Registry6.default.createElement("span", {}, [
+            import_Registry6.default.createText(`????`, false)
           ]).element,
-          import_Registry5.default.createText(`
+          import_Registry6.default.createText(`
 
 `, false)
         ] : [],
-        import_Registry5.default.createText(`
+        import_Registry6.default.createText(`
 
 `, false)
       ];
@@ -6282,7 +6354,7 @@ var InkAPI = (() => {
   };
 
   // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\ui.ink
-  var Ui_2b08d18966ac07e0669a = class extends import_Component6.default {
+  var Ui_2b08d18966ac07e0669a = class extends import_Component7.default {
     static id = "2b08d18966ac07e0669a";
     static tagname = "ui";
     static classname = "Ui_2b08d18966ac07e0669a";
@@ -6310,276 +6382,390 @@ var InkAPI = (() => {
         active.value = paths.value[paths.value.length - 1];
       };
       return () => [
-        import_Registry6.default.createText(`
+        import_Registry7.default.createText(`
 `, false),
-        import_Registry6.default.createElement("h3", { "class": `tx-secondary bg-t-2 tx-16 m-0 p-10` }, [
-          import_Registry6.default.createText(`
+        import_Registry7.default.createElement("h3", { "class": `tx-secondary bg-t-2 tx-16 m-0 p-10` }, [
+          import_Registry7.default.createText(`
   `, false),
           ...!!(paths.value.length > 1) ? [
-            import_Registry6.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry6.default.createElement("a", { "class": `tx-t-1 cursor-pointer`, "click": prev }, [
-              import_Registry6.default.createText(`
+            import_Registry7.default.createElement("a", { "class": `tx-t-1 cursor-pointer`, "click": prev }, [
+              import_Registry7.default.createText(`
       `, false),
-              import_Registry6.default.createElement("i", { "class": `fas fa-arrow-left` }, []).element,
-              import_Registry6.default.createText(`
+              import_Registry7.default.createElement("i", { "class": `fas fa-arrow-left` }, []).element,
+              import_Registry7.default.createText(`
     `, false)
             ]).element,
-            import_Registry6.default.createText(`
+            import_Registry7.default.createText(`
   `, false)
           ] : [],
-          import_Registry6.default.createText(`
+          import_Registry7.default.createText(`
   API: `, false),
           ...this._toNodeList(active.value),
-          import_Registry6.default.createText(`
+          import_Registry7.default.createText(`
 `, false)
         ]).element,
-        import_Registry6.default.createText(`
+        import_Registry7.default.createText(`
 `, false),
-        import_Registry6.default.createElement("div", { "class": `bg-t-0 p-10` }, [
-          import_Registry6.default.createText(`
+        import_Registry7.default.createElement("div", { "class": `bg-t-0 p-10` }, [
+          import_Registry7.default.createText(`
   `, false),
-          import_Registry6.default.createElement("div", { "class": `relative mb-20 scroll-auto` }, [
-            import_Registry6.default.createText(`
+          import_Registry7.default.createElement("div", { "class": `relative mb-20 scroll-auto` }, [
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry6.default.createElement("table", { "class": `w-full b-collapse` }, [
-              import_Registry6.default.createText(`
+            import_Registry7.default.createElement("table", { "class": `w-full b-collapse` }, [
+              import_Registry7.default.createText(`
       `, false),
-              import_Registry6.default.createElement("thead", {}, [
-                import_Registry6.default.createText(`
+              import_Registry7.default.createElement("thead", {}, [
+                import_Registry7.default.createText(`
         `, false),
-                import_Registry6.default.createElement("th", { "class": `p-10 tx-left tx-upper` }, [
-                  import_Registry6.default.createText(`Property`, false)
+                import_Registry7.default.createElement("th", { "class": `p-10 tx-left tx-upper` }, [
+                  import_Registry7.default.createText(`Property`, false)
                 ]).element,
-                import_Registry6.default.createText(`
+                import_Registry7.default.createText(`
         `, false),
                 ...!active.value.includes("Emitter") ? [
-                  import_Registry6.default.createText(`
+                  import_Registry7.default.createText(`
           `, false),
-                  import_Registry6.default.createElement("th", { "class": `p-10 tx-left tx-upper` }, [
-                    import_Registry6.default.createText(`Returns`, false)
+                  import_Registry7.default.createElement("th", { "class": `p-10 tx-left tx-upper` }, [
+                    import_Registry7.default.createText(`Returns`, false)
                   ]).element,
-                  import_Registry6.default.createText(`
+                  import_Registry7.default.createText(`
         `, false)
                 ] : [],
-                import_Registry6.default.createText(`
+                import_Registry7.default.createText(`
         `, false),
-                import_Registry6.default.createElement("th", { "class": `p-10 tx-left tx-upper` }, [
-                  import_Registry6.default.createText(`Description`, false)
+                import_Registry7.default.createElement("th", { "class": `p-10 tx-left tx-upper` }, [
+                  import_Registry7.default.createText(`Description`, false)
                 ]).element,
-                import_Registry6.default.createText(`
+                import_Registry7.default.createText(`
       `, false)
               ]).element,
-              import_Registry6.default.createText(`
+              import_Registry7.default.createText(`
       `, false),
-              import_Registry6.default.createElement("tbody", {}, [
-                import_Registry6.default.createText(`
+              import_Registry7.default.createElement("tbody", {}, [
+                import_Registry7.default.createText(`
         `, false),
                 ...Object.entries(types_default[active.value]).map(([key, prop]) => [
-                  import_Registry6.default.createText(`
+                  import_Registry7.default.createText(`
           `, false),
-                  import_Registry6.default.createElement("tr", {}, [
-                    import_Registry6.default.createText(`
+                  import_Registry7.default.createElement("tr", {}, [
+                    import_Registry7.default.createText(`
             `, false),
                     ...!!(prop.kind === "property") ? [
-                      import_Registry6.default.createText(`
+                      import_Registry7.default.createText(`
               `, false),
-                      import_Registry6.default.createElement("td", { "class": `tx-primary tx-top tx-nowrap b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
-                        import_Registry6.default.createText(`
+                      import_Registry7.default.createElement("td", { "class": `tx-primary tx-top tx-nowrap b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
+                        import_Registry7.default.createText(`
                 `, false),
                         ...this._toNodeList(key),
-                        import_Registry6.default.createText(`
+                        import_Registry7.default.createText(`
               `, false)
                       ]).element,
-                      import_Registry6.default.createText(`
+                      import_Registry7.default.createText(`
               `, false),
                       ...!!types_default[prop.type] ? [
-                        import_Registry6.default.createText(`
+                        import_Registry7.default.createText(`
                 `, false),
-                        import_Registry6.default.createElement("td", { "class": `tx-top tx-nowrap b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
-                          import_Registry6.default.createText(`
+                        import_Registry7.default.createElement("td", { "class": `tx-top tx-nowrap b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
+                          import_Registry7.default.createText(`
                   `, false),
-                          import_Registry6.default.createElement("a", { "class": `tx-underline tx-info cursor-pointer`, "data-type": prop.type, "click": next }, [
-                            import_Registry6.default.createText(`
+                          import_Registry7.default.createElement("a", { "class": `tx-underline tx-info cursor-pointer`, "data-type": prop.type, "click": next }, [
+                            import_Registry7.default.createText(`
                     `, false),
                             ...this._toNodeList(prop.type),
-                            import_Registry6.default.createText(`
+                            import_Registry7.default.createText(`
                   `, false)
                           ]).element,
                           ...this._toNodeList(prop.list ? "[]" : ""),
-                          import_Registry6.default.createText(`
+                          import_Registry7.default.createText(`
                 `, false)
                         ]).element,
-                        import_Registry6.default.createText(`
+                        import_Registry7.default.createText(`
               `, false)
                       ] : true ? [
                         ,
-                        import_Registry6.default.createText(`
+                        import_Registry7.default.createText(`
                 `, false),
-                        import_Registry6.default.createElement("td", { "class": `tx-top tx-nowrap b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
-                          import_Registry6.default.createText(`
+                        import_Registry7.default.createElement("td", { "class": `tx-top tx-nowrap b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
+                          import_Registry7.default.createText(`
                   `, false),
                           ...this._toNodeList(prop.type),
                           ...this._toNodeList(prop.list ? "[]" : ""),
-                          import_Registry6.default.createText(`
+                          import_Registry7.default.createText(`
                 `, false)
                         ]).element,
-                        import_Registry6.default.createText(`
+                        import_Registry7.default.createText(`
               `, false)
                       ] : [],
-                      import_Registry6.default.createText(`
+                      import_Registry7.default.createText(`
             `, false)
                     ] : !!(prop.kind === "function") ? [
                       ,
-                      import_Registry6.default.createText(`
+                      import_Registry7.default.createText(`
               `, false),
-                      import_Registry6.default.createElement("td", { "class": `tx-primary tx-top b-solid b-t-2 bx-0 bb-0 bt-1 p-10`, "nowrap": true }, [
-                        import_Registry6.default.createText(`
+                      import_Registry7.default.createElement("td", { "class": `tx-primary tx-top b-solid b-t-2 bx-0 bb-0 bt-1 p-10`, "nowrap": true }, [
+                        import_Registry7.default.createText(`
                 `, false),
                         ...this._toNodeList(key),
-                        import_Registry6.default.createText(`(
+                        import_Registry7.default.createText(`(
                   `, false),
                         ...Object.entries(prop.args).map(([index, arg]) => [
-                          import_Registry6.default.createText(`
+                          import_Registry7.default.createText(`
                     `, false),
                           ...!!(index > 0) ? [
-                            import_Registry6.default.createText(`, `, false)
+                            import_Registry7.default.createText(`, `, false)
                           ] : [],
-                          import_Registry6.default.createText(`
+                          import_Registry7.default.createText(`
                     `, false),
                           ...this._toNodeList(arg.name),
-                          import_Registry6.default.createText(`: 
+                          import_Registry7.default.createText(`: 
                     `, false),
                           ...!!types_default[arg.type] ? [
-                            import_Registry6.default.createText(`
+                            import_Registry7.default.createText(`
                       `, false),
-                            import_Registry6.default.createElement("a", { "class": `tx-underline tx-info cursor-pointer`, "data-type": arg.type, "click": next }, [
-                              import_Registry6.default.createText(`
+                            import_Registry7.default.createElement("a", { "class": `tx-underline tx-info cursor-pointer`, "data-type": arg.type, "click": next }, [
+                              import_Registry7.default.createText(`
                         `, false),
                               ...this._toNodeList(arg.type),
-                              import_Registry6.default.createText(`
+                              import_Registry7.default.createText(`
                       `, false)
                             ]).element,
                             ...this._toNodeList(arg.list ? "[]" : ""),
-                            import_Registry6.default.createText(`
+                            import_Registry7.default.createText(`
                     `, false)
                           ] : true ? [
                             ,
-                            import_Registry6.default.createText(`
+                            import_Registry7.default.createText(`
                       `, false),
                             ...this._toNodeList(arg.type),
                             ...this._toNodeList(arg.list ? "[]" : ""),
-                            import_Registry6.default.createText(`
+                            import_Registry7.default.createText(`
                     `, false)
                           ] : [],
-                          import_Registry6.default.createText(`
+                          import_Registry7.default.createText(`
                   `, false)
                         ]).flat(),
-                        import_Registry6.default.createText(`
+                        import_Registry7.default.createText(`
                 )
               `, false)
                       ]).element,
-                      import_Registry6.default.createText(`
+                      import_Registry7.default.createText(`
               `, false),
                       ...!!types_default[prop.returns.type] ? [
-                        import_Registry6.default.createText(`
+                        import_Registry7.default.createText(`
                 `, false),
-                        import_Registry6.default.createElement("td", { "class": `tx-top tx-nowrap b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
-                          import_Registry6.default.createText(`
+                        import_Registry7.default.createElement("td", { "class": `tx-top tx-nowrap b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
+                          import_Registry7.default.createText(`
                   `, false),
-                          import_Registry6.default.createElement("a", { "class": `tx-underline tx-info cursor-pointer`, "data-type": prop.returns.type, "click": next }, [
-                            import_Registry6.default.createText(`
+                          import_Registry7.default.createElement("a", { "class": `tx-underline tx-info cursor-pointer`, "data-type": prop.returns.type, "click": next }, [
+                            import_Registry7.default.createText(`
                     `, false),
                             ...this._toNodeList(prop.returns.type),
-                            import_Registry6.default.createText(`
+                            import_Registry7.default.createText(`
                   `, false)
                           ]).element,
                           ...this._toNodeList(prop.returns.list ? "[]" : ""),
-                          import_Registry6.default.createText(`
+                          import_Registry7.default.createText(`
                 `, false)
                         ]).element,
-                        import_Registry6.default.createText(`
+                        import_Registry7.default.createText(`
               `, false)
                       ] : true ? [
                         ,
-                        import_Registry6.default.createText(`
+                        import_Registry7.default.createText(`
                 `, false),
-                        import_Registry6.default.createElement("td", { "class": `tx-top tx-nowrap b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
-                          import_Registry6.default.createText(`
+                        import_Registry7.default.createElement("td", { "class": `tx-top tx-nowrap b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
+                          import_Registry7.default.createText(`
                   `, false),
                           ...this._toNodeList(prop.returns.type),
                           ...this._toNodeList(prop.returns.list ? "[]" : ""),
-                          import_Registry6.default.createText(`
+                          import_Registry7.default.createText(`
                 `, false)
                         ]).element,
-                        import_Registry6.default.createText(`
+                        import_Registry7.default.createText(`
               `, false)
                       ] : [],
-                      import_Registry6.default.createText(`
+                      import_Registry7.default.createText(`
             `, false)
                     ] : !!(prop.kind === "event") ? [
                       ,
-                      import_Registry6.default.createText(`
+                      import_Registry7.default.createText(`
               `, false),
-                      import_Registry6.default.createElement("td", { "class": `tx-primary tx-top b-solid b-t-2 bx-0 bb-0 bt-1 p-10`, "nowrap": true }, [
-                        import_Registry6.default.createText(`
+                      import_Registry7.default.createElement("td", { "class": `tx-primary tx-top b-solid b-t-2 bx-0 bb-0 bt-1 p-10`, "nowrap": true }, [
+                        import_Registry7.default.createText(`
                 `, false),
                         ...this._toNodeList(`on('${key}', (event: Event) => void)`),
-                        import_Registry6.default.createText(`
+                        import_Registry7.default.createText(`
               `, false)
                       ]).element,
-                      import_Registry6.default.createText(`
+                      import_Registry7.default.createText(`
             `, false)
                     ] : [],
-                    import_Registry6.default.createText(`
+                    import_Registry7.default.createText(`
             `, false),
-                    import_Registry6.default.createElement("td", { "class": `tx-top tx-lh-24 b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
-                      import_Registry6.default.createText(`
+                    import_Registry7.default.createElement("td", { "class": `tx-top tx-lh-24 b-solid b-t-2 bx-0 bb-0 bt-1 p-10` }, [
+                      import_Registry7.default.createText(`
               `, false),
                       ...!!prop.description ? [
-                        import_Registry6.default.createText(`
+                        import_Registry7.default.createText(`
                 `, false),
-                        import_Registry6.default.createElement("p", { "class": `pb-10` }, [
+                        import_Registry7.default.createElement("p", { "class": `pb-10` }, [
                           ...this._toNodeList(prop.description)
                         ]).element,
-                        import_Registry6.default.createText(`
+                        import_Registry7.default.createText(`
                 `, false),
                         ...!!prop.example ? [
-                          import_Registry6.default.createText(`
+                          import_Registry7.default.createText(`
                   `, false),
-                          import_Registry6.default.createElement("h5", {}, [
-                            import_Registry6.default.createText(`Example`, false)
+                          import_Registry7.default.createElement("h5", {}, [
+                            import_Registry7.default.createText(`Example`, false)
                           ]).element,
-                          import_Registry6.default.createText(`
+                          import_Registry7.default.createText(`
                   `, false),
-                          import_Registry6.default.createComponent("api-ide-code", Code_5387662ecbed97347dd0, { "lang": `js` }, [
+                          import_Registry7.default.createComponent("api-ide-code", Code_5387662ecbed97347dd0, { "lang": `js` }, [
                             ...this._toNodeList(prop.example)
                           ]).element,
-                          import_Registry6.default.createText(` 
+                          import_Registry7.default.createText(` 
                 `, false)
                         ] : [],
-                        import_Registry6.default.createText(`
+                        import_Registry7.default.createText(`
               `, false)
                       ] : [],
-                      import_Registry6.default.createText(`
+                      import_Registry7.default.createText(`
             `, false)
                     ]).element,
-                    import_Registry6.default.createText(`
+                    import_Registry7.default.createText(`
           `, false)
                   ]).element,
-                  import_Registry6.default.createText(`
+                  import_Registry7.default.createText(`
         `, false)
                 ]).flat(),
-                import_Registry6.default.createText(`
+                import_Registry7.default.createText(`
       `, false)
               ]).element,
-              import_Registry6.default.createText(`
+              import_Registry7.default.createText(`
     `, false)
             ]).element,
-            import_Registry6.default.createText(`
+            import_Registry7.default.createText(`
   `, false)
           ]).element,
-          import_Registry6.default.createText(`
+          import_Registry7.default.createText(`
+`, false)
+        ]).element
+      ];
+    }
+  };
+
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\app\head.ink
+  var import_Registry8 = __toESM(require_Registry());
+  var import_Component8 = __toESM(require_Component());
+  var import_ink4 = __toESM(require_ink());
+  var Head_d13ac870c734c1e59a80 = class extends import_Component8.default {
+    static id = "d13ac870c734c1e59a80";
+    static tagname = "head";
+    static classname = "Head_d13ac870c734c1e59a80";
+    styles() {
+      return ``;
+    }
+    template() {
+      (0, import_ink4.classlist)().add(
+        "absolute",
+        "top-0",
+        "right-0",
+        "left-170",
+        "h-45",
+        "bg-t-0",
+        "z-1"
+      );
+      return () => [
+        import_Registry8.default.createText(`
+`, false),
+        import_Registry8.default.createElement("header", { "class": `w-full h-full scroll-x-auto` }, [
+          import_Registry8.default.createText(`
+  `, false),
+          ...this._toNodeList((0, import_ink4.children)()),
+          import_Registry8.default.createText(`
+`, false)
+        ]).element
+      ];
+    }
+  };
+
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\app\left.ink
+  var import_Registry9 = __toESM(require_Registry());
+  var import_Component9 = __toESM(require_Component());
+  var import_ink5 = __toESM(require_ink());
+  var Left_effc05807fc7bfd0b111 = class extends import_Component9.default {
+    static id = "effc05807fc7bfd0b111";
+    static tagname = "left";
+    static classname = "Left_effc05807fc7bfd0b111";
+    styles() {
+      return ``;
+    }
+    template() {
+      (0, import_ink5.classlist)().add(
+        "absolute",
+        "top-0",
+        "bottom-0",
+        "left-0",
+        "w-170",
+        "bg-t-3",
+        "b-solid",
+        "b-t-2",
+        "by-0",
+        "bl-0",
+        "br-1",
+        "z-2"
+      );
+      return () => [
+        import_Registry9.default.createText(`
+`, false),
+        import_Registry9.default.createElement("aside", { "class": `w-full h-full scroll-auto` }, [
+          import_Registry9.default.createText(`
+  `, false),
+          ...this._toNodeList((0, import_ink5.children)()),
+          import_Registry9.default.createText(`
+`, false)
+        ]).element
+      ];
+    }
+  };
+
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\app\main.ink
+  var import_Registry10 = __toESM(require_Registry());
+  var import_Component10 = __toESM(require_Component());
+  var import_ink6 = __toESM(require_ink());
+  var Main_dd8105a02de18136d611 = class extends import_Component10.default {
+    static id = "dd8105a02de18136d611";
+    static tagname = "main";
+    static classname = "Main_dd8105a02de18136d611";
+    styles() {
+      return ``;
+    }
+    template() {
+      (0, import_ink6.classlist)().add(
+        "absolute",
+        "top-45",
+        "right-0",
+        "left-170",
+        "bottom-0",
+        "bg-black",
+        "b-solid",
+        "b-t-2",
+        "bx-0",
+        "bb-0",
+        "bt-1"
+      );
+      return () => [
+        import_Registry10.default.createText(`
+`, false),
+        import_Registry10.default.createElement("main", { "class": `w-full h-full scroll-auto` }, [
+          import_Registry10.default.createText(`
+  `, false),
+          ...this._toNodeList((0, import_ink6.children)()),
+          import_Registry10.default.createText(`
 `, false)
         ]).element
       ];
@@ -6587,10 +6773,10 @@ var InkAPI = (() => {
   };
 
   // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\app.ink
-  var import_Registry7 = __toESM(require_Registry());
-  var import_Component7 = __toESM(require_Component());
-  var import_ink4 = __toESM(require_ink());
-  var App_4ec139eab67151540039 = class extends import_Component7.default {
+  var import_Registry11 = __toESM(require_Registry());
+  var import_Component11 = __toESM(require_Component());
+  var import_ink7 = __toESM(require_ink());
+  var App_4ec139eab67151540039 = class extends import_Component11.default {
     static id = "4ec139eab67151540039";
     static tagname = "app";
     static classname = "App_4ec139eab67151540039";
@@ -6598,42 +6784,42 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const { title, height } = (0, import_ink4.props)();
+      const { title, height } = (0, import_ink7.props)();
       const style = height ? `height:${height}px` : "";
       return () => [
-        import_Registry7.default.createText(`
+        import_Registry11.default.createText(`
 `, false),
-        import_Registry7.default.createElement("div", { "class": `curved scroll-hidden shadow-0-0-10-0-0-0-5` }, [
-          import_Registry7.default.createText(`
+        import_Registry11.default.createElement("div", { "class": `curved scroll-hidden shadow-0-0-10-0-0-0-5` }, [
+          import_Registry11.default.createText(`
   `, false),
-          import_Registry7.default.createElement("div", { "class": `relative flex flex-center-y gap-10 p-10 bg-t-1 tx-c-999999 tx-16` }, [
-            import_Registry7.default.createText(`
+          import_Registry11.default.createElement("div", { "class": `relative flex flex-center-y gap-10 p-10 bg-t-1 tx-c-999999 tx-16` }, [
+            import_Registry11.default.createText(`
     `, false),
-            import_Registry7.default.createElement("span", { "class": `bg-h-999999 pill h-10 w-10` }, []).element,
-            import_Registry7.default.createText(`
+            import_Registry11.default.createElement("span", { "class": `bg-h-999999 pill h-10 w-10` }, []).element,
+            import_Registry11.default.createText(`
     `, false),
-            import_Registry7.default.createElement("span", { "class": `bg-h-999999 pill h-10 w-10` }, []).element,
-            import_Registry7.default.createText(`
+            import_Registry11.default.createElement("span", { "class": `bg-h-999999 pill h-10 w-10` }, []).element,
+            import_Registry11.default.createText(`
     `, false),
-            import_Registry7.default.createElement("span", { "class": `bg-h-999999 pill h-10 w-10` }, []).element,
-            import_Registry7.default.createText(`
+            import_Registry11.default.createElement("span", { "class": `bg-h-999999 pill h-10 w-10` }, []).element,
+            import_Registry11.default.createText(`
     `, false),
-            import_Registry7.default.createElement("span", { "class": `flex flex-center h-full w-full absolute top-0 left-0` }, [
-              import_Registry7.default.createText(`
+            import_Registry11.default.createElement("span", { "class": `flex flex-center h-full w-full absolute top-0 left-0` }, [
+              import_Registry11.default.createText(`
       `, false),
               ...this._toNodeList(title),
-              import_Registry7.default.createText(`
+              import_Registry11.default.createText(`
     `, false)
             ]).element,
-            import_Registry7.default.createText(`
+            import_Registry11.default.createText(`
   `, false)
           ]).element,
-          import_Registry7.default.createText(`
+          import_Registry11.default.createText(`
   `, false),
-          import_Registry7.default.createElement("div", { "class": `bg-black tx-t-1 relative`, "style": style }, [
-            ...this._toNodeList((0, import_ink4.children)())
+          import_Registry11.default.createElement("div", { "class": `bg-black tx-t-1 relative`, "style": style }, [
+            ...this._toNodeList((0, import_ink7.children)())
           ]).element,
-          import_Registry7.default.createText(`
+          import_Registry11.default.createText(`
 `, false)
         ]).element
       ];
@@ -6641,8 +6827,8 @@ var InkAPI = (() => {
   };
 
   // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
-  var import_Registry8 = __toESM(require_Registry());
-  var import_Component8 = __toESM(require_Component());
+  var import_Registry12 = __toESM(require_Registry());
+  var import_Component12 = __toESM(require_Component());
 
   // src/components/i18n/index.ts
   var _ = function(phrase, ...variables) {
@@ -6657,7 +6843,7 @@ var InkAPI = (() => {
   };
 
   // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
-  var Translate_794a00a5e900fca28310 = class extends import_Component8.default {
+  var Translate_794a00a5e900fca28310 = class extends import_Component12.default {
     static id = "794a00a5e900fca28310";
     static tagname = "translate";
     static classname = "Translate_794a00a5e900fca28310";
@@ -6692,57 +6878,57 @@ var InkAPI = (() => {
         }
       }
       return () => [
-        import_Registry8.default.createText(`
+        import_Registry12.default.createText(`
     `, false),
         ...!!p ? [
-          import_Registry8.default.createText(`
+          import_Registry12.default.createText(`
       `, false),
-          import_Registry8.default.createElement("p", {}, [
+          import_Registry12.default.createElement("p", {}, [
             ...this._toNodeList(translations)
           ]).element,
-          import_Registry8.default.createText(`
+          import_Registry12.default.createText(`
     `, false)
         ] : !!li ? [
           ,
-          import_Registry8.default.createText(`
+          import_Registry12.default.createText(`
       `, false),
-          import_Registry8.default.createElement("li", {}, [
+          import_Registry12.default.createElement("li", {}, [
             ...this._toNodeList(translations)
           ]).element,
-          import_Registry8.default.createText(`
+          import_Registry12.default.createText(`
     `, false)
         ] : !!div ? [
           ,
-          import_Registry8.default.createText(`
+          import_Registry12.default.createText(`
       `, false),
-          import_Registry8.default.createElement("div", {}, [
+          import_Registry12.default.createElement("div", {}, [
             ...this._toNodeList(translations)
           ]).element,
-          import_Registry8.default.createText(`
+          import_Registry12.default.createText(`
     `, false)
         ] : true ? [
           ,
-          import_Registry8.default.createText(`
+          import_Registry12.default.createText(`
       `, false),
           ...this._toNodeList(translations),
-          import_Registry8.default.createText(`
+          import_Registry12.default.createText(`
     `, false)
         ] : []
       ];
     }
   };
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\state-management.ink
-  var import_ink5 = __toESM(require_ink());
+  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\component-strategy.ink
+  var import_ink8 = __toESM(require_ink());
   var TemplateDocument = class _TemplateDocument extends import_Document2.default {
     static sync() {
       const document2 = new _TemplateDocument();
       return document2.sync();
     }
     template() {
-      const url = "/docs/state-management.html";
-      const title = _("State Management - Ink reactive web component template engine.");
-      const description = _("Learn how to manage states in Ink.");
+      const url = "/docs/component-strategy.html";
+      const title = _("Component Strategy - Ink reactive web component template engine.");
+      const description = _("Learn more about web components and how they work with Ink.");
       const toggle = () => {
         document.getElementsByTagName("panel-layout")[0].toggle("left");
       };
@@ -6812,16 +6998,16 @@ var InkAPI = (() => {
               import_Document.default.createElement("link", { "rel": `stylesheet`, "type": `text/css`, "href": `/ink/styles/global.css` }),
               import_Document.default.createText(`
   `, false),
-              import_Document.default.createElement("link", { "rel": `stylesheet`, "type": `text/css`, "href": `/ink/build/client/${(0, import_ink5.env)("BUILD_ID")}.css` }),
+              import_Document.default.createElement("link", { "rel": `stylesheet`, "type": `text/css`, "href": `/ink/build/client/${(0, import_ink8.env)("BUILD_ID")}.css` }),
               import_Document.default.createElement("script", { "data-template": true, "type": `text/json` }, [
                 import_Document.default.createText(`__TEMPLATE_DATA__`, true)
               ]),
               import_Document.default.createText(`
   `, false),
-              import_Document.default.createElement("script", { "src": `/ink/build/client/${(0, import_ink5.env)("BUILD_ID")}.js` }),
+              import_Document.default.createElement("script", { "src": `/ink/build/client/${(0, import_ink8.env)("BUILD_ID")}.js` }),
               import_Document.default.createText(`
   `, false),
-              ...!!((0, import_ink5.env)("PUBLIC_ENV") === "development") ? [
+              ...!!((0, import_ink8.env)("PUBLIC_ENV") === "development") ? [
                 import_Document.default.createText(`
     `, false),
                 import_Document.default.createElement("script", { "src": `/dev.js` }),
@@ -7423,28 +7609,13 @@ var InkAPI = (() => {
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#props` }, [
-                      ...this._toNodeList(_("Props"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#document` }, [
+                      ...this._toNodeList(_("Document"))
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#signals` }, [
-                      ...this._toNodeList(_("Signals"))
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#events` }, [
-                      ...this._toNodeList(_("Events"))
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#classnames` }, [
-                      ...this._toNodeList(_("Class Names"))
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#children` }, [
-                      ...this._toNodeList(_("Children"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#template` }, [
+                      ...this._toNodeList(_("Template"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -7453,13 +7624,34 @@ var InkAPI = (() => {
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#env` }, [
-                      ...this._toNodeList(_("Env Variables"))
+                    import_Document.default.createElement("nav", { "class": `pl-20` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#strat-1` }, [
+                        ...this._toNodeList(_("Strategy 1"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#strat-2` }, [
+                        ...this._toNodeList(_("Strategy 2"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#strat-3` }, [
+                        ...this._toNodeList(_("Strategy 3"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#strat-4` }, [
+                        ...this._toNodeList(_("Strategy 4"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#this` }, [
-                      ...this._toNodeList(_("this"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#fouc` }, [
+                      ...this._toNodeList(_("FOUC"))
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -7481,38 +7673,316 @@ var InkAPI = (() => {
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_("State Management")),
+                    ...this._toNodeList(_("Component Strategy")),
                     import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
-                    import_Document.default.createText(`
-            Ink provides several ways to manage properties and states 
-            in your components.
           `, false)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `props` }, []),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            There are three types of components in Ink: Document, 
+            Template, and Component. Each type of component has a 
+            different strategy for rendering and updating the DOM. The 
+            Document component is the root component of the application 
+            and is responsible for rendering the entire application. The 
+            Template component is a reusable component that can be used 
+            in multiple places in the application. The Component component 
+            is a custom component that can be used to create complex UI 
+            elements.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `document` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_("Props")),
+                    ...this._toNodeList(_("Document")),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "lang": `js`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            A document denoted by files with the 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      import_Document.default.createText(`.ink`, false)
+                    ]),
+                    import_Document.default.createText(` extension, is the root of
+            each page view that should include the document markup 
+            starting with `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<html>`)
+                    ]),
+                    import_Document.default.createText(`. While 
+            it looks like another Ink component, there are some key 
+            differences in how it is used.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ul", {}, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("li", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                        import_Document.default.createText(`
+                A document logic (`, false),
+                        import_Document.default.createElement("ide-code", { "inline": true }, [
+                          ...this._toNodeList(`<script>`)
+                        ]),
+                        import_Document.default.createText(`)
+                is executed on the client side but is not a 
+                `, false),
+                        import_Document.default.createElement("ide-code", { "inline": true }, [
+                          import_Document.default.createText(`InkComponent`, false)
+                        ]),
+                        import_Document.default.createText(`, which means 
+                it cannot be re-rendered and does not have access to 
+                `, false),
+                        import_Document.default.createElement("ide-code", { "inline": true }, [
+                          import_Document.default.createText(`this`, false)
+                        ]),
+                        import_Document.default.createText(` context.
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("li", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                        import_Document.default.createText(`
+                A document `, false),
+                        import_Document.default.createElement("ide-code", { "inline": true }, [
+                          ...this._toNodeList(`props()`)
+                        ]),
+                        import_Document.default.createText(` are the 
+                server props passed down to the client.
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("li", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                        import_Document.default.createText(`
+                A document does not have access to NodeJS functionality. So 
+                things like `, false),
+                        import_Document.default.createElement("ide-code", { "inline": true }, [
+                          import_Document.default.createText(`fs`, false)
+                        ]),
+                        import_Document.default.createText(` are not available.
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("element-alert", { "curved": true, "info": true, "class": `py-20 tx-lh-24` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("element-icon", { "name": `info-circle` }),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("strong", {}, [
+                      import_Document.default.createText(`Recommendation:`, false)
+                    ]),
+                    import_Document.default.createText(` You should do server related
+            logic on the server framework and pass the neccesary data 
+            to the client.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-app", { "height": 250, "title": `Passing Server Props`, "class": `py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("app-head", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `flex scroll-x-auto pt-5 pl-5` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "on": true, "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `server`, "selector": `#server-index-ts` }, [
+                          import_Document.default.createText(`
+                  src/index.ts
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `server`, "selector": `#server-page-ink` }, [
+                          import_Document.default.createText(`
+                  src/page.ink
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("app-left", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("h5", { "class": `p-5` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `chevron-down` }),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("span", {}, [
+                          import_Document.default.createText(`src`, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "on": true, "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `server`, "selector": `#server-index-ts` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                index.ts
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `server`, "selector": `#server-page-ink` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                page.ink
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("app-main", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `server-index-ts`, "lang": `js`, "numbers": true, "trim": true, "detab": 16 }, [
+                        ...this._toNodeList(`
+                import http from 'http';
+                import ink from '@stackpress/ink/compiler';
+
+                const compiler = ink({ cwd: __dirname });
+                const server = http.createServer(async (req, res) => {
+                  //pass server props to document
+                  res.end(await compiler.render('./index.ink', {
+                    title: 'Hello World'
+                  }));
+                });
+              `)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `server-page-ink`, "style": `display:none`, "numbers": true, "trim": true, "detab": 16 }, [
+                        ...this._toNodeList(`
+                <script>
+                  import { props } from '@stackpress/ink';
+                  //from the server
+                  const { title } = props();
+                <\/script>
+                <html>
+                  <body>
+                    <h1 class="title">{title}</h1>
+                  </body>
+                </html>
+              `)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `template` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Template")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            A template is resuable partial markup that can be imported by 
+            a component, document or another template. A template is 
+            not is not a `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      import_Document.default.createText(`InkComponent`, false)
+                    ]),
+                    import_Document.default.createText(`, but 
+            rather adds its markup to the parent component's final markup.
+            You will not see a template in the DOM, but rather the
+            markup it contains.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            For example, consider a document that contains the following 
+            markup.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-code", { "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            import { props } from '@stackpress/ink';
-            const { title, description } = props();
+            <script>
+              const title = 'Hello World';
+            <\/script>
+            <html>
+              <head>
+                <meta charset="utf-8" />
+                <title>{title}</title>
+              </head>
+              <body>
+                <h1>{title}</h1>
+              </body>
+            </html>
           `)
                   ]),
                   import_Document.default.createText(`
@@ -7520,384 +7990,34 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
                     import_Document.default.createText(`
-            The `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`props`, false)
-                    ]),
-                    import_Document.default.createText(` function can be used to access the 
-            properties of a component.
+            You can create a template for the head of your
+            document and then import it. This allows you to
+            reuse the head markup in multiple documents.
           `, false)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `signals` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
+                  import_Document.default.createElement("ide-app", { "height": 250, "title": `Using Templates`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_("Signals")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
-                    import_Document.default.createText(`
-            Ink provides a reactive state management system that allows 
-            you to manage states in your components. The system is based 
-            on signals, which are reactive variables that can be used to 
-            store and update data. Signals can be used to store any type 
-            of data, including numbers, strings, objects, arrays, and even 
-            functions.
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `scroll-auto bg-black` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("ide-code", { "trim": true, "detab": 14 }, [
-                      ...this._toNodeList(`
-              <script>
-                import { signal } from '@stackpress/ink';
-                const count = signal<number>(1);
-              <\/script>
-              <em class=classlist>Count #{count.value}</em>
-            `)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
-                    import_Document.default.createText(`
-            To create a signal, you can use the 
-            `, false),
-                    import_Document.default.createElement("ide-code", { "type": `javascript`, "inline": true }, [
-                      ...this._toNodeList(`signal()`)
-                    ]),
-                    import_Document.default.createText(` 
-            function, which takes an initial value as an argument. Signals 
-            can be read and updated using the `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`value`, false)
-                    ]),
-                    import_Document.default.createText(` property. 
-            Setting the value will trigger a re-render of the component.
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
-                    import_Document.default.createText(`
-            Signals can be used in your components to manage states and 
-            trigger updates when the state changes. You can use signals to 
-            store data that needs to be shared between components, or to 
-            trigger side effects when the state changes. Signals can also 
-            be used to store data that needs to be persisted across page 
-            reloads, such as form data or user preferences.
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("a", { "name": `events` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Events")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `scroll-auto bg-black` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("ide-code", { "trim": true, "number": true, "detab": 14 }, [
-                      ...this._toNodeList(`
-              <script>
-                import { signal } from '@stackpress/ink';
-                const count = signal<number>(1);
-                const add = e => count.value++;
-              <\/script>
-
-              <button click=add>{count.value}</button>
-
-              <button dblclick=add>{count.value}</button>
-              <button mousedown=add>{count.value}</button>
-              <button mouseup=add>{count.value}</button>
-              <button mousemove=add>{count.value}</button>
-              <button mouseover=add>{count.value}</button>
-              <button mouseout=add>{count.value}</button>
-              <button wheel=add>{count.value}</button>
-              <button keydown=add>{count.value}</button>
-              <button keypress=add>{count.value}</button>
-              <button keyup=add>{count.value}</button>
-            `)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
-                    import_Document.default.createText(`
-            For example, you can use the `, false),
-                    import_Document.default.createElement("ide-code", { "inline": true }, [
-                      import_Document.default.createText(`click`, false)
-                    ]),
-                    import_Document.default.createText(` 
-            attribute assigned to a function to trigger a function when 
-            the element is clicked. In combination with updating a signal, 
-            can trigger a re-render of the component. The following event 
-            attributes are supported.
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `col-2` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", {}, [
+                    import_Document.default.createElement("app-head", {}, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Mouse Events"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
+                      import_Document.default.createElement("div", { "class": `flex scroll-x-auto pt-5 pl-5` }, [
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`click`, false)
-                          ])
+                        import_Document.default.createElement("element-tab", { "on": true, "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `template`, "selector": `#template-page-ink` }, [
+                          import_Document.default.createText(`
+                  src/page.ink
+                `, false)
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`dblclick`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`mousedown`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`mouseup`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`mousemove`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`mouseover`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`mouseout`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`wheel`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Keyboard Events"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`keydown`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`keypress`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`keyup`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Form Events"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`blur`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`change`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`contextmenu`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`focus`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`input`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`submit`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`invalid`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`reset`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`search`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`select`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Clipboard Events"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`copy`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`cut`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`paste`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Transition Events"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`transitionend`, false)
-                          ])
+                        import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `template`, "selector": `#template-head-ink` }, [
+                          import_Document.default.createText(`
+                  src/head.ink
+                `, false)
                         ]),
                         import_Document.default.createText(`
               `, false)
@@ -7907,242 +8027,72 @@ var InkAPI = (() => {
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", {}, [
+                    import_Document.default.createElement("app-left", {}, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Drag Events"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
+                      import_Document.default.createElement("h5", { "class": `p-5` }, [
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`drag`, false)
-                          ])
-                        ]),
+                        import_Document.default.createElement("element-icon", { "name": `chevron-down` }),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`dragstart`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`dragend`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`dragover`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`dragenter`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`dragleave`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`drop`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`scroll`, false)
-                          ])
+                        import_Document.default.createElement("span", {}, [
+                          import_Document.default.createText(`src`, false)
                         ]),
                         import_Document.default.createText(`
               `, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Media Events"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
+                      import_Document.default.createElement("element-tab", { "on": true, "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `template`, "selector": `#template-page-ink` }, [
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`durationchange`, false)
-                          ])
-                        ]),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
                         import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`ended`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`error`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`loadeddata`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`loadedmetadata`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`loadstart`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`pause`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`play`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`playing`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`progress`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`ratechange`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`seeked`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`seeking`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`stalled`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`suspend`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`timeupdate`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`volumechange`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`waiting`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
+                page.ink
               `, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("h3", {}, [
-                        ...this._toNodeList(_("Animation Events"))
+                      import_Document.default.createElement("element-tab", { "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `template`, "selector": `#template-head-ink` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                head.ink
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("app-main", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `template-page-ink`, "numbers": true, "trim": true, "detab": 16 }, [
+                        ...this._toNodeList(`
+                <link rel="import" type="template" href="./head.ink" name="html-head" />
+                <script>
+                  const title = 'Hello World';
+                <\/script>
+                <html>
+                  <html-head />
+                  <body>
+                    <h1>{title}</h1>
+                  </body>
+                </html>
+              `)
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("ul", { "class": `tx-lh-36` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`animationstart`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`animationend`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("li", {}, [
-                          import_Document.default.createElement("ide-code", { "inline": true }, [
-                            import_Document.default.createText(`animationiteration`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
+                      import_Document.default.createElement("ide-code", { "id": `template-head-ink`, "style": `display:none`, "numbers": true, "trim": true, "detab": 16 }, [
+                        ...this._toNodeList(`
+                <head>
+                  <meta charset="utf-8" />
+                  <title>{title}</title>
+                </head>
+              `)
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -8153,29 +8103,17 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `classnames` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
+                  import_Document.default.createElement("element-alert", { "curved": true, "info": true, "class": `py-20 tx-lh-24` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_("Class Names")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `scroll-auto bg-black` }, [
+                    import_Document.default.createElement("element-icon", { "name": `info-circle` }),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "lang": `js`, "trim": true, "detab": 14 }, [
-                      ...this._toNodeList(`
-              import { classnames } from '@stackpress/ink';
-              const classlist = classnames(); //--> 'class1 class2 class3'
-            `)
+                    import_Document.default.createElement("strong", {}, [
+                      import_Document.default.createText(`Note:`, false)
                     ]),
-                    import_Document.default.createText(`
+                    import_Document.default.createText(` Template partials do not process 
+            attributes or children if given.
           `, false)
                   ]),
                   import_Document.default.createText(`
@@ -8183,52 +8121,9 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
                     import_Document.default.createText(`
-            The `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`classnames`, false)
-                    ]),
-                    import_Document.default.createText(` function can be used to generate 
-            a list of class names based on the properties of an object.
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("a", { "name": `children` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Children")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `scroll-auto bg-black` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("ide-code", { "lang": `js`, "trim": true, "detab": 14 }, [
-                      ...this._toNodeList(`
-              import { children } from '@stackpress/ink';
-              const childlist = children(); //--> Node[]
-            `)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
-                    import_Document.default.createText(`
-            The `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`children`, false)
-                    ]),
-                    import_Document.default.createText(` function can be used to render 
-            child components in a parent component.
+            Variables used in a template should be declared in the
+            parent component or document. This allows you to pass
+            data to the template from the parent.
           `, false)
                   ]),
                   import_Document.default.createText(`
@@ -8247,180 +8142,861 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("div", { "class": `scroll-auto bg-black` }, [
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            All ink components are 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      import_Document.default.createText(`InkComponent`, false)
+                    ]),
+                    import_Document.default.createText(` that extends
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      import_Document.default.createText(`HTMLElement`, false)
+                    ]),
+                    import_Document.default.createText(` and therefore is 
+            both a web component and element just like any other element 
+            in the browser DOM. Components that do not use the
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<style>`)
+                    ]),
+                    import_Document.default.createText(` tag are affected by 
+            the global styles of the application. Components with the
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<style>`)
+                    ]),
+                    import_Document.default.createText(` tag enable the 
+            component's shadow DOM and will encapsulate the styles within
+            the component and not be affected by global styles. With that 
+            said, there are several strategies that can be applied to 
+            Ink components.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `strat-1` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h3", { "class": `tx-t-1 tx-upper tx-22 pt-40 pb-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "lang": `js`, "trim": true, "detab": 14 }, [
-                      ...this._toNodeList(`
-              import { component } from '@stackpress/ink';
-              const button = component(); //--> HTMLElement
-              console.log(button.querySelector('span'));
-            `)
-                    ]),
+                    ...this._toNodeList(_("Strategy 1: No Components")),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
+
           `, false),
                   import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
                     import_Document.default.createText(`
-            For other edge cases, the `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`component`, false)
-                    ]),
-                    import_Document.default.createText(` function 
-            can be used to get raw access to the component's 
-            functionality.
+            This strategy uses only documents and templates. This 
+            strategy is useful for simple applications that do not require 
+            complex UI elements. This is the best strategy for 
+            performant applications.
           `, false)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `env` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
+                  import_Document.default.createElement("ide-app", { "height": 400, "title": `No Components`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_("Environment Variables")),
+                    import_Document.default.createElement("app-head", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `flex scroll-x-auto pt-5 pl-5` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "on": true, "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `strat-1`, "selector": `#strat-1-page-ink` }, [
+                          import_Document.default.createText(`
+                  src/page.ink
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `strat-1`, "selector": `#strat-1-head-ink` }, [
+                          import_Document.default.createText(`
+                  src/head.ink
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `strat-1`, "selector": `#strat-1-header-ink` }, [
+                          import_Document.default.createText(`
+                  src/header.ink
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `strat-1`, "selector": `#strat-1-footer-ink` }, [
+                          import_Document.default.createText(`
+                  src/footer.ink
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("app-left", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("h5", { "class": `folder` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `chevron-down` }),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("span", {}, [
+                          import_Document.default.createText(`src`, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "on": true, "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `strat-1`, "selector": `#strat-1-page-ink` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                page.ink
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `strat-1`, "selector": `#strat-1-head-ink` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                head.ink
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `strat-1`, "selector": `#strat-1-header-ink` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                header.ink
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `strat-1`, "selector": `#strat-1-footer-ink` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                footer.ink
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("app-main", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `strat-1-page-ink`, "numbers": true, "trim": true, "detab": 16 }, [
+                        ...this._toNodeList(`
+                <link rel="import" type="template" href="./head.ink" name="html-head" />
+                <link rel="import" type="template" href="./header.ink" name="page-header" />
+                <link rel="import" type="template" href="./footer.ink" name="page-footer" />
+                <script>
+                  import { env } from '@stackpress/ink';
+                  const { BUILD_ID, APP_DATA } = env();
+                  const title = 'Hello World';
+                <\/script>
+                <html>
+                  <html-head />
+                  <body>
+                    <page-header />
+                    <main>
+                      <h1>{title}</h1>
+                    </main>
+                    <page-footer />
+                  </body>
+                </html>
+              `)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `strat-1-head-ink`, "style": `display:none`, "numbers": true, "trim": true, "detab": 16 }, [
+                        ...this._toNodeList(`
+                <head>
+                  <meta charset="utf-8" />
+                  <title>{title}</title>
+
+                  <link rel="stylesheet" type="text/css" href={\`/build/\${BUILD_ID}.css\`} />
+                  <script data-app={APP_DATA} src={\`/build/\${BUILD_ID}.js\`}><\/script>
+                </head>
+              `)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `strat-1-header-ink`, "style": `display:none`, "numbers": true, "trim": true, "detab": 16 }, [
+                        ...this._toNodeList(`
+                <header>
+                  <img src="/logo.png" alt="Logo" />
+                  <h6>Brand</h6>
+                </header>
+              `)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `strat-1-footer-ink`, "style": `display:none`, "numbers": true, "trim": true, "detab": 16 }, [
+                        ...this._toNodeList(`
+                <footer>
+                  <a href="/about">About</a>
+                  <copy>&copy; 2025</copy>
+                </footer>
+              `)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("a", { "name": `strat-2` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h3", { "class": `tx-t-1 tx-upper tx-22 pt-40 pb-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Strategy 2: Shallow Components")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            This strategy uses components that do not have a 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<style>`)
+                    ]),
+                    import_Document.default.createText(` tag and is useful for 
+            applications that require complex logic in components but 
+            using a shared global stylesheet.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-app", { "height": 400, "title": `Shallow Components`, "class": `py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("app-head", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `flex scroll-x-auto pt-5 pl-5` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "on": true, "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `strat-2`, "selector": `#strat-2-page-ink` }, [
+                          import_Document.default.createText(`
+                  src/page.ink
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `strat-2`, "selector": `#strat-2-header-ink` }, [
+                          import_Document.default.createText(`
+                  src/header.ink
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `strat-2`, "selector": `#strat-2-footer-ink` }, [
+                          import_Document.default.createText(`
+                  src/footer.ink
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("app-left", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("h5", { "class": `folder` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `chevron-down` }),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("span", {}, [
+                          import_Document.default.createText(`src`, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "on": true, "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `strat-2`, "selector": `#strat-2-page-ink` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                page.ink
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `strat-2`, "selector": `#strat-2-header-ink` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                header.ink
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `strat-2`, "selector": `#strat-2-footer-ink` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                footer.ink
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("app-main", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `strat-2-page-ink`, "numbers": true, "trim": true, "detab": 16 }, [
+                        ...this._toNodeList(`
+                <link rel="import" type="component" href="./header.ink" name="page-header" />
+                <link rel="import" type="component" href="./footer.ink" name="page-footer" />
+                <script>
+                  import { env } from '@stackpress/ink';
+                  const { BUILD_ID, APP_DATA } = env();
+                  const title = 'Hello World';
+                  const brand = 'Acme Inc.';
+                  const logo = '/logo.png';
+                <\/script>
+                <html>
+                  <head>
+                    <meta charset="utf-8" />
+                    <title>{title}</title>
+                    <link rel="stylesheet" type="text/css" href="/styles.css" />
+
+                    <link rel="stylesheet" type="text/css" href={\`/build/\${BUILD_ID}.css\`} />
+                    <script data-app={APP_DATA} src={\`/build/\${BUILD_ID}.js\`}><\/script>
+                  </head>
+                  <body>
+                    <page-header {brand} {logo} />
+                    <main>
+                      <h1>{title}</h1>
+                    </main>
+                    <page-footer {brand} />
+                  </body>
+                </html>
+              `)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `strat-2-header-ink`, "style": `display:none`, "numbers": true, "trim": true, "detab": 16 }, [
+                        ...this._toNodeList(`
+                <script>
+                  import { props } from '@stackpress/ink';
+                  const { brand, logo } = props();
+                <\/script>
+                <header>
+                  <img src={logo} alt={brand} />
+                  <h6>{brand}</h6>
+                </header>
+              `)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `strat-2-footer-ink`, "style": `display:none`, "numbers": true, "trim": true, "detab": 16 }, [
+                        ...this._toNodeList(`
+                <script>
+                  import { props } from '@stackpress/ink';
+                  const { brand } = props();
+                <\/script>
+                <footer>
+                  <a href="/about">About</a>
+                  <copy>&copy; 2025 {brand}</copy>
+                </footer>
+              `)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `strat-3` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h3", { "class": `tx-t-1 tx-upper tx-22 pt-40 pb-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Strategy 3: Partial Styling")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            This strategy uses components that do not have a 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<style>`)
+                    ]),
+                    import_Document.default.createText(` tag,
+            but imports style via the 
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<link>`)
+                    ]),
+                    import_Document.default.createText(` tag to utilize both 
+            global styles and specific styles that are needed for the
+            component. 
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-app", { "height": 400, "title": `Shallow Components`, "class": `py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("app-head", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `flex scroll-x-auto pt-5 pl-5` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `strat-3`, "selector": `#strat-3-page-ink` }, [
+                          import_Document.default.createText(`
+                  src/page.ink
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "on": true, "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `strat-3`, "selector": `#strat-3-header-ink` }, [
+                          import_Document.default.createText(`
+                  src/header.ink
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `strat-3`, "selector": `#strat-3-footer-ink` }, [
+                          import_Document.default.createText(`
+                  src/footer.ink
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("app-left", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("h5", { "class": `folder` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `chevron-down` }),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("span", {}, [
+                          import_Document.default.createText(`src`, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `strat-3`, "selector": `#strat-3-page-ink` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                page.ink
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "on": true, "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `strat-3`, "selector": `#strat-3-header-ink` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                header.ink
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `strat-3`, "selector": `#strat-3-footer-ink` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                footer.ink
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("app-main", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `strat-3-page-ink`, "style": `display:none`, "numbers": true, "trim": true, "detab": 16 }, [
+                        ...this._toNodeList(`
+                <link rel="import" type="component" href="./header.ink" name="page-header" />
+                <link rel="import" type="component" href="./footer.ink" name="page-footer" />
+                <script>
+                  import { env } from '@stackpress/ink';
+                  const { BUILD_ID, APP_DATA } = env();
+                  const title = 'Hello World';
+                  const brand = 'Acme Inc.';
+                  const logo = '/logo.png';
+                <\/script>
+                <html>
+                  <head>
+                    <meta charset="utf-8" />
+                    <title>{title}</title>
+                    <link rel="stylesheet" type="text/css" href="/styles.css" />
+
+                    <link rel="stylesheet" type="text/css" href={\`/build/\${BUILD_ID}.css\`} />
+                    <script data-app={APP_DATA} src={\`/build/\${BUILD_ID}.js\`}><\/script>
+                  </head>
+                  <body>
+                    <page-header {brand} {logo} />
+                    <main>
+                      <h1>{title}</h1>
+                    </main>
+                    <page-footer {brand} />
+                  </body>
+                </html>
+              `)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `strat-3-header-ink`, "numbers": true, "trim": true, "detab": 16 }, [
+                        ...this._toNodeList(`
+                <link rel="stylesheet" type="text/css" href="/header.css" />
+                <script>
+                  import { props } from '@stackpress/ink';
+                  const { brand, logo } = props();
+                <\/script>
+                <header>
+                  <img src={logo} alt={brand} />
+                  <h6>{brand}</h6>
+                </header>
+              `)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `strat-3-footer-ink`, "style": `display:none`, "numbers": true, "trim": true, "detab": 16 }, [
+                        ...this._toNodeList(`
+                <link rel="stylesheet" type="text/css" href="/footer.css" />
+                <script>
+                  import { props } from '@stackpress/ink';
+                  const { brand } = props();
+                <\/script>
+                <footer>
+                  <a href="/about">About</a>
+                  <copy>&copy; 2025 {brand}</copy>
+                </footer>
+              `)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `strat-4` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h3", { "class": `tx-t-1 tx-upper tx-22 pt-40 pb-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Strategy 4: Encapulation")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            This strategy uses components that have a
+            `, false),
+                    import_Document.default.createElement("ide-code", { "inline": true }, [
+                      ...this._toNodeList(`<style>`)
+                    ]),
+                    import_Document.default.createText(` tag and encapsulates
+            the styles within the component. This strategy is useful for
+            applications that require complex UI elements that need to be
+            styled in a specific way. This is also useful for components 
+            that are designed to be used in multiple projects.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-app", { "height": 400, "title": `Encapsulation`, "class": `py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("app-head", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `flex scroll-x-auto pt-5 pl-5` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `strat-4`, "selector": `#strat-4-page-ink` }, [
+                          import_Document.default.createText(`
+                  src/page.ink
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "on": true, "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `strat-4`, "selector": `#strat-4-header-ink` }, [
+                          import_Document.default.createText(`
+                  src/header.ink
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-t-1`, "group": `strat-4`, "selector": `#strat-4-footer-ink` }, [
+                          import_Document.default.createText(`
+                  src/footer.ink
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("app-left", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("h5", { "class": `folder` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `chevron-down` }),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("span", {}, [
+                          import_Document.default.createText(`src`, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "on": true, "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `strat-4`, "selector": `#strat-4-page-ink` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                page.ink
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "on": true, "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `strat-4`, "selector": `#strat-4-header-ink` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                header.ink
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "class": `pl-15 pt-10 block`, "active": `tx-white`, "inactive": `tx-muted`, "group": `strat-4`, "selector": `#strat-4-footer-ink` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `file` }),
+                        import_Document.default.createText(`
+                footer.ink
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("app-main", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `strat-4-page-ink`, "style": `display:none`, "numbers": true, "trim": true, "detab": 14 }, [
+                        ...this._toNodeList(`
+                <link rel="import" type="component" href="./header.ink" name="page-header" />
+                <link rel="import" type="component" href="./footer.ink" name="page-footer" />
+                <script>
+                  import { env } from '@stackpress/ink';
+                  const { BUILD_ID, APP_DATA } = env();
+                  const title = 'Hello World';
+                  const brand = 'Acme Inc.';
+                  const logo = '/logo.png';
+                <\/script>
+                <html>
+                  <head>
+                    <meta charset="utf-8" />
+                    <title>{title}</title>
+                    <link rel="stylesheet" type="text/css" href="/styles.css" />
+
+                    <link rel="stylesheet" type="text/css" href={\`/build/\${BUILD_ID}.css\`} />
+                    <script data-app={APP_DATA} src={\`/build/\${BUILD_ID}.js\`}><\/script>
+                  </head>
+                  <body>
+                    <page-header {brand} {logo} />
+                    <main>
+                      <h1>{title}</h1>
+                    </main>
+                    <page-footer {brand} />
+                  </body>
+                </html>
+              `)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `strat-4-header-ink`, "numbers": true, "trim": true, "detab": 14 }, [
+                        ...this._toNodeList(`
+                <style>
+                  img { width: 100px; height: 100px; }
+                  h6 { margin: 0; }
+                </style>
+                <script>
+                  import { props } from '@stackpress/ink';
+                  const { brand, logo } = props();
+                <\/script>
+                <header>
+                  <img src={logo} alt={brand} />
+                  <h6>{brand}</h6>
+                </header>
+              `)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("ide-code", { "id": `strat-4-footer-ink`, "style": `display:none`, "numbers": true, "trim": true, "detab": 14 }, [
+                        ...this._toNodeList(`
+                <style>
+                  copy { 
+                    display: block; 
+                    text-align: center; 
+                  }
+                </style>
+                <script>
+                  import { props } from '@stackpress/ink';
+                  const { brand } = props();
+                <\/script>
+                <footer>
+                  <a href="/about">About</a>
+                  <copy>&copy; 2025 {brand}</copy>
+                </footer>
+              `)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `fouc` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", {}, [
+                    ...this._toNodeList(_("Flash of Unstyled Content"))
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            Web Components (custom elements) are 100% defined in 
+            JavaScript. That includes their HTML and CSS. Those are 
+            programmatically added to the DOM through APIs. By the time 
+            the browser has interpreted and executed that code, there is 
+            a good chance that the rendering pipeline has already put the 
+            custom element on the screen. Since the browser doesn't know 
+            about the element the first time around it will render it 
+            without the intended styling. After the JavaScript of the 
+            custom element definition is executed and the browser, 
+            therefore, knows about the CSS rules that apply to that 
+            element it can update the view.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
+                    import_Document.default.createText(`
+            A flash of unstyled content (FOUC) can cause irritating layout 
+            shifts as well as reveal content that should have been 
+            progressively disclosed. In order to prevent a reflow of other 
+            content you can add the following general solution to your 
+            global stylesheet.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-code", { "lang": `css`, "numbers": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <script>
-              import { env } from '@stackpress/ink';
-              const { BUILD_ID, NODE_ENV } = env();
-            <\/script>
-            <if true={NODE_ENV === 'development'}>
-              <p>Development mode</p>
-            </if>
+            *:not(:defined) {
+              opacity: 0;
+            }
           `)
                   ]),
                   import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
-                    import_Document.default.createText(`
-            The `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`env`, false)
-                    ]),
-                    import_Document.default.createText(` function can be used to access environment 
-            variables in a component.
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("a", { "name": `this` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-26 pt-40 pb-10 mb-20 b-solid b-t-1 bb-1 bt-0 bx-0` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("this")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("ide-app", { "title": `What's this`, "class": `py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("ide-code", { "numbers": true, "detab": 14 }, [
-                      ...this._toNodeList(`
-              <script>
-                this.props;
-                this.style;
-                this.classList;
-                this.parentNode;
-                this.innerHTML;
-                this.appendChild();
-                this.querySelector('p');
-              <\/script>
-            `)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
 
           `, false),
                   import_Document.default.createElement("i18n-translate", { "p": true, "trim": true, "class": `tx-lh-36 py-20` }, [
                     import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("ide-code", { "inline": true }, [
-                      import_Document.default.createText(`this`, false)
-                    ]),
-                    import_Document.default.createText(` refers to the 
-            `, false),
-                    import_Document.default.createElement("ide-code", { "inline": true }, [
-                      import_Document.default.createText(`InkComponent`, false)
-                    ]),
-                    import_Document.default.createText(` that extends 
-            `, false),
-                    import_Document.default.createElement("ide-code", { "inline": true }, [
-                      import_Document.default.createText(`HTMLElement`, false)
-                    ]),
-                    import_Document.default.createText(`. This means all
-            components in Ink are in fact are HTML elements and has
-            access to the common functionality like 
-            `, false),
-                    import_Document.default.createElement("ide-code", { "inline": true }, [
-                      import_Document.default.createText(`innerHTML`, false)
-                    ]),
-                    import_Document.default.createText(` and
-            `, false),
-                    import_Document.default.createElement("ide-code", { "inline": true }, [
-                      ...this._toNodeList(`querySelector()`)
-                    ]),
-                    import_Document.default.createText(` to name a 
-            few. `, false),
-                    import_Document.default.createElement("ide-code", { "inline": true }, [
-                      import_Document.default.createText(`InkComponent`, false)
-                    ]),
-                    import_Document.default.createText(` has the
-            additional following properties and methods that you can access
-            using `, false),
-                    import_Document.default.createElement("ide-code", { "inline": true }, [
-                      import_Document.default.createText(`this`, false)
-                    ]),
-                    import_Document.default.createText(`.
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("api-ui", { "start": `InkComponent` }),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("element-alert", { "curved": true, "info": true, "class": `py-20 tx-lh-24` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-icon", { "name": `info-circle` }),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("strong", {}, [
-                      import_Document.default.createText(`Info:`, false)
-                    ]),
-                    import_Document.default.createText(` You can discover more methods and properties
-            of the `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`HTMLElement`, false)
-                    ]),
-                    import_Document.default.createText(` class on the
-            `, false),
-                    import_Document.default.createElement("a", { "target": `_blank`, "class": `tx-white tx-underline`, "href": `https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement` }, [
-                      import_Document.default.createText(`
-              MDN Web Docs
-            `, false)
-                    ]),
-                    import_Document.default.createText(`.
+            This style will apply to all elements that are not defined,
+            which are usually web components and will hide the content 
+            until the browser has fully rendered the component.
           `, false)
                   ]),
                   import_Document.default.createText(`
@@ -8429,22 +9005,22 @@ var InkAPI = (() => {
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/docs/markup-syntax.html` }, [
+                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/docs/state-management.html` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Markup Syntax")),
+                      ...this._toNodeList(_("State Management")),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/docs/component-strategy.html` }, [
+                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/docs/compiler-api.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Component Strategy")),
+                      ...this._toNodeList(_("Compiler API")),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
@@ -8479,9 +9055,13 @@ var InkAPI = (() => {
     "PanelLayout_c4c96a14064fc0c4d224": Panel_c4c96a14064fc0c4d224,
     "ElementAlert_ba827f6c1d3753161701": Alert_ba827f6c1d3753161701,
     "ElementIcon_33cb84912ffcb000a388": Icon_33cb84912ffcb000a388,
+    "ElementTab_773b62de7e46341aea2d": Tab_773b62de7e46341aea2d,
     "ApiDocs_0ab1bce486b32e7cdafc": Docs_0ab1bce486b32e7cdafc,
     "ApiUi_2b08d18966ac07e0669a": Ui_2b08d18966ac07e0669a,
     "ApiIdeCode_5387662ecbed97347dd0": Code_5387662ecbed97347dd0,
+    "AppHead_d13ac870c734c1e59a80": Head_d13ac870c734c1e59a80,
+    "AppLeft_effc05807fc7bfd0b111": Left_effc05807fc7bfd0b111,
+    "AppMain_dd8105a02de18136d611": Main_dd8105a02de18136d611,
     "IdeApp_4ec139eab67151540039": App_4ec139eab67151540039,
     "IdeCode_5387662ecbed97347dd0": Code_5387662ecbed97347dd0,
     "I18nTranslate_794a00a5e900fca28310": Translate_794a00a5e900fca28310
@@ -8490,13 +9070,17 @@ var InkAPI = (() => {
     "panel-layout": Panel_c4c96a14064fc0c4d224,
     "element-alert": Alert_ba827f6c1d3753161701,
     "element-icon": Icon_33cb84912ffcb000a388,
+    "element-tab": Tab_773b62de7e46341aea2d,
     "api-docs": Docs_0ab1bce486b32e7cdafc,
     "api-ui": Ui_2b08d18966ac07e0669a,
+    "app-head": Head_d13ac870c734c1e59a80,
+    "app-left": Left_effc05807fc7bfd0b111,
+    "app-main": Main_dd8105a02de18136d611,
     "ide-app": App_4ec139eab67151540039,
     "ide-code": Code_5387662ecbed97347dd0,
     "i18n-translate": Translate_794a00a5e900fca28310
   };
-  var BUILD_ID = "26ff2a9b16548efdd1a0";
+  var BUILD_ID = "372513d4ecd8e0233aea";
   import_Emitter.default.once("ready", () => {
     TemplateDocument.sync();
     for (const [tagname, definition] of Object.entries(elements)) {
@@ -8506,7 +9090,7 @@ var InkAPI = (() => {
     }
     import_Emitter.default.emit("mounted", document.body);
   });
-  return __toCommonJS(state_management_exports);
+  return __toCommonJS(component_strategy_exports);
 })();
 /*! Bundled license information:
 
