@@ -5904,7 +5904,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
         `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
           <element-icon name="info-circle" class="tx-info" />
         `)
@@ -5928,7 +5928,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
         `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
           <element-icon name="exclamation-triangle" class="tx-warning" />
         `)
@@ -5952,7 +5952,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
         `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
           <element-icon name="check-circle" class="tx-success" />
         `)
@@ -5976,7 +5976,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
         `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
           <element-icon name="times-circle" class="tx-error" />
         `)
@@ -6027,7 +6027,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-icon name="home"></element-icon>
             `)
@@ -6082,7 +6082,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-icon name="user" solid></element-icon>
             `)
@@ -6106,7 +6106,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-icon name="github" brand></element-icon>
             `)
@@ -6157,7 +6157,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-icon name="bell" size="16"></element-icon>
             `)
@@ -6181,7 +6181,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-icon name="bell" size="32"></element-icon>
             `)
@@ -6231,7 +6231,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
         `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
         <element-icon name="heart" color="red"></element-icon>
         `)
@@ -6255,7 +6255,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
         `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
         <element-icon name="star" color="#facc15"></element-icon>
         `)

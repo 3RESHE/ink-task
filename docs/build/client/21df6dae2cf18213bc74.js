@@ -757,7 +757,7 @@ var InkAPI = (() => {
         decoder.innerHTML = value;
         return decoder.value;
       };
-      var ClientRegistry19 = class _ClientRegistry {
+      var ClientRegistry20 = class _ClientRegistry {
         static get elements() {
           return this._elements;
         }
@@ -875,8 +875,8 @@ var InkAPI = (() => {
           return Array.from(children4).filter((child) => typeof child !== "undefined").map((child) => typeof child === "string" ? this.createText(child) : child instanceof Element_1.default ? child.element : child);
         }
       };
-      ClientRegistry19._elements = /* @__PURE__ */ new Map();
-      exports.default = ClientRegistry19;
+      ClientRegistry20._elements = /* @__PURE__ */ new Map();
+      exports.default = ClientRegistry20;
     }
   });
 
@@ -958,7 +958,7 @@ var InkAPI = (() => {
       var Registry_1 = __importDefault(require_Registry());
       var Emitter_1 = __importDefault(require_Emitter());
       var data_1 = __importDefault(require_data());
-      var ClientComponent18 = class _ClientComponent extends HTMLElement {
+      var ClientComponent19 = class _ClientComponent extends HTMLElement {
         static get registered() {
           return customElements.getName(this);
         }
@@ -1279,7 +1279,7 @@ var InkAPI = (() => {
           }
         }
       };
-      exports.default = ClientComponent18;
+      exports.default = ClientComponent19;
     }
   });
 
@@ -1581,9 +1581,9 @@ var InkAPI = (() => {
       exports.styleset = styleset;
       var StyleMap_1 = __importDefault(require_StyleMap());
       function styleset(styles = {}) {
-        return new StyleSet13(Object.entries(styles));
+        return new StyleSet14(Object.entries(styles));
       }
-      var StyleSet13 = class extends Map {
+      var StyleSet14 = class extends Map {
         add(selector, property, values) {
           if (!this.has(selector)) {
             this.set(selector, new StyleMap_1.default());
@@ -1616,7 +1616,7 @@ var InkAPI = (() => {
           return styleset2.join("");
         }
       };
-      exports.default = StyleSet13;
+      exports.default = StyleSet14;
     }
   });
 
@@ -3588,7 +3588,7 @@ var InkAPI = (() => {
   var notify_exports = {};
   __export(notify_exports, {
     BUILD_ID: () => BUILD_ID,
-    ClientRegistry: () => import_Registry18.default,
+    ClientRegistry: () => import_Registry19.default,
     TemplateDocument: () => TemplateDocument,
     components: () => components,
     data: () => import_data.default,
@@ -3597,7 +3597,7 @@ var InkAPI = (() => {
   });
   var import_Document = __toESM(require_Document());
   var import_Document2 = __toESM(require_Document2());
-  var import_Registry18 = __toESM(require_Registry());
+  var import_Registry19 = __toESM(require_Registry());
   var import_Emitter = __toESM(require_Emitter());
   var import_data = __toESM(require_data());
 
@@ -3707,19 +3707,13 @@ var InkAPI = (() => {
   :host([inline]) > pre > code {
     display: inline !important;
   }
-
-.snippet {
-  background-color: #000000;
-  color: #ABB2BF;
-  height: 100%;
-  width: 100%; /* Ensures the background extends fully */
-  margin: 0;
-  padding: 0;
-  display: block;
-  overflow-x: auto; /* Enables horizontal scrolling */
-  white-space: pre; /* Preserves spacing */
-}
-
+  .snippet {
+    background-color: #000000;
+    color: #ABB2BF;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
   .line-numbers {
     position: relative;
@@ -3769,13 +3763,9 @@ var InkAPI = (() => {
     padding-right: 0.8em;
     text-align: right;
   }
-
-.pad {
-  padding: 10px;
-  width: 100%; /* Ensures the padding applies fully */
-  box-sizing: border-box; /* Prevents overflow due to padding */
-}
-
+  .pad {
+    padding: 5px;
+  }
 
   .terminal {
     background-color: #000000;
@@ -3883,11 +3873,9 @@ var InkAPI = (() => {
             import_Registry3.default.createText(`????`, false)
           ]).element,
           import_Registry3.default.createText(`
-
 `, false)
         ] : [],
         import_Registry3.default.createText(`
-
 `, false)
       ];
     }
@@ -4868,6 +4856,131 @@ var InkAPI = (() => {
     }
   };
 
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\notify.ink
+  var import_Component18 = __toESM(require_Component());
+  var import_Registry18 = __toESM(require_Registry());
+  var import_StyleSet13 = __toESM(require_StyleSet());
+  var Notify_ed7723389528abddbe70 = class extends import_Component18.default {
+    static id = "ed7723389528abddbe70";
+    static tagname = "notify";
+    static classname = "Notify_ed7723389528abddbe70";
+    styles() {
+      return ``;
+    }
+    template() {
+      const {
+        top,
+        left,
+        center,
+        fade,
+        smooth = 10
+      } = this.props;
+      const handlers = {
+        // Alert maker
+        make: (type, message) => {
+          const bar = import_Registry18.default.createElement("div", { class: "bar" }).element;
+          const progress = import_Registry18.default.createElement("div", { class: "progress" }, [bar]).element;
+          const icon = import_Registry18.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, {
+            class: "icon",
+            none: ["primary", "secondary", "muted"].includes(type),
+            white: true,
+            name: {
+              info: "info-circle",
+              warning: "exclamation-triangle",
+              error: "times-circle",
+              success: "check-circle"
+            }[type] || "info-circle"
+          }).element;
+          const close = import_Registry18.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, {
+            class: "close",
+            white: true,
+            name: "times"
+          }).element;
+          const alert = import_Registry18.default.createComponent("interface-alert", Alert_ba827f6c1d3753161701, {
+            class: "alert",
+            [type]: true,
+            // dynamically apply type classes
+            solid: true,
+            curved: true
+          }).element;
+          const wrapper = import_Registry18.default.createElement("div", { class: "message" }).element;
+          wrapper.innerHTML = message;
+          alert.append(close, icon, wrapper, progress);
+          return { bar, icon, close, progress, alert };
+        },
+        // Notify function API
+        notify: (type, message, timeout = 5e3) => {
+          const { bar, close, progress, alert } = handlers.make(type, message);
+          const root = this.shadowRoot || this;
+          root.appendChild(alert);
+          const state = { time: 0, progress: 0 };
+          const remove = () => {
+            if (alert.parentNode) {
+              alert.style.opacity = "0";
+              setTimeout(() => root.removeChild(alert), fade ? 300 : 0);
+            }
+            clearInterval(interval);
+          };
+          const interval = setInterval(() => {
+            state.time += smooth;
+            state.progress = Math.floor(state.time / timeout * 100);
+            alert.style.opacity = String((timeout - state.time) / timeout);
+            bar.style.width = `${state.progress}%`;
+            if (state.time >= timeout) {
+              remove();
+            }
+          }, smooth);
+          close.addEventListener("click", remove);
+        }
+      };
+      this.notify = handlers.notify;
+      const styles = new import_StyleSet13.default();
+      this.styles = () => styles.toString();
+      styles.add(":host", "position", "fixed");
+      styles.add(":host", "pointer-events", "none");
+      styles.add(":host", top ? "top" : "bottom", "20px");
+      if (left) {
+        styles.add(":host", "left", "20px");
+      } else if (center) {
+        styles.add(":host", "left", "0");
+        styles.add(":host", "right", "0");
+      } else {
+        styles.add(":host", "right", "20px");
+      }
+      styles.add(".alert", "width", "calc(100% - 32px)");
+      styles.add(".alert", "position", "relative");
+      styles.add(".alert", "margin-bottom", "8px");
+      styles.add(".alert", "max-width", "288px");
+      styles.add(".alert", "pointer-events", "auto");
+      if (center) {
+        styles.add(".alert", "margin-left", "auto");
+        styles.add(".alert", "margin-right", "auto");
+      }
+      styles.add(".close", "display", "inline-block");
+      styles.add(".close", "float", "right");
+      styles.add(".close", "color", "white");
+      styles.add(".close", "cursor", "pointer");
+      styles.add(".close", "position", "relative");
+      styles.add(".close", "top", "3px");
+      styles.add(".icon", "display", "inline-block");
+      styles.add(".icon", "color", "white");
+      styles.add(".icon", "margin-right", "5px");
+      styles.add(".progress", "height", "5px");
+      styles.add(".progress", "width", "100%");
+      styles.add(".bar", "width", "0%");
+      styles.add(".bar", "height", "100%");
+      styles.add(".bar", "background-color", "var(--muted)");
+      styles.add(".message", "display", "inline-block");
+      if (fade) {
+        styles.add(".alert", "transition", "opacity 0.3s ease-in-out");
+      }
+      return () => [
+        import_Registry18.default.createText(`
+`, false)
+      ];
+    }
+  };
+
   // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\notify.ink
   var import_ink4 = __toESM(require_ink());
   var TemplateDocument = class _TemplateDocument extends import_Document2.default {
@@ -5490,10 +5603,10 @@ var InkAPI = (() => {
                     ...!!(url === "/docs/state-management.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/state-management.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/form/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Elements")),
+                        ...this._toNodeList(_("Form")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -5503,10 +5616,10 @@ var InkAPI = (() => {
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/docs/state-management.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/form/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Elements")),
+                        ...this._toNodeList(_("Form")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -5514,14 +5627,15 @@ var InkAPI = (() => {
   `, false)
                     ] : [],
                     import_Document.default.createText(`
+
   `, false),
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/client-api.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Forms")),
+                        ...this._toNodeList(_("Formats")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -5531,10 +5645,10 @@ var InkAPI = (() => {
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/docs/client-api.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Forms")),
+                        ...this._toNodeList(_("Formats")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -5924,24 +6038,24 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
             Notifications support different types:  
-            `, false),
-                    import_Document.default.createElement("span", { "class": `tx-italic p-3 b-solid` }, [
-                      import_Document.default.createText(`Info`, false)
+          `, false),
+                    import_Document.default.createElement("span", { "class": `tx-info tx-italic p-3` }, [
+                      import_Document.default.createText(`info`, false)
                     ]),
-                    import_Document.default.createText(`,  
-            `, false),
-                    import_Document.default.createElement("span", { "class": `tx-italic p-3 b-dotted` }, [
-                      import_Document.default.createText(`Warning`, false)
+                    import_Document.default.createText(`,
+          `, false),
+                    import_Document.default.createElement("span", { "class": `tx-warning tx-italic p-3` }, [
+                      import_Document.default.createText(`warning`, false)
                     ]),
-                    import_Document.default.createText(`,  
-            `, false),
-                    import_Document.default.createElement("span", { "class": `tx-italic p-3 b-dashed` }, [
-                      import_Document.default.createText(`Error`, false)
+                    import_Document.default.createText(`,
+          `, false),
+                    import_Document.default.createElement("span", { "class": `tx-success tx-italic p-3` }, [
+                      import_Document.default.createText(`success`, false)
                     ]),
-                    import_Document.default.createText(`,  
-            `, false),
-                    import_Document.default.createElement("span", { "class": `tx-italic p-3 b-solid` }, [
-                      import_Document.default.createText(`Success`, false)
+                    import_Document.default.createText(`,
+          `, false),
+                    import_Document.default.createElement("span", { "class": `tx-error tx-italic p-3` }, [
+                      import_Document.default.createText(`error`, false)
                     ]),
                     import_Document.default.createText(`.
             `, false)
@@ -5965,7 +6079,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-notify type="info" message="This is an info notification!" timeout="5000"></element-notify>
             `)
@@ -5989,7 +6103,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-notify type="warning" message="This is a warning notification!" timeout="5000"></element-notify>
             `)
@@ -6013,7 +6127,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-notify type="error" message="This is an error notification!" timeout="5000"></element-notify>
             `)
@@ -6037,7 +6151,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-notify type="success" message="This is a success notification!" timeout="5000"></element-notify>
             `)
@@ -6079,7 +6193,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-notify top left message="Positioned at the top left!" timeout="5000"></element-notify>
             `)
@@ -6125,15 +6239,12 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-notify type="info" message="Custom timeout notification!" timeout="8000"></element-notify>
             `)
                   ]),
                   import_Document.default.createText(`
-
-
-    
 
             `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
@@ -6200,7 +6311,8 @@ var InkAPI = (() => {
     "TableHead_d8755504d9458a2c21da": Head_d8755504d9458a2c21da,
     "TableRow_0b3723ad0a2356b54f11": Row_0b3723ad0a2356b54f11,
     "TableCol_f45aa9d13a1588f1d9ab": Col_f45aa9d13a1588f1d9ab,
-    "ElementBadge_04e709456157a0a384e7": Badge_04e709456157a0a384e7
+    "ElementBadge_04e709456157a0a384e7": Badge_04e709456157a0a384e7,
+    "ElementNotify_ed7723389528abddbe70": Notify_ed7723389528abddbe70
   };
   var elements = {
     "api-docs": Docs_0ab1bce486b32e7cdafc,
@@ -6215,7 +6327,8 @@ var InkAPI = (() => {
     "table-head": Head_d8755504d9458a2c21da,
     "table-row": Row_0b3723ad0a2356b54f11,
     "table-col": Col_f45aa9d13a1588f1d9ab,
-    "element-badge": Badge_04e709456157a0a384e7
+    "element-badge": Badge_04e709456157a0a384e7,
+    "element-notify": Notify_ed7723389528abddbe70
   };
   var BUILD_ID = "21df6dae2cf18213bc74";
   import_Emitter.default.once("ready", () => {

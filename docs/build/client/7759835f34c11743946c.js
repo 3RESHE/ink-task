@@ -3707,19 +3707,13 @@ var InkAPI = (() => {
   :host([inline]) > pre > code {
     display: inline !important;
   }
-
-.snippet {
-  background-color: #000000;
-  color: #ABB2BF;
-  height: 100%;
-  width: 100%; /* Ensures the background extends fully */
-  margin: 0;
-  padding: 0;
-  display: block;
-  overflow-x: auto; /* Enables horizontal scrolling */
-  white-space: pre; /* Preserves spacing */
-}
-
+  .snippet {
+    background-color: #000000;
+    color: #ABB2BF;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
   .line-numbers {
     position: relative;
@@ -3769,13 +3763,9 @@ var InkAPI = (() => {
     padding-right: 0.8em;
     text-align: right;
   }
-
-.pad {
-  padding: 10px;
-  width: 100%; /* Ensures the padding applies fully */
-  box-sizing: border-box; /* Prevents overflow due to padding */
-}
-
+  .pad {
+    padding: 5px;
+  }
 
   .terminal {
     background-color: #000000;
@@ -3883,11 +3873,9 @@ var InkAPI = (() => {
             import_Registry3.default.createText(`????`, false)
           ]).element,
           import_Registry3.default.createText(`
-
 `, false)
         ] : [],
         import_Registry3.default.createText(`
-
 `, false)
       ];
     }
@@ -4965,7 +4953,7 @@ var InkAPI = (() => {
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
         { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
-        { label: "Panel" }
+        { label: "Progress" }
       ];
       return [
         import_Document.default.createText(`
@@ -5647,7 +5635,7 @@ var InkAPI = (() => {
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#pager#` }, [
-                      ...this._toNodeList(_("Panel"))
+                      ...this._toNodeList(_("Progress"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -5719,7 +5707,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_(" Panel")),
+                    ...this._toNodeList(_(" Progress")),
                     import_Document.default.createText(`
           `, false)
                   ]),
@@ -5730,7 +5718,7 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Badge from '@stackpress/ink-ui/element/panel';
+              import Badge from '@stackpress/ink-ui/element/progress';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -5921,7 +5909,7 @@ var InkAPI = (() => {
 
              
                 `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
                 <element-progress width={50} info class="bg-muted rounded tx-13 h-20 tx-lh-20 w-full-20" />
                 `)
@@ -5950,7 +5938,7 @@ var InkAPI = (() => {
 
         
                 `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
                 <element-progress width={75} success class="bg-primary rounded tx-13 h-30 tx-lh-30 w-full-30" />
                 `)
@@ -5980,7 +5968,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
                 `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
                 <element-progress width={40} warning class="bg-warning rounded tx-13 h-10 tx-lh-10 w-full-10" />
                 `)
@@ -6011,7 +5999,7 @@ var InkAPI = (() => {
 
          
                 `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
                 <element-progress width={100} success class="bg-success rounded tx-13 h-20 tx-lh-20 w-full-20" />
                 `)
@@ -6042,7 +6030,7 @@ var InkAPI = (() => {
 
             
                 `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
                 <element-progress width={20} class="rounded bg-error tx-13 h-10 tx-lh-10 w-full-10" />
                 `)

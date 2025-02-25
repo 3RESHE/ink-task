@@ -787,10 +787,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\notify.ink
-  var notify_exports = {};
-  __export(notify_exports, {
-    default: () => Notify_21df6dae2cf18213bc74
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\form\index.ink
+  var form_exports = {};
+  __export(form_exports, {
+    default: () => Index_2d9ec985aca105c3f84b
   });
   var import_Document = __toESM(require_Document());
   var import_Document2 = __toESM(require_Document2());
@@ -808,10 +808,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\notify.ink
-  var Notify_21df6dae2cf18213bc74 = class extends import_Document2.default {
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\form\index.ink
+  var Index_2d9ec985aca105c3f84b = class extends import_Document2.default {
     id() {
-      return "21df6dae2cf18213bc74";
+      return "2d9ec985aca105c3f84b";
     }
     styles() {
       return `@ink theme;
@@ -826,12 +826,19 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
-      const crumbs = [
-        { icon: "home", label: "Home", href: "/ink/index.html" },
-        { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
-        { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
-        { label: "Notify" }
+      const fileupload = (file, next) => {
+        setTimeout(() => {
+          next("https://images.wsj.net/im-580612/8SR");
+        }, 5e3);
+      };
+      const filelistupload = (files, next) => {
+        setTimeout(() => {
+          next(files.map((file, i) => "https://images.wsj.net/im-580612/8SR"));
+        }, 1e3);
+      };
+      const metadata = { first: "Jane", last: "Doe" };
+      const fieldset = [
+        { first1: "John", last1: "Doe", fieldset2: [{ first2: "Jane", last2: "Doe" }] }
       ];
       return [
         import_Document.default.createText(`
@@ -1492,623 +1499,754 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                 ]
               ]),
               import_Document.default.createText(`
-
-
-        `, false),
-              import_Document.default.createElement("aside", { "right": true }, [
-                import_Document.default.createText(`
-        `, false),
-                import_Document.default.createElement("menu", { "class": `m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto` }, [
-                  import_Document.default.createText(`
-            `, false),
-                  import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-            `, false),
-                  import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `# Notify` }, [
-                      ...this._toNodeList(_(" Notify"))
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("nav", { "class": `pl-20` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#props` }, [
-                        ...this._toNodeList(_("Props"))
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#types` }, [
-                        ...this._toNodeList(_("Types"))
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#size` }, [
-                        ...this._toNodeList(_("Size"))
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#color` }, [
-                        ...this._toNodeList(_("Color"))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-        `, false)
-                ]),
-                import_Document.default.createText(`
-        `, false)
-              ]),
-              import_Document.default.createText(`
-
-
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
         `, false),
-                import_Document.default.createElement("nav", { "class": `p-10 bg-t-3` }, [
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
-                  import_Document.default.createText(`
-        `, false)
-                ]),
-                import_Document.default.createText(`
-        `, false),
                 import_Document.default.createElement("api-docs", {}, [
-                  import_Document.default.createText(`
-
-
-        
-        `, false),
-                  import_Document.default.createElement("a", { "name": ` Notify` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_(" Notify")),
+                    ...this._toNodeList(_("Form")),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20 ` }, [
+                  import_Document.default.createElement("form", { "method": `get`, "action": `/ink/ui/form/index.html` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
+                    import_Document.default.createElement("section", { "class": `flex flex-wrap gap-10` }, [
                       import_Document.default.createText(`
-              import Badge from '@stackpress/ink-ui/element/notify';
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("form-button", { "class": `mr-5`, "md": true, "success": true, "curved": true, "solid": true }, [
+                            import_Document.default.createText(`
+                    Submit
+                  `, false)
+                          ]),
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("form-button", { "md": true, "warning": true, "rounded": true, "transparent": true, "href": `#` }, [
+                            import_Document.default.createText(`
+                    Submit
+                  `, false)
+                          ]),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/button.html` }, [
+                          import_Document.default.createText(`
+                  Buttons
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("form-control", { "class": `py-5`, "label": `First Name*`, "error": `Some Error` }, [
+                            import_Document.default.createText(`
+                    `, false),
+                            import_Document.default.createElement("field-input", { "name": `first`, "placeholder": `Enter your first name`, "error": true }),
+                            import_Document.default.createText(`
+                  `, false)
+                          ]),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/control.html` }, [
+                          import_Document.default.createText(`
+                  Control
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("form-fieldset", { "legend": `Fieldset %s`, "name": `fieldset1`, "value": fieldset, "multiple": true }, [
+                            import_Document.default.createText(`
+                    `, false),
+                            import_Document.default.createElement("field-input", { "name": `first1`, "placeholder": `Enter your first name` }),
+                            import_Document.default.createText(`
+                  `, false)
+                          ]),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/fieldset.html` }, [
+                          import_Document.default.createText(`
+                  Fieldset
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      ...this._toNodeList(_("Fields")),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("section", { "class": `flex flex-wrap gap-10` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-checkbox", { "name": `checkbox`, "label": `Active?`, "value": `yes`, "checked": true, "orange": true, "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/checkbox.html` }, [
+                          import_Document.default.createText(`
+                  Checkbox
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-color", { "name": `color`, "placeholder": `Enter color` }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/color.html` }, [
+                          import_Document.default.createText(`
+                  Color
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-country", { "name": `country`, "class": `w-200 relative z-1`, "placeholder": `Choose Country`, "value": `US`, "open": (e) => console.log("open", e), "close": (e) => console.log("close", e), "filter": (e) => console.log("filter", e), "select": (e) => console.log("select", e), "remove": (e) => console.log("remove", e), "add": (e) => console.log("add", e), "clear": (e) => console.log("clear", e), "change": (e) => console.log("change", e), "update": (e) => console.log("update", e) }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/country.html` }, [
+                          import_Document.default.createText(`
+                  Country
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-currency", { "name": `currency`, "class": `w-200`, "placeholder": `Choose Currency`, "value": `PHP`, "open": (e) => console.log("open", e), "close": (e) => console.log("close", e), "filter": (e) => console.log("filter", e), "select": (e) => console.log("select", e), "remove": (e) => console.log("remove", e), "add": (e) => console.log("add", e), "clear": (e) => console.log("clear", e), "change": (e) => console.log("change", e), "update": (e) => console.log("update", e) }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/currency.html` }, [
+                          import_Document.default.createText(`
+                  Currency
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-date", { "name": `date`, "placeholder": `Enter date`, "value": `2020-01-01`, "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/date.html` }, [
+                          import_Document.default.createText(`
+                  Date
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-datetime", { "name": `datetime`, "placeholder": `Enter datetime`, "value": `2020-01-01 13:20:10`, "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/datetime.html` }, [
+                          import_Document.default.createText(`
+                  Datetime
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-editor", { "lang": `javascript`, "class": `w-200 h-80 scroll-auto`, "numbers": true, "name": `editor`, "value": `ink.render(true);`, "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/editor.html` }, [
+                          import_Document.default.createText(`
+                  Editor
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-file", { "name": `file`, "class": `block w-250`, "upload": fileupload, "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/file.html` }, [
+                          import_Document.default.createText(`
+                  File
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-filelist", { "image": true, "name": `filelist`, "class": `block w-250`, "upload": filelistupload, "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/filelist.html` }, [
+                          import_Document.default.createText(`
+                  Filelist
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-input", { "name": `first`, "placeholder": `Enter your first name`, "value": `test` }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/input.html` }, [
+                          import_Document.default.createText(`
+                  Input
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, []),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/knob.html` }, [
+                          import_Document.default.createText(`
+                  Knob
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-markdown", { "class": `w-200 h-80 block`, "numbers": true, "name": `markdown`, "value": `**I AM BOLD**`, "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/markdown.html` }, [
+                          import_Document.default.createText(`
+                  Markdown
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-mask", { "mask": `999-999-9999`, "placeholder": `999-999-9999` }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/mask.html` }, [
+                          import_Document.default.createText(`
+                  Mask
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-metadata", { "class": `w-250`, "name": `metadata`, "placeholder": `Enter text`, "value": metadata, "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/metadata.html` }, [
+                          import_Document.default.createText(`
+                  Metadata
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center tx-black` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-number", { "name": `number`, "min": `0`, "max": `10000`, "step": `0.01`, "value": `1234.56`, "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/number.html` }, [
+                          import_Document.default.createText(`
+                  Number
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-password", { "name": `password`, "placeholder": `Enter password`, "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/password.html` }, [
+                          import_Document.default.createText(`
+                  Password
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-radio", { "name": `radio`, "label": `Yes`, "value": `yes`, "checked": true, "rounded": true, "update": console.log, "class": `mr-10` }),
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-radio", { "name": `radio`, "label": `No`, "value": `no`, "rounded": true, "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/radio.html` }, [
+                          import_Document.default.createText(`
+                  Radio
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-range", { "name": `range`, "min": `0`, "max": `100`, "step": `10`, "value": `0` }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/range.html` }, [
+                          import_Document.default.createText(`
+                  Range
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-rating", { "name": `rating`, "value": `0`, "primary": true, "xl2": true, "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/rating.html` }, [
+                          import_Document.default.createText(`
+                  Rating
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-select", { "class": `w-200 relative z-1`, "name": `select`, "placeholder": `Choose`, "value": `1`, "search": true, "custom": true, "multiple": true, "open": (e) => console.log("open", e), "close": (e) => console.log("close", e), "filter": (e) => console.log("filter", e), "select": (e) => console.log("select", e), "remove": (e) => console.log("remove", e), "add": (e) => console.log("add", e), "clear": (e) => console.log("clear", e), "change": (e) => console.log("change", e), "update": (e) => console.log("update", e) }, [
+                            import_Document.default.createText(`
+                    `, false),
+                            import_Document.default.createElement("option", { "value": `1`, "keyword": `option 1` }, [
+                              import_Document.default.createText(`Option 1`, false)
+                            ]),
+                            import_Document.default.createText(`
+                    `, false),
+                            import_Document.default.createElement("option", { "value": 4, "keyword": `option 2` }, [
+                              import_Document.default.createElement("strong", {}, [
+                                import_Document.default.createText(`Option 2`, false)
+                              ])
+                            ]),
+                            import_Document.default.createText(`
+                    `, false),
+                            import_Document.default.createElement("option", { "value": [1, "2", 3], "keyword": `option 3` }, [
+                              import_Document.default.createText(`Option 3`, false)
+                            ]),
+                            import_Document.default.createText(`
+                    `, false),
+                            import_Document.default.createElement("option", { "value": [1, "2", 3], "keyword": `option 3` }, [
+                              import_Document.default.createText(`Option 4`, false)
+                            ]),
+                            import_Document.default.createText(`
+                  `, false)
+                          ]),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/select.html` }, [
+                          import_Document.default.createText(`
+                  Select
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-slug", { "name": `slug`, "placeholder": `Enter slug`, "value": `I AM A SLUG`, "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/slug.html` }, [
+                          import_Document.default.createText(`
+                  Slug
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-switch", { "name": `switch`, "label": `Active?`, "value": `yes`, "checked": true, "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/switch.html` }, [
+                          import_Document.default.createText(`
+                  Switch
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-taglist", { "name": `taglist`, "class": `w-250`, "placeholder": `Enter Value`, "value": ["foo", "bar"] }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/taglist.html` }, [
+                          import_Document.default.createText(`
+                  Taglist
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-textarea", { "name": `textarea`, "placeholder": `Enter text`, "update": console.log }, [
+                            import_Document.default.createText(`Some Text`, false)
+                          ]),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/textarea.html` }, [
+                          import_Document.default.createText(`
+                  Textarea
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-textlist", { "name": `textlist[]`, "placeholder": `Enter text`, "value": ["foo", "bar"], "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/textlist.html` }, [
+                          import_Document.default.createText(`
+                  Textlist
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-time", { "name": `time`, "placeholder": `Enter time`, "value": (/* @__PURE__ */ new Date()).getTime(), "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/time.html` }, [
+                          import_Document.default.createText(`
+                  Time
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center scroll-hidden` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("field-wysiwyg", { "class": `w-200 h-100`, "name": `wysiwyg`, "value": `I am ironman.`, "size": true, "color": true, "update": console.log }),
+                          import_Document.default.createText(`
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/wysiwyg.html` }, [
+                          import_Document.default.createText(`
+                  WYSIWYG
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
           `, false)
                   ]),
-                  import_Document.default.createText(`
-
-                `, false),
-                  import_Document.default.createElement("a", { "name": `props` }, []),
-                  import_Document.default.createText(`
-                `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-                `, false),
-                    ...this._toNodeList(_("Props")),
-                    import_Document.default.createText(`
-                `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-                `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
-                    import_Document.default.createText(`
-                `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Name"))
-                    ]),
-                    import_Document.default.createText(`
-                `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Type"))
-                    ]),
-                    import_Document.default.createText(`
-                `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Required"))
-                    ]),
-                    import_Document.default.createText(`
-                `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Notes"))
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`top`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Positions the notification at the top (default is bottom)."))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`left`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Aligns the notification to the left (default is right)."))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`center`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Centers the notification horizontally."))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`fade`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Enables fade transition effect."))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`smooth`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Number`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Controls transition smoothness (default: 10ms)."))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`type`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Yes`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Defines the notification type: "info", "warning", "error", "success", "primary", "secondary", "muted".'))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`message`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Yes`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the notification message."))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`timeout`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Number`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Duration before the notification disappears (default: 5000ms)."))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-                `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            
-            `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Notification Types")),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Notifications support different types:  
-          `, false),
-                    import_Document.default.createElement("span", { "class": `tx-info tx-italic p-3` }, [
-                      import_Document.default.createText(`info`, false)
-                    ]),
-                    import_Document.default.createText(`,
-          `, false),
-                    import_Document.default.createElement("span", { "class": `tx-warning tx-italic p-3` }, [
-                      import_Document.default.createText(`warning`, false)
-                    ]),
-                    import_Document.default.createText(`,
-          `, false),
-                    import_Document.default.createElement("span", { "class": `tx-success tx-italic p-3` }, [
-                      import_Document.default.createText(`success`, false)
-                    ]),
-                    import_Document.default.createText(`,
-          `, false),
-                    import_Document.default.createElement("span", { "class": `tx-error tx-italic p-3` }, [
-                      import_Document.default.createText(`error`, false)
-                    ]),
-                    import_Document.default.createText(`.
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "type": `info`, "message": `This is an info notification!`, "timeout": `5000` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify type="info" message="This is an info notification!" timeout="5000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "type": `warning`, "message": `This is a warning notification!`, "timeout": `5000` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify type="warning" message="This is a warning notification!" timeout="5000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "type": `error`, "message": `This is an error notification!`, "timeout": `5000` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify type="error" message="This is an error notification!" timeout="5000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "type": `success`, "message": `This is a success notification!`, "timeout": `5000` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify type="success" message="This is a success notification!" timeout="5000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Custom Position")),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Notifications can be positioned at the top, bottom, left, right, or center using the respective props.
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "top": true, "left": true, "message": `Positioned at the top left!`, "timeout": `5000` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify top left message="Positioned at the top left!" timeout="5000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Custom Timeout")),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            You can control the duration of the notification before it disappears using the `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`timeout`, false)
-                    ]),
-                    import_Document.default.createText(` prop.
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "type": `info`, "message": `Custom timeout notification!`, "timeout": `8000` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify type="info" message="Custom timeout notification!" timeout="8000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("nav", { "class": `flex` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/components/icons.html` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Icon")),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/components/pager.html` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Pagination")),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("footer", { "class": `foot` }, []),
                   import_Document.default.createText(`
         `, false)
                 ]),
@@ -2127,7 +2265,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
       ];
     }
   };
-  return __toCommonJS(notify_exports);
+  return __toCommonJS(form_exports);
 })();
 ;
 ;module.exports = InkAPI;

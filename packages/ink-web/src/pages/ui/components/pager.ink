@@ -263,7 +263,7 @@
             />
             </div>
 
-            <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-pager 
             total={1000} 
             range={50} 
@@ -313,7 +313,7 @@
             />
             </div>
 
-            <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-pager 
             total={500} 
             range={100} 
@@ -363,7 +363,7 @@
             />
             </div>
 
-            <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-pager 
             total={500} 
             range={50} 
@@ -411,7 +411,7 @@
             />
             </div>
 
-            <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-pager 
             total={500} 
             range={50} 

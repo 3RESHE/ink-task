@@ -2163,7 +2163,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-pager 
             total={1000} 
@@ -2219,7 +2219,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-pager 
             total={500} 
@@ -2275,7 +2275,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-pager 
             total={500} 
@@ -2331,7 +2331,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-pager 
             total={500} 

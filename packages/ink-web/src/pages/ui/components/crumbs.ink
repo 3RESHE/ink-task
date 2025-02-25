@@ -352,7 +352,7 @@
               <element-icon name="chevron-left" theme="tx-1" />
               {_('Badges')}
             </a>
-            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/badge.html">
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/icon.html">
               {_('Icons')}
               <element-icon name="chevron-right" theme="tx-1" />
             </a>

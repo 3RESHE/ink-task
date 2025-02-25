@@ -164,12 +164,12 @@
                         {_('Tab Examples')}
                     </h2>
 
-                    <!-- Example 1: Description -->
+                   
                     <div class="mb-10">
                         {_('This example demonstrates a tab group with three tabs. The active tab is styled with a black background and white text, while the inactive tabs have a muted background. Each tab belongs to the "http" group, and custom selectors are used to show or hide specific content for each tab.')}
                     </div>
 
-                    <!-- Example 1: Tab -->
+                  
                     <div class="bg-t-3 h-120 flex flex-center">
                         <element-tab 
                             on
@@ -202,7 +202,7 @@
                     </div>
 
                     <!-- Example 1: Code -->
-                    <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+                    <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
                     <div class="bg-t-3 h-120 flex flex-center">
                         <element-tab 
                             on
@@ -240,7 +240,7 @@
                         {_('This example shows a tab group with active and inactive tabs, each with custom styles for padding, borders, and background colors. The active tab has a bold black background with white text, while the inactive tabs have a softer, muted appearance.')}
                     </div>
 
-                    <!-- Example 2: Tab -->
+                  
                     <div class="bg-t-3 h-120 flex flex-center">
                         <element-tab 
                             on
@@ -272,8 +272,8 @@
                         </element-tab>
                     </div>
 
-                    <!-- Example 2: Code -->
-                    <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+                   
+                    <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
                     <div class="bg-t-3 h-120 flex flex-center">
                         <element-tab 
                             on
@@ -307,162 +307,155 @@
                     `}</ide-code>
 
 
-<h2 class="tx-primary tx-upper tx-30 py-20">
-  {_('Horizontal Tabs with Different Active State')}
-</h2>
+                <h2 class="tx-primary tx-upper tx-30 py-20">
+                  {_('Horizontal Tabs with Different Active State')}
+                </h2>
 
-<!-- Description -->
-<div class="mb-10">
-  {_('This example demonstrates a set of horizontal tabs with a "group" of "user". The active tab has a red background and white text, while the inactive tabs have a gray background with muted text.')}
-</div>
+               
+                <div class="mb-10">
+                  {_('This example demonstrates a set of horizontal tabs with a "group" of "user". The active tab has a red background and white text, while the inactive tabs have a gray background with muted text.')}
+                </div>
 
-<!-- Tabs -->
-<div class="bg-t-3 h-120 flex flex-center">
-  <element-tab 
-    on
-    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-    active="bg-red-500 tx-white"
-    inactive="bg-gray-300 tx-muted"  
-    group="user" 
-    selector="#user-profile"
-  >
-    Profile
-  </element-tab>
-  <element-tab 
-    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-    active="bg-red-500 tx-white"
-    inactive="bg-gray-300 tx-muted"  
-    group="user" 
-    selector="#user-settings"
-  >
-    Settings
-  </element-tab>
-  <element-tab 
-    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-    active="bg-red-500 tx-white"
-    inactive="bg-gray-300 tx-muted"  
-    group="user" 
-    selector="#user-notifications"
-  >
-    Notifications
-  </element-tab>
-</div>
+              
+                <div class="bg-t-3 h-120 flex flex-center">
+                  <element-tab 
+                    on
+                    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
+                    active="bg-red-500 tx-white"
+                    inactive="bg-gray-300 tx-muted"  
+                    group="user" 
+                    selector="#user-profile"
+                  >
+                    Profile
+                  </element-tab>
+                  <element-tab 
+                    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
+                    active="bg-red-500 tx-white"
+                    inactive="bg-gray-300 tx-muted"  
+                    group="user" 
+                    selector="#user-settings"
+                  >
+                    Settings
+                  </element-tab>
+                  <element-tab 
+                    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
+                    active="bg-red-500 tx-white"
+                    inactive="bg-gray-300 tx-muted"  
+                    group="user" 
+                    selector="#user-notifications"
+                  >
+                    Notifications
+                  </element-tab>
+                </div>
 
-<!-- Code -->
-<ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
-<div class="bg-t-3 h-120 flex flex-center">
-  <element-tab 
-    on
-    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-    active="bg-red-500 tx-white"
-    inactive="bg-gray-300 tx-muted"  
-    group="user" 
-    selector="#user-profile"
-  >
-    Profile
-  </element-tab>
-  <element-tab 
-    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-    active="bg-red-500 tx-white"
-    inactive="bg-gray-300 tx-muted"  
-    group="user" 
-    selector="#user-settings"
-  >
-    Settings
-  </element-tab>
-  <element-tab 
-    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-    active="bg-red-500 tx-white"
-    inactive="bg-gray-300 tx-muted"  
-    group="user" 
-    selector="#user-notifications"
-  >
-    Notifications
-  </element-tab>
-</div>
-`}</ide-code>
-
+                <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+                <div class="bg-t-3 h-120 flex flex-center">
+                  <element-tab 
+                    on
+                    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
+                    active="bg-red-500 tx-white"
+                    inactive="bg-gray-300 tx-muted"  
+                    group="user" 
+                    selector="#user-profile"
+                  >
+                    Profile
+                  </element-tab>
+                  <element-tab 
+                    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
+                    active="bg-red-500 tx-white"
+                    inactive="bg-gray-300 tx-muted"  
+                    group="user" 
+                    selector="#user-settings"
+                  >
+                    Settings
+                  </element-tab>
+                  <element-tab 
+                    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
+                    active="bg-red-500 tx-white"
+                    inactive="bg-gray-300 tx-muted"  
+                    group="user" 
+                    selector="#user-notifications"
+                  >
+                    Notifications
+                  </element-tab>
+                </div>
+                `}</ide-code>
 
 
-<h2 class="tx-primary tx-upper tx-30 py-20">
-  {_('Custom Style Tabs')}
-</h2>
 
-<!-- Description -->
-<div class="mb-10">
-  {_('This example demonstrates tabs with custom styles using the "style" prop. The tabs are styled with inline CSS for custom padding, border radius, and font size. The active tab is styled with a green background and white text, while the inactive tabs have a gray background.')}
-</div>
+              <h2 class="tx-primary tx-upper tx-30 py-20">
+                {_('Custom Style Tabs')}
+              </h2>
 
-<!-- Tabs -->
-<div class="bg-t-3 h-120 flex flex-center">
-  <element-tab 
-    on
-    style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-    active="bg-green-500 tx-white"
-    inactive="bg-gray-300 tx-primary"  
-    group="custom" 
-    selector="#custom-tab-1"
-  >
-    Tab A
-  </element-tab>
-  <element-tab 
-    style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-    active="bg-green-500 tx-white"
-    inactive="bg-gray-300 tx-primary"  
-    group="custom" 
-    selector="#custom-tab-2"
-  >
-    Tab B
-  </element-tab>
-  <element-tab 
-    style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-    active="bg-green-500 tx-white"
-    inactive="bg-gray-300 tx-primary"  
-    group="custom" 
-    selector="#custom-tab-3"
-  >
-    Tab C
-  </element-tab>
-</div>
+           
+              <div class="mb-10">
+                {_('This example demonstrates tabs with custom styles using the "style" prop. The tabs are styled with inline CSS for custom padding, border radius, and font size. The active tab is styled with a green background and white text, while the inactive tabs have a gray background.')}
+              </div>
 
-<!-- Code -->
-<ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
-<div class="bg-t-3 h-120 flex flex-center">
-  <element-tab 
-    on
-    style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-    active="bg-green-500 tx-white"
-    inactive="bg-gray-300 tx-primary"  
-    group="custom" 
-    selector="#custom-tab-1"
-  >
-    Tab A
-  </element-tab>
-  <element-tab 
-    style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-    active="bg-green-500 tx-white"
-    inactive="bg-gray-300 tx-primary"  
-    group="custom" 
-    selector="#custom-tab-2"
-  >
-    Tab B
-  </element-tab>
-  <element-tab 
-    style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-    active="bg-green-500 tx-white"
-    inactive="bg-gray-300 tx-primary"  
-    group="custom" 
-    selector="#custom-tab-3"
-  >
-    Tab C
-  </element-tab>
-</div>
-`}</ide-code>
+              <div class="bg-t-3 h-120 flex flex-center">
+                <element-tab 
+                  on
+                  style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
+                  active="bg-green-500 tx-white"
+                  inactive="bg-gray-300 tx-primary"  
+                  group="custom" 
+                  selector="#custom-tab-1"
+                >
+                  Tab A
+                </element-tab>
+                <element-tab 
+                  style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
+                  active="bg-green-500 tx-white"
+                  inactive="bg-gray-300 tx-primary"  
+                  group="custom" 
+                  selector="#custom-tab-2"
+                >
+                  Tab B
+                </element-tab>
+                <element-tab 
+                  style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
+                  active="bg-green-500 tx-white"
+                  inactive="bg-gray-300 tx-primary"  
+                  group="custom" 
+                  selector="#custom-tab-3"
+                >
+                  Tab C
+                </element-tab>
+              </div>
 
-
-                          
-
-
+    
+              <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+              <div class="bg-t-3 h-120 flex flex-center">
+                <element-tab 
+                  on
+                  style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
+                  active="bg-green-500 tx-white"
+                  inactive="bg-gray-300 tx-primary"  
+                  group="custom" 
+                  selector="#custom-tab-1"
+                >
+                  Tab A
+                </element-tab>
+                <element-tab 
+                  style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
+                  active="bg-green-500 tx-white"
+                  inactive="bg-gray-300 tx-primary"  
+                  group="custom" 
+                  selector="#custom-tab-2"
+                >
+                  Tab B
+                </element-tab>
+                <element-tab 
+                  style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
+                  active="bg-green-500 tx-white"
+                  inactive="bg-gray-300 tx-primary"  
+                  group="custom" 
+                  selector="#custom-tab-3"
+                >
+                  Tab C
+                </element-tab>
+              </div>
+              `}</ide-code>
 
             <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/progress.html">

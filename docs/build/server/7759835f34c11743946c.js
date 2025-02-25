@@ -831,7 +831,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
         { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
-        { label: "Panel" }
+        { label: "Progress" }
       ];
       return [
         import_Document.default.createText(`
@@ -1513,7 +1513,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#pager#` }, [
-                      ...this._toNodeList(_("Panel"))
+                      ...this._toNodeList(_("Progress"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1585,7 +1585,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_(" Panel")),
+                    ...this._toNodeList(_(" Progress")),
                     import_Document.default.createText(`
           `, false)
                   ]),
@@ -1596,7 +1596,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Badge from '@stackpress/ink-ui/element/panel';
+              import Badge from '@stackpress/ink-ui/element/progress';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1787,7 +1787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
 
              
                 `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
                 <element-progress width={50} info class="bg-muted rounded tx-13 h-20 tx-lh-20 w-full-20" />
                 `)
@@ -1816,7 +1816,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
 
         
                 `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
                 <element-progress width={75} success class="bg-primary rounded tx-13 h-30 tx-lh-30 w-full-30" />
                 `)
@@ -1846,7 +1846,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
                 `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
                 <element-progress width={40} warning class="bg-warning rounded tx-13 h-10 tx-lh-10 w-full-10" />
                 `)
@@ -1877,7 +1877,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
 
          
                 `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
                 <element-progress width={100} success class="bg-success rounded tx-13 h-20 tx-lh-20 w-full-20" />
                 `)
@@ -1908,7 +1908,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
 
             
                 `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
                 <element-progress width={20} class="rounded bg-error tx-13 h-10 tx-lh-10 w-full-10" />
                 `)

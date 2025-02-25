@@ -144,21 +144,22 @@
   
   
   <if true={url === '/docs/state-management.html'}>
-    <a class="block tx-info py-10 pl-10 tx-bold" href="/ink/docs/state-management.html">
-      {_('Elements')}
+    <a class="block tx-info py-10 pl-10 tx-bold" href="/ink/ui/form/index.html">
+      {_('Form')}
     </a>
   <else />
-    <a class="block tx-info py-10 pl-10" href="/ink/docs/state-management.html">
-      {_('Elements')}
+    <a class="block tx-info py-10 pl-10" href="/ink/ui/form/index.html">
+      {_('Form')}
     </a>
   </if>
+
   <if true={url === '/docs/client-api.html'}>
-    <a class="block tx-info py-10 pl-10 tx-bold" href="/ink/docs/client-api.html">
-      {_('Forms')}
+    <a class="block tx-info py-10 pl-10 tx-bold" href="/ink/ui/formats/index.html">
+      {_('Formats')}
     </a>
   <else />
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/docs/client-api.html">
-      {_('Forms')}
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+      {_('Formats')}
     </a>
   </if>
 </nav>

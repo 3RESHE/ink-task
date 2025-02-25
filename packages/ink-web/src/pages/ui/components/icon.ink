@@ -173,7 +173,7 @@
           </div>
         </div>
 
-        <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+        <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
           <element-icon name="info-circle" class="tx-info" />
         `}</ide-code>
 
@@ -183,7 +183,7 @@
           </div>
         </div>
 
-        <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+        <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
           <element-icon name="exclamation-triangle" class="tx-warning" />
         `}</ide-code>
 
@@ -193,7 +193,7 @@
           </div>
         </div>
 
-        <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+        <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
           <element-icon name="check-circle" class="tx-success" />
         `}</ide-code>
 
@@ -203,7 +203,7 @@
           </div>
         </div>
 
-        <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+        <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
           <element-icon name="times-circle" class="tx-error" />
         `}</ide-code>
 
@@ -224,7 +224,7 @@
             </div>
             </div>
 
-            <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-icon name="home"></element-icon>
             `}</ide-code>
 
@@ -245,7 +245,7 @@
             </div>
             </div>
 
-            <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-icon name="user" solid></element-icon>
             `}</ide-code>
 
@@ -255,7 +255,7 @@
             </div>
             </div>
 
-            <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-icon name="github" brand></element-icon>
             `}</ide-code>
 
@@ -276,7 +276,7 @@
             </div>
             </div>
 
-            <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-icon name="bell" size="16"></element-icon>
             `}</ide-code>
 
@@ -286,7 +286,7 @@
             </div>
             </div>
 
-            <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-icon name="bell" size="32"></element-icon>
             `}</ide-code>
 
@@ -306,7 +306,7 @@
         </div>
         </div>
 
-        <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+        <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
         <element-icon name="heart" color="red"></element-icon>
         `}</ide-code>
 
@@ -316,7 +316,7 @@
         </div>
         </div>
 
-        <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+        <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
         <element-icon name="star" color="#facc15"></element-icon>
         `}</ide-code>
 

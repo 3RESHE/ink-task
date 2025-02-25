@@ -290,7 +290,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+<ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
   <element-tip 
     background-info
     curved
@@ -329,7 +329,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+<ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
   <element-tip 
     background-success
     curved
@@ -368,7 +368,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+<ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
   <element-tip 
     background-error
     curved
@@ -407,7 +407,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+<ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
   <element-tip 
     background-warning
     curved
@@ -446,7 +446,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+<ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
   <element-tip 
     background-muted
     curved
@@ -460,11 +460,6 @@
   </element-tip>
 `}</ide-code>
 
-
-
-
-
-            
 
             <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/tab.html">

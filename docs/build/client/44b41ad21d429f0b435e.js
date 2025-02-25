@@ -3707,19 +3707,13 @@ var InkAPI = (() => {
   :host([inline]) > pre > code {
     display: inline !important;
   }
-
-.snippet {
-  background-color: #000000;
-  color: #ABB2BF;
-  height: 100%;
-  width: 100%; /* Ensures the background extends fully */
-  margin: 0;
-  padding: 0;
-  display: block;
-  overflow-x: auto; /* Enables horizontal scrolling */
-  white-space: pre; /* Preserves spacing */
-}
-
+  .snippet {
+    background-color: #000000;
+    color: #ABB2BF;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
   .line-numbers {
     position: relative;
@@ -3769,13 +3763,9 @@ var InkAPI = (() => {
     padding-right: 0.8em;
     text-align: right;
   }
-
-.pad {
-  padding: 10px;
-  width: 100%; /* Ensures the padding applies fully */
-  box-sizing: border-box; /* Prevents overflow due to padding */
-}
-
+  .pad {
+    padding: 5px;
+  }
 
   .terminal {
     background-color: #000000;
@@ -3883,11 +3873,9 @@ var InkAPI = (() => {
             import_Registry3.default.createText(`????`, false)
           ]).element,
           import_Registry3.default.createText(`
-
 `, false)
         ] : [],
         import_Registry3.default.createText(`
-
 `, false)
       ];
     }
@@ -6026,7 +6014,7 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-                    <!-- Example 1: Description -->
+                   
                     `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
@@ -6037,7 +6025,7 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-                    <!-- Example 1: Tab -->
+                  
                     `, false),
                   import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
                     import_Document.default.createText(`
@@ -6068,7 +6056,7 @@ var InkAPI = (() => {
 
                     <!-- Example 1: Code -->
                     `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
                     <div class="bg-t-3 h-120 flex flex-center">
                         <element-tab 
@@ -6115,7 +6103,7 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-                    <!-- Example 2: Tab -->
+                  
                     `, false),
                   import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
                     import_Document.default.createText(`
@@ -6144,9 +6132,9 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-                    <!-- Example 2: Code -->
+                   
                     `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
                     <div class="bg-t-3 h-120 flex flex-center">
                         <element-tab 
@@ -6183,188 +6171,181 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
 
-`, false),
+                `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-  `, false),
+                  `, false),
                     ...this._toNodeList(_("Horizontal Tabs with Different Active State")),
                     import_Document.default.createText(`
-`, false)
+                `, false)
                   ]),
                   import_Document.default.createText(`
 
-<!-- Description -->
-`, false),
+               
+                `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  `, false),
+                  `, false),
                     ...this._toNodeList(_('This example demonstrates a set of horizontal tabs with a "group" of "user". The active tab has a red background and white text, while the inactive tabs have a gray background with muted text.')),
                     import_Document.default.createText(`
-`, false)
+                `, false)
                   ]),
                   import_Document.default.createText(`
 
-<!-- Tabs -->
-`, false),
+              
+                `, false),
                   import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
                     import_Document.default.createText(`
-  `, false),
+                  `, false),
                     import_Document.default.createElement("element-tab", { "on": true, "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-red-500 tx-white`, "inactive": `bg-gray-300 tx-muted`, "group": `user`, "selector": `#user-profile` }, [
                       import_Document.default.createText(`
-    Profile
-  `, false)
+                    Profile
+                  `, false)
                     ]),
                     import_Document.default.createText(`
-  `, false),
+                  `, false),
                     import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-red-500 tx-white`, "inactive": `bg-gray-300 tx-muted`, "group": `user`, "selector": `#user-settings` }, [
                       import_Document.default.createText(`
-    Settings
-  `, false)
+                    Settings
+                  `, false)
                     ]),
                     import_Document.default.createText(`
-  `, false),
+                  `, false),
                     import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-red-500 tx-white`, "inactive": `bg-gray-300 tx-muted`, "group": `user`, "selector": `#user-notifications` }, [
                       import_Document.default.createText(`
-    Notifications
-  `, false)
+                    Notifications
+                  `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+                `, false)
                   ]),
                   import_Document.default.createText(`
 
-<!-- Code -->
-`, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-<div class="bg-t-3 h-120 flex flex-center">
-  <element-tab 
-    on
-    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-    active="bg-red-500 tx-white"
-    inactive="bg-gray-300 tx-muted"  
-    group="user" 
-    selector="#user-profile"
-  >
-    Profile
-  </element-tab>
-  <element-tab 
-    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-    active="bg-red-500 tx-white"
-    inactive="bg-gray-300 tx-muted"  
-    group="user" 
-    selector="#user-settings"
-  >
-    Settings
-  </element-tab>
-  <element-tab 
-    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-    active="bg-red-500 tx-white"
-    inactive="bg-gray-300 tx-muted"  
-    group="user" 
-    selector="#user-notifications"
-  >
-    Notifications
-  </element-tab>
-</div>
-`)
+                <div class="bg-t-3 h-120 flex flex-center">
+                  <element-tab 
+                    on
+                    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
+                    active="bg-red-500 tx-white"
+                    inactive="bg-gray-300 tx-muted"  
+                    group="user" 
+                    selector="#user-profile"
+                  >
+                    Profile
+                  </element-tab>
+                  <element-tab 
+                    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
+                    active="bg-red-500 tx-white"
+                    inactive="bg-gray-300 tx-muted"  
+                    group="user" 
+                    selector="#user-settings"
+                  >
+                    Settings
+                  </element-tab>
+                  <element-tab 
+                    class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
+                    active="bg-red-500 tx-white"
+                    inactive="bg-gray-300 tx-muted"  
+                    group="user" 
+                    selector="#user-notifications"
+                  >
+                    Notifications
+                  </element-tab>
+                </div>
+                `)
                   ]),
                   import_Document.default.createText(`
 
 
 
-`, false),
+              `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-  `, false),
+                `, false),
                     ...this._toNodeList(_("Custom Style Tabs")),
                     import_Document.default.createText(`
-`, false)
+              `, false)
                   ]),
                   import_Document.default.createText(`
 
-<!-- Description -->
-`, false),
+           
+              `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  `, false),
+                `, false),
                     ...this._toNodeList(_('This example demonstrates tabs with custom styles using the "style" prop. The tabs are styled with inline CSS for custom padding, border radius, and font size. The active tab is styled with a green background and white text, while the inactive tabs have a gray background.')),
                     import_Document.default.createText(`
-`, false)
+              `, false)
                   ]),
                   import_Document.default.createText(`
 
-<!-- Tabs -->
-`, false),
+              `, false),
                   import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
                     import_Document.default.createText(`
-  `, false),
+                `, false),
                     import_Document.default.createElement("element-tab", { "on": true, "style": `padding: 12px 24px; border-radius: 8px; font-size: 16px;`, "active": `bg-green-500 tx-white`, "inactive": `bg-gray-300 tx-primary`, "group": `custom`, "selector": `#custom-tab-1` }, [
                       import_Document.default.createText(`
-    Tab A
-  `, false)
+                  Tab A
+                `, false)
                     ]),
                     import_Document.default.createText(`
-  `, false),
+                `, false),
                     import_Document.default.createElement("element-tab", { "style": `padding: 12px 24px; border-radius: 8px; font-size: 16px;`, "active": `bg-green-500 tx-white`, "inactive": `bg-gray-300 tx-primary`, "group": `custom`, "selector": `#custom-tab-2` }, [
                       import_Document.default.createText(`
-    Tab B
-  `, false)
+                  Tab B
+                `, false)
                     ]),
                     import_Document.default.createText(`
-  `, false),
+                `, false),
                     import_Document.default.createElement("element-tab", { "style": `padding: 12px 24px; border-radius: 8px; font-size: 16px;`, "active": `bg-green-500 tx-white`, "inactive": `bg-gray-300 tx-primary`, "group": `custom`, "selector": `#custom-tab-3` }, [
                       import_Document.default.createText(`
-    Tab C
-  `, false)
+                  Tab C
+                `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+              `, false)
                   ]),
                   import_Document.default.createText(`
 
-<!-- Code -->
-`, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+    
+              `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-<div class="bg-t-3 h-120 flex flex-center">
-  <element-tab 
-    on
-    style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-    active="bg-green-500 tx-white"
-    inactive="bg-gray-300 tx-primary"  
-    group="custom" 
-    selector="#custom-tab-1"
-  >
-    Tab A
-  </element-tab>
-  <element-tab 
-    style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-    active="bg-green-500 tx-white"
-    inactive="bg-gray-300 tx-primary"  
-    group="custom" 
-    selector="#custom-tab-2"
-  >
-    Tab B
-  </element-tab>
-  <element-tab 
-    style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-    active="bg-green-500 tx-white"
-    inactive="bg-gray-300 tx-primary"  
-    group="custom" 
-    selector="#custom-tab-3"
-  >
-    Tab C
-  </element-tab>
-</div>
-`)
+              <div class="bg-t-3 h-120 flex flex-center">
+                <element-tab 
+                  on
+                  style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
+                  active="bg-green-500 tx-white"
+                  inactive="bg-gray-300 tx-primary"  
+                  group="custom" 
+                  selector="#custom-tab-1"
+                >
+                  Tab A
+                </element-tab>
+                <element-tab 
+                  style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
+                  active="bg-green-500 tx-white"
+                  inactive="bg-gray-300 tx-primary"  
+                  group="custom" 
+                  selector="#custom-tab-2"
+                >
+                  Tab B
+                </element-tab>
+                <element-tab 
+                  style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
+                  active="bg-green-500 tx-white"
+                  inactive="bg-gray-300 tx-primary"  
+                  group="custom" 
+                  selector="#custom-tab-3"
+                >
+                  Tab C
+                </element-tab>
+              </div>
+              `)
                   ]),
                   import_Document.default.createText(`
-
-
-                          
-
-
 
             `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [

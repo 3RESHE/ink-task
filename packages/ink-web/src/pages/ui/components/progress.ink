@@ -41,7 +41,7 @@
     { icon: 'book', label: 'Docs', href: '/ink/docs/index.html' },
     { icon: 'icons', label: 'UI', href: '/ink/ui/index.html' },
     { icon: 'icons', label: 'Components', href: '/ink/ui/index.html' },
-    { label: 'Panel' }
+    { label: 'Progress' }
   ];
 </script>
 <html>
@@ -58,7 +58,7 @@
             {_('On this page')}
           </h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#pager#">{_('Panel')}</a>
+            <a class="block tx-t-0" href="#pager#">{_('Progress')}</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">{_('Props')}</a>
               <a class="block tx-t-1" href="#PaginationExample">{_('Pagination Example')}</a>
@@ -91,11 +91,11 @@
         
         <a name="pager"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">
-            {_(' Panel')}
+            {_(' Progress')}
           </h1>
           <ide-app title="Editor" class="py-20 ">
             <ide-code class="scroll-y-auto" lang="js" trim>
-              import Badge from '@stackpress/ink-ui/element/panel';
+              import Badge from '@stackpress/ink-ui/element/progress';
             </ide-code>
           </ide-app>
 
@@ -155,7 +155,7 @@
                 </div>
 
              
-                <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+                <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
                 <element-progress width={50} info class="bg-muted rounded tx-13 h-20 tx-lh-20 w-full-20" />
                 `}</ide-code>
 
@@ -168,7 +168,7 @@
                 </div>
 
         
-                <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+                <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
                 <element-progress width={75} success class="bg-primary rounded tx-13 h-30 tx-lh-30 w-full-30" />
                 `}</ide-code>
 
@@ -182,7 +182,7 @@
                 <element-progress width={40} warning class="bg-warning rounded tx-13 h-10 tx-lh-10 w-full-10" />
                 </div>
 
-                <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+                <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
                 <element-progress width={40} warning class="bg-warning rounded tx-13 h-10 tx-lh-10 w-full-10" />
                 `}</ide-code>
 
@@ -197,7 +197,7 @@
                 </div>
 
          
-                <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+                <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
                 <element-progress width={100} success class="bg-success rounded tx-13 h-20 tx-lh-20 w-full-20" />
                 `}</ide-code>
 
@@ -212,7 +212,7 @@
                 </div>
 
             
-                <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+                <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
                 <element-progress width={20} class="rounded bg-error tx-13 h-10 tx-lh-10 w-full-10" />
                 `}</ide-code>
 

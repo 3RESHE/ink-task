@@ -787,10 +787,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\notify.ink
-  var notify_exports = {};
-  __export(notify_exports, {
-    default: () => Notify_21df6dae2cf18213bc74
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\formats\index.ink
+  var formats_exports = {};
+  __export(formats_exports, {
+    default: () => Index_e91a5d379c88e71ad049
   });
   var import_Document = __toESM(require_Document());
   var import_Document2 = __toESM(require_Document2());
@@ -808,10 +808,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\notify.ink
-  var Notify_21df6dae2cf18213bc74 = class extends import_Document2.default {
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\formats\index.ink
+  var Index_e91a5d379c88e71ad049 = class extends import_Document2.default {
     id() {
-      return "21df6dae2cf18213bc74";
+      return "e91a5d379c88e71ad049";
     }
     styles() {
       return `@ink theme;
@@ -826,13 +826,19 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
-      const crumbs = [
-        { icon: "home", label: "Home", href: "/ink/index.html" },
-        { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
-        { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
-        { label: "Notify" }
+      const json = { icon: "book", label: "Docs" };
+      const variables = { x: 10, y: 20 };
+      const html = '<h1><strong style="color: green">Hello</strong> World</h1>';
+      const images = [
+        "https://images.wsj.net/im-580612/8SR",
+        "https://images.wsj.net/im-580612/8SR"
       ];
+      const list = ["Item 1", "Item 2"];
+      const metadata = { name: "John Doe", age: 25 };
+      const table = [
+        { id: 2, name: "Jane Doe", age: 25 }
+      ];
+      const stripes = ["bg-t-2", "bg-t-3"];
       return [
         import_Document.default.createText(`
 `, false),
@@ -1492,623 +1498,557 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                 ]
               ]),
               import_Document.default.createText(`
-
-
-        `, false),
-              import_Document.default.createElement("aside", { "right": true }, [
-                import_Document.default.createText(`
-        `, false),
-                import_Document.default.createElement("menu", { "class": `m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto` }, [
-                  import_Document.default.createText(`
-            `, false),
-                  import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-            `, false),
-                  import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `# Notify` }, [
-                      ...this._toNodeList(_(" Notify"))
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("nav", { "class": `pl-20` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#props` }, [
-                        ...this._toNodeList(_("Props"))
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#types` }, [
-                        ...this._toNodeList(_("Types"))
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#size` }, [
-                        ...this._toNodeList(_("Size"))
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#color` }, [
-                        ...this._toNodeList(_("Color"))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-        `, false)
-                ]),
-                import_Document.default.createText(`
-        `, false)
-              ]),
-              import_Document.default.createText(`
-
-
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
         `, false),
-                import_Document.default.createElement("nav", { "class": `p-10 bg-t-3` }, [
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
-                  import_Document.default.createText(`
-        `, false)
-                ]),
-                import_Document.default.createText(`
-        `, false),
                 import_Document.default.createElement("api-docs", {}, [
-                  import_Document.default.createText(`
-
-
-        
-        `, false),
-                  import_Document.default.createElement("a", { "name": ` Notify` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_(" Notify")),
+                    ...this._toNodeList(_("Formats")),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20 ` }, [
+                  import_Document.default.createElement("section", { "class": `flex flex-wrap gap-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                       import_Document.default.createText(`
-              import Badge from '@stackpress/ink-ui/element/notify';
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-code", { "lang": `js` }, [
+                          import_Document.default.createText(`compiler.render('./page.ink')`, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/code.html` }, [
+                        import_Document.default.createText(`
+                Code
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-color", { "box-md": true, "text-md": true, "value": `red` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/color.html` }, [
+                        import_Document.default.createText(`
+                Color
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-country", { "flag-md": true, "text-md": true, "value": `us` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/country.html` }, [
+                        import_Document.default.createText(`
+                Country
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-currency", { "flag-lg": true, "text-lg": true, "value": `usd` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/currency.html` }, [
+                        import_Document.default.createText(`
+                Currency
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-date", { "format": `MMMM D YYYY, h:mm:ss a` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/date.html` }, [
+                        import_Document.default.createText(`
+                Date
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-email", { "primary": true, "underline": true, "md": true, "value": `john@doe.com` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/email.html` }, [
+                        import_Document.default.createText(`
+                Email
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                10 + 29 + 20 = 
+                `, false),
+                        import_Document.default.createElement("format-formula", { "value": `29`, "formula": `{x} + {this} + {y}`, "data": variables, "bold": true }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/formula.html` }, [
+                        import_Document.default.createText(`
+                Formula
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-html", { "value": html }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/html.html` }, [
+                        import_Document.default.createText(`
+                HTML
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-image", { "width": `70`, "value": `https://images.wsj.net/im-580612/8SR` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/image.html` }, [
+                        import_Document.default.createText(`
+                Image
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-imagelist", { "width": `70`, "value": images }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/imagelist.html` }, [
+                        import_Document.default.createText(`
+                Imagelist
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-json", { "value": json }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/json.html` }, [
+                        import_Document.default.createText(`
+                JSON
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-link", { "secondary": true, "underline": true, "md": true, "target": `_blank`, "value": `https://iamawesome.com/` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/link.html` }, [
+                        import_Document.default.createText(`
+                Link
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-list", { "value": list, "item": `tx-lh-36` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/list.html` }, [
+                        import_Document.default.createText(`
+                List
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-markdown", { "value": `**Hello** World` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/markdown.html` }, [
+                        import_Document.default.createText(`
+                Markdown
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-metadata", { "value": metadata, "padding": `10`, "align": `center`, "background-theme": `bg-1`, "stripe-theme": `bg-2`, "border-theme": `black`, "format": true }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/metadata.html` }, [
+                        import_Document.default.createText(`
+                Metadata
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-number", { "value": `12345.67`, "separator": `,`, "decimal": `.`, "decimals": 2 }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/number.html` }, [
+                        import_Document.default.createText(`
+                Number
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-overflow", { "value": `Lorem Ipsum`, "length": 8, "hellip": true }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/overflow.html` }, [
+                        import_Document.default.createText(`
+                Overflow
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-phone", { "value": `+63 (917) 555-2424` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/phone.html` }, [
+                        import_Document.default.createText(`
+                Phone
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-rating", { "class": `tx-warning`, "value": `3.5`, "max": 5, "remainder": true, "round": `floor` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/rating.html` }, [
+                        import_Document.default.createText(`
+                Rating
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-separated", { "value": ["Foo", "bar"], "separator": `line` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/separated.html` }, [
+                        import_Document.default.createText(`
+                Separated
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-table", { "value": table, "padding": `10`, "align": `center`, "background-theme": `bg-1`, "stripe-theme": `bg-2`, "header-theme": `bg-2`, "border-theme": `black` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/table.html` }, [
+                        import_Document.default.createText(`
+                Table
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-taglist", { "value": ["Foo", "bar"], "pill": true }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/taglist.html` }, [
+                        import_Document.default.createText(`
+                Taglist
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-text", { "value": `i am a title`, "capital": true }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/text.html` }, [
+                        import_Document.default.createText(`
+                Text
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("format-yesno", { "value": true }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/format/yesno.html` }, [
+                        import_Document.default.createText(`
+                Yesno
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
           `, false)
                   ]),
-                  import_Document.default.createText(`
-
-                `, false),
-                  import_Document.default.createElement("a", { "name": `props` }, []),
-                  import_Document.default.createText(`
-                `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-                `, false),
-                    ...this._toNodeList(_("Props")),
-                    import_Document.default.createText(`
-                `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-                `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
-                    import_Document.default.createText(`
-                `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Name"))
-                    ]),
-                    import_Document.default.createText(`
-                `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Type"))
-                    ]),
-                    import_Document.default.createText(`
-                `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Required"))
-                    ]),
-                    import_Document.default.createText(`
-                `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Notes"))
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`top`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Positions the notification at the top (default is bottom)."))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`left`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Aligns the notification to the left (default is right)."))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`center`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Centers the notification horizontally."))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`fade`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Enables fade transition effect."))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`smooth`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Number`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Controls transition smoothness (default: 10ms)."))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`type`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Yes`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Defines the notification type: "info", "warning", "error", "success", "primary", "secondary", "muted".'))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`message`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Yes`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the notification message."))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`timeout`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Number`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Duration before the notification disappears (default: 5000ms)."))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-                `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            
-            `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Notification Types")),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Notifications support different types:  
-          `, false),
-                    import_Document.default.createElement("span", { "class": `tx-info tx-italic p-3` }, [
-                      import_Document.default.createText(`info`, false)
-                    ]),
-                    import_Document.default.createText(`,
-          `, false),
-                    import_Document.default.createElement("span", { "class": `tx-warning tx-italic p-3` }, [
-                      import_Document.default.createText(`warning`, false)
-                    ]),
-                    import_Document.default.createText(`,
-          `, false),
-                    import_Document.default.createElement("span", { "class": `tx-success tx-italic p-3` }, [
-                      import_Document.default.createText(`success`, false)
-                    ]),
-                    import_Document.default.createText(`,
-          `, false),
-                    import_Document.default.createElement("span", { "class": `tx-error tx-italic p-3` }, [
-                      import_Document.default.createText(`error`, false)
-                    ]),
-                    import_Document.default.createText(`.
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "type": `info`, "message": `This is an info notification!`, "timeout": `5000` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify type="info" message="This is an info notification!" timeout="5000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "type": `warning`, "message": `This is a warning notification!`, "timeout": `5000` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify type="warning" message="This is a warning notification!" timeout="5000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "type": `error`, "message": `This is an error notification!`, "timeout": `5000` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify type="error" message="This is an error notification!" timeout="5000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "type": `success`, "message": `This is a success notification!`, "timeout": `5000` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify type="success" message="This is a success notification!" timeout="5000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Custom Position")),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Notifications can be positioned at the top, bottom, left, right, or center using the respective props.
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "top": true, "left": true, "message": `Positioned at the top left!`, "timeout": `5000` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify top left message="Positioned at the top left!" timeout="5000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Custom Timeout")),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            You can control the duration of the notification before it disappears using the `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`timeout`, false)
-                    ]),
-                    import_Document.default.createText(` prop.
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "type": `info`, "message": `Custom timeout notification!`, "timeout": `8000` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify type="info" message="Custom timeout notification!" timeout="8000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("nav", { "class": `flex` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/components/icons.html` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Icon")),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/components/pager.html` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Pagination")),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("footer", { "class": `foot` }, []),
                   import_Document.default.createText(`
         `, false)
                 ]),
@@ -2127,7 +2067,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
       ];
     }
   };
-  return __toCommonJS(notify_exports);
+  return __toCommonJS(formats_exports);
 })();
 ;
 ;module.exports = InkAPI;
