@@ -3707,19 +3707,13 @@ var InkAPI = (() => {
   :host([inline]) > pre > code {
     display: inline !important;
   }
-
-.snippet {
-  background-color: #000000;
-  color: #ABB2BF;
-  height: 100%;
-  width: 100%; /* Ensures the background extends fully */
-  margin: 0;
-  padding: 0;
-  display: block;
-  overflow-x: auto; /* Enables horizontal scrolling */
-  white-space: pre; /* Preserves spacing */
-}
-
+  .snippet {
+    background-color: #000000;
+    color: #ABB2BF;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
   .line-numbers {
     position: relative;
@@ -3769,13 +3763,9 @@ var InkAPI = (() => {
     padding-right: 0.8em;
     text-align: right;
   }
-
-.pad {
-  padding: 10px;
-  width: 100%; /* Ensures the padding applies fully */
-  box-sizing: border-box; /* Prevents overflow due to padding */
-}
-
+  .pad {
+    padding: 5px;
+  }
 
   .terminal {
     background-color: #000000;
@@ -3883,11 +3873,9 @@ var InkAPI = (() => {
             import_Registry3.default.createText(`????`, false)
           ]).element,
           import_Registry3.default.createText(`
-
 `, false)
         ] : [],
         import_Registry3.default.createText(`
-
 `, false)
       ];
     }
@@ -5994,7 +5982,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-loader solid size="40" class="tx-primary"></element-loader>
           `)
@@ -6018,7 +6006,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-loader dotted size="40" class="tx-success"></element-loader>
           `)
@@ -6042,7 +6030,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-loader dashed size="40" class="tx-error"></element-loader>
           `)
@@ -6088,7 +6076,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-loader dotted size="60" class="tx-warning"></element-loader>
           `)
@@ -6134,7 +6122,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-loader size="40" speed="500" class="tx-info"></element-loader>
           `)
@@ -6180,7 +6168,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-loader info slice="2"></element-loader>
           `)
@@ -6238,7 +6226,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
               <element-loader success size="5" thickness="5" dotted></element-loader>
             `)
@@ -6262,7 +6250,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
               <element-loader warning dashed></element-loader>
             `)
@@ -6286,7 +6274,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-10`, "trim": true, "detab": 12 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
               <element-loader error dashed thickness="10" size="10" speed="1500"></element-loader>
             `)

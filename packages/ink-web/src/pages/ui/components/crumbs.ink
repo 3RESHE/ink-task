@@ -78,7 +78,7 @@
           <h1 class="tx-primary tx-upper tx-30 py-20">{_('Breadcrumbs')}</h1>
 
           <ide-app title="Editor" class="py-20">
-            <ide-code class="scroll-y-auto" lang="js" trim>
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
               import Crumbs from '@stackpress/ink-ui/element/crumbs';
             </ide-code>
           </ide-app>
@@ -195,7 +195,7 @@
             </a>
           </div>
 
-          <ide-code class="scroll-y-auto" numbers detab={4} trim>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" numbers detab={4} trim>{`
           <script>
               const toggle = () => {
               document.querySelector('panel-layout').toggle('left');
@@ -242,7 +242,7 @@
               </div>
             </div>
 
-          <ide-code class="scroll-y-auto" trim>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`
           <element-crumbs crumbs={crumbs} link-warning block />
           `}</ide-code>
 
@@ -258,7 +258,7 @@
             </div>
 
 
-          <ide-code class="scroll-y-auto"  trim>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"  trim>{`
           <element-crumbs crumbs={crumbs} sep-muted  />
           `}</ide-code>
 
@@ -273,7 +273,7 @@
               </div>
             </div>
 
-          <ide-code class="scroll-y-auto" trim>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`
             <element-crumbs crumbs={crumbs} icon-muted block />
           `}</ide-code>
 
@@ -287,7 +287,7 @@
               </div>
             </div>
 
-          <ide-code class="scroll-y-auto" trim>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`
             <element-crumbs crumbs={crumbs} icon-success block />
           `}</ide-code>
 
@@ -302,7 +302,7 @@
             </div>
           </div>
 
-          <ide-code class="scroll-y-auto" trim>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`
             <element-crumbs crumbs={crumbs} size="lg" block />
           `}</ide-code>
 
@@ -316,7 +316,7 @@
             </div>
           </div>
 
-          <ide-code class="scroll-y-auto" trim>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`
             <element-crumbs crumbs={crumbs} spacing={5} block />
           `}</ide-code>
 
@@ -330,7 +330,7 @@
             </div>
           </div>
 
-          <ide-code class="scroll-y-auto" trim>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`
             <element-crumbs crumbs={crumbs} color="white" block />
           `}</ide-code>
 
@@ -344,7 +344,7 @@
             </div>
           </div>
 
-          <ide-code class="scroll-y-auto" trim>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`
             <element-crumbs crumbs={crumbs} link={{color: 'salmon' }} block />
           `}</ide-code>
           <nav class="flex">

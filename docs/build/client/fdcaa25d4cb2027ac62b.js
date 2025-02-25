@@ -3848,18 +3848,13 @@ var InkAPI = (() => {
   :host([inline]) > pre > code {
     display: inline !important;
   }
-
-.snippet {
-  background-color: #000000;
-  color: #ABB2BF;
-  height: 100%;
-
-  margin: 0;
-  padding: 0;
-  display: block;
-
-}
-
+  .snippet {
+    background-color: #000000;
+    color: #ABB2BF;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
   .line-numbers {
     position: relative;
@@ -3909,13 +3904,9 @@ var InkAPI = (() => {
     padding-right: 0.8em;
     text-align: right;
   }
-
-.pad {
-  padding: 10px;
-  width: 100%; /* Ensures the padding applies fully */
-  box-sizing: border-box; /* Prevents overflow due to padding */
-}
-
+  .pad {
+    padding: 5px;
+  }
 
   .terminal {
     background-color: #000000;
@@ -4023,11 +4014,9 @@ var InkAPI = (() => {
             import_Registry5.default.createText(`????`, false)
           ]).element,
           import_Registry5.default.createText(`
-
 `, false)
         ] : [],
         import_Registry5.default.createText(`
-
 `, false)
       ];
     }

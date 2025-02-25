@@ -195,7 +195,7 @@
               No Results found
             </element-alert>
 
-          <ide-code class="scroll-y-auto" class="mb-5"   trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"   trim detab={12}>{`
             <element-alert info>
               <element-icon name="info-circle" />
               No Results found
@@ -289,7 +289,7 @@
               No Results found
             </element-alert>
 
-          <ide-code class="scroll-y-auto" class="mb-5"   trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"   trim detab={12}>{`
             <element-alert info curved>
               <element-icon name="info-circle" />
               No Results found
@@ -301,7 +301,7 @@
               No Results found
             </element-alert>
 
-          <ide-code class="scroll-y-auto" class="mb-5"   trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"   trim detab={12}>{`
             <element-alert warning rounded>
               <element-icon name="exclamation-triangle" />
               Are you sure?
@@ -313,7 +313,7 @@
               Successfully saved!
             </element-alert>
 
-          <ide-code class="scroll-y-auto" class="mb-5"   trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"   trim detab={12}>{`
             <element-alert success pill>
               <element-icon name="check-circle" />
               No Results found
@@ -334,7 +334,7 @@
               Extra padded success message!
           </element-alert>
 
-          <ide-code class="scroll-y-auto" class="mb-5" trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
               <element-alert success padding="32">
               <element-icon name="check-circle" />
               Extra padded success message!
@@ -356,7 +356,7 @@
             This is a transparent alert.
           </element-alert>
 
-          <ide-code class="scroll-y-auto" class="mb-5"   trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"   trim detab={12}>{`
               <element-alert transparent info>
               <element-icon name="info-circle" />
               This is a transparent alert.
@@ -377,7 +377,7 @@
             Warning alert with outline!
           </element-alert>
 
-          <ide-code class="scroll-y-auto" class="mb-5"   trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"   trim detab={12}>{`
               <element-alert outline warning>
               <element-icon name="exclamation-triangle" />
               Warning alert with outline!
@@ -398,7 +398,7 @@
               Curved outline with padding.
             </element-alert>
 
-              <ide-code class="scroll-y-auto" class="mb-5"   trim detab={12}>{`
+              <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"   trim detab={12}>{`
               <element-alert outline curved padding="24" muted>
               <element-icon name="info-circle" />
               Curved outline with padding.

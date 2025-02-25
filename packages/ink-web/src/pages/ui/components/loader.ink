@@ -178,7 +178,7 @@
             </div>
           </div>
 
-          <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"   trim detab={12}>{`
             <element-loader solid size="40" class="tx-primary"></element-loader>
           `}</ide-code>
 
@@ -188,7 +188,7 @@
             </div>
           </div>
 
-          <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-loader dotted size="40" class="tx-success"></element-loader>
           `}</ide-code>
 
@@ -198,7 +198,7 @@
             </div>
           </div>
 
-          <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-loader dashed size="40" class="tx-error"></element-loader>
           `}</ide-code>
 
@@ -216,7 +216,7 @@
             </div>
           </div>
 
-          <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-loader dotted size="60" class="tx-warning"></element-loader>
           `}</ide-code>
 
@@ -234,7 +234,7 @@
             </div>
           </div>
 
-          <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-loader size="40" speed="500" class="tx-info"></element-loader>
           `}</ide-code>
 
@@ -252,7 +252,7 @@
             </div>
           </div>
 
-          <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-loader info slice="2"></element-loader>
           `}</ide-code>
 
@@ -270,7 +270,7 @@
               </div>
             </div>
 
-            <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
               <element-loader success size="5" thickness="5" dotted></element-loader>
             `}</ide-code>
 
@@ -280,7 +280,7 @@
               </div>
             </div>
 
-            <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
               <element-loader warning dashed></element-loader>
             `}</ide-code>
 
@@ -290,7 +290,7 @@
               </div>
             </div>
 
-            <ide-code class="scroll-y-auto" class="mb-10" trim detab={12}>{`
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
               <element-loader error dashed thickness="10" size="10" speed="1500"></element-loader>
             `}</ide-code>
 

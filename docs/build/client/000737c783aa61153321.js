@@ -3876,7 +3876,6 @@ var InkAPI = (() => {
 `, false)
         ] : [],
         import_Registry3.default.createText(`
-
 `, false)
       ];
     }
@@ -5567,7 +5566,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "lang": `js`, "trim": true }, [
+                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
               import Crumbs from '@stackpress/ink-ui/element/crumbs';
             `, false)
@@ -5924,7 +5923,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "numbers": true, "detab": 4, "trim": true }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "numbers": true, "detab": 4, "trim": true }, [
                     ...this._toNodeList(`
           <script>
               const toggle = () => {
@@ -5989,7 +5988,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
                     ...this._toNodeList(`
           <element-crumbs crumbs={crumbs} link-warning block />
           `)
@@ -6023,7 +6022,7 @@ var InkAPI = (() => {
 
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
                     ...this._toNodeList(`
           <element-crumbs crumbs={crumbs} sep-muted  />
           `)
@@ -6056,7 +6055,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
                     ...this._toNodeList(`
             <element-crumbs crumbs={crumbs} icon-muted block />
           `)
@@ -6088,7 +6087,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
                     ...this._toNodeList(`
             <element-crumbs crumbs={crumbs} icon-success block />
           `)
@@ -6121,7 +6120,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
                     ...this._toNodeList(`
             <element-crumbs crumbs={crumbs} size="lg" block />
           `)
@@ -6153,7 +6152,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
                     ...this._toNodeList(`
             <element-crumbs crumbs={crumbs} spacing={5} block />
           `)
@@ -6185,7 +6184,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
                     ...this._toNodeList(`
             <element-crumbs crumbs={crumbs} color="white" block />
           `)
@@ -6217,7 +6216,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
                     ...this._toNodeList(`
             <element-crumbs crumbs={crumbs} link={{color: 'salmon' }} block />
           `)
