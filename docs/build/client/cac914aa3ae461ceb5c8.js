@@ -3914,19 +3914,13 @@ var InkAPI = (() => {
   :host([inline]) > pre > code {
     display: inline !important;
   }
-
-.snippet {
-  background-color: #000000;
-  color: #ABB2BF;
-  height: 100%;
-  width: 100%; /* Ensures the background extends fully */
-  margin: 0;
-  padding: 0;
-  display: block;
-  overflow-x: auto; /* Enables horizontal scrolling */
-  white-space: pre; /* Preserves spacing */
-}
-
+  .snippet {
+    background-color: #000000;
+    color: #ABB2BF;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
   .line-numbers {
     position: relative;
@@ -3976,13 +3970,9 @@ var InkAPI = (() => {
     padding-right: 0.8em;
     text-align: right;
   }
-
-.pad {
-  padding: 10px;
-  width: 100%; /* Ensures the padding applies fully */
-  box-sizing: border-box; /* Prevents overflow due to padding */
-}
-
+  .pad {
+    padding: 5px;
+  }
 
   .terminal {
     background-color: #000000;
@@ -4090,11 +4080,9 @@ var InkAPI = (() => {
             import_Registry6.default.createText(`????`, false)
           ]).element,
           import_Registry6.default.createText(`
-
 `, false)
         ] : [],
         import_Registry6.default.createText(`
-
 `, false)
       ];
     }
@@ -4807,10 +4795,10 @@ var InkAPI = (() => {
                     ...!!(url === "/docs/state-management.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/state-management.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/form/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Elements")),
+                        ...this._toNodeList(_("Form")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -4820,10 +4808,10 @@ var InkAPI = (() => {
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/docs/state-management.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/form/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Elements")),
+                        ...this._toNodeList(_("Form")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -4831,14 +4819,15 @@ var InkAPI = (() => {
   `, false)
                     ] : [],
                     import_Document.default.createText(`
+
   `, false),
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/client-api.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Forms")),
+                        ...this._toNodeList(_("Formats")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -4848,10 +4837,10 @@ var InkAPI = (() => {
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/docs/client-api.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Forms")),
+                        ...this._toNodeList(_("Formats")),
                         import_Document.default.createText(`
     `, false)
                       ]),

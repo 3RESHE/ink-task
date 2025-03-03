@@ -1434,10 +1434,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ...!!(url === "/docs/state-management.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/state-management.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/form/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Elements")),
+                        ...this._toNodeList(_("Form")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -1447,10 +1447,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/docs/state-management.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/form/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Elements")),
+                        ...this._toNodeList(_("Form")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -1458,14 +1458,15 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
   `, false)
                     ] : [],
                     import_Document.default.createText(`
+
   `, false),
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/client-api.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Forms")),
+                        ...this._toNodeList(_("Formats")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -1475,10 +1476,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/docs/client-api.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Forms")),
+                        ...this._toNodeList(_("Formats")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -1521,21 +1522,25 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
                 `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#props` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Props"))
                       ]),
                       import_Document.default.createText(`
                 `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#types` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Types"))
                       ]),
                       import_Document.default.createText(`
                 `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#size` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Size"))
                       ]),
                       import_Document.default.createText(`
                 `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#color` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Color"))
                       ]),
                       import_Document.default.createText(`
@@ -1556,17 +1561,17 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-        `, false),
-                import_Document.default.createElement("nav", { "class": `p-10 bg-t-3` }, [
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
-                  import_Document.default.createText(`
-        `, false)
-                ]),
-                import_Document.default.createText(`
-        `, false),
+      `, false),
                 import_Document.default.createElement("api-docs", {}, [
+                  import_Document.default.createText(`
+        `, false),
+                  import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
+                    import_Document.default.createText(`
+      `, false)
+                  ]),
                   import_Document.default.createText(`
 
 
@@ -2219,7 +2224,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("nav", { "class": `flex` }, [
+                  import_Document.default.createElement("nav", { "class": `flex mb-30` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/components/crumbs.html` }, [

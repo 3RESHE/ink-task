@@ -926,6 +926,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     `, false),
             import_Document.default.createElement("panel-layout", {}, [
               import_Document.default.createText(`
+    
       `, false),
               import_Document.default.createElement("header", {}, [
                 ...[
@@ -990,6 +991,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                 ]
               ]),
               import_Document.default.createText(`
+      
       `, false),
               import_Document.default.createElement("aside", { "left": true }, [
                 ...[
@@ -1434,10 +1436,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ...!!(url === "/docs/state-management.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/state-management.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/form/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Elements")),
+                        ...this._toNodeList(_("Form")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -1447,10 +1449,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/docs/state-management.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/form/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Elements")),
+                        ...this._toNodeList(_("Form")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -1458,14 +1460,15 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
   `, false)
                     ] : [],
                     import_Document.default.createText(`
+
   `, false),
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/client-api.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Forms")),
+                        ...this._toNodeList(_("Formats")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -1475,10 +1478,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/docs/client-api.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Forms")),
+                        ...this._toNodeList(_("Formats")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -1519,30 +1522,36 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#props` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Props"))
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#types` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Types"))
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#customColor` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Custom Color"))
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#rounded` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Rounded"))
                       ]),
                       import_Document.default.createText(`              `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#padding` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Padding"))
                       ]),
                       import_Document.default.createText(`
                       `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#border` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Border Styles"))
                       ]),
                       import_Document.default.createText(`
@@ -1561,287 +1570,297 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-        `, false),
-                import_Document.default.createElement("nav", { "class": `p-10 bg-t-3` }, [
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
-                  import_Document.default.createText(`
-        `, false)
-                ]),
-                import_Document.default.createText(`
-        `, false),
+
+      `, false),
                 import_Document.default.createElement("api-docs", {}, [
                   import_Document.default.createText(`
         `, false),
-                  import_Document.default.createElement("a", { "name": `badge` }, []),
-                  import_Document.default.createText(`
+                  import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
+                    import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
                     import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Badge")),
-                    import_Document.default.createText(`
-          `, false)
+      `, false)
                   ]),
                   import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20 ` }, [
+
+
+`, false),
+                  import_Document.default.createElement("div", {}, [
                     import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
+
+        `, false),
+                    import_Document.default.createElement("a", { "name": `badge` }, []),
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                       import_Document.default.createText(`
+            `, false),
+                      ...this._toNodeList(_("Badge")),
+                      import_Document.default.createText(`
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20 ` }, [
+                      import_Document.default.createText(`
+            `, false),
+                      import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
+                        import_Document.default.createText(`
               import Badge from '@stackpress/ink-ui/element/badge';
             `, false)
+                      ]),
+                      import_Document.default.createText(`
+          `, false)
                     ]),
                     import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
 
         `, false),
-                  import_Document.default.createElement("a", { "name": `props` }, []),
-                  import_Document.default.createText(`
+                    import_Document.default.createElement("a", { "name": `props` }, []),
+                    import_Document.default.createText(`
         `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
+                    import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                      import_Document.default.createText(`
           `, false),
-                    ...this._toNodeList(_("Props")),
-                    import_Document.default.createText(`
+                      ...this._toNodeList(_("Props")),
+                      import_Document.default.createText(`
         `, false)
-                  ]),
-                  import_Document.default.createText(`
-
+                    ]),
+                    import_Document.default.createText(`
         `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
-                    import_Document.default.createText(`
+                    import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
+                      import_Document.default.createText(`
           `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Name"))
-                    ]),
-                    import_Document.default.createText(`
+                      import_Document.default.createElement("table-head", {}, [
+                        ...this._toNodeList(_("Name"))
+                      ]),
+                      import_Document.default.createText(`
           `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Type"))
-                    ]),
-                    import_Document.default.createText(`
+                      import_Document.default.createElement("table-head", {}, [
+                        ...this._toNodeList(_("Type"))
+                      ]),
+                      import_Document.default.createText(`
           `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Required"))
-                    ]),
-                    import_Document.default.createText(`
+                      import_Document.default.createElement("table-head", {}, [
+                        ...this._toNodeList(_("Required"))
+                      ]),
+                      import_Document.default.createText(`
           `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Notes"))
-                    ]),
-                    import_Document.default.createText(`
+                      import_Document.default.createElement("table-head", {}, [
+                        ...this._toNodeList(_("Notes"))
+                      ]),
+                      import_Document.default.createText(`
 
           `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
+                      import_Document.default.createElement("table-row", {}, [
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`solid`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`solid`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`Boolean`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`No`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Solid layout"))
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          ...this._toNodeList(_("Solid layout"))
+                        ]),
+                        import_Document.default.createText(`
           `, false)
-                    ]),
-                    import_Document.default.createText(`
+                      ]),
+                      import_Document.default.createText(`
           `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
+                      import_Document.default.createElement("table-row", {}, [
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`outline`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`outline`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`Boolean`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`No`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Outline layout"))
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          ...this._toNodeList(_("Outline layout"))
+                        ]),
+                        import_Document.default.createText(`
           `, false)
-                    ]),
-                    import_Document.default.createText(`
+                      ]),
+                      import_Document.default.createText(`
           `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
+                      import_Document.default.createElement("table-row", {}, [
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`transparent`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`transparent`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`Boolean`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`No`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Transparent layout"))
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          ...this._toNodeList(_("Transparent layout"))
+                        ]),
+                        import_Document.default.createText(`
           `, false)
-                    ]),
-                    import_Document.default.createText(`
+                      ]),
+                      import_Document.default.createText(`
           `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
+                      import_Document.default.createElement("table-row", {}, [
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`padding`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`padding`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Number`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`Number`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`No`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom padding for the badge. Defaults to 2px 8px."))
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          ...this._toNodeList(_("Custom padding for the badge. Defaults to 2px 8px."))
+                        ]),
+                        import_Document.default.createText(`
           `, false)
-                    ]),
-                    import_Document.default.createText(`
+                      ]),
+                      import_Document.default.createText(`
           `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
+                      import_Document.default.createElement("table-row", {}, [
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`color`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`color`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`String`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`No`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets a custom text color. Accepts CSS-compatible values."))
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          ...this._toNodeList(_("Sets a custom text color. Accepts CSS-compatible values."))
+                        ]),
+                        import_Document.default.createText(`
           `, false)
-                    ]),
-                    import_Document.default.createText(`
+                      ]),
+                      import_Document.default.createText(`
           `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
+                      import_Document.default.createElement("table-row", {}, [
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`curved`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`curved`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`Boolean`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`No`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies a subtle curve to the badge."))
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          ...this._toNodeList(_("Applies a subtle curve to the badge."))
+                        ]),
+                        import_Document.default.createText(`
           `, false)
-                    ]),
-                    import_Document.default.createText(`
+                      ]),
+                      import_Document.default.createText(`
           `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
+                      import_Document.default.createElement("table-row", {}, [
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`rounded`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`rounded`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`Boolean`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`No`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies a rounded style to the badge."))
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          ...this._toNodeList(_("Applies a rounded style to the badge."))
+                        ]),
+                        import_Document.default.createText(`
           `, false)
-                    ]),
-                    import_Document.default.createText(`
+                      ]),
+                      import_Document.default.createText(`
           `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
+                      import_Document.default.createElement("table-row", {}, [
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`pill`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`pill`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`Boolean`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`No`, false)
+                        ]),
+                        import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Makes the badge fully rounded, similar to a pill shape."))
-                      ]),
-                      import_Document.default.createText(`
+                        import_Document.default.createElement("table-col", {}, [
+                          ...this._toNodeList(_("Makes the badge fully rounded, similar to a pill shape."))
+                        ]),
+                        import_Document.default.createText(`
           `, false)
+                      ]),
+                      import_Document.default.createText(`
+
+        `, false)
                     ]),
                     import_Document.default.createText(`
 
@@ -2394,7 +2413,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
 
 
             `, false),
-                  import_Document.default.createElement("nav", { "class": `flex` }, [
+                  import_Document.default.createElement("nav", { "class": `flex mb-30` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/components/alert.html` }, [
@@ -2409,7 +2428,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/components/icon.html` }, [
+                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/components/crumbs.html` }, [
                       import_Document.default.createText(`
               `, false),
                       ...this._toNodeList(_("Crumbs")),

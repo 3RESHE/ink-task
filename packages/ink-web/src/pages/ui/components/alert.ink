@@ -52,21 +52,23 @@
           <nav class="tx-14 tx-lh-32">
             <a class="block tx-t-0" href="#alert">{_('Alert')}</a>
             <nav class="pl-20">
-              <a class="block tx-t-1" href="#props">{_('Props')}</a>
-              <a class="block tx-t-1" href="#types">{_('Types')}</a>
-              <a class="block tx-t-1" href="#customColor">{_('Custom Color')}</a>
-              <a class="block tx-t-1" href="#rounded">{_('Rounded')}</a>
-              <a class="block tx-t-1" href="#padding">{_('Padding')}</a>
-              <a class="block tx-t-1" href="#transparent">{_('Transparent')}</a>
-              <a class="block tx-t-1" href="#outline">{_('Outline ')}</a>
-              <a class="block tx-t-1" href="#combine">{_('Combine')}</a>
+              <a class="block tx-t-1" href="#props">• {_('Props')}</a>
+              <a class="block tx-t-1" href="#types">• {_('Types')}</a>
+              <a class="block tx-t-1" href="#customColor">• {_('Custom Color')}</a>
+              <a class="block tx-t-1" href="#rounded">• {_('Rounded')}</a>
+              <a class="block tx-t-1" href="#padding">• {_('Padding')}</a>
+              <a class="block tx-t-1" href="#transparent">• {_('Transparent')}</a>
+              <a class="block tx-t-1" href="#outline">• {_('Outline ')}</a>
+              <a class="block tx-t-1" href="#combine">• {_('Combine')}</a>
               
             </nav>
           </nav>
         </menu>
       </aside>
       <main>
-        <nav class="p-10 bg-t-3">
+
+        <api-docs>
+                <nav class="p-10 bg-t-3 sticky top-0 z-50">
           <element-crumbs 
             crumbs={crumbs} 
             block 
@@ -76,8 +78,7 @@
             link-primary
             spacing={2}
           />
-        </nav>
-        <api-docs>
+      </nav>
 
 
         <a name="alert"></a>
@@ -85,7 +86,7 @@
             {_('Alert')}
           </h1>
           <ide-app title="Editor" class="py-20 ">
-            <ide-code class="scroll-y-auto" lang="js" trim>
+             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
               import Alert from '@stackpress/ink-ui/element/alert';
             </ide-code>
           </ide-app>
@@ -176,6 +177,8 @@
   </table-row>
 
 </layout-table>
+
+
           <a name="types"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">
             {_('Types')}
@@ -207,7 +210,7 @@
             Are you sure?
           </element-alert>
 
-            <ide-code class="scroll-y-auto" class="mb-15"   trim detab={12}>{`
+             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"    trim detab={12}>{`
             <element-alert warning>
               <element-icon name="exclamation-triangle" />
               Are you sure?
@@ -219,7 +222,7 @@
                 Successfully saved!
               </element-alert>
 
-            <ide-code class="scroll-y-auto" class="mb-15"   trim detab={12}>{`
+             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"    trim detab={12}>{`
             <element-alert success>
               <element-icon name="check-circle" />
               Successfully saved!
@@ -232,7 +235,7 @@
             Could not save
           </element-alert>
  
-                  <ide-code class="scroll-y-auto" class="mb-15"   trim detab={12}>{`
+                   <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"    trim detab={12}>{`
             <element-alert error>
               <element-icon name="exclamation-circle" />
               Could not save
@@ -243,7 +246,7 @@
             I am disabled
           </element-alert>
 
-                    <ide-code class="scroll-y-auto" class="mb-15"   trim detab={12}>{`
+                     <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"    trim detab={12}>{`
             <element-alert muted>
               I am disabled
             </element-alert>
@@ -263,7 +266,7 @@
             Who likes salmon?
           </element-alert>
 
-                    <ide-code class="scroll-y-auto" class="mb-15"   trim detab={12}>{`
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-alert color="salmon">
               <element-icon name="exclamation-circle" />
               Who likes salmon?
@@ -405,7 +408,7 @@
             </element-alert>
           `}</ide-code>
 
-          <nav class="flex">
+          nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/index.html">
               <element-icon name="chevron-left" theme="tx-1" />
               {_('Components')}

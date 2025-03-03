@@ -43,7 +43,9 @@
   <html-head />
   <body class="light bg-t-0 tx-t-1 tx-arial">
     <panel-layout>
+    
       <header><html-header /></header>
+      
       <aside left><html-aside /></aside>
             <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
@@ -53,18 +55,20 @@
           <nav class="tx-14 tx-lh-32">
             <a class="block tx-t-0" href="#badge">{_('Badge')}</a>
             <nav class="pl-20">
-              <a class="block tx-t-1" href="#props">{_('Props')}</a>
-              <a class="block tx-t-1" href="#types">{_('Types')}</a>
-              <a class="block tx-t-1" href="#customColor">{_('Custom Color')}</a>
-              <a class="block tx-t-1" href="#rounded">{_('Rounded')}</a>\
-              <a class="block tx-t-1" href="#padding">{_('Padding')}</a>
-                      <a class="block tx-t-1" href="#border">{_('Border Styles')}</a>
+              <a class="block tx-t-1" href="#props">• {_('Props')}</a>
+              <a class="block tx-t-1" href="#types">• {_('Types')}</a>
+              <a class="block tx-t-1" href="#customColor">• {_('Custom Color')}</a>
+              <a class="block tx-t-1" href="#rounded">• {_('Rounded')}</a>\
+              <a class="block tx-t-1" href="#padding">• {_('Padding')}</a>
+                      <a class="block tx-t-1" href="#border">• {_('Border Styles')}</a>
             </nav>
           </nav>
         </menu>
       </aside>
       <main>
-        <nav class="p-10 bg-t-3">
+
+      <api-docs>
+        <nav class="p-10 bg-t-3 sticky top-0 z-50">
           <element-crumbs 
             crumbs={crumbs} 
             block 
@@ -74,8 +78,11 @@
             link-primary
             spacing={2}
           />
-        </nav>
-        <api-docs>
+      </nav>
+
+
+<div>
+
         <a name="badge"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">
             {_('Badge')}
@@ -90,7 +97,6 @@
         <h2 class="tx-primary tx-upper tx-30 py-20">
           {_('Props')}
         </h2>
-
         <layout-table 
           top
           head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
@@ -153,6 +159,8 @@
           </table-row>
 
         </layout-table>
+
+        </div>
 
 
           <a name="types"></a>
@@ -370,12 +378,12 @@
 
 
 
-            <nav class="flex">
+            nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/alert.html">
               <element-icon name="chevron-left" theme="tx-1" />
               {_('Alerts')}
             </a>
-            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/icon.html">
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/crumbs.html">
               {_('Crumbs')}
               <element-icon name="chevron-right" theme="tx-1" />
             </a>

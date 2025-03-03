@@ -4868,77 +4868,106 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const {
-        top,
-        left,
-        center,
-        fade,
-        smooth = 10
-      } = this.props;
       const handlers = {
-        // Alert maker
+        //alert maker
         make: (type, message) => {
-          const bar = import_Registry18.default.createElement("div", { class: "bar" }).element;
-          const progress = import_Registry18.default.createElement("div", { class: "progress" }, [bar]).element;
-          const icon = import_Registry18.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, {
-            class: "icon",
-            none: ["primary", "secondary", "muted"].includes(type),
-            white: true,
-            name: {
-              info: "info-circle",
-              warning: "exclamation-triangle",
-              error: "times-circle",
-              success: "check-circle"
-            }[type] || "info-circle"
+          const bar = import_Registry18.default.createElement(
+            "div",
+            { "class": "bar" }
+          ).element;
+          const progress = import_Registry18.default.createElement(
+            "div",
+            { "class": "progress" },
+            [bar]
+          ).element;
+          const icon = import_Registry18.default.createComponent(
+            "interface-icon",
+            Icon_33cb84912ffcb000a388,
+            {
+              "class": "icon",
+              none: type === "primary" || type === "secondary" || type === "muted",
+              white: true,
+              name: type === "info" ? "info-circle" : type === "warning" ? "exclamation-triangle" : type === "error" ? "times-circle" : type === "success" ? "check-circle" : "info-circle"
+            }
+          ).element;
+          const close = import_Registry18.default.createComponent(
+            "interface-icon",
+            Icon_33cb84912ffcb000a388,
+            {
+              "class": "close",
+              white: true,
+              name: "times"
+            }
+          ).element;
+          const alert = import_Registry18.default.createComponent(
+            "interface-alert",
+            Alert_ba827f6c1d3753161701,
+            {
+              "class": "alert",
+              warning: type === "warning",
+              error: type === "error",
+              success: type === "success",
+              primary: type === "primary",
+              secondary: type === "secondary",
+              muted: type === "muted",
+              info: type === "info",
+              solid: true,
+              curved: true
+            }
+          ).element;
+          const wrapper = import_Registry18.default.createElement("div", {
+            "class": "message"
           }).element;
-          const close = import_Registry18.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, {
-            class: "close",
-            white: true,
-            name: "times"
-          }).element;
-          const alert = import_Registry18.default.createComponent("interface-alert", Alert_ba827f6c1d3753161701, {
-            class: "alert",
-            [type]: true,
-            // dynamically apply type classes
-            solid: true,
-            curved: true
-          }).element;
-          const wrapper = import_Registry18.default.createElement("div", { class: "message" }).element;
           wrapper.innerHTML = message;
-          alert.append(close, icon, wrapper, progress);
+          alert.appendChild(close);
+          alert.appendChild(icon);
+          alert.appendChild(wrapper);
+          alert.appendChild(progress);
           return { bar, icon, close, progress, alert };
         },
-        // Notify function API
+        //notify function api
         notify: (type, message, timeout = 5e3) => {
-          const { bar, close, progress, alert } = handlers.make(type, message);
-          const root = this.shadowRoot || this;
-          root.appendChild(alert);
+          const {
+            bar,
+            close,
+            progress,
+            alert
+          } = handlers.make(type, message);
+          this.shadowRoot?.appendChild(alert);
           const state = { time: 0, progress: 0 };
-          const remove = () => {
-            if (alert.parentNode) {
-              alert.style.opacity = "0";
-              setTimeout(() => root.removeChild(alert), fade ? 300 : 0);
-            }
-            clearInterval(interval);
-          };
           const interval = setInterval(() => {
             state.time += smooth;
             state.progress = Math.floor(state.time / timeout * 100);
-            alert.style.opacity = String((timeout - state.time) / timeout);
+            alert.style.opacity = String(
+              (timeout - state.time) / timeout
+            );
             bar.style.width = `${state.progress}%`;
             if (state.time >= timeout) {
               remove();
             }
           }, smooth);
+          const remove = () => {
+            this.shadowRoot?.removeChild(alert);
+            clearInterval(interval);
+          };
           close.addEventListener("click", remove);
         }
       };
       this.notify = handlers.notify;
+      const {
+        //position
+        top,
+        left,
+        center,
+        //transition
+        fade,
+        smooth = 10
+      } = this.props;
       const styles = new import_StyleSet13.default();
       this.styles = () => styles.toString();
       styles.add(":host", "position", "fixed");
       styles.add(":host", "pointer-events", "none");
-      styles.add(":host", top ? "top" : "bottom", "20px");
+      top ? styles.add(":host", "top", "20px") : styles.add(":host", "bottom", "20px");
       if (left) {
         styles.add(":host", "left", "20px");
       } else if (center) {
@@ -4971,13 +5000,7 @@ var InkAPI = (() => {
       styles.add(".bar", "height", "100%");
       styles.add(".bar", "background-color", "var(--muted)");
       styles.add(".message", "display", "inline-block");
-      if (fade) {
-        styles.add(".alert", "transition", "opacity 0.3s ease-in-out");
-      }
-      return () => [
-        import_Registry18.default.createText(`
-`, false)
-      ];
+      return () => [];
     }
   };
 
@@ -5726,17 +5749,17 @@ var InkAPI = (() => {
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-        `, false),
-                import_Document.default.createElement("nav", { "class": `p-10 bg-t-3` }, [
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
-                  import_Document.default.createText(`
-        `, false)
-                ]),
-                import_Document.default.createText(`
-        `, false),
+      `, false),
                 import_Document.default.createElement("api-docs", {}, [
+                  import_Document.default.createText(`
+        `, false),
+                  import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
+                    import_Document.default.createText(`
+      `, false)
+                  ]),
                   import_Document.default.createText(`
 
 
@@ -6247,16 +6270,16 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("nav", { "class": `flex` }, [
+                  import_Document.default.createElement("nav", { "class": `flex mb-30` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/components/icons.html` }, [
+                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/components/loader.html` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Icon")),
+                      ...this._toNodeList(_("Loaders")),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6265,7 +6288,7 @@ var InkAPI = (() => {
                     import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/components/pager.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Pagination")),
+                      ...this._toNodeList(_("Pagers")),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),

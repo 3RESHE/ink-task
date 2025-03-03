@@ -72,7 +72,8 @@
 
 
       <main>
-        <nav class="p-10 bg-t-3">
+      <api-docs>
+        <nav class="p-10 bg-t-3 sticky top-0 z-50">
           <element-crumbs 
             crumbs={crumbs} 
             block 
@@ -82,8 +83,7 @@
             link-primary
             spacing={2}
           />
-        </nav>
-        <api-docs>
+      </nav>
 
 
         
@@ -461,13 +461,13 @@
 `}</ide-code>
 
 
-            <nav class="flex">
-            <a class="tx-primary py-40" href="/ink/ui/components/tab.html">
+            nav class="flex">
+            <a class="tx-primary py-40" href="/ink/ui/components/table.html">
               <element-icon name="chevron-left" theme="tx-1" />
-              {_('Tab')}
+              {_('Tables')}
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/alert.html">
-              {_('Alert')}
+              {_('Alerts')}
               <element-icon name="chevron-right" theme="tx-1" />
             </a>
           </nav>

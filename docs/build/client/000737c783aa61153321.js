@@ -5431,10 +5431,10 @@ var InkAPI = (() => {
                     ...!!(url === "/docs/state-management.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/state-management.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/form/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Elements")),
+                        ...this._toNodeList(_("Form")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -5444,10 +5444,10 @@ var InkAPI = (() => {
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/docs/state-management.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/form/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Elements")),
+                        ...this._toNodeList(_("Form")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -5455,14 +5455,15 @@ var InkAPI = (() => {
   `, false)
                     ] : [],
                     import_Document.default.createText(`
+
   `, false),
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/client-api.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Forms")),
+                        ...this._toNodeList(_("Formats")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -5472,10 +5473,10 @@ var InkAPI = (() => {
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/docs/client-api.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Forms")),
+                        ...this._toNodeList(_("Formats")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -5488,7 +5489,7 @@ var InkAPI = (() => {
                 ]
               ]),
               import_Document.default.createText(`
-            `, false),
+      `, false),
               import_Document.default.createElement("aside", { "right": true }, [
                 import_Document.default.createText(`
         `, false),
@@ -5517,12 +5518,44 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#props` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Props"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#examples` }, [
-                        ...this._toNodeList(_("Examples"))
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic-usage` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Basic Usage"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#link-styling` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Link Styling"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#separator-variants` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Separator Variants"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#icon-styling` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Icon Styling"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#size-variants` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Size Variants"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#spacing-and-customizations` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Spacing & Customization"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5537,21 +5570,23 @@ var InkAPI = (() => {
       `, false)
               ]),
               import_Document.default.createText(`
+
+
+      
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-        `, false),
-                import_Document.default.createElement("nav", { "class": `p-10 bg-t-3` }, [
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
-                  import_Document.default.createText(`
-        `, false)
-                ]),
-                import_Document.default.createText(`
-
-        `, false),
+      `, false),
                 import_Document.default.createElement("api-docs", {}, [
+                  import_Document.default.createText(`
+        `, false),
+                  import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
+                    import_Document.default.createText(`
+      `, false)
+                  ]),
                   import_Document.default.createText(`
         `, false),
                   import_Document.default.createElement("a", { "name": `breadcrumbs` }, []),
@@ -5742,32 +5777,6 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`size`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Size for icons and separators"))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`xs, sm, md, lg, xl, xl2, xl3, xl4, xl5`, false)
                       ]),
                       import_Document.default.createText(`
@@ -5872,236 +5881,107 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
 
-
-          `, false),
-                  import_Document.default.createElement("a", { "name": `examples` }, []),
+ `, false),
+                  import_Document.default.createElement("a", { "name": `basic-usage` }, []),
                   import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Examples")),
-                    import_Document.default.createText(`
-          `, false)
+<!-- Basic Usage -->
+`, false),
+                  import_Document.default.createElement("h3", { "class": `tx-24 mt-20` }, [
+                    import_Document.default.createText(`Basic Usage`, false)
                   ]),
                   import_Document.default.createText(`
-
-
-          
-
-
-              `, false),
+`, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-           Responsive breadcrumb layout inside a container:
-          `, false)
+                    import_Document.default.createText(`Responsive breadcrumb layout inside a container:`, false)
                   ]),
                   import_Document.default.createText(`
-
-
-          `, false),
+`, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-            `, false),
+  `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center p-10 rounded-2xl shadow-md` }, [
                       import_Document.default.createText(`
-              `, false),
+    `, false),
                       import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "underline": true, "icon-muted": true, "link-primary": true, "spacing": 2 }),
                       import_Document.default.createText(`
-            `, false)
+  `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1 hover-bg-t-2 rounded-b-2xl transition-all`, "href": `/ink/ui/components/crumbs.html` }, [
-                      import_Document.default.createText(`
-              Crumbs
-            `, false)
-                    ]),
+`, false)
+                  ]),
+                  import_Document.default.createText(`
+  `, false),
+                  import_Document.default.createElement("ide-code", { "numbers": true, "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
+                    ...this._toNodeList(`<script>
+        const crumbs = [
+          { icon: 'home', label: 'Home', href: '/ink/index.html' },
+          { icon: 'book', label: 'Docs', href: '/ink/docs/index.html' },
+          { icon: 'icons', label: 'UI', href: '/ink/ui/index.html' },
+          { icon: 'icons', label: 'Components', href: '/ink/ui/index.html' },
+          { label: 'Crumbs' }
+        ];
+  <\/script>
+
+  <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+    <div class="bg-t-3 h-120 flex flex-center p-10 rounded-2xl shadow-md">
+      <element-crumbs 
+        crumbs={crumbs} 
+        block 
+        bold 
+        white 
+        underline
+        icon-muted
+        link-primary
+        spacing={2}
+      />
+    </div>
+    <a 
+      class="block tx-center tx-primary p-10 b-solid b-t-3 b-1 hover-bg-t-2 rounded-b-2xl transition-all" 
+      href="/ink/ui/components/crumbs.html"
+    >
+      Crumbs
+    </a>
+  </div>`),
                     import_Document.default.createText(`
-          `, false)
+        `, false)
                   ]),
                   import_Document.default.createText(`
 
+          <!-- Link Styling -->
+           `, false),
+                  import_Document.default.createElement("a", { "name": `link-styling` }, []),
+                  import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "numbers": true, "detab": 4, "trim": true }, [
-                    ...this._toNodeList(`
-          <script>
-              const toggle = () => {
-              document.querySelector('panel-layout').toggle('left');
-            };
-            const crumbs = [
-              { icon: 'home', label: 'Home', href: '/ink/index.html' },
-              { icon: 'book', label: 'Docs', href: '/ink/docs/index.html' },
-              { icon: 'icons', label: 'UI', href: '/ink/ui/index.html' },
-              { icon: 'icons', label: 'Components', href: '/ink/ui/index.html' },
-              { label: 'Crumbs' }
-            ];
-        <\/script>
-
-            <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-              <div class="bg-t-3 h-120 flex flex-center p-10 rounded-2xl shadow-md">
-                <element-crumbs 
-                  crumbs={crumbs} 
-                  block 
-                  bold 
-                  white 
-                  underline
-                  icon-muted
-                  link-primary
-                  spacing={2}
-                />
-              </div>
-              <a 
-                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1 hover-bg-t-2 rounded-b-2xl transition-all" 
-                href="/ink/ui/components/crumbs.html"
-              >
-                Crumbs
-              </a>
-            </div>
-          `)
+                  import_Document.default.createElement("h3", { "class": `tx-24 mt-20` }, [
+                    import_Document.default.createText(`Link Styling`, false)
                   ]),
                   import_Document.default.createText(`
-
-
           `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10 mt-10` }, [
-                    import_Document.default.createText(`
-            Example with colored link:
-          `, false)
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Example with colored link:`, false)
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "link-warning": true, "block": true }),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
-                    ...this._toNodeList(`
-          <element-crumbs crumbs={crumbs} link-warning block />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10 mt-10` }, [
-                    import_Document.default.createText(`
-              Example with muted separator:
           `, false)
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-              `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-          `, false),
-                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "link-primary": true, "sep-muted": true }),
-                      import_Document.default.createText(`
-              `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
-                    ...this._toNodeList(`
-          <element-crumbs crumbs={crumbs} sep-muted  />
-          `)
+                    ...this._toNodeList(`<element-crumbs crumbs={crumbs} link-warning block />`)
                   ]),
                   import_Document.default.createText(`
 
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10 mt-10` }, [
-                    import_Document.default.createText(`
-            Example with muted icons:
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-              `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-             `, false),
-                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "link-primary": true, "icon-muted": true, "block": true }),
-                      import_Document.default.createText(`
-              `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
-                    ...this._toNodeList(`
-            <element-crumbs crumbs={crumbs} icon-muted block />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10 mt-10` }, [
-                    import_Document.default.createText(`
-            Example with colored icons:
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-              `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-             `, false),
-                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "link-primary": true, "icon-success": true, "block": true }),
-                      import_Document.default.createText(`
-              `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
-                    ...this._toNodeList(`
-            <element-crumbs crumbs={crumbs} icon-success block />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10 mt-10` }, [
-                    import_Document.default.createText(`
-            Example with different sizes:
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
 
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
@@ -6110,7 +5990,7 @@ var InkAPI = (() => {
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "link-primary": true, "size": `lg`, "block": true }),
+                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "link-success": true, "block": true }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6118,20 +5998,186 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
-                    ...this._toNodeList(`
-            <element-crumbs crumbs={crumbs} size="lg" block />
-          `)
+                    ...this._toNodeList(`<element-crumbs crumbs={crumbs} link-success block />`)
+                  ]),
+                  import_Document.default.createText(`
+
+          <!-- Separator Variants -->
+           `, false),
+                  import_Document.default.createElement("a", { "name": `separator-variants` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h3", { "class": `tx-24 mt-20` }, [
+                    import_Document.default.createText(`Separator Variants`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Example with muted separator:`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "sep-muted": true, "link-primary": true }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
+                    ...this._toNodeList(`<element-crumbs crumbs={crumbs} sep-muted link-primary />`)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Example with colored separator:`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "sep-success": true, "link-primary": true }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
+                    ...this._toNodeList(`<element-crumbs crumbs={crumbs} sep-success link-primary />`)
+                  ]),
+                  import_Document.default.createText(`
+
+                    `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "sep-warning": true, "link-primary": true }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
+                    ...this._toNodeList(`<element-crumbs crumbs={crumbs} sep-warning link-primary />`)
+                  ]),
+                  import_Document.default.createText(`
+
+          <!-- Icon Styling -->
+           `, false),
+                  import_Document.default.createElement("a", { "name": `icon-styling` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h3", { "class": `tx-24 mt-20` }, [
+                    import_Document.default.createText(`Icon Styling`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Example with muted icons:`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "icon-muted": true, "link-primary": true, "block": true }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
+                    ...this._toNodeList(`<element-crumbs crumbs={crumbs} icon-muted link-primary block />`)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10 mt-10` }, [
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Example with colored icons:`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-            Example with spacing:
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "icon-success": true, "link-primary": true, "block": true }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
           `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
+                    ...this._toNodeList(`<element-crumbs crumbs={crumbs} icon-success link-primary block />`)
+                  ]),
+                  import_Document.default.createText(`
+                    `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "icon-warning": true, "link-primary": true, "block": true }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
+                    ...this._toNodeList(`<element-crumbs crumbs={crumbs} icon-warning link-primary block />`)
+                  ]),
+                  import_Document.default.createText(`
+
+          <!-- Size Variants -->
+           `, false),
+                  import_Document.default.createElement("a", { "name": `size-variants` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h3", { "class": `tx-24 mt-20` }, [
+                    import_Document.default.createText(`Size Variants`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Example with different sizes:`, false)
                   ]),
                   import_Document.default.createText(`
 
@@ -6142,7 +6188,7 @@ var InkAPI = (() => {
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "link-primary": true, "spacing": 5, "block": true }),
+                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "link-primary": true, "block": true, "lg": true }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6150,20 +6196,65 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
-                    ...this._toNodeList(`
-            <element-crumbs crumbs={crumbs} spacing={5} block />
-          `)
+                    ...this._toNodeList(`<element-crumbs crumbs={crumbs} link-primary block lg/>`)
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10 mt-10` }, [
+                    `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-            Example with custom colors:
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "link-primary": true, "block": true, "xs": true }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
           `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
+                    ...this._toNodeList(`<element-crumbs crumbs={crumbs} link-primary block xs/>`)
+                  ]),
+                  import_Document.default.createText(`
+
+          <!-- Spacing & Customization -->
+           `, false),
+                  import_Document.default.createElement("a", { "name": `spacing-and-customization` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h3", { "class": `tx-24 mt-20` }, [
+                    import_Document.default.createText(`Spacing & Customization`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Example with spacing:`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "spacing": 5, "link-primary": true, "block": true }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
+                    ...this._toNodeList(`<element-crumbs crumbs={crumbs} spacing={5} link-primary block />`)
                   ]),
                   import_Document.default.createText(`
 
@@ -6174,7 +6265,7 @@ var InkAPI = (() => {
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "link-primary": true, "color": `white`, "block": true }),
+                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "spacing": 2, "link-primary": true, "block": true }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6182,23 +6273,43 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
-                    ...this._toNodeList(`
-            <element-crumbs crumbs={crumbs} color="white" block />
-          `)
+                    ...this._toNodeList(`<element-crumbs crumbs={crumbs} spacing={2} link-primary block />`)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10 mt-10` }, [
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Example with custom colors:`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-            Example with link styling:
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "color": `white`, "link-primary": true, "block": true }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
+                    ...this._toNodeList(`<element-crumbs crumbs={crumbs} color="white" link-primary block />`)
+                  ]),
+                  import_Document.default.createText(`
 
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Example with link styling:`, false)
+                  ]),
+                  import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
@@ -6214,16 +6325,19 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true }, [
                     ...this._toNodeList(`
-            <element-crumbs crumbs={crumbs} link={{color: 'salmon' }} block />
-          `)
+          <element-crumbs crumbs={crumbs} link={{color: 'salmon'}} block />`),
+                    import_Document.default.createText(`
+          `, false)
                   ]),
                   import_Document.default.createText(`
+
+
+          
           `, false),
-                  import_Document.default.createElement("nav", { "class": `flex` }, [
+                  import_Document.default.createElement("nav", { "class": `flex mb-30` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/components/badge.html` }, [

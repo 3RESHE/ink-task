@@ -4425,7 +4425,7 @@ var InkAPI = (() => {
           close.addEventListener("click", remove);
         }
       };
-      this.notify = handlers.notify.bind(this);
+      this.notify = handlers.notify;
       const {
         //position
         top,

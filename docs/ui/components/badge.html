@@ -27,6 +27,7 @@
 </head>
   <body class="light bg-t-0 tx-t-1 tx-arial">
     <panel-layout>
+    
       <header><menu class="flex flex-center-y px-20 py-15 m-0 bg-t-1">
   
     <i class="fas fa-fw fa-bars cursor-pointer py-5 pr-10 none md-inline-block tx-t-1" ></i>
@@ -42,6 +43,7 @@
     </a>
   </nav>
 </menu></header>
+      
       <aside left><header class="flex flex-center-y bg-t-2 py-15 pr-5 pl-10">
   <a href="/ink">
     <img class="h-26 mr-10" src="/ink/ink-icon.png" alt="Ink Logo" />
@@ -136,13 +138,14 @@
   
   
   
-    <a class="block tx-info py-10 pl-10" href="/ink/docs/state-management.html">
-      Elements
+    <a class="block tx-info py-10 pl-10" href="/ink/ui/form/index.html">
+      Form
     </a>
   
+
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/docs/client-api.html">
-      Forms
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+      Formats
     </a>
   
 </nav></aside>
@@ -154,20 +157,25 @@
           <nav class="tx-14 tx-lh-32">
             <a class="block tx-t-0" href="#badge">Badge</a>
             <nav class="pl-20">
-              <a class="block tx-t-1" href="#props">Props</a>
-              <a class="block tx-t-1" href="#types">Types</a>
-              <a class="block tx-t-1" href="#customColor">Custom Color</a>
-              <a class="block tx-t-1" href="#rounded">Rounded</a>              <a class="block tx-t-1" href="#padding">Padding</a>
-                      <a class="block tx-t-1" href="#border">Border Styles</a>
+              <a class="block tx-t-1" href="#props">• Props</a>
+              <a class="block tx-t-1" href="#types">• Types</a>
+              <a class="block tx-t-1" href="#customColor">• Custom Color</a>
+              <a class="block tx-t-1" href="#rounded">• Rounded</a>              <a class="block tx-t-1" href="#padding">• Padding</a>
+                      <a class="block tx-t-1" href="#border">• Border Styles</a>
             </nav>
           </nav>
         </menu>
       </aside>
       <main>
-        <nav class="p-10 bg-t-3">
+
+      <api-docs>
+        <nav class="p-10 bg-t-3 sticky top-0 z-50">
           <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
-        </nav>
-        <api-docs>
+      </nav>
+
+
+<div>
+
         <a name="badge"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">
             Badge
@@ -182,7 +190,6 @@
         <h2 class="tx-primary tx-upper tx-30 py-20">
           Props
         </h2>
-
         <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
           <table-head>Name</table-head>
           <table-head>Type</table-head>
@@ -239,6 +246,8 @@
           </table-row>
 
         </layout-table>
+
+        </div>
 
 
           <a name="types"></a>
@@ -456,12 +465,12 @@
 
 
 
-            <nav class="flex">
+            <nav class="flex mb-30">
             <a class="tx-primary py-40" href="/ink/ui/components/alert.html">
               <element-icon name="chevron-left" theme="tx-1"></element-icon>
               Alerts
             </a>
-            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/icon.html">
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/crumbs.html">
               Crumbs
               <element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>

@@ -17,8 +17,6 @@
 <link rel="import" type="component" href="@stackpress/ink-ui/element/progress.ink" name="element-progress" />
 
 
-
-
 <style>
   @ink theme;
   @ink reset;
@@ -65,7 +63,6 @@
               <a class="block tx-t-1" href="#CustomRangeAndPageSelection">{_('Custom Range and Page Selection')}</a>
               <a class="block tx-t-1" href="#CustomControlsAndStyles">{_('Custom Controls and Styles')}</a>
               <a class="block tx-t-1" href="#PaginationWithNoForwardOrRewind">{_('Pagination with No Forward or Rewind')}</a>
-              
             </nav>
           </nav>
         </menu>
@@ -74,7 +71,8 @@
 
 
       <main>
-        <nav class="p-10 bg-t-3">
+      <api-docs>
+        <nav class="p-10 bg-t-3 sticky top-0 z-50">
           <element-crumbs 
             crumbs={crumbs} 
             block 
@@ -84,8 +82,7 @@
             link-primary
             spacing={2}
           />
-        </nav>
-        <api-docs>
+      </nav>
 
 
         
@@ -218,13 +215,13 @@
 
 
 
-            <nav class="flex">
+            nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/panel.html">
               <element-icon name="chevron-left" theme="tx-1" />
               {_('Panels')}
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/tab.html">
-              {_('Tab')}
+              {_('Tabs')}
               <element-icon name="chevron-right" theme="tx-1" />
             </a>
           </nav>

@@ -5459,7 +5459,7 @@ var InkAPI = (() => {
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/client-api.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -5472,7 +5472,7 @@ var InkAPI = (() => {
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/docs/client-api.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -5516,41 +5516,49 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#props` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Props"))
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#types` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Types"))
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#customColor` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Custom Color"))
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#rounded` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Rounded"))
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#padding` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Padding"))
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#transparent` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Transparent"))
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#outline` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Outline "))
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#combine` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Combine"))
                       ]),
                       import_Document.default.createText(`
@@ -5570,17 +5578,18 @@ var InkAPI = (() => {
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-        `, false),
-                import_Document.default.createElement("nav", { "class": `p-10 bg-t-3` }, [
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
-                  import_Document.default.createText(`
-        `, false)
-                ]),
-                import_Document.default.createText(`
+
         `, false),
                 import_Document.default.createElement("api-docs", {}, [
+                  import_Document.default.createText(`
+                `, false),
+                  import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
+                    import_Document.default.createText(`
+      `, false)
+                  ]),
                   import_Document.default.createText(`
 
 
@@ -5599,8 +5608,8 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20 ` }, [
                     import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
+             `, false),
+                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
               import Alert from '@stackpress/ink-ui/element/alert';
             `, false)
@@ -5914,6 +5923,8 @@ var InkAPI = (() => {
 `, false)
                   ]),
                   import_Document.default.createText(`
+
+
           `, false),
                   import_Document.default.createElement("a", { "name": `types` }, []),
                   import_Document.default.createText(`
@@ -5993,8 +6004,8 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-15`, "trim": true, "detab": 12 }, [
+             `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-alert warning>
               <element-icon name="exclamation-triangle" />
@@ -6015,8 +6026,8 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-15`, "trim": true, "detab": 12 }, [
+             `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-alert success>
               <element-icon name="check-circle" />
@@ -6038,8 +6049,8 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
  
-                  `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-15`, "trim": true, "detab": 12 }, [
+                   `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-alert error>
               <element-icon name="exclamation-circle" />
@@ -6057,8 +6068,8 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-                    `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-15`, "trim": true, "detab": 12 }, [
+                     `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-alert muted>
               I am disabled
@@ -6099,8 +6110,8 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-                    `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "class": `mb-15`, "trim": true, "detab": 12 }, [
+            `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-alert color="salmon">
               <element-icon name="exclamation-circle" />
@@ -6412,7 +6423,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("nav", { "class": `flex` }, [
+                  import_Document.default.createElement("nav", { "class": `flex mb-30` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/index.html` }, [

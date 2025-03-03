@@ -57,10 +57,10 @@
             <nav class="tx-14 tx-lh-32">
             <a class="block tx-t-0" href="# Notify">{_(' Notify')}</a>
             <nav class="pl-20">
-                <a class="block tx-t-1" href="#props">{_('Props')}</a>
-                <a class="block tx-t-1" href="#types">{_('Types')}</a>
-                <a class="block tx-t-1" href="#size">{_('Size')}</a>
-                <a class="block tx-t-1" href="#color">{_('Color')}</a>
+                <a class="block tx-t-1" href="#props">• {_('Props')}</a>
+                <a class="block tx-t-1" href="#types">• {_('Types')}</a>
+                <a class="block tx-t-1" href="#size">• {_('Size')}</a>
+                <a class="block tx-t-1" href="#color">• {_('Color')}</a>
             </nav>
             </nav>
         </menu>
@@ -68,7 +68,8 @@
 
 
       <main>
-        <nav class="p-10 bg-t-3">
+      <api-docs>
+        <nav class="p-10 bg-t-3 sticky top-0 z-50">
           <element-crumbs 
             crumbs={crumbs} 
             block 
@@ -78,11 +79,7 @@
             link-primary
             spacing={2}
           />
-        </nav>
-        <api-docs>
-
-
-        
+      </nav
         <a name=" Notify"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">
             {_(' Notify')}
@@ -256,13 +253,13 @@
             <element-notify type="info" message="Custom timeout notification!" timeout="8000"></element-notify>
             `}</ide-code>
 
-            <nav class="flex">
-            <a class="tx-primary py-40" href="/ink/ui/components/icons.html">
+            nav class="flex">
+            <a class="tx-primary py-40" href="/ink/ui/components/loader.html">
               <element-icon name="chevron-left" theme="tx-1" />
-              {_('Icon')}
+              {_('Loaders')}
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/pager.html">
-              {_('Pagination')}
+              {_('Pagers')}
               <element-icon name="chevron-right" theme="tx-1" />
             </a>
           </nav>
