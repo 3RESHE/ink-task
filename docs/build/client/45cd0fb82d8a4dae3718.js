@@ -6423,7 +6423,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("nav", { "class": `flex mb-30` }, [
+                  import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/index.html` }, [
