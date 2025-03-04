@@ -807,7 +807,7 @@
 
 
 
-            nav class="flex">
+            <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/tab.html">
               <element-icon name="chevron-left" theme="tx-1" />
               {_('Tabs')}

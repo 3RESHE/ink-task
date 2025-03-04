@@ -320,7 +320,7 @@
         <element-icon name="star" color="#facc15"></element-icon>
         `}</ide-code>
 
-            nav class="flex">
+            <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/crumbs.html">
               <element-icon name="chevron-left" theme="tx-1" />
               {_('Crumbs')}
