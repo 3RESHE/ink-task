@@ -353,7 +353,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button primary>Primary</form-button>
 `}</ide-code>
 
@@ -363,7 +363,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button secondary>Secondary</form-button> 
 `}</ide-code>
 
@@ -373,7 +373,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button success>Success</form-button> 
 `}</ide-code>
 
@@ -383,7 +383,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button warning>Warning</form-button> 
 `}</ide-code>
 
@@ -403,7 +403,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button muted>Muted</form-button> 
 `}</ide-code>
 
@@ -421,7 +421,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button color="salmon">Salmon</form-button>
 `}</ide-code>
 
@@ -431,7 +431,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button color="steelblue">Steel Blue</form-button>
 `}</ide-code>
 
@@ -441,7 +441,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button color="#4CAF50">Custom Green</form-button>
 `}</ide-code>
 
@@ -468,7 +468,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button xs primary>Extra Small</form-button>
 `}</ide-code>
 
@@ -478,7 +478,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button sm success>Small</form-button>
 `}</ide-code>
 
@@ -488,7 +488,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button md primary>Medium</form-button>
 `}</ide-code>
 
@@ -498,7 +498,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button lg warning>Large</form-button>
 `}</ide-code>
 
@@ -508,7 +508,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button xl error>Extra Large</form-button>
 `}</ide-code>
 
@@ -518,7 +518,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button xl2 secondary>2XL</form-button>
 `}</ide-code>
 
@@ -528,7 +528,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button xl3 muted>3XL</form-button>
 `}</ide-code>
 
@@ -538,7 +538,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button xl4 primary>4XL</form-button>
 `}</ide-code>
 
@@ -548,7 +548,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button xl5 secondary>5XL</form-button>
 `}</ide-code>
 
@@ -570,7 +570,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button primary curved>Curved</form-button>
 `}</ide-code>
 
@@ -580,7 +580,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button secondary rounded>Rounded</form-button>
 `}</ide-code>
 
@@ -590,7 +590,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button success pill>Pill</form-button>
 `}</ide-code>
 
@@ -607,7 +607,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button outline primary>Primary Outline</form-button>
 `}</ide-code>
 
@@ -617,7 +617,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button outline warning>Warning Outline</form-button>
 `}</ide-code>
 
@@ -627,7 +627,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button outline error>Error Outline</form-button>
 `}</ide-code>
 
@@ -644,7 +644,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button transparent info>Transparent Info</form-button>
 `}</ide-code>
 
@@ -654,7 +654,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button transparent success>Transparent Success</form-button>
 `}</ide-code>
 
@@ -671,7 +671,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button full primary>Full Width</form-button>
 `}</ide-code>
 
@@ -688,7 +688,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button outline rounded full success>Success Rounded Outline</form-button>
 `}</ide-code>
 
@@ -698,7 +698,7 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button transparent curved primary>Curved Transparent</form-button>
 `}</ide-code>
 
@@ -708,10 +708,47 @@
   </div>
 </div>
 
-<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white">{`
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
 <form-button outline pill warning>Pill Outline Warning</form-button>
 `}</ide-code>
 
+
+<a name="href"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">{_('Href')}</h2>
+
+<div class="mb-10">
+  Buttons can act as links using the <code>href</code> attribute.
+</div>
+
+<div class="basis-third-10 lg-basis-half-10 md-basis-full">
+  <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+    <form-button class="mr-5" md primary curved solid href="https://example.com" target="_blank">Visit Example</form-button>
+  </div>
+</div>
+
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
+<form-button class="mr-5" md primary curved solid href="https://example.com" target="_blank">Visit Example</form-button>
+`}</ide-code>
+
+<div class="basis-third-10 lg-basis-half-10 md-basis-full">
+  <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+    <form-button class="mr-5" md success rounded transparent href="https://stackpress.io">Go to StackPress</form-button>
+  </div>
+</div>
+
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
+<form-button class="mr-5" md success rounded transparent href="https://stackpress.io">Go to StackPress</form-button>
+`}</ide-code>
+
+<div class="basis-third-10 lg-basis-half-10 md-basis-full">
+  <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+    <form-button class="mr-5" md warning rounded href="https://github.com" target="_blank">GitHub</form-button>
+  </div>
+</div>
+
+<ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
+<form-button class="mr-5" md warning rounded href="https://github.com" target="_blank">GitHub</form-button>
+`}</ide-code>
 
 
 
