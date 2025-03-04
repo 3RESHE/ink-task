@@ -1513,7 +1513,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `# Loaders` }, [
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Loaders` }, [
                       ...this._toNodeList(_(" Loaders"))
                     ]),
                     import_Document.default.createText(`
@@ -1527,21 +1527,33 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ]),
                       import_Document.default.createText(`
                 `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#types` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#Types` }, [
                         import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Types"))
                       ]),
                       import_Document.default.createText(`
                 `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#size` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomSize` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Size"))
+                        ...this._toNodeList(_("Custom Size"))
                       ]),
                       import_Document.default.createText(`
                 `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#color` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomSpeed` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Color"))
+                        ...this._toNodeList(_("Custom Speed"))
+                      ]),
+                      import_Document.default.createText(`
+                `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#SliceEffect` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Slice Effect"))
+                      ]),
+                      import_Document.default.createText(`
+                `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomThickness&BorderStyles` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Custom Thickness & Border Styles"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1577,7 +1589,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
 
         
         `, false),
-                  import_Document.default.createElement("a", { "name": ` Loaders` }, []),
+                  import_Document.default.createElement("a", { "name": `Loaders` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
@@ -1832,7 +1844,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
 
-    
+      `, false),
+                  import_Document.default.createElement("a", { "name": `Types` }, []),
+                  import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
@@ -1937,7 +1951,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
           `)
                   ]),
                   import_Document.default.createText(`
-
+            `, false),
+                  import_Document.default.createElement("a", { "name": `CustomSize` }, []),
+                  import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
@@ -1983,7 +1999,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
           `)
                   ]),
                   import_Document.default.createText(`
-
+            `, false),
+                  import_Document.default.createElement("a", { "name": `CustomSpeed` }, []),
+                  import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
@@ -2029,7 +2047,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
           `)
                   ]),
                   import_Document.default.createText(`
-
+            `, false),
+                  import_Document.default.createElement("a", { "name": `SliceEffect` }, []),
+                  import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
@@ -2076,6 +2096,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
+
+              `, false),
+                  import_Document.default.createElement("a", { "name": `CustomThickness&BorderStyles` }, []),
+                  import_Document.default.createText(`
             `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`

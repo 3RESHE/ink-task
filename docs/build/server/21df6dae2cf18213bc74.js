@@ -1522,21 +1522,25 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
                 `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#props` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Props"))
                       ]),
                       import_Document.default.createText(`
                 `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#types` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Types"))
                       ]),
                       import_Document.default.createText(`
                 `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#size` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Size"))
                       ]),
                       import_Document.default.createText(`
                 `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#color` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Color"))
                       ]),
                       import_Document.default.createText(`
@@ -1569,11 +1573,8 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
       `, false)
                   ]),
                   import_Document.default.createText(`
-
-
-        
         `, false),
-                  import_Document.default.createElement("a", { "name": ` Notify` }, []),
+                  import_Document.default.createElement("a", { "name": `Notify` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
@@ -1590,7 +1591,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Badge from '@stackpress/ink-ui/element/notify';
+              import Notify from '@stackpress/ink-ui/element/notify';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -2078,7 +2079,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("nav", { "class": `flex mb-30` }, [
+                  import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/components/loader.html` }, [

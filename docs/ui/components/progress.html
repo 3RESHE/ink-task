@@ -155,13 +155,14 @@
             On this page
           </h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#pager#">Progress</a>
+            <a class="block tx-t-0" href="#pager">Progress</a>
             <nav class="pl-20">
-              <a class="block tx-t-1" href="#props">Props</a>
-              <a class="block tx-t-1" href="#PaginationExample">Pagination Example</a>
-              <a class="block tx-t-1" href="#CustomRangeAndPageSelection">Custom Range and Page Selection</a>
-              <a class="block tx-t-1" href="#CustomControlsAndStyles">Custom Controls and Styles</a>
-              <a class="block tx-t-1" href="#PaginationWithNoForwardOrRewind">Pagination with No Forward or Rewind</a>
+              <a class="block tx-t-1" href="#props">• Props</a>
+              <a class="block tx-t-1" href="#BasicProgressBar">• Basic Progress Bar</a>
+              <a class="block tx-t-1" href="#ProgressBarColors">• Progress Bar Colors</a>
+              <a class="block tx-t-1" href="#Full-WidthProgressBar">• Full-Width Progress Bar</a>
+              <a class="block tx-t-1" href="#StatusIndicators">• Status Indicators</a>
+
             </nav>
           </nav>
         </menu>
@@ -183,7 +184,7 @@
           </h1>
           <ide-app title="Editor" class="py-20 ">
             <ide-code class="scroll-y-auto" lang="js" trim>
-              import Badge from '@stackpress/ink-ui/element/progress';
+              import Progress from '@stackpress/ink-ui/element/progress';
             </ide-code>
           </ide-app>
 
@@ -220,93 +221,116 @@
             </table-row>
 
             <table-row>
+                <table-col>info</table-col>
+                <table-col>Boolean</table-col>
+                <table-col>No</table-col>
+                <table-col>Applies the "info" color style to the progress bar.</table-col>
+            </table-row>
+
+            <table-row>
+                <table-col>success</table-col>
+                <table-col>Boolean</table-col>
+                <table-col>No</table-col>
+                <table-col>Applies the "success" color style to the progress bar.</table-col>
+            </table-row>
+
+            <table-row>
+                <table-col>warning</table-col>
+                <table-col>Boolean</table-col>
+                <table-col>No</table-col>
+                <table-col>Applies the "warning" color style to the progress bar.</table-col>
+            </table-row>
+
+            <table-row>
+                <table-col>error</table-col>
+                <table-col>Boolean</table-col>
+                <table-col>No</table-col>
+                <table-col>Applies the "error" color style to the progress bar.</table-col>
+            </table-row>
+
+            <table-row>
                 <table-col>children</table-col>
                 <table-col>Slot</table-col>
                 <table-col>No</table-col>
                 <table-col>Allows custom label text to be displayed within the progress bar.</table-col>
             </table-row>
-            </layout-table>
-
-
-                <h2 class="tx-primary tx-upper tx-30 py-20">
-                Progress Bar Examples
-                </h2>
-
-        
-                <div class="mb-10">
-                This example demonstrates a simple progress bar with a 50% width, "info" color, and a muted background. It has rounded corners and a height of 20px for a clean, minimal look.
-                </div>
-
-              
-                <div class="bg-t-3 h-120 flex flex-center">
-                <element-progress  info class="bg-muted rounded tx-13 h-20 tx-lh-20 w-full-20"></element-progress>
-                </div>
-
-             
-                <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-                &lt;element-progress width={50} info class="bg-muted rounded tx-13 h-20 tx-lh-20 w-full-20" /&gt;
-                </ide-code>
-
-                <div class="mb-10">
-                This example demonstrates a progress bar with 75% width, the "success" color, and a background of primary color. The height is set to 30px, giving it a taller appearance.
-                </div>
-
-                <div class="bg-t-3 h-120 flex flex-center">
-                <element-progress  success class="bg-primary rounded tx-13 h-30 tx-lh-30 w-full-30"></element-progress>
-                </div>
-
-        
-                <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-                &lt;element-progress width={75} success class="bg-primary rounded tx-13 h-30 tx-lh-30 w-full-30" /&gt;
-                </ide-code>
-
-            
-                <div class="mb-10">
-                This example demonstrates a progress bar with a width of 40%, the "warning" color, and a height of 10px for a thinner, more compact look.
-                </div>
-
-           
-                <div class="bg-t-3 h-120 flex flex-center">
-                <element-progress  warning class="bg-warning rounded tx-13 h-10 tx-lh-10 w-full-10"></element-progress>
-                </div>
-
-                <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-                &lt;element-progress width={40} warning class="bg-warning rounded tx-13 h-10 tx-lh-10 w-full-10" /&gt;
-                </ide-code>
-
+        </layout-table>
           
-                <div class="mb-10">
-                This example features a 100% width progress bar with the "success" color, a height of 20px, and a full-length progress bar to indicate completion.
-                </div>
-
-          
-                <div class="bg-t-3 h-120 flex flex-center">
-                <element-progress  success class="bg-success rounded tx-13 h-20 tx-lh-20 w-full-20"></element-progress>
-                </div>
-
-         
-                <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-                &lt;element-progress width={100} success class="bg-success rounded tx-13 h-20 tx-lh-20 w-full-20" /&gt;
-                </ide-code>
-
-           
-                <div class="mb-10">
-                This example demonstrates a progress bar with a 20% width, a height of 10px, and an "error" background color to indicate a negative status or issue. The "error" color highlights the progress bar as a warning or error state.
-                </div>
-
-        
-                <div class="bg-t-3 h-120 flex flex-center">
-                <element-progress  class="rounded bg-error tx-13 h-10 tx-lh-10 w-full-10"></element-progress>
-                </div>
-
-            
-                <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-                &lt;element-progress width={20} class="rounded bg-error tx-13 h-10 tx-lh-10 w-full-10" /&gt;
-                </ide-code>
 
 
+          <!-- Basic Progress Bar -->
+          <a name="BasicProgressBar"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Progress Bar</h2>
+          <div class="mb-10">
+            A simple progress bar with 50% width, "info" color, and a muted background. It has rounded corners and a height of 20px for a clean, minimal look.
+          </div>
 
-            <nav class="flex mb-30">
+          <div class="bg-t-3 h-120 flex flex-center">
+            <element-progress  info class="bg-muted rounded tx-13 h-20 tx-lh-20 w-full-20"></element-progress>
+          </div>
+
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-progress width={50} info class="bg-muted rounded tx-13 h-20 tx-lh-20 w-full-20" /&gt;
+          </ide-code>
+
+          <!-- Progress Bar with Different Colors -->
+          <a name="ProgressBarColors"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Progress Bar Colors</h2>
+          <div class="mb-10">
+            A progress bar with 75% width, "success" color, and a primary-colored background. The height is set to 30px, giving it a taller appearance.
+          </div>
+
+          <div class="bg-t-3 h-120 flex flex-center">
+            <element-progress  success class="bg-primary rounded tx-13 h-30 tx-lh-30 w-full-30"></element-progress>
+          </div>
+
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-progress width={75} success class="bg-primary rounded tx-13 h-30 tx-lh-30 w-full-30" /&gt;
+            </ide-code>
+
+          <div class="mb-10">
+            A progress bar with a width of 40%, the "warning" color, and a height of 10px for a thinner, more compact look.
+          </div>
+
+          <div class="bg-t-3 h-120 flex flex-center">
+            <element-progress  warning class="bg-warning rounded tx-13 h-10 tx-lh-10 w-full-10"></element-progress>
+          </div>
+
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-progress width={40} warning class="bg-warning rounded tx-13 h-10 tx-lh-10 w-full-10" /&gt;
+            </ide-code>
+
+          <!-- Full-Width Progress Bar -->
+          <a name="Full-WidthProgressBar"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Full-Width Progress Bar</h2>
+          <div class="mb-10">
+            A 100% width progress bar with the "success" color, a height of 20px, and a full-length progress bar to indicate completion.
+          </div>
+
+          <div class="bg-t-3 h-120 flex flex-center">
+            <element-progress  success class="bg-success rounded tx-13 h-20 tx-lh-20 w-full-20"></element-progress>
+          </div>
+
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-progress width={100} success class="bg-success rounded tx-13 h-20 tx-lh-20 w-full-20" /&gt;
+            </ide-code>
+
+          <!-- Status Indicators -->
+          <a name="StatusIndicators"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Status Indicators</h2>
+          <div class="mb-10">
+            A progress bar with a 20% width, a height of 10px, and an "error" background color to indicate a negative status or issue.
+          </div>
+
+          <div class="bg-t-3 h-120 flex flex-center">
+            <element-progress  class="rounded bg-error tx-13 h-10 tx-lh-10 w-full-10"></element-progress>
+          </div>
+
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-progress width={20} class="rounded bg-error tx-13 h-10 tx-lh-10 w-full-10" /&gt;
+             </ide-code>
+
+            <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/panel.html">
               <element-icon name="chevron-left" theme="tx-1"></element-icon>
               Panels

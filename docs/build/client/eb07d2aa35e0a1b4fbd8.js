@@ -5557,7 +5557,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#pager#` }, [
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#pager` }, [
                       ...this._toNodeList(_("Panel"))
                     ]),
                     import_Document.default.createText(`
@@ -5566,27 +5566,32 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#props` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Props"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#PaginationExample` }, [
-                        ...this._toNodeList(_("Pagination Example"))
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#BasicPanelLayout` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Basic Panel Layout"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomRangeAndPageSelection` }, [
-                        ...this._toNodeList(_("Custom Range and Page Selection"))
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#PanelLayoutWithFooter` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Panel Layout with Footer"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomControlsAndStyles` }, [
-                        ...this._toNodeList(_("Custom Controls and Styles"))
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CenteredPanelLayout` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Centered Panel Layout"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#PaginationWithNoForwardOrRewind` }, [
-                        ...this._toNodeList(_("Pagination with No Forward or Rewind"))
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#StickyHeader&Footer` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Sticky Header & Footer"))
                       ]),
                       import_Document.default.createText(`
               
@@ -5641,7 +5646,7 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Badge from '@stackpress/ink-ui/element/panel';
+              import Panel from '@stackpress/ink-ui/element/panel';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -5661,7 +5666,7 @@ var InkAPI = (() => {
                 `, false)
                   ]),
                   import_Document.default.createText(`
-
+                
                 `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
@@ -5691,12 +5696,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
                     `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`total`, false)
+                        import_Document.default.createText(`main`, false)
                       ]),
                       import_Document.default.createText(`
                     `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Number`, false)
+                        import_Document.default.createText(`HTMLElement`, false)
                       ]),
                       import_Document.default.createText(`
                     `, false),
@@ -5706,7 +5711,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
                     `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Total number of items to paginate."))
+                        ...this._toNodeList(_("Represents the main content panel (<main>)."))
                       ]),
                       import_Document.default.createText(`
                   `, false)
@@ -5718,12 +5723,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
                     `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`start`, false)
+                        import_Document.default.createText(`head`, false)
                       ]),
                       import_Document.default.createText(`
                     `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Number`, false)
+                        import_Document.default.createText(`HTMLElement`, false)
                       ]),
                       import_Document.default.createText(`
                     `, false),
@@ -5733,7 +5738,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
                     `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Start offset for pagination."))
+                        ...this._toNodeList(_("Represents the header panel (<header>), if present."))
                       ]),
                       import_Document.default.createText(`
                   `, false)
@@ -5745,12 +5750,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
                     `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`range`, false)
+                        import_Document.default.createText(`foot`, false)
                       ]),
                       import_Document.default.createText(`
                     `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Number`, false)
+                        import_Document.default.createText(`HTMLElement`, false)
                       ]),
                       import_Document.default.createText(`
                     `, false),
@@ -5760,7 +5765,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
                     `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Number of items per page."))
+                        ...this._toNodeList(_("Represents the footer panel (<footer>), if present."))
                       ]),
                       import_Document.default.createText(`
                   `, false)
@@ -5772,12 +5777,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
                     `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`radius`, false)
+                        import_Document.default.createText(`left`, false)
                       ]),
                       import_Document.default.createText(`
                     `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Number`, false)
+                        import_Document.default.createText(`HTMLElement`, false)
                       ]),
                       import_Document.default.createText(`
                     `, false),
@@ -5787,7 +5792,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
                     `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Determines the number of page links to show around the current page."))
+                        ...this._toNodeList(_("Represents the left sidebar (<aside left>), if present."))
                       ]),
                       import_Document.default.createText(`
                   `, false)
@@ -5799,12 +5804,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
                     `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`next`, false)
+                        import_Document.default.createText(`right`, false)
                       ]),
                       import_Document.default.createText(`
                     `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
+                        import_Document.default.createText(`HTMLElement`, false)
                       ]),
                       import_Document.default.createText(`
                     `, false),
@@ -5814,358 +5819,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
                     `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Flag to show the "next" button.'))
-                      ]),
-                      import_Document.default.createText(`
-                  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`prev`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Flag to show the "previous" button.'))
-                      ]),
-                      import_Document.default.createText(`
-                  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`rewind`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Flag to show the "rewind" button.'))
-                      ]),
-                      import_Document.default.createText(`
-                  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`forward`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Flag to show the "forward" button.'))
-                      ]),
-                      import_Document.default.createText(`
-                  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`link`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom color for the pagination link."))
-                      ]),
-                      import_Document.default.createText(`
-                  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`control`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Object`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom styles for pagination control elements."))
-                      ]),
-                      import_Document.default.createText(`
-                  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`border`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Border color for pagination controls."))
-                      ]),
-                      import_Document.default.createText(`
-                  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`background`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Background color for pagination controls."))
-                      ]),
-                      import_Document.default.createText(`
-                  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`square`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Number`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Defines the size of pagination controls if set."))
-                      ]),
-                      import_Document.default.createText(`
-                  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`size`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Default size of the icon for pagination controls."))
-                      ]),
-                      import_Document.default.createText(`
-                  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`xs, sm, md, lg, xl, xl2, xl3, xl4, xl5`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Various sizes for icon (pass to icon component)."))
-                      ]),
-                      import_Document.default.createText(`
-                  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`color`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Default color for pagination controls."))
-                      ]),
-                      import_Document.default.createText(`
-                  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`white, black, info, warning, success, error, muted, primary, secondary`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Color options for pagination components."))
-                      ]),
-                      import_Document.default.createText(`
-                  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`page (select)`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Function`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Yes`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Handler function to select a page."))
+                        ...this._toNodeList(_("Represents the right sidebar (<aside right>), if present."))
                       ]),
                       import_Document.default.createText(`
                   `, false)
@@ -6178,8 +5832,455 @@ var InkAPI = (() => {
 
 
 
+
             `, false),
-                  import_Document.default.createElement("nav", { "class": `flex mb-30` }, [
+                  import_Document.default.createElement("a", { "name": `BasicPanelLayout` }, []),
+                  import_Document.default.createText(`
+            `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Basic Panel Layout")),
+                    import_Document.default.createText(`
+            `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+            `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+           A simple panel layout with header, left sidebar, right sidebar, and main content in their correct positions.
+            `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+            `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120` }, [
+                    import_Document.default.createText(`
+              `, false),
+                    import_Document.default.createElement("div", { "class": `relative w-full h-full` }, [
+                      import_Document.default.createText(`
+                <!-- Header -->
+                `, false),
+                      import_Document.default.createElement("header", { "class": `absolute top-0 left-0 right-0 h-50p b-solid b-t-1` }, [
+                        import_Document.default.createText(`
+                  `, false),
+                        import_Document.default.createElement("div", { "class": `p-5` }, [
+                          import_Document.default.createText(`Header`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false)
+                      ]),
+                      import_Document.default.createText(`
+
+                <!-- Left Sidebar -->
+                `, false),
+                      import_Document.default.createElement("aside", { "class": `absolute w-20p top-50p bottom-0 left-0 b-solid b-t-1` }, [
+                        import_Document.default.createText(`
+                  `, false),
+                        import_Document.default.createElement("div", { "class": `p-5` }, [
+                          import_Document.default.createText(`Left Sidebar`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false)
+                      ]),
+                      import_Document.default.createText(`
+
+                <!-- Right Sidebar -->
+                `, false),
+                      import_Document.default.createElement("aside", { "class": `absolute w-30p top-50p bottom-0 right-0 b-solid b-t-1` }, [
+                        import_Document.default.createText(`
+                  `, false),
+                        import_Document.default.createElement("div", { "class": `p-5` }, [
+                          import_Document.default.createText(`Right Sidebar`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false)
+                      ]),
+                      import_Document.default.createText(`
+
+                <!-- Main Content -->
+                `, false),
+                      import_Document.default.createElement("main", { "class": `absolute top-50p bottom-0 left-20p right-30p b-solid b-t-1` }, [
+                        import_Document.default.createText(`
+                  `, false),
+                        import_Document.default.createElement("div", { "class": `p-5` }, [
+                          import_Document.default.createText(`Main Content`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+
+            `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+                        <div class="bg-t-3 h-120">
+              <div class="relative w-full h-full">
+                <!-- Header -->
+                <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
+                  <div class="p-5">Header</div>
+                </header>
+
+                <!-- Left Sidebar -->
+                <aside class="absolute w-20p top-50p bottom-0 left-0 b-solid b-t-1">
+                  <div class="p-5">Left Sidebar</div>
+                </aside>
+
+                <!-- Right Sidebar -->
+                <aside class="absolute w-30p top-50p bottom-0 right-0 b-solid b-t-1">
+                  <div class="p-5">Right Sidebar</div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="absolute top-50p bottom-0 left-20p right-30p b-solid b-t-1">
+                  <div class="p-5">Main Content</div>
+                </main>
+              </div>
+            </div>
+            `)
+                  ]),
+                  import_Document.default.createText(`
+
+
+                        `, false),
+                  import_Document.default.createElement("a", { "name": `PanelLayoutWithFooter` }, []),
+                  import_Document.default.createText(`
+            `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Panel Layout with Footer")),
+                    import_Document.default.createText(`
+            `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+            `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+            A footer is added at the bottom of the structure.
+            `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+            `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 h-200` }, [
+                    import_Document.default.createText(`
+              `, false),
+                    import_Document.default.createElement("div", { "class": `relative w-full h-full` }, [
+                      import_Document.default.createText(`
+                <!-- Header -->
+                `, false),
+                      import_Document.default.createElement("header", { "class": `absolute top-0 left-0 right-0 h-50p b-solid b-t-1` }, [
+                        import_Document.default.createText(`
+                  `, false),
+                        import_Document.default.createElement("div", { "class": `p-5` }, [
+                          import_Document.default.createText(`Header`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false)
+                      ]),
+                      import_Document.default.createText(`
+
+                <!-- Left Sidebar -->
+                `, false),
+                      import_Document.default.createElement("aside", { "class": `absolute w-20p top-50p bottom-60 left-0 b-solid b-t-1` }, [
+                        import_Document.default.createText(`
+                  `, false),
+                        import_Document.default.createElement("div", { "class": `p-5` }, [
+                          import_Document.default.createText(`Left Sidebar`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false)
+                      ]),
+                      import_Document.default.createText(`
+
+                <!-- Right Sidebar -->
+                `, false),
+                      import_Document.default.createElement("aside", { "class": `absolute w-30p top-50p bottom-60 right-0 b-solid b-t-1` }, [
+                        import_Document.default.createText(`
+                  `, false),
+                        import_Document.default.createElement("div", { "class": `p-5` }, [
+                          import_Document.default.createText(`Right Sidebar`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false)
+                      ]),
+                      import_Document.default.createText(`
+
+                <!-- Main Content -->
+                `, false),
+                      import_Document.default.createElement("main", { "class": `absolute top-50p bottom-60 left-20p right-30p b-solid b-t-1` }, [
+                        import_Document.default.createText(`
+                  `, false),
+                        import_Document.default.createElement("div", { "class": `p-5` }, [
+                          import_Document.default.createText(`Main Content`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false)
+                      ]),
+                      import_Document.default.createText(`
+
+                <!-- Footer -->
+                `, false),
+                      import_Document.default.createElement("footer", { "class": `absolute bottom-0 left-0 right-0 h-60 b-solid b-t-1` }, [
+                        import_Document.default.createText(`
+                  `, false),
+                        import_Document.default.createElement("div", { "class": `p-5` }, [
+                          import_Document.default.createText(`Footer`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+
+            `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+              <div class="bg-t-3 h-200">
+                <div class="relative w-full h-full">
+                  <!-- Header -->
+                  <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
+                    <div class="p-5">Header</div>
+                  </header>
+
+                  <!-- Left Sidebar -->
+                  <aside class="absolute w-20p top-50p bottom-60 left-0 b-solid b-t-1">
+                    <div class="p-5">Left Sidebar</div>
+                  </aside>
+
+                  <!-- Right Sidebar -->
+                  <aside class="absolute w-30p top-50p bottom-60 right-0 b-solid b-t-1">
+                    <div class="p-5">Right Sidebar</div>
+                  </aside>
+
+                  <!-- Main Content -->
+                  <main class="absolute top-50p bottom-60 left-20p right-30p b-solid b-t-1">
+                    <div class="p-5">Main Content</div>
+                  </main>
+
+                  <!-- Footer -->
+                  <footer class="absolute bottom-0 left-0 right-0 h-60 b-solid b-t-1">
+                    <div class="p-5">Footer</div>
+                  </footer>
+                </div>
+              </div>
+            `)
+                  ]),
+                  import_Document.default.createText(`
+
+
+            `, false),
+                  import_Document.default.createElement("a", { "name": `CenteredPanelLayout` }, []),
+                  import_Document.default.createText(`
+            `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Centered Panel Layout")),
+                    import_Document.default.createText(`
+            `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+            `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+            A centered layout with only a header and main content.
+            `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+            `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex items-center justify-center` }, [
+                    import_Document.default.createText(`
+              `, false),
+                    import_Document.default.createElement("div", { "class": `relative w-80p h-80p b-solid b-t-1` }, [
+                      import_Document.default.createText(`
+                <!-- Header -->
+                `, false),
+                      import_Document.default.createElement("header", { "class": `absolute top-0 left-0 right-0 h-50p b-solid b-t-1` }, [
+                        import_Document.default.createText(`
+                  `, false),
+                        import_Document.default.createElement("div", { "class": `p-5` }, [
+                          import_Document.default.createText(`Header`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false)
+                      ]),
+                      import_Document.default.createText(`
+
+                <!-- Main Content -->
+                `, false),
+                      import_Document.default.createElement("main", { "class": `absolute top-50p bottom-0 left-0 right-0 b-solid b-t-1` }, [
+                        import_Document.default.createText(`
+                  `, false),
+                        import_Document.default.createElement("div", { "class": `p-5` }, [
+                          import_Document.default.createText(`Main Content`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+
+            `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+              <div class="bg-t-3 h-120 flex items-center justify-center">
+              <div class="relative w-80p h-80p b-solid b-t-1">
+                <!-- Header -->
+                <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
+                  <div class="p-5">Header</div>
+                </header>
+
+                <!-- Main Content -->
+                <main class="absolute top-50p bottom-0 left-0 right-0 b-solid b-t-1">
+                  <div class="p-5">Main Content</div>
+                </main>
+              </div>
+            </div>
+            `)
+                  ]),
+                  import_Document.default.createText(`
+
+
+            `, false),
+                  import_Document.default.createElement("a", { "name": `StickyHeader&Footer` }, []),
+                  import_Document.default.createText(`
+            `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    import_Document.default.createText(`
+              `, false),
+                    ...this._toNodeList(_("Sticky Header & Footer")),
+                    import_Document.default.createText(`
+            `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+            `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+              A header and footer that stay visible while scrolling.
+            `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+            `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+              `, false),
+                    import_Document.default.createElement("div", { "class": `w-300 h-200 bg-t-3 b-solid b-1 p-2 relative flex flex-col` }, [
+                      import_Document.default.createText(`
+                <!-- Sticky Header -->
+                `, false),
+                      import_Document.default.createElement("header", { "class": `sticky top-0 left-0 right-0 h-50 bg-white b-solid b-b-1 z-10` }, [
+                        import_Document.default.createText(`
+                  `, false),
+                        import_Document.default.createElement("div", { "class": `p-2` }, [
+                          import_Document.default.createText(`Sticky Header`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false)
+                      ]),
+                      import_Document.default.createText(`
+
+                <!-- Scrollable Content -->
+                `, false),
+                      import_Document.default.createElement("div", { "class": `flex-1 overflow-auto` }, [
+                        import_Document.default.createText(`
+                  `, false),
+                        import_Document.default.createElement("main", { "class": `w-full p-2` }, [
+                          import_Document.default.createText(`
+                    `, false),
+                          import_Document.default.createElement("p", {}, [
+                            import_Document.default.createText(`Main Content (Scroll Down)`, false)
+                          ]),
+                          import_Document.default.createText(`
+                    `, false),
+                          import_Document.default.createElement("div", { "class": `h-400px` }, []),
+                          import_Document.default.createText(` <!-- Ensures scrolling -->
+                  `, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false)
+                      ]),
+                      import_Document.default.createText(`
+
+                <!-- Sticky Footer -->
+                `, false),
+                      import_Document.default.createElement("footer", { "class": `sticky bottom-0 left-0 right-0 h-50 bg-white b-solid b-t-1 z-10` }, [
+                        import_Document.default.createText(`
+                  `, false),
+                        import_Document.default.createElement("div", { "class": `p-2` }, [
+                          import_Document.default.createText(`Sticky Footer`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+            `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+              <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+                <div class="w-300 h-200 bg-t-3 b-solid b-1 p-2 relative flex flex-col">
+                  <!-- Sticky Header -->
+                  <header class="sticky top-0 left-0 right-0 h-50 bg-white b-solid b-b-1 z-10">
+                    <div class="p-2">Sticky Header</div>
+                  </header>
+
+                  <!-- Scrollable Content -->
+                  <div class="flex-1 overflow-auto">
+                    <main class="w-full p-2">
+                      <p>Main Content (Scroll Down)</p>
+                      <div class="h-400px"></div> <!-- Ensures scrolling -->
+                    </main>
+                  </div>
+
+                  <!-- Sticky Footer -->
+                  <footer class="sticky bottom-0 left-0 right-0 h-50 bg-white b-solid b-t-1 z-10">
+                    <div class="p-2">Sticky Footer</div>
+                  </footer>
+                </div>
+              </div>
+            `)
+                  ]),
+                  import_Document.default.createText(`
+
+
+
+
+
+            `, false),
+                  import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/components/pager.html` }, [
@@ -6258,7 +6359,8 @@ var InkAPI = (() => {
     "table-head": Head_d8755504d9458a2c21da,
     "table-row": Row_0b3723ad0a2356b54f11,
     "table-col": Col_f45aa9d13a1588f1d9ab,
-    "element-badge": Badge_04e709456157a0a384e7
+    "element-badge": Badge_04e709456157a0a384e7,
+    "panel-layout": Panel_c4c96a14064fc0c4d224
   };
   var BUILD_ID = "eb07d2aa35e0a1b4fbd8";
   import_Emitter.default.once("ready", () => {

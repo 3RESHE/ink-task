@@ -5858,29 +5858,42 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#props` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Props"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#PaginationExample` }, [
-                        ...this._toNodeList(_("Pagination Example"))
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TooltipWithInfoBackground` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Info Background"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomRangeAndPageSelection` }, [
-                        ...this._toNodeList(_("Custom Range and Page Selection"))
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TooltipWithSuccessBackground` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Success Background"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomControlsAndStyles` }, [
-                        ...this._toNodeList(_("Custom Controls and Styles"))
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TooltipWithErrorBackground` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Error Background"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#PaginationWithNoForwardOrRewind` }, [
-                        ...this._toNodeList(_("Pagination with No Forward or Rewind"))
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TooltipWithWarningBackground` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Warning Background"))
                       ]),
                       import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TooltipWithCenteredTextAndCurvedBorder` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Centered Text and Curved Border"))
+                      ]),
+                      import_Document.default.createText(`
+              
+
               
             `, false)
                     ]),
@@ -5900,17 +5913,17 @@ var InkAPI = (() => {
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-        `, false),
-                import_Document.default.createElement("nav", { "class": `p-10 bg-t-3` }, [
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
-                  import_Document.default.createText(`
-        `, false)
-                ]),
-                import_Document.default.createText(`
-        `, false),
+      `, false),
                 import_Document.default.createElement("api-docs", {}, [
+                  import_Document.default.createText(`
+        `, false),
+                  import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
+                    import_Document.default.createText(`
+      `, false)
+                  ]),
                   import_Document.default.createText(`
 
 
@@ -6549,7 +6562,9 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-
+`, false),
+                  import_Document.default.createElement("a", { "name": `TooltipWithInfoBackground` }, []),
+                  import_Document.default.createText(`
 `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
@@ -6611,6 +6626,9 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
 `, false),
+                  import_Document.default.createElement("a", { "name": `TooltipWithSuccessBackground` }, []),
+                  import_Document.default.createText(`
+`, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
   `, false),
@@ -6669,6 +6687,9 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
+`, false),
+                  import_Document.default.createElement("a", { "name": `TooltipWithErrorBackground` }, []),
+                  import_Document.default.createText(`
 `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
@@ -6730,6 +6751,9 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
 `, false),
+                  import_Document.default.createElement("a", { "name": `TooltipWithWarningackground` }, []),
+                  import_Document.default.createText(`
+`, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
   `, false),
@@ -6788,6 +6812,9 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
+`, false),
+                  import_Document.default.createElement("a", { "name": `TooltipWithCenteredTextaAndCurvedBorder` }, []),
+                  import_Document.default.createText(`
 `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`

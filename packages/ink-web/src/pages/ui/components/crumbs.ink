@@ -162,7 +162,7 @@
 
  <a name="basic-usage"></a>
 <!-- Basic Usage -->
-<h3 class="tx-24 mt-20">Basic Usage</h3>
+<h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
 <div class="mb-10">Responsive breadcrumb layout inside a container:</div>
 <div class="basis-third-10 lg-basis-half-10 md-basis-full">
   <div class="bg-t-3 h-120 flex flex-center p-10 rounded-2xl shadow-md">
@@ -203,7 +203,7 @@
 
           <!-- Link Styling -->
            <a name="link-styling"></a>
-          <h3 class="tx-24 mt-20">Link Styling</h3>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Link Styling</h2>
           <div class="mb-10">Example with colored link:</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
@@ -222,7 +222,7 @@
 
           <!-- Separator Variants -->
            <a name="separator-variants"></a>
-          <h3 class="tx-24 mt-20">Separator Variants</h3>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Separator Variants</h2>
           <div class="mb-10">Example with muted separator:</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
@@ -247,7 +247,7 @@
 
           <!-- Icon Styling -->
            <a name="icon-styling"></a>
-          <h3 class="tx-24 mt-20">Icon Styling</h3>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Icon Styling</h2>
           <div class="mb-10">Example with muted icons:</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
@@ -272,7 +272,7 @@
 
           <!-- Size Variants -->
            <a name="size-variants"></a>
-          <h3 class="tx-24 mt-20">Size Variants</h3>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Size Variants</h2>
           <div class="mb-10">Example with different sizes:</div>
 
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
@@ -290,8 +290,8 @@
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`<element-crumbs crumbs={crumbs} link-primary block xs/>`}</ide-code>
 
           <!-- Spacing & Customization -->
-           <a name="spacing-and-customization"></a>
-          <h3 class="tx-24 mt-20">Spacing & Customization</h3>
+           <a name="spacing-and-customizations"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Spacing & Customization</h2>
           <div class="mb-10">Example with spacing:</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">

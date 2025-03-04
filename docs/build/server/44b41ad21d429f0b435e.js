@@ -1513,7 +1513,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#pager#` }, [
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#pager` }, [
                       ...this._toNodeList(_("Tab"))
                     ]),
                     import_Document.default.createText(`
@@ -1522,29 +1522,29 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#props` }, [
+                        import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Props"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#PaginationExample` }, [
-                        ...this._toNodeList(_("Pagination Example"))
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TabExamples` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Tab Examples"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomRangeAndPageSelection` }, [
-                        ...this._toNodeList(_("Custom Range and Page Selection"))
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#HorizontalTabsWithDifferentActiveState` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Horizontal Tabs with Different Active State"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomControlsAndStyles` }, [
-                        ...this._toNodeList(_("Custom Controls and Styles"))
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomStyleTabs` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Custom Style Tabs"))
                       ]),
                       import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#PaginationWithNoForwardOrRewind` }, [
-                        ...this._toNodeList(_("Pagination with No Forward or Rewind"))
-                      ]),
-                      import_Document.default.createText(`
+
               
             `, false)
                     ]),
@@ -1597,7 +1597,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Badge from '@stackpress/ink-ui/element/tab';
+              import Tab from '@stackpress/ink-ui/element/tab';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1809,7 +1809,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
 
-
+                  `, false),
+                  import_Document.default.createElement("a", { "name": `TabExamples` }, []),
+                  import_Document.default.createText(`
                   `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
@@ -1976,7 +1978,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-
+                `, false),
+                  import_Document.default.createElement("a", { "name": `HorizontalTabsWithDifferentActiveState` }, []),
+                  import_Document.default.createText(`
                 `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
@@ -2065,7 +2069,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
 
-
+              `, false),
+                  import_Document.default.createElement("a", { "name": `CustomStyleTabs` }, []),
+                  import_Document.default.createText(`
               `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
@@ -2154,7 +2160,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
             `, false),
-                  import_Document.default.createElement("nav", { "class": `flex mb-30` }, [
+                  import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/components/progress.html` }, [
@@ -2169,10 +2175,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/components/tables.html` }, [
+                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/components/table.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Tablles")),
+                      ...this._toNodeList(_("Tables")),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),

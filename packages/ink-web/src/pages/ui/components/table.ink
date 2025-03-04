@@ -58,13 +58,17 @@
             {_('On this page')}
           </h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#pager#">{_('Tab')}</a>
+            <a class="block tx-t-0" href="#pager#">{_('Tables')}</a>
             <nav class="pl-20">
-              <a class="block tx-t-1" href="#props">{_('Props')}</a>
-              <a class="block tx-t-1" href="#PaginationExample">{_('Pagination Example')}</a>
-              <a class="block tx-t-1" href="#CustomRangeAndPageSelection">{_('Custom Range and Page Selection')}</a>
-              <a class="block tx-t-1" href="#CustomControlsAndStyles">{_('Custom Controls and Styles')}</a>
-              <a class="block tx-t-1" href="#PaginationWithNoForwardOrRewind">{_('Pagination with No Forward or Rewind')}</a>
+              <a class="block tx-t-1" href="#props">• {_('Props')}</a>
+              <a class="block tx-t-1" href="#OutlineExample">• {_('Outline Example')}</a>
+              <a class="block tx-t-1" href="#TableWithAdditionalColumn">• {_('Table with Additional Column')}</a>
+              <a class="block tx-t-1" href="#TableWithBorders">• {_('Table with Borders')}</a>
+              <a class="block tx-t-1" href="#StripedTable">• {_('Striped Table')}</a>
+              <a class="block tx-t-1" href="#TableWithStatusLabels">• {_('Table with Status Labels')}</a>
+              <a class="block tx-t-1" href="#ResponsiveTable">• {_('Responsive Table')}</a>
+              <a class="block tx-t-1" href="#TableWithCustomColumnWidths">• {_('Table with Custom Column Widths')}</a>
+              <a class="block tx-t-1" href="#TableWithIcons">• {_('Table with Icons')}</a>
               
             </nav>
           </nav>
@@ -231,17 +235,14 @@
 
 
 
-
+<a name="OutlineExample"></a>
 <h2 class="tx-primary tx-upper tx-30 py-20">
-  {_('Table Component Examples')}
+  {_('Outline Example')}
 </h2>
-
-
 
 <!-- Description for Example 1 -->
 <div class="mb-10">
-  The following example showcases a simple table layout using <code>layout-table</code>. 
-  It includes a header row and multiple data rows with alternating background colors.
+  A simple table using layout-table with alternating row colors.
 </div>
 
 
@@ -308,6 +309,13 @@
   </table-row>
 </layout-table>
 `}</ide-code>
+
+
+
+<a name="TableWithAdditionalColumn"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  {_('Table with Additional Column')}
+</h2>
 
 <!-- Description for Example 2 -->
 <div class="mb-10">
@@ -388,6 +396,11 @@
 `}</ide-code>
 
 
+<a name="TableWithBorders"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  {_('Table with Borders')}
+</h2>
+
 <div class="mb-10">
   This table includes a solid border around all cells for better visibility.
 </div>
@@ -464,6 +477,11 @@
 </layout-table>
 `}</ide-code>
 
+
+<a name="StripedTable"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  {_('Striped Table')}
+</h2>
 
 <div class="mb-10">
   A striped table helps differentiate rows by alternating background colors.
@@ -543,6 +561,10 @@
 `}</ide-code>
 
 
+<a name="TableWithStatusLabels"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  {_('Table with Status Labels')}
+</h2>
 
 <div class="mb-10">
   A table with status labels and icons for better user experience.
@@ -638,6 +660,12 @@
 </layout-table>
 `}</ide-code>
 
+
+<a name="ResponsiveTable"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  {_('ResponsiveTable')}
+</h2>
+
 <div class="mb-10">
   This table is responsive and allows horizontal scrolling on smaller screens.
 </div>
@@ -726,6 +754,12 @@
 `}</ide-code>
 
 
+
+<a name="TableWithCustomColumnWidths"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  {_('Table with Custom Column Widths')}
+</h2>
+
 <div class="mb-10">
   This example demonstrates how to set custom column widths.
 </div>
@@ -803,6 +837,73 @@
 `}</ide-code>
 
 
+
+
+<a name="TableWithIcons"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  {_('Table with Icons')}
+</h2>
+<div class="mb-10">
+  {_('This table uses element-icon components for statuses and action buttons.')}
+</div>
+
+<layout-table 
+  top
+  head="py-12 px-10 bg-primary tx-white"
+  body="py-12 px-10"
+  odd="bg-t-0"
+  even="bg-t-1"
+>
+  <table-head>{_('User')}</table-head>
+  <table-head>{_('Email')}</table-head>
+  <table-head>{_('Status')}</table-head>
+  <table-head>{_('Actions')}</table-head>
+
+  <table-row>
+    <table-col>John Doe</table-col>
+    <table-col>john@example.com</table-col>
+    <table-col>
+      <span class="flex items-center">
+        <element-icon name="check-circle" class="tx-success mr-6"></element-icon> Active
+      </span>
+    </table-col>
+    <table-col>
+      <element-icon name="eye" class="mr-5 tx-info" />
+      <element-icon name="edit" class="mr-5 tx-warning" />
+      <element-icon name="trash" class="tx-error" />
+    </table-col>
+  </table-row>
+
+  <table-row>
+    <table-col>Mary Jane</table-col>
+    <table-col>mary@example.com</table-col>
+    <table-col>
+      <span class="flex items-center">
+        <element-icon name="clock" class="tx-warning mr-6"></element-icon> Pending
+      </span>
+    </table-col>
+    <table-col>
+      <element-icon name="eye" class="mr-5 tx-info" />
+      <element-icon name="edit" class="mr-5 tx-warning" />
+      <element-icon name="trash" class="tx-error" />
+    </table-col>
+  </table-row>
+
+  <table-row>
+    <table-col>Mike Brown</table-col>
+    <table-col>mike@example.com</table-col>
+    <table-col>
+      <span class="flex items-center">
+        <element-icon name="times-circle" class="tx-error mr-6"></element-icon> Suspended
+      </span>
+    </table-col>
+    <table-col>
+      <element-icon name="eye" class="mr-5 tx-info" />
+      <element-icon name="edit" class="mr-5 tx-warning" />
+      <element-icon name="trash" class="tx-error" />
+    </table-col>
+  </table-row>
+</layout-table>
 
 
 

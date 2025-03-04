@@ -58,11 +58,14 @@
           <nav class="tx-14 tx-lh-32">
             <a class="block tx-t-0" href="#pager#">{_('Tab')}</a>
             <nav class="pl-20">
-              <a class="block tx-t-1" href="#props">{_('Props')}</a>
-              <a class="block tx-t-1" href="#PaginationExample">{_('Pagination Example')}</a>
-              <a class="block tx-t-1" href="#CustomRangeAndPageSelection">{_('Custom Range and Page Selection')}</a>
-              <a class="block tx-t-1" href="#CustomControlsAndStyles">{_('Custom Controls and Styles')}</a>
-              <a class="block tx-t-1" href="#PaginationWithNoForwardOrRewind">{_('Pagination with No Forward or Rewind')}</a>
+              <a class="block tx-t-1" href="#props">• {_('Props')}</a>
+              <a class="block tx-t-1" href="#TooltipWithInfoBackground">• {_('Info Background')}</a>
+              <a class="block tx-t-1" href="#TooltipWithSuccessBackground">• {_('Success Background')}</a>
+              <a class="block tx-t-1" href="#TooltipWithErrorBackground">• {_('Error Background')}</a>
+              <a class="block tx-t-1" href="#TooltipWithWarningBackground">• {_('Warning Background')}</a>
+              <a class="block tx-t-1" href="#TooltipWithCenteredTextAndCurvedBorder">• {_('Centered Text and Curved Border')}</a>
+              
+
               
             </nav>
           </nav>
@@ -263,7 +266,7 @@
 
                     </layout-table>
 
-
+<a name="TooltipWithInfoBackground"></a>
 <h2 class="tx-primary tx-upper tx-30 py-20">
   {_('Tooltip with Info Background')}
 </h2>
@@ -304,6 +307,7 @@
   </element-tip>
 `}</ide-code>
 
+<a name="TooltipWithSuccessBackground"></a>
 <h2 class="tx-primary tx-upper tx-30 py-20">
   {_('Tooltip with Success Background')}
 </h2>
@@ -342,6 +346,7 @@
   </element-tip>
 `}</ide-code>
 
+<a name="TooltipWithErrorBackground"></a>
 <h2 class="tx-primary tx-upper tx-30 py-20">
   {_('Tooltip with Error Background')}
 </h2>
@@ -382,6 +387,7 @@
   </element-tip>
 `}</ide-code>
 
+<a name="TooltipWithWarningackground"></a>
 <h2 class="tx-primary tx-upper tx-30 py-20">
   {_('Tooltip with Warning Background')}
 </h2>
@@ -420,6 +426,7 @@
   </element-tip>
 `}</ide-code>
 
+<a name="TooltipWithCenteredTextaAndCurvedBorder"></a>
 <h2 class="tx-primary tx-upper tx-30 py-20">
   {_('Tooltip with Centered Text and Curved Border')}
 </h2>

@@ -155,13 +155,17 @@
             On this page
           </h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#pager#">Tab</a>
+            <a class="block tx-t-0" href="#pager#">Tables</a>
             <nav class="pl-20">
-              <a class="block tx-t-1" href="#props">Props</a>
-              <a class="block tx-t-1" href="#PaginationExample">Pagination Example</a>
-              <a class="block tx-t-1" href="#CustomRangeAndPageSelection">Custom Range and Page Selection</a>
-              <a class="block tx-t-1" href="#CustomControlsAndStyles">Custom Controls and Styles</a>
-              <a class="block tx-t-1" href="#PaginationWithNoForwardOrRewind">Pagination with No Forward or Rewind</a>
+              <a class="block tx-t-1" href="#props">• Props</a>
+              <a class="block tx-t-1" href="#OutlineExample">• Outline Example</a>
+              <a class="block tx-t-1" href="#TableWithAdditionalColumn">• Table with Additional Column</a>
+              <a class="block tx-t-1" href="#TableWithBorders">• Table with Borders</a>
+              <a class="block tx-t-1" href="#StripedTable">• Striped Table</a>
+              <a class="block tx-t-1" href="#TableWithStatusLabels">• Table with Status Labels</a>
+              <a class="block tx-t-1" href="#ResponsiveTable">• Responsive Table</a>
+              <a class="block tx-t-1" href="#TableWithCustomColumnWidths">• Table with Custom Column Widths</a>
+              <a class="block tx-t-1" href="#TableWithIcons">• Table with Icons</a>
               
             </nav>
           </nav>
@@ -171,10 +175,10 @@
 
 
       <main>
-        <nav class="p-10 bg-t-3">
+      <api-docs>
+        <nav class="p-10 bg-t-3 sticky top-0 z-50">
           <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
-        </nav>
-        <api-docs>
+      </nav>
 
 
         
@@ -192,139 +196,136 @@
                 <h2 class="tx-primary tx-upper tx-30 py-20">
                 Props
                 </h2>
-<layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
-    <table-head>Property</table-head>
-    <table-head>Type</table-head>
-    <table-head>Required</table-head>
-    <table-head>Notes</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+              <table-head>Property</table-head>
+              <table-head>Type</table-head>
+              <table-head>Required</table-head>
+              <table-head>Notes</table-head>
 
-    <table-row>
-        <table-col>nowrap</table-col>
-        <table-col>Boolean</table-col>
-        <table-col>No</table-col>
-        <table-col>Prevents text wrapping inside table cells.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>nowrap</table-col>
+                  <table-col>Boolean</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Prevents text wrapping inside table cells.</table-col>
+              </table-row>
 
-    <table-row>
-        <table-col>wrap1</table-col>
-        <table-col>Boolean</table-col>
-        <table-col>No</table-col>
-        <table-col>Sets a cell width of 100px for text wrapping.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>wrap1</table-col>
+                  <table-col>Boolean</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Sets a cell width of 100px for text wrapping.</table-col>
+              </table-row>
 
-    <table-row>
-        <table-col>wrap2</table-col>
-        <table-col>Boolean</table-col>
-        <table-col>No</table-col>
-        <table-col>Sets a cell width of 200px for text wrapping.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>wrap2</table-col>
+                  <table-col>Boolean</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Sets a cell width of 200px for text wrapping.</table-col>
+              </table-row>
 
-    <table-row>
-        <table-col>wrap3</table-col>
-        <table-col>Boolean</table-col>
-        <table-col>No</table-col>
-        <table-col>Sets a cell width of 300px for text wrapping.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>wrap3</table-col>
+                  <table-col>Boolean</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Sets a cell width of 300px for text wrapping.</table-col>
+              </table-row>
 
-    <table-row>
-        <table-col>wrap4</table-col>
-        <table-col>Boolean</table-col>
-        <table-col>No</table-col>
-        <table-col>Sets a cell width of 400px for text wrapping.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>wrap4</table-col>
+                  <table-col>Boolean</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Sets a cell width of 400px for text wrapping.</table-col>
+              </table-row>
 
-    <table-row>
-        <table-col>wrap5</table-col>
-        <table-col>Boolean</table-col>
-        <table-col>No</table-col>
-        <table-col>Sets a cell width of 500px for text wrapping.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>wrap5</table-col>
+                  <table-col>Boolean</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Sets a cell width of 500px for text wrapping.</table-col>
+              </table-row>
 
-    <table-row>
-        <table-col>top</table-col>
-        <table-col>String | Number</table-col>
-        <table-col>No</table-col>
-        <table-col>Makes the table header sticky at the top. Accepts a pixel or percentage value.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>top</table-col>
+                  <table-col>String | Number</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Makes the table header sticky at the top. Accepts a pixel or percentage value.</table-col>
+              </table-row>
 
-    <table-row>
-        <table-col>bottom</table-col>
-        <table-col>String | Number</table-col>
-        <table-col>No</table-col>
-        <table-col>Makes the table footer sticky at the bottom. Accepts a pixel or percentage value.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>bottom</table-col>
+                  <table-col>String | Number</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Makes the table footer sticky at the bottom. Accepts a pixel or percentage value.</table-col>
+              </table-row>
 
-    <table-row>
-        <table-col>left</table-col>
-        <table-col>String | Number</table-col>
-        <table-col>No</table-col>
-        <table-col>Makes a column sticky on the left side. Accepts a pixel or percentage value.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>left</table-col>
+                  <table-col>String | Number</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Makes a column sticky on the left side. Accepts a pixel or percentage value.</table-col>
+              </table-row>
 
-    <table-row>
-        <table-col>right</table-col>
-        <table-col>String | Number</table-col>
-        <table-col>No</table-col>
-        <table-col>Makes a column sticky on the right side. Accepts a pixel or percentage value.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>right</table-col>
+                  <table-col>String | Number</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Makes a column sticky on the right side. Accepts a pixel or percentage value.</table-col>
+              </table-row>
 
-    <table-row>
-        <table-col>head</table-col>
-        <table-col>String</table-col>
-        <table-col>No</table-col>
-        <table-col>Custom class list for styling the table header.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>head</table-col>
+                  <table-col>String</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Custom class list for styling the table header.</table-col>
+              </table-row>
 
-    <table-row>
-        <table-col>body</table-col>
-        <table-col>String</table-col>
-        <table-col>No</table-col>
-        <table-col>Custom class list for styling the table body.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>body</table-col>
+                  <table-col>String</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Custom class list for styling the table body.</table-col>
+              </table-row>
 
-    <table-row>
-        <table-col>odd</table-col>
-        <table-col>String</table-col>
-        <table-col>No</table-col>
-        <table-col>Custom class list for styling odd table rows.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>odd</table-col>
+                  <table-col>String</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Custom class list for styling odd table rows.</table-col>
+              </table-row>
 
-    <table-row>
-        <table-col>even</table-col>
-        <table-col>String</table-col>
-        <table-col>No</table-col>
-        <table-col>Custom class list for styling even table rows.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>even</table-col>
+                  <table-col>String</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Custom class list for styling even table rows.</table-col>
+              </table-row>
 
-    <table-row>
-        <table-col>foot</table-col>
-        <table-col>String</table-col>
-        <table-col>No</table-col>
-        <table-col>Custom class list for styling the table footer.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>foot</table-col>
+                  <table-col>String</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Custom class list for styling the table footer.</table-col>
+              </table-row>
 
-    <table-row>
-        <table-col>sticky</table-col>
-        <table-col>Boolean</table-col>
-        <table-col>No</table-col>
-        <table-col>Enables sticky positioning for headers, footers, or columns if any sticky props are set.</table-col>
-    </table-row>
+              <table-row>
+                  <table-col>sticky</table-col>
+                  <table-col>Boolean</table-col>
+                  <table-col>No</table-col>
+                  <table-col>Enables sticky positioning for headers, footers, or columns if any sticky props are set.</table-col>
+              </table-row>
 
-</layout-table>
-
-
+          </layout-table>
 
 
+
+<a name="OutlineExample"></a>
 <h2 class="tx-primary tx-upper tx-30 py-20">
-  Table Component Examples
+  Outline Example
 </h2>
-
-
 
 <!-- Description for Example 1 -->
 <div class="mb-10">
-  The following example showcases a simple table layout using <code>layout-table</code>. 
-  It includes a header row and multiple data rows with alternating background colors.
+  A simple table using layout-table with alternating row colors.
 </div>
 
 
@@ -385,6 +386,13 @@
   &lt;/table-row&gt;
 &lt;/layout-table&gt;
 </ide-code>
+
+
+
+<a name="TableWithAdditionalColumn"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Table with Additional Column
+</h2>
 
 <!-- Description for Example 2 -->
 <div class="mb-10">
@@ -459,6 +467,11 @@
 </ide-code>
 
 
+<a name="TableWithBorders"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Table with Borders
+</h2>
+
 <div class="mb-10">
   This table includes a solid border around all cells for better visibility.
 </div>
@@ -529,6 +542,11 @@
 &lt;/layout-table&gt;
 </ide-code>
 
+
+<a name="StripedTable"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Striped Table
+</h2>
 
 <div class="mb-10">
   A striped table helps differentiate rows by alternating background colors.
@@ -602,6 +620,10 @@
 </ide-code>
 
 
+<a name="TableWithStatusLabels"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Table with Status Labels
+</h2>
 
 <div class="mb-10">
   A table with status labels and icons for better user experience.
@@ -691,6 +713,12 @@
 &lt;/layout-table&gt;
 </ide-code>
 
+
+<a name="ResponsiveTable"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  ResponsiveTable
+</h2>
+
 <div class="mb-10">
   This table is responsive and allows horizontal scrolling on smaller screens.
 </div>
@@ -773,6 +801,12 @@
 </ide-code>
 
 
+
+<a name="TableWithCustomColumnWidths"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Table with Custom Column Widths
+</h2>
+
 <div class="mb-10">
   This example demonstrates how to set custom column widths.
 </div>
@@ -844,6 +878,67 @@
 </ide-code>
 
 
+
+
+<a name="TableWithIcons"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Table with Icons
+</h2>
+<div class="mb-10">
+  This table uses element-icon components for statuses and action buttons.
+</div>
+
+<layout-table top head="py-12 px-10 bg-primary tx-white" body="py-12 px-10" odd="bg-t-0" even="bg-t-1">
+  <table-head>User</table-head>
+  <table-head>Email</table-head>
+  <table-head>Status</table-head>
+  <table-head>Actions</table-head>
+
+  <table-row>
+    <table-col>John Doe</table-col>
+    <table-col>john@example.com</table-col>
+    <table-col>
+      <span class="flex items-center">
+        <element-icon name="check-circle" class="tx-success mr-6"></element-icon> Active
+      </span>
+    </table-col>
+    <table-col>
+      <element-icon name="eye" class="mr-5 tx-info"></element-icon>
+      <element-icon name="edit" class="mr-5 tx-warning"></element-icon>
+      <element-icon name="trash" class="tx-error"></element-icon>
+    </table-col>
+  </table-row>
+
+  <table-row>
+    <table-col>Mary Jane</table-col>
+    <table-col>mary@example.com</table-col>
+    <table-col>
+      <span class="flex items-center">
+        <element-icon name="clock" class="tx-warning mr-6"></element-icon> Pending
+      </span>
+    </table-col>
+    <table-col>
+      <element-icon name="eye" class="mr-5 tx-info"></element-icon>
+      <element-icon name="edit" class="mr-5 tx-warning"></element-icon>
+      <element-icon name="trash" class="tx-error"></element-icon>
+    </table-col>
+  </table-row>
+
+  <table-row>
+    <table-col>Mike Brown</table-col>
+    <table-col>mike@example.com</table-col>
+    <table-col>
+      <span class="flex items-center">
+        <element-icon name="times-circle" class="tx-error mr-6"></element-icon> Suspended
+      </span>
+    </table-col>
+    <table-col>
+      <element-icon name="eye" class="mr-5 tx-info"></element-icon>
+      <element-icon name="edit" class="mr-5 tx-warning"></element-icon>
+      <element-icon name="trash" class="tx-error"></element-icon>
+    </table-col>
+  </table-row>
+</layout-table>
 
 
 

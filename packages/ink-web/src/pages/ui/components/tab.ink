@@ -56,13 +56,13 @@
             {_('On this page')}
           </h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#pager#">{_('Tab')}</a>
+            <a class="block tx-t-0" href="#pager">{_('Tab')}</a>
             <nav class="pl-20">
-              <a class="block tx-t-1" href="#props">{_('Props')}</a>
-              <a class="block tx-t-1" href="#PaginationExample">{_('Pagination Example')}</a>
-              <a class="block tx-t-1" href="#CustomRangeAndPageSelection">{_('Custom Range and Page Selection')}</a>
-              <a class="block tx-t-1" href="#CustomControlsAndStyles">{_('Custom Controls and Styles')}</a>
-              <a class="block tx-t-1" href="#PaginationWithNoForwardOrRewind">{_('Pagination with No Forward or Rewind')}</a>
+              <a class="block tx-t-1" href="#props">• {_('Props')}</a>
+              <a class="block tx-t-1" href="#TabExamples">• {_('Tab Examples')}</a>
+              <a class="block tx-t-1" href="#HorizontalTabsWithDifferentActiveState">• {_('Horizontal Tabs with Different Active State')}</a>
+              <a class="block tx-t-1" href="#CustomStyleTabs">• {_('Custom Style Tabs')}</a>
+
               
             </nav>
           </nav>
@@ -93,7 +93,7 @@
           </h1>
           <ide-app title="Editor" class="py-20 ">
             <ide-code class="scroll-y-auto" lang="js" trim>
-              import Badge from '@stackpress/ink-ui/element/tab';
+              import Tab from '@stackpress/ink-ui/element/tab';
             </ide-code>
           </ide-app>
 
@@ -159,7 +159,7 @@
                 </layout-table>
 
 
-
+                  <a name="TabExamples"></a>
                   <h2 class="tx-primary tx-upper tx-30 py-20">
                         {_('Tab Examples')}
                     </h2>
@@ -306,7 +306,7 @@
                     </div>
                     `}</ide-code>
 
-
+                <a name="HorizontalTabsWithDifferentActiveState"></a>
                 <h2 class="tx-primary tx-upper tx-30 py-20">
                   {_('Horizontal Tabs with Different Active State')}
                 </h2>
@@ -382,7 +382,7 @@
                 `}</ide-code>
 
 
-
+              <a name="CustomStyleTabs"></a>
               <h2 class="tx-primary tx-upper tx-30 py-20">
                 {_('Custom Style Tabs')}
               </h2>
@@ -462,8 +462,8 @@
               <element-icon name="chevron-left" theme="tx-1" />
               {_('Progress Bars')}
             </a>
-            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/tables.html">
-              {_('Tablles')}
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/table.html">
+              {_('Tables')}
               <element-icon name="chevron-right" theme="tx-1" />
             </a>
           </nav>

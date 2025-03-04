@@ -79,14 +79,14 @@
             link-primary
             spacing={2}
           />
-      </nav
-        <a name=" Notify"></a>
+      </nav>
+        <a name="Notify"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">
             {_(' Notify')}
           </h1>
           <ide-app title="Editor" class="py-20 ">
             <ide-code class="scroll-y-auto" lang="js" trim>
-              import Badge from '@stackpress/ink-ui/element/notify';
+              import Notify from '@stackpress/ink-ui/element/notify';
             </ide-code>
           </ide-app>
 

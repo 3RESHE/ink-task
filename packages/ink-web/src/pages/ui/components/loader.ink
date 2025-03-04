@@ -54,12 +54,14 @@
             {_('On this page')}
             </h6>
             <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="# Loaders">{_(' Loaders')}</a>
+            <a class="block tx-t-0" href="#Loaders">{_(' Loaders')}</a>
             <nav class="pl-20">
                 <a class="block tx-t-1" href="#props">• {_('Props')}</a>
-                <a class="block tx-t-1" href="#types">• {_('Types')}</a>
-                <a class="block tx-t-1" href="#size">• {_('Size')}</a>
-                <a class="block tx-t-1" href="#color">• {_('Color')}</a>
+                <a class="block tx-t-1" href="#Types">• {_('Types')}</a>
+                <a class="block tx-t-1" href="#CustomSize">• {_('Custom Size')}</a>
+                <a class="block tx-t-1" href="#CustomSpeed">• {_('Custom Speed')}</a>
+                <a class="block tx-t-1" href="#SliceEffect">• {_('Slice Effect')}</a>
+                <a class="block tx-t-1" href="#CustomThickness&BorderStyles">• {_('Custom Thickness & Border Styles')}</a>
             </nav>
             </nav>
         </menu>
@@ -82,7 +84,7 @@
 
 
         
-        <a name=" Loaders"></a>
+        <a name="Loaders"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">
             {_(' Loaders')}
           </h1>
@@ -160,7 +162,7 @@
       </layout-table>
 
 
-    
+      <a name="Types"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">
             {_('Types')}
           </h2>
@@ -201,7 +203,7 @@
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-loader dashed size="40" class="tx-error"></element-loader>
           `}</ide-code>
-
+            <a name="CustomSize"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">
             {_('Custom Size')}
           </h2>
@@ -219,7 +221,7 @@
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-loader dotted size="60" class="tx-warning"></element-loader>
           `}</ide-code>
-
+            <a name="CustomSpeed"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">
             {_('Custom Speed')}
           </h2>
@@ -237,7 +239,7 @@
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-loader size="40" speed="500" class="tx-info"></element-loader>
           `}</ide-code>
-
+            <a name="SliceEffect"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">
             {_('Slice Effect')}
           </h2>
@@ -256,6 +258,8 @@
             <element-loader info slice="2"></element-loader>
           `}</ide-code>
 
+
+              <a name="CustomThickness&BorderStyles"></a>
             <h2 class="tx-primary tx-upper tx-30 py-20">
               {_('Custom Thickness & Border Styles')}
             </h2>

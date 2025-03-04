@@ -1890,7 +1890,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 <!-- Basic Usage -->
 `, false),
-                  import_Document.default.createElement("h3", { "class": `tx-24 mt-20` }, [
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`Basic Usage`, false)
                   ]),
                   import_Document.default.createText(`
@@ -1956,7 +1956,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("a", { "name": `link-styling` }, []),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("h3", { "class": `tx-24 mt-20` }, [
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`Link Styling`, false)
                   ]),
                   import_Document.default.createText(`
@@ -2013,7 +2013,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("a", { "name": `separator-variants` }, []),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("h3", { "class": `tx-24 mt-20` }, [
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`Separator Variants`, false)
                   ]),
                   import_Document.default.createText(`
@@ -2094,7 +2094,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("a", { "name": `icon-styling` }, []),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("h3", { "class": `tx-24 mt-20` }, [
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`Icon Styling`, false)
                   ]),
                   import_Document.default.createText(`
@@ -2175,7 +2175,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("a", { "name": `size-variants` }, []),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("h3", { "class": `tx-24 mt-20` }, [
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`Size Variants`, false)
                   ]),
                   import_Document.default.createText(`
@@ -2229,10 +2229,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
 
           <!-- Spacing & Customization -->
            `, false),
-                  import_Document.default.createElement("a", { "name": `spacing-and-customization` }, []),
+                  import_Document.default.createElement("a", { "name": `spacing-and-customizations` }, []),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("h3", { "class": `tx-24 mt-20` }, [
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`Spacing & Customization`, false)
                   ]),
                   import_Document.default.createText(`
