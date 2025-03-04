@@ -4,7 +4,7 @@
 <link rel="import" type="component" href="@/components/api/docs.ink" name="api-docs" />
 <link rel="import" type="component" href="@/components/i18n/translate.ink" name="i18n-translate" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/panel.ink" name="panel-layout" />
-<link rel="import" type="component" href="@stackpress/ink-ui/form/button.ink" name="form-button" />
+<link rel="import" type="component" href="@stackpress/ink-ui/form/button.ink" name="form-button"/>
 <link rel="import" type="component" href="@stackpress/ink-ui/form/control.ink" name="form-control" />
 <link rel="import" type="component" href="@stackpress/ink-ui/form/fieldset.ink" name="form-fieldset" />
 <link rel="import" type="component" href="@stackpress/ink-ui/field/color.ink" name="field-color" />
@@ -90,7 +90,7 @@
                   </form-button>
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/button.html"
                 >
                   Buttons
@@ -103,7 +103,7 @@
                   </form-control>
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/control.html"
                 >
                   Control
@@ -116,7 +116,7 @@
                   </form-fieldset>
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/fieldset.html"
                 >
                   Fieldset
@@ -139,7 +139,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/checkbox.html"
                 >
                   Checkbox
@@ -150,7 +150,7 @@
                   <field-color name="color" placeholder="Enter color" />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/color.html"
                 >
                   Color
@@ -175,7 +175,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/country.html"
                 >
                   Country
@@ -200,7 +200,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/currency.html"
                 >
                   Currency
@@ -216,7 +216,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/date.html"
                 >
                   Date
@@ -232,7 +232,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/datetime.html"
                 >
                   Datetime
@@ -250,7 +250,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/editor.html"
                 >
                   Editor
@@ -266,7 +266,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/file.html"
                 >
                   File
@@ -283,7 +283,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/filelist.html"
                 >
                   Filelist
@@ -298,7 +298,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/input.html"
                 >
                   Input
@@ -307,7 +307,7 @@
               <div class="basis-third-10 lg-basis-half-10 md-basis-full">
                 <div class="bg-t-3 h-120 flex flex-center"></div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/knob.html"
                 >
                   Knob
@@ -324,7 +324,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/markdown.html"
                 >
                   Markdown
@@ -335,7 +335,7 @@
                   <field-mask mask="999-999-9999" placeholder="999-999-9999" />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/mask.html"
                 >
                   Mask
@@ -352,7 +352,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/metadata.html"
                 >
                   Metadata
@@ -370,7 +370,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/number.html"
                 >
                   Number
@@ -385,7 +385,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/password.html"
                 >
                   Password
@@ -411,7 +411,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/radio.html"
                 >
                   Radio
@@ -422,7 +422,7 @@
                   <field-range name="range" min="0" max="100" step="10" value="0" />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/range.html"
                 >
                   Range
@@ -438,7 +438,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/rating.html"
                 >
                   Rating
@@ -471,7 +471,7 @@
                   </field-select>
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/select.html"
                 >
                   Select
@@ -487,7 +487,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/slug.html"
                 >
                   Slug
@@ -504,7 +504,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/switch.html"
                 >
                   Switch
@@ -518,7 +518,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/taglist.html"
                 >
                   Taglist
@@ -533,7 +533,7 @@
                   >Some Text</field-textarea>
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/textarea.html"
                 >
                   Textarea
@@ -549,7 +549,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/textlist.html"
                 >
                   Textlist
@@ -565,7 +565,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/time.html"
                 >
                   Time
@@ -583,7 +583,7 @@
                   />
                 </div>
                 <a 
-                  class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                  class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                   href="/ink/ui/form/wysiwyg.html"
                 >
                   WYSIWYG

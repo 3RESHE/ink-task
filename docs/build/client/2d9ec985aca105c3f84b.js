@@ -50395,7 +50395,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/button.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/button.html` }, [
                           import_Document.default.createText(`
                   Buttons
                 `, false)
@@ -50423,7 +50423,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/control.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/control.html` }, [
                           import_Document.default.createText(`
                   Control
                 `, false)
@@ -50451,7 +50451,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/fieldset.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/fieldset.html` }, [
                           import_Document.default.createText(`
                   Fieldset
                 `, false)
@@ -50488,7 +50488,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/checkbox.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/checkbox.html` }, [
                           import_Document.default.createText(`
                   Checkbox
                 `, false)
@@ -50510,7 +50510,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/color.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/color.html` }, [
                           import_Document.default.createText(`
                   Color
                 `, false)
@@ -50532,7 +50532,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/country.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/country.html` }, [
                           import_Document.default.createText(`
                   Country
                 `, false)
@@ -50554,7 +50554,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/currency.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/currency.html` }, [
                           import_Document.default.createText(`
                   Currency
                 `, false)
@@ -50576,7 +50576,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/date.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/date.html` }, [
                           import_Document.default.createText(`
                   Date
                 `, false)
@@ -50598,7 +50598,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/datetime.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/datetime.html` }, [
                           import_Document.default.createText(`
                   Datetime
                 `, false)
@@ -50620,7 +50620,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/editor.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/editor.html` }, [
                           import_Document.default.createText(`
                   Editor
                 `, false)
@@ -50642,7 +50642,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/file.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/file.html` }, [
                           import_Document.default.createText(`
                   File
                 `, false)
@@ -50664,7 +50664,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/filelist.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/filelist.html` }, [
                           import_Document.default.createText(`
                   Filelist
                 `, false)
@@ -50686,7 +50686,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/input.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/input.html` }, [
                           import_Document.default.createText(`
                   Input
                 `, false)
@@ -50702,7 +50702,7 @@ input:checked + span::after {
                         import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, []),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/knob.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/knob.html` }, [
                           import_Document.default.createText(`
                   Knob
                 `, false)
@@ -50724,7 +50724,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/markdown.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/markdown.html` }, [
                           import_Document.default.createText(`
                   Markdown
                 `, false)
@@ -50746,7 +50746,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/mask.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/mask.html` }, [
                           import_Document.default.createText(`
                   Mask
                 `, false)
@@ -50768,7 +50768,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/metadata.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/metadata.html` }, [
                           import_Document.default.createText(`
                   Metadata
                 `, false)
@@ -50790,7 +50790,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/number.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/number.html` }, [
                           import_Document.default.createText(`
                   Number
                 `, false)
@@ -50812,7 +50812,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/password.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/password.html` }, [
                           import_Document.default.createText(`
                   Password
                 `, false)
@@ -50837,7 +50837,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/radio.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/radio.html` }, [
                           import_Document.default.createText(`
                   Radio
                 `, false)
@@ -50859,7 +50859,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/range.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/range.html` }, [
                           import_Document.default.createText(`
                   Range
                 `, false)
@@ -50881,7 +50881,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/rating.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/rating.html` }, [
                           import_Document.default.createText(`
                   Rating
                 `, false)
@@ -50928,7 +50928,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/select.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/select.html` }, [
                           import_Document.default.createText(`
                   Select
                 `, false)
@@ -50950,7 +50950,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/slug.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/slug.html` }, [
                           import_Document.default.createText(`
                   Slug
                 `, false)
@@ -50972,7 +50972,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/switch.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/switch.html` }, [
                           import_Document.default.createText(`
                   Switch
                 `, false)
@@ -50994,7 +50994,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/taglist.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/taglist.html` }, [
                           import_Document.default.createText(`
                   Taglist
                 `, false)
@@ -51018,7 +51018,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/textarea.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/textarea.html` }, [
                           import_Document.default.createText(`
                   Textarea
                 `, false)
@@ -51040,7 +51040,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/textlist.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/textlist.html` }, [
                           import_Document.default.createText(`
                   Textlist
                 `, false)
@@ -51062,7 +51062,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/time.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/time.html` }, [
                           import_Document.default.createText(`
                   Time
                 `, false)
@@ -51084,7 +51084,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-white p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/wysiwyg.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/wysiwyg.html` }, [
                           import_Document.default.createText(`
                   WYSIWYG
                 `, false)
