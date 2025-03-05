@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\getting-started.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\docs\getting-started.ink
   var getting_started_exports = {};
   __export(getting_started_exports, {
     default: () => GettingStarted_89fca0431082ba100758
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\getting-started.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\docs\getting-started.ink
   var GettingStarted_89fca0431082ba100758 = class extends import_Document2.default {
     id() {
       return "89fca0431082ba100758";

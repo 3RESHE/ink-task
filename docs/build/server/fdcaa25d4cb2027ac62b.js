@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\index.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\docs\index.ink
   var docs_exports = {};
   __export(docs_exports, {
     default: () => Index_fdcaa25d4cb2027ac62b
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\index.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\docs\index.ink
   var Index_fdcaa25d4cb2027ac62b = class extends import_Document2.default {
     id() {
       return "fdcaa25d4cb2027ac62b";

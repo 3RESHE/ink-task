@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\notify.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\notify.ink
   var notify_exports = {};
   __export(notify_exports, {
     default: () => Notify_21df6dae2cf18213bc74
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\notify.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\notify.ink
   var Notify_21df6dae2cf18213bc74 = class extends import_Document2.default {
     id() {
       return "21df6dae2cf18213bc74";
@@ -1856,226 +1856,73 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
             
-            `, false),
+
+
+`, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Notification Types")),
-                    import_Document.default.createText(`
-            `, false)
+                    import_Document.default.createText(`Notification Types`, false)
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
+`, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-            Notifications support different types:  
-          `, false),
+  Notifications support different types:
+  `, false),
                     import_Document.default.createElement("span", { "class": `tx-info tx-italic p-3` }, [
                       import_Document.default.createText(`info`, false)
                     ]),
                     import_Document.default.createText(`,
-          `, false),
+  `, false),
                     import_Document.default.createElement("span", { "class": `tx-warning tx-italic p-3` }, [
                       import_Document.default.createText(`warning`, false)
                     ]),
                     import_Document.default.createText(`,
-          `, false),
+  `, false),
                     import_Document.default.createElement("span", { "class": `tx-success tx-italic p-3` }, [
                       import_Document.default.createText(`success`, false)
                     ]),
                     import_Document.default.createText(`,
-          `, false),
+  `, false),
                     import_Document.default.createElement("span", { "class": `tx-error tx-italic p-3` }, [
                       import_Document.default.createText(`error`, false)
                     ]),
                     import_Document.default.createText(`.
-            `, false)
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+<!-- Ink CSS Buttons triggering JavaScript notifications -->
+`, false),
+                  import_Document.default.createElement("div", { "class": `flex gap-10` }, [
                     import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "type": `info`, "message": `This is an info notification!`, "timeout": `5000` }, []),
-                      import_Document.default.createText(`
-            `, false)
+  `, false),
+                    import_Document.default.createElement("button", { "onclick": `document.querySelector('element-notify').notify('info', 'This is an info message!')` }, [
+                      import_Document.default.createText(`Show Info`, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify type="info" message="This is an info notification!" timeout="5000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "type": `warning`, "message": `This is a warning notification!`, "timeout": `5000` }, []),
-                      import_Document.default.createText(`
-            `, false)
+  `, false),
+                    import_Document.default.createElement("button", { "onclick": `document.querySelector('element-notify').notify('warning', 'This is a warning message!')` }, [
+                      import_Document.default.createText(`Show Warning`, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify type="warning" message="This is a warning notification!" timeout="5000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "type": `error`, "message": `This is an error notification!`, "timeout": `5000` }, []),
-                      import_Document.default.createText(`
-            `, false)
+  `, false),
+                    import_Document.default.createElement("button", { "onclick": `document.querySelector('element-notify').notify('success', 'This is a success message!')` }, [
+                      import_Document.default.createText(`Show Success`, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify type="error" message="This is an error notification!" timeout="5000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "type": `success`, "message": `This is a success notification!`, "timeout": `5000` }, []),
-                      import_Document.default.createText(`
-            `, false)
+  `, false),
+                    import_Document.default.createElement("button", { "onclick": `document.querySelector('element-notify').notify('error', 'This is an error message!')` }, [
+                      import_Document.default.createText(`Show Error`, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify type="success" message="This is a success notification!" timeout="5000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Custom Position")),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Notifications can be positioned at the top, bottom, left, right, or center using the respective props.
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "top": true, "left": true, "message": `Positioned at the top left!`, "timeout": `5000` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify top left message="Positioned at the top left!" timeout="5000"></element-notify>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Custom Timeout")),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            You can control the duration of the notification before it disappears using the `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`timeout`, false)
-                    ]),
-                    import_Document.default.createText(` prop.
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-notify", { "type": `info`, "message": `Custom timeout notification!`, "timeout": `8000` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify type="info" message="Custom timeout notification!" timeout="8000"></element-notify>
-            `)
-                  ]),
+<!-- Notification Component -->
+`, false),
+                  import_Document.default.createElement("element-notify", {}, []),
                   import_Document.default.createText(`
 
             `, false),
@@ -2120,6 +1967,8 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     `, false)
             ]),
             import_Document.default.createText(`
+
+  
   `, false)
           ]),
           import_Document.default.createText(`

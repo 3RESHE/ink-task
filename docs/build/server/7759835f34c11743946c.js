@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\progress.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\progress.ink
   var progress_exports = {};
   __export(progress_exports, {
     default: () => Progress_7759835f34c11743946c
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\progress.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\progress.ink
   var Progress_7759835f34c11743946c = class extends import_Document2.default {
     id() {
       return "7759835f34c11743946c";

@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\component-strategy.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\docs\component-strategy.ink
   var component_strategy_exports = {};
   __export(component_strategy_exports, {
     default: () => ComponentStrategy_372513d4ecd8e0233aea
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\component-strategy.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\docs\component-strategy.ink
   var ComponentStrategy_372513d4ecd8e0233aea = class extends import_Document2.default {
     id() {
       return "372513d4ecd8e0233aea";

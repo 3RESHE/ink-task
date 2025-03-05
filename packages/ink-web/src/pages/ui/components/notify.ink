@@ -13,7 +13,6 @@
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table/head.ink" name="table-head" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table/row.ink" name="table-row" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table/col.ink" name="table-col" />
-<link rel="import" type="component" href="@stackpress/ink-ui/element/badge.ink" name="element-badge" />
 <link rel="import" type="component" href="@stackpress/ink-ui/element/notify.ink" name="element-notify" />
 
 <style>
@@ -165,93 +164,28 @@
                 </layout-table>
 
             
-            <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Notification Types')}
-            </h2>
 
-            <div class="mb-10">
-            Notifications support different types:  
-          <span class="tx-info tx-italic p-3">info</span>,
-          <span class="tx-warning tx-italic p-3">warning</span>,
-          <span class="tx-success tx-italic p-3">success</span>,
-          <span class="tx-error tx-italic p-3">error</span>.
-            </div>
 
-            <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-                <element-notify type="info" message="This is an info notification!" timeout="5000"></element-notify>
-            </div>
-            </div>
+<h2 class="tx-primary tx-upper tx-30 py-20">Notification Types</h2>
 
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <element-notify type="info" message="This is an info notification!" timeout="5000"></element-notify>
-            `}</ide-code>
+<div class="mb-10">
+  Notifications support different types:
+  <span class="tx-info tx-italic p-3">info</span>,
+  <span class="tx-warning tx-italic p-3">warning</span>,
+  <span class="tx-success tx-italic p-3">success</span>,
+  <span class="tx-error tx-italic p-3">error</span>.
+</div>
 
-            <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-                <element-notify type="warning" message="This is a warning notification!" timeout="5000"></element-notify>
-            </div>
-            </div>
+<!-- Ink CSS Buttons triggering JavaScript notifications -->
+<div class="flex gap-10">
+  <button onclick="document.querySelector('element-notify').notify('info', 'This is an info message!')">Show Info</button>
+  <button onclick="document.querySelector('element-notify').notify('warning', 'This is a warning message!')">Show Warning</button>
+  <button onclick="document.querySelector('element-notify').notify('success', 'This is a success message!')">Show Success</button>
+  <button onclick="document.querySelector('element-notify').notify('error', 'This is an error message!')">Show Error</button>
+</div>
 
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <element-notify type="warning" message="This is a warning notification!" timeout="5000"></element-notify>
-            `}</ide-code>
-
-            <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-                <element-notify type="error" message="This is an error notification!" timeout="5000"></element-notify>
-            </div>
-            </div>
-
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <element-notify type="error" message="This is an error notification!" timeout="5000"></element-notify>
-            `}</ide-code>
-
-            <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-                <element-notify type="success" message="This is a success notification!" timeout="5000"></element-notify>
-            </div>
-            </div>
-
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <element-notify type="success" message="This is a success notification!" timeout="5000"></element-notify>
-            `}</ide-code>
-
-            <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Custom Position')}
-            </h2>
-
-            <div class="mb-10">
-            Notifications can be positioned at the top, bottom, left, right, or center using the respective props.
-            </div>
-
-            <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-                <element-notify top left message="Positioned at the top left!" timeout="5000"></element-notify>
-            </div>
-            </div>
-
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <element-notify top left message="Positioned at the top left!" timeout="5000"></element-notify>
-            `}</ide-code>
-
-            <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Custom Timeout')}
-            </h2>
-
-            <div class="mb-10">
-            You can control the duration of the notification before it disappears using the <code>timeout</code> prop.
-            </div>
-
-            <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-                <element-notify type="info" message="Custom timeout notification!" timeout="8000"></element-notify>
-            </div>
-            </div>
-
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <element-notify type="info" message="Custom timeout notification!" timeout="8000"></element-notify>
-            `}</ide-code>
+<!-- Notification Component -->
+<element-notify></element-notify>
 
             <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/loader.html">
@@ -267,5 +201,7 @@
         </api-docs>
       </main>
     </panel-layout>
+
+  
   </body>
 </html>
