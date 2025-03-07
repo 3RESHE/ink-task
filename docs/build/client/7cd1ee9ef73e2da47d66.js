@@ -5171,6 +5171,7 @@ var InkAPI = (() => {
       ];
       return [
         import_Document.default.createText(`
+
 `, false),
         import_Document.default.createElement("html", {}, [
           import_Document.default.createText(`
@@ -5829,7 +5830,6 @@ var InkAPI = (() => {
               ]),
               import_Document.default.createText(`
 
-
       `, false),
               import_Document.default.createElement("aside", { "right": true }, [
                 import_Document.default.createText(`
@@ -5849,8 +5849,8 @@ var InkAPI = (() => {
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#pager#` }, [
-                      ...this._toNodeList(_("Tab"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#pager` }, [
+                      ...this._toNodeList(_("Tooltips"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -5892,9 +5892,18 @@ var InkAPI = (() => {
                         ...this._toNodeList(_("Centered Text and Curved Border"))
                       ]),
                       import_Document.default.createText(`
-              
-
-              
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TooltipWithCustomCurve` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Custom Curve Radius"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TooltipWithMultiPosition` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Multi-Position Tooltip"))
+                      ]),
+                      import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -5908,45 +5917,41 @@ var InkAPI = (() => {
               ]),
               import_Document.default.createText(`
 
-
-
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-      `, false),
+        `, false),
                 import_Document.default.createElement("api-docs", {}, [
                   import_Document.default.createText(`
-        `, false),
+          `, false),
                   import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
                     import_Document.default.createText(`
-          `, false),
+            `, false),
                     import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
                     import_Document.default.createText(`
-      `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-
-        
-        `, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `pager` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_(" Tooltips")),
+                    ...this._toNodeList(_("Tooltips")),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20 ` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Badge from '@stackpress/ink-ui/element/panel';
+              import Tooltip from '@stackpress/ink-ui/element/tooltip';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -5954,929 +5959,972 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-                `, false),
+          <!-- Props Section -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
-                `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-                `, false),
+            `, false),
                     ...this._toNodeList(_("Props")),
                     import_Document.default.createText(`
-                `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-                    `, false),
+          `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Property"))
                     ]),
                     import_Document.default.createText(`
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Type"))
                     ]),
                     import_Document.default.createText(`
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Required"))
                     ]),
                     import_Document.default.createText(`
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`top`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean/String/Number`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_('Positions the tooltip at the top. Can be a boolean, number (px), or string (e.g., "10px").'))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`bottom`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean/String/Number`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_('Positions the tooltip at the bottom. Can be a boolean, number (px), or string (e.g., "10px").'))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`left`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean/String/Number`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_('Positions the tooltip to the left. Can be a boolean, number (px), or string (e.g., "10px").'))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`right`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean/String/Number`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_('Positions the tooltip to the right. Can be a boolean, number (px), or string (e.g., "10px").'))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`color`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_('Sets the tooltip text color (e.g., "info", "primary", "success").'))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`white`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Sets the tooltip text to white."))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`black`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Sets the tooltip text to black."))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`info`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Sets the tooltip text to an informational color (blue)."))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`warning`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Sets the tooltip text to a warning color (yellow)."))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`success`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Sets the tooltip text to a success color (green)."))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`error`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Sets the tooltip text to an error color (red)."))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`muted`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Sets the tooltip text to a muted color (gray)."))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`primary`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Sets the tooltip text to a primary color (brand color)."))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`secondary`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Sets the tooltip text to a secondary color."))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`curved`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Applies a curved border to the tooltip."))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`curve`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Specifies the radius of the tooltip's border."))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`center`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Centers the tooltip text."))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`padding`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Sets the padding inside the tooltip (in pixels)."))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`opacity`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Adjusts the opacity of the tooltip (0-100)."))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`width`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String/Number`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_('Sets the width of the tooltip. If "auto", it adjusts automatically. Can also be a number (px).'))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                    `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`background`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                        `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Sets the background color of the tooltip."))
                       ]),
                       import_Document.default.createText(`
-                    `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-                    `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          <!-- Tooltip with Info Background -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `TooltipWithInfoBackground` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     ...this._toNodeList(_("Tooltip with Info Background")),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     ...this._toNodeList(_('This example demonstrates a tooltip with an info background. It appears above the text with curved corners, some padding, and an opacity of 80%. The tooltip shows when you hover over the "Hover me!" text, positioned above it.')),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-<!-- Boxed Tooltip Example -->
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center p-20 mb-20` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `tx-center tooltip-trigger` }, [
                       import_Document.default.createText(`
-    Hover me!
-    `, false),
+              Hover me!
+              `, false),
                       import_Document.default.createElement("element-tip", { "background-info": true, "curved": true, "top": `-30`, "left": `50`, "padding": `5`, "opacity": `80`, "width": `150` }, [
                         import_Document.default.createText(`
-      This is the first and last name
-    `, false)
+                This is the first and last name
+              `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-  <element-tip 
-    background-info
-    curved
-    top="-30"
-    left="50"
-    padding="5"
-    opacity="80"
-    width="150"
-  >
-    This is the first and last name
-  </element-tip>
-`)
+            <element-tip 
+              background-info
+              curved
+              top="-30"
+              left="50"
+              padding="5"
+              opacity="80"
+              width="150"
+            >
+              This is the first and last name
+            </element-tip>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          <!-- Tooltip with Success Background -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `TooltipWithSuccessBackground` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     ...this._toNodeList(_("Tooltip with Success Background")),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     ...this._toNodeList(_("This example shows a tooltip with a success background (green). The tooltip is positioned to the bottom-right of the element, with a subtle curve and padding.")),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-<!-- Boxed Tooltip Example -->
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center p-20 mb-20` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `tx-center tooltip-trigger` }, [
                       import_Document.default.createText(`
-    Hover me to see success tooltip!
-    `, false),
+              Hover me to see success tooltip!
+              `, false),
                       import_Document.default.createElement("element-tip", { "background-success": true, "curved": true, "bottom": `10`, "right": `10`, "padding": `10`, "opacity": `90` }, [
                         import_Document.default.createText(`
-      Successfully completed!
-    `, false)
+                Successfully completed!
+              `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-  <element-tip 
-    background-success
-    curved
-    bottom="10"
-    right="10"
-    padding="10"
-    opacity="90"
-  >
-    Successfully completed!
-  </element-tip>
-`)
+            <element-tip 
+              background-success
+              curved
+              bottom="10"
+              right="10"
+              padding="10"
+              opacity="90"
+            >
+              Successfully completed!
+            </element-tip>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          <!-- Tooltip with Error Background -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `TooltipWithErrorBackground` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     ...this._toNodeList(_("Tooltip with Error Background")),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     ...this._toNodeList(_("This example demonstrates a tooltip with an error background (red) that appears on hover. The tooltip has custom width, and the text is displayed with some padding and a background color. It appears above the text and is aligned centrally.")),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-<!-- Boxed Tooltip Example -->
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center p-20 mb-20` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `tx-center tooltip-trigger` }, [
                       import_Document.default.createText(`
-    Hover me to see error tooltip!
-    `, false),
+              Hover me to see error tooltip!
+              `, false),
                       import_Document.default.createElement("element-tip", { "background-error": true, "curved": true, "top": `20`, "left": `50`, "padding": `8`, "opacity": `95`, "width": `180` }, [
                         import_Document.default.createText(`
-      An error has occurred.
-    `, false)
+                An error has occurred.
+              `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-  <element-tip 
-    background-error
-    curved
-    top="20"
-    left="50"
-    padding="8"
-    opacity="95"
-    width="180"
-  >
-    An error has occurred.
-  </element-tip>
-`)
+            <element-tip 
+              background-error
+              curved
+              top="20"
+              left="50"
+              padding="8"
+              opacity="95"
+              width="180"
+            >
+              An error has occurred.
+            </element-tip>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
-                  import_Document.default.createElement("a", { "name": `TooltipWithWarningackground` }, []),
+          <!-- Tooltip with Warning Background -->
+          `, false),
+                  import_Document.default.createElement("a", { "name": `TooltipWithWarningBackground` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     ...this._toNodeList(_("Tooltip with Warning Background")),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     ...this._toNodeList(_("This example features a tooltip with a warning background (yellow). It appears to the right of the trigger element and has a larger font size for better visibility.")),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-<!-- Boxed Tooltip Example -->
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center p-20 mb-20` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `tx-center tooltip-trigger` }, [
                       import_Document.default.createText(`
-    Hover me to see warning tooltip!
-    `, false),
+              Hover me to see warning tooltip!
+              `, false),
                       import_Document.default.createElement("element-tip", { "background-warning": true, "curved": true, "right": `20`, "padding": `12`, "opacity": `85`, "width": `200` }, [
                         import_Document.default.createText(`
-      Please take caution!
-    `, false)
+                Please take caution!
+              `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-  <element-tip 
-    background-warning
-    curved
-    right="20"
-    padding="12"
-    opacity="85"
-    width="200"
-  >
-    Please take caution!
-  </element-tip>
-`)
+            <element-tip 
+              background-warning
+              curved
+              right="20"
+              padding="12"
+              opacity="85"
+              width="200"
+            >
+              Please take caution!
+            </element-tip>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
-                  import_Document.default.createElement("a", { "name": `TooltipWithCenteredTextaAndCurvedBorder` }, []),
+          <!-- Tooltip with Centered Text and Curved Border -->
+          `, false),
+                  import_Document.default.createElement("a", { "name": `TooltipWithCenteredTextAndCurvedBorder` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     ...this._toNodeList(_("Tooltip with Centered Text and Curved Border")),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     ...this._toNodeList(_("This example demonstrates a tooltip with a centered alignment, and the tooltip has a curved border. The tooltip will be displayed above the text, with subtle styling.")),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-<!-- Boxed Tooltip Example -->
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center p-20 mb-20` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `tx-center tooltip-trigger` }, [
                       import_Document.default.createText(`
-    Hover over me!
-    `, false),
+              Hover over me!
+              `, false),
                       import_Document.default.createElement("element-tip", { "background-muted": true, "curved": true, "top": `-20`, "padding": `8`, "opacity": `80`, "width": `120`, "center": true }, [
                         import_Document.default.createText(`
-      Information about this text.
-    `, false)
+                Information about this text.
+              `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-  <element-tip 
-    background-muted
-    curved
-    top="-20"
-    padding="8"
-    opacity="80"
-    width="120"
-    center
-  >
-    Information about this text.
-  </element-tip>
-`)
+            <element-tip 
+              background-muted
+              curved
+              top="-20"
+              padding="8"
+              opacity="80"
+              width="120"
+              center
+            >
+              Information about this text.
+            </element-tip>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
+          <!-- Tooltip with Custom Curve Radius -->
+          `, false),
+                  import_Document.default.createElement("a", { "name": `TooltipWithCustomCurve` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    import_Document.default.createText(`
             `, false),
+                    ...this._toNodeList(_("Tooltip with Custom Curve Radius")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("This example shows a tooltip with a custom border radius (10px) using the `curve` prop and a primary background. It appears below the trigger text.")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center p-20 mb-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `tx-center tooltip-trigger` }, [
+                      import_Document.default.createText(`
+              Hover me for custom curve!
+              `, false),
+                      import_Document.default.createElement("element-tip", { "background-primary": true, "curve": `10`, "bottom": `10`, "padding": `10`, "opacity": `90`, "width": `160` }, [
+                        import_Document.default.createText(`
+                Custom radius tooltip!
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-tip 
+              background-primary
+              curve="10"
+              bottom="10"
+              padding="10"
+              opacity="90"
+              width="160"
+            >
+              Custom radius tooltip!
+            </element-tip>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          <!-- Navigation -->
+          `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),

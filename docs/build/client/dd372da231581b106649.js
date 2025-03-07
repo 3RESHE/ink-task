@@ -4982,6 +4982,7 @@ var InkAPI = (() => {
       ];
       return [
         import_Document.default.createText(`
+
 `, false),
         import_Document.default.createElement("html", {}, [
           import_Document.default.createText(`
@@ -5684,6 +5685,12 @@ var InkAPI = (() => {
                       ]),
                       import_Document.default.createText(`
               `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#sizes` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Sizes"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#rounded` }, [
                         import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Rounded"))
@@ -5704,16 +5711,33 @@ var InkAPI = (() => {
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#outline` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Outline "))
+                        ...this._toNodeList(_("Outline"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#combine` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#fullWidth` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Combine"))
+                        ...this._toNodeList(_("Full Width"))
                       ]),
                       import_Document.default.createText(`
-              
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#combining` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Combining Props"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#href` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Href"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#flexDisplay` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Flex Display"))
+                      ]),
+                      import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -5729,22 +5753,20 @@ var InkAPI = (() => {
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-
         `, false),
                 import_Document.default.createElement("api-docs", {}, [
                   import_Document.default.createText(`
-                `, false),
+          `, false),
                   import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
                     import_Document.default.createText(`
-          `, false),
+            `, false),
                     import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
                     import_Document.default.createText(`
-      `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-
-        `, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `Buttons` }, []),
                   import_Document.default.createText(`
           `, false),
@@ -5757,12 +5779,12 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20 ` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
                     import_Document.default.createText(`
-             `, false),
+            `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Buttons from '@stackpress/ink-ui/element/Buttons';
+              import Button from '@stackpress/ink-ui/form/button';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -5770,14 +5792,16 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-      `, false),
+          <!-- Props Section -->
+          `, false),
+                  import_Document.default.createElement("a", { "name": `props` }, []),
+                  import_Document.default.createText(`
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     ...this._toNodeList(_("Props"))
                   ]),
                   import_Document.default.createText(`
-
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
                     import_Document.default.createText(`
             `, false),
@@ -5804,24 +5828,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`flex`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Enables display: flex"))
+                        ...this._toNodeList(_('Sets display to "flex".'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5831,24 +5855,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`none`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets display: none"))
+                        ...this._toNodeList(_('Sets display to "none".'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5858,24 +5882,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`inline`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets display: inline"))
+                        ...this._toNodeList(_('Sets display to "inline".'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5885,24 +5909,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`block`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets display: block"))
+                        ...this._toNodeList(_('Sets display to "block".'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5912,24 +5936,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`inline-block`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets display: inline-block (default)"))
+                        ...this._toNodeList(_('Sets display to "inline-block" (default).'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5939,24 +5963,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`inline-flex`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets display: inline-flex"))
+                        ...this._toNodeList(_('Sets display to "inline-flex".'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5966,24 +5990,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`padding`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom padding value"))
+                        ...this._toNodeList(_('Sets custom padding (e.g., "10px", "1em 2em"). Overrides size-based padding.'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5993,24 +6017,78 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`padding-x`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Sets horizontal padding (e.g., "20px"). Overrides size-based padding for x-axis.'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`padding-y`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Sets vertical padding (e.g., "15px"). Overrides size-based padding for y-axis.'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`color`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom text color"))
+                        ...this._toNodeList(_('Sets custom color for text (outline/transparent) or background (solid). E.g., "red", "#fff".'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6020,24 +6098,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`white`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets text color to white"))
+                        ...this._toNodeList(_("Sets text to white (outline/transparent) or background to white (solid)."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6047,24 +6125,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`black`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets text color to black"))
+                        ...this._toNodeList(_("Sets text to black (outline/transparent) or background to black (solid)."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6074,24 +6152,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`info`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies info color"))
+                        ...this._toNodeList(_("Sets info color for text (outline/transparent) or background (solid)."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6101,24 +6179,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`warning`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies warning color"))
+                        ...this._toNodeList(_("Sets warning color for text (outline/transparent) or background (solid)."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6128,24 +6206,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`success`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies success color"))
+                        ...this._toNodeList(_("Sets success color for text (outline/transparent) or background (solid)."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6155,24 +6233,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`error`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies error color"))
+                        ...this._toNodeList(_("Sets error color for text (outline/transparent) or background (solid)."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6182,24 +6260,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`muted`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies muted color"))
+                        ...this._toNodeList(_("Sets muted color for text (outline/transparent) or background (solid). Default for solid."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6209,24 +6287,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`primary`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies primary color"))
+                        ...this._toNodeList(_("Sets primary color for text (outline/transparent) or background (solid)."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6236,24 +6314,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`secondary`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies secondary color"))
+                        ...this._toNodeList(_("Sets secondary color for text (outline/transparent) or background (solid)."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6263,24 +6341,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`theme`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Uses theme-based color"))
+                        ...this._toNodeList(_('Sets a theme-based color (e.g., "t-1") for text (outline/transparent) or background (solid).'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6290,1323 +6368,1501 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`outline`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Outlined style (border applied)"))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`solid`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Solid background (default)"))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`transparent`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Transparent background"))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`full`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets width to 100%"))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`href`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("If provided, renders as <a> instead of <button>"))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-             <!-- Button Sizes -->
-  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`xs`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Extra small size"))
+                        ...this._toNodeList(_("Extra small size (padding: 2px 4px)."))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`sm`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Small size"))
+                        ...this._toNodeList(_("Small size (padding: 5px 10px)."))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`md`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Medium size (default)"))
+                        ...this._toNodeList(_("Medium size (padding: 8px 16px, default if no size specified)."))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`lg`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Large size"))
+                        ...this._toNodeList(_("Large size (padding: 12px 24px)."))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`xl`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Extra large size"))
+                        ...this._toNodeList(_("Extra large size (padding: 15px 30px)."))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`xl2`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("2x Extra large size"))
+                        ...this._toNodeList(_("2x Extra large size (padding: 18px 36px)."))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`xl3`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("3x Extra large size"))
+                        ...this._toNodeList(_("3x Extra large size (padding: 22px 44px)."))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`xl4`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("4x Extra large size"))
+                        ...this._toNodeList(_("4x Extra large size (padding: 26px 52px)."))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`xl5`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("5x Extra large size"))
+                        ...this._toNodeList(_("5x Extra large size (padding: 30px 60px)."))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`curve`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Number`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Sets custom border radius in pixels (e.g., 10 for "10px").'))
+                      ]),
+                      import_Document.default.createText(`
             `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`curved`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets border radius to 4px."))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`rounded`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets border radius to 8px."))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`pill`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets border radius to 999px for pill shape."))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`outline`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets outline style with colored border and white background."))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`solid`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets solid style with colored background and white text (default)."))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`transparent`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets transparent background with colored border and text."))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`full`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets width to 100%."))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`href`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Renders as an <a> tag with the specified URL instead of a <button>."))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-
-`, false),
+          <!-- Types -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `types` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     ...this._toNodeList(_("Types"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  Buttons come in different types:  
-  `, false),
+            Buttons come in different types:  
+            `, false),
                     import_Document.default.createElement("span", { "class": `bg-primary tx-italic p-3` }, [
                       import_Document.default.createText(`primary`, false)
                     ]),
                     import_Document.default.createText(`,  
-  `, false),
+            `, false),
                     import_Document.default.createElement("span", { "class": `bg-secondary tx-italic p-3` }, [
                       import_Document.default.createText(`secondary`, false)
                     ]),
                     import_Document.default.createText(`,  
-  `, false),
+            `, false),
                     import_Document.default.createElement("span", { "class": `bg-success tx-italic p-3` }, [
                       import_Document.default.createText(`success`, false)
                     ]),
                     import_Document.default.createText(`,  
-  `, false),
+            `, false),
                     import_Document.default.createElement("span", { "class": `bg-warning tx-italic p-3` }, [
                       import_Document.default.createText(`warning`, false)
                     ]),
                     import_Document.default.createText(`,  
-  `, false),
+            `, false),
                     import_Document.default.createElement("span", { "class": `bg-error tx-italic p-3` }, [
                       import_Document.default.createText(`error`, false)
                     ]),
                     import_Document.default.createText(`, and  
-  `, false),
+            `, false),
                     import_Document.default.createElement("span", { "class": `bg-muted tx-italic p-3` }, [
                       import_Document.default.createText(`muted`, false)
                     ]),
                     import_Document.default.createText(`.
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "primary": true }, [
                         import_Document.default.createText(`Primary`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button primary>Primary</form-button>
-`)
+            <form-button primary>Primary</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "secondary": true }, [
                         import_Document.default.createText(`Secondary`, false)
                       ]),
                       import_Document.default.createText(` 
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button secondary>Secondary</form-button> 
-`)
+            <form-button secondary>Secondary</form-button> 
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "success": true }, [
                         import_Document.default.createText(`Success`, false)
                       ]),
                       import_Document.default.createText(` 
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button success>Success</form-button> 
-`)
+            <form-button success>Success</form-button> 
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "warning": true }, [
                         import_Document.default.createText(`Warning`, false)
                       ]),
                       import_Document.default.createText(` 
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button warning>Warning</form-button> 
-`)
+            <form-button warning>Warning</form-button> 
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "error": true }, [
                         import_Document.default.createText(`Error`, false)
                       ]),
                       import_Document.default.createText(` 
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button error>Error</form-button> 
-`)
+            <form-button error>Error</form-button> 
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "muted": true }, [
                         import_Document.default.createText(`Muted`, false)
                       ]),
                       import_Document.default.createText(` 
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button muted>Muted</form-button> 
-`)
+            <form-button muted>Muted</form-button> 
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-`, false),
+          <!-- Custom Color -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `customColor` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     ...this._toNodeList(_("Custom Color"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  Buttons can have custom CSS-compatible colors, including HEX codes and named colors using the `, false),
+            Buttons can have custom CSS-compatible colors, including HEX codes and named colors using the `, false),
                     import_Document.default.createElement("code", {}, [
                       import_Document.default.createText(`color`, false)
                     ]),
                     import_Document.default.createText(` attribute.
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "color": `salmon` }, [
                         import_Document.default.createText(`Salmon`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button color="salmon">Salmon</form-button>
-`)
+            <form-button color="salmon">Salmon</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "color": `steelblue` }, [
                         import_Document.default.createText(`Steel Blue`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button color="steelblue">Steel Blue</form-button>
-`)
+            <form-button color="steelblue">Steel Blue</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "color": `#4CAF50` }, [
                         import_Document.default.createText(`Custom Green`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button color="#4CAF50">Custom Green</form-button>
-`)
+            <form-button color="#4CAF50">Custom Green</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-`, false),
+          <!-- Sizes -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `sizes` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     ...this._toNodeList(_("Sizes"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  Buttons have multiple size options:  
-  `, false),
-                    import_Document.default.createElement("span", { "class": ` tx-italic p-3` }, [
+            Buttons have multiple size options:  
+            `, false),
+                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`xs`, false)
                     ]),
                     import_Document.default.createText(`,  
-  `, false),
-                    import_Document.default.createElement("span", { "class": ` tx-italic p-3` }, [
+            `, false),
+                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`sm`, false)
                     ]),
                     import_Document.default.createText(`,  
-  `, false),
-                    import_Document.default.createElement("span", { "class": ` tx-italic p-3` }, [
+            `, false),
+                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`md`, false)
                     ]),
                     import_Document.default.createText(`,  
-  `, false),
-                    import_Document.default.createElement("span", { "class": ` tx-italic p-3` }, [
+            `, false),
+                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`lg`, false)
                     ]),
                     import_Document.default.createText(`,  
-  `, false),
+            `, false),
                     import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`xl`, false)
                     ]),
                     import_Document.default.createText(`,  
-  `, false),
-                    import_Document.default.createElement("span", { "class": ` tx-italic p-3` }, [
+            `, false),
+                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`xl2`, false)
                     ]),
                     import_Document.default.createText(`,  
-  `, false),
-                    import_Document.default.createElement("span", { "class": ` tx-italic p-3` }, [
+            `, false),
+                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`xl3`, false)
                     ]),
                     import_Document.default.createText(`,  
-  `, false),
-                    import_Document.default.createElement("span", { "class": ` tx-italic p-3` }, [
+            `, false),
+                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`xl4`, false)
                     ]),
                     import_Document.default.createText(`,  
-  and `, false),
-                    import_Document.default.createElement("span", { "class": ` tx-italic p-3` }, [
+            and `, false),
+                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`xl5`, false)
                     ]),
                     import_Document.default.createText(`.
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "xs": true, "primary": true }, [
                         import_Document.default.createText(`Extra Small`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button xs primary>Extra Small</form-button>
-`)
+            <form-button xs primary>Extra Small</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "sm": true, "success": true }, [
                         import_Document.default.createText(`Small`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button sm success>Small</form-button>
-`)
+            <form-button sm success>Small</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "md": true, "primary": true }, [
                         import_Document.default.createText(`Medium`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button md primary>Medium</form-button>
-`)
+            <form-button md primary>Medium</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "lg": true, "warning": true }, [
                         import_Document.default.createText(`Large`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button lg warning>Large</form-button>
-`)
+            <form-button lg warning>Large</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "xl": true, "error": true }, [
                         import_Document.default.createText(`Extra Large`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button xl error>Extra Large</form-button>
-`)
+            <form-button xl error>Extra Large</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "xl2": true, "secondary": true }, [
                         import_Document.default.createText(`2XL`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button xl2 secondary>2XL</form-button>
-`)
+            <form-button xl2 secondary>2XL</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "xl3": true, "muted": true }, [
                         import_Document.default.createText(`3XL`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button xl3 muted>3XL</form-button>
-`)
+            <form-button xl3 muted>3XL</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "xl4": true, "primary": true }, [
                         import_Document.default.createText(`4XL`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button xl4 primary>4XL</form-button>
-`)
+            <form-button xl4 primary>4XL</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "xl5": true, "secondary": true }, [
                         import_Document.default.createText(`5XL`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button xl5 secondary>5XL</form-button>
-`)
+            <form-button xl5 secondary>5XL</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-
-`, false),
+          <!-- Rounded -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `rounded` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     ...this._toNodeList(_("Rounded"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  Buttons can have different border styles:  
-  `, false),
+            Buttons can have different border styles:  
+            `, false),
                     import_Document.default.createElement("span", { "class": `bg-info tx-italic p-3` }, [
                       import_Document.default.createText(`curved`, false)
                     ]),
                     import_Document.default.createText(`,  
-  `, false),
+            `, false),
                     import_Document.default.createElement("span", { "class": `bg-info tx-italic p-3` }, [
                       import_Document.default.createText(`rounded`, false)
                     ]),
                     import_Document.default.createText(`,  
-  and `, false),
+            and `, false),
                     import_Document.default.createElement("span", { "class": `bg-info tx-italic p-3` }, [
                       import_Document.default.createText(`pill`, false)
                     ]),
                     import_Document.default.createText(`.
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "primary": true, "curved": true }, [
                         import_Document.default.createText(`Curved`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button primary curved>Curved</form-button>
-`)
+            <form-button primary curved>Curved</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "secondary": true, "rounded": true }, [
                         import_Document.default.createText(`Rounded`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button secondary rounded>Rounded</form-button>
-`)
+            <form-button secondary rounded>Rounded</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "success": true, "pill": true }, [
                         import_Document.default.createText(`Pill`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button success pill>Pill</form-button>
-`)
+            <form-button success pill>Pill</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
-                  import_Document.default.createElement("a", { "name": `outline` }, []),
+          <!-- Padding -->
+          `, false),
+                  import_Document.default.createElement("a", { "name": `padding` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Outline"))
+                    ...this._toNodeList(_("Padding"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  Buttons can use an outline style instead of a solid background.
-`, false)
+            Buttons can use custom padding with `, false),
+                    import_Document.default.createElement("code", {}, [
+                      import_Document.default.createText(`padding`, false)
+                    ]),
+                    import_Document.default.createText(`, `, false),
+                    import_Document.default.createElement("code", {}, [
+                      import_Document.default.createText(`padding-x`, false)
+                    ]),
+                    import_Document.default.createText(`, or `, false),
+                    import_Document.default.createElement("code", {}, [
+                      import_Document.default.createText(`padding-y`, false)
+                    ]),
+                    import_Document.default.createText(`, overriding size-based defaults.
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("form-button", { "outline": true, "primary": true }, [
-                        import_Document.default.createText(`Primary Outline`, false)
+              `, false),
+                      import_Document.default.createElement("form-button", { "primary": true, "padding": `20px` }, [
+                        import_Document.default.createText(`Custom Padding`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button outline primary>Primary Outline</form-button>
-`)
+            <form-button primary padding="20px">Custom Padding</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("form-button", { "outline": true, "warning": true }, [
-                        import_Document.default.createText(`Warning Outline`, false)
+              `, false),
+                      import_Document.default.createElement("form-button", { "success": true, "padding-x": `30px` }, [
+                        import_Document.default.createText(`Wide Padding-X`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button outline warning>Warning Outline</form-button>
-`)
+            <form-button success padding-x="30px">Wide Padding-X</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("form-button", { "outline": true, "error": true }, [
-                        import_Document.default.createText(`Error Outline`, false)
+              `, false),
+                      import_Document.default.createElement("form-button", { "warning": true, "padding-y": `15px` }, [
+                        import_Document.default.createText(`Tall Padding-Y`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button outline error>Error Outline</form-button>
-`)
+            <form-button warning padding-y="15px">Tall Padding-Y</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          <!-- Transparent -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `transparent` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     ...this._toNodeList(_("Transparent"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  Transparent buttons remove the background but retain the border.
-`, false)
+            Transparent buttons remove the background but retain the border.
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "transparent": true, "info": true }, [
                         import_Document.default.createText(`Transparent Info`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button transparent info>Transparent Info</form-button>
-`)
+            <form-button transparent info>Transparent Info</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "transparent": true, "success": true }, [
                         import_Document.default.createText(`Transparent Success`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button transparent success>Transparent Success</form-button>
-`)
+            <form-button transparent success>Transparent Success</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          <!-- Outline -->
+          `, false),
+                  import_Document.default.createElement("a", { "name": `outline` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Outline"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+            Buttons can use an outline style instead of a solid background.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("form-button", { "outline": true, "primary": true }, [
+                        import_Document.default.createText(`Primary Outline`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                    ...this._toNodeList(`
+            <form-button outline primary>Primary Outline</form-button>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("form-button", { "outline": true, "warning": true }, [
+                        import_Document.default.createText(`Warning Outline`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                    ...this._toNodeList(`
+            <form-button outline warning>Warning Outline</form-button>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("form-button", { "outline": true, "error": true }, [
+                        import_Document.default.createText(`Error Outline`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                    ...this._toNodeList(`
+            <form-button outline error>Error Outline</form-button>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          <!-- Full Width -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `fullWidth` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     ...this._toNodeList(_("Full Width"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  Adding `, false),
+            Adding `, false),
                     import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`full`, false)
                     ]),
                     import_Document.default.createText(` makes the button take up the entire width.
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center w-full` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "full": true, "primary": true }, [
                         import_Document.default.createText(`Full Width`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button full primary>Full Width</form-button>
-`)
+            <form-button full primary>Full Width</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          <!-- Combining Props -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `combining` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     ...this._toNodeList(_("Combining Props"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  You can combine multiple props like `, false),
+            You can combine multiple props like `, false),
                     import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`outline`, false)
                     ]),
@@ -7619,192 +7875,236 @@ var InkAPI = (() => {
                       import_Document.default.createText(`full`, false)
                     ]),
                     import_Document.default.createText(` for unique styles.
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center w-full` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "outline": true, "rounded": true, "full": true, "success": true }, [
                         import_Document.default.createText(`Success Rounded Outline`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button outline rounded full success>Success Rounded Outline</form-button>
-`)
+            <form-button outline rounded full success>Success Rounded Outline</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "transparent": true, "curved": true, "primary": true }, [
                         import_Document.default.createText(`Curved Transparent`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button transparent curved primary>Curved Transparent</form-button>
-`)
+            <form-button transparent curved primary>Curved Transparent</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "outline": true, "pill": true, "warning": true }, [
                         import_Document.default.createText(`Pill Outline Warning`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button outline pill warning>Pill Outline Warning</form-button>
-`)
+            <form-button outline pill warning>Pill Outline Warning</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-`, false),
+          <!-- Href -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `href` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     ...this._toNodeList(_("Href"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  Buttons can act as links using the `, false),
+            Buttons can act as links using the `, false),
                     import_Document.default.createElement("code", {}, [
                       import_Document.default.createText(`href`, false)
                     ]),
                     import_Document.default.createText(` attribute.
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("form-button", { "class": `mr-5`, "md": true, "primary": true, "curved": true, "solid": true, "href": `https://example.com`, "target": `_blank` }, [
+              `, false),
+                      import_Document.default.createElement("form-button", { "class": `mr-5`, "md": true, "primary": true, "curved": true, "href": `https://example.com`, "target": `_blank` }, [
                         import_Document.default.createText(`Visit Example`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button class="mr-5" md primary curved solid href="https://example.com" target="_blank">Visit Example</form-button>
-`)
+            <form-button class="mr-5" md primary curved href="https://example.com" target="_blank">Visit Example</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "class": `mr-5`, "md": true, "success": true, "rounded": true, "transparent": true, "href": `https://stackpress.io` }, [
                         import_Document.default.createText(`Go to StackPress`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button class="mr-5" md success rounded transparent href="https://stackpress.io">Go to StackPress</form-button>
-`)
+            <form-button class="mr-5" md success rounded transparent href="https://stackpress.io">Go to StackPress</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("form-button", { "class": `mr-5`, "md": true, "warning": true, "rounded": true, "href": `https://github.com`, "target": `_blank` }, [
                         import_Document.default.createText(`GitHub`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-<form-button class="mr-5" md warning rounded href="https://github.com" target="_blank">GitHub</form-button>
-`)
+            <form-button class="mr-5" md warning rounded href="https://github.com" target="_blank">GitHub</form-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
+          <!-- Flex Display -->
+          `, false),
+                  import_Document.default.createElement("a", { "name": `flexDisplay` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Flex Display"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+            Use `, false),
+                    import_Document.default.createElement("code", {}, [
+                      import_Document.default.createText(`flex`, false)
+                    ]),
+                    import_Document.default.createText(` to enable flexbox display for aligning slotted content.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
 
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("form-button", { "flex": true, "primary": true }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `star`, "class": `mr-5` }),
+                        import_Document.default.createText(`
+                Flex Button
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                    ...this._toNodeList(`
+            <form-button flex primary>
+              <element-icon name="star" class="mr-5" />
+              Flex Button
+            </form-button>
+          `)
+                  ]),
+                  import_Document.default.createText(`
 
-
-
+          <!-- Navigation -->
           `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`

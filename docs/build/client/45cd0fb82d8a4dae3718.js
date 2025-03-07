@@ -3584,7 +3584,7 @@ var InkAPI = (() => {
     }
   });
 
-  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\alert.ink
+  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\alert.ink
   var alert_exports = {};
   __export(alert_exports, {
     BUILD_ID: () => BUILD_ID,
@@ -3601,7 +3601,7 @@ var InkAPI = (() => {
   var import_Emitter = __toESM(require_Emitter());
   var import_data = __toESM(require_data());
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\api\docs.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\docs.ink
   var import_Registry = __toESM(require_Registry());
   var import_Component = __toESM(require_Component());
   var import_ink = __toESM(require_ink());
@@ -3630,7 +3630,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\app.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\app.ink
   var import_Registry2 = __toESM(require_Registry());
   var import_Component2 = __toESM(require_Component());
   var import_ink2 = __toESM(require_ink());
@@ -3684,7 +3684,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\code.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\code.ink
   var import_Registry3 = __toESM(require_Registry());
   var import_Component3 = __toESM(require_Component());
   var import_prismjs = __toESM(require_prism());
@@ -3881,7 +3881,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
   var import_Registry4 = __toESM(require_Registry());
   var import_Component4 = __toESM(require_Component());
 
@@ -3897,7 +3897,7 @@ var InkAPI = (() => {
     return phrase;
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
   var Translate_794a00a5e900fca28310 = class extends import_Component4.default {
     static id = "794a00a5e900fca28310";
     static tagname = "translate";
@@ -3973,7 +3973,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\panel.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\panel.ink
   var import_Registry5 = __toESM(require_Registry());
   var import_Component5 = __toESM(require_Component());
   var Panel_c4c96a14064fc0c4d224 = class extends import_Component5.default {
@@ -4134,7 +4134,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\alert.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\alert.ink
   var import_Registry6 = __toESM(require_Registry());
   var import_Component6 = __toESM(require_Component());
   var import_StyleSet = __toESM(require_StyleSet());
@@ -4182,7 +4182,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\icon.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\icon.ink
   var import_Registry7 = __toESM(require_Registry());
   var import_Component7 = __toESM(require_Component());
   var import_StyleSet2 = __toESM(require_StyleSet());
@@ -4214,7 +4214,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\crumbs.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\crumbs.ink
   var import_Registry8 = __toESM(require_Registry());
   var import_Component8 = __toESM(require_Component());
   var import_StyleSet3 = __toESM(require_StyleSet());
@@ -4377,10 +4377,10 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
   var import_Component14 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\table.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\table.ink
   var import_Registry9 = __toESM(require_Registry());
   var import_Component9 = __toESM(require_Component());
   var import_StyleSet4 = __toESM(require_StyleSet());
@@ -4404,15 +4404,15 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
   var import_Registry14 = __toESM(require_Registry());
   var import_StyleSet9 = __toESM(require_StyleSet());
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
   var import_Registry11 = __toESM(require_Registry());
   var import_Component11 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\row.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\row.ink
   var import_Registry10 = __toESM(require_Registry());
   var import_Component10 = __toESM(require_Component());
   var import_StyleSet5 = __toESM(require_StyleSet());
@@ -4435,7 +4435,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
   var import_StyleSet6 = __toESM(require_StyleSet());
   var Thead_afbcee18613ce58fb77c = class extends import_Component11.default {
     static id = "afbcee18613ce58fb77c";
@@ -4458,7 +4458,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
   var import_Registry12 = __toESM(require_Registry());
   var import_Component12 = __toESM(require_Component());
   var import_StyleSet7 = __toESM(require_StyleSet());
@@ -4481,7 +4481,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
   var import_Registry13 = __toESM(require_Registry());
   var import_Component13 = __toESM(require_Component());
   var import_StyleSet8 = __toESM(require_StyleSet());
@@ -4506,7 +4506,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
   var Table_02bc3cbacda5727a0af3 = class extends import_Component14.default {
     static id = "02bc3cbacda5727a0af3";
     static tagname = "table";
@@ -4654,7 +4654,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\head.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\head.ink
   var import_Registry15 = __toESM(require_Registry());
   var import_Component15 = __toESM(require_Component());
   var import_StyleSet10 = __toESM(require_StyleSet());
@@ -4736,7 +4736,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\col.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\col.ink
   var import_Registry16 = __toESM(require_Registry());
   var import_Component16 = __toESM(require_Component());
   var import_StyleSet11 = __toESM(require_StyleSet());
@@ -4808,7 +4808,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\alert.ink
+  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\alert.ink
   var import_ink4 = __toESM(require_ink());
   var TemplateDocument = class _TemplateDocument extends import_Document2.default {
     static sync() {
@@ -5553,7 +5553,7 @@ var InkAPI = (() => {
               `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#outline` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Outline "))
+                        ...this._toNodeList(_("Outline"))
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -5562,7 +5562,6 @@ var InkAPI = (() => {
                         ...this._toNodeList(_("Combine"))
                       ]),
                       import_Document.default.createText(`
-              
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -5578,22 +5577,20 @@ var InkAPI = (() => {
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-
         `, false),
                 import_Document.default.createElement("api-docs", {}, [
                   import_Document.default.createText(`
-                `, false),
+          `, false),
                   import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
                     import_Document.default.createText(`
-          `, false),
+            `, false),
                     import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
                     import_Document.default.createText(`
-      `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-
-        `, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `alert` }, []),
                   import_Document.default.createText(`
           `, false),
@@ -5606,9 +5603,9 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20 ` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
                     import_Document.default.createText(`
-             `, false),
+            `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
               import Alert from '@stackpress/ink-ui/element/alert';
@@ -5619,311 +5616,497 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-      `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     ...this._toNodeList(_("Props"))
                   ]),
                   import_Document.default.createText(`
 
-
-`, false),
+          `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Type"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Required"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-  
-  `, false),
+            
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`outline`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Displays the alert with an outlined style"))
+                        ...this._toNodeList(_("Displays the alert with a white background and colored border/text"))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`solid`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Displays the alert with a solid background"))
+                        ...this._toNodeList(_("Displays the alert with a solid colored background (default if outline/transparent omitted)"))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`transparent`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Displays the alert with a transparent background"))
+                        ...this._toNodeList(_("Displays the alert with a transparent background and colored border/text"))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`padding`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom padding for the alert (default: 16px)"))
+                        ...this._toNodeList(_("Sets custom padding in pixels (default: 16)"))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`color`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Custom CSS-compatible color (e.g., "salmon", "#ff0000")'))
+                        ...this._toNodeList(_('Sets a custom CSS color for background (solid) or text/border (outline/transparent), e.g., "salmon", "#ff0000"'))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`info, warning, success, error, muted`, false)
+                        import_Document.default.createText(`info`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Predefined color variations"))
+                        ...this._toNodeList(_("Sets a predefined info style (blue background)"))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`white, black, primary, secondary`, false)
+                        import_Document.default.createText(`warning`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Additional predefined colors"))
+                        ...this._toNodeList(_("Sets a predefined warning style (yellow background)"))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`success`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a predefined success style (green background)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`error`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a predefined error style (red background)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`muted`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a predefined muted style (gray background)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`white`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a predefined white background style"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`black`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a predefined black background style"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`primary`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a predefined primary style (theme-defined color)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`secondary`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a predefined secondary style (theme-defined color)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`curved`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies a slightly rounded border radius"))
+                        ...this._toNodeList(_("Applies a slightly rounded border radius (4px)"))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`rounded`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies a fully rounded border radius"))
+                        ...this._toNodeList(_("Applies a fully rounded border radius (8px)"))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`pill`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies a pill-shaped border radius"))
+                        ...this._toNodeList(_("Applies a pill-shaped border radius (9999px)"))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
 
           `, false),
                   import_Document.default.createElement("a", { "name": `types` }, []),
@@ -5941,29 +6124,29 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-              Alerts have the following types:  
-              `, false),
-                    import_Document.default.createElement("span", { "class": `bg-info tx-italic p-3` }, [
+            Alerts have the following predefined color types:  
+            `, false),
+                    import_Document.default.createElement("span", { "class": `bg-info tx-white tx-italic p-3` }, [
                       import_Document.default.createText(`info`, false)
                     ]),
                     import_Document.default.createText(`,  
-              `, false),
-                    import_Document.default.createElement("span", { "class": `bg-warning tx-italic p-3` }, [
+            `, false),
+                    import_Document.default.createElement("span", { "class": `bg-warning tx-black tx-italic p-3` }, [
                       import_Document.default.createText(`warning`, false)
                     ]),
                     import_Document.default.createText(`,  
-              `, false),
-                    import_Document.default.createElement("span", { "class": `bg-success tx-italic p-3` }, [
+            `, false),
+                    import_Document.default.createElement("span", { "class": `bg-success tx-white tx-italic p-3` }, [
                       import_Document.default.createText(`success`, false)
                     ]),
                     import_Document.default.createText(`,  
-              `, false),
-                    import_Document.default.createElement("span", { "class": `bg-error tx-italic p-3` }, [
+            `, false),
+                    import_Document.default.createElement("span", { "class": `bg-error tx-white tx-italic p-3` }, [
                       import_Document.default.createText(`error`, false)
                     ]),
                     import_Document.default.createText(`, and  
-              `, false),
-                    import_Document.default.createElement("span", { "class": `bg-muted tx-italic p-3` }, [
+            `, false),
+                    import_Document.default.createElement("span", { "class": `bg-muted tx-white tx-italic p-3` }, [
                       import_Document.default.createText(`muted`, false)
                     ]),
                     import_Document.default.createText(`.
@@ -5971,17 +6154,16 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
-                  import_Document.default.createElement("element-alert", { "class": `mb-5`, "solid": true, "info": true }, [
+          `, false),
+                  import_Document.default.createElement("element-alert", { "class": `mb-5`, "info": true }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("element-icon", { "name": `info-circle` }),
                     import_Document.default.createText(`
-              No Results found
-            `, false)
+            No Results found
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
@@ -5989,7 +6171,7 @@ var InkAPI = (() => {
               <element-icon name="info-circle" />
               No Results found
             </element-alert>
-            `)
+          `)
                   ]),
                   import_Document.default.createText(`
 
@@ -6003,40 +6185,37 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
-             `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-alert warning>
               <element-icon name="exclamation-triangle" />
               Are you sure?
             </element-alert>
-                        `)
-                  ]),
-                  import_Document.default.createText(`
- 
-                `, false),
-                  import_Document.default.createElement("element-alert", { "class": `mb-5`, "success": true }, [
-                    import_Document.default.createText(`
-                `, false),
-                    import_Document.default.createElement("element-icon", { "name": `check-circle` }),
-                    import_Document.default.createText(`
-                Successfully saved!
-              `, false)
+          `)
                   ]),
                   import_Document.default.createText(`
 
-             `, false),
+          `, false),
+                  import_Document.default.createElement("element-alert", { "class": `mb-5`, "success": true }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("element-icon", { "name": `check-circle` }),
+                    import_Document.default.createText(`
+            Successfully saved!
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-alert success>
               <element-icon name="check-circle" />
               Successfully saved!
             </element-alert>
-                    `)
+          `)
                   ]),
                   import_Document.default.createText(`
-
 
           `, false),
                   import_Document.default.createElement("element-alert", { "class": `mb-5`, "error": true }, [
@@ -6048,33 +6227,35 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
- 
-                   `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-alert error>
               <element-icon name="exclamation-circle" />
               Could not save
             </element-alert>
-                    `)
+          `)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
                   import_Document.default.createElement("element-alert", { "class": `mb-5`, "muted": true }, [
                     import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("element-icon", { "name": `ban` }),
+                    import_Document.default.createText(`
             I am disabled
           `, false)
                   ]),
                   import_Document.default.createText(`
-
-                     `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-alert muted>
+              <element-icon name="ban" />
               I am disabled
             </element-alert>
-                    `)
+          `)
                   ]),
                   import_Document.default.createText(`
 
@@ -6094,7 +6275,7 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-            Alerts can have custom CSS compatible colors which includes hex and color names.
+            Alerts can use custom CSS-compatible colors for the background (solid) or text/border (outline/transparent), including hex values and color names.
           `, false)
                   ]),
                   import_Document.default.createText(`
@@ -6109,19 +6290,16 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-alert color="salmon">
               <element-icon name="exclamation-circle" />
               Who likes salmon?
             </element-alert>
-                    `)
+          `)
                   ]),
                   import_Document.default.createText(`
-
-
 
           `, false),
                   import_Document.default.createElement("a", { "name": `rounded` }, []),
@@ -6140,36 +6318,35 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
             Alerts can be rounded in three ways:
-              `, false),
-                    import_Document.default.createElement("span", { "class": `bg-info tx-italic p-3` }, [
+            `, false),
+                    import_Document.default.createElement("span", { "class": `bg-info tx-white tx-italic p-3` }, [
                       import_Document.default.createText(`curved`, false)
                     ]),
-                    import_Document.default.createText(`,  
-              `, false),
-                    import_Document.default.createElement("span", { "class": `bg-info tx-italic p-3` }, [
+                    import_Document.default.createText(` (4px),  
+            `, false),
+                    import_Document.default.createElement("span", { "class": `bg-info tx-white tx-italic p-3` }, [
                       import_Document.default.createText(`rounded`, false)
                     ]),
-                    import_Document.default.createText(`,  
-              and `, false),
-                    import_Document.default.createElement("span", { "class": `bg-info tx-italic p-3` }, [
+                    import_Document.default.createText(` (8px),  
+            and `, false),
+                    import_Document.default.createElement("span", { "class": `bg-info tx-white tx-italic p-3` }, [
                       import_Document.default.createText(`pill`, false)
                     ]),
-                    import_Document.default.createText(`.
+                    import_Document.default.createText(` (9999px).
           `, false)
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
+          `, false),
                   import_Document.default.createElement("element-alert", { "curved": true, "class": `mb-5`, "info": true }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("element-icon", { "name": `info-circle` }),
                     import_Document.default.createText(`
-              No Results found
-            `, false)
+            No Results found
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
@@ -6177,21 +6354,20 @@ var InkAPI = (() => {
               <element-icon name="info-circle" />
               No Results found
             </element-alert>
-            `)
+          `)
                   ]),
                   import_Document.default.createText(`
 
-        `, false),
+          `, false),
                   import_Document.default.createElement("element-alert", { "rounded": true, "class": `mb-5`, "warning": true }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("element-icon", { "name": `exclamation-triangle` }),
                     import_Document.default.createText(`
-              No Results found
-            `, false)
+            Are you sure?
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
@@ -6199,29 +6375,28 @@ var InkAPI = (() => {
               <element-icon name="exclamation-triangle" />
               Are you sure?
             </element-alert>
-            `)
+          `)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
                   import_Document.default.createElement("element-alert", { "pill": true, "class": `mb-5`, "success": true }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("element-icon", { "name": `check-circle` }),
                     import_Document.default.createText(`
-              Successfully saved!
-            `, false)
+            Successfully saved!
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-alert success pill>
               <element-icon name="check-circle" />
-              No Results found
+              Successfully saved!
             </element-alert>
-            `)
+          `)
                   ]),
                   import_Document.default.createText(`
 
@@ -6241,11 +6416,11 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-            Alerts can have custom padding values. The default is 16px, but you can override it by setting a`, false),
+            Alerts can have custom padding values in pixels. The default is 16px, but you can override it with the `, false),
                     import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`padding`, false)
                     ]),
-                    import_Document.default.createText(` attribute with a numeric value.
+                    import_Document.default.createText(` attribute.
           `, false)
                   ]),
                   import_Document.default.createText(`
@@ -6253,18 +6428,17 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("element-alert", { "class": `mb-5`, "success": true, "padding": `32` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("element-icon", { "name": `check-circle` }),
                     import_Document.default.createText(`
-              Extra padded success message!
+            Extra padded success message!
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-              <element-alert success padding="32">
+            <element-alert success padding="32">
               <element-icon name="check-circle" />
               Extra padded success message!
             </element-alert>
@@ -6285,7 +6459,6 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
@@ -6293,7 +6466,7 @@ var InkAPI = (() => {
                     import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`transparent`, false)
                     ]),
-                    import_Document.default.createText(`, removes the background color but retains the border.
+                    import_Document.default.createText(` removes the background color while retaining a colored border and text.
           `, false)
                   ]),
                   import_Document.default.createText(`
@@ -6308,11 +6481,10 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-              <element-alert transparent info>
+            <element-alert transparent info>
               <element-icon name="info-circle" />
               This is a transparent alert.
             </element-alert>
@@ -6321,13 +6493,13 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `customColor` }, []),
+                  import_Document.default.createElement("a", { "name": `outline` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_("Outline Example")),
+                    ...this._toNodeList(_("Outline")),
                     import_Document.default.createText(`
           `, false)
                   ]),
@@ -6338,9 +6510,9 @@ var InkAPI = (() => {
                     import_Document.default.createText(`
             An `, false),
                     import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
-                      import_Document.default.createText(`outlined`, false)
+                      import_Document.default.createText(`outline`, false)
                     ]),
-                    import_Document.default.createText(` alert has a colored border instead of a filled background.
+                    import_Document.default.createText(` alert has a white background with a colored border and text.
           `, false)
                   ]),
                   import_Document.default.createText(`
@@ -6355,66 +6527,64 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-              <element-alert outline warning>
+            <element-alert outline warning>
               <element-icon name="exclamation-triangle" />
               Warning alert with outline!
             </element-alert>
-              `)
+          `)
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `combine` }, []),
                   import_Document.default.createText(`
-            `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     ...this._toNodeList(_("Combining Props")),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-              `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-                You can combine multiple props like `, false),
+            You can combine multiple props like `, false),
                     import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
-                      import_Document.default.createText(`outlined`, false)
+                      import_Document.default.createText(`outline`, false)
                     ]),
                     import_Document.default.createText(`, `, false),
                     import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
-                      import_Document.default.createText(`cruved`, false)
+                      import_Document.default.createText(`curved`, false)
                     ]),
                     import_Document.default.createText(`, and `, false),
                     import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`padding`, false)
                     ]),
-                    import_Document.default.createText(` to create different styles.
-              `, false)
+                    import_Document.default.createText(` to create custom styles.
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
+          `, false),
                   import_Document.default.createElement("element-alert", { "class": `mb-5`, "outline": true, "curved": true, "padding": `24`, "muted": true }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("element-icon", { "name": `info-circle` }),
                     import_Document.default.createText(`
-              Curved outline with padding.
-            `, false)
+            Curved outline with padding.
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-              `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-              <element-alert outline curved padding="24" muted>
+            <element-alert outline curved padding="24" muted>
               <element-icon name="info-circle" />
               Curved outline with padding.
             </element-alert>

@@ -58,126 +58,169 @@
               <a class="block tx-t-1" href="#rounded">• {_('Rounded')}</a>
               <a class="block tx-t-1" href="#padding">• {_('Padding')}</a>
               <a class="block tx-t-1" href="#transparent">• {_('Transparent')}</a>
-              <a class="block tx-t-1" href="#outline">• {_('Outline ')}</a>
+              <a class="block tx-t-1" href="#outline">• {_('Outline')}</a>
               <a class="block tx-t-1" href="#combine">• {_('Combine')}</a>
-              
             </nav>
           </nav>
         </menu>
       </aside>
       <main>
-
         <api-docs>
-                <nav class="p-10 bg-t-3 sticky top-0 z-50">
-          <element-crumbs 
-            crumbs={crumbs} 
-            block 
-            bold 
-            white 
-            sep-muted
-            link-primary
-            spacing={2}
-          />
-      </nav>
+          <nav class="p-10 bg-t-3 sticky top-0 z-50">
+            <element-crumbs 
+              crumbs={crumbs} 
+              block 
+              bold 
+              white 
+              sep-muted
+              link-primary
+              spacing={2}
+            />
+          </nav>
 
-
-        <a name="alert"></a>
+          <a name="alert"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">
             {_('Alert')}
           </h1>
-          <ide-app title="Editor" class="py-20 ">
-             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
+          <ide-app title="Editor" class="py-20">
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
               import Alert from '@stackpress/ink-ui/element/alert';
             </ide-code>
           </ide-app>
 
-      <h2 class="tx-primary tx-upper tx-30 py-20">{_('Props')}</h2>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Props')}</h2>
 
+          <layout-table 
+            top
+            head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
+            body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" 
+            odd="bg-t-0"
+            even="bg-t-1"
+          >
+            <table-head>{_('Name')}</table-head>
+            <table-head>{_('Type')}</table-head>
+            <table-head>{_('Required')}</table-head>
+            <table-head>{_('Notes')}</table-head>
+            
+            <table-row>
+              <table-col>outline</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Displays the alert with a white background and colored border/text')}</table-col>
+            </table-row>
 
-<layout-table 
-  top
-  head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
-  body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" 
-  odd="bg-t-0"
-  even="bg-t-1"
-  >
-  <table-head>{_('Name')}</table-head>
-  <table-head>{_('Type')}</table-head>
-  <table-head>{_('Required')}</table-head>
-  <table-head>{_('Notes')}</table-head>
-  
-  <table-row>
-    <table-col>outline</table-col>
-    <table-col>Boolean</table-col>
-    <table-col>No</table-col>
-    <table-col>{_('Displays the alert with an outlined style')}</table-col>
-  </table-row>
+            <table-row>
+              <table-col>solid</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Displays the alert with a solid colored background (default if outline/transparent omitted)')}</table-col>
+            </table-row>
 
-  <table-row>
-    <table-col>solid</table-col>
-    <table-col>Boolean</table-col>
-    <table-col>No</table-col>
-    <table-col>{_('Displays the alert with a solid background')}</table-col>
-  </table-row>
+            <table-row>
+              <table-col>transparent</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Displays the alert with a transparent background and colored border/text')}</table-col>
+            </table-row>
 
-  <table-row>
-    <table-col>transparent</table-col>
-    <table-col>Boolean</table-col>
-    <table-col>No</table-col>
-    <table-col>{_('Displays the alert with a transparent background')}</table-col>
-  </table-row>
+            <table-row>
+              <table-col>padding</table-col>
+              <table-col>Number</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Sets custom padding in pixels (default: 16)')}</table-col>
+            </table-row>
 
-  <table-row>
-    <table-col>padding</table-col>
-    <table-col>Number</table-col>
-    <table-col>No</table-col>
-    <table-col>{_('Custom padding for the alert (default: 16px)')}</table-col>
-  </table-row>
+            <table-row>
+              <table-col>color</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Sets a custom CSS color for background (solid) or text/border (outline/transparent), e.g., "salmon", "#ff0000"')}</table-col>
+            </table-row>
 
-  <table-row>
-    <table-col>color</table-col>
-    <table-col>String</table-col>
-    <table-col>No</table-col>
-    <table-col>{_('Custom CSS-compatible color (e.g., "salmon", "#ff0000")')}</table-col>
-  </table-row>
+            <table-row>
+              <table-col>info</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Sets a predefined info style (blue background)')}</table-col>
+            </table-row>
 
-  <table-row>
-    <table-col>info, warning, success, error, muted</table-col>
-    <table-col>Boolean</table-col>
-    <table-col>No</table-col>
-    <table-col>{_('Predefined color variations')}</table-col>
-  </table-row>
+            <table-row>
+              <table-col>warning</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Sets a predefined warning style (yellow background)')}</table-col>
+            </table-row>
 
-  <table-row>
-    <table-col>white, black, primary, secondary</table-col>
-    <table-col>Boolean</table-col>
-    <table-col>No</table-col>
-    <table-col>{_('Additional predefined colors')}</table-col>
-  </table-row>
+            <table-row>
+              <table-col>success</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Sets a predefined success style (green background)')}</table-col>
+            </table-row>
 
-  <table-row>
-    <table-col>curved</table-col>
-    <table-col>Boolean</table-col>
-    <table-col>No</table-col>
-    <table-col>{_('Applies a slightly rounded border radius')}</table-col>
-  </table-row>
+            <table-row>
+              <table-col>error</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Sets a predefined error style (red background)')}</table-col>
+            </table-row>
 
-  <table-row>
-    <table-col>rounded</table-col>
-    <table-col>Boolean</table-col>
-    <table-col>No</table-col>
-    <table-col>{_('Applies a fully rounded border radius')}</table-col>
-  </table-row>
+            <table-row>
+              <table-col>muted</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Sets a predefined muted style (gray background)')}</table-col>
+            </table-row>
 
-  <table-row>
-    <table-col>pill</table-col>
-    <table-col>Boolean</table-col>
-    <table-col>No</table-col>
-    <table-col>{_('Applies a pill-shaped border radius')}</table-col>
-  </table-row>
+            <table-row>
+              <table-col>white</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Sets a predefined white background style')}</table-col>
+            </table-row>
 
-</layout-table>
+            <table-row>
+              <table-col>black</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Sets a predefined black background style')}</table-col>
+            </table-row>
 
+            <table-row>
+              <table-col>primary</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Sets a predefined primary style (theme-defined color)')}</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>secondary</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Sets a predefined secondary style (theme-defined color)')}</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>curved</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Applies a slightly rounded border radius (4px)')}</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>rounded</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Applies a fully rounded border radius (8px)')}</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>pill</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Applies a pill-shaped border radius (9999px)')}</table-col>
+            </table-row>
+          </layout-table>
 
           <a name="types"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">
@@ -185,72 +228,68 @@
           </h2>
 
           <div class="mb-10">
-              Alerts have the following types:  
-              <span class="bg-info tx-italic p-3">info</span>,  
-              <span class="bg-warning tx-italic p-3">warning</span>,  
-              <span class="bg-success tx-italic p-3">success</span>,  
-              <span class="bg-error tx-italic p-3">error</span>, and  
-              <span class="bg-muted tx-italic p-3">muted</span>.
+            Alerts have the following predefined color types:  
+            <span class="bg-info tx-white tx-italic p-3">info</span>,  
+            <span class="bg-warning tx-black tx-italic p-3">warning</span>,  
+            <span class="bg-success tx-white tx-italic p-3">success</span>,  
+            <span class="bg-error tx-white tx-italic p-3">error</span>, and  
+            <span class="bg-muted tx-white tx-italic p-3">muted</span>.
           </div>
 
-            <element-alert class="mb-5" solid info>
-              <element-icon name="info-circle" />
-              No Results found
-            </element-alert>
-
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"   trim detab={12}>{`
+          <element-alert class="mb-5" info>
+            <element-icon name="info-circle" />
+            No Results found
+          </element-alert>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-alert info>
               <element-icon name="info-circle" />
               No Results found
             </element-alert>
-            `}</ide-code>
+          `}</ide-code>
 
           <element-alert class="mb-5" warning>
             <element-icon name="exclamation-triangle" />
             Are you sure?
           </element-alert>
-
-             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"    trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-alert warning>
               <element-icon name="exclamation-triangle" />
               Are you sure?
             </element-alert>
-                        `}</ide-code>
- 
-                <element-alert class="mb-5" success>
-                <element-icon name="check-circle" />
-                Successfully saved!
-              </element-alert>
+          `}</ide-code>
 
-             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"    trim detab={12}>{`
+          <element-alert class="mb-5" success>
+            <element-icon name="check-circle" />
+            Successfully saved!
+          </element-alert>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-alert success>
               <element-icon name="check-circle" />
               Successfully saved!
             </element-alert>
-                    `}</ide-code>
-
+          `}</ide-code>
 
           <element-alert class="mb-5" error>
             <element-icon name="exclamation-circle" />
             Could not save
           </element-alert>
- 
-                   <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"    trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-alert error>
               <element-icon name="exclamation-circle" />
               Could not save
             </element-alert>
-                    `}</ide-code>
+          `}</ide-code>
 
           <element-alert class="mb-5" muted>
+            <element-icon name="ban" />
             I am disabled
           </element-alert>
-
-                     <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"    trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-alert muted>
+              <element-icon name="ban" />
               I am disabled
             </element-alert>
-                    `}</ide-code>
+          `}</ide-code>
 
           <a name="customColor"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">
@@ -258,22 +297,19 @@
           </h2>
 
           <div class="mb-10">
-            Alerts can have custom CSS compatible colors which includes hex and color names.
+            Alerts can use custom CSS-compatible colors for the background (solid) or text/border (outline/transparent), including hex values and color names.
           </div>
 
           <element-alert class="mb-5" color="salmon">
             <element-icon name="exclamation-circle" />
             Who likes salmon?
           </element-alert>
-
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-alert color="salmon">
               <element-icon name="exclamation-circle" />
               Who likes salmon?
             </element-alert>
-                    `}</ide-code>
-
-
+          `}</ide-code>
 
           <a name="rounded"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">
@@ -282,46 +318,43 @@
 
           <div class="mb-10">
             Alerts can be rounded in three ways:
-              <span class="bg-info tx-italic p-3">curved</span>,  
-              <span class="bg-info tx-italic p-3">rounded</span>,  
-              and <span class="bg-info tx-italic p-3">pill</span>.
+            <span class="bg-info tx-white tx-italic p-3">curved</span> (4px),  
+            <span class="bg-info tx-white tx-italic p-3">rounded</span> (8px),  
+            and <span class="bg-info tx-white tx-italic p-3">pill</span> (9999px).
           </div>
 
-            <element-alert curved class="mb-5" info>
-              <element-icon name="info-circle" />
-              No Results found
-            </element-alert>
-
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"   trim detab={12}>{`
+          <element-alert curved class="mb-5" info>
+            <element-icon name="info-circle" />
+            No Results found
+          </element-alert>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-alert info curved>
               <element-icon name="info-circle" />
               No Results found
             </element-alert>
-            `}</ide-code>
+          `}</ide-code>
 
-        <element-alert rounded class="mb-5" warning>
-              <element-icon name="exclamation-triangle" />
-              No Results found
-            </element-alert>
-
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"   trim detab={12}>{`
+          <element-alert rounded class="mb-5" warning>
+            <element-icon name="exclamation-triangle" />
+            Are you sure?
+          </element-alert>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-alert warning rounded>
               <element-icon name="exclamation-triangle" />
               Are you sure?
             </element-alert>
-            `}</ide-code>
+          `}</ide-code>
 
           <element-alert pill class="mb-5" success>
+            <element-icon name="check-circle" />
+            Successfully saved!
+          </element-alert>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-alert success pill>
               <element-icon name="check-circle" />
               Successfully saved!
             </element-alert>
-
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"   trim detab={12}>{`
-            <element-alert success pill>
-              <element-icon name="check-circle" />
-              No Results found
-            </element-alert>
-            `}</ide-code>
+          `}</ide-code>
 
           <a name="padding"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">
@@ -329,16 +362,15 @@
           </h2>
 
           <div class="mb-10">
-            Alerts can have custom padding values. The default is 16px, but you can override it by setting a<span class="tx-italic p-3">padding</span> attribute with a numeric value.
+            Alerts can have custom padding values in pixels. The default is 16px, but you can override it with the <span class="tx-italic p-3">padding</span> attribute.
           </div>
 
-          <element-alert class="mb-5"  success padding="32">
-              <element-icon name="check-circle" />
-              Extra padded success message!
+          <element-alert class="mb-5" success padding="32">
+            <element-icon name="check-circle" />
+            Extra padded success message!
           </element-alert>
-
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-              <element-alert success padding="32">
+            <element-alert success padding="32">
               <element-icon name="check-circle" />
               Extra padded success message!
             </element-alert>
@@ -349,60 +381,56 @@
             {_('Transparent')}
           </h2>
 
-
           <div class="mb-10">
-            Setting <span class="tx-italic p-3">transparent</span>, removes the background color but retains the border.
+            Setting <span class="tx-italic p-3">transparent</span> removes the background color while retaining a colored border and text.
           </div>
 
           <element-alert class="mb-5" transparent info>
             <element-icon name="info-circle" />
             This is a transparent alert.
           </element-alert>
-
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"   trim detab={12}>{`
-              <element-alert transparent info>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-alert transparent info>
               <element-icon name="info-circle" />
               This is a transparent alert.
             </element-alert>
           `}</ide-code>
 
-          <a name="customColor"></a>
+          <a name="outline"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Outline Example')}
+            {_('Outline')}
           </h2>
 
           <div class="mb-10">
-            An <span class="tx-italic p-3">outlined</span> alert has a colored border instead of a filled background.
+            An <span class="tx-italic p-3">outline</span> alert has a white background with a colored border and text.
           </div>
 
           <element-alert class="mb-5" outline warning>
             <element-icon name="exclamation-triangle" />
             Warning alert with outline!
           </element-alert>
-
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"   trim detab={12}>{`
-              <element-alert outline warning>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-alert outline warning>
               <element-icon name="exclamation-triangle" />
               Warning alert with outline!
             </element-alert>
-              `}</ide-code>
+          `}</ide-code>
 
-            <a name="combine"></a>
-            <h2 class="tx-primary tx-upper tx-30 py-20">
-              {_('Combining Props')}
-            </h2>
+          <a name="combine"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">
+            {_('Combining Props')}
+          </h2>
 
-              <div class="mb-10">
-                You can combine multiple props like <span class="tx-italic p-3">outlined</span>, <span class="tx-italic p-3">cruved</span>, and <span class="tx-italic p-3">padding</span> to create different styles.
-              </div>
+          <div class="mb-10">
+            You can combine multiple props like <span class="tx-italic p-3">outline</span>, <span class="tx-italic p-3">curved</span>, and <span class="tx-italic p-3">padding</span> to create custom styles.
+          </div>
 
-            <element-alert class="mb-5" outline curved padding="24" muted>
-              <element-icon name="info-circle" />
-              Curved outline with padding.
-            </element-alert>
-
-              <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white"   trim detab={12}>{`
-              <element-alert outline curved padding="24" muted>
+          <element-alert class="mb-5" outline curved padding="24" muted>
+            <element-icon name="info-circle" />
+            Curved outline with padding.
+          </element-alert>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-alert outline curved padding="24" muted>
               <element-icon name="info-circle" />
               Curved outline with padding.
             </element-alert>

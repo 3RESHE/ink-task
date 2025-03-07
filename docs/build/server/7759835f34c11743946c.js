@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\progress.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\progress.ink
   var progress_exports = {};
   __export(progress_exports, {
     default: () => Progress_7759835f34c11743946c
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\progress.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\progress.ink
   var Progress_7759835f34c11743946c = class extends import_Document2.default {
     id() {
       return "7759835f34c11743946c";
@@ -1492,8 +1492,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                 ]
               ]),
               import_Document.default.createText(`
-
-
       `, false),
               import_Document.default.createElement("aside", { "right": true }, [
                 import_Document.default.createText(`
@@ -1513,7 +1511,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#pager` }, [
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#progress` }, [
                       ...this._toNodeList(_("Progress"))
                     ]),
                     import_Document.default.createText(`
@@ -1550,7 +1548,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ...this._toNodeList(_("Status Indicators"))
                       ]),
                       import_Document.default.createText(`
-
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1563,41 +1560,36 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
       `, false)
               ]),
               import_Document.default.createText(`
-
-
-
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-      `, false),
+        `, false),
                 import_Document.default.createElement("api-docs", {}, [
                   import_Document.default.createText(`
-        `, false),
+          `, false),
                   import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
                     import_Document.default.createText(`
-          `, false),
+            `, false),
                     import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
                     import_Document.default.createText(`
-      `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-
-        
-        `, false),
-                  import_Document.default.createElement("a", { "name": `pager` }, []),
+          `, false),
+                  import_Document.default.createElement("a", { "name": `progress` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_(" Progress")),
+                    ...this._toNodeList(_("Progress")),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20 ` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
@@ -1610,20 +1602,19 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-                `, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
-                `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-                `, false),
+            `, false),
                     ...this._toNodeList(_("Props")),
                     import_Document.default.createText(`
-                `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
@@ -1650,22 +1641,22 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`width`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Yes`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Defines the width of the progress bar, from 0 to 100%."))
                       ]),
@@ -1677,24 +1668,24 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`height`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the height of the progress bar (default: 20px)."))
+                        ...this._toNodeList(_("Sets the height of the progress bar in pixels (default: 20)."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1704,24 +1695,24 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`bg`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the background color of the progress container."))
+                        ...this._toNodeList(_('Sets the background color of the progress container (e.g., "muted", "primary").'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1731,22 +1722,22 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`info`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_('Applies the "info" color style to the progress bar.'))
                       ]),
@@ -1758,22 +1749,22 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`success`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_('Applies the "success" color style to the progress bar.'))
                       ]),
@@ -1785,22 +1776,22 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`warning`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_('Applies the "warning" color style to the progress bar.'))
                       ]),
@@ -1812,22 +1803,22 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`error`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_('Applies the "error" color style to the progress bar.'))
                       ]),
@@ -1839,22 +1830,22 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`children`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Slot`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Allows custom label text to be displayed within the progress bar."))
                       ]),
@@ -1862,11 +1853,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
             `, false)
                     ]),
                     import_Document.default.createText(`
-        `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-          
-
 
           <!-- Basic Progress Bar -->
           `, false),
@@ -1896,7 +1885,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
@@ -1933,12 +1921,11 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-progress width={75} success class="bg-primary rounded tx-13 h-30 tx-lh-30 w-full-30" />
-            `)
+          `)
                   ]),
                   import_Document.default.createText(`
 
@@ -1961,12 +1948,11 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-progress width={40} warning class="bg-warning rounded tx-13 h-10 tx-lh-10 w-full-10" />
-            `)
+          `)
                   ]),
                   import_Document.default.createText(`
 
@@ -1998,12 +1984,11 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-progress width={100} success class="bg-success rounded tx-13 h-20 tx-lh-20 w-full-20" />
-            `)
+          `)
                   ]),
                   import_Document.default.createText(`
 
@@ -2035,16 +2020,15 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-progress width={20} class="rounded bg-error tx-13 h-10 tx-lh-10 w-full-10" />
-             `)
+          `)
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
+          `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),

@@ -757,7 +757,7 @@ var InkAPI = (() => {
         decoder.innerHTML = value;
         return decoder.value;
       };
-      var ClientRegistry20 = class _ClientRegistry {
+      var ClientRegistry18 = class _ClientRegistry {
         static get elements() {
           return this._elements;
         }
@@ -875,8 +875,8 @@ var InkAPI = (() => {
           return Array.from(children4).filter((child) => typeof child !== "undefined").map((child) => typeof child === "string" ? this.createText(child) : child instanceof Element_1.default ? child.element : child);
         }
       };
-      ClientRegistry20._elements = /* @__PURE__ */ new Map();
-      exports.default = ClientRegistry20;
+      ClientRegistry18._elements = /* @__PURE__ */ new Map();
+      exports.default = ClientRegistry18;
     }
   });
 
@@ -958,7 +958,7 @@ var InkAPI = (() => {
       var Registry_1 = __importDefault(require_Registry());
       var Emitter_1 = __importDefault(require_Emitter());
       var data_1 = __importDefault(require_data());
-      var ClientComponent19 = class _ClientComponent extends HTMLElement {
+      var ClientComponent17 = class _ClientComponent extends HTMLElement {
         static get registered() {
           return customElements.getName(this);
         }
@@ -1279,7 +1279,7 @@ var InkAPI = (() => {
           }
         }
       };
-      exports.default = ClientComponent19;
+      exports.default = ClientComponent17;
     }
   });
 
@@ -1581,9 +1581,9 @@ var InkAPI = (() => {
       exports.styleset = styleset;
       var StyleMap_1 = __importDefault(require_StyleMap());
       function styleset(styles = {}) {
-        return new StyleSet14(Object.entries(styles));
+        return new StyleSet12(Object.entries(styles));
       }
-      var StyleSet14 = class extends Map {
+      var StyleSet12 = class extends Map {
         add(selector, property, values) {
           if (!this.has(selector)) {
             this.set(selector, new StyleMap_1.default());
@@ -1616,7 +1616,7 @@ var InkAPI = (() => {
           return styleset2.join("");
         }
       };
-      exports.default = StyleSet14;
+      exports.default = StyleSet12;
     }
   });
 
@@ -3498,24 +3498,6 @@ var InkAPI = (() => {
     }
   });
 
-  // ../../node_modules/@stackpress/ink-ui/utilities/style/curve.js
-  var require_curve = __commonJS({
-    "../../node_modules/@stackpress/ink-ui/utilities/style/curve.js"(exports) {
-      "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.default = curve;
-      function curve(props3, styles, initial = false, selector = ":host") {
-        const { curve: curve2, curved, rounded, pill } = props3;
-        const style = curve2 ? `${curve2}px` : curved ? "4px" : rounded ? "12px" : pill ? "10000px" : initial;
-        if (style) {
-          styles.add(selector, "border-radius", style);
-          styles.add(selector, "overflow", "hidden");
-        }
-        return curve2 ? "curve" : curved ? "curved" : rounded ? "rounded" : pill ? "pill" : "initial";
-      }
-    }
-  });
-
   // ../../node_modules/@stackpress/ink-ui/utilities/style/display.js
   var require_display = __commonJS({
     "../../node_modules/@stackpress/ink-ui/utilities/style/display.js"(exports) {
@@ -3584,11 +3566,11 @@ var InkAPI = (() => {
     }
   });
 
-  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\loader.ink
+  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\loader.ink
   var loader_exports = {};
   __export(loader_exports, {
     BUILD_ID: () => BUILD_ID,
-    ClientRegistry: () => import_Registry19.default,
+    ClientRegistry: () => import_Registry17.default,
     TemplateDocument: () => TemplateDocument,
     components: () => components,
     data: () => import_data.default,
@@ -3597,11 +3579,11 @@ var InkAPI = (() => {
   });
   var import_Document = __toESM(require_Document());
   var import_Document2 = __toESM(require_Document2());
-  var import_Registry19 = __toESM(require_Registry());
+  var import_Registry17 = __toESM(require_Registry());
   var import_Emitter = __toESM(require_Emitter());
   var import_data = __toESM(require_data());
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\api\docs.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\docs.ink
   var import_Registry = __toESM(require_Registry());
   var import_Component = __toESM(require_Component());
   var import_ink = __toESM(require_ink());
@@ -3630,7 +3612,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\app.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\app.ink
   var import_Registry2 = __toESM(require_Registry());
   var import_Component2 = __toESM(require_Component());
   var import_ink2 = __toESM(require_ink());
@@ -3684,7 +3666,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\code.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\code.ink
   var import_Registry3 = __toESM(require_Registry());
   var import_Component3 = __toESM(require_Component());
   var import_prismjs = __toESM(require_prism());
@@ -3881,7 +3863,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
   var import_Registry4 = __toESM(require_Registry());
   var import_Component4 = __toESM(require_Component());
 
@@ -3897,7 +3879,7 @@ var InkAPI = (() => {
     return phrase;
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
   var Translate_794a00a5e900fca28310 = class extends import_Component4.default {
     static id = "794a00a5e900fca28310";
     static tagname = "translate";
@@ -3973,7 +3955,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\panel.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\panel.ink
   var import_Registry5 = __toESM(require_Registry());
   var import_Component5 = __toESM(require_Component());
   var Panel_c4c96a14064fc0c4d224 = class extends import_Component5.default {
@@ -4134,62 +4116,14 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\alert.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\icon.ink
   var import_Registry6 = __toESM(require_Registry());
   var import_Component6 = __toESM(require_Component());
   var import_StyleSet = __toESM(require_StyleSet());
   var import_color = __toESM(require_color());
-  var import_curve = __toESM(require_curve());
   var import_display = __toESM(require_display());
-  var Alert_ba827f6c1d3753161701 = class extends import_Component6.default {
-    static id = "ba827f6c1d3753161701";
-    static tagname = "alert";
-    static classname = "Alert_ba827f6c1d3753161701";
-    styles() {
-      return ``;
-    }
-    template() {
-      const {
-        //layouts
-        outline,
-        solid,
-        transparent,
-        //padding
-        padding
-      } = this.props;
-      const styles = new import_StyleSet.default();
-      this.styles = () => styles.toString();
-      (0, import_display.default)(this.props, styles, "block", ":host");
-      styles.add(":host", "padding", padding ? `${padding}px` : "16px");
-      (0, import_curve.default)(this.props, styles, false, ":host");
-      if (outline || transparent) {
-        (0, import_color.default)(this.props, styles, "var(--muted)", ":host", "color");
-        (0, import_color.default)(this.props, styles, "var(--muted)", ":host", "border-color");
-        styles.add(":host", "border-style", "solid");
-        styles.add(":host", "border-width", "1px");
-        if (outline) {
-          styles.add(":host", "background-color", "var(--white)");
-        }
-      } else {
-        styles.add(":host", "color", "var(--white)");
-        (0, import_color.default)(this.props, styles, "var(--muted)", ":host", "background-color");
-      }
-      return () => [
-        import_Registry6.default.createText(`
-`, false),
-        import_Registry6.default.createElement("slot", {}, []).element
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\icon.ink
-  var import_Registry7 = __toESM(require_Registry());
-  var import_Component7 = __toESM(require_Component());
-  var import_StyleSet2 = __toESM(require_StyleSet());
-  var import_color2 = __toESM(require_color());
-  var import_display2 = __toESM(require_display());
   var import_size = __toESM(require_size());
-  var Icon_33cb84912ffcb000a388 = class extends import_Component7.default {
+  var Icon_33cb84912ffcb000a388 = class extends import_Component6.default {
     static id = "33cb84912ffcb000a388";
     static tagname = "icon";
     static classname = "Icon_33cb84912ffcb000a388";
@@ -4198,32 +4132,32 @@ var InkAPI = (() => {
     }
     template() {
       const { name, solid, brand } = this.props;
-      const styles = new import_StyleSet2.default();
+      const styles = new import_StyleSet.default();
       this.styles = () => styles.toString();
-      (0, import_display2.default)(this.props, styles, "inline-block", ":host");
-      (0, import_color2.default)(this.props, styles, false, ":host", "color");
+      (0, import_display.default)(this.props, styles, "inline-block", ":host");
+      (0, import_color.default)(this.props, styles, false, ":host", "color");
       (0, import_size.default)(this.props, styles, false, ":host", "font-size");
       const iconClass = ["fa-fw", `fa-${name}`];
       iconClass.push(brand ? "fa-brands" : "fa-solid");
       return () => [
-        import_Registry7.default.createElement("link", { "rel": `stylesheet`, "type": `text/css`, "href": `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css` }).element,
-        import_Registry7.default.createText(`
+        import_Registry6.default.createElement("link", { "rel": `stylesheet`, "type": `text/css`, "href": `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css` }).element,
+        import_Registry6.default.createText(`
 `, false),
-        import_Registry7.default.createElement("i", { "class": iconClass.join(" ") }, []).element
+        import_Registry6.default.createElement("i", { "class": iconClass.join(" ") }, []).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\crumbs.ink
-  var import_Registry8 = __toESM(require_Registry());
-  var import_Component8 = __toESM(require_Component());
-  var import_StyleSet3 = __toESM(require_StyleSet());
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\crumbs.ink
+  var import_Registry7 = __toESM(require_Registry());
+  var import_Component7 = __toESM(require_Component());
+  var import_StyleSet2 = __toESM(require_StyleSet());
   var import_bold = __toESM(require_bold());
-  var import_color3 = __toESM(require_color());
-  var import_display3 = __toESM(require_display());
+  var import_color2 = __toESM(require_color());
+  var import_display2 = __toESM(require_display());
   var import_size2 = __toESM(require_size());
   var import_underline = __toESM(require_underline());
-  var Crumbs_e4598fe781cc66b1ce2c = class extends import_Component8.default {
+  var Crumbs_e4598fe781cc66b1ce2c = class extends import_Component7.default {
     static id = "e4598fe781cc66b1ce2c";
     static tagname = "crumbs";
     static classname = "Crumbs_e4598fe781cc66b1ce2c";
@@ -4263,17 +4197,17 @@ var InkAPI = (() => {
         //others
         spacing = 0
       } = this.propsTree;
-      const styles = new import_StyleSet3.default();
+      const styles = new import_StyleSet2.default();
       this.styles = () => styles.toString();
-      const display = (0, import_display3.default)(this.props, styles, "block", ":host");
+      const display = (0, import_display2.default)(this.props, styles, "block", ":host");
       if (display === "flex" || display === "inline-flex") {
         styles.add(":host", "align-items", "center");
       }
       (0, import_size2.default)(this.props, styles, false, ":host", "font-size");
-      (0, import_color3.default)(this.props, styles, false, ":host", "color");
+      (0, import_color2.default)(this.props, styles, false, ":host", "color");
       styles.add("a", "cursor", "pointer");
       if (link) {
-        (0, import_color3.default)(link, styles, false, "a", "color");
+        (0, import_color2.default)(link, styles, false, "a", "color");
       }
       (0, import_underline.default)(this.props, styles, "a");
       if (spacing) {
@@ -4329,62 +4263,62 @@ var InkAPI = (() => {
         secondary
       };
       return () => [
-        import_Registry8.default.createText(`
+        import_Registry7.default.createText(`
 `, false),
         ...Object.entries(crumbs).map(([index, crumb]) => [
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
   `, false),
           ...!!crumb.icon ? [
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...iconProps, "name": crumb.icon }).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...iconProps, "name": crumb.icon }).element,
+            import_Registry7.default.createText(`
   `, false)
           ] : [],
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
   `, false),
           ...!!(crumb.href && crumb.label) ? [
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createElement("a", { "href": crumb.href }, [
+            import_Registry7.default.createElement("a", { "href": crumb.href }, [
               ...this._toNodeList(crumb.label)
             ]).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
   `, false)
           ] : !!crumb.label ? [
             ,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createElement("span", {}, [
+            import_Registry7.default.createElement("span", {}, [
               ...this._toNodeList(crumb.label)
             ]).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
   `, false)
           ] : [],
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
   `, false),
           ...!!(index < crumbs.length - 1) ? [
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...sepProps, "name": `chevron-right`, "class": `sep` }).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...sepProps, "name": `chevron-right`, "class": `sep` }).element,
+            import_Registry7.default.createText(`
   `, false)
           ] : [],
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
 `, false)
         ]).flat()
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
-  var import_Component14 = __toESM(require_Component());
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
+  var import_Component13 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\table.ink
-  var import_Registry9 = __toESM(require_Registry());
-  var import_Component9 = __toESM(require_Component());
-  var import_StyleSet4 = __toESM(require_StyleSet());
-  var Table_cb9231b6c52140a254d4 = class extends import_Component9.default {
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\table.ink
+  var import_Registry8 = __toESM(require_Registry());
+  var import_Component8 = __toESM(require_Component());
+  var import_StyleSet3 = __toESM(require_StyleSet());
+  var Table_cb9231b6c52140a254d4 = class extends import_Component8.default {
     static id = "cb9231b6c52140a254d4";
     static tagname = "table";
     static classname = "Table_cb9231b6c52140a254d4";
@@ -4392,10 +4326,41 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet4.default();
+      const styles = new import_StyleSet3.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table");
       styles.add(":host", "width", "100%");
+      return () => [
+        import_Registry8.default.createText(`
+`, false),
+        import_Registry8.default.createElement("slot", {}, []).element
+      ];
+    }
+  };
+
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
+  var import_Registry13 = __toESM(require_Registry());
+  var import_StyleSet8 = __toESM(require_StyleSet());
+
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
+  var import_Registry10 = __toESM(require_Registry());
+  var import_Component10 = __toESM(require_Component());
+
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\row.ink
+  var import_Registry9 = __toESM(require_Registry());
+  var import_Component9 = __toESM(require_Component());
+  var import_StyleSet4 = __toESM(require_StyleSet());
+  var Row_0b3723ad0a2356b54f11 = class extends import_Component9.default {
+    static id = "0b3723ad0a2356b54f11";
+    static tagname = "row";
+    static classname = "Row_0b3723ad0a2356b54f11";
+    styles() {
+      return ``;
+    }
+    template() {
+      const styles = new import_StyleSet4.default();
+      this.styles = () => styles.toString();
+      styles.add(":host", "display", "table-row");
       return () => [
         import_Registry9.default.createText(`
 `, false),
@@ -4404,40 +4369,9 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
-  var import_Registry14 = __toESM(require_Registry());
-  var import_StyleSet9 = __toESM(require_StyleSet());
-
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
-  var import_Registry11 = __toESM(require_Registry());
-  var import_Component11 = __toESM(require_Component());
-
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\row.ink
-  var import_Registry10 = __toESM(require_Registry());
-  var import_Component10 = __toESM(require_Component());
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
   var import_StyleSet5 = __toESM(require_StyleSet());
-  var Row_0b3723ad0a2356b54f11 = class extends import_Component10.default {
-    static id = "0b3723ad0a2356b54f11";
-    static tagname = "row";
-    static classname = "Row_0b3723ad0a2356b54f11";
-    styles() {
-      return ``;
-    }
-    template() {
-      const styles = new import_StyleSet5.default();
-      this.styles = () => styles.toString();
-      styles.add(":host", "display", "table-row");
-      return () => [
-        import_Registry10.default.createText(`
-`, false),
-        import_Registry10.default.createElement("slot", {}, []).element
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
-  var import_StyleSet6 = __toESM(require_StyleSet());
-  var Thead_afbcee18613ce58fb77c = class extends import_Component11.default {
+  var Thead_afbcee18613ce58fb77c = class extends import_Component10.default {
     static id = "afbcee18613ce58fb77c";
     static tagname = "thead";
     static classname = "Thead_afbcee18613ce58fb77c";
@@ -4445,24 +4379,24 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet6.default();
+      const styles = new import_StyleSet5.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-header-group");
       return () => [
-        import_Registry11.default.createText(`
+        import_Registry10.default.createText(`
 `, false),
-        import_Registry11.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
-          import_Registry11.default.createElement("slot", {}, []).element
+        import_Registry10.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
+          import_Registry10.default.createElement("slot", {}, []).element
         ]).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
-  var import_Registry12 = __toESM(require_Registry());
-  var import_Component12 = __toESM(require_Component());
-  var import_StyleSet7 = __toESM(require_StyleSet());
-  var Tbody_95f498c1427be6bf7334 = class extends import_Component12.default {
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
+  var import_Registry11 = __toESM(require_Registry());
+  var import_Component11 = __toESM(require_Component());
+  var import_StyleSet6 = __toESM(require_StyleSet());
+  var Tbody_95f498c1427be6bf7334 = class extends import_Component11.default {
     static id = "95f498c1427be6bf7334";
     static tagname = "tbody";
     static classname = "Tbody_95f498c1427be6bf7334";
@@ -4470,22 +4404,22 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet7.default();
+      const styles = new import_StyleSet6.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-row-group");
       return () => [
-        import_Registry12.default.createText(`
+        import_Registry11.default.createText(`
 `, false),
-        import_Registry12.default.createElement("slot", {}, []).element
+        import_Registry11.default.createElement("slot", {}, []).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
-  var import_Registry13 = __toESM(require_Registry());
-  var import_Component13 = __toESM(require_Component());
-  var import_StyleSet8 = __toESM(require_StyleSet());
-  var Tfoot_874bedd042c5f2db7353 = class extends import_Component13.default {
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
+  var import_Registry12 = __toESM(require_Registry());
+  var import_Component12 = __toESM(require_Component());
+  var import_StyleSet7 = __toESM(require_StyleSet());
+  var Tfoot_874bedd042c5f2db7353 = class extends import_Component12.default {
     static id = "874bedd042c5f2db7353";
     static tagname = "tfoot";
     static classname = "Tfoot_874bedd042c5f2db7353";
@@ -4493,21 +4427,21 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet8.default();
+      const styles = new import_StyleSet7.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-footer-group");
       return () => [
-        import_Registry13.default.createText(`
+        import_Registry12.default.createText(`
 `, false),
-        import_Registry13.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
-          import_Registry13.default.createElement("slot", {}, []).element
+        import_Registry12.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
+          import_Registry12.default.createElement("slot", {}, []).element
         ]).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
-  var Table_02bc3cbacda5727a0af3 = class extends import_Component14.default {
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
+  var Table_02bc3cbacda5727a0af3 = class extends import_Component13.default {
     static id = "02bc3cbacda5727a0af3";
     static tagname = "table";
     static classname = "Table_02bc3cbacda5727a0af3";
@@ -4534,7 +4468,7 @@ var InkAPI = (() => {
       const bodyList = typeof body === "string" ? body.split(" ").filter(Boolean) : [];
       const oddList = typeof odd === "string" ? odd.split(" ").filter(Boolean) : [];
       const evenList = typeof even === "string" ? even.split(" ").filter(Boolean) : [];
-      const styles = new import_StyleSet9.default();
+      const styles = new import_StyleSet8.default();
       this.styles = () => styles.toString();
       styles.add(":host", "width", "100%");
       if (sticky) {
@@ -4604,7 +4538,7 @@ var InkAPI = (() => {
       }
       this.innerText = "";
       headers.length && this.appendChild(
-        import_Registry14.default.createComponent(
+        import_Registry13.default.createComponent(
           "table-thead",
           Thead_afbcee18613ce58fb77c,
           {},
@@ -4612,7 +4546,7 @@ var InkAPI = (() => {
         ).element
       );
       rows.length && this.appendChild(
-        import_Registry14.default.createComponent(
+        import_Registry13.default.createComponent(
           "table-tbody",
           Tbody_95f498c1427be6bf7334,
           {},
@@ -4620,7 +4554,7 @@ var InkAPI = (() => {
         ).element
       );
       footers.length && this.appendChild(
-        import_Registry14.default.createComponent(
+        import_Registry13.default.createComponent(
           "table-tfoot",
           Tfoot_874bedd042c5f2db7353,
           {},
@@ -4628,37 +4562,37 @@ var InkAPI = (() => {
         ).element
       );
       return () => [
-        import_Registry14.default.createText(`
+        import_Registry13.default.createText(`
 `, false),
         ...!!sticky ? [
-          import_Registry14.default.createText(`
+          import_Registry13.default.createText(`
   `, false),
-          import_Registry14.default.createComponent("table-wrapper", Table_cb9231b6c52140a254d4, {}, [
-            import_Registry14.default.createText(`
+          import_Registry13.default.createComponent("table-wrapper", Table_cb9231b6c52140a254d4, {}, [
+            import_Registry13.default.createText(`
     `, false),
-            import_Registry14.default.createElement("slot", {}, []).element,
-            import_Registry14.default.createText(`
+            import_Registry13.default.createElement("slot", {}, []).element,
+            import_Registry13.default.createText(`
   `, false)
           ]).element,
-          import_Registry14.default.createText(`
+          import_Registry13.default.createText(`
 `, false)
         ] : true ? [
           ,
-          import_Registry14.default.createText(`
+          import_Registry13.default.createText(`
   `, false),
-          import_Registry14.default.createElement("slot", {}, []).element,
-          import_Registry14.default.createText(`
+          import_Registry13.default.createElement("slot", {}, []).element,
+          import_Registry13.default.createText(`
 `, false)
         ] : []
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\head.ink
-  var import_Registry15 = __toESM(require_Registry());
-  var import_Component15 = __toESM(require_Component());
-  var import_StyleSet10 = __toESM(require_StyleSet());
-  var Head_d8755504d9458a2c21da = class extends import_Component15.default {
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\head.ink
+  var import_Registry14 = __toESM(require_Registry());
+  var import_Component14 = __toESM(require_Component());
+  var import_StyleSet9 = __toESM(require_StyleSet());
+  var Head_d8755504d9458a2c21da = class extends import_Component14.default {
     static id = "d8755504d9458a2c21da";
     static tagname = "head";
     static classname = "Head_d8755504d9458a2c21da";
@@ -4679,7 +4613,7 @@ var InkAPI = (() => {
         left,
         right
       } = this.propsCamel;
-      const styles = new import_StyleSet10.default();
+      const styles = new import_StyleSet9.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-cell");
       styles.add(":host([top])", "position", "sticky");
@@ -4695,6 +4629,78 @@ var InkAPI = (() => {
       } else {
         styles.add(":host([top])", "top", "0");
       }
+      if (typeof left === "string" || typeof left === "number") {
+        styles.add(":host([left])", "left", left);
+      } else {
+        styles.add(":host([left])", "left", "0");
+      }
+      if (typeof right === "string" || typeof right === "number") {
+        styles.add(":host([right])", "right", right);
+      } else {
+        styles.add(":host([right])", "right", "0");
+      }
+      if (nowrap) {
+        styles.add(":host", "white-space", "nowrap");
+      }
+      if (wrap1) {
+        styles.add(".wrap", "width", "100px");
+      } else if (wrap2) {
+        styles.add(".wrap", "width", "200px");
+      } else if (wrap3) {
+        styles.add(".wrap", "width", "300px");
+      } else if (wrap4) {
+        styles.add(".wrap", "width", "400px");
+      } else if (wrap5) {
+        styles.add(".wrap", "width", "500px");
+      }
+      return () => [
+        import_Registry14.default.createText(`
+`, false),
+        import_Registry14.default.createElement("slot", {}, []).element,
+        import_Registry14.default.createText(`
+`, false),
+        ...!!(wrap1 || wrap2 || wrap3 || wrap4 || wrap5) ? [
+          import_Registry14.default.createText(`
+  `, false),
+          import_Registry14.default.createElement("div", { "class": `wrap` }, []).element,
+          import_Registry14.default.createText(`
+`, false)
+        ] : []
+      ];
+    }
+  };
+
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\col.ink
+  var import_Registry15 = __toESM(require_Registry());
+  var import_Component15 = __toESM(require_Component());
+  var import_StyleSet10 = __toESM(require_StyleSet());
+  var Col_f45aa9d13a1588f1d9ab = class extends import_Component15.default {
+    static id = "f45aa9d13a1588f1d9ab";
+    static tagname = "col";
+    static classname = "Col_f45aa9d13a1588f1d9ab";
+    styles() {
+      return ``;
+    }
+    template() {
+      const {
+        //wrapping
+        nowrap,
+        wrap1,
+        wrap2,
+        wrap3,
+        wrap4,
+        wrap5,
+        //sticky
+        left,
+        right
+      } = this.propsCamel;
+      const styles = new import_StyleSet10.default();
+      this.styles = () => styles.toString();
+      styles.add(":host", "display", "table-cell");
+      styles.add(":host([left])", "position", "sticky");
+      styles.add(":host([left])", "z-index", "2");
+      styles.add(":host([right])", "position", "sticky");
+      styles.add(":host([right])", "z-index", "2");
       if (typeof left === "string" || typeof left === "number") {
         styles.add(":host([left])", "left", left);
       } else {
@@ -4736,133 +4742,13 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\col.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\loader.ink
   var import_Registry16 = __toESM(require_Registry());
   var import_Component16 = __toESM(require_Component());
   var import_StyleSet11 = __toESM(require_StyleSet());
-  var Col_f45aa9d13a1588f1d9ab = class extends import_Component16.default {
-    static id = "f45aa9d13a1588f1d9ab";
-    static tagname = "col";
-    static classname = "Col_f45aa9d13a1588f1d9ab";
-    styles() {
-      return ``;
-    }
-    template() {
-      const {
-        //wrapping
-        nowrap,
-        wrap1,
-        wrap2,
-        wrap3,
-        wrap4,
-        wrap5,
-        //sticky
-        left,
-        right
-      } = this.propsCamel;
-      const styles = new import_StyleSet11.default();
-      this.styles = () => styles.toString();
-      styles.add(":host", "display", "table-cell");
-      styles.add(":host([left])", "position", "sticky");
-      styles.add(":host([left])", "z-index", "2");
-      styles.add(":host([right])", "position", "sticky");
-      styles.add(":host([right])", "z-index", "2");
-      if (typeof left === "string" || typeof left === "number") {
-        styles.add(":host([left])", "left", left);
-      } else {
-        styles.add(":host([left])", "left", "0");
-      }
-      if (typeof right === "string" || typeof right === "number") {
-        styles.add(":host([right])", "right", right);
-      } else {
-        styles.add(":host([right])", "right", "0");
-      }
-      if (nowrap) {
-        styles.add(":host", "white-space", "nowrap");
-      }
-      if (wrap1) {
-        styles.add(".wrap", "width", "100px");
-      } else if (wrap2) {
-        styles.add(".wrap", "width", "200px");
-      } else if (wrap3) {
-        styles.add(".wrap", "width", "300px");
-      } else if (wrap4) {
-        styles.add(".wrap", "width", "400px");
-      } else if (wrap5) {
-        styles.add(".wrap", "width", "500px");
-      }
-      return () => [
-        import_Registry16.default.createText(`
-`, false),
-        import_Registry16.default.createElement("slot", {}, []).element,
-        import_Registry16.default.createText(`
-`, false),
-        ...!!(wrap1 || wrap2 || wrap3 || wrap4 || wrap5) ? [
-          import_Registry16.default.createText(`
-  `, false),
-          import_Registry16.default.createElement("div", { "class": `wrap` }, []).element,
-          import_Registry16.default.createText(`
-`, false)
-        ] : []
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\badge.ink
-  var import_Registry17 = __toESM(require_Registry());
-  var import_Component17 = __toESM(require_Component());
-  var import_StyleSet12 = __toESM(require_StyleSet());
-  var import_color4 = __toESM(require_color());
-  var import_curve2 = __toESM(require_curve());
-  var import_display4 = __toESM(require_display());
-  var Badge_04e709456157a0a384e7 = class extends import_Component17.default {
-    static id = "04e709456157a0a384e7";
-    static tagname = "badge";
-    static classname = "Badge_04e709456157a0a384e7";
-    styles() {
-      return ``;
-    }
-    template() {
-      const {
-        //layouts
-        outline,
-        solid,
-        transparent,
-        //padding
-        padding
-      } = this.props;
-      const styles = new import_StyleSet12.default();
-      this.styles = () => styles.toString();
-      (0, import_display4.default)(this.props, styles, "inline-block", ":host");
-      styles.add(":host", "padding", padding ? `${padding}px` : "2px 8px");
-      (0, import_curve2.default)(this.props, styles, false, ":host");
-      if (outline || transparent) {
-        (0, import_color4.default)(this.props, styles, "var(--muted)", ":host", "color");
-        (0, import_color4.default)(this.props, styles, "var(--muted)", ":host", "border-color");
-        styles.add(":host", "border-style", "solid");
-        styles.add(":host", "border-width", "1px");
-        if (outline) {
-          styles.add(":host", "background-color", "var(--white)");
-        }
-      } else {
-        styles.add(":host", "color", "var(--white)");
-        (0, import_color4.default)(this.props, styles, "var(--muted)", ":host", "background-color");
-      }
-      return () => [
-        import_Registry17.default.createText(`
-`, false),
-        import_Registry17.default.createElement("slot", {}, []).element
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\loader.ink
-  var import_Registry18 = __toESM(require_Registry());
-  var import_Component18 = __toESM(require_Component());
-  var import_StyleSet13 = __toESM(require_StyleSet());
-  var import_color5 = __toESM(require_color());
-  var import_display5 = __toESM(require_display());
-  var Loader_5cd70d17db973b221463 = class extends import_Component18.default {
+  var import_color3 = __toESM(require_color());
+  var import_display3 = __toESM(require_display());
+  var Loader_5cd70d17db973b221463 = class extends import_Component16.default {
     static id = "5cd70d17db973b221463";
     static tagname = "loader";
     static classname = "Loader_5cd70d17db973b221463";
@@ -4881,9 +4767,9 @@ var InkAPI = (() => {
         dotted,
         dashed
       } = this.props;
-      const styles = new import_StyleSet13.default();
+      const styles = new import_StyleSet11.default();
       this.styles = () => keyframe + styles.toString();
-      (0, import_display5.default)(this.props, styles, "inline-block", ":host");
+      (0, import_display3.default)(this.props, styles, "inline-block", ":host");
       styles.add(":host", "margin-right", "5px");
       styles.add("i", "display", "inline-block");
       styles.add("i", "border-radius", "50%");
@@ -4894,10 +4780,10 @@ var InkAPI = (() => {
       styles.add("i", "border-width", `${thickness}px`);
       const style = solid ? "solid" : dotted ? "dotted" : dashed ? "dashed" : "solid";
       styles.add("i", "border-style", style);
-      (0, import_color5.default)(this.props, styles, "var(--black)", "i", "border-bottom-color");
-      (0, import_color5.default)(this.props, styles, "var(--black)", "i", "border-left-color");
-      (0, import_color5.default)(this.props, styles, "var(--black)", "i", "border-right-color");
-      (0, import_color5.default)(this.props, styles, "var(--black)", "i", "border-top-color");
+      (0, import_color3.default)(this.props, styles, "var(--black)", "i", "border-bottom-color");
+      (0, import_color3.default)(this.props, styles, "var(--black)", "i", "border-left-color");
+      (0, import_color3.default)(this.props, styles, "var(--black)", "i", "border-right-color");
+      (0, import_color3.default)(this.props, styles, "var(--black)", "i", "border-top-color");
       if (slice > 0) {
         styles.add("i", "border-right-color", "transparent");
       }
@@ -4909,14 +4795,14 @@ var InkAPI = (() => {
       }
       const keyframe = `@keyframes spin{${`0%{transform:rotate(0deg)}`}${`100%{transform:rotate(360deg)}`}}`;
       return () => [
-        import_Registry18.default.createText(`
+        import_Registry16.default.createText(`
 `, false),
-        import_Registry18.default.createElement("i", {}, []).element
+        import_Registry16.default.createElement("i", {}, []).element
       ];
     }
   };
 
-  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\loader.ink
+  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\loader.ink
   var import_ink4 = __toESM(require_ink());
   var TemplateDocument = class _TemplateDocument extends import_Document2.default {
     static sync() {
@@ -5596,121 +5482,117 @@ var InkAPI = (() => {
                 ]
               ]),
               import_Document.default.createText(`
-
-
-        `, false),
+      `, false),
               import_Document.default.createElement("aside", { "right": true }, [
                 import_Document.default.createText(`
         `, false),
                 import_Document.default.createElement("menu", { "class": `m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto` }, [
                   import_Document.default.createText(`
-            `, false),
+          `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
                     import_Document.default.createText(`
             `, false),
                     ...this._toNodeList(_("On this page")),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-            `, false),
+          `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Loaders` }, [
-                      ...this._toNodeList(_(" Loaders"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#loaders` }, [
+                      ...this._toNodeList(_("Loaders"))
                     ]),
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("nav", { "class": `pl-20` }, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#props` }, [
                         import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Props"))
                       ]),
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#Types` }, [
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#border-styles` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Types"))
+                        ...this._toNodeList(_("Border Styles"))
                       ]),
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomSize` }, [
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#size` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Custom Size"))
+                        ...this._toNodeList(_("Size"))
                       ]),
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomSpeed` }, [
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#speed` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Custom Speed"))
+                        ...this._toNodeList(_("Speed"))
                       ]),
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#SliceEffect` }, [
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#slice` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Slice Effect"))
+                        ...this._toNodeList(_("Slice"))
                       ]),
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomThickness&BorderStyles` }, [
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#thickness` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Custom Thickness & Border Styles"))
+                        ...this._toNodeList(_("Thickness"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#color` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Color"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
         `, false)
                 ]),
                 import_Document.default.createText(`
-        `, false)
+      `, false)
               ]),
               import_Document.default.createText(`
-
-
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-      `, false),
+        `, false),
                 import_Document.default.createElement("api-docs", {}, [
                   import_Document.default.createText(`
-        `, false),
+          `, false),
                   import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
                     import_Document.default.createText(`
-          `, false),
-                    import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
-                    import_Document.default.createText(`
-      `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-
-        
-        `, false),
-                  import_Document.default.createElement("a", { "name": `Loaders` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_(" Loaders")),
+                    import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
+
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20 ` }, [
+                  import_Document.default.createElement("a", { "name": `loaders` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Loaders"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
+                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Badge from '@stackpress/ink-ui/element/loader';
+              import Loader from '@stackpress/ink-ui/element/loader';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -5718,269 +5600,268 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-      `, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
-      `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-        `, false),
-                    ...this._toNodeList(_("Props")),
-                    import_Document.default.createText(`
-      `, false)
+                    ...this._toNodeList(_("Props"))
                   ]),
                   import_Document.default.createText(`
-
-      `, false),
+          `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
-        `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
-        `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Type"))
                     ]),
                     import_Document.default.createText(`
-        `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Required"))
                     ]),
                     import_Document.default.createText(`
-        `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
 
-        `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`size`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the width and height of the loader (default: 20px)"))
+                        ...this._toNodeList(_("Width and height of the loader in pixels (default: 20)"))
                       ]),
                       import_Document.default.createText(`
-        `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-        `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`slice`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Determines how many parts of the border are transparent (0-3)"))
+                        ...this._toNodeList(_("Number of transparent border sides (0\u20133, default: 0)"))
                       ]),
                       import_Document.default.createText(`
-        `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-        `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`speed`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the animation speed in milliseconds (default: 1000ms)"))
+                        ...this._toNodeList(_("Animation duration in milliseconds (default: 1000)"))
                       ]),
                       import_Document.default.createText(`
-        `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-        `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`thickness`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the border thickness (default: 2px)"))
+                        ...this._toNodeList(_("Border thickness in pixels (default: 2)"))
                       ]),
                       import_Document.default.createText(`
-        `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-        `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`solid`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the border style to solid"))
+                        ...this._toNodeList(_("Sets border style to solid (default if no style specified)"))
                       ]),
                       import_Document.default.createText(`
-        `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-        `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`dotted`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the border style to dotted"))
+                        ...this._toNodeList(_("Sets border style to dotted"))
                       ]),
                       import_Document.default.createText(`
-        `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-        `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`dashed`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the border style to dashed"))
+                        ...this._toNodeList(_("Sets border style to dashed"))
                       ]),
                       import_Document.default.createText(`
-        `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-      `, false)
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`color`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Custom CSS color for the border (e.g., "red", "var(--primary)", default: "var(--black)")'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-
-      `, false),
-                  import_Document.default.createElement("a", { "name": `Types` }, []),
+          `, false),
+                  import_Document.default.createElement("a", { "name": `border-styles` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Types")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("Border Styles"))
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Loaders support different border styles:  
-            `, false),
-                    import_Document.default.createElement("span", { "class": `tx-italic p-3 b-solid` }, [
-                      import_Document.default.createText(`Solid`, false)
-                    ]),
-                    import_Document.default.createText(`,  
-            `, false),
-                    import_Document.default.createElement("span", { "class": `tx-italic p-3 b-dotted` }, [
-                      import_Document.default.createText(`Dotted`, false)
-                    ]),
-                    import_Document.default.createText(`,  
-            `, false),
-                    import_Document.default.createElement("span", { "class": `tx-italic p-3 b-dashed` }, [
-                      import_Document.default.createText(`Dashed`, false)
-                    ]),
-                    import_Document.default.createText(`.
-          `, false)
+                    ...this._toNodeList(_("Loaders support solid, dotted, and dashed border styles:"))
                   ]),
                   import_Document.default.createText(`
 
@@ -5991,7 +5872,7 @@ var InkAPI = (() => {
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("element-loader", { "solid": true, "size": `40`, "class": `tx-primary` }, []),
+                      import_Document.default.createElement("element-loader", { "solid": true, "size": `40`, "color": `var(--primary)` }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -5999,11 +5880,10 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-loader solid size="40" class="tx-primary"></element-loader>
+            <element-loader solid size="40" color="var(--primary)" />
           `)
                   ]),
                   import_Document.default.createText(`
@@ -6015,7 +5895,7 @@ var InkAPI = (() => {
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("element-loader", { "dotted": true, "size": `40`, "class": `tx-success` }, []),
+                      import_Document.default.createElement("element-loader", { "dotted": true, "size": `40`, "color": `var(--success)` }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6023,11 +5903,10 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-loader dotted size="40" class="tx-success"></element-loader>
+            <element-loader dotted size="40" color="var(--success)" />
           `)
                   ]),
                   import_Document.default.createText(`
@@ -6039,7 +5918,7 @@ var InkAPI = (() => {
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("element-loader", { "dashed": true, "size": `40`, "class": `tx-error` }, []),
+                      import_Document.default.createElement("element-loader", { "dashed": true, "size": `40`, "color": `var(--error)` }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6047,36 +5926,25 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-loader dashed size="40" class="tx-error"></element-loader>
+            <element-loader dashed size="40" color="var(--error)" />
           `)
                   ]),
                   import_Document.default.createText(`
-            `, false),
-                  import_Document.default.createElement("a", { "name": `CustomSize` }, []),
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `size` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Custom Size")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("Size"))
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Loaders can have custom sizes using the `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`size`, false)
-                    ]),
-                    import_Document.default.createText(` prop.
-          `, false)
+                    ...this._toNodeList(_('Adjust the loader\u2019s size with the "size" prop:'))
                   ]),
                   import_Document.default.createText(`
 
@@ -6087,7 +5955,7 @@ var InkAPI = (() => {
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("element-loader", { "dotted": true, "size": `60`, "class": `tx-warning` }, []),
+                      import_Document.default.createElement("element-loader", { "solid": true, "size": `20`, "color": `var(--info)` }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6095,234 +5963,331 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-loader dotted size="60" class="tx-warning"></element-loader>
-          `)
-                  ]),
-                  import_Document.default.createText(`
-            `, false),
-                  import_Document.default.createElement("a", { "name": `CustomSpeed` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Custom Speed")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Control the animation speed using the `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`speed`, false)
-                    ]),
-                    import_Document.default.createText(` prop (in milliseconds).
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-loader", { "dashed": true, "size": `40`, "speed": `500`, "class": `tx-info` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-loader size="40" speed="500" class="tx-info"></element-loader>
-          `)
-                  ]),
-                  import_Document.default.createText(`
-            `, false),
-                  import_Document.default.createElement("a", { "name": `SliceEffect` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Slice Effect")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            You can modify the loader by adjusting the `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`slice`, false)
-                    ]),
-                    import_Document.default.createText(` prop (0-3).
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-loader", { "info": true, "slice": `2` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-loader info slice="2"></element-loader>
+            <element-loader solid size="20" color="var(--info)" />
           `)
                   ]),
                   import_Document.default.createText(`
 
-
-              `, false),
-                  import_Document.default.createElement("a", { "name": `CustomThickness&BorderStyles` }, []),
-                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
             `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-loader", { "dotted": true, "size": `60`, "color": `var(--warning)` }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-loader dotted size="60" color="var(--warning)" />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `speed` }, []),
+                  import_Document.default.createText(`
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-              `, false),
-                    ...this._toNodeList(_("Custom Thickness & Border Styles")),
-                    import_Document.default.createText(`
-            `, false)
+                    ...this._toNodeList(_("Speed"))
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-              The `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`thickness`, false)
-                    ]),
-                    import_Document.default.createText(` prop controls the border width, and `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`solid`, false)
-                    ]),
-                    import_Document.default.createText(`, `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`dotted`, false)
-                    ]),
-                    import_Document.default.createText(`, and `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`dashed`, false)
-                    ]),
-                    import_Document.default.createText(` determine the border style.
-            `, false)
+                    ...this._toNodeList(_('Control the animation speed with the "speed" prop (in milliseconds):'))
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-loader", { "success": true, "size": `5`, "thickness": `5`, "dotted": true }, []),
+              `, false),
+                      import_Document.default.createElement("element-loader", { "dashed": true, "size": `40`, "speed": `500`, "color": `var(--info)` }),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-              <element-loader success size="5" thickness="5" dotted></element-loader>
-            `)
+            <element-loader dashed size="40" speed="500" color="var(--info)" />
+          `)
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-loader", { "warning": true, "dashed": true }, []),
+              `, false),
+                      import_Document.default.createElement("element-loader", { "solid": true, "size": `40`, "speed": `2000`, "color": `var(--muted)` }),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-              <element-loader warning dashed></element-loader>
-            `)
+            <element-loader solid size="40" speed="2000" color="var(--muted)" />
+          `)
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
+          `, false),
+                  import_Document.default.createElement("a", { "name": `slice` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Slice"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    ...this._toNodeList(_('Create a sliced effect by setting "slice" from 0 to 3:'))
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-loader", { "error": true, "dashed": true, "thickness": `10`, "size": `10`, "speed": `1500` }, []),
+              `, false),
+                      import_Document.default.createElement("element-loader", { "size": `40`, "slice": `1`, "color": `var(--primary)` }),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-              <element-loader error dashed thickness="10" size="10" speed="1500"></element-loader>
-            `)
+            <element-loader size="40" slice="1" color="var(--primary)" />
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-
-                        
-          
-
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
             `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-loader", { "size": `40`, "slice": `2`, "color": `var(--success)` }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-loader size="40" slice="2" color="var(--success)" />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-loader", { "size": `40`, "slice": `3`, "color": `var(--error)` }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-loader size="40" slice="3" color="var(--error)" />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `thickness` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Thickness"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    ...this._toNodeList(_('Adjust border thickness with the "thickness" prop:'))
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-loader", { "solid": true, "size": `40`, "thickness": `5`, "color": `var(--warning)` }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-loader solid size="40" thickness="5" color="var(--warning)" />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-loader", { "dashed": true, "size": `40`, "thickness": `10`, "color": `var(--info)` }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-loader dashed size="40" thickness="10" color="var(--info)" />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `color` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Color"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    ...this._toNodeList(_('Customize the loader\u2019s border color with the "color" prop:'))
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-loader", { "solid": true, "size": `40`, "color": `red` }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-loader solid size="40" color="red" />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-loader", { "dotted": true, "size": `40`, "color": `#facc15` }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-loader dotted size="40" color="#facc15" />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-loader", { "dashed": true, "size": `40`, "color": `var(--primary)` }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-loader dashed size="40" color="var(--primary)" />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/components/icon.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
+                      import_Document.default.createElement("element-icon", { "name": `chevron-left`, "color": `var(--tx-1)` }),
                       import_Document.default.createText(`
               `, false),
                       ...this._toNodeList(_("Icons")),
@@ -6337,7 +6302,7 @@ var InkAPI = (() => {
                       ...this._toNodeList(_("Notify")),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
+                      import_Document.default.createElement("element-icon", { "name": `chevron-right`, "color": `var(--tx-1)` }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6371,7 +6336,6 @@ var InkAPI = (() => {
     "IdeCode_5387662ecbed97347dd0": Code_5387662ecbed97347dd0,
     "I18nTranslate_794a00a5e900fca28310": Translate_794a00a5e900fca28310,
     "PanelLayout_c4c96a14064fc0c4d224": Panel_c4c96a14064fc0c4d224,
-    "ElementAlert_ba827f6c1d3753161701": Alert_ba827f6c1d3753161701,
     "ElementIcon_33cb84912ffcb000a388": Icon_33cb84912ffcb000a388,
     "ElementCrumbs_e4598fe781cc66b1ce2c": Crumbs_e4598fe781cc66b1ce2c,
     "InterfaceIcon_33cb84912ffcb000a388": Icon_33cb84912ffcb000a388,
@@ -6380,7 +6344,6 @@ var InkAPI = (() => {
     "TableHead_d8755504d9458a2c21da": Head_d8755504d9458a2c21da,
     "TableRow_0b3723ad0a2356b54f11": Row_0b3723ad0a2356b54f11,
     "TableCol_f45aa9d13a1588f1d9ab": Col_f45aa9d13a1588f1d9ab,
-    "ElementBadge_04e709456157a0a384e7": Badge_04e709456157a0a384e7,
     "ElementLoader_5cd70d17db973b221463": Loader_5cd70d17db973b221463
   };
   var elements = {
@@ -6389,14 +6352,12 @@ var InkAPI = (() => {
     "ide-code": Code_5387662ecbed97347dd0,
     "i18n-translate": Translate_794a00a5e900fca28310,
     "panel-layout": Panel_c4c96a14064fc0c4d224,
-    "element-alert": Alert_ba827f6c1d3753161701,
     "element-icon": Icon_33cb84912ffcb000a388,
     "element-crumbs": Crumbs_e4598fe781cc66b1ce2c,
     "layout-table": Table_02bc3cbacda5727a0af3,
     "table-head": Head_d8755504d9458a2c21da,
     "table-row": Row_0b3723ad0a2356b54f11,
     "table-col": Col_f45aa9d13a1588f1d9ab,
-    "element-badge": Badge_04e709456157a0a384e7,
     "element-loader": Loader_5cd70d17db973b221463
   };
   var BUILD_ID = "e1813620151c92722d24";

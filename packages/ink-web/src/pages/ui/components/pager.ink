@@ -6,14 +6,12 @@
 <link rel="import" type="component" href="@/components/ide/code.ink" name="ide-code" />
 <link rel="import" type="component" href="@/components/i18n/translate.ink" name="i18n-translate" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/panel.ink" name="panel-layout" />
-<link rel="import" type="component" href="@stackpress/ink-ui/element/alert.ink" name="element-alert" />
 <link rel="import" type="component" href="@stackpress/ink-ui/element/icon.ink" name="element-icon" />
 <link rel="import" type="component" href="@stackpress/ink-ui/element/crumbs.ink" name="element-crumbs" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table.ink" name="layout-table" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table/head.ink" name="table-head" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table/row.ink" name="table-row" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table/col.ink" name="table-col" />
-<link rel="import" type="component" href="@stackpress/ink-ui/element/badge.ink" name="element-badge" />
 <link rel="import" type="component" href="@stackpress/ink-ui/element/pager.ink" name="element-pager" />
 <style>
   @ink theme;
@@ -46,397 +44,314 @@
     <panel-layout>
       <header><html-header /></header>
       <aside left><html-aside /></aside>
-
-
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
           <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
             {_('On this page')}
           </h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#pager#">{_('Pager')}</a>
+            <a class="block tx-t-0" href="#pager">{_('Pager')}</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• {_('Props')}</a>
-              <a class="block tx-t-1" href="#PaginationExample">• {_('Pagination Example')}</a>
-              <a class="block tx-t-1" href="#CustomRangeAndPageSelection">• {_('Range & Page Selection')}</a>
-              <a class="block tx-t-1" href="#CustomControlsAndStyles">• {_('Controls and Styles')}</a>
-              <a class="block tx-t-1" href="#PaginationWithNoForwardOrRewind">• {_('Pagination with No Forward or Rewind')}</a>
-              
+              <a class="block tx-t-1" href="#basic">• {_('Basic Pagination')}</a>
+              <a class="block tx-t-1" href="#range-radius">• {_('Range & Radius')}</a>
+              <a class="block tx-t-1" href="#controls">• {_('Navigation Controls')}</a>
+              <a class="block tx-t-1" href="#styling">• {_('Styling Options')}</a>
             </nav>
           </nav>
         </menu>
       </aside>
-
-
-
       <main>
-      <api-docs>
-        <nav class="p-10 bg-t-3 sticky top-0 z-50">
-          <element-crumbs 
-            crumbs={crumbs} 
-            block 
-            bold 
-            white 
-            sep-muted
-            link-primary
-            spacing={2}
-          />
-      </nav>
+        <api-docs>
+          <nav class="p-10 bg-t-3 sticky top-0 z-50">
+            <element-crumbs 
+              crumbs={crumbs} 
+              block 
+              bold 
+              white 
+              sep-muted
+              link-primary
+              spacing={2}
+            />
+          </nav>
 
-
-        
-        <a name="pager"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">
-            {_(' Pager')}
-          </h1>
-          <ide-app title="Editor" class="py-20 ">
-            <ide-code class="scroll-y-auto" lang="js" trim>
-              import Badge from '@stackpress/ink-ui/element/pager';
+          <a name="pager"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">{_('Pager')}</h1>
+          <ide-app title="Editor" class="py-20">
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
+              import Pager from '@stackpress/ink-ui/element/pager';
             </ide-code>
           </ide-app>
 
-                <a name="props"></a>
-                <h2 class="tx-primary tx-upper tx-30 py-20">
-                {_('Props')}
-                </h2>
+          <a name="props"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Props')}</h2>
+          <layout-table 
+            top
+            head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
+            body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" 
+            odd="bg-t-0"
+            even="bg-t-1"
+          >
+            <table-head>{_('Name')}</table-head>
+            <table-head>{_('Type')}</table-head>
+            <table-head>{_('Required')}</table-head>
+            <table-head>{_('Notes')}</table-head>
 
-                <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
-                  <table-head>{_('Name')}</table-head>
-                  <table-head>{_('Type')}</table-head>
-                  <table-head>{_('Required')}</table-head>
-                  <table-head>{_('Notes')}</table-head>
+            <table-row>
+              <table-col>total</table-col>
+              <table-col>Number</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Total items to paginate (default: 0)')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>total</table-col>
-                    <table-col>Number</table-col>
-                    <table-col>Yes</table-col>
-                    <table-col>{_('Total number of items to paginate.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>start</table-col>
+              <table-col>Number</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Starting offset (default: 0)')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>start</table-col>
-                    <table-col>Number</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Start offset for pagination.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>range</table-col>
+              <table-col>Number</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Items per page (default: 50)')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>range</table-col>
-                    <table-col>Number</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Number of items per page.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>radius</table-col>
+              <table-col>Number</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Pages shown around current page (default: 2)')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>radius</table-col>
-                    <table-col>Number</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Determines the number of page links to show around the current page.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>next</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Show "next" button')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>next</table-col>
-                    <table-col>Boolean</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Flag to show the "next" button.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>prev</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Show "previous" button')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>prev</table-col>
-                    <table-col>Boolean</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Flag to show the "previous" button.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>rewind</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Show "rewind to first" button')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>rewind</table-col>
-                    <table-col>Boolean</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Flag to show the "rewind" button.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>forward</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Show "forward to last" button')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>forward</table-col>
-                    <table-col>Boolean</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Flag to show the "forward" button.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>link</table-col>
+              <table-col>Object</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Styles for page links (e.g., { color: "var(--primary)" })')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>link</table-col>
-                    <table-col>String</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Custom color for the pagination link.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>control</table-col>
+              <table-col>Object</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Styles for navigation icons (e.g., { color: "var(--info)" })')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>control</table-col>
-                    <table-col>Object</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Custom styles for pagination control elements.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>border</table-col>
+              <table-col>Object</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Border styles (e.g., { color: "var(--muted)" })')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>border</table-col>
-                    <table-col>String</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Border color for pagination controls.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>background</table-col>
+              <table-col>Object</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Background styles (e.g., { color: "var(--info)" })')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>background</table-col>
-                    <table-col>String</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Background color for pagination controls.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>square</table-col>
+              <table-col>Number</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Width/height of controls/links in pixels (default: 0, no square)')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>square</table-col>
-                    <table-col>Number</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Defines the size of pagination controls if set.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>size</table-col>
+              <table-col>Number</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Custom font/icon size in pixels')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>size</table-col>
-                    <table-col>String</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Default size of the icon for pagination controls.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>xs, sm, md, lg, xl, xl2, xl3, xl4, xl5</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Predefined size variants (escalating from extra-small to extra-large)')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>xs, sm, md, lg, xl, xl2, xl3, xl4, xl5</table-col>
-                    <table-col>String</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Various sizes for icon (pass to icon component).')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>color</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Default text/icon color (e.g., "red", "var(--primary)")')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>color</table-col>
-                    <table-col>String</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Default color for pagination controls.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>white, black, info, warning, success, error, muted, primary, secondary</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Predefined color variants')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>white, black, info, warning, success, error, muted, primary, secondary</table-col>
-                    <table-col>String</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Color options for pagination components.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>bold</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Bold text for current page')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>page (select)</table-col>
-                    <table-col>Function</table-col>
-                    <table-col>Yes</table-col>
-                    <table-col>{_('Handler function to select a page.')}</table-col>
-                  </table-row>
-                </layout-table>
+            <table-row>
+              <table-col>underline</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Underline page links')}</table-col>
+            </table-row>
 
+            <table-row>
+              <table-col>page</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Callback when a page is selected (default: no-op)')}</table-col>
+            </table-row>
+          </layout-table>
 
-        <a name="PaginationExample"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Pagination Example')}
-            </h2>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Basic Pagination')}</h2>
+          <div class="mb-10">{_('A simple pager with default settings:')}</div>
 
-            <div class="mb-10">
-            Pagination allows you to control the navigation through multiple pages with customizable styles and controls. Below is an example of a fully featured pagination component.
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-pager total={100} range={10} next prev page={console.log} />
             </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-pager total={100} range={10} next prev page={console.log} />
+          `}</ide-code>
 
-            <div class="bg-t-3 h-120 flex flex-center">
-            <element-pager 
+          <a name="range-radius"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Range & Radius')}</h2>
+          <div class="mb-10">{_('Customize items per page ("range") and visible pages ("radius"):')}</div>
+
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-pager total={500} range={100} radius={1} start={200} next prev page={console.log} />
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-pager total={500} range={100} radius={1} start={200} next prev page={console.log} />
+          `}</ide-code>
+
+          <a name="controls"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Navigation Controls')}</h2>
+          <div class="mb-10">{_('Add rewind and forward buttons for full navigation:')}</div>
+
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-pager total={1000} range={50} rewind forward next prev page={console.log} />
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-pager total={1000} range={50} rewind forward next prev page={console.log} />
+          `}</ide-code>
+
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-pager total={500} range={50} next prev page={console.log} />
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-pager total={500} range={50} next prev page={console.log} />
+          `}</ide-code>
+
+          <a name="styling"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Styling Options')}</h2>
+          <div class="mb-10">{_('Style the pager with colors, borders, and square shapes:')}</div>
+
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-pager 
                 total={1000} 
                 range={50} 
-                start={0} 
-                show={5} 
-                next
-                prev
-                rewind
-                forward
-                white
-                bold
-                underline
-                bg-info
-                border-theme="bd-2"
-                square={40}
-                select={console.log}
-            />
+                next prev rewind forward 
+                link={{ color: "primary" }} 
+                background={{ color: 'var(--info)' }} 
+                border={{ color: 'success' }} 
+                square={40} 
+                bold 
+                page={console.log} 
+              />
             </div>
-
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-pager 
-            total={1000} 
-            range={50} 
-            start={0} 
-            show={5} 
-            next
-            prev
-            rewind
-            forward
-            white
-            bold
-            underline
-            bg-info
-            border-theme="bd-2"
-            square={40}
-            select={console.log}
+              total={1000} 
+              range={50} 
+              next prev rewind forward 
+              link={{ color: 'var(--primary)' }} 
+              background={{ color: 'var(--info)' }} 
+              border={{ color: 'var(--muted)' }} 
+              square={40} 
+              bold 
+              page={console.log} 
             />
-            `}</ide-code>
+          `}</ide-code>
 
-
-         <a name="CustomRangeAndPageSelection"></a>
-            <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Custom Range and Page Selection')}
-            </h2>
-
-            <div class="mb-10">
-            Customize the range of items per page and the page selection. Here is an example where the pagination starts from the 90th item, with 100 items per page and a display of 3 pages at a time.
-            </div>
-
-            <div class="bg-t-3 h-120 flex flex-center">
-            <element-pager 
-                total={500} 
-                range={100} 
-                start={90} 
-                show={3} 
-                next
-                prev
-                rewind
-                forward
-                white
-                bold
-                underline
-                bg-warning
-                border-theme="bd-2"
-                square={40}
-                select={console.log}
-            />
-            </div>
-
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <element-pager 
-            total={500} 
-            range={100} 
-            start={90} 
-            show={3} 
-            next
-            prev
-            rewind
-            forward
-            white
-            bold
-            underline
-            bg-warning
-            border-theme="bd-2"
-            square={40}
-            select={console.log}
-            />
-            `}</ide-code>
-
-
-            <a name="CustomControlsAndStyles"></a>
-            <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Custom Controls and Styles')}
-            </h2>
-
-            <div class="mb-10">
-            Pagination can have various styles for buttons like square and customizable borders. This example shows a pagination with square controls and different background colors for pagination elements.
-            </div>
-
-            <div class="bg-t-3 h-120 flex flex-center">
-            <element-pager 
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-pager 
                 total={500} 
                 range={50} 
-                start={0} 
-                show={5} 
-                next
-                prev
-                rewind
-                forward
-                white
-                bold
-                underline
-                bg-success
-                border-theme="bd-3"
-                square={40}
-                select={console.log}
-            />
+                next prev 
+                color="var(--success)" 
+                underline 
+                square={30} 
+                page={console.log} 
+              />
             </div>
-
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-pager 
-            total={500} 
-            range={50} 
-            start={0} 
-            show={5} 
-            next
-            prev
-            rewind
-            forward
-            white
-            bold
-            underline
-            bg-success
-            border-theme="bd-3"
-            square={40}
-            select={console.log}
+              total={500} 
+              range={50} 
+              next prev 
+              color="var(--success)" 
+              underline 
+              square={30} 
+              page={console.log} 
             />
-            `}</ide-code>
+          `}</ide-code>
 
-
-         <a name="PaginationWithNoForwardOrRewind"></a>
-            <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Pagination with No Forward or Rewind')}
-            </h2>
-
-            <div class="mb-10">
-            You can control whether to show the forward or rewind buttons using the corresponding props. This example disables forward and rewind buttons.
-            </div>
-
-            <div class="bg-t-3 h-120 flex flex-center">
-            <element-pager 
-                total={500} 
-                range={50} 
-                start={0} 
-                show={5} 
-                next
-                prev
-                white
-                bold
-                underline
-                bg-danger
-                border-theme="bd-4"
-                square={40}
-                select={console.log}
-            />
-            </div>
-
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <element-pager 
-            total={500} 
-            range={50} 
-            start={0} 
-            show={5} 
-            next
-            prev
-            white
-            bold
-            underline
-            bg-danger
-            border-theme="bd-4"
-            square={40}
-            select={console.log}
-            />
-            `}</ide-code>
-
-            <nav class="flex">
+          <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/notify.html">
-              <element-icon name="chevron-left" theme="tx-1" />
+              <element-icon name="chevron-left" color="var(--tx-1)" />
               {_('Notify')}
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/panel.html">
               {_('Panels')}
-              <element-icon name="chevron-right" theme="tx-1" />
+              <element-icon name="chevron-right" color="var(--tx-1)" />
             </a>
           </nav>
           <footer class="foot"></footer>

@@ -835,6 +835,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
       ];
       return [
         import_Document.default.createText(`
+
 `, false),
         import_Document.default.createElement("html", {}, [
           import_Document.default.createText(`
@@ -1493,7 +1494,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
               ]),
               import_Document.default.createText(`
 
-
       `, false),
               import_Document.default.createElement("aside", { "right": true }, [
                 import_Document.default.createText(`
@@ -1513,8 +1513,8 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#pager#` }, [
-                      ...this._toNodeList(_("Tables"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#pager` }, [
+                      ...this._toNodeList(_("Table"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1574,7 +1574,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ...this._toNodeList(_("Table with Icons"))
                       ]),
                       import_Document.default.createText(`
-              
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1588,1461 +1587,2129 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
               ]),
               import_Document.default.createText(`
 
-
-
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-      `, false),
+        `, false),
                 import_Document.default.createElement("api-docs", {}, [
                   import_Document.default.createText(`
-        `, false),
+          `, false),
                   import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
                     import_Document.default.createText(`
-          `, false),
+            `, false),
                     import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
                     import_Document.default.createText(`
-      `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-
-        
-        `, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `pager` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_(" Table")),
+                    ...this._toNodeList(_("Table")),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20 ` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
                     import_Document.default.createText(`
-               `, false),
+            `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true, "detab": 12 }, [
                       ...this._toNodeList(`
-                import Table, { Thead, Trow, Tcol } from '@stackpress/ink-ui/layout/table';
-                `)
+              import Table from '@stackpress/ink-ui/layout/table';
+            `)
                     ]),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
 
-                `, false),
+          <!-- Props Section -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
-                `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-                `, false),
-                    ...this._toNodeList(_("Props")),
-                    import_Document.default.createText(`
-                `, false)
+                    ...this._toNodeList(_("Props"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Property"))
                     ]),
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Type"))
                     ]),
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Required"))
                     ]),
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
 
-              `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`nowrap`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Prevents text wrapping inside table cells."))
-                      ]),
-                      import_Document.default.createText(`
-              `, false)
-                    ]),
-                    import_Document.default.createText(`
-
               `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`wrap1`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets a cell width of 100px for text wrapping."))
-                      ]),
-                      import_Document.default.createText(`
-              `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-              `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`wrap2`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets a cell width of 200px for text wrapping."))
-                      ]),
-                      import_Document.default.createText(`
-              `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-              `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`wrap3`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets a cell width of 300px for text wrapping."))
-                      ]),
-                      import_Document.default.createText(`
-              `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-              `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`wrap4`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets a cell width of 400px for text wrapping."))
-                      ]),
-                      import_Document.default.createText(`
-              `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-              `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`wrap5`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                  `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets a cell width of 500px for text wrapping."))
-                      ]),
-                      import_Document.default.createText(`
-              `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-              `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                  `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`top`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String | Number`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Makes the table header sticky at the top. Accepts a pixel or percentage value."))
+                        ...this._toNodeList(_('Makes the table header sticky at the top. Accepts a pixel value (e.g., "10") or percentage (e.g., "10%"). Defaults to "0" if no value is provided.'))
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-              `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`bottom`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String | Number`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Makes the table footer sticky at the bottom. Accepts a pixel or percentage value."))
+                        ...this._toNodeList(_('Makes the table footer sticky at the bottom. Accepts a pixel value (e.g., "10") or percentage (e.g., "10%"). Defaults to "0" if no value is provided.'))
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-              `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`left`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String | Number`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Makes a column sticky on the left side. Accepts a pixel or percentage value."))
+                        ...this._toNodeList(_('Makes the first column sticky on the left. Accepts a pixel value (e.g., "10") or percentage (e.g., "10%"). Defaults to "0" if no value is provided.'))
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-              `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`right`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String | Number`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Makes a column sticky on the right side. Accepts a pixel or percentage value."))
+                        ...this._toNodeList(_('Makes the last column sticky on the right. Accepts a pixel value (e.g., "10") or percentage (e.g., "10%"). Defaults to "0" if no value is provided.'))
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-              `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`head`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom class list for styling the table header."))
+                        ...this._toNodeList(_('Space-separated class names applied to table headers (e.g., "bg-primary tx-white").'))
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-              `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`body`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom class list for styling the table body."))
+                        ...this._toNodeList(_('Space-separated class names applied to all body cells (e.g., "py-12 px-10").'))
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-              `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`odd`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom class list for styling odd table rows."))
+                        ...this._toNodeList(_('Space-separated class names applied to odd-numbered rows in the body (e.g., "bg-t-0").'))
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-              `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`even`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom class list for styling even table rows."))
+                        ...this._toNodeList(_('Space-separated class names applied to even-numbered rows in the body (e.g., "bg-t-1").'))
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-              `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`foot`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom class list for styling the table footer."))
+                        ...this._toNodeList(_('Space-separated class names applied to table footers (e.g., "bg-t-2").'))
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-              `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`sticky`, false)
+                        import_Document.default.createText(`nowrap`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Enables sticky positioning for headers, footers, or columns if any sticky props are set."))
+                        ...this._toNodeList(_('Prevents text wrapping in cells when set (e.g., nowrap=""). Applies to `<table-col>`, `<table-head>`, or `<table-foot>`.)'))
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`wrap1`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Sets a fixed width of 100px for cells (e.g., wrap1=""). Applies to `<table-col>`, `<table-head>`, or `<table-foot>`.)'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`wrap2`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Sets a fixed width of 200px for cells (e.g., wrap2=""). Applies to `<table-col>`, `<table-head>`, or `<table-foot>`.)'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`wrap3`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Sets a fixed width of 300px for cells (e.g., wrap3=""). Applies to `<table-col>`, `<table-head>`, or `<table-foot>`.)'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`wrap4`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Sets a fixed width of 400px for cells (e.g., wrap4=""). Applies to `<table-col>`, `<table-head>`, or `<table-foot>`.)'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`wrap5`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Sets a fixed width of 500px for cells (e.g., wrap5=""). Applies to `<table-col>`, `<table-head>`, or `<table-foot>`.)'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
 
-
-
-`, false),
+          <!-- Outline Example -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `OutlineExample` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    ...this._toNodeList(_("Outline Example")),
-                    import_Document.default.createText(`
-`, false)
+                    ...this._toNodeList(_("Outline Example"))
                   ]),
                   import_Document.default.createText(`
-
-<!-- Description for Example 1 -->
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  A simple table using layout-table with alternating row colors.
-`, false)
+            `, false),
+                    ...this._toNodeList(_("A simple table using layout-table with alternating row colors.")),
+                    import_Document.default.createText(`
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-
-<!-- Table Example 1 -->
-`, false),
+          `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Role"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Status"))
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`John Doe`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Developer`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Active`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Jane Smith`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Designer`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Pending`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Michael Lee`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Manager`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Inactive`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-<!-- Code for Example 1 -->
- `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-<layout-table 
-  top
-  head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
-  body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" 
-  odd="bg-t-0"
-  even="bg-t-1"
->
-  <table-head>{_('Name')}</table-head>
-  <table-head>{_('Role')}</table-head>
-  <table-head>{_('Status')}</table-head>
-
-  <table-row>
-    <table-col>John Doe</table-col>
-    <table-col>Developer</table-col>
-    <table-col>Active</table-col>
-  </table-row>
-
-  <table-row>
-    <table-col>Jane Smith</table-col>
-    <table-col>Designer</table-col>
-    <table-col>Pending</table-col>
-  </table-row>
-
-  <table-row>
-    <table-col>Michael Lee</table-col>
-    <table-col>Manager</table-col>
-    <table-col>Inactive</table-col>
-  </table-row>
-</layout-table>
-`)
+            <layout-table 
+              top
+              head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
+              body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" 
+              odd="bg-t-0"
+              even="bg-t-1"
+            >
+              <table-head>{_('Name')}</table-head>
+              <table-head>{_('Role')}</table-head>
+              <table-head>{_('Status')}</table-head>
+              <table-row>
+                <table-col>John Doe</table-col>
+                <table-col>Developer</table-col>
+                <table-col>Active</table-col>
+              </table-row>
+              <table-row>
+                <table-col>Jane Smith</table-col>
+                <table-col>Designer</table-col>
+                <table-col>Pending</table-col>
+              </table-row>
+              <table-row>
+                <table-col>Michael Lee</table-col>
+                <table-col>Manager</table-col>
+                <table-col>Inactive</table-col>
+              </table-row>
+            </layout-table>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-
-`, false),
+          <!-- Table with Additional Column -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `TableWithAdditionalColumn` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    ...this._toNodeList(_("Table with Additional Column")),
-                    import_Document.default.createText(`
-`, false)
+                    ...this._toNodeList(_("Table with Additional Column"))
                   ]),
                   import_Document.default.createText(`
-
-<!-- Description for Example 2 -->
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  This example demonstrates a table with a more detailed layout, 
-  including an additional column for contact information.
-`, false)
+            `, false),
+                    ...this._toNodeList(_("This example demonstrates a table with a more detailed layout, including an additional column for contact information.")),
+                    import_Document.default.createText(`
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-<!-- Table Example 2 -->
-`, false),
+          `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-primary tx-white b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-2` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Employee"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Department"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Status"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Contact"))
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Alice Johnson`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`HR`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Active`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`alice@example.com`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Bob Williams`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Engineering`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`On Leave`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`bob@example.com`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Sarah Brown`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Marketing`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Active`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`sarah@example.com`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-<!-- Code for Example 2 -->
- `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-<layout-table 
-  top
-  head="py-16 px-12 bg-primary tx-white b-solid b-black bt-1 bb-0 bx-0" 
-  body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" 
-  odd="bg-t-0"
-  even="bg-t-2"
->
-  <table-head>{_('Employee')}</table-head>
-  <table-head>{_('Department')}</table-head>
-  <table-head>{_('Status')}</table-head>
-  <table-head>{_('Contact')}</table-head>
-
-  <table-row>
-    <table-col>Alice Johnson</table-col>
-    <table-col>HR</table-col>
-    <table-col>Active</table-col>
-    <table-col>alice@example.com</table-col>
-  </table-row>
-
-  <table-row>
-    <table-col>Bob Williams</table-col>
-    <table-col>Engineering</table-col>
-    <table-col>On Leave</table-col>
-    <table-col>bob@example.com</table-col>
-  </table-row>
-
-  <table-row>
-    <table-col>Sarah Brown</table-col>
-    <table-col>Marketing</table-col>
-    <table-col>Active</table-col>
-    <table-col>sarah@example.com</table-col>
-  </table-row>
-</layout-table>
-`)
+            <layout-table 
+              top
+              head="py-16 px-12 bg-primary tx-white b-solid b-black bt-1 bb-0 bx-0" 
+              body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" 
+              odd="bg-t-0"
+              even="bg-t-2"
+            >
+              <table-head>{_('Employee')}</table-head>
+              <table-head>{_('Department')}</table-head>
+              <table-head>{_('Status')}</table-head>
+              <table-head>{_('Contact')}</table-head>
+              <table-row>
+                <table-col>Alice Johnson</table-col>
+                <table-col>HR</table-col>
+                <table-col>Active</table-col>
+                <table-col>alice@example.com</table-col>
+              </table-row>
+              <table-row>
+                <table-col>Bob Williams</table-col>
+                <table-col>Engineering</table-col>
+                <table-col>On Leave</table-col>
+                <table-col>bob@example.com</table-col>
+              </table-row>
+              <table-row>
+                <table-col>Sarah Brown</table-col>
+                <table-col>Marketing</table-col>
+                <table-col>Active</table-col>
+                <table-col>sarah@example.com</table-col>
+              </table-row>
+            </layout-table>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-`, false),
+          <!-- Table with Borders -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `TableWithBorders` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    ...this._toNodeList(_("Table with Borders")),
-                    import_Document.default.createText(`
-`, false)
+                    ...this._toNodeList(_("Table with Borders"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  This table includes a solid border around all cells for better visibility.
-`, false)
+            `, false),
+                    ...this._toNodeList(_("This table includes a solid border around all cells for better visibility.")),
+                    import_Document.default.createText(`
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-12 px-10 bg-t-1 b-solid b-black bt-1 bx-1`, "body": `py-12 px-10 b-solid b-black bt-1 bx-1`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("ID"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Age"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Country"))
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`1`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Emily Watson`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`29`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`USA`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`2`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Omar Ali`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`35`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`UAE`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`3`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Chen Wei`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`41`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`China`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-
-<!-- Code for Example 1 -->
- `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-<layout-table 
-  top
-  head="py-12 px-10 bg-t-1 b-solid b-black bt-1 bx-1"
-  body="py-12 px-10 b-solid b-black bt-1 bx-1"
-  odd="bg-t-0"
-  even="bg-t-1"
->
-  <table-head>{_('ID')}</table-head>
-  <table-head>{_('Name')}</table-head>
-  <table-head>{_('Age')}</table-head>
-  <table-head>{_('Country')}</table-head>
-
-  <table-row>
-    <table-col>1</table-col>
-    <table-col>Emily Watson</table-col>
-    <table-col>29</table-col>
-    <table-col>USA</table-col>
-  </table-row>
-
-  <table-row>
-    <table-col>2</table-col>
-    <table-col>Omar Ali</table-col>
-    <table-col>35</table-col>
-    <table-col>UAE</table-col>
-  </table-row>
-
-  <table-row>
-    <table-col>3</table-col>
-    <table-col>Chen Wei</table-col>
-    <table-col>41</table-col>
-    <table-col>China</table-col>
-  </table-row>
-</layout-table>
-`)
+            <layout-table 
+              top
+              head="py-12 px-10 bg-t-1 b-solid b-black bt-1 bx-1"
+              body="py-12 px-10 b-solid b-black bt-1 bx-1"
+              odd="bg-t-0"
+              even="bg-t-1"
+            >
+              <table-head>{_('ID')}</table-head>
+              <table-head>{_('Name')}</table-head>
+              <table-head>{_('Age')}</table-head>
+              <table-head>{_('Country')}</table-head>
+              <table-row>
+                <table-col>1</table-col>
+                <table-col>Emily Watson</table-col>
+                <table-col>29</table-col>
+                <table-col>USA</table-col>
+              </table-row>
+              <table-row>
+                <table-col>2</table-col>
+                <table-col>Omar Ali</table-col>
+                <table-col>35</table-col>
+                <table-col>UAE</table-col>
+              </table-row>
+              <table-row>
+                <table-col>3</table-col>
+                <table-col>Chen Wei</table-col>
+                <table-col>41</table-col>
+                <table-col>China</table-col>
+              </table-row>
+            </layout-table>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-`, false),
+          <!-- Striped Table -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `StripedTable` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    ...this._toNodeList(_("Striped Table")),
-                    import_Document.default.createText(`
-`, false)
+                    ...this._toNodeList(_("Striped Table"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  A striped table helps differentiate rows by alternating background colors.
-`, false)
+            `, false),
+                    ...this._toNodeList(_("A striped table helps differentiate rows by alternating background colors.")),
+                    import_Document.default.createText(`
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-12 px-10 bg-t-2 tx-white`, "body": `py-12 px-10`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Product"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Category"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Price"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Stock"))
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`iPhone 13`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Electronics`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`$799`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`In Stock`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Nike Sneakers`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Fashion`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`$120`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Limited Stock`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Samsung TV`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Electronics`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`$999`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Out of Stock`, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-
-<!-- Code for Example 1 -->
- `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-<layout-table 
-  top
-  head="py-12 px-10 bg-t-2 tx-white"
-  body="py-12 px-10"
-  odd="bg-t-0"
-  even="bg-t-1"
->
-  <table-head>{_('Product')}</table-head>
-  <table-head>{_('Category')}</table-head>
-  <table-head>{_('Price')}</table-head>
-  <table-head>{_('Stock')}</table-head>
-
-  <table-row>
-    <table-col>iPhone 13</table-col>
-    <table-col>Electronics</table-col>
-    <table-col>$799</table-col>
-    <table-col>In Stock</table-col>
-  </table-row>
-
-  <table-row>
-    <table-col>Nike Sneakers</table-col>
-    <table-col>Fashion</table-col>
-    <table-col>$120</table-col>
-    <table-col>Limited Stock</table-col>
-  </table-row>
-
-  <table-row>
-    <table-col>Samsung TV</table-col>
-    <table-col>Electronics</table-col>
-    <table-col>$999</table-col>
-    <table-col>Out of Stock</table-col>
-  </table-row>
-</layout-table>
-
-`)
+            <layout-table 
+              top
+              head="py-12 px-10 bg-t-2 tx-white"
+              body="py-12 px-10"
+              odd="bg-t-0"
+              even="bg-t-1"
+            >
+              <table-head>{_('Product')}</table-head>
+              <table-head>{_('Category')}</table-head>
+              <table-head>{_('Price')}</table-head>
+              <table-head>{_('Stock')}</table-head>
+              <table-row>
+                <table-col>iPhone 13</table-col>
+                <table-col>Electronics</table-col>
+                <table-col>$799</table-col>
+                <table-col>In Stock</table-col>
+              </table-row>
+              <table-row>
+                <table-col>Nike Sneakers</table-col>
+                <table-col>Fashion</table-col>
+                <table-col>$120</table-col>
+                <table-col>Limited Stock</table-col>
+              </table-row>
+              <table-row>
+                <table-col>Samsung TV</table-col>
+                <table-col>Electronics</table-col>
+                <table-col>$999</table-col>
+                <table-col>Out of Stock</table-col>
+              </table-row>
+            </layout-table>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-`, false),
+          <!-- Table with Status Labels -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `TableWithStatusLabels` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    ...this._toNodeList(_("Table with Status Labels")),
-                    import_Document.default.createText(`
-`, false)
+                    ...this._toNodeList(_("Table with Status Labels"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  A table with status labels and icons for better user experience.
-`, false)
+            `, false),
+                    ...this._toNodeList(_("A table with status labels and buttons for better user experience.")),
+                    import_Document.default.createText(`
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-12 px-10 bg-primary tx-white`, "body": `py-12 px-10`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("User"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Email"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Status"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Actions"))
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`John Doe`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`john@example.com`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createElement("span", { "class": `bg-success tx-white py-4 px-8 rounded` }, [
                           import_Document.default.createText(`Active`, false)
                         ])
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`
-      `, false),
+                `, false),
                         import_Document.default.createElement("button", { "class": `bg-primary tx-white py-4 px-8 rounded` }, [
                           import_Document.default.createText(`Edit`, false)
                         ]),
                         import_Document.default.createText(`
-      `, false),
+                `, false),
                         import_Document.default.createElement("button", { "class": `bg-error tx-white py-4 px-8 rounded` }, [
                           import_Document.default.createText(`Delete`, false)
                         ]),
                         import_Document.default.createText(`
-    `, false)
+              `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Mary Jane`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`mary@example.com`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createElement("span", { "class": `bg-warning tx-white py-4 px-8 rounded` }, [
                           import_Document.default.createText(`Pending`, false)
                         ])
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`
-      `, false),
+                `, false),
                         import_Document.default.createElement("button", { "class": `bg-primary tx-white py-4 px-8 rounded` }, [
                           import_Document.default.createText(`Edit`, false)
                         ]),
                         import_Document.default.createText(`
-      `, false),
+                `, false),
                         import_Document.default.createElement("button", { "class": `bg-error tx-white py-4 px-8 rounded` }, [
                           import_Document.default.createText(`Delete`, false)
                         ]),
                         import_Document.default.createText(`
-    `, false)
+              `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Mike Brown`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`mike@example.com`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createElement("span", { "class": `bg-error tx-white py-4 px-8 rounded` }, [
                           import_Document.default.createText(`Suspended`, false)
                         ])
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`
-      `, false),
+                `, false),
                         import_Document.default.createElement("button", { "class": `bg-primary tx-white py-4 px-8 rounded` }, [
                           import_Document.default.createText(`Edit`, false)
                         ]),
                         import_Document.default.createText(`
-      `, false),
+                `, false),
                         import_Document.default.createElement("button", { "class": `bg-error tx-white py-4 px-8 rounded` }, [
                           import_Document.default.createText(`Delete`, false)
                         ]),
                         import_Document.default.createText(`
-    `, false)
+              `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-
-
- `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-<layout-table 
-  top
-  head="py-12 px-10 bg-primary tx-white"
-  body="py-12 px-10"
-  odd="bg-t-0"
-  even="bg-t-1"
->
-  <table-head>{_('User')}</table-head>
-  <table-head>{_('Email')}</table-head>
-  <table-head>{_('Status')}</table-head>
-  <table-head>{_('Actions')}</table-head>
-
-  <table-row>
-    <table-col>John Doe</table-col>
-    <table-col>john@example.com</table-col>
-    <table-col><span class="bg-success tx-white py-4 px-8 rounded">Active</span></table-col>
-    <table-col>
-      <button class="bg-primary tx-white py-4 px-8 rounded">Edit</button>
-      <button class="bg-error tx-white py-4 px-8 rounded">Delete</button>
-    </table-col>
-  </table-row>
-
-  <table-row>
-    <table-col>Mary Jane</table-col>
-    <table-col>mary@example.com</table-col>
-    <table-col><span class="bg-warning tx-white py-4 px-8 rounded">Pending</span></table-col>
-    <table-col>
-      <button class="bg-primary tx-white py-4 px-8 rounded">Edit</button>
-      <button class="bg-error tx-white py-4 px-8 rounded">Delete</button>
-    </table-col>
-  </table-row>
-
-  <table-row>
-    <table-col>Mike Brown</table-col>
-    <table-col>mike@example.com</table-col>
-    <table-col><span class="bg-error tx-white py-4 px-8 rounded">Suspended</span></table-col>
-    <table-col>
-      <button class="bg-primary tx-white py-4 px-8 rounded">Edit</button>
-      <button class="bg-error tx-white py-4 px-8 rounded">Delete</button>
-    </table-col>
-  </table-row>
-</layout-table>
-`)
+            <layout-table 
+              top
+              head="py-12 px-10 bg-primary tx-white"
+              body="py-12 px-10"
+              odd="bg-t-0"
+              even="bg-t-1"
+            >
+              <table-head>{_('User')}</table-head>
+              <table-head>{_('Email')}</table-head>
+              <table-head>{_('Status')}</table-head>
+              <table-head>{_('Actions')}</table-head>
+              <table-row>
+                <table-col>John Doe</table-col>
+                <table-col>john@example.com</table-col>
+                <table-col><span class="bg-success tx-white py-4 px-8 rounded">Active</span></table-col>
+                <table-col>
+                  <button class="bg-primary tx-white py-4 px-8 rounded">Edit</button>
+                  <button class="bg-error tx-white py-4 px-8 rounded">Delete</button>
+                </table-col>
+              </table-row>
+              <table-row>
+                <table-col>Mary Jane</table-col>
+                <table-col>mary@example.com</table-col>
+                <table-col><span class="bg-warning tx-white py-4 px-8 rounded">Pending</span></table-col>
+                <table-col>
+                  <button class="bg-primary tx-white py-4 px-8 rounded">Edit</button>
+                  <button class="bg-error tx-white py-4 px-8 rounded">Delete</button>
+                </table-col>
+              </table-row>
+              <table-row>
+                <table-col>Mike Brown</table-col>
+                <table-col>mike@example.com</table-col>
+                <table-col><span class="bg-error tx-white py-4 px-8 rounded">Suspended</span></table-col>
+                <table-col>
+                  <button class="bg-primary tx-white py-4 px-8 rounded">Edit</button>
+                  <button class="bg-error tx-white py-4 px-8 rounded">Delete</button>
+                </table-col>
+              </table-row>
+            </layout-table>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-`, false),
+          <!-- Responsive Table -->
+          `, false),
                   import_Document.default.createElement("a", { "name": `ResponsiveTable` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    ...this._toNodeList(_("ResponsiveTable")),
-                    import_Document.default.createText(`
-`, false)
+                    ...this._toNodeList(_("Responsive Table"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  This table is responsive and allows horizontal scrolling on smaller screens.
-`, false)
+            `, false),
+                    ...this._toNodeList(_("This table is responsive and allows horizontal scrolling on smaller screens when wrapped in an overflow container.")),
+                    import_Document.default.createText(`
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `overflow-auto` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("layout-table", { "top": true, "head": `py-12 px-10 bg-primary tx-white`, "body": `py-12 px-10`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-head", {}, [
                         ...this._toNodeList(_("Order ID"))
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-head", {}, [
                         ...this._toNodeList(_("Customer"))
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-head", {}, [
                         ...this._toNodeList(_("Total"))
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-head", {}, [
                         ...this._toNodeList(_("Date"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-head", {}, [
+                        ...this._toNodeList(_("Status"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-row", {}, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`#1001`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`Jane Smith`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`$200`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`2025-02-28`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createElement("span", { "class": `bg-success tx-white py-4 px-8 rounded` }, [
+                            import_Document.default.createText(`Completed`, false)
+                          ])
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-row", {}, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`#1002`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`Robert White`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`$150`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`2025-02-27`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createElement("span", { "class": `bg-warning tx-white py-4 px-8 rounded` }, [
+                            import_Document.default.createText(`Pending`, false)
+                          ])
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-row", {}, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`#1003`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`Sarah Connor`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`$300`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`2025-02-26`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createElement("span", { "class": `bg-error tx-white py-4 px-8 rounded` }, [
+                            import_Document.default.createText(`Canceled`, false)
+                          ])
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <div class="overflow-auto">
+              <layout-table 
+                top
+                head="py-12 px-10 bg-primary tx-white"
+                body="py-12 px-10"
+                odd="bg-t-0"
+                even="bg-t-1"
+              >
+                <table-head>{_('Order ID')}</table-head>
+                <table-head>{_('Customer')}</table-head>
+                <table-head>{_('Total')}</table-head>
+                <table-head>{_('Date')}</table-head>
+                <table-head>{_('Status')}</table-head>
+                <table-row>
+                  <table-col>#1001</table-col>
+                  <table-col>Jane Smith</table-col>
+                  <table-col>$200</table-col>
+                  <table-col>2025-02-28</table-col>
+                  <table-col><span class="bg-success tx-white py-4 px-8 rounded">Completed</span></table-col>
+                </table-row>
+                <table-row>
+                  <table-col>#1002</table-col>
+                  <table-col>Robert White</table-col>
+                  <table-col>$150</table-col>
+                  <table-col>2025-02-27</table-col>
+                  <table-col><span class="bg-warning tx-white py-4 px-8 rounded">Pending</span></table-col>
+                </table-row>
+                <table-row>
+                  <table-col>#1003</table-col>
+                  <table-col>Sarah Connor</table-col>
+                  <table-col>$300</table-col>
+                  <table-col>2025-02-26</table-col>
+                  <table-col><span class="bg-error tx-white py-4 px-8 rounded">Canceled</span></table-col>
+                </table-row>
+              </layout-table>
+            </div>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          <!-- Table with Custom Column Widths -->
+          `, false),
+                  import_Document.default.createElement("a", { "name": `TableWithCustomColumnWidths` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Table with Custom Column Widths"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("This example demonstrates how to set custom column widths using atomic classes or wrap props.")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-12 px-10 bg-t-1 b-solid b-black`, "body": `py-12 px-10`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-head", { "class": `w-10` }, [
+                      ...this._toNodeList(_("ID"))
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-head", { "class": `w-40` }, [
+                      ...this._toNodeList(_("Name"))
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-head", { "class": `w-25` }, [
+                      ...this._toNodeList(_("Department"))
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-head", { "class": `w-25` }, [
+                      ...this._toNodeList(_("Salary"))
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`1`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`David Green`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`HR`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`$50,000`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`2`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Anna Taylor`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`IT`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`$75,000`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`3`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Michael Scott`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Sales`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`$65,000`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <layout-table 
+              top
+              head="py-12 px-10 bg-t-1 b-solid b-black"
+              body="py-12 px-10"
+              odd="bg-t-0"
+              even="bg-t-1"
+            >
+              <table-head class="w-10">{_('ID')}</table-head>
+              <table-head class="w-40">{_('Name')}</table-head>
+              <table-head class="w-25">{_('Department')}</table-head>
+              <table-head class="w-25">{_('Salary')}</table-head>
+              <table-row>
+                <table-col>1</table-col>
+                <table-col>David Green</table-col>
+                <table-col>HR</table-col>
+                <table-col>$50,000</table-col>
+              </table-row>
+              <table-row>
+                <table-col>2</table-col>
+                <table-col>Anna Taylor</table-col>
+                <table-col>IT</table-col>
+                <table-col>$75,000</table-col>
+              </table-row>
+              <table-row>
+                <table-col>3</table-col>
+                <table-col>Michael Scott</table-col>
+                <table-col>Sales</table-col>
+                <table-col>$65,000</table-col>
+              </table-row>
+            </layout-table>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          <!-- Table with Icons -->
+          `, false),
+                  import_Document.default.createElement("a", { "name": `TableWithIcons` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Table with Icons"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("This table uses element-icon components for statuses and action buttons.")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-12 px-10 bg-primary tx-white`, "body": `py-12 px-10`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-head", {}, [
+                      ...this._toNodeList(_("User"))
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-head", {}, [
+                      ...this._toNodeList(_("Email"))
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-head", {}, [
+                      ...this._toNodeList(_("Status"))
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-head", {}, [
+                      ...this._toNodeList(_("Actions"))
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`John Doe`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`john@example.com`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("span", { "class": `flex items-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("element-icon", { "name": `check-circle`, "class": `tx-success mr-6` }, []),
+                          import_Document.default.createText(` Active
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `eye`, "class": `mr-5 tx-info` }),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `edit`, "class": `mr-5 tx-warning` }),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `trash`, "class": `tx-error` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Mary Jane`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`mary@example.com`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("span", { "class": `flex items-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("element-icon", { "name": `clock`, "class": `tx-warning mr-6` }, []),
+                          import_Document.default.createText(` Pending
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `eye`, "class": `mr-5 tx-info` }),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `edit`, "class": `mr-5 tx-warning` }),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `trash`, "class": `tx-error` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Mike Brown`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`mike@example.com`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("span", { "class": `flex items-center` }, [
+                          import_Document.default.createText(`
+                  `, false),
+                          import_Document.default.createElement("element-icon", { "name": `times-circle`, "class": `tx-error mr-6` }, []),
+                          import_Document.default.createText(` Suspended
+                `, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `eye`, "class": `mr-5 tx-info` }),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `edit`, "class": `mr-5 tx-warning` }),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-icon", { "name": `trash`, "class": `tx-error` }),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <layout-table 
+              top
+              head="py-12 px-10 bg-primary tx-white"
+              body="py-12 px-10"
+              odd="bg-t-0"
+              even="bg-t-1"
+            >
+              <table-head>{_('User')}</table-head>
+              <table-head>{_('Email')}</table-head>
+              <table-head>{_('Status')}</table-head>
+              <table-head>{_('Actions')}</table-head>
+              <table-row>
+                <table-col>John Doe</table-col>
+                <table-col>john@example.com</table-col>
+                <table-col>
+                  <span class="flex items-center">
+                    <element-icon name="check-circle" class="tx-success mr-6"></element-icon> Active
+                  </span>
+                </table-col>
+                <table-col>
+                  <element-icon name="eye" class="mr-5 tx-info" />
+                  <element-icon name="edit" class="mr-5 tx-warning" />
+                  <element-icon name="trash" class="tx-error" />
+                </table-col>
+              </table-row>
+              <table-row>
+                <table-col>Mary Jane</table-col>
+                <table-col>mary@example.com</table-col>
+                <table-col>
+                  <span class="flex items-center">
+                    <element-icon name="clock" class="tx-warning mr-6"></element-icon> Pending
+                  </span>
+                </table-col>
+                <table-col>
+                  <element-icon name="eye" class="mr-5 tx-info" />
+                  <element-icon name="edit" class="mr-5 tx-warning" />
+                  <element-icon name="trash" class="tx-error" />
+                </table-col>
+              </table-row>
+              <table-row>
+                <table-col>Mike Brown</table-col>
+                <table-col>mike@example.com</table-col>
+                <table-col>
+                  <span class="flex items-center">
+                    <element-icon name="times-circle" class="tx-error mr-6"></element-icon> Suspended
+                  </span>
+                </table-col>
+                <table-col>
+                  <element-icon name="eye" class="mr-5 tx-info" />
+                  <element-icon name="edit" class="mr-5 tx-warning" />
+                  <element-icon name="trash" class="tx-error" />
+                </table-col>
+              </table-row>
+            </layout-table>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `TableWithStickyFooter` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Table with Sticky Footer"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("This table uses the `bottom` prop to make the footer sticky at the bottom.")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("layout-table", { "top": true, "bottom": true, "head": `py-12 px-10 bg-primary tx-white`, "body": `py-12 px-10`, "foot": `py-12 px-10 bg-t-2 tx-white`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-head", {}, [
+                      ...this._toNodeList(_("ID"))
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-head", {}, [
+                      ...this._toNodeList(_("Name"))
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-head", {}, [
+                      ...this._toNodeList(_("Score"))
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`1`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Alex`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`85`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`2`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Blake`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`92`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`3`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Casey`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`78`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-foot", {}, [
+                      ...this._toNodeList(_("Total"))
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-foot", {}, [
+                      import_Document.default.createText(`-`, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-foot", {}, [
+                      import_Document.default.createText(`255`, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <layout-table 
+              top
+              bottom
+              head="py-12 px-10 bg-primary tx-white"
+              body="py-12 px-10"
+              foot="py-12 px-10 bg-t-2 tx-white"
+              odd="bg-t-0"
+              even="bg-t-1"
+            >
+              <table-head>{_('ID')}</table-head>
+              <table-head>{_('Name')}</table-head>
+              <table-head>{_('Score')}</table-head>
+              <table-row>
+                <table-col>1</table-col>
+                <table-col>Alex</table-col>
+                <table-col>85</table-col>
+              </table-row>
+              <table-row>
+                <table-col>2</table-col>
+                <table-col>Blake</table-col>
+                <table-col>92</table-col>
+              </table-row>
+              <table-row>
+                <table-col>3</table-col>
+                <table-col>Casey</table-col>
+                <table-col>78</table-col>
+              </table-row>
+              <table-foot>{_('Total')}</table-foot>
+              <table-foot>-</table-foot>
+              <table-foot>255</table-foot>
+            </layout-table>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+
+`, false),
+                  import_Document.default.createElement("a", { "name": `TableWithStickyColumns` }, []),
+                  import_Document.default.createText(`
+`, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Table with Sticky Columns"))
+                  ]),
+                  import_Document.default.createText(`
+`, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+  `, false),
+                    ...this._toNodeList(_("This table uses `left` and `right` props to make the first and last columns sticky. Extra columns are added to demonstrate horizontal scrolling within an overflow container.")),
+                    import_Document.default.createText(`
+`, false)
+                  ]),
+                  import_Document.default.createText(`
+`, false),
+                  import_Document.default.createElement("div", { "class": `overflow-auto` }, [
+                    import_Document.default.createText(`
+  `, false),
+                    import_Document.default.createElement("layout-table", { "top": true, "left": true, "right": true, "head": `py-12 px-10 bg-primary tx-white`, "body": `py-12 px-10`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
+                      import_Document.default.createText(`
+    `, false),
+                      import_Document.default.createElement("table-head", {}, [
+                        ...this._toNodeList(_("ID"))
+                      ]),
+                      import_Document.default.createText(`
+    `, false),
+                      import_Document.default.createElement("table-head", {}, [
+                        ...this._toNodeList(_("First Name"))
+                      ]),
+                      import_Document.default.createText(`
+    `, false),
+                      import_Document.default.createElement("table-head", {}, [
+                        ...this._toNodeList(_("Last Name"))
+                      ]),
+                      import_Document.default.createText(`
+    `, false),
+                      import_Document.default.createElement("table-head", {}, [
+                        ...this._toNodeList(_("Email"))
+                      ]),
+                      import_Document.default.createText(`
+    `, false),
+                      import_Document.default.createElement("table-head", {}, [
+                        ...this._toNodeList(_("Phone"))
+                      ]),
+                      import_Document.default.createText(`
+    `, false),
+                      import_Document.default.createElement("table-head", {}, [
+                        ...this._toNodeList(_("Address"))
+                      ]),
+                      import_Document.default.createText(`
+    `, false),
+                      import_Document.default.createElement("table-head", {}, [
+                        ...this._toNodeList(_("City"))
+                      ]),
+                      import_Document.default.createText(`
+    `, false),
+                      import_Document.default.createElement("table-head", {}, [
+                        ...this._toNodeList(_("Country"))
+                      ]),
+                      import_Document.default.createText(`
+    `, false),
+                      import_Document.default.createElement("table-head", {}, [
+                        ...this._toNodeList(_("Join Date"))
                       ]),
                       import_Document.default.createText(`
     `, false),
@@ -3050,103 +3717,169 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ...this._toNodeList(_("Status"))
                       ]),
                       import_Document.default.createText(`
-
     `, false),
                       import_Document.default.createElement("table-row", {}, [
                         import_Document.default.createText(`
       `, false),
                         import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`#1001`, false)
+                          import_Document.default.createText(`1`, false)
                         ]),
                         import_Document.default.createText(`
       `, false),
                         import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`Jane Smith`, false)
+                          import_Document.default.createText(`Emma`, false)
                         ]),
                         import_Document.default.createText(`
       `, false),
                         import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`$200`, false)
+                          import_Document.default.createText(`Wilson`, false)
                         ]),
                         import_Document.default.createText(`
       `, false),
                         import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`2025-02-28`, false)
+                          import_Document.default.createText(`emma@example.com`, false)
                         ]),
                         import_Document.default.createText(`
       `, false),
                         import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createElement("span", { "class": `bg-success tx-white py-4 px-8 rounded` }, [
-                            import_Document.default.createText(`Completed`, false)
-                          ])
+                          import_Document.default.createText(`+1-555-123-4567`, false)
+                        ]),
+                        import_Document.default.createText(`
+      `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`123 Maple St`, false)
+                        ]),
+                        import_Document.default.createText(`
+      `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`New York`, false)
+                        ]),
+                        import_Document.default.createText(`
+      `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`USA`, false)
+                        ]),
+                        import_Document.default.createText(`
+      `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`2024-01-15`, false)
+                        ]),
+                        import_Document.default.createText(`
+      `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`Active`, false)
                         ]),
                         import_Document.default.createText(`
     `, false)
                       ]),
                       import_Document.default.createText(`
-
     `, false),
                       import_Document.default.createElement("table-row", {}, [
                         import_Document.default.createText(`
       `, false),
                         import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`#1002`, false)
+                          import_Document.default.createText(`2`, false)
                         ]),
                         import_Document.default.createText(`
       `, false),
                         import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`Robert White`, false)
+                          import_Document.default.createText(`Liam`, false)
                         ]),
                         import_Document.default.createText(`
       `, false),
                         import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`$150`, false)
+                          import_Document.default.createText(`Chen`, false)
                         ]),
                         import_Document.default.createText(`
       `, false),
                         import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`2025-02-27`, false)
+                          import_Document.default.createText(`liam@example.com`, false)
                         ]),
                         import_Document.default.createText(`
       `, false),
                         import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createElement("span", { "class": `bg-warning tx-white py-4 px-8 rounded` }, [
-                            import_Document.default.createText(`Pending`, false)
-                          ])
+                          import_Document.default.createText(`+1-555-987-6543`, false)
+                        ]),
+                        import_Document.default.createText(`
+      `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`456 Oak Ave`, false)
+                        ]),
+                        import_Document.default.createText(`
+      `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`Toronto`, false)
+                        ]),
+                        import_Document.default.createText(`
+      `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`Canada`, false)
+                        ]),
+                        import_Document.default.createText(`
+      `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`2024-03-22`, false)
+                        ]),
+                        import_Document.default.createText(`
+      `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`Pending`, false)
                         ]),
                         import_Document.default.createText(`
     `, false)
                       ]),
                       import_Document.default.createText(`
-
     `, false),
                       import_Document.default.createElement("table-row", {}, [
                         import_Document.default.createText(`
       `, false),
                         import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`#1003`, false)
+                          import_Document.default.createText(`3`, false)
                         ]),
                         import_Document.default.createText(`
       `, false),
                         import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`Sarah Connor`, false)
+                          import_Document.default.createText(`Olivia`, false)
                         ]),
                         import_Document.default.createText(`
       `, false),
                         import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`$300`, false)
+                          import_Document.default.createText(`Patel`, false)
                         ]),
                         import_Document.default.createText(`
       `, false),
                         import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`2025-02-26`, false)
+                          import_Document.default.createText(`olivia@example.com`, false)
                         ]),
                         import_Document.default.createText(`
       `, false),
                         import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createElement("span", { "class": `bg-error tx-white py-4 px-8 rounded` }, [
-                            import_Document.default.createText(`Canceled`, false)
-                          ])
+                          import_Document.default.createText(`+44-20-7946-0958`, false)
+                        ]),
+                        import_Document.default.createText(`
+      `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`789 Pine Rd`, false)
+                        ]),
+                        import_Document.default.createText(`
+      `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`London`, false)
+                        ]),
+                        import_Document.default.createText(`
+      `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`UK`, false)
+                        ]),
+                        import_Document.default.createText(`
+      `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`2023-11-10`, false)
+                        ]),
+                        import_Document.default.createText(`
+      `, false),
+                        import_Document.default.createElement("table-col", {}, [
+                          import_Document.default.createText(`Inactive`, false)
                         ]),
                         import_Document.default.createText(`
     `, false)
@@ -3158,54 +3891,70 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
 `, false)
                   ]),
                   import_Document.default.createText(`
-
-
- `, false),
+`, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-<div class="overflow-auto">
-  <layout-table 
-    top
-    head="py-12 px-10 bg-primary tx-white"
-    body="py-12 px-10"
-    odd="bg-t-0"
-    even="bg-t-1"
-  >
-    <table-head>{_('Order ID')}</table-head>
-    <table-head>{_('Customer')}</table-head>
-    <table-head>{_('Total')}</table-head>
-    <table-head>{_('Date')}</table-head>
-    <table-head>{_('Status')}</table-head>
-
-    <table-row>
-      <table-col>#1001</table-col>
-      <table-col>Jane Smith</table-col>
-      <table-col>$200</table-col>
-      <table-col>2025-02-28</table-col>
-      <table-col><span class="bg-success tx-white py-4 px-8 rounded">Completed</span></table-col>
-    </table-row>
-
-    <table-row>
-      <table-col>#1002</table-col>
-      <table-col>Robert White</table-col>
-      <table-col>$150</table-col>
-      <table-col>2025-02-27</table-col>
-      <table-col><span class="bg-warning tx-white py-4 px-8 rounded">Pending</span></table-col>
-    </table-row>
-
-    <table-row>
-      <table-col>#1003</table-col>
-      <table-col>Sarah Connor</table-col>
-      <table-col>$300</table-col>
-      <table-col>2025-02-26</table-col>
-      <table-col><span class="bg-error tx-white py-4 px-8 rounded">Canceled</span></table-col>
-    </table-row>
-  </layout-table>
-</div>
+  <div class="overflow-auto">
+    <layout-table 
+      top
+      left
+      right
+      head="py-12 px-10 bg-primary tx-white"
+      body="py-12 px-10"
+      odd="bg-t-0"
+      even="bg-t-1"
+    >
+      <table-head>{_('ID')}</table-head>
+      <table-head>{_('First Name')}</table-head>
+      <table-head>{_('Last Name')}</table-head>
+      <table-head>{_('Email')}</table-head>
+      <table-head>{_('Phone')}</table-head>
+      <table-head>{_('Address')}</table-head>
+      <table-head>{_('City')}</table-head>
+      <table-head>{_('Country')}</table-head>
+      <table-head>{_('Join Date')}</table-head>
+      <table-head>{_('Status')}</table-head>
+      <table-row>
+        <table-col>1</table-col>
+        <table-col>Emma</table-col>
+        <table-col>Wilson</table-col>
+        <table-col>emma@example.com</table-col>
+        <table-col>+1-555-123-4567</table-col>
+        <table-col>123 Maple St</table-col>
+        <table-col>New York</table-col>
+        <table-col>USA</table-col>
+        <table-col>2024-01-15</table-col>
+        <table-col>Active</table-col>
+      </table-row>
+      <table-row>
+        <table-col>2</table-col>
+        <table-col>Liam</table-col>
+        <table-col>Chen</table-col>
+        <table-col>liam@example.com</table-col>
+        <table-col>+1-555-987-6543</table-col>
+        <table-col>456 Oak Ave</table-col>
+        <table-col>Toronto</table-col>
+        <table-col>Canada</table-col>
+        <table-col>2024-03-22</table-col>
+        <table-col>Pending</table-col>
+      </table-row>
+      <table-row>
+        <table-col>3</table-col>
+        <table-col>Olivia</table-col>
+        <table-col>Patel</table-col>
+        <table-col>olivia@example.com</table-col>
+        <table-col>+44-20-7946-0958</table-col>
+        <table-col>789 Pine Rd</table-col>
+        <table-col>London</table-col>
+        <table-col>UK</table-col>
+        <table-col>2023-11-10</table-col>
+        <table-col>Inactive</table-col>
+      </table-row>
+    </layout-table>
+  </div>
 `)
                   ]),
                   import_Document.default.createText(`
-
 
 
 `, false),
@@ -3213,120 +3962,113 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    ...this._toNodeList(_("Table with Custom Column Widths")),
-                    import_Document.default.createText(`
-`, false)
+                    ...this._toNodeList(_("Table with Custom Column Widths"))
                   ]),
                   import_Document.default.createText(`
-
 `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  This example demonstrates how to set custom column widths.
+  `, false),
+                    ...this._toNodeList(_("This example uses `wrap1` to `wrap5` props to set fixed column widths on `<table-col>` elements.")),
+                    import_Document.default.createText(`
 `, false)
                   ]),
                   import_Document.default.createText(`
-
 `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-12 px-10 bg-t-1 b-solid b-black`, "body": `py-12 px-10`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
   `, false),
-                    import_Document.default.createElement("table-head", { "class": `w-10` }, [
+                    import_Document.default.createElement("table-head", { "wrap1": true }, [
                       ...this._toNodeList(_("ID"))
                     ]),
                     import_Document.default.createText(`
   `, false),
-                    import_Document.default.createElement("table-head", { "class": `w-40` }, [
+                    import_Document.default.createElement("table-head", { "wrap3": true }, [
                       ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
   `, false),
-                    import_Document.default.createElement("table-head", { "class": `w-25` }, [
+                    import_Document.default.createElement("table-head", { "wrap2": true }, [
                       ...this._toNodeList(_("Department"))
                     ]),
                     import_Document.default.createText(`
   `, false),
-                    import_Document.default.createElement("table-head", { "class": `w-25` }, [
+                    import_Document.default.createElement("table-head", { "wrap2": true }, [
                       ...this._toNodeList(_("Salary"))
                     ]),
                     import_Document.default.createText(`
-
   `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("table-col", {}, [
+                      import_Document.default.createElement("table-col", { "wrap1": true }, [
                         import_Document.default.createText(`1`, false)
                       ]),
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("table-col", {}, [
+                      import_Document.default.createElement("table-col", { "wrap3": true }, [
                         import_Document.default.createText(`David Green`, false)
                       ]),
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("table-col", {}, [
+                      import_Document.default.createElement("table-col", { "wrap2": true }, [
                         import_Document.default.createText(`HR`, false)
                       ]),
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("table-col", {}, [
+                      import_Document.default.createElement("table-col", { "wrap2": true }, [
                         import_Document.default.createText(`$50,000`, false)
                       ]),
                       import_Document.default.createText(`
   `, false)
                     ]),
                     import_Document.default.createText(`
-
   `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("table-col", {}, [
+                      import_Document.default.createElement("table-col", { "wrap1": true }, [
                         import_Document.default.createText(`2`, false)
                       ]),
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("table-col", {}, [
+                      import_Document.default.createElement("table-col", { "wrap3": true }, [
                         import_Document.default.createText(`Anna Taylor`, false)
                       ]),
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("table-col", {}, [
+                      import_Document.default.createElement("table-col", { "wrap2": true }, [
                         import_Document.default.createText(`IT`, false)
                       ]),
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("table-col", {}, [
+                      import_Document.default.createElement("table-col", { "wrap2": true }, [
                         import_Document.default.createText(`$75,000`, false)
                       ]),
                       import_Document.default.createText(`
   `, false)
                     ]),
                     import_Document.default.createText(`
-
   `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("table-col", {}, [
+                      import_Document.default.createElement("table-col", { "wrap1": true }, [
                         import_Document.default.createText(`3`, false)
                       ]),
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("table-col", {}, [
+                      import_Document.default.createElement("table-col", { "wrap3": true }, [
                         import_Document.default.createText(`Michael Scott`, false)
                       ]),
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("table-col", {}, [
+                      import_Document.default.createElement("table-col", { "wrap2": true }, [
                         import_Document.default.createText(`Sales`, false)
                       ]),
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("table-col", {}, [
+                      import_Document.default.createElement("table-col", { "wrap2": true }, [
                         import_Document.default.createText(`$65,000`, false)
                       ]),
                       import_Document.default.createText(`
@@ -3336,246 +4078,44 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
 `, false)
                   ]),
                   import_Document.default.createText(`
-
-
-
- `, false),
+`, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-<layout-table 
-  top
-  head="py-12 px-10 bg-t-1 b-solid b-black"
-  body="py-12 px-10"
-  odd="bg-t-0"
-  even="bg-t-1"
->
-  <table-head class="w-10">{_('ID')}</table-head>
-  <table-head class="w-40">{_('Name')}</table-head>
-  <table-head class="w-25">{_('Department')}</table-head>
-  <table-head class="w-25">{_('Salary')}</table-head>
-
-  <table-row>
-    <table-col>1</table-col>
-    <table-col>David Green</table-col>
-    <table-col>HR</table-col>
-    <table-col>$50,000</table-col>
-  </table-row>
-
-  <table-row>
-    <table-col>2</table-col>
-    <table-col>Anna Taylor</table-col>
-    <table-col>IT</table-col>
-    <table-col>$75,000</table-col>
-  </table-row>
-
-  <table-row>
-    <table-col>3</table-col>
-    <table-col>Michael Scott</table-col>
-    <table-col>Sales</table-col>
-    <table-col>$65,000</table-col>
-  </table-row>
-</layout-table>
+  <layout-table 
+    top
+    head="py-12 px-10 bg-t-1 b-solid b-black"
+    body="py-12 px-10"
+    odd="bg-t-0"
+    even="bg-t-1"
+  >
+    <table-head wrap1>{_('ID')}</table-head>
+    <table-head wrap3>{_('Name')}</table-head>
+    <table-head wrap2>{_('Department')}</table-head>
+    <table-head wrap2>{_('Salary')}</table-head>
+    <table-row>
+      <table-col wrap1>1</table-col>
+      <table-col wrap3>David Green</table-col>
+      <table-col wrap2>HR</table-col>
+      <table-col wrap2>$50,000</table-col>
+    </table-row>
+    <table-row>
+      <table-col wrap1>2</table-col>
+      <table-col wrap3>Anna Taylor</table-col>
+      <table-col wrap2>IT</table-col>
+      <table-col wrap2>$75,000</table-col>
+    </table-row>
+    <table-row>
+      <table-col wrap1>3</table-col>
+      <table-col wrap3>Michael Scott</table-col>
+      <table-col wrap2>Sales</table-col>
+      <table-col wrap2>$65,000</table-col>
+    </table-row>
+  </layout-table>
 `)
                   ]),
                   import_Document.default.createText(`
-
-
-
-
-`, false),
-                  import_Document.default.createElement("a", { "name": `TableWithIcons` }, []),
-                  import_Document.default.createText(`
-`, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    ...this._toNodeList(_("Table with Icons")),
-                    import_Document.default.createText(`
-`, false)
-                  ]),
-                  import_Document.default.createText(`
-`, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    ...this._toNodeList(_("This table uses element-icon components for statuses and action buttons.")),
-                    import_Document.default.createText(`
-`, false)
-                  ]),
-                  import_Document.default.createText(`
-
-`, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-12 px-10 bg-primary tx-white`, "body": `py-12 px-10`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("User"))
-                    ]),
-                    import_Document.default.createText(`
-  `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Email"))
-                    ]),
-                    import_Document.default.createText(`
-  `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Status"))
-                    ]),
-                    import_Document.default.createText(`
-  `, false),
-                    import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Actions"))
-                    ]),
-                    import_Document.default.createText(`
-
-  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`John Doe`, false)
-                      ]),
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`john@example.com`, false)
-                      ]),
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`
-      `, false),
-                        import_Document.default.createElement("span", { "class": `flex items-center` }, [
-                          import_Document.default.createText(`
-        `, false),
-                          import_Document.default.createElement("element-icon", { "name": `check-circle`, "class": `tx-success mr-6` }, []),
-                          import_Document.default.createText(` Active
-      `, false)
-                        ]),
-                        import_Document.default.createText(`
-    `, false)
-                      ]),
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`
-      `, false),
-                        import_Document.default.createElement("element-icon", { "name": `eye`, "class": `mr-5 tx-info` }),
-                        import_Document.default.createText(`
-      `, false),
-                        import_Document.default.createElement("element-icon", { "name": `edit`, "class": `mr-5 tx-warning` }),
-                        import_Document.default.createText(`
-      `, false),
-                        import_Document.default.createElement("element-icon", { "name": `trash`, "class": `tx-error` }),
-                        import_Document.default.createText(`
-    `, false)
-                      ]),
-                      import_Document.default.createText(`
-  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Mary Jane`, false)
-                      ]),
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`mary@example.com`, false)
-                      ]),
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`
-      `, false),
-                        import_Document.default.createElement("span", { "class": `flex items-center` }, [
-                          import_Document.default.createText(`
-        `, false),
-                          import_Document.default.createElement("element-icon", { "name": `clock`, "class": `tx-warning mr-6` }, []),
-                          import_Document.default.createText(` Pending
-      `, false)
-                        ]),
-                        import_Document.default.createText(`
-    `, false)
-                      ]),
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`
-      `, false),
-                        import_Document.default.createElement("element-icon", { "name": `eye`, "class": `mr-5 tx-info` }),
-                        import_Document.default.createText(`
-      `, false),
-                        import_Document.default.createElement("element-icon", { "name": `edit`, "class": `mr-5 tx-warning` }),
-                        import_Document.default.createText(`
-      `, false),
-                        import_Document.default.createElement("element-icon", { "name": `trash`, "class": `tx-error` }),
-                        import_Document.default.createText(`
-    `, false)
-                      ]),
-                      import_Document.default.createText(`
-  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Mike Brown`, false)
-                      ]),
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`mike@example.com`, false)
-                      ]),
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`
-      `, false),
-                        import_Document.default.createElement("span", { "class": `flex items-center` }, [
-                          import_Document.default.createText(`
-        `, false),
-                          import_Document.default.createElement("element-icon", { "name": `times-circle`, "class": `tx-error mr-6` }, []),
-                          import_Document.default.createText(` Suspended
-      `, false)
-                        ]),
-                        import_Document.default.createText(`
-    `, false)
-                      ]),
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`
-      `, false),
-                        import_Document.default.createElement("element-icon", { "name": `eye`, "class": `mr-5 tx-info` }),
-                        import_Document.default.createText(`
-      `, false),
-                        import_Document.default.createElement("element-icon", { "name": `edit`, "class": `mr-5 tx-warning` }),
-                        import_Document.default.createText(`
-      `, false),
-                        import_Document.default.createElement("element-icon", { "name": `trash`, "class": `tx-error` }),
-                        import_Document.default.createText(`
-    `, false)
-                      ]),
-                      import_Document.default.createText(`
-  `, false)
-                    ]),
-                    import_Document.default.createText(`
-`, false)
-                  ]),
-                  import_Document.default.createText(`
-
-
-
-
-            `, false),
+          <!-- Navigation -->
+          `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),

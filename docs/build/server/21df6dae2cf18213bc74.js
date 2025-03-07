@@ -1527,21 +1527,27 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ]),
                       import_Document.default.createText(`
                 `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#types` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#variants` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Types"))
+                        ...this._toNodeList(_("Notification Variants"))
                       ]),
                       import_Document.default.createText(`
                 `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#size` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#postion` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Size"))
+                        ...this._toNodeList(_("Customizing Notification Position"))
                       ]),
                       import_Document.default.createText(`
                 `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#color` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#timeout` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Color"))
+                        ...this._toNodeList(_("Custom Timeout"))
+                      ]),
+                      import_Document.default.createText(`
+                `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#icons` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Notifications with Icon"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1613,402 +1619,400 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-                `, false),
+             `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
-                `, false),
+  `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
-                `, false),
+  `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Type"))
                     ]),
                     import_Document.default.createText(`
-                `, false),
+  `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Required"))
                     ]),
                     import_Document.default.createText(`
-                `, false),
+  `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
 
-                `, false),
+  `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`top`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Positions the notification at the top (default is bottom)."))
                       ]),
                       import_Document.default.createText(`
-                `, false)
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-                `, false),
+  `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`left`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Aligns the notification to the left (default is right)."))
                       ]),
                       import_Document.default.createText(`
-                `, false)
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-                `, false),
+  `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`center`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Centers the notification horizontally."))
                       ]),
                       import_Document.default.createText(`
-                `, false)
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-                `, false),
+  `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`fade`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Enables fade transition effect."))
-                      ]),
-                      import_Document.default.createText(`
-                `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`smooth`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Controls transition smoothness (default: 10ms)."))
                       ]),
                       import_Document.default.createText(`
-                `, false)
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-                `, false),
+  `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`type`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Yes`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Defines the notification type: "info", "warning", "error", "success", "primary", "secondary", "muted".'))
+                        ...this._toNodeList(_('Required for notify method. Defines the notification type: "info", "warning", "error", "success", "primary", "secondary", "muted".'))
                       ]),
                       import_Document.default.createText(`
-                `, false)
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-                `, false),
+  `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`message`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Yes`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the notification message."))
+                        ...this._toNodeList(_("Required for notify method. Sets the notification message."))
                       ]),
                       import_Document.default.createText(`
-                `, false)
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-                `, false),
+  `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`timeout`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+    `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Duration before the notification disappears (default: 5000ms)."))
+                        ...this._toNodeList(_("Optional for notify method. Duration before the notification disappears (default: 5000ms)."))
                       ]),
                       import_Document.default.createText(`
-                `, false)
+  `, false)
                     ]),
                     import_Document.default.createText(`
-                `, false)
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-        `, false),
+`, false),
                   import_Document.default.createElement("a", { "name": `variants` }, []),
                   import_Document.default.createText(`
-        `, false),
+`, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-          `, false),
+  `, false),
                     ...this._toNodeList(_("Notification Variants")),
                     import_Document.default.createText(`
-        `, false)
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-        `, false),
+`, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-          Notifications can have different variants: 
-          `, false),
+  Notifications can have different variants: 
+  `, false),
                     import_Document.default.createElement("span", { "class": `tx-info tx-italic p-3` }, [
                       import_Document.default.createText(`info`, false)
                     ]),
                     import_Document.default.createText(`,
-          `, false),
+  `, false),
                     import_Document.default.createElement("span", { "class": `tx-warning tx-italic p-3` }, [
                       import_Document.default.createText(`warning`, false)
                     ]),
                     import_Document.default.createText(`,
-          `, false),
+  `, false),
                     import_Document.default.createElement("span", { "class": `tx-success tx-italic p-3` }, [
                       import_Document.default.createText(`success`, false)
                     ]),
                     import_Document.default.createText(`,
-          `, false),
+  `, false),
                     import_Document.default.createElement("span", { "class": `tx-error tx-italic p-3` }, [
                       import_Document.default.createText(`error`, false)
                     ]),
                     import_Document.default.createText(`,
-          `, false),
+  `, false),
                     import_Document.default.createElement("span", { "class": `tx-primary tx-italic p-3` }, [
                       import_Document.default.createText(`primary`, false)
                     ]),
                     import_Document.default.createText(`,
-          `, false),
+  `, false),
                     import_Document.default.createElement("span", { "class": `tx-secondary tx-italic p-3` }, [
                       import_Document.default.createText(`secondary`, false)
                     ]),
                     import_Document.default.createText(`,
-          `, false),
+  `, false),
                     import_Document.default.createElement("span", { "class": `tx-muted tx-italic p-3` }, [
                       import_Document.default.createText(`muted`, false)
                     ]),
                     import_Document.default.createText(`.
-        `, false)
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-        `, false),
+`, false),
                   import_Document.default.createElement("element-notify", {}),
                   import_Document.default.createText(`
 
-        `, false),
+`, false),
                   import_Document.default.createElement("div", { "class": `grid gap-10` }, [
                     import_Document.default.createText(`
-          `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `
-            const notify = document.querySelector('element-notify');
-            if (notify) {
-              notify.innerHTML = ''; 
-              notify.notify('info', 'Information alert!');
-            }
-          ` }, [
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
+    const notify = document.querySelector('element-notify');
+    if (notify) {
+      notify.innerHTML = ''; 
+      notify.notify('info', 'Information alert!');
+    }
+  ` }, [
                       import_Document.default.createText(`
-            Show Info
-          `, false)
+    Show Info
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-          `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `
-            const notify = document.querySelector('element-notify');
-            if (notify) {
-              notify.innerHTML = ''; 
-              notify.notify('warning', 'Warning alert!');
-            }
-          ` }, [
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "secondary": true, "curved": true, "solid": true, "onclick": `
+    const notify = document.querySelector('element-notify');
+    if (notify) {
+      notify.innerHTML = ''; 
+      notify.notify('secondary', 'Secondary alert!');
+    }
+  ` }, [
                       import_Document.default.createText(`
-            Show Warning
-          `, false)
+    Show Secondary
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-          `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `
-            const notify = document.querySelector('element-notify');
-            if (notify) {
-              notify.innerHTML = ''; 
-              notify.notify('success', 'Success alert!');
-            }
-          ` }, [
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "warning": true, "curved": true, "solid": true, "onclick": `
+    const notify = document.querySelector('element-notify');
+    if (notify) {
+      notify.innerHTML = ''; 
+      notify.notify('warning', 'Warning alert!');
+    }
+  ` }, [
                       import_Document.default.createText(`
-            Show Success
-          `, false)
+    Show Warning
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-          `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `
-            const notify = document.querySelector('element-notify');
-            if (notify) {
-              notify.innerHTML = ''; 
-              notify.notify('error', 'Error alert!');
-            }
-          ` }, [
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "success": true, "curved": true, "solid": true, "onclick": `
+    const notify = document.querySelector('element-notify');
+    if (notify) {
+      notify.innerHTML = ''; 
+      notify.notify('success', 'Success alert!');
+    }
+  ` }, [
                       import_Document.default.createText(`
-            Show Error
-          `, false)
+    Show Success
+  `, false)
                     ]),
                     import_Document.default.createText(`
-        `, false)
+
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "error": true, "curved": true, "solid": true, "onclick": `
+    const notify = document.querySelector('element-notify');
+    if (notify) {
+      notify.innerHTML = ''; 
+      notify.notify('error', 'Error alert!');
+    }
+  ` }, [
+                      import_Document.default.createText(`
+    Show Error
+  `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "muted": true, "curved": true, "solid": true, "onclick": `
+    const notify = document.querySelector('element-notify');
+    if (notify) {
+      notify.innerHTML = ''; 
+      notify.notify('muted', 'Muted alert!');
+    }
+  ` }, [
+                      import_Document.default.createText(`
+    Show Muted
+  `, false)
+                    ]),
+                    import_Document.default.createText(`
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-
-           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+`, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 mt-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-button onclick="document.querySelector('element-notify').notify('info', 'Information alert!')">
-              Show Info
-            </element-button>
-            <element-notify/>
-          `)
+  <element-button md info curved solid onclick="document.querySelector('element-notify').notify('info', 'Information alert!')">
+    Show Info
+  </element-button>
+  <element-notify/>
+`)
                   ]),
                   import_Document.default.createText(`
 
-
-
-          `, false),
+`, false),
                   import_Document.default.createElement("a", { "name": `position` }, []),
                   import_Document.default.createText(`
-          `, false),
+`, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-            `, false),
+  `, false),
                     ...this._toNodeList(_("Customizing Notification Position")),
                     import_Document.default.createText(`
-          `, false)
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
+`, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-            Set notifications to appear at different positions using `, false),
+  Set notifications to appear at different positions using `, false),
                     import_Document.default.createElement("code", {}, [
                       import_Document.default.createText(`top`, false)
                     ]),
@@ -2021,334 +2025,382 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`center`, false)
                     ]),
                     import_Document.default.createText(`.
-          `, false)
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
+`, false),
                   import_Document.default.createElement("element-notify", { "top": true }),
                   import_Document.default.createText(`
-          `, false),
+`, false),
                   import_Document.default.createElement("element-notify", { "right": true }),
                   import_Document.default.createText(`
-          `, false),
+`, false),
                   import_Document.default.createElement("element-notify", { "left": true }),
                   import_Document.default.createText(`
-          `, false),
+`, false),
                   import_Document.default.createElement("element-notify", { "center": true }),
                   import_Document.default.createText(`
 
-          `, false),
+`, false),
                   import_Document.default.createElement("div", { "class": `grid gap-10` }, [
                     import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `
-              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
-              document.querySelector('element-notify[top]').notify('info', 'Notification at the top!');
-            ` }, [
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
+    document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
+    document.querySelector('element-notify[top]').notify('info', 'Notification at the top!');
+  ` }, [
                       import_Document.default.createText(`
-              Show Top
-            `, false)
+    Show Top
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `
-              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
-              document.querySelector('element-notify[right]').notify('info', 'Notification on the right!');
-            ` }, [
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
+    document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
+    document.querySelector('element-notify[right]').notify('info', 'Notification on the right!');
+  ` }, [
                       import_Document.default.createText(`
-              Show Right
-            `, false)
+    Show Right
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `
-              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
-              document.querySelector('element-notify[left]').notify('info', 'Notification on the left!');
-            ` }, [
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
+    document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
+    document.querySelector('element-notify[left]').notify('info', 'Notification on the left!');
+  ` }, [
                       import_Document.default.createText(`
-              Show Left
-            `, false)
+    Show Left
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `
-              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
-              document.querySelector('element-notify[center]').notify('info', 'Centered notification!');
-            ` }, [
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "outline": true, "onclick": `
+    document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
+    document.querySelector('element-notify[center]').notify('info', 'Centered notification!');
+  ` }, [
                       import_Document.default.createText(`
-              Show Center
-            `, false)
+    Show Center
+  `, false)
                     ]),
                     import_Document.default.createText(`
-          `, false)
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-           `, false),
+`, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-              <div class="grid gap-10">
-                <element-button onclick="document.querySelector('element-notify[top]').notify('info', 'Notification at the top!')">
-                  Show Top
-                </element-button>
-
-                  <element-button onclick="document.querySelector('element-notify[right]').notify('info', 'Notification at the top!')">
-                  Show Right
-                </element-button>
-
-                <element-button onclick="document.querySelector('element-notify[left]').notify('info', 'Notification on the left!')">
-                  Show Left
-                </element-button>
-
-                <element-button onclick="document.querySelector('element-notify[center]').notify('info', 'Centered notification!')">
-                  Show Center
-                </element-button>
-              </div>
-                <element-notify top/>
-                <element-notify right/>
-                <element-notify left/>
-                <element-notify center/>
-          `)
+  <div class="grid gap-10">
+    <element-button md info curved solid onclick="document.querySelector('element-notify[top]').notify('info', 'Notification at the top!')">
+      Show Top
+    </element-button>
+    <element-button md info curved solid onclick="document.querySelector('element-notify[right]').notify('info', 'Notification on the right!')">
+      Show Right
+    </element-button>
+    <element-button md info curved solid onclick="document.querySelector('element-notify[left]').notify('info', 'Notification on the left!')">
+      Show Left
+    </element-button>
+    <element-button md info curved solid outline onclick="document.querySelector('element-notify[center]').notify('info', 'Centered notification!')">
+      Show Center
+    </element-button>
+  </div>
+  <element-notify top/>
+  <element-notify right/>
+  <element-notify left/>
+  <element-notify center/>
+`)
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
+`, false),
                   import_Document.default.createElement("a", { "name": `timeout` }, []),
                   import_Document.default.createText(`
-          `, false),
+`, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-            `, false),
+  `, false),
                     ...this._toNodeList(_("Custom Timeout")),
                     import_Document.default.createText(`
-          `, false)
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
+`, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-            Control how long notifications stay visible using a timeout value.
-          `, false)
+  Control how long notifications stay visible using a timeout value.
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Single Notify Component -->
-          `, false),
+`, false),
                   import_Document.default.createElement("element-notify", {}, []),
                   import_Document.default.createText(`
 
-          `, false),
+`, false),
                   import_Document.default.createElement("div", { "class": `grid gap-10` }, [
                     import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `
-              const notify = document.querySelector('element-notify');
-              if (notify) {
-                notify.innerHTML = ''; 
-                notify.notify('info', 'This disappears in 8 seconds!', 8000);
-              }
-            ` }, [
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
+    const notify = document.querySelector('element-notify');
+    if (notify) {
+      notify.innerHTML = ''; 
+      notify.notify('info', 'This disappears in 8 seconds!', 8000);
+    }
+  ` }, [
                       import_Document.default.createText(`
-              Show 8s Notification
-            `, false)
+    Show 8s Notification
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `
-              const notify = document.querySelector('element-notify');
-              if (notify) {
-                notify.innerHTML = ''; 
-                notify.notify('info', 'Quick 3-second alert!', 3000);
-              }
-            ` }, [
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
+    const notify = document.querySelector('element-notify');
+    if (notify) {
+      notify.innerHTML = ''; 
+      notify.notify('info', 'Quick 3-second alert!', 3000);
+    }
+  ` }, [
                       import_Document.default.createText(`
-              Show 3s Notification
-            `, false)
+    Show 3s Notification
+  `, false)
                     ]),
                     import_Document.default.createText(`
-          `, false)
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-           `, false),
+`, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-button onclick="document.querySelector('element-notify').notify('info', 'This disappears in 8 seconds!', 8000)">
-              Show 8s Notification
-            </element-button>
-            <element-notify/>
-          `)
+  <element-button md info curved solid onclick="document.querySelector('element-notify').notify('info', 'This disappears in 8 seconds!', 8000)">
+    Show 8s Notification
+  </element-button>
+  <element-notify/>
+`)
                   ]),
                   import_Document.default.createText(`
 
-
-          `, false),
+`, false),
                   import_Document.default.createElement("a", { "name": `dismiss` }, []),
                   import_Document.default.createText(`
-        `, false),
+`, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-          `, false),
+  `, false),
                     ...this._toNodeList(_("Dismissible Notifications")),
                     import_Document.default.createText(`
-        `, false)
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-        `, false),
+`, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-          Notifications can be manually dismissed using a close button.
-        `, false)
+  Notifications can be manually dismissed using a close button.
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-        <!-- Single Notify Component -->
-        `, false),
+`, false),
                   import_Document.default.createElement("element-notify", {}, []),
                   import_Document.default.createText(`
 
-        `, false),
+`, false),
                   import_Document.default.createElement("div", { "class": `grid gap-10` }, [
                     import_Document.default.createText(`
-          `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `
-            const notify = document.querySelector('element-notify');
-            if (notify) {
-              notify.innerHTML = ''; 
-              notify.notify('info', 'Click the close icon to dismiss!');
-            }
-          ` }, [
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "outline": true, "onclick": `
+    const notify = document.querySelector('element-notify');
+    if (notify) {
+      notify.innerHTML = ''; 
+      notify.notify('info', 'Click the close icon to dismiss!');
+    }
+  ` }, [
                       import_Document.default.createText(`
-            Show Dismissible
-          `, false)
+    Show Dismissible
+  `, false)
                     ]),
                     import_Document.default.createText(`
-        `, false)
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-           `, false),
+`, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-button onclick="document.querySelector('element-notify').notify('info', 'Click the close icon to dismiss!')">
-              Show Dismissible
-            </element-button>
-            <element-notify/>
-          `)
+  <element-button md info curved solid outline onclick="document.querySelector('element-notify').notify('info', 'Click the close icon to dismiss!')">
+    Show Dismissible
+  </element-button>
+  <element-notify/>
+`)
                   ]),
                   import_Document.default.createText(`
 
-
-
-          `, false),
+`, false),
                   import_Document.default.createElement("a", { "name": `icons` }, []),
                   import_Document.default.createText(`
-          `, false),
+`, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-            `, false),
+  `, false),
                     ...this._toNodeList(_("Notifications with Icons")),
                     import_Document.default.createText(`
-          `, false)
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
+`, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-            Notifications can include icons using `, false),
+  Notifications can include icons using `, false),
                     import_Document.default.createElement("code", {}, [
                       import_Document.default.createText(`interface-icon`, false)
                     ]),
                     import_Document.default.createText(`.
-          `, false)
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Single Notify Component -->
-          `, false),
+`, false),
                   import_Document.default.createElement("element-notify", {}, []),
                   import_Document.default.createText(`
 
-          `, false),
+`, false),
                   import_Document.default.createElement("div", { "class": `grid gap-10` }, [
                     import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `
-              const notify = document.querySelector('element-notify');
-              if (notify) {
-                notify.innerHTML = ''; 
-                notify.notify('info', '\u2139\uFE0F Info with icon!');
-              }
-            ` }, [
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
+    const notify = document.querySelector('element-notify');
+    if (notify) {
+      notify.innerHTML = ''; 
+      notify.notify('info', '\u2139\uFE0F Info with icon!');
+    }
+  ` }, [
                       import_Document.default.createText(`
-              Show Info Icon
-            `, false)
+    Show Info Icon
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `
-              const notify = document.querySelector('element-notify');
-              if (notify) {
-                notify.innerHTML = ''; 
-                notify.notify('warning', '\u26A0\uFE0F Warning with icon!');
-              }
-            ` }, [
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "warning": true, "curved": true, "solid": true, "onclick": `
+    const notify = document.querySelector('element-notify');
+    if (notify) {
+      notify.innerHTML = ''; 
+      notify.notify('warning', '\u26A0\uFE0F Warning with icon!');
+    }
+  ` }, [
                       import_Document.default.createText(`
-              Show Warning Icon
-            `, false)
+    Show Warning Icon
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `
-              const notify = document.querySelector('element-notify');
-              if (notify) {
-                notify.innerHTML = ''; 
-                notify.notify('success', '\u2705 Success with icon!');
-              }
-            ` }, [
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "success": true, "curved": true, "solid": true, "onclick": `
+    const notify = document.querySelector('element-notify');
+    if (notify) {
+      notify.innerHTML = ''; 
+      notify.notify('success', '\u2705 Success with icon!');
+    }
+  ` }, [
                       import_Document.default.createText(`
-              Show Success Icon
-            `, false)
+    Show Success Icon
+  `, false)
                     ]),
                     import_Document.default.createText(`
 
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `
-              const notify = document.querySelector('element-notify');
-              if (notify) {
-                notify.innerHTML = ''; 
-                notify.notify('error', '\u274C Error with icon!');
-              }
-            ` }, [
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "error": true, "curved": true, "solid": true, "onclick": `
+    const notify = document.querySelector('element-notify');
+    if (notify) {
+      notify.innerHTML = ''; 
+      notify.notify('error', '\u274C Error with icon!');
+    }
+  ` }, [
                       import_Document.default.createText(`
-              Show Error Icon
-            `, false)
+    Show Error Icon
+  `, false)
                     ]),
                     import_Document.default.createText(`
-          `, false)
+`, false)
                   ]),
                   import_Document.default.createText(`
 
-           `, false),
+`, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-button onclick="document.querySelector('element-notify').notify('info', '\u2139\uFE0F Info with icon!')">
-              Show Info Icon
-            </element-button>
-          `)
+  <element-button md info curved solid onclick="document.querySelector('element-notify').notify('info', '\u2139\uFE0F Info with icon!')">
+    Show Info Icon
+  </element-button>
+`)
                   ]),
                   import_Document.default.createText(`
 
+
+`, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    import_Document.default.createText(`
+  `, false),
+                    ...this._toNodeList(_("Stacked Notifications")),
+                    import_Document.default.createText(`
+`, false)
+                  ]),
+                  import_Document.default.createText(`
+
+`, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+  Trigger multiple notifications to see them stack.
+`, false)
+                  ]),
+                  import_Document.default.createText(`
+
+`, false),
+                  import_Document.default.createElement("element-notify", {}, []),
+                  import_Document.default.createText(`
+
+`, false),
+                  import_Document.default.createElement("div", { "class": `grid gap-10` }, [
+                    import_Document.default.createText(`
+  `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
+    const notify = document.querySelector('element-notify');
+    if (notify) {
+      notify.innerHTML = ''; 
+      notify.notify('info', 'First notification!');
+      setTimeout(() => notify.notify('success', 'Second notification!'), 1000);
+      setTimeout(() => notify.notify('warning', 'Third notification!'), 2000);
+    }
+  ` }, [
+                      import_Document.default.createText(`
+    Show Stacked Notifications
+  `, false)
+                    ]),
+                    import_Document.default.createText(`
+`, false)
+                  ]),
+                  import_Document.default.createText(`
+
+`, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+  <element-button md info curved solid onclick="const notify = document.querySelector('element-notify'); notify.notify('info', 'First notification!'); 
+  setTimeout(() => notify.notify('success', 'Second notification!'), 1000); 
+  setTimeout(() => notify.notify('warning', 'Third notification!'), 2000);">
+    Show Stacked Notifications
+  </element-button>
+  <element-notify/>
+`)
+                  ]),
+                  import_Document.default.createText(`
 
 
 

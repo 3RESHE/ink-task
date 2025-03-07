@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\index.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\form\index.ink
   var form_exports = {};
   __export(form_exports, {
     default: () => Index_2d9ec985aca105c3f84b
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\index.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\form\index.ink
   var Index_2d9ec985aca105c3f84b = class extends import_Document2.default {
     id() {
       return "2d9ec985aca105c3f84b";
@@ -1637,7 +1637,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/checkbox.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/checkbox.html` }, [
                           import_Document.default.createText(`
                   Checkbox
                 `, false)
@@ -1659,7 +1659,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/color.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/color.html` }, [
                           import_Document.default.createText(`
                   Color
                 `, false)
@@ -1681,7 +1681,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/country.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/country.html` }, [
                           import_Document.default.createText(`
                   Country
                 `, false)
@@ -1703,7 +1703,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/currency.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/currency.html` }, [
                           import_Document.default.createText(`
                   Currency
                 `, false)
@@ -1725,7 +1725,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/date.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/date.html` }, [
                           import_Document.default.createText(`
                   Date
                 `, false)
@@ -1769,7 +1769,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/editor.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/editor.html` }, [
                           import_Document.default.createText(`
                   Editor
                 `, false)
@@ -1791,7 +1791,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/file.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/file.html` }, [
                           import_Document.default.createText(`
                   File
                 `, false)
@@ -1813,7 +1813,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/filelist.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/filelist.html` }, [
                           import_Document.default.createText(`
                   Filelist
                 `, false)
@@ -1835,7 +1835,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/input.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/input.html` }, [
                           import_Document.default.createText(`
                   Input
                 `, false)
@@ -1851,7 +1851,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, []),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/knob.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/knob.html` }, [
                           import_Document.default.createText(`
                   Knob
                 `, false)
@@ -1873,7 +1873,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/markdown.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/markdown.html` }, [
                           import_Document.default.createText(`
                   Markdown
                 `, false)
@@ -1895,7 +1895,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/mask.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/mask.html` }, [
                           import_Document.default.createText(`
                   Mask
                 `, false)
@@ -1917,7 +1917,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/metadata.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/metadata.html` }, [
                           import_Document.default.createText(`
                   Metadata
                 `, false)
@@ -1939,7 +1939,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/number.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/number.html` }, [
                           import_Document.default.createText(`
                   Number
                 `, false)
@@ -1961,7 +1961,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/password.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/password.html` }, [
                           import_Document.default.createText(`
                   Password
                 `, false)
@@ -1986,7 +1986,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/radio.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/radio.html` }, [
                           import_Document.default.createText(`
                   Radio
                 `, false)
@@ -2008,7 +2008,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/range.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/range.html` }, [
                           import_Document.default.createText(`
                   Range
                 `, false)
@@ -2030,7 +2030,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/rating.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/rating.html` }, [
                           import_Document.default.createText(`
                   Rating
                 `, false)
@@ -2077,7 +2077,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/select.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/select.html` }, [
                           import_Document.default.createText(`
                   Select
                 `, false)
@@ -2099,7 +2099,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/slug.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/slug.html` }, [
                           import_Document.default.createText(`
                   Slug
                 `, false)
@@ -2121,7 +2121,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/switch.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/switch.html` }, [
                           import_Document.default.createText(`
                   Switch
                 `, false)
@@ -2143,7 +2143,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/taglist.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/taglist.html` }, [
                           import_Document.default.createText(`
                   Taglist
                 `, false)
@@ -2167,7 +2167,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/textarea.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/textarea.html` }, [
                           import_Document.default.createText(`
                   Textarea
                 `, false)
@@ -2189,7 +2189,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/textlist.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/textlist.html` }, [
                           import_Document.default.createText(`
                   Textlist
                 `, false)
@@ -2211,7 +2211,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/time.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/time.html` }, [
                           import_Document.default.createText(`
                   Time
                 `, false)
@@ -2233,7 +2233,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/wysiwyg.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/wysiwyg.html` }, [
                           import_Document.default.createText(`
                   WYSIWYG
                 `, false)

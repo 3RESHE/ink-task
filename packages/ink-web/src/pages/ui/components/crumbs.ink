@@ -38,7 +38,6 @@
     { label: 'Crumbs' }
   ];
 </script>
-
 <html>
   <html-head />
   <body class="light bg-t-0 tx-t-1 tx-arial">
@@ -49,7 +48,6 @@
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
           <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
             {_('On this page')}
-            
           </h6>
           <nav class="tx-14 tx-lh-32">
             <a class="block tx-t-0" href="#breadcrumbs">{_('Breadcrumbs')}</a>
@@ -65,33 +63,30 @@
           </nav>
         </menu>
       </aside>
-
-
-      
       <main>
-      <api-docs>
-        <nav class="p-10 bg-t-3 sticky top-0 z-50">
-          <element-crumbs 
-            crumbs={crumbs} 
-            block 
-            bold 
-            white 
-            sep-muted
-            link-primary
-            spacing={2}
-          />
-      </nav>
-        <a name="breadcrumbs"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">{_('Breadcrumbs')}</h1>
+        <api-docs>
+          <nav class="p-10 bg-t-3 sticky top-0 z-50">
+            <element-crumbs 
+              crumbs={crumbs} 
+              block 
+              bold 
+              white 
+              sep-muted
+              link-primary
+              spacing={2}
+            />
+          </nav>
 
+          <a name="breadcrumbs"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">{_('Breadcrumbs')}</h1>
           <ide-app title="Editor" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
               import Crumbs from '@stackpress/ink-ui/element/crumbs';
             </ide-code>
           </ide-app>
-        <a name="props"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Props')}</h2>
 
+          <a name="props"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Props')}</h2>
           <layout-table 
             top
             head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
@@ -103,230 +98,243 @@
             <table-head>{_('Type')}</table-head>
             <table-head>{_('Required')}</table-head>
             <table-head>{_('Notes')}</table-head>
+
             <table-row>
               <table-col>crumbs</table-col>
               <table-col>Array</table-col>
               <table-col>Yes</table-col>
-              <table-col>{_('List of breadcrumb items with labels, icons, and links')}</table-col>
+              <table-col>{_('Array of objects with "icon" (string), "label" (string), and "href" (string) properties')}</table-col>
             </table-row>
+
             <table-row>
               <table-col>block</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Display breadcrumbs as a block element')}</table-col>
+              <table-col>{_('Displays crumbs as a block element (default)')}</table-col>
             </table-row>
+
+            <table-row>
+              <table-col>flex</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Displays crumbs as a flex container with centered items')}</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>bold</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Applies bold styling to non-link labels')}</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>underline</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Underlines all links')}</table-col>
+            </table-row>
+
             <table-row>
               <table-col>link</table-col>
               <table-col>Object</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Styles and properties for breadcrumb links')}</table-col>
+              <table-col>{_('Custom styles for links (e.g., { color: "salmon" })')}</table-col>
             </table-row>
+
             <table-row>
               <table-col>sep</table-col>
               <table-col>Object</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Styles and properties for separators')}</table-col>
+              <table-col>{_('Custom styles for separator icons (e.g., { color: "var(--muted)" })')}</table-col>
             </table-row>
+
             <table-row>
               <table-col>icon</table-col>
               <table-col>Object</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Styles and properties for icons')}</table-col>
+              <table-col>{_('Custom styles for item icons (e.g., { color: "var(--success)" })')}</table-col>
             </table-row>
+
+            <table-row>
+              <table-col>size</table-col>
+              <table-col>Number</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Custom font size in pixels for crumbs')}</table-col>
+            </table-row>
+
             <table-row>
               <table-col>xs, sm, md, lg, xl, xl2, xl3, xl4, xl5</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Size variations for icons and separators')}</table-col>
+              <table-col>{_('Predefined size variants for crumbs (escalating from extra-small to extra-large)')}</table-col>
             </table-row>
+
             <table-row>
               <table-col>color</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Color for icons and separators')}</table-col>
+              <table-col>{_('Custom CSS color for all text/icons (e.g., "salmon", "#ff0000")')}</table-col>
             </table-row>
+
             <table-row>
               <table-col>white, black, info, warning, success, error, muted, primary, secondary</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Color variations for icons and separators')}</table-col>
+              <table-col>{_('Predefined color variants for all text/icons')}</table-col>
             </table-row>
+
             <table-row>
               <table-col>spacing</table-col>
               <table-col>Number</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Spacing between separator icons')}</table-col>
+              <table-col>{_('Horizontal spacing between items in pixels (default: 0)')}</table-col>
             </table-row>
           </layout-table>
 
-
- <a name="basic-usage"></a>
-<!-- Basic Usage -->
-<h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
-<div class="mb-10">Responsive breadcrumb layout inside a container:</div>
-<div class="basis-third-10 lg-basis-half-10 md-basis-full">
-  <div class="bg-t-3 h-120 flex flex-center p-10 rounded-2xl shadow-md">
-    <element-crumbs crumbs={crumbs} block bold white underline icon-muted link-primary spacing={2} />
-  </div>
-</div>
-  <ide-code numbers class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`<script>
-        const crumbs = [
-          { icon: 'home', label: 'Home', href: '/ink/index.html' },
-          { icon: 'book', label: 'Docs', href: '/ink/docs/index.html' },
-          { icon: 'icons', label: 'UI', href: '/ink/ui/index.html' },
-          { icon: 'icons', label: 'Components', href: '/ink/ui/index.html' },
-          { label: 'Crumbs' }
-        ];
-  </script>
-
-  <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-    <div class="bg-t-3 h-120 flex flex-center p-10 rounded-2xl shadow-md">
-      <element-crumbs 
-        crumbs={crumbs} 
-        block 
-        bold 
-        white 
-        underline
-        icon-muted
-        link-primary
-        spacing={2}
-      />
-    </div>
-    <a 
-      class="block tx-center tx-primary p-10 b-solid b-t-3 b-1 hover-bg-t-2 rounded-b-2xl transition-all" 
-      href="/ink/ui/components/crumbs.html"
-    >
-      Crumbs
-    </a>
-  </div>`}
-        </ide-code>
-
-          <!-- Link Styling -->
-           <a name="link-styling"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Link Styling</h2>
-          <div class="mb-10">Example with colored link:</div>
+          <a name="basic-usage"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Basic Usage')}</h2>
+          <div class="mb-10">{_('A simple breadcrumb layout with icons and links:')}</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-crumbs crumbs={crumbs} link-warning block />
+            <div class="bg-t-3 h-120 flex flex-center p-10 rounded-2xl shadow-md">
+              <element-crumbs crumbs={crumbs} block bold white sep-muted link-primary spacing={2} />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`<element-crumbs crumbs={crumbs} link-warning block />`}</ide-code>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`
+            <script>
+              const crumbs = [
+                { icon: 'home', label: 'Home', href: '/ink/index.html' },
+                { icon: 'book', label: 'Docs', href: '/ink/docs/index.html' },
+                { icon: 'icons', label: 'UI', href: '/ink/ui/index.html' },
+                { icon: 'icons', label: 'Components', href: '/ink/ui/index.html' },
+                { label: 'Crumbs' }
+              ];
+            </script>
+            <element-crumbs 
+              crumbs={crumbs} 
+              block 
+              bold 
+              white 
+              sep-muted 
+              link-primary 
+              spacing={2} 
+            />
+          `}</ide-code>
 
+          <a name="link-styling"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Link Styling')}</h2>
+          <div class="mb-10">{_('Customize link colors using predefined variants or custom values:')}</div>
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-crumbs crumbs={crumbs} link-warning block underline />
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-crumbs crumbs={crumbs} link-warning block underline />
+          `}</ide-code>
 
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-crumbs crumbs={crumbs} link-success block />
+              <element-crumbs crumbs={crumbs} link={{ color: 'salmon' }} block />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`<element-crumbs crumbs={crumbs} link-success block />`}</ide-code>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-crumbs crumbs={crumbs} link={{ color: 'salmon' }} block />
+          `}</ide-code>
 
-          <!-- Separator Variants -->
-           <a name="separator-variants"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Separator Variants</h2>
-          <div class="mb-10">Example with muted separator:</div>
+          <a name="separator-variants"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Separator Variants')}</h2>
+          <div class="mb-10">{_('Adjust separator appearance with colors:')}</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-crumbs crumbs={crumbs} sep-muted link-primary />
+              <element-crumbs crumbs={crumbs} sep-muted link-primary block />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`<element-crumbs crumbs={crumbs} sep-muted link-primary />`}</ide-code>
-          <div class="mb-10">Example with colored separator:</div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-crumbs crumbs={crumbs} sep-muted link-primary block />
+          `}</ide-code>
+
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-crumbs crumbs={crumbs} sep-success link-primary />
+              <element-crumbs crumbs={crumbs} sep-success link-primary block />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`<element-crumbs crumbs={crumbs} sep-success link-primary />`}</ide-code>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-crumbs crumbs={crumbs} sep-success link-primary block />
+          `}</ide-code>
 
-                    <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-crumbs crumbs={crumbs} sep-warning link-primary />
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`<element-crumbs crumbs={crumbs} sep-warning link-primary />`}</ide-code>
-
-          <!-- Icon Styling -->
-           <a name="icon-styling"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Icon Styling</h2>
-          <div class="mb-10">Example with muted icons:</div>
+          <a name="icon-styling"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Icon Styling')}</h2>
+          <div class="mb-10">{_('Style breadcrumb icons with colors:')}</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
               <element-crumbs crumbs={crumbs} icon-muted link-primary block />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`<element-crumbs crumbs={crumbs} icon-muted link-primary block />`}</ide-code>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-crumbs crumbs={crumbs} icon-muted link-primary block />
+          `}</ide-code>
 
-          <div class="mb-10">Example with colored icons:</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
               <element-crumbs crumbs={crumbs} icon-success link-primary block />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`<element-crumbs crumbs={crumbs} icon-success link-primary block />`}</ide-code>
-                    <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-crumbs crumbs={crumbs} icon-success link-primary block />
+          `}</ide-code>
+
+          <a name="size-variants"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Size Variants')}</h2>
+          <div class="mb-10">{_('Adjust crumb size with predefined variants:')}</div>
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-crumbs crumbs={crumbs} icon-warning link-primary block />
+              <element-crumbs crumbs={crumbs} xs link-primary block />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`<element-crumbs crumbs={crumbs} icon-warning link-primary block />`}</ide-code>
-
-          <!-- Size Variants -->
-           <a name="size-variants"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Size Variants</h2>
-          <div class="mb-10">Example with different sizes:</div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-crumbs crumbs={crumbs} xs link-primary block />
+          `}</ide-code>
 
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-crumbs crumbs={crumbs} link-primary block lg/>
+              <element-crumbs crumbs={crumbs} lg link-primary block />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`<element-crumbs crumbs={crumbs} link-primary block lg/>`}</ide-code>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-crumbs crumbs={crumbs} lg link-primary block />
+          `}</ide-code>
 
-                    <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-crumbs crumbs={crumbs} link-primary block xs/>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`<element-crumbs crumbs={crumbs} link-primary block xs/>`}</ide-code>
-
-          <!-- Spacing & Customization -->
-           <a name="spacing-and-customizations"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Spacing & Customization</h2>
-          <div class="mb-10">Example with spacing:</div>
+          <a name="spacing-and-customizations"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Spacing & Customization')}</h2>
+          <div class="mb-10">{_('Customize spacing between items:')}</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
               <element-crumbs crumbs={crumbs} spacing={5} link-primary block />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`<element-crumbs crumbs={crumbs} spacing={5} link-primary block />`}</ide-code>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-crumbs crumbs={crumbs} spacing={5} link-primary block />
+          `}</ide-code>
 
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
               <element-crumbs crumbs={crumbs} spacing={2} link-primary block />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`<element-crumbs crumbs={crumbs} spacing={2} link-primary block />`}</ide-code>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-crumbs crumbs={crumbs} spacing={2} link-primary block />
+          `}</ide-code>
 
-          <div class="mb-10">Example with custom colors:</div>
+          <div class="mb-10">{_('Apply custom colors to all elements:')}</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-crumbs crumbs={crumbs} color="white" link-primary block />
+              <element-crumbs crumbs={crumbs} color="salmon" block />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`<element-crumbs crumbs={crumbs} color="white" link-primary block />`}</ide-code>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+            <element-crumbs crumbs={crumbs} color="salmon" block />
+          `}</ide-code>
 
-          <div class="mb-10">Example with link styling:</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-crumbs crumbs={crumbs} link={{color: 'salmon'}} block />
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim>{`
-          <element-crumbs crumbs={crumbs} link={{color: 'salmon'}} block />`}
-          </ide-code>
-
-
-          
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/badge.html">
               <element-icon name="chevron-left" theme="tx-1" />
@@ -339,8 +347,6 @@
           </nav>
           <footer class="foot"></footer>
         </api-docs>
-
-      
       </main>
     </panel-layout>
   </body>

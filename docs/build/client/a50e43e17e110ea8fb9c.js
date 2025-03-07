@@ -3584,7 +3584,7 @@ var InkAPI = (() => {
     }
   });
 
-  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\icon.ink
+  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\icon.ink
   var icon_exports = {};
   __export(icon_exports, {
     BUILD_ID: () => BUILD_ID,
@@ -3601,7 +3601,7 @@ var InkAPI = (() => {
   var import_Emitter = __toESM(require_Emitter());
   var import_data = __toESM(require_data());
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\api\docs.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\docs.ink
   var import_Registry = __toESM(require_Registry());
   var import_Component = __toESM(require_Component());
   var import_ink = __toESM(require_ink());
@@ -3630,7 +3630,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\app.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\app.ink
   var import_Registry2 = __toESM(require_Registry());
   var import_Component2 = __toESM(require_Component());
   var import_ink2 = __toESM(require_ink());
@@ -3684,7 +3684,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\code.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\code.ink
   var import_Registry3 = __toESM(require_Registry());
   var import_Component3 = __toESM(require_Component());
   var import_prismjs = __toESM(require_prism());
@@ -3881,7 +3881,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
   var import_Registry4 = __toESM(require_Registry());
   var import_Component4 = __toESM(require_Component());
 
@@ -3897,7 +3897,7 @@ var InkAPI = (() => {
     return phrase;
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
   var Translate_794a00a5e900fca28310 = class extends import_Component4.default {
     static id = "794a00a5e900fca28310";
     static tagname = "translate";
@@ -3973,7 +3973,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\panel.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\panel.ink
   var import_Registry5 = __toESM(require_Registry());
   var import_Component5 = __toESM(require_Component());
   var Panel_c4c96a14064fc0c4d224 = class extends import_Component5.default {
@@ -4134,7 +4134,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\alert.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\alert.ink
   var import_Registry6 = __toESM(require_Registry());
   var import_Component6 = __toESM(require_Component());
   var import_StyleSet = __toESM(require_StyleSet());
@@ -4182,7 +4182,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\icon.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\icon.ink
   var import_Registry7 = __toESM(require_Registry());
   var import_Component7 = __toESM(require_Component());
   var import_StyleSet2 = __toESM(require_StyleSet());
@@ -4214,7 +4214,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\crumbs.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\crumbs.ink
   var import_Registry8 = __toESM(require_Registry());
   var import_Component8 = __toESM(require_Component());
   var import_StyleSet3 = __toESM(require_StyleSet());
@@ -4377,10 +4377,10 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
   var import_Component14 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\table.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\table.ink
   var import_Registry9 = __toESM(require_Registry());
   var import_Component9 = __toESM(require_Component());
   var import_StyleSet4 = __toESM(require_StyleSet());
@@ -4404,15 +4404,15 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
   var import_Registry14 = __toESM(require_Registry());
   var import_StyleSet9 = __toESM(require_StyleSet());
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
   var import_Registry11 = __toESM(require_Registry());
   var import_Component11 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\row.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\row.ink
   var import_Registry10 = __toESM(require_Registry());
   var import_Component10 = __toESM(require_Component());
   var import_StyleSet5 = __toESM(require_StyleSet());
@@ -4435,7 +4435,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
   var import_StyleSet6 = __toESM(require_StyleSet());
   var Thead_afbcee18613ce58fb77c = class extends import_Component11.default {
     static id = "afbcee18613ce58fb77c";
@@ -4458,7 +4458,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
   var import_Registry12 = __toESM(require_Registry());
   var import_Component12 = __toESM(require_Component());
   var import_StyleSet7 = __toESM(require_StyleSet());
@@ -4481,7 +4481,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
   var import_Registry13 = __toESM(require_Registry());
   var import_Component13 = __toESM(require_Component());
   var import_StyleSet8 = __toESM(require_StyleSet());
@@ -4506,7 +4506,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
   var Table_02bc3cbacda5727a0af3 = class extends import_Component14.default {
     static id = "02bc3cbacda5727a0af3";
     static tagname = "table";
@@ -4654,7 +4654,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\head.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\head.ink
   var import_Registry15 = __toESM(require_Registry());
   var import_Component15 = __toESM(require_Component());
   var import_StyleSet10 = __toESM(require_StyleSet());
@@ -4736,7 +4736,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\col.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\col.ink
   var import_Registry16 = __toESM(require_Registry());
   var import_Component16 = __toESM(require_Component());
   var import_StyleSet11 = __toESM(require_StyleSet());
@@ -4808,7 +4808,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\badge.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\badge.ink
   var import_Registry17 = __toESM(require_Registry());
   var import_Component17 = __toESM(require_Component());
   var import_StyleSet12 = __toESM(require_StyleSet());
@@ -4856,7 +4856,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\icon.ink
+  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\icon.ink
   var import_ink4 = __toESM(require_ink());
   var TemplateDocument = class _TemplateDocument extends import_Document2.default {
     static sync() {
@@ -5536,24 +5536,22 @@ var InkAPI = (() => {
                 ]
               ]),
               import_Document.default.createText(`
-
-
-        `, false),
+      `, false),
               import_Document.default.createElement("aside", { "right": true }, [
                 import_Document.default.createText(`
         `, false),
                 import_Document.default.createElement("menu", { "class": `m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto` }, [
                   import_Document.default.createText(`
-            `, false),
+          `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
                     import_Document.default.createText(`
             `, false),
                     ...this._toNodeList(_("On this page")),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-            `, false),
+          `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
@@ -5564,25 +5562,25 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("nav", { "class": `pl-20` }, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#props` }, [
                         import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Props"))
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#types` }, [
                         import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Types"))
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#size` }, [
                         import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Size"))
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#color` }, [
                         import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Color"))
@@ -5591,54 +5589,46 @@ var InkAPI = (() => {
             `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
         `, false)
                 ]),
                 import_Document.default.createText(`
-        `, false)
+      `, false)
               ]),
               import_Document.default.createText(`
-
-
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-      `, false),
+        `, false),
                 import_Document.default.createElement("api-docs", {}, [
                   import_Document.default.createText(`
-        `, false),
+          `, false),
                   import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
                     import_Document.default.createText(`
-          `, false),
-                    import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
-                    import_Document.default.createText(`
-      `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-
-        
-        `, false),
-                  import_Document.default.createElement("a", { "name": `icons` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_("Icons")),
+                    import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
+
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20 ` }, [
+                  import_Document.default.createElement("a", { "name": `icons` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Icons"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
+                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Badge from '@stackpress/ink-ui/element/icon';
+              import Icon from '@stackpress/ink-ui/element/icon';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -5646,20 +5636,15 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
-            `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Props")),
-                    import_Document.default.createText(`
-            `, false)
+                    ...this._toNodeList(_("Props"))
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
@@ -5686,24 +5671,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`name`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Yes`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Icon name, e.g., "home", "user", "bell"'))
+                        ...this._toNodeList(_('Font Awesome icon name (e.g., "home", "github", "bell")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5713,51 +5698,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`solid`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Uses solid style (default)"))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`brand`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Uses brand style (e.g., social media logos)"))
+                        ...this._toNodeList(_('Uses brand style for logos (e.g., "github", "twitter"); defaults to solid style otherwise'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5767,24 +5725,24 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`size`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
+                        import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Sets font-size, e.g., "16px", "2rem"'))
+                        ...this._toNodeList(_("Custom font size in pixels (e.g., 16, 32)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5794,480 +5752,333 @@ var InkAPI = (() => {
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`xs, sm, md, lg, xl, xl2, xl3, xl4, xl5`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Predefined size variants (escalating from extra-small to extra-large)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`color`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom color, accepts named colors or HEX"))
+                        ...this._toNodeList(_('Custom CSS color (e.g., "red", "#facc15", "info")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`class`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Additional CSS classes for styling (e.g., "tx-info", "tx-warning")'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-
-
-        `, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `types` }, []),
                   import_Document.default.createText(`
-        `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-          `, false),
-                    ...this._toNodeList(_("Types")),
-                    import_Document.default.createText(`
-        `, false)
+                    ...this._toNodeList(_("Types"))
                   ]),
                   import_Document.default.createText(`
-
-        `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-          Icons have different types based on their usage:
-          `, false),
-                    import_Document.default.createElement("span", { "class": `tx-info tx-italic p-3` }, [
-                      import_Document.default.createText(`info`, false)
-                    ]),
-                    import_Document.default.createText(`,
-          `, false),
-                    import_Document.default.createElement("span", { "class": `tx-warning tx-italic p-3` }, [
-                      import_Document.default.createText(`warning`, false)
-                    ]),
-                    import_Document.default.createText(`,
-          `, false),
-                    import_Document.default.createElement("span", { "class": `tx-success tx-italic p-3` }, [
-                      import_Document.default.createText(`success`, false)
-                    ]),
-                    import_Document.default.createText(`,
-          `, false),
-                    import_Document.default.createElement("span", { "class": `tx-error tx-italic p-3` }, [
-                      import_Document.default.createText(`error`, false)
-                    ]),
-                    import_Document.default.createText(`.
-        `, false)
+                    ...this._toNodeList(_("Icons can be solid (default) or brand-specific (e.g., logos):"))
                   ]),
                   import_Document.default.createText(`
 
-        `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-          `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-            `, false),
-                      import_Document.default.createElement("element-icon", { "name": `info-circle`, "class": `tx-info` }),
+              `, false),
+                      import_Document.default.createElement("element-icon", { "name": `user` }),
                       import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
           `, false)
-                    ]),
-                    import_Document.default.createText(`
-        `, false)
                   ]),
                   import_Document.default.createText(`
-
-        `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-          <element-icon name="info-circle" class="tx-info" />
-        `)
-                  ]),
-                  import_Document.default.createText(`
-
-        `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
           `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-            `, false),
-                      import_Document.default.createElement("element-icon", { "name": `exclamation-triangle`, "class": `tx-warning` }),
-                      import_Document.default.createText(`
-          `, false)
-                    ]),
-                    import_Document.default.createText(`
-        `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-        `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-          <element-icon name="exclamation-triangle" class="tx-warning" />
-        `)
+            <element-icon name="user" />
+          `)
                   ]),
                   import_Document.default.createText(`
 
-        `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
           `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-            `, false),
-                      import_Document.default.createElement("element-icon", { "name": `check-circle`, "class": `tx-success` }),
-                      import_Document.default.createText(`
-          `, false)
-                    ]),
-                    import_Document.default.createText(`
-        `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-        `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-          <element-icon name="check-circle" class="tx-success" />
-        `)
-                  ]),
-                  import_Document.default.createText(`
-
-        `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-icon", { "name": `steam`, "brand": true }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
           `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-icon name="steam" brand />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+                    `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-            `, false),
-                      import_Document.default.createElement("element-icon", { "name": `times-circle`, "class": `tx-error` }),
+              `, false),
+                      import_Document.default.createElement("element-icon", { "name": `github`, "brand": true }),
                       import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
           `, false)
-                    ]),
-                    import_Document.default.createText(`
-        `, false)
                   ]),
                   import_Document.default.createText(`
-
-        `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-          <element-icon name="times-circle" class="tx-error" />
-        `)
+            <element-icon name="github" brand />
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-
-            `, false),
-                  import_Document.default.createElement("a", { "name": `basic` }, []),
-                  import_Document.default.createText(`
-            `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Basic Icons")),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            The `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`name`, false)
-                    ]),
-                    import_Document.default.createText(` prop determines which icon to display.
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-icon", { "name": `home` }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-icon name="home"></element-icon>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-
-
-            `, false),
-                  import_Document.default.createElement("a", { "name": `types` }, []),
-                  import_Document.default.createText(`
-            `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Solid vs. Brand Icons")),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Use `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`solid`, false)
-                    ]),
-                    import_Document.default.createText(` for default icons and `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`brand`, false)
-                    ]),
-                    import_Document.default.createText(` for logos and trademarks.
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-icon", { "name": `user`, "solid": true }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-icon name="user" solid></element-icon>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-icon", { "name": `github`, "brand": true }, []),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-icon name="github" brand></element-icon>
-            `)
-                  ]),
-                  import_Document.default.createText(`
-
-
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `size` }, []),
                   import_Document.default.createText(`
-            `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Custom Sizes")),
-                    import_Document.default.createText(`
-            `, false)
+                    ...this._toNodeList(_("Size"))
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Use the `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`size`, false)
-                    ]),
-                    import_Document.default.createText(` prop to control the icon size.
-            `, false)
+                    ...this._toNodeList(_("Control icon size with custom values or predefined variants:"))
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-icon", { "name": `bell`, "size": `16` }, []),
+              `, false),
+                      import_Document.default.createElement("element-icon", { "name": `bell`, "size": `16` }),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-icon name="bell" size="16"></element-icon>
-            `)
+            <element-icon name="bell" size="16" />
+          `)
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("element-icon", { "name": `bell`, "size": `32` }, []),
+              `, false),
+                      import_Document.default.createElement("element-icon", { "name": `bell`, "size": `32` }),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-icon name="bell" size="32"></element-icon>
-            `)
+            <element-icon name="bell" size="32" />
+          `)
                   ]),
                   import_Document.default.createText(`
 
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-icon", { "name": `bell`, "lg": true }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-icon name="bell" lg />
+          `)
+                  ]),
+                  import_Document.default.createText(`
 
-        `, false),
+                    `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-icon", { "name": `bell`, "sm": true }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-icon name="bell" sm />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
                   import_Document.default.createElement("a", { "name": `color` }, []),
                   import_Document.default.createText(`
-        `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-        `, false),
-                    ...this._toNodeList(_("Custom Colors")),
-                    import_Document.default.createText(`
-        `, false)
+                    ...this._toNodeList(_("Color"))
                   ]),
                   import_Document.default.createText(`
-
-        `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-        The `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`color`, false)
-                    ]),
-                    import_Document.default.createText(` prop allows changing the icon color.
-        `, false)
+                    ...this._toNodeList(_("Apply custom colors to icons:"))
                   ]),
                   import_Document.default.createText(`
 
-        `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-        `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-            `, false),
-                      import_Document.default.createElement("element-icon", { "name": `heart`, "color": `red` }, []),
+              `, false),
+                      import_Document.default.createElement("element-icon", { "name": `heart`, "color": `red` }),
                       import_Document.default.createText(`
-        `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-        `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-        `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-        <element-icon name="heart" color="red"></element-icon>
-        `)
+            <element-icon name="heart" color="red" />
+          `)
                   ]),
                   import_Document.default.createText(`
 
-        `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-        `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-            `, false),
-                      import_Document.default.createElement("element-icon", { "name": `star`, "color": `#facc15` }, []),
+              `, false),
+                      import_Document.default.createElement("element-icon", { "name": `star`, "color": `#facc15` }),
                       import_Document.default.createText(`
-        `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-        `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-        `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-        <element-icon name="star" color="#facc15"></element-icon>
-        `)
+            <element-icon name="star" color="#facc15" />
+          `)
                   ]),
                   import_Document.default.createText(`
 
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
             `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-icon", { "name": `info-circle`, "info": true }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-icon name="info-circle" info />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),

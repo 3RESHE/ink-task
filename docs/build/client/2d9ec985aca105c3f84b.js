@@ -23361,7 +23361,7 @@ var InkAPI = (() => {
     }
   });
 
-  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\index.ink
+  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\form\index.ink
   var form_exports = {};
   __export(form_exports, {
     BUILD_ID: () => BUILD_ID,
@@ -23378,7 +23378,7 @@ var InkAPI = (() => {
   var import_Emitter = __toESM(require_Emitter());
   var import_data = __toESM(require_data());
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\api\docs.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\docs.ink
   var import_Registry = __toESM(require_Registry());
   var import_Component = __toESM(require_Component());
   var import_ink = __toESM(require_ink());
@@ -23407,7 +23407,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
   var import_Registry2 = __toESM(require_Registry());
   var import_Component2 = __toESM(require_Component());
 
@@ -23423,7 +23423,7 @@ var InkAPI = (() => {
     return phrase;
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
   var Translate_794a00a5e900fca28310 = class extends import_Component2.default {
     static id = "794a00a5e900fca28310";
     static tagname = "translate";
@@ -23499,7 +23499,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\panel.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\panel.ink
   var import_Registry3 = __toESM(require_Registry());
   var import_Component3 = __toESM(require_Component());
   var Panel_c4c96a14064fc0c4d224 = class extends import_Component3.default {
@@ -23660,7 +23660,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\form\button.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\form\button.ink
   var import_Registry4 = __toESM(require_Registry());
   var import_Component4 = __toESM(require_Component());
   var import_StyleSet = __toESM(require_StyleSet());
@@ -23812,7 +23812,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\form\control.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\form\control.ink
   var import_Registry5 = __toESM(require_Registry());
   var import_Component5 = __toESM(require_Component());
   var import_StyleSet2 = __toESM(require_StyleSet());
@@ -23865,7 +23865,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\form\fieldset.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\form\fieldset.ink
   var import_Registry6 = __toESM(require_Registry());
   var import_Component6 = __toESM(require_Component());
   var import_StyleSet3 = __toESM(require_StyleSet());
@@ -23965,7 +23965,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\color.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\color.ink
   var import_Registry7 = __toESM(require_Registry());
   var import_Component7 = __toESM(require_Component());
   var import_StyleSet4 = __toESM(require_StyleSet());
@@ -24087,7 +24087,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\checkbox.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\checkbox.ink
   var import_Registry8 = __toESM(require_Registry());
   var import_Field = __toESM(require_Field());
   var import_StyleSet5 = __toESM(require_StyleSet());
@@ -24127,7 +24127,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\country.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\country.ink
   var import_Registry9 = __toESM(require_Registry());
   var import_Component8 = __toESM(require_Component());
 
@@ -26335,7 +26335,7 @@ var InkAPI = (() => {
     }
   ];
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\country.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\country.ink
   var import_select = __toESM(require_select());
   var Country_e24d0db854af71ec9fc5 = class extends import_Component8.default {
     static id = "e24d0db854af71ec9fc5";
@@ -26595,7 +26595,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\currency.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\currency.ink
   var import_Registry10 = __toESM(require_Registry());
   var import_Component9 = __toESM(require_Component());
   var import_select2 = __toESM(require_select());
@@ -26857,7 +26857,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\date.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\date.ink
   var import_Registry11 = __toESM(require_Registry());
   var import_Component10 = __toESM(require_Component());
   var import_StyleSet6 = __toESM(require_StyleSet());
@@ -26942,7 +26942,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\datetime.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\datetime.ink
   var import_Registry12 = __toESM(require_Registry());
   var import_Component11 = __toESM(require_Component());
   var import_StyleSet7 = __toESM(require_StyleSet());
@@ -27025,7 +27025,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\editor.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\editor.ink
   var import_Registry13 = __toESM(require_Registry());
   var import_Component12 = __toESM(require_Component());
   var import_StyleSet8 = __toESM(require_StyleSet());
@@ -27546,11 +27546,11 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\file.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\file.ink
   var import_Registry15 = __toESM(require_Registry());
   var import_Component14 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\input.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\input.ink
   var import_Registry14 = __toESM(require_Registry());
   var import_Component13 = __toESM(require_Component());
   var import_StyleSet9 = __toESM(require_StyleSet());
@@ -27600,7 +27600,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\file.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\file.ink
   var import_StyleSet10 = __toESM(require_StyleSet());
   var import_display6 = __toESM(require_display());
   var import_signal = __toESM(require_signal());
@@ -27777,7 +27777,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\filelist.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\filelist.ink
   var import_Registry16 = __toESM(require_Registry());
   var import_Component15 = __toESM(require_Component());
   var import_StyleSet11 = __toESM(require_StyleSet());
@@ -27979,11 +27979,11 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\markdown.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\markdown.ink
   var import_Registry18 = __toESM(require_Registry());
   var import_Component17 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\icon.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\icon.ink
   var import_Registry17 = __toESM(require_Registry());
   var import_Component16 = __toESM(require_Component());
   var import_StyleSet12 = __toESM(require_StyleSet());
@@ -28015,7 +28015,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\markdown.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\markdown.ink
   var import_StyleSet13 = __toESM(require_StyleSet());
   var import_display9 = __toESM(require_display());
 
@@ -30089,7 +30089,7 @@ ${text}</tr>
   var parser = _Parser.parse;
   var lexer = _Lexer.lex;
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\markdown.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\markdown.ink
   var Markdown_12b2cd27e75a9b30b72c = class extends import_Component17.default {
     static id = "12b2cd27e75a9b30b72c";
     static tagname = "markdown";
@@ -30223,7 +30223,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\mask.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\mask.ink
   var import_Registry19 = __toESM(require_Registry());
   var import_Component18 = __toESM(require_Component());
   var import_inputmask = __toESM(require_inputmask());
@@ -30296,7 +30296,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\metadata.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\metadata.ink
   var import_Registry20 = __toESM(require_Registry());
   var import_Component19 = __toESM(require_Component());
   var import_StyleSet15 = __toESM(require_StyleSet());
@@ -30445,7 +30445,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\number.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\number.ink
   var import_Registry21 = __toESM(require_Registry());
   var import_Component20 = __toESM(require_Component());
   var import_StyleSet16 = __toESM(require_StyleSet());
@@ -30606,7 +30606,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\password.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\password.ink
   var import_Registry22 = __toESM(require_Registry());
   var import_Component21 = __toESM(require_Component());
   var import_StyleSet17 = __toESM(require_StyleSet());
@@ -30686,7 +30686,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\radio.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\radio.ink
   var import_Registry23 = __toESM(require_Registry());
   var import_Field2 = __toESM(require_Field());
   var import_StyleSet18 = __toESM(require_StyleSet());
@@ -30726,7 +30726,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\range.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\range.ink
   var import_Registry24 = __toESM(require_Registry());
   var import_Component22 = __toESM(require_Component());
   var import_StyleSet19 = __toESM(require_StyleSet());
@@ -30852,7 +30852,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\rating.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\rating.ink
   var import_Registry25 = __toESM(require_Registry());
   var import_Component23 = __toESM(require_Component());
   var import_StyleSet20 = __toESM(require_StyleSet());
@@ -30934,7 +30934,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\select.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\select.ink
   var import_Registry26 = __toESM(require_Registry());
   var import_Component24 = __toESM(require_Component());
   var import_select3 = __toESM(require_select());
@@ -31214,7 +31214,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\slug.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\slug.ink
   var import_Registry27 = __toESM(require_Registry());
   var import_Component25 = __toESM(require_Component());
   var import_StyleSet21 = __toESM(require_StyleSet());
@@ -31302,7 +31302,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\switch.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\switch.ink
   var import_Registry28 = __toESM(require_Registry());
   var import_Field3 = __toESM(require_Field());
   var import_StyleSet22 = __toESM(require_StyleSet());
@@ -31504,7 +31504,7 @@ input:checked + span::after {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\textarea.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\textarea.ink
   var import_Registry29 = __toESM(require_Registry());
   var import_Component26 = __toESM(require_Component());
   var import_StyleSet23 = __toESM(require_StyleSet());
@@ -31557,7 +31557,7 @@ input:checked + span::after {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\taglist.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\taglist.ink
   var import_Registry30 = __toESM(require_Registry());
   var import_Component27 = __toESM(require_Component());
   var import_StyleSet24 = __toESM(require_StyleSet());
@@ -31729,7 +31729,7 @@ input:checked + span::after {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\textlist.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\textlist.ink
   var import_Registry31 = __toESM(require_Registry());
   var import_Component28 = __toESM(require_Component());
   var import_StyleSet25 = __toESM(require_StyleSet());
@@ -31861,7 +31861,7 @@ input:checked + span::after {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\time.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\time.ink
   var import_Registry32 = __toESM(require_Registry());
   var import_Component29 = __toESM(require_Component());
   var import_StyleSet26 = __toESM(require_StyleSet());
@@ -31920,7 +31920,7 @@ input:checked + span::after {
     }
   };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\wysiwyg.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\wysiwyg.ink
   var import_Registry33 = __toESM(require_Registry());
   var import_Component30 = __toESM(require_Component());
 
@@ -48643,7 +48643,7 @@ input:checked + span::after {
   // ../../node_modules/suneditor/src/plugins/index.js
   var plugins_default = { blockquote: blockquote_default, align: align_default, font: font_default, fontSize: fontSize_default, fontColor: fontColor_default, hiliteColor: hiliteColor_default, horizontalRule: horizontalRule_default, list: list_default, table: table_default, formatBlock: formatBlock_default, lineHeight: lineHeight_default, template: template_default, paragraphStyle: paragraphStyle_default, textStyle: textStyle_default, link: link_default, image: image_default, video: video_default, audio: audio_default, math: math_default, imageGallery: imageGallery_default };
 
-  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\wysiwyg.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\wysiwyg.ink
   var import_StyleSet27 = __toESM(require_StyleSet());
   var import_display17 = __toESM(require_display());
   var Wysiwyg_7e3499be9641069413db = class extends import_Component30.default {
@@ -49663,7 +49663,7 @@ input:checked + span::after {
     }
   };
 
-  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\index.ink
+  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\form\index.ink
   var import_ink2 = __toESM(require_ink());
   var TemplateDocument = class _TemplateDocument extends import_Document2.default {
     static sync() {
@@ -50488,7 +50488,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/checkbox.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/checkbox.html` }, [
                           import_Document.default.createText(`
                   Checkbox
                 `, false)
@@ -50510,7 +50510,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/color.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/color.html` }, [
                           import_Document.default.createText(`
                   Color
                 `, false)
@@ -50532,7 +50532,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/country.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/country.html` }, [
                           import_Document.default.createText(`
                   Country
                 `, false)
@@ -50554,7 +50554,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/currency.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/currency.html` }, [
                           import_Document.default.createText(`
                   Currency
                 `, false)
@@ -50576,7 +50576,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/date.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/date.html` }, [
                           import_Document.default.createText(`
                   Date
                 `, false)
@@ -50620,7 +50620,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/editor.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/editor.html` }, [
                           import_Document.default.createText(`
                   Editor
                 `, false)
@@ -50642,7 +50642,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/file.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/file.html` }, [
                           import_Document.default.createText(`
                   File
                 `, false)
@@ -50664,7 +50664,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/filelist.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/filelist.html` }, [
                           import_Document.default.createText(`
                   Filelist
                 `, false)
@@ -50686,7 +50686,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/input.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/input.html` }, [
                           import_Document.default.createText(`
                   Input
                 `, false)
@@ -50702,7 +50702,7 @@ input:checked + span::after {
                         import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, []),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/knob.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/knob.html` }, [
                           import_Document.default.createText(`
                   Knob
                 `, false)
@@ -50724,7 +50724,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/markdown.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/markdown.html` }, [
                           import_Document.default.createText(`
                   Markdown
                 `, false)
@@ -50746,7 +50746,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/mask.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/mask.html` }, [
                           import_Document.default.createText(`
                   Mask
                 `, false)
@@ -50768,7 +50768,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/metadata.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/metadata.html` }, [
                           import_Document.default.createText(`
                   Metadata
                 `, false)
@@ -50790,7 +50790,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/number.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/number.html` }, [
                           import_Document.default.createText(`
                   Number
                 `, false)
@@ -50812,7 +50812,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/password.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/password.html` }, [
                           import_Document.default.createText(`
                   Password
                 `, false)
@@ -50837,7 +50837,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/radio.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/radio.html` }, [
                           import_Document.default.createText(`
                   Radio
                 `, false)
@@ -50859,7 +50859,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/range.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/range.html` }, [
                           import_Document.default.createText(`
                   Range
                 `, false)
@@ -50881,7 +50881,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/rating.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/rating.html` }, [
                           import_Document.default.createText(`
                   Rating
                 `, false)
@@ -50928,7 +50928,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/select.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/select.html` }, [
                           import_Document.default.createText(`
                   Select
                 `, false)
@@ -50950,7 +50950,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/slug.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/slug.html` }, [
                           import_Document.default.createText(`
                   Slug
                 `, false)
@@ -50972,7 +50972,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/switch.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/switch.html` }, [
                           import_Document.default.createText(`
                   Switch
                 `, false)
@@ -50994,7 +50994,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/taglist.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/taglist.html` }, [
                           import_Document.default.createText(`
                   Taglist
                 `, false)
@@ -51018,7 +51018,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/textarea.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/textarea.html` }, [
                           import_Document.default.createText(`
                   Textarea
                 `, false)
@@ -51040,7 +51040,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/textlist.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/textlist.html` }, [
                           import_Document.default.createText(`
                   Textlist
                 `, false)
@@ -51062,7 +51062,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/time.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/time.html` }, [
                           import_Document.default.createText(`
                   Time
                 `, false)
@@ -51084,7 +51084,7 @@ input:checked + span::after {
                         ]),
                         import_Document.default.createText(`
                 `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/form/wysiwyg.html` }, [
+                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/wysiwyg.html` }, [
                           import_Document.default.createText(`
                   WYSIWYG
                 `, false)

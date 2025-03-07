@@ -94,295 +94,252 @@
               import Panel from '@stackpress/ink-ui/element/panel';
             </ide-code>
           </ide-app>
+             <a name="slots"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Slots')}</h2>
+          <p class="mb-10">{_('The <panel-layout> component uses slots for its structure. No props are required.')}</p>
+          <layout-table 
+            top 
+            head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
+            body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" 
+            odd="bg-t-0" 
+            even="bg-t-1"
+          >
+            <table-head>{_('Slot')}</table-head>
+            <table-head>{_('Tag')}</table-head>
+            <table-head>{_('Required')}</table-head>
+            <table-head>{_('Notes')}</table-head>
 
-                <a name="props"></a>
-                <h2 class="tx-primary tx-upper tx-30 py-20">
-                {_('Props')}
-                </h2>
-                
-                <layout-table 
-                  top 
-                  head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
-                  body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" 
-                  odd="bg-t-0" 
-                  even="bg-t-1"
-                >
-                  <table-head>{_('Name')}</table-head>
-                  <table-head>{_('Type')}</table-head>
-                  <table-head>{_('Required')}</table-head>
-                  <table-head>{_('Notes')}</table-head>
+            <table-row>
+              <table-col>main</table-col>
+              <table-col>&lt;main&gt;</table-col>
+              <table-col>Yes</table-col>
+              <table-col>{_('Main content area (fixed between header/footer and sidebars)')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>main</table-col>
-                    <table-col>HTMLElement</table-col>
-                    <table-col>Yes</table-col>
-                    <table-col>{_('Represents the main content panel (<main>).')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>header</table-col>
+              <table-col>&lt;header&gt;</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Top panel, 60px height, adjusts for left sidebar')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>head</table-col>
-                    <table-col>HTMLElement</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Represents the header panel (<header>), if present.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>footer</table-col>
+              <table-col>&lt;footer&gt;</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Bottom panel, 60px height, adjusts for left sidebar')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>foot</table-col>
-                    <table-col>HTMLElement</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Represents the footer panel (<footer>), if present.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>left</table-col>
+              <table-col>&lt;aside left&gt;</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Left sidebar, 226px width, toggleable')}</table-col>
+            </table-row>
 
-                  <table-row>
-                    <table-col>left</table-col>
-                    <table-col>HTMLElement</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Represents the left sidebar (<aside left>), if present.')}</table-col>
-                  </table-row>
+            <table-row>
+              <table-col>right</table-col>
+              <table-col>&lt;aside right&gt;</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Right sidebar, 200px width, toggleable')}</table-col>
+            </table-row>
+          </layout-table>
 
-                  <table-row>
-                    <table-col>right</table-col>
-                    <table-col>HTMLElement</table-col>
-                    <table-col>No</table-col>
-                    <table-col>{_('Represents the right sidebar (<aside right>), if present.')}</table-col>
-                  </table-row>
-                </layout-table>
+        <a name="BasicPanelLayout"></a>
+        <h2 class="tx-primary tx-upper tx-30 py-20">{_('Basic Panel Layout')}</h2>
+        <div class="mb-10">{_('A simple layout with a header, left sidebar, right sidebar, and main content, using absolute positioning:')}</div>
+
+        <div class="basis-half-10 lg-basis-full h-200 bg-t-3 relative">
+          <header class="absolute top-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted">
+            <div class="p-10">Header</div>
+          </header>
+          <aside class="absolute top-50 bottom-0 left-0 w-200 bg-t-2 b-solid b-muted">
+            <div class="p-10">Left Sidebar</div>
+          </aside>
+          <aside class="absolute top-50 bottom-0 right-0 w-250 bg-t-2 b-solid b-muted">
+            <div class="p-10">Right Sidebar</div>
+          </aside>
+          <main class="absolute top-50 bottom-0 left-200 right-250 bg-t-0 b-solid b-muted">
+            <div class="p-10">Main Content</div>
+          </main>
+        </div>
+
+        <ide-code class="scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white" trim detab={2}>{`
+          <div class="h-200 bg-t-3 relative">
+            <header class="absolute top-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted">
+              <div class="p-10">Header</div>
+            </header>
+            <aside class="absolute top-50 bottom-0 left-0 w-200 bg-t-2 b-solid b-muted">
+              <div class="p-10">Left Sidebar</div>
+            </aside>
+            <aside class="absolute top-50 bottom-0 right-0 w-250 bg-t-2 b-solid b-muted">
+              <div class="p-10">Right Sidebar</div>
+            </aside>
+            <main class="absolute top-50 bottom-0 left-200 right-250 bg-t-0 b-solid b-muted">
+              <div class="p-10">Main Content</div>
+            </main>
+          </div>
+        `}</ide-code>
+
+        <a name="PanelLayoutWithFooter"></a>
+        <h2 class="tx-primary tx-upper tx-30 py-20">{_('Panel Layout with Footer')}</h2>
+        <div class="mb-10">{_('Extends the basic layout by adding a footer at the bottom:')}</div>
+
+        <div class="basis-half-10 lg-basis-full h-300 bg-t-3 relative">
+          <header class="absolute top-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted">
+            <div class="p-10">Header</div>
+          </header>
+          <aside class="absolute top-50 bottom-50 left-0 w-200 bg-t-2 b-solid b-muted">
+            <div class="p-10">Left Sidebar</div>
+          </aside>
+          <aside class="absolute top-50 bottom-50 right-0 w-250 bg-t-2 b-solid b-muted">
+            <div class="p-10">Right Sidebar</div>
+          </aside>
+          <main class="absolute top-50 bottom-50 left-200 right-250 bg-t-0 b-solid b-muted">
+            <div class="p-10">Main Content</div>
+          </main>
+          <footer class="absolute bottom-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted">
+            <div class="p-10">Footer</div>
+          </footer>
+        </div>
+
+        <ide-code class="scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white" trim detab={2}>{`
+          <div class="h-300 bg-t-3 relative">
+            <header class="absolute top-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted">
+              <div class="p-10">Header</div>
+            </header>
+            <aside class="absolute top-50 bottom-50 left-0 w-200 bg-t-2 b-solid b-muted">
+              <div class="p-10">Left Sidebar</div>
+            </aside>
+            <aside class="absolute top-50 bottom-50 right-0 w-250 bg-t-2 b-solid b-muted">
+              <div class="p-10">Right Sidebar</div>
+            </aside>
+            <main class="absolute top-50 bottom-50 left-200 right-250 bg-t-0 b-solid b-muted">
+              <div class="p-10">Main Content</div>
+            </main>
+            <footer class="absolute bottom-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted">
+              <div class="p-10">Footer</div>
+            </footer>
+          </div>
+        `}</ide-code>
+
+        <a name="CenteredPanelLayout"></a>
+        <h2 class="tx-primary tx-upper tx-30 py-20">
+          {_('Centered Panel Layout')}
+        </h2>
+
+        <div class="mb-10">
+          A centered layout with only a header and main content.
+        </div>
+
+        <div class="bg-t-3 h-120 flex items-center justify-center">
+          <div class="relative w-80p h-80p b-solid b-t-1">
+            <!-- Header -->
+            <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
+              <div class="p-5">Header</div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="absolute top-50p bottom-0 left-0 right-0 b-solid b-t-1">
+              <div class="p-5">Main Content</div>
+            </main>
+          </div>
+        </div>
 
 
+      <ide-code class="scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white" trim detab={2}>{`
+        <div class="bg-t-3 h-120 flex items-center justify-center">
+          <div class="relative w-80p h-80p b-solid b-t-1">
+            <!-- Header -->
+            <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
+              <div class="p-5">Header</div>
+            </header>
 
+            <!-- Main Content -->
+            <main class="absolute top-50p bottom-0 left-0 right-0 b-solid b-t-1">
+              <div class="p-5">Main Content</div>
+            </main>
+          </div>
+        </div>
+        `}</ide-code>
 
+        <a name="StickyHeaderFooter"></a>
+        <h2 class="tx-primary tx-upper tx-30 py-20">{_('Sticky Header & Footer')}</h2>
+        <div class="mb-10">{_('A layout with a sticky header and footer, and a scrollable main content area using flexbox:')}</div>
 
-            <a name="BasicPanelLayout"></a>
-            <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Basic Panel Layout')}
-            </h2>
-
-            <div class="mb-10">
-           A simple panel layout with header, left sidebar, right sidebar, and main content in their correct positions.
+        <div class="basis-half-10 lg-basis-full h-300 bg-t-3 flex flex-col">
+          <header class="h-50 bg-t-1 b-solid b-muted sticky top-0 z-10">
+            <div class="p-10">Sticky Header</div>
+          </header>
+          <main class="flex-1 min-h-0 overflow-auto bg-t-0 b-solid b-muted">
+            <div class="p-10">
+              <p>Main Content (Scroll Down)</p>
+              <p>Additional content to demonstrate scrolling.</p>
+              <p>More content here...</p>
+              <div class="h-400"></div>
+              <p>End of content.</p>
             </div>
+          </main>
+          <footer class="h-50 bg-t-1 b-solid b-muted sticky bottom-0 z-10">
+            <div class="p-10">Sticky Footer</div>
+          </footer>
+        </div>
 
-            <div class="bg-t-3 h-120">
-              <div class="relative w-full h-full">
-                <!-- Header -->
-                <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
-                  <div class="p-5">Header</div>
-                </header>
-
-                <!-- Left Sidebar -->
-                <aside class="absolute w-20p top-50p bottom-0 left-0 b-solid b-t-1">
-                  <div class="p-5">Left Sidebar</div>
-                </aside>
-
-                <!-- Right Sidebar -->
-                <aside class="absolute w-30p top-50p bottom-0 right-0 b-solid b-t-1">
-                  <div class="p-5">Right Sidebar</div>
-                </aside>
-
-                <!-- Main Content -->
-                <main class="absolute top-50p bottom-0 left-20p right-30p b-solid b-t-1">
-                  <div class="p-5">Main Content</div>
-                </main>
-              </div>
+        <ide-code class="scroll-y-auto mb-20 mt-300 w-full max-w-full min-w-full min-h-50 overflow-auto bg-black tx-white" lang="html">{`
+        <div class="h-300 bg-t-3 flex flex-col">
+          <header class="h-50 bg-t-1 b-solid b-muted sticky top-0 z-10">
+            <div class="p-10">Sticky Header</div>
+          </header>
+          <main class="flex-1 min-h-0 overflow-auto bg-t-0 b-solid b-muted">
+            <div class="p-10">
+              <p>Main Content (Scroll Down)</p>
+              <p>Additional content to demonstrate scrolling.</p>
+              <p>More content here...</p>
+              <div class="h-400"></div>
+              <p>End of content.</p>
             </div>
+          </main>
+          <footer class="h-50 bg-t-1 b-solid b-muted sticky bottom-0 z-10">
+            <div class="p-10">Sticky Footer</div>
+          </footer>
+        </div>
+        `}</ide-code>
 
+        <a name="ResponsivePanelLayout"></a>
+        <h2 class="tx-primary tx-upper tx-30 py-20">{_('Responsive Panel Layout')}</h2>
+        <div class="mb-10">{_('A layout that stacks on mobile and splits into columns on larger screens using flexbox and responsive utilities:')}</div>
 
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-                        <div class="bg-t-3 h-120">
-              <div class="relative w-full h-full">
-                <!-- Header -->
-                <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
-                  <div class="p-5">Header</div>
-                </header>
+        <div class="basis-half-10 lg-basis-full h-300 bg-t-3 flex flex-col lg-flex-row">
+          <header class="h-50 bg-t-1 b-solid b-muted">
+            <div class="p-10">Header</div>
+          </header>
+          <aside class="h-200 lg-h-auto lg-w-200 bg-t-2 b-solid b-muted">
+            <div class="p-10">Left Sidebar</div>
+          </aside>
+          <main class="flex-1 min-h-0 overflow-auto bg-t-0 b-solid b-muted">
+            <div class="p-10">Main Content</div>
+          </main>
+          <aside class="h-200 lg-h-auto lg-w-250 bg-t-2 b-solid b-muted">
+            <div class="p-10">Right Sidebar</div>
+          </aside>
+        </div>
 
-                <!-- Left Sidebar -->
-                <aside class="absolute w-20p top-50p bottom-0 left-0 b-solid b-t-1">
-                  <div class="p-5">Left Sidebar</div>
-                </aside>
-
-                <!-- Right Sidebar -->
-                <aside class="absolute w-30p top-50p bottom-0 right-0 b-solid b-t-1">
-                  <div class="p-5">Right Sidebar</div>
-                </aside>
-
-                <!-- Main Content -->
-                <main class="absolute top-50p bottom-0 left-20p right-30p b-solid b-t-1">
-                  <div class="p-5">Main Content</div>
-                </main>
-              </div>
-            </div>
-            `}</ide-code>
-
-
-                        <a name="PanelLayoutWithFooter"></a>
-            <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Panel Layout with Footer')}
-            </h2>
-
-            <div class="mb-10">
-            A footer is added at the bottom of the structure.
-            </div>
-
-            <div class="bg-t-3 h-200">
-              <div class="relative w-full h-full">
-                <!-- Header -->
-                <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
-                  <div class="p-5">Header</div>
-                </header>
-
-                <!-- Left Sidebar -->
-                <aside class="absolute w-20p top-50p bottom-60 left-0 b-solid b-t-1">
-                  <div class="p-5">Left Sidebar</div>
-                </aside>
-
-                <!-- Right Sidebar -->
-                <aside class="absolute w-30p top-50p bottom-60 right-0 b-solid b-t-1">
-                  <div class="p-5">Right Sidebar</div>
-                </aside>
-
-                <!-- Main Content -->
-                <main class="absolute top-50p bottom-60 left-20p right-30p b-solid b-t-1">
-                  <div class="p-5">Main Content</div>
-                </main>
-
-                <!-- Footer -->
-                <footer class="absolute bottom-0 left-0 right-0 h-60 b-solid b-t-1">
-                  <div class="p-5">Footer</div>
-                </footer>
-              </div>
-            </div>
-
-
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-              <div class="bg-t-3 h-200">
-                <div class="relative w-full h-full">
-                  <!-- Header -->
-                  <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
-                    <div class="p-5">Header</div>
-                  </header>
-
-                  <!-- Left Sidebar -->
-                  <aside class="absolute w-20p top-50p bottom-60 left-0 b-solid b-t-1">
-                    <div class="p-5">Left Sidebar</div>
-                  </aside>
-
-                  <!-- Right Sidebar -->
-                  <aside class="absolute w-30p top-50p bottom-60 right-0 b-solid b-t-1">
-                    <div class="p-5">Right Sidebar</div>
-                  </aside>
-
-                  <!-- Main Content -->
-                  <main class="absolute top-50p bottom-60 left-20p right-30p b-solid b-t-1">
-                    <div class="p-5">Main Content</div>
-                  </main>
-
-                  <!-- Footer -->
-                  <footer class="absolute bottom-0 left-0 right-0 h-60 b-solid b-t-1">
-                    <div class="p-5">Footer</div>
-                  </footer>
-                </div>
-              </div>
-            `}</ide-code>
-
-
-            <a name="CenteredPanelLayout"></a>
-            <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Centered Panel Layout')}
-            </h2>
-
-            <div class="mb-10">
-            A centered layout with only a header and main content.
-            </div>
-
-            <div class="bg-t-3 h-120 flex items-center justify-center">
-              <div class="relative w-80p h-80p b-solid b-t-1">
-                <!-- Header -->
-                <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
-                  <div class="p-5">Header</div>
-                </header>
-
-                <!-- Main Content -->
-                <main class="absolute top-50p bottom-0 left-0 right-0 b-solid b-t-1">
-                  <div class="p-5">Main Content</div>
-                </main>
-              </div>
-            </div>
-
-
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-              <div class="bg-t-3 h-120 flex items-center justify-center">
-              <div class="relative w-80p h-80p b-solid b-t-1">
-                <!-- Header -->
-                <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
-                  <div class="p-5">Header</div>
-                </header>
-
-                <!-- Main Content -->
-                <main class="absolute top-50p bottom-0 left-0 right-0 b-solid b-t-1">
-                  <div class="p-5">Main Content</div>
-                </main>
-              </div>
-            </div>
-            `}</ide-code>
-
-
-            <a name="StickyHeader&Footer"></a>
-            <h2 class="tx-primary tx-upper tx-30 py-20">
-              {_('Sticky Header & Footer')}
-            </h2>
-
-            <div class="mb-10">
-              A header and footer that stay visible while scrolling.
-            </div>
-
-            <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-              <div class="w-300 h-200 bg-t-3 b-solid b-1 p-2 relative flex flex-col">
-                <!-- Sticky Header -->
-                <header class="sticky top-0 left-0 right-0 h-50 bg-white b-solid b-b-1 z-10">
-                  <div class="p-2">Sticky Header</div>
-                </header>
-
-                <!-- Scrollable Content -->
-                <div class="flex-1 overflow-auto">
-                  <main class="w-full p-2">
-                    <p>Main Content (Scroll Down)</p>
-                    <div class="h-400px"></div> <!-- Ensures scrolling -->
-                  </main>
-                </div>
-
-                <!-- Sticky Footer -->
-                <footer class="sticky bottom-0 left-0 right-0 h-50 bg-white b-solid b-t-1 z-10">
-                  <div class="p-2">Sticky Footer</div>
-                </footer>
-              </div>
-            </div>
-
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-              <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-                <div class="w-300 h-200 bg-t-3 b-solid b-1 p-2 relative flex flex-col">
-                  <!-- Sticky Header -->
-                  <header class="sticky top-0 left-0 right-0 h-50 bg-white b-solid b-b-1 z-10">
-                    <div class="p-2">Sticky Header</div>
-                  </header>
-
-                  <!-- Scrollable Content -->
-                  <div class="flex-1 overflow-auto">
-                    <main class="w-full p-2">
-                      <p>Main Content (Scroll Down)</p>
-                      <div class="h-400px"></div> <!-- Ensures scrolling -->
-                    </main>
-                  </div>
-
-                  <!-- Sticky Footer -->
-                  <footer class="sticky bottom-0 left-0 right-0 h-50 bg-white b-solid b-t-1 z-10">
-                    <div class="p-2">Sticky Footer</div>
-                  </footer>
-                </div>
-              </div>
-            `}</ide-code>
-
-
-
-
+        <ide-code class="scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white" trim detab={2}>{`
+          <div class="h-300 bg-t-3 flex flex-col lg-flex-row">
+            <header class="h-50 bg-t-1 b-solid b-muted">
+              <div class="p-10">Header</div>
+            </header>
+            <aside class="h-200 lg-h-auto lg-w-200 bg-t-2 b-solid b-muted">
+              <div class="p-10">Left Sidebar</div>
+            </aside>
+            <main class="flex-1 min-h-0 overflow-auto bg-t-0 b-solid b-muted">
+              <div class="p-10">Main Content</div>
+            </main>
+            <aside class="h-200 lg-h-auto lg-w-250 bg-t-2 b-solid b-muted">
+              <div class="p-10">Right Sidebar</div>
+            </aside>
+          </div>
+        `}</ide-code>
 
             <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/pager.html">

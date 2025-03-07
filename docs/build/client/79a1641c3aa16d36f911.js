@@ -4970,7 +4970,6 @@ var InkAPI = (() => {
     `, false),
             import_Document.default.createElement("panel-layout", {}, [
               import_Document.default.createText(`
-    
       `, false),
               import_Document.default.createElement("header", {}, [
                 ...[
@@ -5035,7 +5034,6 @@ var InkAPI = (() => {
                 ]
               ]),
               import_Document.default.createText(`
-      
       `, false),
               import_Document.default.createElement("aside", { "left": true }, [
                 ...[
@@ -5538,7 +5536,7 @@ var InkAPI = (() => {
                 ]
               ]),
               import_Document.default.createText(`
-            `, false),
+      `, false),
               import_Document.default.createElement("aside", { "right": true }, [
                 import_Document.default.createText(`
         `, false),
@@ -5587,13 +5585,14 @@ var InkAPI = (() => {
                         import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Rounded"))
                       ]),
-                      import_Document.default.createText(`              `, false),
+                      import_Document.default.createText(`
+              `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#padding` }, [
                         import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Padding"))
                       ]),
                       import_Document.default.createText(`
-                      `, false),
+              `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#border` }, [
                         import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Border Styles"))
@@ -5614,304 +5613,434 @@ var InkAPI = (() => {
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-
-      `, false),
+        `, false),
                 import_Document.default.createElement("api-docs", {}, [
                   import_Document.default.createText(`
-        `, false),
+          `, false),
                   import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
                     import_Document.default.createText(`
-          `, false),
+            `, false),
                     import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
                     import_Document.default.createText(`
-      `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-
-`, false),
-                  import_Document.default.createElement("div", {}, [
-                    import_Document.default.createText(`
-
-        `, false),
-                    import_Document.default.createElement("a", { "name": `badge` }, []),
-                    import_Document.default.createText(`
           `, false),
-                    import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                      import_Document.default.createText(`
+                  import_Document.default.createElement("a", { "name": `badge` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    import_Document.default.createText(`
             `, false),
-                      ...this._toNodeList(_("Badge")),
-                      import_Document.default.createText(`
+                    ...this._toNodeList(_("Badge")),
+                    import_Document.default.createText(`
           `, false)
-                    ]),
-                    import_Document.default.createText(`
+                  ]),
+                  import_Document.default.createText(`
           `, false),
-                    import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20 ` }, [
-                      import_Document.default.createText(`
+                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
+                    import_Document.default.createText(`
             `, false),
-                      import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
-                        import_Document.default.createText(`
+                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
+                      import_Document.default.createText(`
               import Badge from '@stackpress/ink-ui/element/badge';
             `, false)
-                      ]),
-                      import_Document.default.createText(`
-          `, false)
                     ]),
                     import_Document.default.createText(`
-
-        `, false),
-                    import_Document.default.createElement("a", { "name": `props` }, []),
-                    import_Document.default.createText(`
-        `, false),
-                    import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                      import_Document.default.createText(`
-          `, false),
-                      ...this._toNodeList(_("Props")),
-                      import_Document.default.createText(`
-        `, false)
-                    ]),
-                    import_Document.default.createText(`
-        `, false),
-                    import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
-                      import_Document.default.createText(`
-          `, false),
-                      import_Document.default.createElement("table-head", {}, [
-                        ...this._toNodeList(_("Name"))
-                      ]),
-                      import_Document.default.createText(`
-          `, false),
-                      import_Document.default.createElement("table-head", {}, [
-                        ...this._toNodeList(_("Type"))
-                      ]),
-                      import_Document.default.createText(`
-          `, false),
-                      import_Document.default.createElement("table-head", {}, [
-                        ...this._toNodeList(_("Required"))
-                      ]),
-                      import_Document.default.createText(`
-          `, false),
-                      import_Document.default.createElement("table-head", {}, [
-                        ...this._toNodeList(_("Notes"))
-                      ]),
-                      import_Document.default.createText(`
-
-          `, false),
-                      import_Document.default.createElement("table-row", {}, [
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`solid`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`Boolean`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`No`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          ...this._toNodeList(_("Solid layout"))
-                        ]),
-                        import_Document.default.createText(`
           `, false)
-                      ]),
-                      import_Document.default.createText(`
-          `, false),
-                      import_Document.default.createElement("table-row", {}, [
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`outline`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`Boolean`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`No`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          ...this._toNodeList(_("Outline layout"))
-                        ]),
-                        import_Document.default.createText(`
-          `, false)
-                      ]),
-                      import_Document.default.createText(`
-          `, false),
-                      import_Document.default.createElement("table-row", {}, [
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`transparent`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`Boolean`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`No`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          ...this._toNodeList(_("Transparent layout"))
-                        ]),
-                        import_Document.default.createText(`
-          `, false)
-                      ]),
-                      import_Document.default.createText(`
-          `, false),
-                      import_Document.default.createElement("table-row", {}, [
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`padding`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`Number`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`No`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          ...this._toNodeList(_("Custom padding for the badge. Defaults to 2px 8px."))
-                        ]),
-                        import_Document.default.createText(`
-          `, false)
-                      ]),
-                      import_Document.default.createText(`
-          `, false),
-                      import_Document.default.createElement("table-row", {}, [
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`color`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`String`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`No`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          ...this._toNodeList(_("Sets a custom text color. Accepts CSS-compatible values."))
-                        ]),
-                        import_Document.default.createText(`
-          `, false)
-                      ]),
-                      import_Document.default.createText(`
-          `, false),
-                      import_Document.default.createElement("table-row", {}, [
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`curved`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`Boolean`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`No`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          ...this._toNodeList(_("Applies a subtle curve to the badge."))
-                        ]),
-                        import_Document.default.createText(`
-          `, false)
-                      ]),
-                      import_Document.default.createText(`
-          `, false),
-                      import_Document.default.createElement("table-row", {}, [
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`rounded`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`Boolean`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`No`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          ...this._toNodeList(_("Applies a rounded style to the badge."))
-                        ]),
-                        import_Document.default.createText(`
-          `, false)
-                      ]),
-                      import_Document.default.createText(`
-          `, false),
-                      import_Document.default.createElement("table-row", {}, [
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`pill`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`Boolean`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          import_Document.default.createText(`No`, false)
-                        ]),
-                        import_Document.default.createText(`
-            `, false),
-                        import_Document.default.createElement("table-col", {}, [
-                          ...this._toNodeList(_("Makes the badge fully rounded, similar to a pill shape."))
-                        ]),
-                        import_Document.default.createText(`
-          `, false)
-                      ]),
-                      import_Document.default.createText(`
-
-        `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-        `, false)
                   ]),
                   import_Document.default.createText(`
 
+          `, false),
+                  import_Document.default.createElement("a", { "name": `props` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Props")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-head", {}, [
+                      ...this._toNodeList(_("Name"))
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-head", {}, [
+                      ...this._toNodeList(_("Type"))
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-head", {}, [
+                      ...this._toNodeList(_("Required"))
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-head", {}, [
+                      ...this._toNodeList(_("Notes"))
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`outline`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Displays the badge with a white background and colored border/text"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`solid`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Displays the badge with a solid colored background (default if outline/transparent omitted)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`transparent`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Displays the badge with a transparent background and colored border/text"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`padding`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Number`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Sets custom padding in pixels (default: "2px 8px")'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`color`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Sets a custom CSS color for background (solid) or text/border (outline/transparent), e.g., "salmon", "#ff0000"'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`info`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a predefined info style (blue background)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`warning`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a predefined warning style (yellow background)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`success`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a predefined success style (green background)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`error`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a predefined error style (red background)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`muted`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a predefined muted style (gray background)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`curved`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Applies a slightly rounded border radius (4px)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`rounded`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Applies a fully rounded border radius (8px)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`pill`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Applies a pill-shaped border radius (9999px)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
 
           `, false),
                   import_Document.default.createElement("a", { "name": `types` }, []),
@@ -5925,33 +6054,32 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-          Badges have the following types:
-              `, false),
-                    import_Document.default.createElement("span", { "class": ` bg-info tx-italic p-3` }, [
+            Badges have the following predefined color types:  
+            `, false),
+                    import_Document.default.createElement("span", { "class": `bg-info tx-white tx-italic p-3` }, [
                       import_Document.default.createText(`info`, false)
                     ]),
                     import_Document.default.createText(`,  
-              `, false),
-                    import_Document.default.createElement("span", { "class": `bg-warning tx-italic p-3` }, [
+            `, false),
+                    import_Document.default.createElement("span", { "class": `bg-warning tx-black tx-italic p-3` }, [
                       import_Document.default.createText(`warning`, false)
                     ]),
                     import_Document.default.createText(`,  
-              `, false),
-                    import_Document.default.createElement("span", { "class": `bg-success tx-italic p-3` }, [
+            `, false),
+                    import_Document.default.createElement("span", { "class": `bg-success tx-white tx-italic p-3` }, [
                       import_Document.default.createText(`success`, false)
                     ]),
                     import_Document.default.createText(`,  
-              `, false),
-                    import_Document.default.createElement("span", { "class": `bg-error tx-italic p-3` }, [
+            `, false),
+                    import_Document.default.createElement("span", { "class": `bg-error tx-white tx-italic p-3` }, [
                       import_Document.default.createText(`error`, false)
                     ]),
                     import_Document.default.createText(`, and  
-              `, false),
-                    import_Document.default.createElement("span", { "class": `bg-muted tx-italic p-3` }, [
+            `, false),
+                    import_Document.default.createElement("span", { "class": `bg-muted tx-white tx-italic p-3` }, [
                       import_Document.default.createText(`muted`, false)
                     ]),
                     import_Document.default.createText(`.
@@ -5959,26 +6087,23 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-           `, false),
+              `, false),
                       import_Document.default.createElement("element-badge", { "info": true, "class": `tx-sm` }, [
                         import_Document.default.createText(`100`, false)
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
@@ -5987,114 +6112,106 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-                 `, false),
+              `, false),
                       import_Document.default.createElement("element-badge", { "warning": true, "class": `tx-sm` }, [
                         import_Document.default.createText(`200`, false)
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-              <element-badge success class="tx-sm">200</element-badge>
-            `)
+            <element-badge warning class="tx-sm">200</element-badge>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-                        `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-            `, false),
+              `, false),
                       import_Document.default.createElement("element-badge", { "success": true, "class": `tx-sm` }, [
                         import_Document.default.createText(`300`, false)
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-        
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-badge success class="tx-sm">300</element-badge>
-            `)
+          `)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("element-badge", { "error": true, "class": `tx-sm` }, [
                         import_Document.default.createText(`400`, false)
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-badge error class="tx-sm">400</element-badge>
-            `)
+          `)
                   ]),
                   import_Document.default.createText(`
-
 
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("element-badge", { "muted": true, "class": `tx-sm` }, [
                         import_Document.default.createText(`500`, false)
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-badge muted class="tx-sm">500</element-badge>
-            `)
+          `)
                   ]),
                   import_Document.default.createText(`
- 
+
           `, false),
                   import_Document.default.createElement("a", { "name": `customColor` }, []),
                   import_Document.default.createText(`
@@ -6107,11 +6224,10 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-            Badges can have custom CSS compatible colors which includes hex and color names.
+            Badges can use custom CSS-compatible colors for the background (solid) or text/border (outline/transparent).
           `, false)
                   ]),
                   import_Document.default.createText(`
@@ -6119,55 +6235,50 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-          `, false),
+              `, false),
                       import_Document.default.createElement("element-badge", { "color": `salmon`, "class": `tx-sm` }, [
                         import_Document.default.createText(`600`, false)
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-                <element-badge color="salmon" class="tx-sm">600</element-badge>
-            `)
+            <element-badge color="salmon" class="tx-sm">600</element-badge>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-
-        `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-          `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-            `, false),
+              `, false),
                       import_Document.default.createElement("element-badge", { "color": `#ffcc00`, "class": `tx-sm` }, [
                         import_Document.default.createText(`Hex Color`, false)
                       ]),
                       import_Document.default.createText(`
-          `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-        `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-        `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-          <element-badge color="#ffcc00" class="tx-sm">Hex Color</element-badge>
-        `)
+            <element-badge color="#ffcc00" class="tx-sm">Hex Color</element-badge>
+          `)
                   ]),
                   import_Document.default.createText(`
 
@@ -6183,195 +6294,176 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-            Badges can be rounded in three ways:
-              `, false),
-                    import_Document.default.createElement("span", { "class": `  tx-italic p-3` }, [
+            Badges can be rounded in three ways: `, false),
+                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`curved`, false)
                     ]),
-                    import_Document.default.createText(`,  
-              `, false),
-                    import_Document.default.createElement("span", { "class": `  tx-italic p-3` }, [
+                    import_Document.default.createText(` (4px), `, false),
+                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`rounded`, false)
                     ]),
-                    import_Document.default.createText(`,  
-              and `, false),
-                    import_Document.default.createElement("span", { "class": `  tx-italic p-3` }, [
+                    import_Document.default.createText(` (8px), or `, false),
+                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`pill`, false)
                     ]),
-                    import_Document.default.createText(`.
+                    import_Document.default.createText(` (9999px).
           `, false)
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-           `, false),
+              `, false),
                       import_Document.default.createElement("element-badge", { "info": true, "curved": true, "class": `tx-sm` }, [
                         import_Document.default.createText(`100`, false)
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-        <element-badge info curved class="tx-sm">100</element-badge>
-
-
-
-
-
-            `)
+            <element-badge info curved class="tx-sm">100</element-badge>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-                 `, false),
+              `, false),
                       import_Document.default.createElement("element-badge", { "warning": true, "rounded": true, "class": `tx-sm` }, [
                         import_Document.default.createText(`200`, false)
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-              <element-badge warning rounded class="tx-sm">200</element-badge>
-            `)
+            <element-badge warning rounded class="tx-sm">200</element-badge>
+          `)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-              `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-            `, false),
+              `, false),
                       import_Document.default.createElement("element-badge", { "success": true, "pill": true, "class": `tx-sm` }, [
                         import_Document.default.createText(`300`, false)
                       ]),
                       import_Document.default.createText(`
-              `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-        
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-badge success pill class="tx-sm">300</element-badge>
-            `)
+          `)
                   ]),
                   import_Document.default.createText(`
 
-              `, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `padding` }, []),
                   import_Document.default.createText(`
-              `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-                `, false),
+            `, false),
                     ...this._toNodeList(_("Padding")),
                     import_Document.default.createText(`
-              `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-              `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-                The padding of a badge can be adjusted using the `, false),
-                    import_Document.default.createElement("span", { "class": `  tx-italic p-3` }, [
+            The padding of a badge can be adjusted using the `, false),
+                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`padding`, false)
                     ]),
-                    import_Document.default.createText(` prop.
-              `, false)
+                    import_Document.default.createText(` prop, defaulting to 2px 8px.
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-              `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-                `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("element-badge", { "info": true, "padding": `4`, "class": `tx-sm` }, [
                         import_Document.default.createText(`Padding 4`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-              `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-              `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-                <element-badge info padding="4" class="tx-sm">Padding 4</element-badge>
-              `)
+            <element-badge info padding="4" class="tx-sm">Padding 4</element-badge>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-              `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
-                `, false),
+            `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
-                  `, false),
+              `, false),
                       import_Document.default.createElement("element-badge", { "success": true, "padding": `10`, "class": `tx-sm` }, [
                         import_Document.default.createText(`Padding 10`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-              `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-              `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-                <element-badge success padding="10" class="tx-sm">Padding 10</element-badge>
-              `)
+            <element-badge success padding="10" class="tx-sm">Padding 10</element-badge>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-                `, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `border` }, []),
                   import_Document.default.createText(`
           `, false),
@@ -6383,19 +6475,18 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
             Badges can be styled with `, false),
-                    import_Document.default.createElement("span", { "class": `  tx-italic p-3` }, [
+                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`outline`, false)
                     ]),
                     import_Document.default.createText(` or `, false),
-                    import_Document.default.createElement("span", { "class": `  tx-italic p-3` }, [
+                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`transparent`, false)
                     ]),
-                    import_Document.default.createText(` properties.
+                    import_Document.default.createText(` properties to modify their appearance.
           `, false)
                   ]),
                   import_Document.default.createText(`
@@ -6407,7 +6498,7 @@ var InkAPI = (() => {
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("element-badge", { "outline": true, "class": `tx-sm` }, [
+                      import_Document.default.createElement("element-badge", { "outline": true, "info": true, "class": `tx-sm` }, [
                         import_Document.default.createText(`Outline`, false)
                       ]),
                       import_Document.default.createText(`
@@ -6417,11 +6508,10 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-badge outline class="tx-sm">Outline</element-badge>
+            <element-badge outline info class="tx-sm">Outline</element-badge>
           `)
                   ]),
                   import_Document.default.createText(`
@@ -6433,7 +6523,7 @@ var InkAPI = (() => {
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("element-badge", { "info": true, "transparent": true, "class": `tx-sm` }, [
+                      import_Document.default.createElement("element-badge", { "transparent": true, "info": true, "class": `tx-sm` }, [
                         import_Document.default.createText(`Transparent`, false)
                       ]),
                       import_Document.default.createText(`
@@ -6443,20 +6533,15 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-badge info transparent class="tx-sm">Transparent</element-badge>
+            <element-badge transparent info class="tx-sm">Transparent</element-badge>
           `)
                   ]),
                   import_Document.default.createText(`
 
-
-
-
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),

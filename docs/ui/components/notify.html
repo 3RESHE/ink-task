@@ -158,9 +158,10 @@
             <a class="block tx-t-0" href="# Notify"> Notify</a>
             <nav class="pl-20">
                 <a class="block tx-t-1" href="#props">• Props</a>
-                <a class="block tx-t-1" href="#types">• Types</a>
-                <a class="block tx-t-1" href="#size">• Size</a>
-                <a class="block tx-t-1" href="#color">• Color</a>
+                <a class="block tx-t-1" href="#variants">• Notification Variants</a>
+                <a class="block tx-t-1" href="#postion">• Customizing Notification Position</a>
+                <a class="block tx-t-1" href="#timeout">• Custom Timeout</a>
+                <a class="block tx-t-1" href="#icons">• Notifications with Icon</a>
             </nav>
             </nav>
         </menu>
@@ -188,264 +189,278 @@
                 Props
                 </h2>
 
-                <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
-                <table-head>Name</table-head>
-                <table-head>Type</table-head>
-                <table-head>Required</table-head>
-                <table-head>Notes</table-head>
+             <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+  <table-head>Name</table-head>
+  <table-head>Type</table-head>
+  <table-head>Required</table-head>
+  <table-head>Notes</table-head>
 
-                <table-row>
-                    <table-col>top</table-col>
-                    <table-col>Boolean</table-col>
-                    <table-col>No</table-col>
-                    <table-col>Positions the notification at the top (default is bottom).</table-col>
-                </table-row>
+  <table-row>
+    <table-col>top</table-col>
+    <table-col>Boolean</table-col>
+    <table-col>No</table-col>
+    <table-col>Positions the notification at the top (default is bottom).</table-col>
+  </table-row>
 
-                <table-row>
-                    <table-col>left</table-col>
-                    <table-col>Boolean</table-col>
-                    <table-col>No</table-col>
-                    <table-col>Aligns the notification to the left (default is right).</table-col>
-                </table-row>
+  <table-row>
+    <table-col>left</table-col>
+    <table-col>Boolean</table-col>
+    <table-col>No</table-col>
+    <table-col>Aligns the notification to the left (default is right).</table-col>
+  </table-row>
 
-                <table-row>
-                    <table-col>center</table-col>
-                    <table-col>Boolean</table-col>
-                    <table-col>No</table-col>
-                    <table-col>Centers the notification horizontally.</table-col>
-                </table-row>
+  <table-row>
+    <table-col>center</table-col>
+    <table-col>Boolean</table-col>
+    <table-col>No</table-col>
+    <table-col>Centers the notification horizontally.</table-col>
+  </table-row>
 
-                <table-row>
-                    <table-col>fade</table-col>
-                    <table-col>Boolean</table-col>
-                    <table-col>No</table-col>
-                    <table-col>Enables fade transition effect.</table-col>
-                </table-row>
+  <table-row>
+    <table-col>smooth</table-col>
+    <table-col>Number</table-col>
+    <table-col>No</table-col>
+    <table-col>Controls transition smoothness (default: 10ms).</table-col>
+  </table-row>
 
-                <table-row>
-                    <table-col>smooth</table-col>
-                    <table-col>Number</table-col>
-                    <table-col>No</table-col>
-                    <table-col>Controls transition smoothness (default: 10ms).</table-col>
-                </table-row>
+  <table-row>
+    <table-col>type</table-col>
+    <table-col>String</table-col>
+    <table-col>Yes</table-col>
+    <table-col>Required for notify method. Defines the notification type: "info", "warning", "error", "success", "primary", "secondary", "muted".</table-col>
+  </table-row>
 
-                <table-row>
-                    <table-col>type</table-col>
-                    <table-col>String</table-col>
-                    <table-col>Yes</table-col>
-                    <table-col>Defines the notification type: "info", "warning", "error", "success", "primary", "secondary", "muted".</table-col>
-                </table-row>
+  <table-row>
+    <table-col>message</table-col>
+    <table-col>String</table-col>
+    <table-col>Yes</table-col>
+    <table-col>Required for notify method. Sets the notification message.</table-col>
+  </table-row>
 
-                <table-row>
-                    <table-col>message</table-col>
-                    <table-col>String</table-col>
-                    <table-col>Yes</table-col>
-                    <table-col>Sets the notification message.</table-col>
-                </table-row>
+  <table-row>
+    <table-col>timeout</table-col>
+    <table-col>Number</table-col>
+    <table-col>No</table-col>
+    <table-col>Optional for notify method. Duration before the notification disappears (default: 5000ms).</table-col>
+  </table-row>
+</layout-table>
 
-                <table-row>
-                    <table-col>timeout</table-col>
-                    <table-col>Number</table-col>
-                    <table-col>No</table-col>
-                    <table-col>Duration before the notification disappears (default: 5000ms).</table-col>
-                </table-row>
-                </layout-table>
+<a name="variants"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Notification Variants
+</h2>
 
-        <a name="variants"></a>
-        <h2 class="tx-primary tx-upper tx-30 py-20">
-          Notification Variants
-        </h2>
+<div class="mb-10">
+  Notifications can have different variants: 
+  <span class="tx-info tx-italic p-3">info</span>,
+  <span class="tx-warning tx-italic p-3">warning</span>,
+  <span class="tx-success tx-italic p-3">success</span>,
+  <span class="tx-error tx-italic p-3">error</span>,
+  <span class="tx-primary tx-italic p-3">primary</span>,
+  <span class="tx-secondary tx-italic p-3">secondary</span>,
+  <span class="tx-muted tx-italic p-3">muted</span>.
+</div>
 
-        <div class="mb-10">
-          Notifications can have different variants: 
-          <span class="tx-info tx-italic p-3">info</span>,
-          <span class="tx-warning tx-italic p-3">warning</span>,
-          <span class="tx-success tx-italic p-3">success</span>,
-          <span class="tx-error tx-italic p-3">error</span>,
-          <span class="tx-primary tx-italic p-3">primary</span>,
-          <span class="tx-secondary tx-italic p-3">secondary</span>,
-          <span class="tx-muted tx-italic p-3">muted</span>.
-        </div>
+<element-notify></element-notify>
 
-        <element-notify></element-notify>
+<div class="grid gap-10">
+  <element-button md info curved solid >
+    Show Info
+  </element-button>
 
-        <div class="grid gap-10">
-          <element-button >
-            Show Info
-          </element-button>
+  <element-button md secondary curved solid >
+    Show Secondary
+  </element-button>
 
-          <element-button >
-            Show Warning
-          </element-button>
+  <element-button md warning curved solid >
+    Show Warning
+  </element-button>
 
-          <element-button >
-            Show Success
-          </element-button>
+  <element-button md success curved solid >
+    Show Success
+  </element-button>
 
-          <element-button >
-            Show Error
-          </element-button>
-        </div>
+  <element-button md error curved solid >
+    Show Error
+  </element-button>
+
+  <element-button md muted curved solid >
+    Show Muted
+  </element-button>
+</div>
+
+<ide-code class="scroll-y-auto mb-10 mt-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+  &lt;element-button md info curved solid onclick="document.querySelector('element-notify').notify('info', 'Information alert!')"&gt;
+    Show Info
+  &lt;/element-button&gt;
+  &lt;element-notify/&gt;
+</ide-code>
+
+<a name="position"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Customizing Notification Position
+</h2>
+
+<div class="mb-10">
+  Set notifications to appear at different positions using <code>top</code>, <code>left</code>, or <code>center</code>.
+</div>
+
+<element-notify top></element-notify>
+<element-notify right></element-notify>
+<element-notify left></element-notify>
+<element-notify center></element-notify>
+
+<div class="grid gap-10">
+  <element-button md info curved solid >
+    Show Top
+  </element-button>
+
+  <element-button md info curved solid >
+    Show Right
+  </element-button>
+
+  <element-button md info curved solid >
+    Show Left
+  </element-button>
+
+  <element-button md info curved solid outline >
+    Show Center
+  </element-button>
+</div>
+
+<ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+  &lt;div class="grid gap-10"&gt;
+    &lt;element-button md info curved solid onclick="document.querySelector('element-notify[top]').notify('info', 'Notification at the top!')"&gt;
+      Show Top
+    &lt;/element-button&gt;
+    &lt;element-button md info curved solid onclick="document.querySelector('element-notify[right]').notify('info', 'Notification on the right!')"&gt;
+      Show Right
+    &lt;/element-button&gt;
+    &lt;element-button md info curved solid onclick="document.querySelector('element-notify[left]').notify('info', 'Notification on the left!')"&gt;
+      Show Left
+    &lt;/element-button&gt;
+    &lt;element-button md info curved solid outline onclick="document.querySelector('element-notify[center]').notify('info', 'Centered notification!')"&gt;
+      Show Center
+    &lt;/element-button&gt;
+  &lt;/div&gt;
+  &lt;element-notify top/&gt;
+  &lt;element-notify right/&gt;
+  &lt;element-notify left/&gt;
+  &lt;element-notify center/&gt;
+</ide-code>
+
+<a name="timeout"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Custom Timeout
+</h2>
+
+<div class="mb-10">
+  Control how long notifications stay visible using a timeout value.
+</div>
+
+<element-notify></element-notify>
+
+<div class="grid gap-10">
+  <element-button md info curved solid >
+    Show 8s Notification
+  </element-button>
+
+  <element-button md info curved solid >
+    Show 3s Notification
+  </element-button>
+</div>
+
+<ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+  &lt;element-button md info curved solid onclick="document.querySelector('element-notify').notify('info', 'This disappears in 8 seconds!', 8000)"&gt;
+    Show 8s Notification
+  &lt;/element-button&gt;
+  &lt;element-notify/&gt;
+</ide-code>
+
+<a name="dismiss"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Dismissible Notifications
+</h2>
+
+<div class="mb-10">
+  Notifications can be manually dismissed using a close button.
+</div>
+
+<element-notify></element-notify>
+
+<div class="grid gap-10">
+  <element-button md info curved solid outline >
+    Show Dismissible
+  </element-button>
+</div>
+
+<ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+  &lt;element-button md info curved solid outline onclick="document.querySelector('element-notify').notify('info', 'Click the close icon to dismiss!')"&gt;
+    Show Dismissible
+  &lt;/element-button&gt;
+  &lt;element-notify/&gt;
+</ide-code>
+
+<a name="icons"></a>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Notifications with Icons
+</h2>
+
+<div class="mb-10">
+  Notifications can include icons using <code>interface-icon</code>.
+</div>
+
+<element-notify></element-notify>
+
+<div class="grid gap-10">
+  <element-button md info curved solid >
+    Show Info Icon
+  </element-button>
+
+  <element-button md warning curved solid >
+    Show Warning Icon
+  </element-button>
+
+  <element-button md success curved solid >
+    Show Success Icon
+  </element-button>
+
+  <element-button md error curved solid >
+    Show Error Icon
+  </element-button>
+</div>
+
+<ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+  &lt;element-button md info curved solid onclick="document.querySelector('element-notify').notify('info', 'ℹ️ Info with icon!')"&gt;
+    Show Info Icon
+  &lt;/element-button&gt;
+</ide-code>
 
 
-           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-button onclick="document.querySelector('element-notify').notify('info', 'Information alert!')"&gt;
-              Show Info
-            &lt;/element-button&gt;
-            &lt;element-notify/&gt;
-          </ide-code>
+<h2 class="tx-primary tx-upper tx-30 py-20">
+  Stacked Notifications
+</h2>
 
+<div class="mb-10">
+  Trigger multiple notifications to see them stack.
+</div>
 
+<element-notify></element-notify>
 
-          <a name="position"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            Customizing Notification Position
-          </h2>
+<div class="grid gap-10">
+  <element-button md info curved solid >
+    Show Stacked Notifications
+  </element-button>
+</div>
 
-          <div class="mb-10">
-            Set notifications to appear at different positions using <code>top</code>, <code>left</code>, or <code>center</code>.
-          </div>
-
-          <element-notify top></element-notify>
-          <element-notify right></element-notify>
-          <element-notify left></element-notify>
-          <element-notify center></element-notify>
-
-          <div class="grid gap-10">
-            <element-button >
-              Show Top
-            </element-button>
-
-            <element-button >
-              Show Right
-            </element-button>
-
-            <element-button >
-              Show Left
-            </element-button>
-
-            <element-button >
-              Show Center
-            </element-button>
-          </div>
-
-           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-              &lt;div class="grid gap-10"&gt;
-                &lt;element-button onclick="document.querySelector('element-notify[top]').notify('info', 'Notification at the top!')"&gt;
-                  Show Top
-                &lt;/element-button&gt;
-
-                  &lt;element-button onclick="document.querySelector('element-notify[right]').notify('info', 'Notification at the top!')"&gt;
-                  Show Right
-                &lt;/element-button&gt;
-
-                &lt;element-button onclick="document.querySelector('element-notify[left]').notify('info', 'Notification on the left!')"&gt;
-                  Show Left
-                &lt;/element-button&gt;
-
-                &lt;element-button onclick="document.querySelector('element-notify[center]').notify('info', 'Centered notification!')"&gt;
-                  Show Center
-                &lt;/element-button&gt;
-              &lt;/div&gt;
-                &lt;element-notify top/&gt;
-                &lt;element-notify right/&gt;
-                &lt;element-notify left/&gt;
-                &lt;element-notify center/&gt;
-          </ide-code>
-
-          <a name="timeout"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            Custom Timeout
-          </h2>
-
-          <div class="mb-10">
-            Control how long notifications stay visible using a timeout value.
-          </div>
-
-          <!-- Single Notify Component -->
-          <element-notify></element-notify>
-
-          <div class="grid gap-10">
-            <element-button >
-              Show 8s Notification
-            </element-button>
-
-            <element-button >
-              Show 3s Notification
-            </element-button>
-          </div>
-
-           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-button onclick="document.querySelector('element-notify').notify('info', 'This disappears in 8 seconds!', 8000)"&gt;
-              Show 8s Notification
-            &lt;/element-button&gt;
-            &lt;element-notify/&gt;
-          </ide-code>
-
-
-          <a name="dismiss"></a>
-        <h2 class="tx-primary tx-upper tx-30 py-20">
-          Dismissible Notifications
-        </h2>
-
-        <div class="mb-10">
-          Notifications can be manually dismissed using a close button.
-        </div>
-
-        <!-- Single Notify Component -->
-        <element-notify></element-notify>
-
-        <div class="grid gap-10">
-          <element-button >
-            Show Dismissible
-          </element-button>
-        </div>
-
-           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-button onclick="document.querySelector('element-notify').notify('info', 'Click the close icon to dismiss!')"&gt;
-              Show Dismissible
-            &lt;/element-button&gt;
-            &lt;element-notify/&gt;
-          </ide-code>
-
-
-
-          <a name="icons"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            Notifications with Icons
-          </h2>
-
-          <div class="mb-10">
-            Notifications can include icons using <code>interface-icon</code>.
-          </div>
-
-          <!-- Single Notify Component -->
-          <element-notify></element-notify>
-
-          <div class="grid gap-10">
-            <element-button >
-              Show Info Icon
-            </element-button>
-
-            <element-button >
-              Show Warning Icon
-            </element-button>
-
-            <element-button >
-              Show Success Icon
-            </element-button>
-
-            <element-button >
-              Show Error Icon
-            </element-button>
-          </div>
-
-           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-button onclick="document.querySelector('element-notify').notify('info', 'ℹ️ Info with icon!')"&gt;
-              Show Info Icon
-            &lt;/element-button&gt;
-          </ide-code>
-
+<ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+  &lt;element-button md info curved solid onclick="const notify = document.querySelector('element-notify'); notify.notify('info', 'First notification!'); 
+  setTimeout(() =&gt; notify.notify('success', 'Second notification!'), 1000); 
+  setTimeout(() =&gt; notify.notify('warning', 'Third notification!'), 2000);"&gt;
+    Show Stacked Notifications
+  &lt;/element-button&gt;
+  &lt;element-notify/&gt;
+</ide-code>
 
 
 

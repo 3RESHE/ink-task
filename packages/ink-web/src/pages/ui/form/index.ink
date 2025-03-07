@@ -140,7 +140,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/checkbox.html"
+                  href="/ink/ui/field/checkbox.html"
                 >
                   Checkbox
                 </a>
@@ -151,7 +151,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/color.html"
+                  href="/ink/ui/field/color.html"
                 >
                   Color
                 </a>
@@ -176,7 +176,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/country.html"
+                  href="/ink/ui/field/country.html"
                 >
                   Country
                 </a>
@@ -201,7 +201,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/currency.html"
+                  href="/ink/ui/field/currency.html"
                 >
                   Currency
                 </a>
@@ -217,7 +217,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/date.html"
+                  href="/ink/ui/field/date.html"
                 >
                   Date
                 </a>
@@ -251,7 +251,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/editor.html"
+                  href="/ink/ui/field/editor.html"
                 >
                   Editor
                 </a>
@@ -267,7 +267,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/file.html"
+                  href="/ink/ui/field/file.html"
                 >
                   File
                 </a>
@@ -284,7 +284,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/filelist.html"
+                  href="/ink/ui/field/filelist.html"
                 >
                   Filelist
                 </a>
@@ -299,7 +299,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/input.html"
+                  href="/ink/ui/field/input.html"
                 >
                   Input
                 </a>
@@ -308,7 +308,7 @@
                 <div class="bg-t-3 h-120 flex flex-center"></div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/knob.html"
+                  href="/ink/ui/field/knob.html"
                 >
                   Knob
                 </a>
@@ -325,7 +325,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/markdown.html"
+                  href="/ink/ui/field/markdown.html"
                 >
                   Markdown
                 </a>
@@ -336,7 +336,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/mask.html"
+                  href="/ink/ui/field/mask.html"
                 >
                   Mask
                 </a>
@@ -353,7 +353,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/metadata.html"
+                  href="/ink/ui/field/metadata.html"
                 >
                   Metadata
                 </a>
@@ -371,7 +371,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/number.html"
+                  href="/ink/ui/field/number.html"
                 >
                   Number
                 </a>
@@ -386,7 +386,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/password.html"
+                  href="/ink/ui/field/password.html"
                 >
                   Password
                 </a>
@@ -412,7 +412,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/radio.html"
+                  href="/ink/ui/field/radio.html"
                 >
                   Radio
                 </a>
@@ -423,7 +423,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/range.html"
+                  href="/ink/ui/field/range.html"
                 >
                   Range
                 </a>
@@ -439,7 +439,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/rating.html"
+                  href="/ink/ui/field/rating.html"
                 >
                   Rating
                 </a>
@@ -472,7 +472,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/select.html"
+                  href="/ink/ui/field/select.html"
                 >
                   Select
                 </a>
@@ -488,7 +488,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/slug.html"
+                  href="/ink/ui/field/slug.html"
                 >
                   Slug
                 </a>
@@ -505,7 +505,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/switch.html"
+                  href="/ink/ui/field/switch.html"
                 >
                   Switch
                 </a>
@@ -519,7 +519,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/taglist.html"
+                  href="/ink/ui/field/taglist.html"
                 >
                   Taglist
                 </a>
@@ -534,7 +534,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/textarea.html"
+                  href="/ink/ui/field/textarea.html"
                 >
                   Textarea
                 </a>
@@ -550,7 +550,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/textlist.html"
+                  href="/ink/ui/field/textlist.html"
                 >
                   Textlist
                 </a>
@@ -566,7 +566,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/time.html"
+                  href="/ink/ui/field/time.html"
                 >
                   Time
                 </a>
@@ -584,7 +584,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/wysiwyg.html"
+                  href="/ink/ui/field/wysiwyg.html"
                 >
                   WYSIWYG
                 </a>

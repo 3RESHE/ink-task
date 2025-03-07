@@ -1492,8 +1492,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                 ]
               ]),
               import_Document.default.createText(`
-
-
       `, false),
               import_Document.default.createElement("aside", { "right": true }, [
                 import_Document.default.createText(`
@@ -1513,7 +1511,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#pager#` }, [
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#pager` }, [
                       ...this._toNodeList(_("Pager"))
                     ]),
                     import_Document.default.createText(`
@@ -1527,30 +1525,29 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#PaginationExample` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Pagination Example"))
+                        ...this._toNodeList(_("Basic Pagination"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomRangeAndPageSelection` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#range-radius` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Range & Page Selection"))
+                        ...this._toNodeList(_("Range & Radius"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomControlsAndStyles` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#controls` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Controls and Styles"))
+                        ...this._toNodeList(_("Navigation Controls"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#PaginationWithNoForwardOrRewind` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styling` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Pagination with No Forward or Rewind"))
+                        ...this._toNodeList(_("Styling Options"))
                       ]),
                       import_Document.default.createText(`
-              
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1563,46 +1560,37 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
       `, false)
               ]),
               import_Document.default.createText(`
-
-
-
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-      `, false),
+        `, false),
                 import_Document.default.createElement("api-docs", {}, [
                   import_Document.default.createText(`
-        `, false),
+          `, false),
                   import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
                     import_Document.default.createText(`
-          `, false),
-                    import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
-                    import_Document.default.createText(`
-      `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-
-        
-        `, false),
-                  import_Document.default.createElement("a", { "name": `pager` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_(" Pager")),
+                    import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
+
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20 ` }, [
+                  import_Document.default.createElement("a", { "name": `pager` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Pager"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
+                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Badge from '@stackpress/ink-ui/element/pager';
+              import Pager from '@stackpress/ink-ui/element/pager';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1610,762 +1598,801 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-                `, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
-                `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-                `, false),
-                    ...this._toNodeList(_("Props")),
-                    import_Document.default.createText(`
-                `, false)
+                    ...this._toNodeList(_("Props"))
                   ]),
                   import_Document.default.createText(`
-
-                `, false),
+          `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Type"))
                     ]),
                     import_Document.default.createText(`
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Required"))
                     ]),
                     import_Document.default.createText(`
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`total`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Yes`, false)
+                        import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Total number of items to paginate."))
+                        ...this._toNodeList(_("Total items to paginate (default: 0)"))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`start`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Start offset for pagination."))
+                        ...this._toNodeList(_("Starting offset (default: 0)"))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`range`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Number of items per page."))
+                        ...this._toNodeList(_("Items per page (default: 50)"))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`radius`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Determines the number of page links to show around the current page."))
+                        ...this._toNodeList(_("Pages shown around current page (default: 2)"))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`next`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Flag to show the "next" button.'))
+                        ...this._toNodeList(_('Show "next" button'))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`prev`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Flag to show the "previous" button.'))
+                        ...this._toNodeList(_('Show "previous" button'))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`rewind`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Flag to show the "rewind" button.'))
+                        ...this._toNodeList(_('Show "rewind to first" button'))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`forward`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Flag to show the "forward" button.'))
+                        ...this._toNodeList(_('Show "forward to last" button'))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`link`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom color for the pagination link."))
-                      ]),
-                      import_Document.default.createText(`
-                  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-                  `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-                    `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`control`, false)
-                      ]),
-                      import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Object`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom styles for pagination control elements."))
+                        ...this._toNodeList(_('Styles for page links (e.g., { color: "var(--primary)" })'))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`control`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Object`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Styles for navigation icons (e.g., { color: "var(--info)" })'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`border`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
+                        import_Document.default.createText(`Object`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Border color for pagination controls."))
+                        ...this._toNodeList(_('Border styles (e.g., { color: "var(--muted)" })'))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`background`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
+                        import_Document.default.createText(`Object`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Background color for pagination controls."))
+                        ...this._toNodeList(_('Background styles (e.g., { color: "var(--info)" })'))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`square`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Defines the size of pagination controls if set."))
+                        ...this._toNodeList(_("Width/height of controls/links in pixels (default: 0, no square)"))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`size`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
+                        import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Default size of the icon for pagination controls."))
+                        ...this._toNodeList(_("Custom font/icon size in pixels"))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`xs, sm, md, lg, xl, xl2, xl3, xl4, xl5`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
+                        import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Various sizes for icon (pass to icon component)."))
+                        ...this._toNodeList(_("Predefined size variants (escalating from extra-small to extra-large)"))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`color`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Default color for pagination controls."))
+                        ...this._toNodeList(_('Default text/icon color (e.g., "red", "var(--primary)")'))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`white, black, info, warning, success, error, muted, primary, secondary`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
+                        import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Color options for pagination components."))
+                        ...this._toNodeList(_("Predefined color variants"))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`page (select)`, false)
+                        import_Document.default.createText(`bold`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Bold text for current page"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`underline`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Underline page links"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`page`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Function`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Yes`, false)
+                        import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Handler function to select a page."))
+                        ...this._toNodeList(_("Callback when a page is selected (default: no-op)"))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-                `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-
-        `, false),
-                  import_Document.default.createElement("a", { "name": `PaginationExample` }, []),
+          `, false),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Pagination Example")),
-                    import_Document.default.createText(`
-            `, false)
+                    ...this._toNodeList(_("Basic Pagination"))
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Pagination allows you to control the navigation through multiple pages with customizable styles and controls. Below is an example of a fully featured pagination component.
-            `, false)
+                    ...this._toNodeList(_("A simple pager with default settings:"))
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
-                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("element-pager", { "total": 1e3, "range": 50, "start": 0, "show": 5, "next": true, "prev": true, "rewind": true, "forward": true, "white": true, "bold": true, "underline": true, "bg-info": true, "border-theme": `bd-2`, "square": 40, "select": console.log }),
-                    import_Document.default.createText(`
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-pager", { "total": 100, "range": 10, "next": true, "prev": true, "page": console.log }),
+                      import_Document.default.createText(`
             `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-pager 
-            total={1000} 
-            range={50} 
-            start={0} 
-            show={5} 
-            next
-            prev
-            rewind
-            forward
-            white
-            bold
-            underline
-            bg-info
-            border-theme="bd-2"
-            square={40}
-            select={console.log}
-            />
-            `)
+            <element-pager total={100} range={10} next prev page={console.log} />
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-         `, false),
-                  import_Document.default.createElement("a", { "name": `CustomRangeAndPageSelection` }, []),
+          `, false),
+                  import_Document.default.createElement("a", { "name": `range-radius` }, []),
                   import_Document.default.createText(`
-            `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Custom Range and Page Selection")),
-                    import_Document.default.createText(`
-            `, false)
+                    ...this._toNodeList(_("Range & Radius"))
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Customize the range of items per page and the page selection. Here is an example where the pagination starts from the 90th item, with 100 items per page and a display of 3 pages at a time.
-            `, false)
+                    ...this._toNodeList(_('Customize items per page ("range") and visible pages ("radius"):'))
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
-                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("element-pager", { "total": 500, "range": 100, "start": 90, "show": 3, "next": true, "prev": true, "rewind": true, "forward": true, "white": true, "bold": true, "underline": true, "bg-warning": true, "border-theme": `bd-2`, "square": 40, "select": console.log }),
-                    import_Document.default.createText(`
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-pager", { "total": 500, "range": 100, "radius": 1, "start": 200, "next": true, "prev": true, "page": console.log }),
+                      import_Document.default.createText(`
             `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-pager 
-            total={500} 
-            range={100} 
-            start={90} 
-            show={3} 
-            next
-            prev
-            rewind
-            forward
-            white
-            bold
-            underline
-            bg-warning
-            border-theme="bd-2"
-            square={40}
-            select={console.log}
-            />
-            `)
+            <element-pager total={500} range={100} radius={1} start={200} next prev page={console.log} />
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-            `, false),
-                  import_Document.default.createElement("a", { "name": `CustomControlsAndStyles` }, []),
+          `, false),
+                  import_Document.default.createElement("a", { "name": `controls` }, []),
                   import_Document.default.createText(`
-            `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Custom Controls and Styles")),
-                    import_Document.default.createText(`
-            `, false)
+                    ...this._toNodeList(_("Navigation Controls"))
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Pagination can have various styles for buttons like square and customizable borders. This example shows a pagination with square controls and different background colors for pagination elements.
-            `, false)
+                    ...this._toNodeList(_("Add rewind and forward buttons for full navigation:"))
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
-                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("element-pager", { "total": 500, "range": 50, "start": 0, "show": 5, "next": true, "prev": true, "rewind": true, "forward": true, "white": true, "bold": true, "underline": true, "bg-success": true, "border-theme": `bd-3`, "square": 40, "select": console.log }),
-                    import_Document.default.createText(`
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-pager", { "total": 1e3, "range": 50, "rewind": true, "forward": true, "next": true, "prev": true, "page": console.log }),
+                      import_Document.default.createText(`
             `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-pager 
-            total={500} 
-            range={50} 
-            start={0} 
-            show={5} 
-            next
-            prev
-            rewind
-            forward
-            white
-            bold
-            underline
-            bg-success
-            border-theme="bd-3"
-            square={40}
-            select={console.log}
-            />
-            `)
+            <element-pager total={1000} range={50} rewind forward next prev page={console.log} />
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-         `, false),
-                  import_Document.default.createElement("a", { "name": `PaginationWithNoForwardOrRewind` }, []),
-                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
             `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-pager", { "total": 500, "range": 50, "next": true, "prev": true, "page": console.log }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-pager total={500} range={50} next prev page={console.log} />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `styling` }, []),
+                  import_Document.default.createText(`
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Pagination with No Forward or Rewind")),
-                    import_Document.default.createText(`
-            `, false)
+                    ...this._toNodeList(_("Styling Options"))
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            You can control whether to show the forward or rewind buttons using the corresponding props. This example disables forward and rewind buttons.
-            `, false)
+                    ...this._toNodeList(_("Style the pager with colors, borders, and square shapes:"))
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
-                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("element-pager", { "total": 500, "range": 50, "start": 0, "show": 5, "next": true, "prev": true, "white": true, "bold": true, "underline": true, "bg-danger": true, "border-theme": `bd-4`, "square": 40, "select": console.log }),
-                    import_Document.default.createText(`
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-pager", { "total": 1e3, "range": 50, "next": true, "prev": true, "rewind": true, "forward": true, "link": { color: "primary" }, "background": { color: "var(--info)" }, "border": { color: "success" }, "square": 40, "bold": true, "page": console.log }),
+                      import_Document.default.createText(`
             `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-pager 
-            total={500} 
-            range={50} 
-            start={0} 
-            show={5} 
-            next
-            prev
-            white
-            bold
-            underline
-            bg-danger
-            border-theme="bd-4"
-            square={40}
-            select={console.log}
+              total={1000} 
+              range={50} 
+              next prev rewind forward 
+              link={{ color: 'var(--primary)' }} 
+              background={{ color: 'var(--info)' }} 
+              border={{ color: 'var(--muted)' }} 
+              square={40} 
+              bold 
+              page={console.log} 
             />
-            `)
+          `)
                   ]),
                   import_Document.default.createText(`
 
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
             `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-pager", { "total": 500, "range": 50, "next": true, "prev": true, "color": `var(--success)`, "underline": true, "square": 30, "page": console.log }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-pager 
+              total={500} 
+              range={50} 
+              next prev 
+              color="var(--success)" 
+              underline 
+              square={30} 
+              page={console.log} 
+            />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/components/notify.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
+                      import_Document.default.createElement("element-icon", { "name": `chevron-left`, "color": `var(--tx-1)` }),
                       import_Document.default.createText(`
               `, false),
                       ...this._toNodeList(_("Notify")),
@@ -2380,7 +2407,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ...this._toNodeList(_("Panels")),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
+                      import_Document.default.createElement("element-icon", { "name": `chevron-right`, "color": `var(--tx-1)` }),
                       import_Document.default.createText(`
             `, false)
                     ]),

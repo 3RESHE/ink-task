@@ -147,257 +147,271 @@
     </a>
   
 </nav></aside>
-
-
-        <aside right>
+      <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-            <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
             On this page
-            </h6>
-            <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Loaders"> Loaders</a>
+          </h6>
+          <nav class="tx-14 tx-lh-32">
+            <a class="block tx-t-0" href="#loaders">Loaders</a>
             <nav class="pl-20">
-                <a class="block tx-t-1" href="#props">• Props</a>
-                <a class="block tx-t-1" href="#Types">• Types</a>
-                <a class="block tx-t-1" href="#CustomSize">• Custom Size</a>
-                <a class="block tx-t-1" href="#CustomSpeed">• Custom Speed</a>
-                <a class="block tx-t-1" href="#SliceEffect">• Slice Effect</a>
-                <a class="block tx-t-1" href="#CustomThickness&BorderStyles">• Custom Thickness &amp; Border Styles</a>
+              <a class="block tx-t-1" href="#props">• Props</a>
+              <a class="block tx-t-1" href="#border-styles">• Border Styles</a>
+              <a class="block tx-t-1" href="#size">• Size</a>
+              <a class="block tx-t-1" href="#speed">• Speed</a>
+              <a class="block tx-t-1" href="#slice">• Slice</a>
+              <a class="block tx-t-1" href="#thickness">• Thickness</a>
+              <a class="block tx-t-1" href="#color">• Color</a>
             </nav>
-            </nav>
+          </nav>
         </menu>
-        </aside>
-
-
+      </aside>
       <main>
-      <api-docs>
-        <nav class="p-10 bg-t-3 sticky top-0 z-50">
-          <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
-      </nav>
+        <api-docs>
+          <nav class="p-10 bg-t-3 sticky top-0 z-50">
+            <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
+          </nav>
 
-
-        
-        <a name="Loaders"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">
-             Loaders
-          </h1>
-          <ide-app title="Editor" class="py-20 ">
-            <ide-code class="scroll-y-auto" lang="js" trim>
-              import Badge from '@stackpress/ink-ui/element/loader';
+          <a name="loaders"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Loaders</h1>
+          <ide-app title="Editor" class="py-20">
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
+              import Loader from '@stackpress/ink-ui/element/loader';
             </ide-code>
           </ide-app>
 
-      <a name="props"></a>
-      <h2 class="tx-primary tx-upper tx-30 py-20">
-        Props
-      </h2>
+          <a name="props"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
+            <table-head>Type</table-head>
+            <table-head>Required</table-head>
+            <table-head>Notes</table-head>
 
-      <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
-        <table-head>Name</table-head>
-        <table-head>Type</table-head>
-        <table-head>Required</table-head>
-        <table-head>Notes</table-head>
+            <table-row>
+              <table-col>size</table-col>
+              <table-col>Number</table-col>
+              <table-col>No</table-col>
+              <table-col>Width and height of the loader in pixels (default: 20)</table-col>
+            </table-row>
 
-        <table-row>
-          <table-col>size</table-col>
-          <table-col>Number</table-col>
-          <table-col>No</table-col>
-          <table-col>Sets the width and height of the loader (default: 20px)</table-col>
-        </table-row>
+            <table-row>
+              <table-col>slice</table-col>
+              <table-col>Number</table-col>
+              <table-col>No</table-col>
+              <table-col>Number of transparent border sides (0–3, default: 0)</table-col>
+            </table-row>
 
-        <table-row>
-          <table-col>slice</table-col>
-          <table-col>Number</table-col>
-          <table-col>No</table-col>
-          <table-col>Determines how many parts of the border are transparent (0-3)</table-col>
-        </table-row>
+            <table-row>
+              <table-col>speed</table-col>
+              <table-col>Number</table-col>
+              <table-col>No</table-col>
+              <table-col>Animation duration in milliseconds (default: 1000)</table-col>
+            </table-row>
 
-        <table-row>
-          <table-col>speed</table-col>
-          <table-col>Number</table-col>
-          <table-col>No</table-col>
-          <table-col>Sets the animation speed in milliseconds (default: 1000ms)</table-col>
-        </table-row>
+            <table-row>
+              <table-col>thickness</table-col>
+              <table-col>Number</table-col>
+              <table-col>No</table-col>
+              <table-col>Border thickness in pixels (default: 2)</table-col>
+            </table-row>
 
-        <table-row>
-          <table-col>thickness</table-col>
-          <table-col>Number</table-col>
-          <table-col>No</table-col>
-          <table-col>Sets the border thickness (default: 2px)</table-col>
-        </table-row>
+            <table-row>
+              <table-col>solid</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets border style to solid (default if no style specified)</table-col>
+            </table-row>
 
-        <table-row>
-          <table-col>solid</table-col>
-          <table-col>Boolean</table-col>
-          <table-col>No</table-col>
-          <table-col>Sets the border style to solid</table-col>
-        </table-row>
+            <table-row>
+              <table-col>dotted</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets border style to dotted</table-col>
+            </table-row>
 
-        <table-row>
-          <table-col>dotted</table-col>
-          <table-col>Boolean</table-col>
-          <table-col>No</table-col>
-          <table-col>Sets the border style to dotted</table-col>
-        </table-row>
+            <table-row>
+              <table-col>dashed</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets border style to dashed</table-col>
+            </table-row>
 
-        <table-row>
-          <table-col>dashed</table-col>
-          <table-col>Boolean</table-col>
-          <table-col>No</table-col>
-          <table-col>Sets the border style to dashed</table-col>
-        </table-row>
-      </layout-table>
+            <table-row>
+              <table-col>color</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Custom CSS color for the border (e.g., "red", "var(--primary)", default: "var(--black)")</table-col>
+            </table-row>
+          </layout-table>
 
-
-      <a name="Types"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            Types
-          </h2>
-
-          <div class="mb-10">
-            Loaders support different border styles:  
-            <span class="tx-italic p-3 b-solid">Solid</span>,  
-            <span class="tx-italic p-3 b-dotted">Dotted</span>,  
-            <span class="tx-italic p-3 b-dashed">Dashed</span>.
-          </div>
+          <a name="border-styles"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Border Styles</h2>
+          <div class="mb-10">Loaders support solid, dotted, and dashed border styles:</div>
 
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-loader solid size="40" class="tx-primary"></element-loader>
+              <element-loader solid size="40" color="var(--primary)"></element-loader>
             </div>
           </div>
-
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-loader solid size="40" class="tx-primary"&gt;&lt;/element-loader&gt;
+            &lt;element-loader solid size="40" color="var(--primary)" /&gt;
           </ide-code>
 
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-loader dotted size="40" class="tx-success"></element-loader>
+              <element-loader dotted size="40" color="var(--success)"></element-loader>
             </div>
           </div>
-
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-loader dotted size="40" class="tx-success"&gt;&lt;/element-loader&gt;
+            &lt;element-loader dotted size="40" color="var(--success)" /&gt;
           </ide-code>
 
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-loader dashed size="40" class="tx-error"></element-loader>
+              <element-loader dashed size="40" color="var(--error)"></element-loader>
             </div>
           </div>
-
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-loader dashed size="40" class="tx-error"&gt;&lt;/element-loader&gt;
+            &lt;element-loader dashed size="40" color="var(--error)" /&gt;
           </ide-code>
-            <a name="CustomSize"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            Custom Size
-          </h2>
 
-          <div class="mb-10">
-            Loaders can have custom sizes using the <code>size</code> prop.
-          </div>
+          <a name="size"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Size</h2>
+          <div class="mb-10">Adjust the loader’s size with the "size" prop:</div>
 
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-loader dotted size="60" class="tx-warning"></element-loader>
+              <element-loader solid size="20" color="var(--info)"></element-loader>
             </div>
           </div>
-
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-loader dotted size="60" class="tx-warning"&gt;&lt;/element-loader&gt;
+            &lt;element-loader solid size="20" color="var(--info)" /&gt;
           </ide-code>
-            <a name="CustomSpeed"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            Custom Speed
-          </h2>
-
-          <div class="mb-10">
-            Control the animation speed using the <code>speed</code> prop (in milliseconds).
-          </div>
 
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-loader dashed size="40" speed="500" class="tx-info"></element-loader>
+              <element-loader dotted size="60" color="var(--warning)"></element-loader>
             </div>
           </div>
-
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-loader size="40" speed="500" class="tx-info"&gt;&lt;/element-loader&gt;
+            &lt;element-loader dotted size="60" color="var(--warning)" /&gt;
           </ide-code>
-            <a name="SliceEffect"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            Slice Effect
-          </h2>
 
-          <div class="mb-10">
-            You can modify the loader by adjusting the <code>slice</code> prop (0-3).
-          </div>
+          <a name="speed"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Speed</h2>
+          <div class="mb-10">Control the animation speed with the "speed" prop (in milliseconds):</div>
 
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
             <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-loader info slice="2"></element-loader>
+              <element-loader dashed size="40" speed="500" color="var(--info)"></element-loader>
             </div>
           </div>
-
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-loader info slice="2"&gt;&lt;/element-loader&gt;
+            &lt;element-loader dashed size="40" speed="500" color="var(--info)" /&gt;
           </ide-code>
 
-
-              <a name="CustomThickness&BorderStyles"></a>
-            <h2 class="tx-primary tx-upper tx-30 py-20">
-              Custom Thickness &amp; Border Styles
-            </h2>
-
-            <div class="mb-10">
-              The <code>thickness</code> prop controls the border width, and <code>solid</code>, <code>dotted</code>, and <code>dashed</code> determine the border style.
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-loader solid size="40" speed="2000" color="var(--muted)"></element-loader>
             </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-loader solid size="40" speed="2000" color="var(--muted)" /&gt;
+          </ide-code>
 
-            <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-              <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-                <element-loader success size="5" thickness="5" dotted></element-loader>
-              </div>
+          <a name="slice"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Slice</h2>
+          <div class="mb-10">Create a sliced effect by setting "slice" from 0 to 3:</div>
+
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-loader size="40" slice="1" color="var(--primary)"></element-loader>
             </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-loader size="40" slice="1" color="var(--primary)" /&gt;
+          </ide-code>
 
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-              &lt;element-loader success size="5" thickness="5" dotted&gt;&lt;/element-loader&gt;
-            </ide-code>
-
-            <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-              <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-                <element-loader warning dashed></element-loader>
-              </div>
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-loader size="40" slice="2" color="var(--success)"></element-loader>
             </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-loader size="40" slice="2" color="var(--success)" /&gt;
+          </ide-code>
 
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-              &lt;element-loader warning dashed&gt;&lt;/element-loader&gt;
-            </ide-code>
-
-            <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-              <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-                <element-loader error dashed thickness="10" size="10" speed="1500"></element-loader>
-              </div>
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-loader size="40" slice="3" color="var(--error)"></element-loader>
             </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-loader size="40" slice="3" color="var(--error)" /&gt;
+          </ide-code>
 
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-              &lt;element-loader error dashed thickness="10" size="10" speed="1500"&gt;&lt;/element-loader&gt;
-            </ide-code>
+          <a name="thickness"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Thickness</h2>
+          <div class="mb-10">Adjust border thickness with the "thickness" prop:</div>
 
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-loader solid size="40" thickness="5" color="var(--warning)"></element-loader>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-loader solid size="40" thickness="5" color="var(--warning)" /&gt;
+          </ide-code>
 
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-loader dashed size="40" thickness="10" color="var(--info)"></element-loader>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-loader dashed size="40" thickness="10" color="var(--info)" /&gt;
+          </ide-code>
 
-                        
-          
+          <a name="color"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Color</h2>
+          <div class="mb-10">Customize the loader’s border color with the "color" prop:</div>
 
-            <nav class="flex">
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-loader solid size="40" color="red"></element-loader>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-loader solid size="40" color="red" /&gt;
+          </ide-code>
+
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-loader dotted size="40" color="#facc15"></element-loader>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-loader dotted size="40" color="#facc15" /&gt;
+          </ide-code>
+
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
+            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
+              <element-loader dashed size="40" color="var(--primary)"></element-loader>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-loader dashed size="40" color="var(--primary)" /&gt;
+          </ide-code>
+
+          <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/icon.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
+              <element-icon name="chevron-left" color="var(--tx-1)"></element-icon>
               Icons
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/notify.html">
               Notify
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              <element-icon name="chevron-right" color="var(--tx-1)"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

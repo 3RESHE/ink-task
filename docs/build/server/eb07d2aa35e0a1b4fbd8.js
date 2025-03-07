@@ -1609,631 +1609,634 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
           `, false)
                   ]),
                   import_Document.default.createText(`
-
-                `, false),
-                  import_Document.default.createElement("a", { "name": `props` }, []),
+             `, false),
+                  import_Document.default.createElement("a", { "name": `slots` }, []),
                   import_Document.default.createText(`
-                `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-                `, false),
-                    ...this._toNodeList(_("Props")),
-                    import_Document.default.createText(`
-                `, false)
+                    ...this._toNodeList(_("Slots"))
                   ]),
                   import_Document.default.createText(`
-                
-                `, false),
+          `, false),
+                  import_Document.default.createElement("p", { "class": `mb-10` }, [
+                    ...this._toNodeList(_("The <panel-layout> component uses slots for its structure. No props are required."))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Name"))
+                      ...this._toNodeList(_("Slot"))
                     ]),
                     import_Document.default.createText(`
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Type"))
+                      ...this._toNodeList(_("Tag"))
                     ]),
                     import_Document.default.createText(`
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Required"))
                     ]),
                     import_Document.default.createText(`
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`main`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`HTMLElement`, false)
+                        import_Document.default.createText(`&lt;main&gt;`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Yes`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Represents the main content panel (<main>)."))
+                        ...this._toNodeList(_("Main content area (fixed between header/footer and sidebars)"))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`head`, false)
+                        import_Document.default.createText(`header`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`HTMLElement`, false)
+                        import_Document.default.createText(`&lt;header&gt;`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Represents the header panel (<header>), if present."))
+                        ...this._toNodeList(_("Top panel, 60px height, adjusts for left sidebar"))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`foot`, false)
+                        import_Document.default.createText(`footer`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`HTMLElement`, false)
+                        import_Document.default.createText(`&lt;footer&gt;`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Represents the footer panel (<footer>), if present."))
+                        ...this._toNodeList(_("Bottom panel, 60px height, adjusts for left sidebar"))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`left`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`HTMLElement`, false)
+                        import_Document.default.createText(`&lt;aside left&gt;`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Represents the left sidebar (<aside left>), if present."))
+                        ...this._toNodeList(_("Left sidebar, 226px width, toggleable"))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
 
-                  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`right`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`HTMLElement`, false)
+                        import_Document.default.createText(`&lt;aside right&gt;`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Represents the right sidebar (<aside right>), if present."))
+                        ...this._toNodeList(_("Right sidebar, 200px width, toggleable"))
                       ]),
                       import_Document.default.createText(`
-                  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-                `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-
-
-
-
-            `, false),
+        `, false),
                   import_Document.default.createElement("a", { "name": `BasicPanelLayout` }, []),
                   import_Document.default.createText(`
-            `, false),
+        `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Basic Panel Layout")),
-                    import_Document.default.createText(`
-            `, false)
+                    ...this._toNodeList(_("Basic Panel Layout"))
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+        `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-           A simple panel layout with header, left sidebar, right sidebar, and main content in their correct positions.
-            `, false)
+                    ...this._toNodeList(_("A simple layout with a header, left sidebar, right sidebar, and main content, using absolute positioning:"))
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
-                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120` }, [
+        `, false),
+                  import_Document.default.createElement("div", { "class": `basis-half-10 lg-basis-full h-200 bg-t-3 relative` }, [
                     import_Document.default.createText(`
-              `, false),
-                    import_Document.default.createElement("div", { "class": `relative w-full h-full` }, [
+          `, false),
+                    import_Document.default.createElement("header", { "class": `absolute top-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted` }, [
                       import_Document.default.createText(`
-                <!-- Header -->
-                `, false),
-                      import_Document.default.createElement("header", { "class": `absolute top-0 left-0 right-0 h-50p b-solid b-t-1` }, [
-                        import_Document.default.createText(`
-                  `, false),
-                        import_Document.default.createElement("div", { "class": `p-5` }, [
-                          import_Document.default.createText(`Header`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false)
+            `, false),
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`Header`, false)
                       ]),
                       import_Document.default.createText(`
-
-                <!-- Left Sidebar -->
-                `, false),
-                      import_Document.default.createElement("aside", { "class": `absolute w-20p top-50p bottom-0 left-0 b-solid b-t-1` }, [
-                        import_Document.default.createText(`
-                  `, false),
-                        import_Document.default.createElement("div", { "class": `p-5` }, [
-                          import_Document.default.createText(`Left Sidebar`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false)
-                      ]),
-                      import_Document.default.createText(`
-
-                <!-- Right Sidebar -->
-                `, false),
-                      import_Document.default.createElement("aside", { "class": `absolute w-30p top-50p bottom-0 right-0 b-solid b-t-1` }, [
-                        import_Document.default.createText(`
-                  `, false),
-                        import_Document.default.createElement("div", { "class": `p-5` }, [
-                          import_Document.default.createText(`Right Sidebar`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false)
-                      ]),
-                      import_Document.default.createText(`
-
-                <!-- Main Content -->
-                `, false),
-                      import_Document.default.createElement("main", { "class": `absolute top-50p bottom-0 left-20p right-30p b-solid b-t-1` }, [
-                        import_Document.default.createText(`
-                  `, false),
-                        import_Document.default.createElement("div", { "class": `p-5` }, [
-                          import_Document.default.createText(`Main Content`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false)
+          `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-
+          `, false),
+                    import_Document.default.createElement("aside", { "class": `absolute top-50 bottom-0 left-0 w-200 bg-t-2 b-solid b-muted` }, [
+                      import_Document.default.createText(`
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-                        <div class="bg-t-3 h-120">
-              <div class="relative w-full h-full">
-                <!-- Header -->
-                <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
-                  <div class="p-5">Header</div>
-                </header>
-
-                <!-- Left Sidebar -->
-                <aside class="absolute w-20p top-50p bottom-0 left-0 b-solid b-t-1">
-                  <div class="p-5">Left Sidebar</div>
-                </aside>
-
-                <!-- Right Sidebar -->
-                <aside class="absolute w-30p top-50p bottom-0 right-0 b-solid b-t-1">
-                  <div class="p-5">Right Sidebar</div>
-                </aside>
-
-                <!-- Main Content -->
-                <main class="absolute top-50p bottom-0 left-20p right-30p b-solid b-t-1">
-                  <div class="p-5">Main Content</div>
-                </main>
-              </div>
-            </div>
-            `)
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`Left Sidebar`, false)
+                      ]),
+                      import_Document.default.createText(`
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("aside", { "class": `absolute top-50 bottom-0 right-0 w-250 bg-t-2 b-solid b-muted` }, [
+                      import_Document.default.createText(`
+            `, false),
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`Right Sidebar`, false)
+                      ]),
+                      import_Document.default.createText(`
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("main", { "class": `absolute top-50 bottom-0 left-200 right-250 bg-t-0 b-solid b-muted` }, [
+                      import_Document.default.createText(`
+            `, false),
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`Main Content`, false)
+                      ]),
+                      import_Document.default.createText(`
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+        `, false)
                   ]),
                   import_Document.default.createText(`
 
+        `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white`, "trim": true, "detab": 2 }, [
+                    ...this._toNodeList(`
+          <div class="h-200 bg-t-3 relative">
+            <header class="absolute top-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted">
+              <div class="p-10">Header</div>
+            </header>
+            <aside class="absolute top-50 bottom-0 left-0 w-200 bg-t-2 b-solid b-muted">
+              <div class="p-10">Left Sidebar</div>
+            </aside>
+            <aside class="absolute top-50 bottom-0 right-0 w-250 bg-t-2 b-solid b-muted">
+              <div class="p-10">Right Sidebar</div>
+            </aside>
+            <main class="absolute top-50 bottom-0 left-200 right-250 bg-t-0 b-solid b-muted">
+              <div class="p-10">Main Content</div>
+            </main>
+          </div>
+        `)
+                  ]),
+                  import_Document.default.createText(`
 
-                        `, false),
+        `, false),
                   import_Document.default.createElement("a", { "name": `PanelLayoutWithFooter` }, []),
                   import_Document.default.createText(`
-            `, false),
+        `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Panel Layout with Footer")),
-                    import_Document.default.createText(`
-            `, false)
+                    ...this._toNodeList(_("Panel Layout with Footer"))
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+        `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            A footer is added at the bottom of the structure.
-            `, false)
+                    ...this._toNodeList(_("Extends the basic layout by adding a footer at the bottom:"))
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
-                  import_Document.default.createElement("div", { "class": `bg-t-3 h-200` }, [
+        `, false),
+                  import_Document.default.createElement("div", { "class": `basis-half-10 lg-basis-full h-300 bg-t-3 relative` }, [
                     import_Document.default.createText(`
-              `, false),
-                    import_Document.default.createElement("div", { "class": `relative w-full h-full` }, [
+          `, false),
+                    import_Document.default.createElement("header", { "class": `absolute top-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted` }, [
                       import_Document.default.createText(`
-                <!-- Header -->
-                `, false),
-                      import_Document.default.createElement("header", { "class": `absolute top-0 left-0 right-0 h-50p b-solid b-t-1` }, [
-                        import_Document.default.createText(`
-                  `, false),
-                        import_Document.default.createElement("div", { "class": `p-5` }, [
-                          import_Document.default.createText(`Header`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false)
+            `, false),
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`Header`, false)
                       ]),
                       import_Document.default.createText(`
-
-                <!-- Left Sidebar -->
-                `, false),
-                      import_Document.default.createElement("aside", { "class": `absolute w-20p top-50p bottom-60 left-0 b-solid b-t-1` }, [
-                        import_Document.default.createText(`
-                  `, false),
-                        import_Document.default.createElement("div", { "class": `p-5` }, [
-                          import_Document.default.createText(`Left Sidebar`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false)
-                      ]),
-                      import_Document.default.createText(`
-
-                <!-- Right Sidebar -->
-                `, false),
-                      import_Document.default.createElement("aside", { "class": `absolute w-30p top-50p bottom-60 right-0 b-solid b-t-1` }, [
-                        import_Document.default.createText(`
-                  `, false),
-                        import_Document.default.createElement("div", { "class": `p-5` }, [
-                          import_Document.default.createText(`Right Sidebar`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false)
-                      ]),
-                      import_Document.default.createText(`
-
-                <!-- Main Content -->
-                `, false),
-                      import_Document.default.createElement("main", { "class": `absolute top-50p bottom-60 left-20p right-30p b-solid b-t-1` }, [
-                        import_Document.default.createText(`
-                  `, false),
-                        import_Document.default.createElement("div", { "class": `p-5` }, [
-                          import_Document.default.createText(`Main Content`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false)
-                      ]),
-                      import_Document.default.createText(`
-
-                <!-- Footer -->
-                `, false),
-                      import_Document.default.createElement("footer", { "class": `absolute bottom-0 left-0 right-0 h-60 b-solid b-t-1` }, [
-                        import_Document.default.createText(`
-                  `, false),
-                        import_Document.default.createElement("div", { "class": `p-5` }, [
-                          import_Document.default.createText(`Footer`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false)
+          `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false),
+                    import_Document.default.createElement("aside", { "class": `absolute top-50 bottom-50 left-0 w-200 bg-t-2 b-solid b-muted` }, [
+                      import_Document.default.createText(`
+            `, false),
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`Left Sidebar`, false)
+                      ]),
+                      import_Document.default.createText(`
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("aside", { "class": `absolute top-50 bottom-50 right-0 w-250 bg-t-2 b-solid b-muted` }, [
+                      import_Document.default.createText(`
+            `, false),
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`Right Sidebar`, false)
+                      ]),
+                      import_Document.default.createText(`
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("main", { "class": `absolute top-50 bottom-50 left-200 right-250 bg-t-0 b-solid b-muted` }, [
+                      import_Document.default.createText(`
+            `, false),
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`Main Content`, false)
+                      ]),
+                      import_Document.default.createText(`
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("footer", { "class": `absolute bottom-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted` }, [
+                      import_Document.default.createText(`
+            `, false),
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`Footer`, false)
+                      ]),
+                      import_Document.default.createText(`
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+        `, false)
                   ]),
                   import_Document.default.createText(`
 
-
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+        `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white`, "trim": true, "detab": 2 }, [
                     ...this._toNodeList(`
-              <div class="bg-t-3 h-200">
-                <div class="relative w-full h-full">
-                  <!-- Header -->
-                  <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
-                    <div class="p-5">Header</div>
-                  </header>
-
-                  <!-- Left Sidebar -->
-                  <aside class="absolute w-20p top-50p bottom-60 left-0 b-solid b-t-1">
-                    <div class="p-5">Left Sidebar</div>
-                  </aside>
-
-                  <!-- Right Sidebar -->
-                  <aside class="absolute w-30p top-50p bottom-60 right-0 b-solid b-t-1">
-                    <div class="p-5">Right Sidebar</div>
-                  </aside>
-
-                  <!-- Main Content -->
-                  <main class="absolute top-50p bottom-60 left-20p right-30p b-solid b-t-1">
-                    <div class="p-5">Main Content</div>
-                  </main>
-
-                  <!-- Footer -->
-                  <footer class="absolute bottom-0 left-0 right-0 h-60 b-solid b-t-1">
-                    <div class="p-5">Footer</div>
-                  </footer>
-                </div>
-              </div>
-            `)
+          <div class="h-300 bg-t-3 relative">
+            <header class="absolute top-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted">
+              <div class="p-10">Header</div>
+            </header>
+            <aside class="absolute top-50 bottom-50 left-0 w-200 bg-t-2 b-solid b-muted">
+              <div class="p-10">Left Sidebar</div>
+            </aside>
+            <aside class="absolute top-50 bottom-50 right-0 w-250 bg-t-2 b-solid b-muted">
+              <div class="p-10">Right Sidebar</div>
+            </aside>
+            <main class="absolute top-50 bottom-50 left-200 right-250 bg-t-0 b-solid b-muted">
+              <div class="p-10">Main Content</div>
+            </main>
+            <footer class="absolute bottom-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted">
+              <div class="p-10">Footer</div>
+            </footer>
+          </div>
+        `)
                   ]),
                   import_Document.default.createText(`
 
-
-            `, false),
+        `, false),
                   import_Document.default.createElement("a", { "name": `CenteredPanelLayout` }, []),
                   import_Document.default.createText(`
-            `, false),
+        `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-            `, false),
+          `, false),
                     ...this._toNodeList(_("Centered Panel Layout")),
                     import_Document.default.createText(`
-            `, false)
+        `, false)
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
+        `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-            A centered layout with only a header and main content.
-            `, false)
+          A centered layout with only a header and main content.
+        `, false)
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
+        `, false),
                   import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex items-center justify-center` }, [
                     import_Document.default.createText(`
-              `, false),
+          `, false),
                     import_Document.default.createElement("div", { "class": `relative w-80p h-80p b-solid b-t-1` }, [
                       import_Document.default.createText(`
-                <!-- Header -->
-                `, false),
+            <!-- Header -->
+            `, false),
                       import_Document.default.createElement("header", { "class": `absolute top-0 left-0 right-0 h-50p b-solid b-t-1` }, [
                         import_Document.default.createText(`
-                  `, false),
+              `, false),
                         import_Document.default.createElement("div", { "class": `p-5` }, [
                           import_Document.default.createText(`Header`, false)
                         ]),
                         import_Document.default.createText(`
-                `, false)
+            `, false)
                       ]),
                       import_Document.default.createText(`
 
-                <!-- Main Content -->
-                `, false),
+            <!-- Main Content -->
+            `, false),
                       import_Document.default.createElement("main", { "class": `absolute top-50p bottom-0 left-0 right-0 b-solid b-t-1` }, [
                         import_Document.default.createText(`
-                  `, false),
+              `, false),
                         import_Document.default.createElement("div", { "class": `p-5` }, [
                           import_Document.default.createText(`Main Content`, false)
                         ]),
                         import_Document.default.createText(`
-                `, false)
+            `, false)
                       ]),
                       import_Document.default.createText(`
-              `, false)
+          `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+        `, false)
                   ]),
                   import_Document.default.createText(`
 
 
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+      `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white`, "trim": true, "detab": 2 }, [
                     ...this._toNodeList(`
-              <div class="bg-t-3 h-120 flex items-center justify-center">
-              <div class="relative w-80p h-80p b-solid b-t-1">
-                <!-- Header -->
-                <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
-                  <div class="p-5">Header</div>
-                </header>
+        <div class="bg-t-3 h-120 flex items-center justify-center">
+          <div class="relative w-80p h-80p b-solid b-t-1">
+            <!-- Header -->
+            <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
+              <div class="p-5">Header</div>
+            </header>
 
-                <!-- Main Content -->
-                <main class="absolute top-50p bottom-0 left-0 right-0 b-solid b-t-1">
-                  <div class="p-5">Main Content</div>
-                </main>
-              </div>
-            </div>
-            `)
+            <!-- Main Content -->
+            <main class="absolute top-50p bottom-0 left-0 right-0 b-solid b-t-1">
+              <div class="p-5">Main Content</div>
+            </main>
+          </div>
+        </div>
+        `)
                   ]),
                   import_Document.default.createText(`
 
-
-            `, false),
-                  import_Document.default.createElement("a", { "name": `StickyHeader&Footer` }, []),
+        `, false),
+                  import_Document.default.createElement("a", { "name": `StickyHeaderFooter` }, []),
                   import_Document.default.createText(`
-            `, false),
+        `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-              `, false),
-                    ...this._toNodeList(_("Sticky Header & Footer")),
-                    import_Document.default.createText(`
-            `, false)
+                    ...this._toNodeList(_("Sticky Header & Footer"))
                   ]),
                   import_Document.default.createText(`
-
-            `, false),
+        `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-              A header and footer that stay visible while scrolling.
-            `, false)
+                    ...this._toNodeList(_("A layout with a sticky header and footer, and a scrollable main content area using flexbox:"))
                   ]),
                   import_Document.default.createText(`
 
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+        `, false),
+                  import_Document.default.createElement("div", { "class": `basis-half-10 lg-basis-full h-300 bg-t-3 flex flex-col` }, [
                     import_Document.default.createText(`
-              `, false),
-                    import_Document.default.createElement("div", { "class": `w-300 h-200 bg-t-3 b-solid b-1 p-2 relative flex flex-col` }, [
+          `, false),
+                    import_Document.default.createElement("header", { "class": `h-50 bg-t-1 b-solid b-muted sticky top-0 z-10` }, [
                       import_Document.default.createText(`
-                <!-- Sticky Header -->
-                `, false),
-                      import_Document.default.createElement("header", { "class": `sticky top-0 left-0 right-0 h-50 bg-white b-solid b-b-1 z-10` }, [
-                        import_Document.default.createText(`
-                  `, false),
-                        import_Document.default.createElement("div", { "class": `p-2` }, [
-                          import_Document.default.createText(`Sticky Header`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false)
+            `, false),
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`Sticky Header`, false)
                       ]),
                       import_Document.default.createText(`
-
-                <!-- Scrollable Content -->
-                `, false),
-                      import_Document.default.createElement("div", { "class": `flex-1 overflow-auto` }, [
-                        import_Document.default.createText(`
-                  `, false),
-                        import_Document.default.createElement("main", { "class": `w-full p-2` }, [
-                          import_Document.default.createText(`
-                    `, false),
-                          import_Document.default.createElement("p", {}, [
-                            import_Document.default.createText(`Main Content (Scroll Down)`, false)
-                          ]),
-                          import_Document.default.createText(`
-                    `, false),
-                          import_Document.default.createElement("div", { "class": `h-400px` }, []),
-                          import_Document.default.createText(` <!-- Ensures scrolling -->
-                  `, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false)
-                      ]),
-                      import_Document.default.createText(`
-
-                <!-- Sticky Footer -->
-                `, false),
-                      import_Document.default.createElement("footer", { "class": `sticky bottom-0 left-0 right-0 h-50 bg-white b-solid b-t-1 z-10` }, [
-                        import_Document.default.createText(`
-                  `, false),
-                        import_Document.default.createElement("div", { "class": `p-2` }, [
-                          import_Document.default.createText(`Sticky Footer`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false)
+          `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
-                  ]),
-                  import_Document.default.createText(`
-
+          `, false),
+                    import_Document.default.createElement("main", { "class": `flex-1 min-h-0 overflow-auto bg-t-0 b-solid b-muted` }, [
+                      import_Document.default.createText(`
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-              <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-                <div class="w-300 h-200 bg-t-3 b-solid b-1 p-2 relative flex flex-col">
-                  <!-- Sticky Header -->
-                  <header class="sticky top-0 left-0 right-0 h-50 bg-white b-solid b-b-1 z-10">
-                    <div class="p-2">Sticky Header</div>
-                  </header>
-
-                  <!-- Scrollable Content -->
-                  <div class="flex-1 overflow-auto">
-                    <main class="w-full p-2">
-                      <p>Main Content (Scroll Down)</p>
-                      <div class="h-400px"></div> <!-- Ensures scrolling -->
-                    </main>
-                  </div>
-
-                  <!-- Sticky Footer -->
-                  <footer class="sticky bottom-0 left-0 right-0 h-50 bg-white b-solid b-t-1 z-10">
-                    <div class="p-2">Sticky Footer</div>
-                  </footer>
-                </div>
-              </div>
-            `)
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`
+              `, false),
+                        import_Document.default.createElement("p", {}, [
+                          import_Document.default.createText(`Main Content (Scroll Down)`, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false),
+                        import_Document.default.createElement("p", {}, [
+                          import_Document.default.createText(`Additional content to demonstrate scrolling.`, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false),
+                        import_Document.default.createElement("p", {}, [
+                          import_Document.default.createText(`More content here...`, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false),
+                        import_Document.default.createElement("div", { "class": `h-400` }, []),
+                        import_Document.default.createText(`
+              `, false),
+                        import_Document.default.createElement("p", {}, [
+                          import_Document.default.createText(`End of content.`, false)
+                        ]),
+                        import_Document.default.createText(`
+            `, false)
+                      ]),
+                      import_Document.default.createText(`
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("footer", { "class": `h-50 bg-t-1 b-solid b-muted sticky bottom-0 z-10` }, [
+                      import_Document.default.createText(`
+            `, false),
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`Sticky Footer`, false)
+                      ]),
+                      import_Document.default.createText(`
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+        `, false)
                   ]),
                   import_Document.default.createText(`
 
+        `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-20 mt-300 w-full max-w-full min-w-full min-h-50 overflow-auto bg-black tx-white`, "lang": `html` }, [
+                    ...this._toNodeList(`
+        <div class="h-300 bg-t-3 flex flex-col">
+          <header class="h-50 bg-t-1 b-solid b-muted sticky top-0 z-10">
+            <div class="p-10">Sticky Header</div>
+          </header>
+          <main class="flex-1 min-h-0 overflow-auto bg-t-0 b-solid b-muted">
+            <div class="p-10">
+              <p>Main Content (Scroll Down)</p>
+              <p>Additional content to demonstrate scrolling.</p>
+              <p>More content here...</p>
+              <div class="h-400"></div>
+              <p>End of content.</p>
+            </div>
+          </main>
+          <footer class="h-50 bg-t-1 b-solid b-muted sticky bottom-0 z-10">
+            <div class="p-10">Sticky Footer</div>
+          </footer>
+        </div>
+        `)
+                  ]),
+                  import_Document.default.createText(`
 
+        `, false),
+                  import_Document.default.createElement("a", { "name": `ResponsivePanelLayout` }, []),
+                  import_Document.default.createText(`
+        `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Responsive Panel Layout"))
+                  ]),
+                  import_Document.default.createText(`
+        `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    ...this._toNodeList(_("A layout that stacks on mobile and splits into columns on larger screens using flexbox and responsive utilities:"))
+                  ]),
+                  import_Document.default.createText(`
 
+        `, false),
+                  import_Document.default.createElement("div", { "class": `basis-half-10 lg-basis-full h-300 bg-t-3 flex flex-col lg-flex-row` }, [
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("header", { "class": `h-50 bg-t-1 b-solid b-muted` }, [
+                      import_Document.default.createText(`
+            `, false),
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`Header`, false)
+                      ]),
+                      import_Document.default.createText(`
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("aside", { "class": `h-200 lg-h-auto lg-w-200 bg-t-2 b-solid b-muted` }, [
+                      import_Document.default.createText(`
+            `, false),
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`Left Sidebar`, false)
+                      ]),
+                      import_Document.default.createText(`
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("main", { "class": `flex-1 min-h-0 overflow-auto bg-t-0 b-solid b-muted` }, [
+                      import_Document.default.createText(`
+            `, false),
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`Main Content`, false)
+                      ]),
+                      import_Document.default.createText(`
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false),
+                    import_Document.default.createElement("aside", { "class": `h-200 lg-h-auto lg-w-250 bg-t-2 b-solid b-muted` }, [
+                      import_Document.default.createText(`
+            `, false),
+                      import_Document.default.createElement("div", { "class": `p-10` }, [
+                        import_Document.default.createText(`Right Sidebar`, false)
+                      ]),
+                      import_Document.default.createText(`
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+        `, false)
+                  ]),
+                  import_Document.default.createText(`
 
+        `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white`, "trim": true, "detab": 2 }, [
+                    ...this._toNodeList(`
+          <div class="h-300 bg-t-3 flex flex-col lg-flex-row">
+            <header class="h-50 bg-t-1 b-solid b-muted">
+              <div class="p-10">Header</div>
+            </header>
+            <aside class="h-200 lg-h-auto lg-w-200 bg-t-2 b-solid b-muted">
+              <div class="p-10">Left Sidebar</div>
+            </aside>
+            <main class="flex-1 min-h-0 overflow-auto bg-t-0 b-solid b-muted">
+              <div class="p-10">Main Content</div>
+            </main>
+            <aside class="h-200 lg-h-auto lg-w-250 bg-t-2 b-solid b-muted">
+              <div class="p-10">Right Sidebar</div>
+            </aside>
+          </div>
+        `)
+                  ]),
+                  import_Document.default.createText(`
 
             `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
