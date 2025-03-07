@@ -14,6 +14,8 @@
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table/row.ink" name="table-row" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table/col.ink" name="table-col" />
 <link rel="import" type="component" href="@stackpress/ink-ui/element/notify.ink" name="element-notify" />
+<link rel="import" type="component" href="@stackpress/ink-ui/form/button.ink" name="element-button"/>
+
 
 <style>
   @ink theme;
@@ -79,6 +81,7 @@
             spacing={2}
           />
       </nav>
+
         <a name="Notify"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">
             {_(' Notify')}
@@ -163,29 +166,195 @@
                 </table-row>
                 </layout-table>
 
-            
+          <a name="variants"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">
+            {_('Notification Variants')}
+          </h2>
+
+          <div class="mb-10">
+            Notifications can have different variants: 
+            <span class="tx-info tx-italic p-3">info</span>,
+            <span class="tx-warning tx-italic p-3">warning</span>,
+            <span class="tx-success tx-italic p-3">success</span>,
+            <span class="tx-error tx-italic p-3">error</span>,
+            <span class="tx-primary tx-italic p-3">primary</span>,
+            <span class="tx-secondary tx-italic p-3">secondary</span>,
+            <span class="tx-muted tx-italic p-3">muted</span>.
+          </div>
+
+          <element-notify></element-notify>
+
+          <div class="grid gap-10">
+            <element-button onclick="document.querySelector('element-notify').notify('info', 'Information alert!')">
+              Show Info
+            </element-button>
+
+            <element-button onclick="document.querySelector('element-notify').notify('warning', 'Warning alert!')">
+              Show Warning
+            </element-button>
+
+            <element-button onclick="document.querySelector('element-notify').notify('success', 'Success alert!')">
+              Show Success
+            </element-button>
+
+            <element-button onclick="document.querySelector('element-notify').notify('error', 'Error alert!')">
+              Show Error
+            </element-button>
+          </div>
+
+          <ide-code trim detab={12}>{`
+            <element-button onclick="document.querySelector('element-notify').notify('info', 'Information alert!')">
+              Show Info
+            </element-button>
+          `}</ide-code>
+
+          <a name="position"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">
+            {_('Customizing Notification Position')}
+          </h2>
+
+          <div class="mb-10">
+            Set notifications to appear at different positions using <code>top</code>, <code>left</code>, or <code>center</code>.
+          </div>
+
+          <element-notify top></element-notify>
+          <element-notify left></element-notify>
+          <element-notify center></element-notify>
+
+          <div class="grid gap-10">
+            <element-button onclick="document.querySelector('element-notify[top]').notify('info', 'Notification at the top!')">
+              Show Top
+            </element-button>
+
+            <element-button onclick="document.querySelector('element-notify[left]').notify('info', 'Notification on the left!')">
+              Show Left
+            </element-button>
+
+            <element-button onclick="document.querySelector('element-notify[center]').notify('info', 'Centered notification!')">
+              Show Center
+            </element-button>
+          </div>
+
+          <ide-code trim detab={12}>{`
+            <element-notify top></element-notify>
+            <element-notify left></element-notify>
+            <element-notify center></element-notify>
+          `}</ide-code>
+
+          <a name="smooth"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">
+            {_('Adding Smooth Transitions')}
+          </h2>
+
+          <div class="mb-10">
+            Use <code>fade</code> and <code>smooth</code> attributes to enable transition effects.
+          </div>
+
+          <element-notify fade smooth="15"></element-notify>
+
+          <div class="grid gap-10">
+            <element-button onclick="document.querySelector('element-notify[fade]').notify('info', 'Smooth fade effect!')">
+              Show Smooth
+            </element-button>
+          </div>
+
+          <ide-code trim detab={12}>{`
+            <element-notify fade smooth="15"></element-notify>
+
+            <element-button onclick="document.querySelector('element-notify[fade]').notify('info', 'Smooth fade effect!')">
+              Show Smooth
+            </element-button>
+          `}</ide-code>
+
+          <a name="timeout"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">
+            {_('Custom Timeout')}
+          </h2>
+
+          <div class="mb-10">
+            Control how long notifications stay visible using a timeout value.
+          </div>
+
+          <element-notify></element-notify>
+
+          <div class="grid gap-10">
+            <element-button onclick="document.querySelector('element-notify').notify('info', 'This disappears in 8 seconds!', 8000)">
+              Show 8s Notification
+            </element-button>
+
+            <element-button onclick="document.querySelector('element-notify').notify('info', 'Quick 3-second alert!', 3000)">
+              Show 3s Notification
+            </element-button>
+          </div>
+
+          <ide-code trim detab={12}>{`
+            <element-button onclick="document.querySelector('element-notify').notify('info', 'This disappears in 8 seconds!', 8000)">
+              Show 8s Notification
+            </element-button>
+          `}</ide-code>
+
+          <a name="dismiss"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">
+            {_('Dismissible Notifications')}
+          </h2>
+
+          <div class="mb-10">
+            Notifications can be manually dismissed using a close button.
+          </div>
+
+          <element-notify></element-notify>
+
+          <div class="grid gap-10">
+            <element-button onclick="document.querySelector('element-notify').notify('info', 'Click the close icon to dismiss!')">
+              Show Dismissible
+            </element-button>
+          </div>
+
+          <ide-code trim detab={12}>{`
+            <element-button onclick="document.querySelector('element-notify').notify('info', 'Click the close icon to dismiss!')">
+              Show Dismissible
+            </element-button>
+          `}</ide-code>
+
+          <a name="icons"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">
+            {_('Notifications with Icons')}
+          </h2>
+
+          <div class="mb-10">
+            Notifications can include icons using <code>interface-icon</code>.
+          </div>
+
+          <element-notify></element-notify>
+
+          <div class="grid gap-10">
+            <element-button onclick="document.querySelector('element-notify').notify('info', 'ℹ️ Info with icon!')">
+              Show Info Icon
+            </element-button>
+
+            <element-button onclick="document.querySelector('element-notify').notify('warning', '⚠️ Warning with icon!')">
+              Show Warning Icon
+            </element-button>
+
+            <element-button onclick="document.querySelector('element-notify').notify('success', '✅ Success with icon!')">
+              Show Success Icon
+            </element-button>
+
+            <element-button onclick="document.querySelector('element-notify').notify('error', '❌ Error with icon!')">
+              Show Error Icon
+            </element-button>
+          </div>
+
+          <ide-code trim detab={12}>{`
+            <element-button onclick="document.querySelector('element-notify').notify('info', 'ℹ️ Info with icon!')">
+              Show Info Icon
+            </element-button>
+          `}</ide-code>
 
 
-<h2 class="tx-primary tx-upper tx-30 py-20">Notification Types</h2>
 
-<div class="mb-10">
-  Notifications support different types:
-  <span class="tx-info tx-italic p-3">info</span>,
-  <span class="tx-warning tx-italic p-3">warning</span>,
-  <span class="tx-success tx-italic p-3">success</span>,
-  <span class="tx-error tx-italic p-3">error</span>.
-</div>
 
-<!-- Ink CSS Buttons triggering JavaScript notifications -->
-<div class="flex gap-10">
-  <button onclick="document.querySelector('element-notify').notify('info', 'This is an info message!')">Show Info</button>
-  <button onclick="document.querySelector('element-notify').notify('warning', 'This is a warning message!')">Show Warning</button>
-  <button onclick="document.querySelector('element-notify').notify('success', 'This is a success message!')">Show Success</button>
-  <button onclick="document.querySelector('element-notify').notify('error', 'This is an error message!')">Show Error</button>
-</div>
 
-<!-- Notification Component -->
-<element-notify></element-notify>
 
             <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/loader.html">

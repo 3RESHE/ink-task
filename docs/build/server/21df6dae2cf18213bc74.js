@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\notify.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\notify.ink
   var notify_exports = {};
   __export(notify_exports, {
     default: () => Notify_21df6dae2cf18213bc74
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\notify.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\notify.ink
   var Notify_21df6dae2cf18213bc74 = class extends import_Document2.default {
     id() {
       return "21df6dae2cf18213bc74";
@@ -1573,6 +1573,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
       `, false)
                   ]),
                   import_Document.default.createText(`
+
         `, false),
                   import_Document.default.createElement("a", { "name": `Notify` }, []),
                   import_Document.default.createText(`
@@ -1855,75 +1856,443 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-            
-
-
-`, false),
+          `, false),
+                  import_Document.default.createElement("a", { "name": `variants` }, []),
+                  import_Document.default.createText(`
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`Notification Types`, false)
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Notification Variants")),
+                    import_Document.default.createText(`
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-  Notifications support different types:
-  `, false),
+            Notifications can have different variants: 
+            `, false),
                     import_Document.default.createElement("span", { "class": `tx-info tx-italic p-3` }, [
                       import_Document.default.createText(`info`, false)
                     ]),
                     import_Document.default.createText(`,
-  `, false),
+            `, false),
                     import_Document.default.createElement("span", { "class": `tx-warning tx-italic p-3` }, [
                       import_Document.default.createText(`warning`, false)
                     ]),
                     import_Document.default.createText(`,
-  `, false),
+            `, false),
                     import_Document.default.createElement("span", { "class": `tx-success tx-italic p-3` }, [
                       import_Document.default.createText(`success`, false)
                     ]),
                     import_Document.default.createText(`,
-  `, false),
+            `, false),
                     import_Document.default.createElement("span", { "class": `tx-error tx-italic p-3` }, [
                       import_Document.default.createText(`error`, false)
                     ]),
+                    import_Document.default.createText(`,
+            `, false),
+                    import_Document.default.createElement("span", { "class": `tx-primary tx-italic p-3` }, [
+                      import_Document.default.createText(`primary`, false)
+                    ]),
+                    import_Document.default.createText(`,
+            `, false),
+                    import_Document.default.createElement("span", { "class": `tx-secondary tx-italic p-3` }, [
+                      import_Document.default.createText(`secondary`, false)
+                    ]),
+                    import_Document.default.createText(`,
+            `, false),
+                    import_Document.default.createElement("span", { "class": `tx-muted tx-italic p-3` }, [
+                      import_Document.default.createText(`muted`, false)
+                    ]),
                     import_Document.default.createText(`.
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-<!-- Ink CSS Buttons triggering JavaScript notifications -->
-`, false),
-                  import_Document.default.createElement("div", { "class": `flex gap-10` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    import_Document.default.createElement("button", { "onclick": `document.querySelector('element-notify').notify('info', 'This is an info message!')` }, [
-                      import_Document.default.createText(`Show Info`, false)
-                    ]),
-                    import_Document.default.createText(`
-  `, false),
-                    import_Document.default.createElement("button", { "onclick": `document.querySelector('element-notify').notify('warning', 'This is a warning message!')` }, [
-                      import_Document.default.createText(`Show Warning`, false)
-                    ]),
-                    import_Document.default.createText(`
-  `, false),
-                    import_Document.default.createElement("button", { "onclick": `document.querySelector('element-notify').notify('success', 'This is a success message!')` }, [
-                      import_Document.default.createText(`Show Success`, false)
-                    ]),
-                    import_Document.default.createText(`
-  `, false),
-                    import_Document.default.createElement("button", { "onclick": `document.querySelector('element-notify').notify('error', 'This is an error message!')` }, [
-                      import_Document.default.createText(`Show Error`, false)
-                    ]),
-                    import_Document.default.createText(`
-`, false)
-                  ]),
-                  import_Document.default.createText(`
-
-<!-- Notification Component -->
-`, false),
+          `, false),
                   import_Document.default.createElement("element-notify", {}, []),
                   import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `grid gap-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('info', 'Information alert!')` }, [
+                      import_Document.default.createText(`
+              Show Info
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('warning', 'Warning alert!')` }, [
+                      import_Document.default.createText(`
+              Show Warning
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('success', 'Success alert!')` }, [
+                      import_Document.default.createText(`
+              Show Success
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('error', 'Error alert!')` }, [
+                      import_Document.default.createText(`
+              Show Error
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-code", { "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-button onclick="document.querySelector('element-notify').notify('info', 'Information alert!')">
+              Show Info
+            </element-button>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `position` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Customizing Notification Position")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+            Set notifications to appear at different positions using `, false),
+                    import_Document.default.createElement("code", {}, [
+                      import_Document.default.createText(`top`, false)
+                    ]),
+                    import_Document.default.createText(`, `, false),
+                    import_Document.default.createElement("code", {}, [
+                      import_Document.default.createText(`left`, false)
+                    ]),
+                    import_Document.default.createText(`, or `, false),
+                    import_Document.default.createElement("code", {}, [
+                      import_Document.default.createText(`center`, false)
+                    ]),
+                    import_Document.default.createText(`.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("element-notify", { "top": true }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("element-notify", { "left": true }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("element-notify", { "center": true }, []),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `grid gap-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify[top]').notify('info', 'Notification at the top!')` }, [
+                      import_Document.default.createText(`
+              Show Top
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify[left]').notify('info', 'Notification on the left!')` }, [
+                      import_Document.default.createText(`
+              Show Left
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify[center]').notify('info', 'Centered notification!')` }, [
+                      import_Document.default.createText(`
+              Show Center
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-code", { "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-notify top></element-notify>
+            <element-notify left></element-notify>
+            <element-notify center></element-notify>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `smooth` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Adding Smooth Transitions")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+            Use `, false),
+                    import_Document.default.createElement("code", {}, [
+                      import_Document.default.createText(`fade`, false)
+                    ]),
+                    import_Document.default.createText(` and `, false),
+                    import_Document.default.createElement("code", {}, [
+                      import_Document.default.createText(`smooth`, false)
+                    ]),
+                    import_Document.default.createText(` attributes to enable transition effects.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("element-notify", { "fade": true, "smooth": `15` }, []),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `grid gap-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify[fade]').notify('info', 'Smooth fade effect!')` }, [
+                      import_Document.default.createText(`
+              Show Smooth
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-code", { "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-notify fade smooth="15"></element-notify>
+
+            <element-button onclick="document.querySelector('element-notify[fade]').notify('info', 'Smooth fade effect!')">
+              Show Smooth
+            </element-button>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `timeout` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Custom Timeout")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+            Control how long notifications stay visible using a timeout value.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("element-notify", {}, []),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `grid gap-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('info', 'This disappears in 8 seconds!', 8000)` }, [
+                      import_Document.default.createText(`
+              Show 8s Notification
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('info', 'Quick 3-second alert!', 3000)` }, [
+                      import_Document.default.createText(`
+              Show 3s Notification
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-code", { "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-button onclick="document.querySelector('element-notify').notify('info', 'This disappears in 8 seconds!', 8000)">
+              Show 8s Notification
+            </element-button>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `dismiss` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Dismissible Notifications")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+            Notifications can be manually dismissed using a close button.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("element-notify", {}, []),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `grid gap-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('info', 'Click the close icon to dismiss!')` }, [
+                      import_Document.default.createText(`
+              Show Dismissible
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-code", { "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-button onclick="document.querySelector('element-notify').notify('info', 'Click the close icon to dismiss!')">
+              Show Dismissible
+            </element-button>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `icons` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    ...this._toNodeList(_("Notifications with Icons")),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`
+            Notifications can include icons using `, false),
+                    import_Document.default.createElement("code", {}, [
+                      import_Document.default.createText(`interface-icon`, false)
+                    ]),
+                    import_Document.default.createText(`.
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("element-notify", {}, []),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("div", { "class": `grid gap-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('info', '\u2139\uFE0F Info with icon!')` }, [
+                      import_Document.default.createText(`
+              Show Info Icon
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('warning', '\u26A0\uFE0F Warning with icon!')` }, [
+                      import_Document.default.createText(`
+              Show Warning Icon
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('success', '\u2705 Success with icon!')` }, [
+                      import_Document.default.createText(`
+              Show Success Icon
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('error', '\u274C Error with icon!')` }, [
+                      import_Document.default.createText(`
+              Show Error Icon
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("ide-code", { "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-button onclick="document.querySelector('element-notify').notify('info', '\u2139\uFE0F Info with icon!')">
+              Show Info Icon
+            </element-button>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+
+
+
+
 
             `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
