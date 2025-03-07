@@ -6199,113 +6199,141 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
+        `, false),
                   import_Document.default.createElement("a", { "name": `variants` }, []),
                   import_Document.default.createText(`
-          `, false),
+        `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-            `, false),
+          `, false),
                     ...this._toNodeList(_("Notification Variants")),
                     import_Document.default.createText(`
-          `, false)
+        `, false)
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
+        `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-            Notifications can have different variants: 
-            `, false),
+          Notifications can have different variants: 
+          `, false),
                     import_Document.default.createElement("span", { "class": `tx-info tx-italic p-3` }, [
                       import_Document.default.createText(`info`, false)
                     ]),
                     import_Document.default.createText(`,
-            `, false),
+          `, false),
                     import_Document.default.createElement("span", { "class": `tx-warning tx-italic p-3` }, [
                       import_Document.default.createText(`warning`, false)
                     ]),
                     import_Document.default.createText(`,
-            `, false),
+          `, false),
                     import_Document.default.createElement("span", { "class": `tx-success tx-italic p-3` }, [
                       import_Document.default.createText(`success`, false)
                     ]),
                     import_Document.default.createText(`,
-            `, false),
+          `, false),
                     import_Document.default.createElement("span", { "class": `tx-error tx-italic p-3` }, [
                       import_Document.default.createText(`error`, false)
                     ]),
                     import_Document.default.createText(`,
-            `, false),
+          `, false),
                     import_Document.default.createElement("span", { "class": `tx-primary tx-italic p-3` }, [
                       import_Document.default.createText(`primary`, false)
                     ]),
                     import_Document.default.createText(`,
-            `, false),
+          `, false),
                     import_Document.default.createElement("span", { "class": `tx-secondary tx-italic p-3` }, [
                       import_Document.default.createText(`secondary`, false)
                     ]),
                     import_Document.default.createText(`,
-            `, false),
+          `, false),
                     import_Document.default.createElement("span", { "class": `tx-muted tx-italic p-3` }, [
                       import_Document.default.createText(`muted`, false)
                     ]),
                     import_Document.default.createText(`.
-          `, false)
+        `, false)
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
-                  import_Document.default.createElement("element-notify", {}, []),
+        `, false),
+                  import_Document.default.createElement("element-notify", {}),
                   import_Document.default.createText(`
 
-          `, false),
+        `, false),
                   import_Document.default.createElement("div", { "class": `grid gap-10` }, [
                     import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('info', 'Information alert!')` }, [
+          `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `
+            const notify = document.querySelector('element-notify');
+            if (notify) {
+              notify.innerHTML = ''; 
+              notify.notify('info', 'Information alert!');
+            }
+          ` }, [
                       import_Document.default.createText(`
-              Show Info
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('warning', 'Warning alert!')` }, [
-                      import_Document.default.createText(`
-              Show Warning
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('success', 'Success alert!')` }, [
-                      import_Document.default.createText(`
-              Show Success
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('error', 'Error alert!')` }, [
-                      import_Document.default.createText(`
-              Show Error
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
+            Show Info
           `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+          `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `
+            const notify = document.querySelector('element-notify');
+            if (notify) {
+              notify.innerHTML = ''; 
+              notify.notify('warning', 'Warning alert!');
+            }
+          ` }, [
+                      import_Document.default.createText(`
+            Show Warning
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+          `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `
+            const notify = document.querySelector('element-notify');
+            if (notify) {
+              notify.innerHTML = ''; 
+              notify.notify('success', 'Success alert!');
+            }
+          ` }, [
+                      import_Document.default.createText(`
+            Show Success
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+          `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `
+            const notify = document.querySelector('element-notify');
+            if (notify) {
+              notify.innerHTML = ''; 
+              notify.notify('error', 'Error alert!');
+            }
+          ` }, [
+                      import_Document.default.createText(`
+            Show Error
+          `, false)
+                    ]),
+                    import_Document.default.createText(`
+        `, false)
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true, "detab": 12 }, [
+
+           `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-button onclick="document.querySelector('element-notify').notify('info', 'Information alert!')">
               Show Info
             </element-button>
+            <element-notify/>
           `)
                   ]),
                   import_Document.default.createText(`
+
+
 
           `, false),
                   import_Document.default.createElement("a", { "name": `position` }, []),
@@ -6341,20 +6369,26 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("element-notify", { "top": true }, []),
+                  import_Document.default.createElement("element-notify", { "top": true }),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("element-notify", { "left": true }, []),
+                  import_Document.default.createElement("element-notify", { "right": true }),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("element-notify", { "center": true }, []),
+                  import_Document.default.createElement("element-notify", { "left": true }),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("element-notify", { "center": true }),
                   import_Document.default.createText(`
 
           `, false),
                   import_Document.default.createElement("div", { "class": `grid gap-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify[top]').notify('info', 'Notification at the top!')` }, [
+                    import_Document.default.createElement("element-button", { "onclick": `
+              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
+              document.querySelector('element-notify[top]').notify('info', 'Notification at the top!');
+            ` }, [
                       import_Document.default.createText(`
               Show Top
             `, false)
@@ -6362,7 +6396,21 @@ var InkAPI = (() => {
                     import_Document.default.createText(`
 
             `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify[left]').notify('info', 'Notification on the left!')` }, [
+                    import_Document.default.createElement("element-button", { "onclick": `
+              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
+              document.querySelector('element-notify[right]').notify('info', 'Notification on the right!');
+            ` }, [
+                      import_Document.default.createText(`
+              Show Right
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `
+              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
+              document.querySelector('element-notify[left]').notify('info', 'Notification on the left!');
+            ` }, [
                       import_Document.default.createText(`
               Show Left
             `, false)
@@ -6370,7 +6418,10 @@ var InkAPI = (() => {
                     import_Document.default.createText(`
 
             `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify[center]').notify('info', 'Centered notification!')` }, [
+                    import_Document.default.createElement("element-button", { "onclick": `
+              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
+              document.querySelector('element-notify[center]').notify('info', 'Centered notification!');
+            ` }, [
                       import_Document.default.createText(`
               Show Center
             `, false)
@@ -6380,71 +6431,30 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true, "detab": 12 }, [
+           `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-notify top></element-notify>
-            <element-notify left></element-notify>
-            <element-notify center></element-notify>
-          `)
-                  ]),
-                  import_Document.default.createText(`
+              <div class="grid gap-10">
+                <element-button onclick="document.querySelector('element-notify[top]').notify('info', 'Notification at the top!')">
+                  Show Top
+                </element-button>
 
-          `, false),
-                  import_Document.default.createElement("a", { "name": `smooth` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Adding Smooth Transitions")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
+                  <element-button onclick="document.querySelector('element-notify[right]').notify('info', 'Notification at the top!')">
+                  Show Right
+                </element-button>
 
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Use `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`fade`, false)
-                    ]),
-                    import_Document.default.createText(` and `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`smooth`, false)
-                    ]),
-                    import_Document.default.createText(` attributes to enable transition effects.
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
+                <element-button onclick="document.querySelector('element-notify[left]').notify('info', 'Notification on the left!')">
+                  Show Left
+                </element-button>
 
-          `, false),
-                  import_Document.default.createElement("element-notify", { "fade": true, "smooth": `15` }, []),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `grid gap-10` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify[fade]').notify('info', 'Smooth fade effect!')` }, [
-                      import_Document.default.createText(`
-              Show Smooth
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-notify fade smooth="15"></element-notify>
-
-            <element-button onclick="document.querySelector('element-notify[fade]').notify('info', 'Smooth fade effect!')">
-              Show Smooth
-            </element-button>
+                <element-button onclick="document.querySelector('element-notify[center]').notify('info', 'Centered notification!')">
+                  Show Center
+                </element-button>
+              </div>
+                <element-notify top/>
+                <element-notify right/>
+                <element-notify left/>
+                <element-notify center/>
           `)
                   ]),
                   import_Document.default.createText(`
@@ -6470,6 +6480,7 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
+          <!-- Single Notify Component -->
           `, false),
                   import_Document.default.createElement("element-notify", {}, []),
                   import_Document.default.createText(`
@@ -6478,7 +6489,13 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `grid gap-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('info', 'This disappears in 8 seconds!', 8000)` }, [
+                    import_Document.default.createElement("element-button", { "onclick": `
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = ''; 
+                notify.notify('info', 'This disappears in 8 seconds!', 8000);
+              }
+            ` }, [
                       import_Document.default.createText(`
               Show 8s Notification
             `, false)
@@ -6486,7 +6503,13 @@ var InkAPI = (() => {
                     import_Document.default.createText(`
 
             `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('info', 'Quick 3-second alert!', 3000)` }, [
+                    import_Document.default.createElement("element-button", { "onclick": `
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = ''; 
+                notify.notify('info', 'Quick 3-second alert!', 3000);
+              }
+            ` }, [
                       import_Document.default.createText(`
               Show 3s Notification
             `, false)
@@ -6496,64 +6519,76 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true, "detab": 12 }, [
+           `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-button onclick="document.querySelector('element-notify').notify('info', 'This disappears in 8 seconds!', 8000)">
               Show 8s Notification
             </element-button>
+            <element-notify/>
           `)
                   ]),
                   import_Document.default.createText(`
+
 
           `, false),
                   import_Document.default.createElement("a", { "name": `dismiss` }, []),
                   import_Document.default.createText(`
-          `, false),
+        `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     import_Document.default.createText(`
-            `, false),
+          `, false),
                     ...this._toNodeList(_("Dismissible Notifications")),
                     import_Document.default.createText(`
-          `, false)
+        `, false)
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
+        `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-            Notifications can be manually dismissed using a close button.
-          `, false)
+          Notifications can be manually dismissed using a close button.
+        `, false)
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
+        <!-- Single Notify Component -->
+        `, false),
                   import_Document.default.createElement("element-notify", {}, []),
                   import_Document.default.createText(`
 
-          `, false),
+        `, false),
                   import_Document.default.createElement("div", { "class": `grid gap-10` }, [
                     import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('info', 'Click the close icon to dismiss!')` }, [
+          `, false),
+                    import_Document.default.createElement("element-button", { "onclick": `
+            const notify = document.querySelector('element-notify');
+            if (notify) {
+              notify.innerHTML = ''; 
+              notify.notify('info', 'Click the close icon to dismiss!');
+            }
+          ` }, [
                       import_Document.default.createText(`
-              Show Dismissible
-            `, false)
+            Show Dismissible
+          `, false)
                     ]),
                     import_Document.default.createText(`
-          `, false)
+        `, false)
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true, "detab": 12 }, [
+           `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-button onclick="document.querySelector('element-notify').notify('info', 'Click the close icon to dismiss!')">
               Show Dismissible
             </element-button>
+            <element-notify/>
           `)
                   ]),
                   import_Document.default.createText(`
+
+
 
           `, false),
                   import_Document.default.createElement("a", { "name": `icons` }, []),
@@ -6580,6 +6615,7 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
+          <!-- Single Notify Component -->
           `, false),
                   import_Document.default.createElement("element-notify", {}, []),
                   import_Document.default.createText(`
@@ -6588,7 +6624,13 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `grid gap-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('info', '\u2139\uFE0F Info with icon!')` }, [
+                    import_Document.default.createElement("element-button", { "onclick": `
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = ''; 
+                notify.notify('info', '\u2139\uFE0F Info with icon!');
+              }
+            ` }, [
                       import_Document.default.createText(`
               Show Info Icon
             `, false)
@@ -6596,7 +6638,13 @@ var InkAPI = (() => {
                     import_Document.default.createText(`
 
             `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('warning', '\u26A0\uFE0F Warning with icon!')` }, [
+                    import_Document.default.createElement("element-button", { "onclick": `
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = ''; 
+                notify.notify('warning', '\u26A0\uFE0F Warning with icon!');
+              }
+            ` }, [
                       import_Document.default.createText(`
               Show Warning Icon
             `, false)
@@ -6604,7 +6652,13 @@ var InkAPI = (() => {
                     import_Document.default.createText(`
 
             `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('success', '\u2705 Success with icon!')` }, [
+                    import_Document.default.createElement("element-button", { "onclick": `
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = ''; 
+                notify.notify('success', '\u2705 Success with icon!');
+              }
+            ` }, [
                       import_Document.default.createText(`
               Show Success Icon
             `, false)
@@ -6612,7 +6666,13 @@ var InkAPI = (() => {
                     import_Document.default.createText(`
 
             `, false),
-                    import_Document.default.createElement("element-button", { "onclick": `document.querySelector('element-notify').notify('error', '\u274C Error with icon!')` }, [
+                    import_Document.default.createElement("element-button", { "onclick": `
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = ''; 
+                notify.notify('error', '\u274C Error with icon!');
+              }
+            ` }, [
                       import_Document.default.createText(`
               Show Error Icon
             `, false)
@@ -6622,8 +6682,8 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          `, false),
-                  import_Document.default.createElement("ide-code", { "trim": true, "detab": 12 }, [
+           `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <element-button onclick="document.querySelector('element-notify').notify('info', '\u2139\uFE0F Info with icon!')">
               Show Info Icon
@@ -6631,6 +6691,9 @@ var InkAPI = (() => {
           `)
                   ]),
                   import_Document.default.createText(`
+
+
+
 
 
 

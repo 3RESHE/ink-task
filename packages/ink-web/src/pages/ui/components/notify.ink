@@ -166,47 +166,75 @@
                 </table-row>
                 </layout-table>
 
-          <a name="variants"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Notification Variants')}
-          </h2>
+        <a name="variants"></a>
+        <h2 class="tx-primary tx-upper tx-30 py-20">
+          {_('Notification Variants')}
+        </h2>
 
-          <div class="mb-10">
-            Notifications can have different variants: 
-            <span class="tx-info tx-italic p-3">info</span>,
-            <span class="tx-warning tx-italic p-3">warning</span>,
-            <span class="tx-success tx-italic p-3">success</span>,
-            <span class="tx-error tx-italic p-3">error</span>,
-            <span class="tx-primary tx-italic p-3">primary</span>,
-            <span class="tx-secondary tx-italic p-3">secondary</span>,
-            <span class="tx-muted tx-italic p-3">muted</span>.
-          </div>
+        <div class="mb-10">
+          Notifications can have different variants: 
+          <span class="tx-info tx-italic p-3">info</span>,
+          <span class="tx-warning tx-italic p-3">warning</span>,
+          <span class="tx-success tx-italic p-3">success</span>,
+          <span class="tx-error tx-italic p-3">error</span>,
+          <span class="tx-primary tx-italic p-3">primary</span>,
+          <span class="tx-secondary tx-italic p-3">secondary</span>,
+          <span class="tx-muted tx-italic p-3">muted</span>.
+        </div>
 
-          <element-notify></element-notify>
+        <element-notify/>
 
-          <div class="grid gap-10">
+        <div class="grid gap-10">
+          <element-button onclick="
+            const notify = document.querySelector('element-notify');
+            if (notify) {
+              notify.innerHTML = ''; 
+              notify.notify('info', 'Information alert!');
+            }
+          ">
+            Show Info
+          </element-button>
+
+          <element-button onclick="
+            const notify = document.querySelector('element-notify');
+            if (notify) {
+              notify.innerHTML = ''; 
+              notify.notify('warning', 'Warning alert!');
+            }
+          ">
+            Show Warning
+          </element-button>
+
+          <element-button onclick="
+            const notify = document.querySelector('element-notify');
+            if (notify) {
+              notify.innerHTML = ''; 
+              notify.notify('success', 'Success alert!');
+            }
+          ">
+            Show Success
+          </element-button>
+
+          <element-button onclick="
+            const notify = document.querySelector('element-notify');
+            if (notify) {
+              notify.innerHTML = ''; 
+              notify.notify('error', 'Error alert!');
+            }
+          ">
+            Show Error
+          </element-button>
+        </div>
+
+
+           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-button onclick="document.querySelector('element-notify').notify('info', 'Information alert!')">
               Show Info
             </element-button>
-
-            <element-button onclick="document.querySelector('element-notify').notify('warning', 'Warning alert!')">
-              Show Warning
-            </element-button>
-
-            <element-button onclick="document.querySelector('element-notify').notify('success', 'Success alert!')">
-              Show Success
-            </element-button>
-
-            <element-button onclick="document.querySelector('element-notify').notify('error', 'Error alert!')">
-              Show Error
-            </element-button>
-          </div>
-
-          <ide-code trim detab={12}>{`
-            <element-button onclick="document.querySelector('element-notify').notify('info', 'Information alert!')">
-              Show Info
-            </element-button>
+            <element-notify/>
           `}</ide-code>
+
+
 
           <a name="position"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">
@@ -217,53 +245,63 @@
             Set notifications to appear at different positions using <code>top</code>, <code>left</code>, or <code>center</code>.
           </div>
 
-          <element-notify top></element-notify>
-          <element-notify left></element-notify>
-          <element-notify center></element-notify>
+          <element-notify top/>
+          <element-notify right/>
+          <element-notify left/>
+          <element-notify center/>
 
           <div class="grid gap-10">
-            <element-button onclick="document.querySelector('element-notify[top]').notify('info', 'Notification at the top!')">
+            <element-button onclick="
+              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
+              document.querySelector('element-notify[top]').notify('info', 'Notification at the top!');
+            ">
               Show Top
             </element-button>
 
-            <element-button onclick="document.querySelector('element-notify[left]').notify('info', 'Notification on the left!')">
+            <element-button onclick="
+              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
+              document.querySelector('element-notify[right]').notify('info', 'Notification on the right!');
+            ">
+              Show Right
+            </element-button>
+
+            <element-button onclick="
+              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
+              document.querySelector('element-notify[left]').notify('info', 'Notification on the left!');
+            ">
               Show Left
             </element-button>
 
-            <element-button onclick="document.querySelector('element-notify[center]').notify('info', 'Centered notification!')">
+            <element-button onclick="
+              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
+              document.querySelector('element-notify[center]').notify('info', 'Centered notification!');
+            ">
               Show Center
             </element-button>
           </div>
 
-          <ide-code trim detab={12}>{`
-            <element-notify top></element-notify>
-            <element-notify left></element-notify>
-            <element-notify center></element-notify>
-          `}</ide-code>
+           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
+              <div class="grid gap-10">
+                <element-button onclick="document.querySelector('element-notify[top]').notify('info', 'Notification at the top!')">
+                  Show Top
+                </element-button>
 
-          <a name="smooth"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Adding Smooth Transitions')}
-          </h2>
+                  <element-button onclick="document.querySelector('element-notify[right]').notify('info', 'Notification at the top!')">
+                  Show Right
+                </element-button>
 
-          <div class="mb-10">
-            Use <code>fade</code> and <code>smooth</code> attributes to enable transition effects.
-          </div>
+                <element-button onclick="document.querySelector('element-notify[left]').notify('info', 'Notification on the left!')">
+                  Show Left
+                </element-button>
 
-          <element-notify fade smooth="15"></element-notify>
-
-          <div class="grid gap-10">
-            <element-button onclick="document.querySelector('element-notify[fade]').notify('info', 'Smooth fade effect!')">
-              Show Smooth
-            </element-button>
-          </div>
-
-          <ide-code trim detab={12}>{`
-            <element-notify fade smooth="15"></element-notify>
-
-            <element-button onclick="document.querySelector('element-notify[fade]').notify('info', 'Smooth fade effect!')">
-              Show Smooth
-            </element-button>
+                <element-button onclick="document.querySelector('element-notify[center]').notify('info', 'Centered notification!')">
+                  Show Center
+                </element-button>
+              </div>
+                <element-notify top/>
+                <element-notify right/>
+                <element-notify left/>
+                <element-notify center/>
           `}</ide-code>
 
           <a name="timeout"></a>
@@ -275,46 +313,71 @@
             Control how long notifications stay visible using a timeout value.
           </div>
 
+          <!-- Single Notify Component -->
           <element-notify></element-notify>
 
           <div class="grid gap-10">
-            <element-button onclick="document.querySelector('element-notify').notify('info', 'This disappears in 8 seconds!', 8000)">
+            <element-button onclick="
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = ''; 
+                notify.notify('info', 'This disappears in 8 seconds!', 8000);
+              }
+            ">
               Show 8s Notification
             </element-button>
 
-            <element-button onclick="document.querySelector('element-notify').notify('info', 'Quick 3-second alert!', 3000)">
+            <element-button onclick="
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = ''; 
+                notify.notify('info', 'Quick 3-second alert!', 3000);
+              }
+            ">
               Show 3s Notification
             </element-button>
           </div>
 
-          <ide-code trim detab={12}>{`
+           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-button onclick="document.querySelector('element-notify').notify('info', 'This disappears in 8 seconds!', 8000)">
               Show 8s Notification
             </element-button>
+            <element-notify/>
           `}</ide-code>
+
 
           <a name="dismiss"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Dismissible Notifications')}
-          </h2>
+        <h2 class="tx-primary tx-upper tx-30 py-20">
+          {_('Dismissible Notifications')}
+        </h2>
 
-          <div class="mb-10">
-            Notifications can be manually dismissed using a close button.
-          </div>
+        <div class="mb-10">
+          Notifications can be manually dismissed using a close button.
+        </div>
 
-          <element-notify></element-notify>
+        <!-- Single Notify Component -->
+        <element-notify></element-notify>
 
-          <div class="grid gap-10">
+        <div class="grid gap-10">
+          <element-button onclick="
+            const notify = document.querySelector('element-notify');
+            if (notify) {
+              notify.innerHTML = ''; 
+              notify.notify('info', 'Click the close icon to dismiss!');
+            }
+          ">
+            Show Dismissible
+          </element-button>
+        </div>
+
+           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-button onclick="document.querySelector('element-notify').notify('info', 'Click the close icon to dismiss!')">
               Show Dismissible
             </element-button>
-          </div>
-
-          <ide-code trim detab={12}>{`
-            <element-button onclick="document.querySelector('element-notify').notify('info', 'Click the close icon to dismiss!')">
-              Show Dismissible
-            </element-button>
+            <element-notify/>
           `}</ide-code>
+
+
 
           <a name="icons"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">
@@ -325,31 +388,59 @@
             Notifications can include icons using <code>interface-icon</code>.
           </div>
 
+          <!-- Single Notify Component -->
           <element-notify></element-notify>
 
           <div class="grid gap-10">
-            <element-button onclick="document.querySelector('element-notify').notify('info', 'ℹ️ Info with icon!')">
+            <element-button onclick="
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = ''; 
+                notify.notify('info', 'ℹ️ Info with icon!');
+              }
+            ">
               Show Info Icon
             </element-button>
 
-            <element-button onclick="document.querySelector('element-notify').notify('warning', '⚠️ Warning with icon!')">
+            <element-button onclick="
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = ''; 
+                notify.notify('warning', '⚠️ Warning with icon!');
+              }
+            ">
               Show Warning Icon
             </element-button>
 
-            <element-button onclick="document.querySelector('element-notify').notify('success', '✅ Success with icon!')">
+            <element-button onclick="
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = ''; 
+                notify.notify('success', '✅ Success with icon!');
+              }
+            ">
               Show Success Icon
             </element-button>
 
-            <element-button onclick="document.querySelector('element-notify').notify('error', '❌ Error with icon!')">
+            <element-button onclick="
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = ''; 
+                notify.notify('error', '❌ Error with icon!');
+              }
+            ">
               Show Error Icon
             </element-button>
           </div>
 
-          <ide-code trim detab={12}>{`
+           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <element-button onclick="document.querySelector('element-notify').notify('info', 'ℹ️ Info with icon!')">
               Show Info Icon
             </element-button>
           `}</ide-code>
+
+
+
 
 
 
