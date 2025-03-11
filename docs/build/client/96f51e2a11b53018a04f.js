@@ -5590,12 +5590,6 @@ var InkAPI = (() => {
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#disabledColor` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Disabled Color"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#requiredColor` }, [
                         import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Required Color"))
@@ -5641,7 +5635,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
+                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full mw-full bg-black tx-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
               import Color from '@stackpress/ink-ui/field/color';
             `, false)
@@ -5945,10 +5939,10 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `basis-calc-third-10 lg-basis-calc-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex align-center justify-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-color", { "name": `color` }),
@@ -5960,7 +5954,7 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black tx-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
             <field-color name="color" />
           `)
@@ -5982,10 +5976,10 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `basis-calc-third-10 lg-basis-calc-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex align-center justify-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-color", { "name": `color`, "value": `#ff0000` }),
@@ -5997,46 +5991,9 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black tx-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
             <field-color name="color" value="#ff0000" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Disabled Color -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `disabledColor` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Disabled Color"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A disabled color picker and text input."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-color", { "name": `color`, "value": `#00ff00`, "disabled": true }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <field-color name="color" value="#00ff00" disabled />
           `)
                   ]),
                   import_Document.default.createText(`
@@ -6056,10 +6013,10 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `basis-calc-third-10 lg-basis-calc-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex align-center justify-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-color", { "name": `color`, "required": true, "class": `w-200` }),
@@ -6071,7 +6028,7 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black tx-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
             <field-color name="color" required class="w-200" />
           `)
@@ -6083,7 +6040,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/form/checkbox.html` }, [
+                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/field/checkbox.html` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),

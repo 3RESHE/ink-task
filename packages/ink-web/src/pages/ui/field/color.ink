@@ -58,7 +58,6 @@
               <a class="block tx-t-1" href="#props">• {_('Props')}</a>
               <a class="block tx-t-1" href="#basicColor">• {_('Basic Color')}</a>
               <a class="block tx-t-1" href="#colorWithValue">• {_('Color with Value')}</a>
-              <a class="block tx-t-1" href="#disabledColor">• {_('Disabled Color')}</a>
               <a class="block tx-t-1" href="#requiredColor">• {_('Required Color')}</a>
             </nav>
           </nav>
@@ -81,7 +80,7 @@
           <a name="Color"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">{_('Color')}</h1>
           <ide-app title="Editor" class="py-20">
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
+            <ide-code class="scroll-y-auto mb-10 w-full mw-full bg-black tx-white" lang="js" trim>
               import Color from '@stackpress/ink-ui/field/color';
             </ide-code>
           </ide-app>
@@ -169,12 +168,12 @@
           <a name="basicColor"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Basic Color')}</h2>
           <div class="mb-10">{_('A simple color picker with a text input.')}</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
+            <div class="bg-t-3 h-120 flex align-center justify-center">
               <field-color name="color" />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim detab={4}>{`
             <field-color name="color" />
           `}</ide-code>
 
@@ -182,44 +181,31 @@
           <a name="colorWithValue"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Color with Value')}</h2>
           <div class="mb-10">{_('A color picker with an initial value.')}</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
+            <div class="bg-t-3 h-120 flex align-center justify-center">
               <field-color name="color" value="#ff0000" />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim detab={4}>{`
             <field-color name="color" value="#ff0000" />
-          `}</ide-code>
-
-          <!-- Disabled Color -->
-          <a name="disabledColor"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Disabled Color')}</h2>
-          <div class="mb-10">{_('A disabled color picker and text input.')}</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <field-color name="color" value="#00ff00" disabled />
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
-            <field-color name="color" value="#00ff00" disabled />
           `}</ide-code>
 
           <!-- Required Color -->
           <a name="requiredColor"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Required Color')}</h2>
           <div class="mb-10">{_('A color field marked as required for form validation.')}</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
+            <div class="bg-t-3 h-120 flex align-center justify-center">
               <field-color name="color" required class="w-200" />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim detab={4}>{`
             <field-color name="color" required class="w-200" />
           `}</ide-code>
 
           <!-- Navigation -->
           <nav class="flex">
-            <a class="tx-primary py-40" href="/ink/ui/form/checkbox.html">
+            <a class="tx-primary py-40" href="/ink/ui/field/checkbox.html">
               <element-icon name="chevron-left" theme="tx-1" />
               {_('Checkbox')}
             </a>

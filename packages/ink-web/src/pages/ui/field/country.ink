@@ -81,7 +81,7 @@
           <a name="Country"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">{_('Country')}</h1>
           <ide-app title="Editor" class="py-20">
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
+            <ide-code class="scroll-y-auto mb-10 w-full mw-full bg-black tx-white" lang="js" trim>
               import Country from '@stackpress/ink-ui/field/country';
             </ide-code>
           </ide-app>
@@ -141,12 +141,12 @@
           <a name="basicCountry"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Basic Country')}</h2>
           <div class="mb-10">{_('A simple country selector with default placeholder.')}</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
+            <div class="bg-t-3 h-120 flex align-center justify-center">
               <field-country name="country" class="relative z-1" />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim detab={4}>{`
             <field-country name="country" class="relative z-1" />
           `}</ide-code>
 
@@ -154,12 +154,12 @@
           <a name="countryWithValue"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Country with Value')}</h2>
           <div class="mb-10">{_('A country selector with an initial selected value.')}</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
+            <div class="bg-t-3 h-120 flex align-center justify-center">
               <field-country name="country" value="US" class="relative z-1" />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim detab={4}>{`
             <field-country name="country" value="US" class="relative z-1" />
           `}</ide-code>
 
@@ -167,12 +167,12 @@
           <a name="customPlaceholder"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Custom Placeholder')}</h2>
           <div class="mb-10">{_('A country selector with a custom placeholder text.')}</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
+            <div class="bg-t-3 h-120 flex align-center justify-center">
               <field-country name="country" placeholder="Choose a Country" class="relative z-1" />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim detab={4}>{`
             <field-country name="country" placeholder="Choose a Country" class="relative z-1" />
           `}</ide-code>
 
@@ -180,12 +180,12 @@
           <a name="styledCountry"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Styled Country')}</h2>
           <div class="mb-10">{_('A country selector with custom width and styling.')}</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
+            <div class="bg-t-3 h-120 flex align-center justify-center">
               <field-country name="country" value="CA" class="w-200 relative z-1" style="border-color: var(--primary);" />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim detab={4}>{`
             <field-country name="country" value="CA" class="w-200 relative z-1" style="border-color: var(--primary);" />
           `}</ide-code>
 

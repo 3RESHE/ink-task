@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ink UI - Web Components Meets Atomic Styles.</title>
+  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
+  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@stackpress" />
+  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
+  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
+  <link rel="favicon" href="/ink/favicon.ico" />
+  <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="/ink/styles/global.css" />
+  <link rel="stylesheet" type="text/css" href="/ink/build/client/c39572bc4f28c1103455.css" /><script data-template type="text/json">{"props":{"title":"Ink Documentation"},"env":{"PUBLIC_ENV":"development","BUILD_ID":"c39572bc4f28c1103455"}}</script>
+  <script src="/ink/build/client/c39572bc4f28c1103455.js"></script>
+  
+    <script src="/dev.js"></script>
+  
+</head>
+  <body class="light bg-t-0 tx-t-1 tx-arial">
+    <panel-layout>
+      <header><menu class="flex flex-center-y px-20 py-15 m-0 bg-t-1">
+  
+    <i class="fas fa-fw fa-bars cursor-pointer py-5 pr-10 none md-inline-block tx-t-1" ></i>
+    <div class="flex-grow"></div>
+  
+  <nav class="flex flex-center-y">
+    <a class="tx-primary" href="/ink/docs/index.html">Docs</a>
+    <a class="tx-t-1 tx-5xl ml-10" href="https://github.com/stackpress/ink" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <a class="bg-h-cb3837 pill tx-t-1 tx-lg ml-5 p-5 tx-center" href="https://www.npmjs.com/package/@stackpress/ink" target="_blank">
+      <i class="fab fa-npm tx-white"></i>
+    </a>
+  </nav>
+</menu></header>
+      <aside left><header class="flex flex-center-y bg-t-2 py-15 pr-5 pl-10">
+  <a href="/ink">
+    <img class="h-26 mr-10" src="/ink/ink-icon.png" alt="Ink Logo" />
+  </a>
+  <h3 class="flex-grow m-0 tx-upper">
+    <a class="tx-primary" href="/ink">Ink</a>
+  </h3>
+  <i class="fas fa-fw fa-chevron-left cursor-pointer none md-inline-block" ></i>
+</header>
+<nav class="bg-t-1 scroll-auto h-calc-full-60">
+  <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-0 pt-20 pb-10 pl-10 tx-upper">
+    Introduction
+  </h6>
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/index.html">
+      Documentation
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/getting-started.html">
+      Getting Started
+    </a>
+  
+
+  <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper">
+    Features
+  </h6>
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/markup-syntax.html">
+      Markup Syntax
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/state-management.html">
+      State Management
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/component-strategy.html">
+      Component Strategy
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/compiler-api.html">
+      Compiler API
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/client-api.html">
+      Client API
+    </a>
+  
+
+  <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper">
+    Usage
+  </h6>
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/template-engine.html">
+      Template Engine
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/single-page.html">
+      Single Page App
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/static-site.html">
+      Static Site Generator
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/component-publisher.html">
+      Component Publisher
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/developer-tools.html">
+      Developer Tools
+    </a>
+  
+
+
+    <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper">
+    UI
+  </h6>
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/ui/index.html">
+      Components
+    </a>
+  
+  
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/ui/form/index.html">
+      Form
+    </a>
+  
+
+  
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+      Formats
+    </a>
+  
+</nav></aside>
+      <aside right>
+        <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
+            On this page
+          </h6>
+          <nav class="tx-14 tx-lh-32">
+            <a class="block tx-t-0" href="#Taglist">Taglist</a>
+            <nav class="pl-20">
+              <a class="block tx-t-1" href="#props">• Props</a>
+              <a class="block tx-t-1" href="#basicTaglist">• Basic Taglist Input</a>
+              <a class="block tx-t-1" href="#themedTaglist">• Themed Taglist Input</a>
+              <a class="block tx-t-1" href="#styledTaglist">• Styled Taglist Input</a>
+              <a class="block tx-t-1" href="#errorTaglist">• Error-Themed Taglist with Custom Color</a>
+              <a class="block tx-t-1" href="#mutedTaglist">• Muted Taglist with String Input</a>
+              <a class="block tx-t-1" href="#secondaryTaglist">• Secondary Taglist with Extensive Styling</a>
+            </nav>
+          </nav>
+        </menu>
+      </aside>
+      <main>
+        <api-docs>
+          <nav class="p-10 bg-t-3 sticky top-0 z-50">
+            <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
+          </nav>
+
+          <a name="Taglist"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Taglist</h1>
+          <ide-app title="Taglist" class="py-20">
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
+              import Taglist from '@stackpress/ink-ui/field/taglist';
+            </ide-code>
+          </ide-app>
+
+          <!-- Props Section -->
+          <a name="props"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
+          <p class="mb-20">The `&lt;field-taglist&gt;` component provides a tag input field for managing tags. Below are its props:</p>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
+            <table-head>Property</table-head>
+            <table-head>Type</table-head>
+            <table-head>Required</table-head>
+            <table-head>Description</table-head>
+
+            <table-row>
+              <table-col>name</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Name attribute for form submission (generates hidden inputs per tag).</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>value</table-col>
+              <table-col>Array/String</table-col>
+              <table-col>No</table-col>
+              <table-col>Initial tags as an array or comma-separated string (default: `[]`).</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>placeholder</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Placeholder text for the input field.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>disabled</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Disables the taglist input.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>readonly</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Makes the taglist read-only.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>required</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Marks the taglist as required.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>info</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets info color for tags.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>warning</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets warning color for tags (default true).</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>success</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets success color for tags.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>error</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets error color for tags.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>muted</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets muted color for tags.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>primary</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets primary color for tags.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>secondary</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets secondary color for tags.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>color</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Custom color for tags (e.g., "#ff4444"; overrides other color props).</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>change</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Custom handler for change events on the input, receiving the event.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>update</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Callback with the updated tag list (array) after add/remove.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>class</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>CSS classes for the host element (use Ink utilities).</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>style</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Inline styles (prefer Ink utilities instead).</table-col>
+            </table-row>
+          </layout-table>
+
+          <!-- Basic Taglist Input -->
+          <a name="basicTaglist"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Taglist Input</h2>
+          <div class="mb-10">A basic taglist input with default warning color.</div>
+          <div class="basis-third lg-basis-half md-basis-full mb-20">
+            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+              <field-taglist name="tags"  warning></field-taglist>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="js" trim >
+            &lt;field-taglist name="tags" value={["tag1", "tag2"]} warning /&gt;
+          </ide-code>
+
+          <!-- Themed Taglist Input -->
+          <a name="themedTaglist"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Themed Taglist Input</h2>
+          <div class="mb-10">A themed taglist input with success color and placeholder.</div>
+          <div class="basis-third lg-basis-half md-basis-full mb-20">
+            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+              <field-taglist name="skills" placeholder="Add skills..." success value="coding,design"></field-taglist>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="js" trim >
+            &lt;field-taglist 
+              name="skills" 
+              placeholder="Add skills..." 
+              success 
+              value="coding,design"
+            /&gt;
+          </ide-code>
+
+          <!-- Styled Taglist Input -->
+          <a name="styledTaglist"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Taglist Input</h2>
+          <div class="mb-10">A styled taglist input with primary color, custom styling, and hover effects.</div>
+          <div class="basis-third lg-basis-half md-basis-full mb-20">
+            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+              <field-taglist name="categories" primary placeholder="Enter categories..."  class="w-300 b-solid b-t-2 c-5 tx-lg bg-white transition-300 hover:b-primary hover:shadow-0-2-8-t-3" style="cursor: text;"  ></field-taglist>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="js" trim >
+            &lt;field-taglist 
+              name="categories" 
+              primary
+              placeholder="Enter categories..." 
+              value={["tech", "news"]} 
+              class="w-300 b-solid b-t-2 c-5 tx-lg bg-white transition-300 hover:b-primary hover:shadow-0-2-8-t-3" 
+              style="cursor: text;"
+              change={(e) =&gt; console.log('Change event:', e.target.value)} 
+              update={(value) =&gt; console.log('Updated tags:', value)} 
+            /&gt;
+          </ide-code>
+
+          <!-- Error-Themed Taglist with Custom Color -->
+          <a name="errorTaglist"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Error-Themed Taglist with Custom Color</h2>
+          <div class="mb-10">A taglist with error theme overridden by a custom color.</div>
+          <div class="basis-third lg-basis-half md-basis-full mb-20">
+            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+              <field-taglist name="errors" placeholder="Add error tags..." error color="#ff4444"  ></field-taglist>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="js" trim >
+            &lt;field-taglist 
+              name="errors" 
+              placeholder="Add error tags..." 
+              error 
+              color="#ff4444" 
+              value={["bug", "crash"]} 
+              update={(value) =&gt; console.log('Updated tags:', value)}
+            /&gt;
+          </ide-code>
+
+          <!-- Muted Taglist with String Input -->
+          <a name="mutedTaglist"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Muted Taglist with String Input</h2>
+          <div class="mb-10">A taglist with muted color theme using a comma-separated string input.</div>
+          <div class="basis-third lg-basis-half md-basis-full mb-20">
+            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+              <field-taglist name="labels" placeholder="Add labels..." muted value="urgent,pending,review" class="w-250" ></field-taglist>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="js" trim >
+            &lt;field-taglist 
+              name="labels" 
+              placeholder="Add labels..." 
+              muted 
+              value="urgent,pending,review" 
+              class="w-250"
+              update={(value) =&gt; console.log('Updated tags:', value)}
+            /&gt;
+          </ide-code>
+
+          <!-- Secondary Taglist with Extensive Styling -->
+          <a name="secondaryTaglist"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Secondary Taglist with Extensive Styling</h2>
+          <div class="mb-10">A taglist with secondary color, extensive styling, and disabled state.</div>
+          <div class="basis-third lg-basis-half md-basis-full mb-20">
+            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+              <field-taglist name="topics" secondary placeholder="Add topics..."  disabled class="w-300 p-5 b-solid b-t-2 c-5 tx-lg tx-muted bg-t-0 transition-300" style="cursor: not-allowed;" ></field-taglist>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="js" trim >
+            &lt;field-taglist 
+              name="topics" 
+              secondary 
+              placeholder="Add topics..." 
+              value={["ai", "ml", "data"]} 
+              disabled 
+              class="w-300 p-5 b-solid b-t-2 c-5 tx-lg tx-muted bg-t-0 transition-300" 
+              style="cursor: not-allowed;"
+              update={(value) =&gt; console.log('Updated tags:', value)}
+            /&gt;
+          </ide-code>
+
+          <!-- Navigation -->
+          <nav class="flex">
+            <a class="tx-primary py-40" href="/ink/ui/field/switch.html">
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>
+              Switch
+            </a>
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/textarea.html">
+              Textarea
+              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+            </a>
+          </nav>
+          <footer class="foot"></footer>
+        </api-docs>
+      </main>
+    </panel-layout>
+  </body>
+</html>

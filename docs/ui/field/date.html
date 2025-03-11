@@ -276,7 +276,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">Basic Date (name)</h2>
           <div class="mb-10">A simple date picker with a form name.</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-date name="date"></field-date>
             </div>
           </div>
@@ -289,7 +289,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">Date with Value</h2>
           <div class="mb-10">A date picker with an initial value.</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-date name="date" value="2025-03-07"></field-date>
             </div>
           </div>
@@ -302,7 +302,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">Disabled Date</h2>
           <div class="mb-10">A disabled date picker with a value.</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-date name="date" value="2025-03-07" disabled></field-date>
             </div>
           </div>
@@ -315,7 +315,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">Readonly Date</h2>
           <div class="mb-10">A read-only date picker with a value.</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-date name="date" value="2025-03-07" readonly></field-date>
             </div>
           </div>
@@ -328,7 +328,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">Required Date</h2>
           <div class="mb-10">A date picker marked as required.</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-date name="date" required></field-date>
             </div>
           </div>
@@ -341,7 +341,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">Autocomplete Date</h2>
           <div class="mb-10">A date picker with autocomplete disabled.</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-date name="date" autocomplete="off"></field-date>
             </div>
           </div>
@@ -354,7 +354,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">Pattern Date</h2>
           <div class="mb-10">A date picker with a pattern (though less effective for type="date").</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-date name="date" pattern="d{4}-d{2}-d{2}"></field-date>
             </div>
           </div>
@@ -367,7 +367,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">Date with Change</h2>
           <div class="mb-10">A date picker with a custom change handler.</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-date name="date" ></field-date>
             </div>
           </div>
@@ -383,7 +383,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">Date with Update</h2>
           <div class="mb-10">A date picker with an update callback.</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-date name="date" ></field-date>
             </div>
           </div>
@@ -398,22 +398,29 @@
           <a name="styledDate"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Styled Date (class, style)</h2>
           <div class="mb-10">A styled date picker with custom class and inline styles.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <field-date name="date" value="2025-03-07" class="w-200 b-solid b-primary" style="padding: 5px;"></field-date>
+          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full py-20">
+            <div class="bg-t-0 h-200 flex align-center justify-center rounded-10 shadow-2 b-solid b-t-2 transition-all duration-300 hover:shadow-4 hover:bg-t-1">
+              <field-date name="date" value="2025-03-07" class="w-250 relative z-1 bg-white rounded-5 tx-t-1 p-10 tx-16 b-solid b-primary" style="border-width: 2px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--primary-dark)'; this.style.boxShadow='0 2px 8px var(--t-3)'" onmouseout="this.style.borderColor='var(--primary)'; this.style.boxShadow='none'"></field-date>
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-date name="date" value="2025-03-07" class="w-200 b-solid b-primary" style="padding: 5px;" /&gt;
+          <ide-code class="scroll-y-auto mb-20 w-full mw-full bg-black tx-white rounded-5 p-15 tx-14 tx-lh-20 shadow-1" trim >
+            &lt;field-date 
+              name="date" 
+              value="2025-03-07" 
+              class="w-250 relative z-1 bg-white rounded-5 tx-t-1 p-10 tx-16 b-solid b-primary" 
+              style="border-width: 2px; transition: all 0.3s ease;" 
+              onmouseover="this.style.borderColor='var(--primary-dark)'; this.style.boxShadow='0 2px 8px var(--t-3)'" 
+              onmouseout="this.style.borderColor='var(--primary)'; this.style.boxShadow='none'" 
+            /&gt;
           </ide-code>
 
           <!-- Navigation -->
           <nav class="flex">
-            <a class="tx-primary py-40" href="/ink/ui/form/currency.html">
+            <a class="tx-primary py-40" href="/ink/ui/field/currency.html">
               <element-icon name="chevron-left" theme="tx-1"></element-icon>
               Currency
             </a>
-            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/form/datetime.html">
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/datetime.html">
               Datetime
               <element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>

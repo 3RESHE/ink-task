@@ -6179,7 +6179,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-date", { "name": `date` }),
@@ -6216,7 +6216,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-date", { "name": `date`, "value": `2025-03-07` }),
@@ -6253,7 +6253,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-date", { "name": `date`, "value": `2025-03-07`, "disabled": true }),
@@ -6290,7 +6290,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-date", { "name": `date`, "value": `2025-03-07`, "readonly": true }),
@@ -6327,7 +6327,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-date", { "name": `date`, "required": true }),
@@ -6364,7 +6364,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-date", { "name": `date`, "autocomplete": `off` }),
@@ -6401,7 +6401,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-date", { "name": `date`, "pattern": `d{4}-d{2}-d{2}` }),
@@ -6438,7 +6438,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-date", { "name": `date`, "change": handleChange }),
@@ -6478,7 +6478,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-date", { "name": `date`, "update": handleUpdate }),
@@ -6515,13 +6515,13 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `basis-calc-third-10 lg-basis-calc-half-10 md-basis-full py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-0 h-200 flex align-center justify-center rounded-10 shadow-2 b-solid b-t-2 transition-all duration-300 hover:shadow-4 hover:bg-t-1` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("field-date", { "name": `date`, "value": `2025-03-07`, "class": `w-200 b-solid b-primary`, "style": `padding: 5px;` }),
+                      import_Document.default.createElement("field-date", { "name": `date`, "value": `2025-03-07`, "class": `w-250 relative z-1 bg-white rounded-5 tx-t-1 p-10 tx-16 b-solid b-primary`, "style": `border-width: 2px; transition: all 0.3s ease;`, "onmouseover": `this.style.borderColor='var(--primary-dark)'; this.style.boxShadow='0 2px 8px var(--t-3)'`, "onmouseout": `this.style.borderColor='var(--primary)'; this.style.boxShadow='none'` }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6530,9 +6530,16 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-20 w-full mw-full bg-black tx-white rounded-5 p-15 tx-14 tx-lh-20 shadow-1`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-            <field-date name="date" value="2025-03-07" class="w-200 b-solid b-primary" style="padding: 5px;" />
+            <field-date 
+              name="date" 
+              value="2025-03-07" 
+              class="w-250 relative z-1 bg-white rounded-5 tx-t-1 p-10 tx-16 b-solid b-primary" 
+              style="border-width: 2px; transition: all 0.3s ease;" 
+              onmouseover="this.style.borderColor='var(--primary-dark)'; this.style.boxShadow='0 2px 8px var(--t-3)'" 
+              onmouseout="this.style.borderColor='var(--primary)'; this.style.boxShadow='none'" 
+            />
           `)
                   ]),
                   import_Document.default.createText(`
@@ -6542,7 +6549,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/form/currency.html` }, [
+                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/field/currency.html` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
@@ -6554,7 +6561,7 @@ var InkAPI = (() => {
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/form/datetime.html` }, [
+                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/field/datetime.html` }, [
                       import_Document.default.createText(`
               `, false),
                       ...this._toNodeList(_("Datetime")),

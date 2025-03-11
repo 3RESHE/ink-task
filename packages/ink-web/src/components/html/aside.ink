@@ -154,11 +154,11 @@
   </if>
 
   <if true={url === '/docs/client-api.html'}>
-    <a class="block tx-info py-10 pl-10 tx-bold" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 tx-bold" href="/ink/ui/format/index.html">
       {_('Formats')}
     </a>
   <else />
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       {_('Formats')}
     </a>
   </if>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ink UI - Web Components Meets Atomic Styles.</title>
+  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
+  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@stackpress" />
+  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
+  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
+  <link rel="favicon" href="/ink/favicon.ico" />
+  <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="/ink/styles/global.css" />
+  <link rel="stylesheet" type="text/css" href="/ink/build/client/a342097dc6355bb9c81e.css" /><script data-template type="text/json">{"props":{"title":"Ink Documentation"},"env":{"PUBLIC_ENV":"development","BUILD_ID":"a342097dc6355bb9c81e"}}</script>
+  <script src="/ink/build/client/a342097dc6355bb9c81e.js"></script>
+  
+    <script src="/dev.js"></script>
+  
+</head>
+  <body class="light bg-t-0 tx-t-1 tx-arial">
+    <panel-layout>
+      <header><menu class="flex flex-center-y px-20 py-15 m-0 bg-t-1">
+  
+    <i class="fas fa-fw fa-bars cursor-pointer py-5 pr-10 none md-inline-block tx-t-1" ></i>
+    <div class="flex-grow"></div>
+  
+  <nav class="flex flex-center-y">
+    <a class="tx-primary" href="/ink/docs/index.html">Docs</a>
+    <a class="tx-t-1 tx-5xl ml-10" href="https://github.com/stackpress/ink" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <a class="bg-h-cb3837 pill tx-t-1 tx-lg ml-5 p-5 tx-center" href="https://www.npmjs.com/package/@stackpress/ink" target="_blank">
+      <i class="fab fa-npm tx-white"></i>
+    </a>
+  </nav>
+</menu></header>
+      <aside left><header class="flex flex-center-y bg-t-2 py-15 pr-5 pl-10">
+  <a href="/ink">
+    <img class="h-26 mr-10" src="/ink/ink-icon.png" alt="Ink Logo" />
+  </a>
+  <h3 class="flex-grow m-0 tx-upper">
+    <a class="tx-primary" href="/ink">Ink</a>
+  </h3>
+  <i class="fas fa-fw fa-chevron-left cursor-pointer none md-inline-block" ></i>
+</header>
+<nav class="bg-t-1 scroll-auto h-calc-full-60">
+  <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-0 pt-20 pb-10 pl-10 tx-upper">
+    Introduction
+  </h6>
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/index.html">
+      Documentation
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/getting-started.html">
+      Getting Started
+    </a>
+  
+
+  <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper">
+    Features
+  </h6>
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/markup-syntax.html">
+      Markup Syntax
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/state-management.html">
+      State Management
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/component-strategy.html">
+      Component Strategy
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/compiler-api.html">
+      Compiler API
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/client-api.html">
+      Client API
+    </a>
+  
+
+  <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper">
+    Usage
+  </h6>
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/template-engine.html">
+      Template Engine
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/single-page.html">
+      Single Page App
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/static-site.html">
+      Static Site Generator
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/component-publisher.html">
+      Component Publisher
+    </a>
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/docs/developer-tools.html">
+      Developer Tools
+    </a>
+  
+
+
+    <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper">
+    UI
+  </h6>
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/ui/index.html">
+      Components
+    </a>
+  
+  
+  
+  
+    <a class="block tx-info py-10 pl-10" href="/ink/ui/form/index.html">
+      Form
+    </a>
+  
+
+  
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+      Formats
+    </a>
+  
+</nav></aside>
+      <aside right>
+        <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
+            On this page
+          </h6>
+          <nav class="tx-14 tx-lh-32">
+            <a class="block tx-t-0" href="#Textarea">Textarea</a>
+            <nav class="pl-20">
+              <a class="block tx-t-1" href="#props">• Props</a>
+              <a class="block tx-t-1" href="#basicTextarea">• Basic Textarea Input</a>
+              <a class="block tx-t-1" href="#readonlyTextarea">• Readonly Textarea Input</a>
+              <a class="block tx-t-1" href="#styledTextarea">• Styled Textarea Input</a>
+              <a class="block tx-t-1" href="#disabledTextarea">• Disabled Textarea Input</a>
+              <a class="block tx-t-1" href="#requiredTextarea">• Required Textarea Input</a>
+              <a class="block tx-t-1" href="#customTextarea">• Custom Styled Textarea Input</a>
+              <a class="block tx-t-1" href="#themedTextarea">• Themed Textarea Input</a>
+              <a class="block tx-t-1" href="#compactTextarea">• Compact Textarea Input</a>
+              <a class="block tx-t-1" href="#largeTextarea">• Large Textarea with Overflow</a>
+            </nav>
+          </nav>
+        </menu>
+      </aside>
+      <main>
+        <api-docs>
+          <nav class="p-10 bg-t-3 sticky top-0 z-50">
+            <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
+          </nav>
+
+          <a name="Textarea"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Textarea</h1>
+          <ide-app title="Textarea" class="py-20">
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
+              import Textarea from '@stackpress/ink-ui/field/textarea';
+            </ide-code>
+          </ide-app>
+
+          <!-- Props Section -->
+          <a name="props"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
+          <p class="mb-20">The `&lt;field-textarea&gt;` component provides a textarea input for multi-line text. Below are its props:</p>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
+            <table-head>Property</table-head>
+            <table-head>Type</table-head>
+            <table-head>Required</table-head>
+            <table-head>Description</table-head>
+
+            <table-row>
+              <table-col>name</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Name attribute for form submission.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>value</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Initial value of the textarea (can also be set via inner content).</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>placeholder</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Placeholder text for the textarea.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>disabled</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Disables the textarea.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>readonly</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Makes the textarea read-only.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>required</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Marks the textarea as required.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>rows</table-col>
+              <table-col>Number</table-col>
+              <table-col>No</table-col>
+              <table-col>Number of visible rows in the textarea (default: 2).</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>change</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Custom handler for change events, receiving the event.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>update</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Callback with the updated value.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>class</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>CSS classes for the host element (use Ink utilities).</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>style</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Inline styles (prefer Ink utilities instead).</table-col>
+            </table-row>
+          </layout-table>
+
+          <!-- Basic Textarea Input -->
+          <a name="basicTextarea"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Textarea Input</h2>
+          <div class="mb-10">A basic textarea input with a placeholder and initial value.</div>
+          <div class="basis-third lg-basis-half md-basis-full mb-20">
+            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+              <field-textarea name="description" value="Initial description text." placeholder="Enter your description..." ></field-textarea>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
+            &lt;field-textarea 
+              name="description" 
+              value="Initial description text." 
+              placeholder="Enter your description..." 
+              rows={3} 
+            /&gt;
+          </ide-code>
+
+          <!-- Readonly Textarea Input -->
+          <a name="readonlyTextarea"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Readonly Textarea Input</h2>
+          <div class="mb-10">A readonly textarea input with pre-filled content.</div>
+          <div class="basis-third lg-basis-half md-basis-full mb-20">
+            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+              <field-textarea readonly  ></field-textarea>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
+            &lt;field-textarea 
+              readonly 
+              rows={4} 
+              value="This is a readonly textarea.
+You cannot edit this content."
+            /&gt;
+          </ide-code>
+
+          <!-- Styled Textarea Input -->
+          <a name="styledTextarea"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Textarea Input</h2>
+          <div class="mb-10">A styled textarea input with custom styling, hover effects, and event handlers.</div>
+          <div class="basis-third lg-basis-half md-basis-full mb-20">
+            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+              <field-textarea name="notes" placeholder="Add your notes..."  class="w-300 p-5 b-solid b-t-2 c-5 tx-lg tx-t-1 bg-white transition-300 hover:b-primary hover:shadow-0-2-8-t-3" style="cursor: text;"  ></field-textarea>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
+            &lt;field-textarea 
+              name="notes" 
+              placeholder="Add your notes..." 
+              rows={5} 
+              class="w-300 p-5 b-solid b-t-2 c-5 tx-lg tx-t-1 bg-white transition-300 hover:b-primary hover:shadow-0-2-8-t-3" 
+              style="cursor: text;"
+              change={(e) =&gt; console.log('Change event:', e.target.value)}
+              update={(value) =&gt; console.log('Updated value:', value)}
+            /&gt;
+          </ide-code>
+
+          <!-- Disabled Textarea Input -->
+          <a name="disabledTextarea"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Disabled Textarea Input</h2>
+          <div class="mb-10">A disabled textarea input with pre-filled content and cursor styling.</div>
+          <div class="basis-third-10 lg-basis-half-10 md-basis-full mb-20">
+            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+              <field-textarea disabled  class="w-300 tx-muted cursor-not-allowed">
+                This textarea is disabled.
+                You cannot interact with it.
+              </field-textarea>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
+            &lt;field-textarea 
+                disabled 
+                rows={3} 
+                class="w-300 tx-muted cursor-not-allowed"
+            &gt;
+                This textarea is disabled.
+                You cannot interact with it.
+            &lt;/field-textarea&gt;
+          </ide-code>
+
+          <!-- Required Textarea Input -->
+          <a name="requiredTextarea"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Required Textarea Input</h2>
+          <div class="mb-10">A required textarea input with minimal rows and simple styling.</div>
+          <div class="basis-third lg-basis-half md-basis-full mb-20">
+            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+              <field-textarea name="feedback" placeholder="Your feedback is required..." required  class="w-250 p-3 b-solid b-error c-4" ></field-textarea>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
+            &lt;field-textarea 
+              name="feedback" 
+              placeholder="Your feedback is required..." 
+              required 
+              rows={2} 
+              class="w-250 p-3 b-solid b-error c-4" 
+              update={(value) =&gt; console.log('Updated value:', value)}
+            /&gt;
+          </ide-code>
+
+          <!-- Custom Styled Textarea Input -->
+          <a name="customTextarea"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Styled Textarea Input</h2>
+          <div class="mb-10">A custom styled textarea with large rows, hover effects, and event feedback.</div>
+          <div class="basis-third lg-basis-half md-basis-full mb-20">
+            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+              <field-textarea name="journal" placeholder="Write your journal entry..."  class="w-400 p-6 b-dashed b-t-3 c-8 tx-md tx-t-2 bg-t-1 shadow-0-2-8-t-3 resize-none transition-300 hover:b-primary" style="cursor: text;"  ></field-textarea>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
+            &lt;field-textarea 
+              name="journal" 
+              placeholder="Write your journal entry..." 
+              rows={10} 
+              class="w-400 p-6 b-dashed b-t-3 c-8 tx-md tx-t-2 bg-t-1 shadow-0-2-8-t-3 resize-none transition-300 hover:b-primary" 
+              style="cursor: text;"
+              change={(e) =&gt; console.log('Change event:', e.target.value)}
+              update={(value) =&gt; console.log('Updated value:', value)}
+            /&gt;
+          </ide-code>
+
+          <!-- Themed Textarea Input -->
+          <a name="themedTextarea"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Themed Textarea Input</h2>
+          <div class="mb-10">A themed textarea with a muted background and italic text.</div>
+          <div class="basis-third lg-basis-half md-basis-full mb-20">
+            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+              <field-textarea name="comments" placeholder="Add your comments..."  class="w-350 p-4 bg-muted tx-italic b-solid b-t-1 c-6" style="cursor: text;" ></field-textarea>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
+            &lt;field-textarea 
+              name="comments" 
+              placeholder="Add your comments..." 
+              rows={4} 
+              class="w-350 p-4 bg-muted tx-italic b-solid b-t-1 c-6" 
+              style="cursor: text;"
+              update={(value) =&gt; console.log('Updated value:', value)}
+            /&gt;
+          </ide-code>
+
+          <!-- Compact Textarea Input -->
+          <a name="compactTextarea"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Compact Textarea Input</h2>
+          <div class="mb-10">A compact textarea with centered text and custom line height.</div>
+          <div class="basis-third lg-basis-half md-basis-full mb-20">
+            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+              <field-textarea name="summary" placeholder="Write a summary..."  class="w-300 p-3 tx-center tx-lh-20 b-solid b-t-2 c-4" style="cursor: text;" ></field-textarea>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
+            &lt;field-textarea 
+              name="summary" 
+              placeholder="Write a summary..." 
+              rows={2} 
+              class="w-300 p-3 tx-center tx-lh-20 b-solid b-t-2 c-4" 
+              style="cursor: text;"
+              update={(value) =&gt; console.log('Updated value:', value)}
+            /&gt;
+          </ide-code>
+
+          <!-- Large Textarea with Overflow -->
+          <a name="largeTextarea"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Large Textarea with Overflow</h2>
+          <div class="mb-10">A large textarea with overflow handling and bold Verdana font.</div>
+          <div class="basis-third lg-basis-half md-basis-full mb-20">
+            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+              <field-textarea name="article" placeholder="Write your article..."  class="w-400 p-5 b-solid b-t-1 c-6 tx-bold tx-verdana scroll-y-auto h-200" style="cursor: text;"  ></field-textarea>
+            </div>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
+            &lt;field-textarea 
+              name="article" 
+              placeholder="Write your article..." 
+              rows={8} 
+              class="w-400 p-5 b-solid b-t-1 c-6 tx-bold tx-verdana scroll-y-auto h-200" 
+              style="cursor: text;"
+              change={(e) =&gt; console.log('Change event:', e.target.value)}
+              update={(value) =&gt; console.log('Updated value:', value)}
+            /&gt;
+          </ide-code>
+
+          <!-- Navigation -->
+          <nav class="flex">
+            <a class="tx-primary py-40" href="/ink/ui/field/taglist.html">
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>
+              Taglist
+            </a>
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/textlist.html">
+              Textlist
+              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+            </a>
+          </nav>
+          <footer class="foot"></footer>
+        </api-docs>
+      </main>
+    </panel-layout>
+  </body>
+</html>

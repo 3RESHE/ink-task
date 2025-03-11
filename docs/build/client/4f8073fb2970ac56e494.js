@@ -8178,7 +8178,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
+                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full mw-full bg-black tx-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
               import Currency from '@stackpress/ink-ui/field/currency';
             `, false)
@@ -8374,10 +8374,10 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `basis-calc-third-10 lg-basis-calc-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex align-center justify-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-currency", { "name": `currency`, "class": `relative z-1` }),
@@ -8389,7 +8389,7 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black tx-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
             <field-currency name="currency" class="relative z-1" />
           `)
@@ -8411,10 +8411,10 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `basis-calc-third-10 lg-basis-calc-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex align-center justify-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-currency", { "name": `currency`, "value": `PHP`, "class": `relative z-1` }),
@@ -8426,7 +8426,7 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black tx-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
             <field-currency name="currency" value="PHP" class="relative z-1" />
           `)
@@ -8448,10 +8448,10 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `basis-calc-third-10 lg-basis-calc-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex align-center justify-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-currency", { "name": `currency`, "placeholder": `Choose a Currency`, "class": `relative z-1` }),
@@ -8463,7 +8463,7 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black tx-white`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
             <field-currency name="currency" placeholder="Choose a Currency" class="relative z-1" />
           `)
@@ -8484,14 +8484,15 @@ var InkAPI = (() => {
                     ...this._toNodeList(_("A currency selector with custom width and styling."))
                   ]),
                   import_Document.default.createText(`
+
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `basis-calc-third-10 lg-basis-calc-half-10 md-basis-full py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-0 h-200 flex align-center justify-center rounded-10 shadow-2 b-solid b-t-2 transition-all duration-300 hover:shadow-4 hover:bg-t-1` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("field-currency", { "name": `currency`, "value": `EUR`, "class": `w-200 relative z-1`, "style": `border-color: var(--primary);` }),
+                      import_Document.default.createElement("field-currency", { "name": `currency`, "value": `EUR`, "placeholder": `Select a Currency`, "class": `w-250 relative z-1 bg-white rounded-5 tx-t-1 p-10 tx-16`, "style": `border: 2px solid var(--primary); transition: all 0.3s ease;`, "onmouseover": `this.style.borderColor='var(--primary-dark)'; this.style.boxShadow='0 2px 8px var(--t-3)'`, "onmouseout": `this.style.borderColor='var(--primary)'; this.style.boxShadow='none'` }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -8500,9 +8501,17 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-20 w-full mw-full bg-black tx-white rounded-5 p-15 tx-14 tx-lh-20 shadow-1`, "trim": true, "detab": 4 }, [
                     ...this._toNodeList(`
-            <field-currency name="currency" value="EUR" class="w-200 relative z-1" style="border-color: var(--primary);" />
+            <field-currency 
+              name="currency" 
+              value="EUR" 
+              placeholder="Select a Currency" 
+              class="w-250 relative z-1 bg-white rounded-5 tx-t-1 p-10 tx-16" 
+              style="border: 2px solid var(--primary); transition: all 0.3s ease;" 
+              onmouseover="this.style.borderColor='var(--primary-dark)'; this.style.boxShadow='0 2px 8px var(--t-3)'" 
+              onmouseout="this.style.borderColor='var(--primary)'; this.style.boxShadow='none'" 
+            />
           `)
                   ]),
                   import_Document.default.createText(`
@@ -8512,7 +8521,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/form/country.html` }, [
+                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/field/country.html` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),

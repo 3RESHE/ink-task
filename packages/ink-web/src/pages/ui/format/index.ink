@@ -76,7 +76,7 @@
                 <format-code lang="js">compiler.render('./page.ink')</format-code>
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/code.html"
               >
                 Code
@@ -87,7 +87,7 @@
                 <format-color box-md text-md value="red" />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/color.html"
               >
                 Color
@@ -98,7 +98,7 @@
                 <format-country flag-md text-md value="us" />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/country.html"
               >
                 Country
@@ -109,7 +109,7 @@
                 <format-currency flag-lg text-lg value="usd" />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/currency.html"
               >
                 Currency
@@ -120,7 +120,7 @@
                 <format-date format="MMMM D YYYY, h:mm:ss a" />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/date.html"
               >
                 Date
@@ -131,7 +131,7 @@
                 <format-email primary underline md value="john@doe.com" />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/email.html"
               >
                 Email
@@ -148,7 +148,7 @@
                 />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/formula.html"
               >
                 Formula
@@ -159,7 +159,7 @@
                 <format-html value={html} />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/html.html"
               >
                 HTML
@@ -170,7 +170,7 @@
                 <format-image width="70" value="https://images.wsj.net/im-580612/8SR" />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/image.html"
               >
                 Image
@@ -181,7 +181,7 @@
                 <format-imagelist width="70" value={images} />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/imagelist.html"
               >
                 Imagelist
@@ -192,7 +192,7 @@
                 <format-json value={json} />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/json.html"
               >
                 JSON
@@ -209,7 +209,7 @@
                 />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/link.html"
               >
                 Link
@@ -220,7 +220,7 @@
                 <format-list value={list} item="tx-lh-36" />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/list.html"
               >
                 List
@@ -231,7 +231,7 @@
                 <format-markdown value="**Hello** World" />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/markdown.html"
               >
                 Markdown
@@ -250,7 +250,7 @@
                 />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/metadata.html"
               >
                 Metadata
@@ -261,7 +261,7 @@
                 <format-number value="12345.67" separator="," decimal="." decimals={2} />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/number.html"
               >
                 Number
@@ -272,7 +272,7 @@
                 <format-overflow value="Lorem Ipsum" length={8} hellip />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/overflow.html"
               >
                 Overflow
@@ -283,7 +283,7 @@
                 <format-phone value="+63 (917) 555-2424" />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/phone.html"
               >
                 Phone
@@ -294,7 +294,7 @@
                 <format-rating class="tx-warning" value="3.5" max={5} remainder round="floor" />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/rating.html"
               >
                 Rating
@@ -305,7 +305,7 @@
                 <format-separated value={['Foo', 'bar']} separator="line" />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/separated.html"
               >
                 Separated
@@ -324,7 +324,7 @@
                 />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/table.html"
               >
                 Table
@@ -335,7 +335,7 @@
                 <format-taglist value={['Foo', 'bar']} pill />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/taglist.html"
               >
                 Taglist
@@ -346,7 +346,7 @@
                 <format-text value="i am a title" capital />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/text.html"
               >
                 Text
@@ -357,7 +357,7 @@
                 <format-yesno value={true} />
               </div>
               <a 
-                class="block tx-center tx-white p-10 b-solid b-t-3 b-1" 
+                class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
                 href="/ink/ui/format/yesno.html"
               >
                 Yesno

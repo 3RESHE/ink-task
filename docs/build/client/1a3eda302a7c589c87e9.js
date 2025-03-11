@@ -5691,7 +5691,7 @@ var InkAPI = (() => {
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -5704,7 +5704,7 @@ var InkAPI = (() => {
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -6288,7 +6288,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-checkbox", { "name": `active`, "label": `Active` }),
@@ -6325,7 +6325,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-checkbox", { "name": `agree`, "label": `I Agree`, "checked": true }),
@@ -6362,7 +6362,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-checkbox", { "name": `terms`, "label": `Accept Terms`, "disabled": true }),
@@ -6399,7 +6399,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-checkbox", { "name": `subscribe`, "label": `Subscribe`, "orange": true, "rounded": true }),
@@ -6436,7 +6436,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-checkbox", { "name": `notify`, "label": `Notify Me`, "click": handleClick }),
@@ -6476,7 +6476,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-checkbox", { "name": `consent`, "label": `Consent Required`, "required": true }),
@@ -6513,7 +6513,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-checkbox", { "name": `feature`, "label": `Enable Feature`, "value": `feature_on`, "click": logValue }),
@@ -6553,7 +6553,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center gap-20` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center gap-20` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-checkbox", { "name": `option1`, "label": `Rounded Orange`, "orange": true, "rounded": true }),
@@ -6594,7 +6594,7 @@ var InkAPI = (() => {
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center flex-col gap-10` }, [
+                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex justify-center align-center flex-col gap-10` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("field-checkbox", { "name": `hobbies`, "label": `Reading`, "value": `reading`, "checked": true, "orange": true, "rounded": true }),

@@ -81,7 +81,7 @@
           <a name="Currency"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">{_('Currency')}</h1>
           <ide-app title="Editor" class="py-20">
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
+            <ide-code class="scroll-y-auto mb-10 w-full mw-full bg-black tx-white" lang="js" trim>
               import Currency from '@stackpress/ink-ui/field/currency';
             </ide-code>
           </ide-app>
@@ -141,12 +141,12 @@
           <a name="basicCurrency"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Basic Currency')}</h2>
           <div class="mb-10">{_('A simple currency selector with default placeholder.')}</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
+            <div class="bg-t-3 h-120 flex align-center justify-center">
               <field-currency name="currency" class="relative z-1" />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim detab={4}>{`
             <field-currency name="currency" class="relative z-1" />
           `}</ide-code>
 
@@ -154,12 +154,12 @@
           <a name="currencyWithValue"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Currency with Value')}</h2>
           <div class="mb-10">{_('A currency selector with an initial selected value.')}</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
+            <div class="bg-t-3 h-120 flex align-center justify-center">
               <field-currency name="currency" value="PHP" class="relative z-1" />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim detab={4}>{`
             <field-currency name="currency" value="PHP" class="relative z-1" />
           `}</ide-code>
 
@@ -167,12 +167,12 @@
           <a name="customPlaceholder"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Custom Placeholder')}</h2>
           <div class="mb-10">{_('A currency selector with a custom placeholder text.')}</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
+            <div class="bg-t-3 h-120 flex align-center justify-center">
               <field-currency name="currency" placeholder="Choose a Currency" class="relative z-1" />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim detab={4}>{`
             <field-currency name="currency" placeholder="Choose a Currency" class="relative z-1" />
           `}</ide-code>
 
@@ -180,13 +180,30 @@
           <a name="styledCurrency"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Styled Currency')}</h2>
           <div class="mb-10">{_('A currency selector with custom width and styling.')}</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <field-currency name="currency" value="EUR" class="w-200 relative z-1" style="border-color: var(--primary);" />
+
+          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full py-20">
+            <div class="bg-t-0 h-200 flex align-center justify-center rounded-10 shadow-2 b-solid b-t-2 transition-all duration-300 hover:shadow-4 hover:bg-t-1">
+              <field-currency 
+                name="currency" 
+                value="EUR" 
+                placeholder="Select a Currency" 
+                class="w-250 relative z-1 bg-white rounded-5 tx-t-1 p-10 tx-16" 
+                style="border: 2px solid var(--primary); transition: all 0.3s ease;" 
+                onmouseover="this.style.borderColor='var(--primary-dark)'; this.style.boxShadow='0 2px 8px var(--t-3)'" 
+                onmouseout="this.style.borderColor='var(--primary)'; this.style.boxShadow='none'" 
+              />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
-            <field-currency name="currency" value="EUR" class="w-200 relative z-1" style="border-color: var(--primary);" />
+          <ide-code class="scroll-y-auto mb-20 w-full mw-full bg-black tx-white rounded-5 p-15 tx-14 tx-lh-20 shadow-1" trim detab={4}>{`
+            <field-currency 
+              name="currency" 
+              value="EUR" 
+              placeholder="Select a Currency" 
+              class="w-250 relative z-1 bg-white rounded-5 tx-t-1 p-10 tx-16" 
+              style="border: 2px solid var(--primary); transition: all 0.3s ease;" 
+              onmouseover="this.style.borderColor='var(--primary-dark)'; this.style.boxShadow='0 2px 8px var(--t-3)'" 
+              onmouseout="this.style.borderColor='var(--primary)'; this.style.boxShadow='none'" 
+            />
           `}</ide-code>
 
           <!-- Navigation -->

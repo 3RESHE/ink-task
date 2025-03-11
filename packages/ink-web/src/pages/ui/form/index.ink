@@ -233,7 +233,7 @@
                 </div>
                 <a 
                   class="block tx-center tx-primary p-10 b-solid b-t-3 b-1" 
-                  href="/ink/ui/form/datetime.html"
+                  href="/ink/ui/field/datetime.html"
                 >
                   Datetime
                 </a>

@@ -212,7 +212,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Basic Checkbox')}</h2>
           <div class="mb-10">{_('A simple checkbox with a label.')}</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-checkbox name="active" label="Active" />
             </div>
           </div>
@@ -225,7 +225,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Checked Checkbox')}</h2>
           <div class="mb-10">{_('A checkbox that is initially checked.')}</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-checkbox name="agree" label="I Agree" checked />
             </div>
           </div>
@@ -238,7 +238,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Disabled Checkbox')}</h2>
           <div class="mb-10">{_('A disabled checkbox that cannot be interacted with.')}</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-checkbox name="terms" label="Accept Terms" disabled />
             </div>
           </div>
@@ -251,7 +251,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Styled Checkbox')}</h2>
           <div class="mb-10">{_('A checkbox with custom styling, such as color and shape variants.')}</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-checkbox name="subscribe" label="Subscribe" orange rounded />
             </div>
           </div>
@@ -264,7 +264,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Checkbox with Handler')}</h2>
           <div class="mb-10">{_('A checkbox with a custom click event handler.')}</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-checkbox name="notify" label="Notify Me" click={handleClick} />
             </div>
           </div>
@@ -280,7 +280,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Required Checkbox')}</h2>
           <div class="mb-10">{_('A checkbox marked as required for form submission.')}</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-checkbox name="consent" label="Consent Required" required />
             </div>
           </div>
@@ -293,7 +293,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Checkbox with Value')}</h2>
           <div class="mb-10">{_('A checkbox with a specific value logged on change.')}</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="bg-t-3 h-120 flex justify-center align-center">
               <field-checkbox name="feature" label="Enable Feature" value="feature_on" click={logValue} />
             </div>
           </div>
@@ -309,7 +309,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Shape and Color Combo')}</h2>
           <div class="mb-10">{_('A checkbox combining different shapes and colors.')}</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center gap-20">
+            <div class="bg-t-3 h-120 flex justify-center align-center gap-20">
               <field-checkbox name="option1" label="Rounded Orange" orange rounded />
               <field-checkbox name="option2" label="Square Default" square />
             </div>
@@ -324,7 +324,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Multiple Checkboxes in Form')}</h2>
           <div class="mb-10">{_('A group of checkboxes in a form with varied states and styles.')}</div>
           <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center flex-col gap-10">
+            <div class="bg-t-3 h-120 flex justify-center align-center flex-col gap-10">
               <field-checkbox name="hobbies" label="Reading" value="reading" checked orange rounded />
               <field-checkbox name="hobbies" label="Gaming" value="gaming" />
               <field-checkbox name="hobbies" label="Traveling" value="traveling" disabled />
