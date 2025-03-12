@@ -256,7 +256,7 @@ var InkAPI = (() => {
       };
       Object.defineProperty(exports, "__esModule", { value: true });
       var Node_1 = __importDefault(require_Node());
-      var Text2 = class extends Node_1.default {
+      var Text = class extends Node_1.default {
         get nodeName() {
           return "#text";
         }
@@ -284,7 +284,7 @@ var InkAPI = (() => {
           return this.value;
         }
       };
-      exports.default = Text2;
+      exports.default = Text;
     }
   });
 
@@ -757,7 +757,7 @@ var InkAPI = (() => {
         decoder.innerHTML = value;
         return decoder.value;
       };
-      var ClientRegistry21 = class _ClientRegistry {
+      var ClientRegistry19 = class _ClientRegistry {
         static get elements() {
           return this._elements;
         }
@@ -875,8 +875,8 @@ var InkAPI = (() => {
           return Array.from(children4).filter((child) => typeof child !== "undefined").map((child) => typeof child === "string" ? this.createText(child) : child instanceof Element_1.default ? child.element : child);
         }
       };
-      ClientRegistry21._elements = /* @__PURE__ */ new Map();
-      exports.default = ClientRegistry21;
+      ClientRegistry19._elements = /* @__PURE__ */ new Map();
+      exports.default = ClientRegistry19;
     }
   });
 
@@ -958,7 +958,7 @@ var InkAPI = (() => {
       var Registry_1 = __importDefault(require_Registry());
       var Emitter_1 = __importDefault(require_Emitter());
       var data_1 = __importDefault(require_data());
-      var ClientComponent19 = class _ClientComponent extends HTMLElement {
+      var ClientComponent18 = class _ClientComponent extends HTMLElement {
         static get registered() {
           return customElements.getName(this);
         }
@@ -1279,7 +1279,7 @@ var InkAPI = (() => {
           }
         }
       };
-      exports.default = ClientComponent19;
+      exports.default = ClientComponent18;
     }
   });
 
@@ -1292,7 +1292,7 @@ var InkAPI = (() => {
       };
       Object.defineProperty(exports, "__esModule", { value: true });
       var Component_1 = __importDefault(require_Component());
-      var ClientField2 = class extends Component_1.default {
+      var ClientField = class extends Component_1.default {
         get field() {
           return this._field;
         }
@@ -1310,8 +1310,8 @@ var InkAPI = (() => {
           this.emit("formreset", this);
         }
       };
-      ClientField2.formAssociated = true;
-      exports.default = ClientField2;
+      ClientField.formAssociated = true;
+      exports.default = ClientField;
     }
   });
 
@@ -1581,9 +1581,9 @@ var InkAPI = (() => {
       exports.styleset = styleset;
       var StyleMap_1 = __importDefault(require_StyleMap());
       function styleset(styles = {}) {
-        return new StyleSet14(Object.entries(styles));
+        return new StyleSet13(Object.entries(styles));
       }
-      var StyleSet14 = class extends Map {
+      var StyleSet13 = class extends Map {
         add(selector, property, values) {
           if (!this.has(selector)) {
             this.set(selector, new StyleMap_1.default());
@@ -1616,7 +1616,7 @@ var InkAPI = (() => {
           return styleset2.join("");
         }
       };
-      exports.default = StyleSet14;
+      exports.default = StyleSet13;
     }
   });
 
@@ -3631,15 +3631,15 @@ var InkAPI = (() => {
         return mod && mod.__esModule ? mod : { "default": mod };
       };
       Object.defineProperty(exports, "__esModule", { value: true });
-      exports.getProps = getProps3;
+      exports.getProps = getProps2;
       exports.setDefaultStyles = setDefaultStyles2;
-      exports.getHandlers = getHandlers4;
+      exports.getHandlers = getHandlers2;
       var align_1 = __importDefault(require_align());
       var color_1 = __importDefault(require_color());
       var display_1 = __importDefault(require_display());
       var padding_1 = __importDefault(require_padding());
       var size_1 = __importDefault(require_size());
-      function getProps3(host) {
+      function getProps2(host) {
         const _a = host.props, { change, update, flex, none, inline, block, "inline-block": iblock, "inline-flex": iflex, padding, "padding-x": paddingX, "padding-y": paddingY, color, white, black, info, warning, success, error, muted, primary, secondary, theme, size, xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, align, style, "class": _2 } = _a, attributes = __rest(_a, ["change", "update", "flex", "none", "inline", "block", "inline-block", "inline-flex", "padding", "padding-x", "padding-y", "color", "white", "black", "info", "warning", "success", "error", "muted", "primary", "secondary", "theme", "size", "xs", "sm", "md", "lg", "xl", "xl2", "xl3", "xl4", "xl5", "align", "style", "class"]);
         const { background, border } = host.propsTree;
         return {
@@ -3716,7 +3716,7 @@ var InkAPI = (() => {
           styles.add("::slotted(*)", "padding", "7px");
         }
       }
-      function getHandlers4(host, change, update) {
+      function getHandlers2(host, change, update) {
         const handlers = {
           change(e) {
             change && change(e);
@@ -3742,457 +3742,11 @@ var InkAPI = (() => {
     }
   });
 
-  // ../../node_modules/@stackpress/ink-ui/utilities/option.js
-  var require_option = __commonJS({
-    "../../node_modules/@stackpress/ink-ui/utilities/option.js"(exports) {
-      "use strict";
-      var __rest = exports && exports.__rest || function(s, e) {
-        var t = {};
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-          t[p] = s[p];
-        if (s != null && typeof Object.getOwnPropertySymbols === "function")
-          for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-              t[p[i]] = s[p[i]];
-          }
-        return t;
-      };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.getProps = getProps3;
-      exports.setStyles = setStyles2;
-      exports.getHandlers = getHandlers4;
-      function getProps3(host) {
-        const _a = host.props, { label, error, check, circle, square, rounded, blue, orange, change, update, click, style, "class": _2 } = _a, attributes = __rest(_a, ["label", "error", "check", "circle", "square", "rounded", "blue", "orange", "change", "update", "click", "style", "class"]);
-        return {
-          label,
-          error,
-          check,
-          circle,
-          square,
-          rounded,
-          blue,
-          orange,
-          change,
-          update,
-          attributes
-        };
-      }
-      function setStyles2(props3, styles, initial) {
-        const { rounded, circle, square, check, blue, orange } = props3;
-        styles.add("label", "font-family", "Arial, Helvetica, sans-serif");
-        styles.add("label", "display", "inline-block");
-        styles.add("label", "position", "relative");
-        styles.add("label", "cursor", "pointer");
-        styles.add("span", "align-items", "center");
-        styles.add("span", "display", "inline-flex");
-        styles.add("span", "font-weight", "400");
-        styles.add("span", "line-height", "18px");
-        styles.add("span", "margin", "0");
-        styles.add("span", "min-height", "18px");
-        styles.add("span", "min-width", "18px");
-        styles.add("span", "pointer-events", "none");
-        styles.add("span", "position", "relative");
-        styles.add("span", "z-index", "1");
-        styles.add("span::before", "border-width", "1px");
-        styles.add("span::before", "border-style", "solid");
-        styles.add("span::before", "box-shadow", "0 1px 2px rgba(0, 0, 0, 0.05)");
-        styles.add("span::before", "content", '"\\a0"');
-        styles.add("span::before", "display", "inline-block");
-        styles.add("span::before", "font-size", "11px");
-        styles.add("span::before", "font-weight", "400");
-        styles.add("span::before", "height", "18px");
-        styles.add("span::before", "min-width", "18px");
-        styles.add("span::before", "margin-right", "5px");
-        styles.add("span::before", "text-align", "center");
-        styles.add("input", "height", "20px");
-        styles.add("input", "opacity", "0");
-        styles.add("input", "margin", "0");
-        styles.add("input", "position", "absolute");
-        styles.add("input", "width", "20px");
-        styles.add("input:checked", "outline", "0 !important");
-        styles.add("input:focus", "outline", "0 !important");
-        styles.add("input:checked + span::before", "display", "inline-block");
-        styles.add("input:checked + span::before", "box-shadow", [
-          "0 1px 2px rgba(0, 0, 0, 0.05)",
-          "inset 0 -15px 10px -12px rgba(0, 0, 0, 0.05)",
-          "inset 15px 10px -12px rgba(255, 255, 255, 0.1)"
-        ].join(", "));
-        styles.add("input:checked + span::before", "font-weight", "900");
-        styles.add("input:active + span::before", "box-shadow", [
-          "0 1px 2px rgba(0, 0, 0, 0.05)",
-          "inset 0 1px 3px rgba(0, 0, 0, 0.1)"
-        ].join(", "));
-        styles.add("input:checked:active + span::before", "box-shadow", [
-          "0 1px 2px rgba(0, 0, 0, 0.05)",
-          "inset 0 1px 3px rgba(0, 0, 0, 0.1)"
-        ].join(", "));
-        styles.add("input:disabled + span::before", "background-color", "#DDDDDD !important");
-        styles.add("input:disabled + span::before", "border-color", "#CCCCCC !important");
-        styles.add("input:disabled + span::before", "box-shadow", "none !important");
-        styles.add("input:disabled + span::before", "color", "#BBBBBB");
-        styles.add("input[disabled] + span::before", "background-color", "#DDDDDD !important");
-        styles.add("input[disabled] + span::before", "border-color", "#CCCCCC !important");
-        styles.add("input[disabled] + span::before", "box-shadow", "none !important");
-        styles.add("input[disabled] + span::before", "color", "#BBBBBB");
-        if (rounded) {
-          styles.add("span::before", "border-radius", "100%");
-        }
-        const shape = circle ? "circle" : square ? "square" : check ? "check" : initial;
-        if (shape === "circle") {
-          styles.add("input:checked + span::before", "content", '"\\25CF"');
-          styles.add("input:checked + span::before", "font-size", "24px");
-          styles.add("input:checked + span::before", "line-height", "15px");
-        } else if (shape === "square") {
-          styles.add("input:checked + span::before", "content", '"\\25A0"');
-          styles.add("input:checked + span::before", "font-size", "20px");
-          styles.add("input:checked + span::before", "line-height", "15px");
-        } else if (shape === "check") {
-          styles.add("input:checked + span::before", "content", '"\\2713"');
-          styles.add("input:checked + span::before", "font-size", "14px");
-          styles.add("input:checked + span::before", "line-height", "18px");
-        }
-        if (blue) {
-          styles.add("span::before", "background-color", "#FAFAFA");
-          styles.add("span::before", "border-color", "#C8C8C8");
-          styles.add("span::before", "color", "#32A3CE");
-          styles.add("span::before", "text-shadow", "0 0 1px #32A3CE");
-          styles.add("input:hover + span::before", "background-color", "#F5F8FC");
-          styles.add("input:hover + span::before", "border-color", "#32A3CE");
-          styles.add("input:checked + span::before", "border-color", "#32A3CE");
-          styles.add("span:hover::before", "border-color", "#32A3CE");
-        } else if (orange) {
-          styles.add("input:hover + span::before", "border-color", "#FF893C");
-          styles.add("span:hover::before", "border-color", "#FF893C");
-          styles.add("span::before", "background-color", "#FAFAFA");
-          styles.add("span::before", "border-color", "#C8C8C8");
-          styles.add("span::before", "color", "#FF893C");
-          styles.add("span::before", "text-shadow", "0 0 1px #FF893C");
-          styles.add("input:checked + span::before", "background-color", "#F5F8FC");
-          styles.add("input:checked + span::before", "border-color", "#FF893C");
-        } else {
-          styles.add("span::before", "background-color", "#FAFAFA");
-          styles.add("span::before", "border-color", "#C8C8C8");
-          styles.add("span::before", "color", "#32A3CE");
-          styles.add("span::before", "text-shadow", "0 0 1px #32A3CE");
-          styles.add("input:checked + span::before", "background-color", "#F5F8FC");
-          styles.add("input:checked + span::before", "border-color", "#ADB8C0");
-          styles.add("input:hover + span::before", "border-color", "#FF893C");
-          styles.add("span:hover::before", "border-color", "#FF893C");
-        }
-      }
-      function getHandlers4(host) {
-        const { change, update, click } = host.props;
-        const handlers = {
-          mount() {
-            const { name, value, checked } = host.props;
-            if (!name)
-              return;
-            if (checked && typeof value === "string") {
-              host.field.setFormValue(value);
-            }
-          },
-          click(e) {
-            const input = e.target;
-            if (input.checked) {
-              host.removeAttribute("checked");
-            }
-            click && click(e);
-          },
-          change(e) {
-            const checked = e.target.checked;
-            if (host.getAttribute("checked") !== checked) {
-              host.setAttribute("checked", checked);
-            } else {
-              change && change(e);
-              update && update(e.target.checked ? e.target.value : "");
-            }
-          },
-          attribute(e) {
-            var _a;
-            const { action, name, value, target } = e.detail;
-            const input = (_a = target.shadowRoot) === null || _a === void 0 ? void 0 : _a.querySelector("input");
-            if (!input)
-              return;
-            switch (action) {
-              case "add":
-              case "update":
-                handlers.set(input, name, value);
-                break;
-              case "remove":
-                handlers.remove(input, name);
-                break;
-            }
-          },
-          set(input, name, value) {
-            input.setAttribute(name, value);
-            if (name === "checked") {
-              input.checked = true;
-              handlers.uncheck(input);
-              host.field.setFormValue(input.value);
-              handlers.emit(input, input.value);
-            } else if (name === "value") {
-              if (input.checked) {
-                host.field.setFormValue(value);
-                handlers.emit(input, value);
-              }
-            } else if (name === "disabled") {
-              input.disabled = true;
-              if (input.checked) {
-                host.field.setFormValue(null);
-                handlers.emit(input, "");
-              }
-            }
-          },
-          remove(input, name) {
-            input.removeAttribute(name);
-            if (name === "checked") {
-              input.checked = false;
-              host.field.setFormValue(null);
-              handlers.emit(input, "");
-            } else if (name === "disabled") {
-              input.disabled = false;
-              if (input.checked) {
-                host.field.setFormValue(input.value);
-                handlers.emit(input, input.value);
-              }
-            }
-          },
-          emit(input, value) {
-            const event = new Event("change", {
-              bubbles: true,
-              cancelable: true
-            });
-            Object.defineProperty(event, "target", {
-              writable: false,
-              value: input
-            });
-            change && change(event);
-            update && update(value);
-          },
-          uncheck(input) {
-            if (input.getAttribute("type") !== "radio")
-              return;
-            const name = input.getAttribute("name");
-            if (!name)
-              return;
-            const items = host.field.form ? host.field.form.elements.namedItem(name) : document.querySelectorAll(`[name="${name}"]`);
-            const elements2 = items instanceof NodeList ? Array.from(items) : [items];
-            if (!elements2)
-              return;
-            for (const element of elements2) {
-              if (element === host)
-                continue;
-              if (element instanceof HTMLInputElement) {
-                element.checked = false;
-                element.removeAttribute("checked");
-              } else if (element instanceof HTMLElement) {
-                element.removeAttribute("checked");
-              }
-            }
-          }
-        };
-        host.on("attributechange", handlers.attribute);
-        return handlers;
-      }
-    }
-  });
-
-  // ../../node_modules/@stackpress/ink-ui/utilities/select.js
-  var require_select = __commonJS({
-    "../../node_modules/@stackpress/ink-ui/utilities/select.js"(exports) {
-      "use strict";
-      var __importDefault = exports && exports.__importDefault || function(mod) {
-        return mod && mod.__esModule ? mod : { "default": mod };
-      };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.makeOptions = makeOptions2;
-      exports.getHandlers = getHandlers4;
-      var Registry_1 = __importDefault(require_Registry());
-      var signal_1 = __importDefault(require_signal());
-      function makeOptions2(children4) {
-        return Array.from(children4).filter((option) => option instanceof HTMLElement).filter((option) => option.nodeName !== "INPUT" || !option.hasAttribute("type") || option.getAttribute("type") !== "hidden").filter((option) => !option.hasAttribute("slot") || option.getAttribute("slot") === "filtered").map((option) => {
-          var _a;
-          if (option.nodeName !== "OPTION") {
-            return option;
-          }
-          const attributes = ((_a = Registry_1.default.get(option)) === null || _a === void 0 ? void 0 : _a.attributes) || {};
-          attributes.value = attributes.value ? attributes.value : option.hasAttribute("value") ? option.getAttribute("value") : option.innerText.trim();
-          attributes.keyword = attributes.keyword ? attributes.keyword : option.hasAttribute("keyword") ? option.getAttribute("keyword") : void 0;
-          attributes["class"] = attributes["class"] ? attributes["class"] : option.hasAttribute("class") ? option.getAttribute("class") : "select-default-option";
-          const children5 = Array.from(option.childNodes);
-          return Registry_1.default.createElement("div", attributes, children5).element;
-        });
-      }
-      function getHandlers4(host, options, slot = true) {
-        const { value, multiple, open, close, filter, select, add, clear, change, update } = host.props;
-        const handlers = {
-          toggle: (e) => {
-            const show = !state.value.show;
-            state.value = Object.assign(Object.assign({}, state.value), { show });
-            show ? open && open(e, state) : close && close(e, state);
-          },
-          select: (e) => {
-            var _a;
-            const option = e.currentTarget;
-            const value2 = (_a = Registry_1.default.get(option)) === null || _a === void 0 ? void 0 : _a.getAttribute("value");
-            if (typeof value2 === "undefined")
-              return;
-            state.value = handlers.make(state.value.options, state.value.values.includes(value2) ? state.value.values.filter((v) => v !== value2) : multiple ? [...state.value.values, value2] : [value2], state.value.query, multiple ? state.value.show : false);
-            select && select(e, state);
-            change && change(Object.assign(Object.assign({}, e), { target: Object.assign(Object.assign({}, host), { value: multiple ? state.value.values : value2 }) }));
-            update && update(multiple ? state.value.values : value2);
-          },
-          filter: (e) => {
-            const target = e.target;
-            setTimeout(() => {
-              var _a;
-              const selection = [target.selectionStart, target.selectionEnd];
-              const query = target.value.toLowerCase();
-              state.value = handlers.make(state.value.options, state.value.values, query, state.value.show);
-              const input = (_a = host.shadowRoot) === null || _a === void 0 ? void 0 : _a.querySelector(".input");
-              input === null || input === void 0 ? void 0 : input.focus();
-              input === null || input === void 0 ? void 0 : input.setSelectionRange(selection[0], selection[1]);
-              filter && filter(e, state);
-            }, 1);
-          },
-          clear: (e) => {
-            state.value = handlers.make(state.value.options, [], state.value.query, false);
-            clear && clear(e, state);
-            change && change(Object.assign(Object.assign({}, e), { target: Object.assign(Object.assign({}, host), { value: multiple ? [] : null }) }));
-            update && update(multiple ? [] : null);
-          },
-          add: (e) => {
-            var _a;
-            const input = (_a = host.shadowRoot) === null || _a === void 0 ? void 0 : _a.querySelector("input");
-            if (!input)
-              return;
-            const value2 = input.value;
-            const option = Registry_1.default.createElement("div", {
-              "class": "select-default-option",
-              slot: "option",
-              label: value2,
-              keyword: value2,
-              value: value2
-            }, [new Text(value2)]).element;
-            state.value = handlers.make([option, ...state.value.options], multiple ? [...state.value.values, value2] : [value2], "", multiple ? state.value.show : false);
-            add && add(e, state);
-            change && change(Object.assign(Object.assign({}, e), { target: Object.assign(Object.assign({}, host), { value: multiple ? state.value.values : value2 }) }));
-            update && update(multiple ? state.value.values : value2);
-          },
-          over: (e) => {
-            e.stopPropagation();
-            local.over = true;
-            return false;
-          },
-          out: (e) => {
-            e.stopPropagation();
-            local.over = false;
-            if (!state.value.show) {
-              return false;
-            }
-            setTimeout(() => {
-              if (!local.over && state.value.show) {
-                state.value = Object.assign(Object.assign({}, state.value), { show: false });
-                close && close(e, state);
-              }
-            }, 500);
-            return false;
-          },
-          make: (options2, value2, query = "", show = false) => {
-            const values = (Array.isArray(value2) ? Array.from(value2) : [value2]).filter(Boolean);
-            options2.forEach((option) => {
-              if (!(option instanceof HTMLElement))
-                return;
-              const select2 = handlers.select;
-              option.removeEventListener("click", select2);
-              option.addEventListener("click", select2);
-              const element = Registry_1.default.get(option);
-              if (element) {
-                if (!element.hasAttribute("value")) {
-                  element.setAttribute("value", option.innerText.trim());
-                }
-              }
-            });
-            const filtered = options2.filter((option) => {
-              if (!(option instanceof Element))
-                return false;
-              if (!query)
-                return true;
-              const element = Registry_1.default.get(option);
-              if (!element)
-                return false;
-              const keyword = element.getAttribute("keyword");
-              if (!keyword)
-                return false;
-              return keyword.toLowerCase().includes(query.toLowerCase());
-            }).map((option) => {
-              if (slot && option instanceof Element) {
-                option.setAttribute("slot", "filtered");
-              }
-              return option;
-            });
-            const selected = options2.filter((option) => {
-              if (!(option instanceof Element))
-                return false;
-              const element = Registry_1.default.get(option);
-              if (!element)
-                return false;
-              const value3 = element.getAttribute("value");
-              if (!value3)
-                return false;
-              return values.includes(value3);
-            }).map((option) => {
-              const clone = option.cloneNode(true);
-              if (slot && clone instanceof Element) {
-                clone.setAttribute("slot", "selected");
-              }
-              return clone;
-            });
-            return { show, query, values, options: options2, filtered, selected };
-          },
-          attribute(e) {
-            const { action, name, value: value2, target } = e.detail;
-            const inputs = Array.from(target.querySelectorAll(":scope > input[hidden]"));
-            for (let i = 0; i < inputs.length; i++) {
-              const input = inputs[i];
-              if (name === "name") {
-                switch (action) {
-                  case "add":
-                  case "update":
-                    input.setAttribute("name", value2);
-                    break;
-                  case "remove":
-                    input.removeAttribute("name");
-                    break;
-                }
-              } else if (name === "value") {
-                const values = Array.isArray(value2) ? value2 : [value2];
-                if (action === "remove" || typeof values[i] === "undefined" || values[i] === null) {
-                  input.removeAttribute(name);
-                  continue;
-                }
-                input.setAttribute(name, values[i]);
-              }
-            }
-          }
-        };
-        const state = (0, signal_1.default)(handlers.make(options, value), host);
-        const local = { over: false };
-        const over = handlers.over;
-        const out = handlers.out;
-        host.addEventListener("mouseover", over);
-        host.addEventListener("mouseout", out);
-        host.on("attributechange", handlers.attribute);
-        return Object.assign({ state, local }, handlers);
-      }
-    }
-  });
-
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\form\control.ink
+  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\control.ink
   var control_exports = {};
   __export(control_exports, {
     BUILD_ID: () => BUILD_ID,
-    ClientRegistry: () => import_Registry20.default,
+    ClientRegistry: () => import_Registry18.default,
     TemplateDocument: () => TemplateDocument,
     components: () => components,
     data: () => import_data.default,
@@ -4201,11 +3755,11 @@ var InkAPI = (() => {
   });
   var import_Document = __toESM(require_Document());
   var import_Document2 = __toESM(require_Document2());
-  var import_Registry20 = __toESM(require_Registry());
+  var import_Registry18 = __toESM(require_Registry());
   var import_Emitter = __toESM(require_Emitter());
   var import_data = __toESM(require_data());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\docs.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\api\docs.ink
   var import_Registry = __toESM(require_Registry());
   var import_Component = __toESM(require_Component());
   var import_ink = __toESM(require_ink());
@@ -4234,7 +3788,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\app.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\app.ink
   var import_Registry2 = __toESM(require_Registry());
   var import_Component2 = __toESM(require_Component());
   var import_ink2 = __toESM(require_ink());
@@ -4288,7 +3842,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\code.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\code.ink
   var import_Registry3 = __toESM(require_Registry());
   var import_Component3 = __toESM(require_Component());
   var import_prismjs = __toESM(require_prism());
@@ -4485,7 +4039,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
   var import_Registry4 = __toESM(require_Registry());
   var import_Component4 = __toESM(require_Component());
 
@@ -4501,7 +4055,7 @@ var InkAPI = (() => {
     return phrase;
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
   var Translate_794a00a5e900fca28310 = class extends import_Component4.default {
     static id = "794a00a5e900fca28310";
     static tagname = "translate";
@@ -4577,7 +4131,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\panel.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\panel.ink
   var import_Registry5 = __toESM(require_Registry());
   var import_Component5 = __toESM(require_Component());
   var Panel_c4c96a14064fc0c4d224 = class extends import_Component5.default {
@@ -4738,7 +4292,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\icon.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\icon.ink
   var import_Registry6 = __toESM(require_Registry());
   var import_Component6 = __toESM(require_Component());
   var import_StyleSet = __toESM(require_StyleSet());
@@ -4770,7 +4324,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\crumbs.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\crumbs.ink
   var import_Registry7 = __toESM(require_Registry());
   var import_Component7 = __toESM(require_Component());
   var import_StyleSet2 = __toESM(require_StyleSet());
@@ -4933,10 +4487,10 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
   var import_Component13 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\table.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\table.ink
   var import_Registry8 = __toESM(require_Registry());
   var import_Component8 = __toESM(require_Component());
   var import_StyleSet3 = __toESM(require_StyleSet());
@@ -4960,15 +4514,15 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
   var import_Registry13 = __toESM(require_Registry());
   var import_StyleSet8 = __toESM(require_StyleSet());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
   var import_Registry10 = __toESM(require_Registry());
   var import_Component10 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\row.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\row.ink
   var import_Registry9 = __toESM(require_Registry());
   var import_Component9 = __toESM(require_Component());
   var import_StyleSet4 = __toESM(require_StyleSet());
@@ -4991,7 +4545,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
   var import_StyleSet5 = __toESM(require_StyleSet());
   var Thead_afbcee18613ce58fb77c = class extends import_Component10.default {
     static id = "afbcee18613ce58fb77c";
@@ -5014,7 +4568,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
   var import_Registry11 = __toESM(require_Registry());
   var import_Component11 = __toESM(require_Component());
   var import_StyleSet6 = __toESM(require_StyleSet());
@@ -5037,7 +4591,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
   var import_Registry12 = __toESM(require_Registry());
   var import_Component12 = __toESM(require_Component());
   var import_StyleSet7 = __toESM(require_StyleSet());
@@ -5062,7 +4616,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
   var Table_02bc3cbacda5727a0af3 = class extends import_Component13.default {
     static id = "02bc3cbacda5727a0af3";
     static tagname = "table";
@@ -5210,7 +4764,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\head.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\head.ink
   var import_Registry14 = __toESM(require_Registry());
   var import_Component14 = __toESM(require_Component());
   var import_StyleSet9 = __toESM(require_StyleSet());
@@ -5292,7 +4846,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\col.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\col.ink
   var import_Registry15 = __toESM(require_Registry());
   var import_Component15 = __toESM(require_Component());
   var import_StyleSet10 = __toESM(require_StyleSet());
@@ -5364,7 +4918,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\form\control.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\form\control.ink
   var import_Registry16 = __toESM(require_Registry());
   var import_Component16 = __toESM(require_Component());
   var import_StyleSet11 = __toESM(require_StyleSet());
@@ -5417,7 +4971,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\input.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\field\input.ink
   var import_Registry17 = __toESM(require_Registry());
   var import_Component17 = __toESM(require_Component());
   var import_StyleSet12 = __toESM(require_StyleSet());
@@ -5467,327 +5021,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\checkbox.ink
-  var import_Registry18 = __toESM(require_Registry());
-  var import_Field = __toESM(require_Field());
-  var import_StyleSet13 = __toESM(require_StyleSet());
-  var import_display3 = __toESM(require_display());
-  var import_option = __toESM(require_option());
-  var Checkbox_22993f1e10483a264a1f = class extends import_Field.default {
-    static id = "22993f1e10483a264a1f";
-    static tagname = "checkbox";
-    static classname = "Checkbox_22993f1e10483a264a1f";
-    static observedAttributes = ["checked", "disabled", "name", "readonly", "required", "value"];
-    styles() {
-      return ``;
-    }
-    template() {
-      const { label = "", click, attributes } = (0, import_option.getProps)(this);
-      const styles = new import_StyleSet13.default();
-      this.styles = () => styles.toString();
-      (0, import_display3.default)(this.props, styles, "inline-block", ":host");
-      (0, import_option.setStyles)(this.props, styles, "check");
-      const handlers = (0, import_option.getHandlers)(this);
-      return () => [
-        import_Registry18.default.createText(`
-`, false),
-        import_Registry18.default.createElement("label", { "mount": handlers.mount }, [
-          import_Registry18.default.createText(`
-  `, false),
-          import_Registry18.default.createElement("input", { ...attributes, "type": `checkbox`, "change": handlers.change, "click": click }).element,
-          import_Registry18.default.createText(`
-  `, false),
-          import_Registry18.default.createElement("span", {}, [
-            ...this._toNodeList(label)
-          ]).element,
-          import_Registry18.default.createText(`
-`, false)
-        ]).element
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\field\select.ink
-  var import_Registry19 = __toESM(require_Registry());
-  var import_Component18 = __toESM(require_Component());
-  var import_select = __toESM(require_select());
-  var Select_180142206112824ab003 = class extends import_Component18.default {
-    static id = "180142206112824ab003";
-    static tagname = "select";
-    static classname = "Select_180142206112824ab003";
-    static observedAttributes = ["name", "value"];
-    styles() {
-      return `.select {
-    color: var(--black);
-    position: relative;
-  }
-  .display {
-    display: flex;
-    align-items: center;
-    padding: 7px;
-    border: 1px solid var(--black);
-    background-color: var(--white);
-  }
-  .selected {
-    width: 100%;
-    overflow: auto;
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    gap: 5px;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-  .placeholder {
-    color: var(--muted);
-    font-style: italic;
-  }
-  .count {
-    display: inline-block;
-    padding-left: 4px;
-    color: var(--muted);
-    font-size: 12px;
-  }
-  .clear, .toggle, .add {
-    cursor: pointer;
-  }
-  .dropdown {
-    background-color: var(--white);
-    border: 1px solid var(--black);
-    overflow: auto;
-    position: absolute;
-    width: 100%;
-    max-height: 200px;
-  }
-  .form {
-    display: flex;
-    align-items: center;
-    margin: 5px;
-    padding: 7px;
-    border: 1px solid var(--muted);
-    height: 18px;
-  }
-  .input {
-    flex-grow: 1;
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-  }
-  .input:focus {
-    outline: none;
-  }
-  .search {
-    color: var(--muted);
-  }
-  .options {
-    overflow: auto;
-    cursor: pointer;
-  }
-  ::slotted(.select-default-option) {
-    font-size: 14px;
-    padding: 7px;
-  }
-  ::slotted(.select-default-option:hover) {
-    background-color: var(--muted);
-  }
-  .selected ::slotted(.select-default-option) {
-    padding: 0;
-  }
-  .selected ::slotted(.select-default-option:hover) {
-    background-color: transparent;
-  }`;
-    }
-    template() {
-      const { placeholder = "Choose Option", custom, search, name } = this.props;
-      const options = (0, import_select.makeOptions)(this.getChildren(false));
-      const { state, clear, toggle, filter, add } = (0, import_select.getHandlers)(this, options);
-      return () => [
-        import_Registry19.default.createText(`
-`, false),
-        import_Registry19.default.createElement("template", { "type": `light` }, [
-          import_Registry19.default.createText(`
-  `, false),
-          ...!!name ? [
-            import_Registry19.default.createText(`
-    `, false),
-            ...Object.entries(state.value.values).map(([_2, value]) => [
-              import_Registry19.default.createText(`
-      `, false),
-              import_Registry19.default.createElement("input", { "type": `hidden`, "name": name, "value": value.toString() }).element,
-              import_Registry19.default.createText(`
-    `, false)
-            ]).flat(),
-            import_Registry19.default.createText(`
-  `, false)
-          ] : [],
-          import_Registry19.default.createText(`
-  `, false),
-          ...this._toNodeList(state.value.selected),
-          import_Registry19.default.createText(`
-  `, false),
-          ...this._toNodeList(state.value.filtered),
-          import_Registry19.default.createText(`
-`, false)
-        ]).element,
-        import_Registry19.default.createText(`
-`, false),
-        import_Registry19.default.createElement("template", { "type": `shadow` }, [
-          import_Registry19.default.createText(`
-  `, false),
-          import_Registry19.default.createElement("link", { "rel": `stylesheet`, "type": `text/css`, "href": `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css` }).element,
-          import_Registry19.default.createText(`
-  `, false),
-          import_Registry19.default.createElement("div", { "class": `select` }, [
-            import_Registry19.default.createText(`
-    `, false),
-            import_Registry19.default.createElement("div", { "class": `display` }, [
-              import_Registry19.default.createText(`
-      `, false),
-              import_Registry19.default.createElement("div", { "class": `selected`, "click": toggle }, [
-                import_Registry19.default.createText(`
-        `, false),
-                ...!!(state.value.selected.length > 0) ? [
-                  import_Registry19.default.createText(`
-          `, false),
-                  import_Registry19.default.createElement("slot", { "name": `selected` }, []).element,
-                  import_Registry19.default.createText(`
-        `, false)
-                ] : !!placeholder ? [
-                  ,
-                  import_Registry19.default.createText(`
-          `, false),
-                  import_Registry19.default.createElement("span", { "class": `placeholder` }, [
-                    import_Registry19.default.createText(`
-            `, false),
-                    ...this._toNodeList(placeholder),
-                    import_Registry19.default.createText(`
-          `, false)
-                  ]).element,
-                  import_Registry19.default.createText(`
-        `, false)
-                ] : [],
-                import_Registry19.default.createText(`
-      `, false)
-              ]).element,
-              import_Registry19.default.createText(`
-      `, false),
-              ...!!(state.value.selected.length > 1) ? [
-                import_Registry19.default.createText(`
-        `, false),
-                import_Registry19.default.createElement("em", { "class": `count` }, [
-                  import_Registry19.default.createText(`(`, false),
-                  ...this._toNodeList(state.value.selected.length),
-                  import_Registry19.default.createText(`)`, false)
-                ]).element,
-                import_Registry19.default.createText(`
-      `, false)
-              ] : [],
-              import_Registry19.default.createText(`
-      `, false),
-              ...!!(state.value.selected.length > 0) ? [
-                import_Registry19.default.createText(`
-        `, false),
-                import_Registry19.default.createElement("i", { "class": `clear fas fa-fw fa-times`, "click": clear }, []).element,
-                import_Registry19.default.createText(`
-      `, false)
-              ] : [],
-              import_Registry19.default.createText(`
-      `, false),
-              ...!!(state.value.filtered.length > 0 || state.value.query.length > 0) ? [
-                import_Registry19.default.createText(`
-        `, false),
-                ...!!state.value.show ? [
-                  import_Registry19.default.createText(`
-          `, false),
-                  import_Registry19.default.createElement("i", { "class": `toggle fas fa-fw fa-caret-up`, "click": toggle }, []).element,
-                  import_Registry19.default.createText(`
-        `, false)
-                ] : true ? [
-                  ,
-                  import_Registry19.default.createText(`
-          `, false),
-                  import_Registry19.default.createElement("i", { "class": `toggle fas fa-fw fa-caret-down`, "click": toggle }, []).element,
-                  import_Registry19.default.createText(`
-        `, false)
-                ] : [],
-                import_Registry19.default.createText(`
-      `, false)
-              ] : [],
-              import_Registry19.default.createText(`
-    `, false)
-            ]).element,
-            import_Registry19.default.createText(`
-    `, false),
-            ...!!(state.value.show && (state.value.filtered.length > 0 || state.value.query.length > 0)) ? [
-              import_Registry19.default.createText(`
-      `, false),
-              import_Registry19.default.createElement("div", { "class": `dropdown` }, [
-                import_Registry19.default.createText(`
-        `, false),
-                ...!!(search || custom) ? [
-                  import_Registry19.default.createText(`
-          `, false),
-                  import_Registry19.default.createElement("div", { "class": `form` }, [
-                    import_Registry19.default.createText(`
-            `, false),
-                    ...!!search ? [
-                      import_Registry19.default.createText(`
-              `, false),
-                      import_Registry19.default.createElement("input", { "class": `input`, "value": state.value.query, "keyup": filter }).element,
-                      import_Registry19.default.createText(`
-            `, false)
-                    ] : true ? [
-                      ,
-                      import_Registry19.default.createText(`
-              `, false),
-                      import_Registry19.default.createElement("input", { "class": `input`, "value": state.value.query }).element,
-                      import_Registry19.default.createText(`
-            `, false)
-                    ] : [],
-                    import_Registry19.default.createText(`
-            `, false),
-                    ...!!custom ? [
-                      import_Registry19.default.createText(`
-              `, false),
-                      import_Registry19.default.createElement("i", { "class": `add fas fa-fw fa-plus`, "click": add }, []).element,
-                      import_Registry19.default.createText(`
-            `, false)
-                    ] : true ? [
-                      ,
-                      import_Registry19.default.createText(`
-              `, false),
-                      import_Registry19.default.createElement("i", { "class": `search fas fa-fe fa-search` }, []).element,
-                      import_Registry19.default.createText(`
-            `, false)
-                    ] : [],
-                    import_Registry19.default.createText(`
-          `, false)
-                  ]).element,
-                  import_Registry19.default.createText(`
-        `, false)
-                ] : [],
-                import_Registry19.default.createText(`
-        `, false),
-                import_Registry19.default.createElement("div", { "class": `options` }, [
-                  import_Registry19.default.createElement("slot", { "name": `filtered` }, []).element
-                ]).element,
-                import_Registry19.default.createText(`
-      `, false)
-              ]).element,
-              import_Registry19.default.createText(`
-    `, false)
-            ] : [],
-            import_Registry19.default.createText(`
-  `, false)
-          ]).element,
-          import_Registry19.default.createText(`
-`, false)
-        ]).element
-      ];
-    }
-  };
-
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\form\control.ink
+  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\control.ink
   var import_ink4 = __toESM(require_ink());
   var TemplateDocument = class _TemplateDocument extends import_Document2.default {
     static sync() {
@@ -5795,9 +5029,9 @@ var InkAPI = (() => {
       return document2.sync();
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/components/control.html";
+      const title = _("Ink UI - Form Control Component");
+      const description = _("A wrapper component for form fields with labels and error messages.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -5805,8 +5039,8 @@ var InkAPI = (() => {
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Form", href: "/ink/ui/form/index.html" },
-        { label: "Control" }
+        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
+        { label: "Form Control" }
       ];
       return [
         import_Document.default.createText(`
@@ -6439,7 +5673,7 @@ var InkAPI = (() => {
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -6452,7 +5686,7 @@ var InkAPI = (() => {
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -6476,19 +5710,15 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Control` }, [
-                      ...this._toNodeList(_("Control"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#control` }, [
+                      ...this._toNodeList(_("Form Control"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -6501,33 +5731,21 @@ var InkAPI = (() => {
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basicControl` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Basic Control"))
+                        ...this._toNodeList(_("Basic Usage"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#controlWithError` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#error` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Control with Error"))
+                        ...this._toNodeList(_("Error State"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#controlWithoutLabel` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#combined` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Control without Label"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#controlWithCheckbox` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Control with Checkbox"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#controlWithSelect` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Control with Select"))
+                        ...this._toNodeList(_("Combined Fields"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6559,15 +5777,15 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `Control` }, []),
+                  import_Document.default.createElement("a", { "name": `control` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Control"))
+                    ...this._toNodeList(_("Form Control"))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Form Control`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
@@ -6580,7 +5798,6 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Props Section -->
           `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
@@ -6590,11 +5807,11 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Property"))
+                      ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -6612,7 +5829,6 @@ var InkAPI = (() => {
                       ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6633,13 +5849,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Text for the label above the slotted content. Omitted if empty or falsy."))
+                        ...this._toNodeList(_("Text for the field label"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6660,61 +5875,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Error message below the slotted content. Shown only if non-empty; sets host color to var(--error) (red)."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`class`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Custom CSS classes applied to the host element (e.g., "py-5 tx-bold").'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`style`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Inline styles applied to the host element (e.g., "border: 1px solid red").'))
+                        ...this._toNodeList(_("Error message; sets text color to var(--error) if present"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6724,34 +5885,27 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Basic Control -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `basicControl` }, []),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Basic Control"))
+                    ...this._toNodeList(_("Basic Usage"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A simple control with a label and an input field."))
+                    import_Document.default.createText(`A simple form control with a label and input.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("form-control", { "label": `First Name` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("form-control", { "label": `Email` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("field-input", { "name": `email`, "placeholder": `Enter your email` }),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
+                      import_Document.default.createElement("field-input", { "name": `first`, "placeholder": `Enter your first name` }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6760,43 +5914,36 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <form-control label="Email">
-              <field-input name="email" placeholder="Enter your email" />
+            <form-control label="First Name">
+              <field-input name="first" placeholder="Enter your first name" />
             </form-control>
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Control with Error -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `controlWithError` }, []),
+                  import_Document.default.createElement("a", { "name": `error` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Control with Error"))
+                    ...this._toNodeList(_("Error State"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A control displaying an error message below the input."))
+                    import_Document.default.createText(`Display an error message below the field.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("form-control", { "class": `py-5`, "label": `First Name*`, "error": `Some Error` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("form-control", { "class": `py-5`, "label": `First Name*`, "error": `Some Error` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("field-input", { "name": `first`, "placeholder": `Enter your first name`, "error": true }),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
+                      import_Document.default.createElement("field-input", { "name": `first`, "placeholder": `Enter your first name`, "error": true }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6805,7 +5952,7 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <form-control class="py-5" label="First Name*" error="Some Error">
               <field-input name="first" placeholder="Enter your first name" error />
@@ -6814,34 +5961,45 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Control without Label -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `controlWithoutLabel` }, []),
+                  import_Document.default.createElement("a", { "name": `combined` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Control without Label"))
+                    ...this._toNodeList(_("Combined Fields"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A control with no label, only an input and optional error."))
+                    import_Document.default.createText(`Multiple controls in a form with varying states.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("form-control", { "class": `py-5`, "label": `First Name*` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("form-control", { "error": `Required` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("field-input", { "name": `phone`, "placeholder": `Enter phone number` }),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
+                      import_Document.default.createElement("field-input", { "name": `first`, "placeholder": `Enter your first name` }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("form-control", { "class": `py-5`, "label": `Last Name*`, "error": `Last name is required` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("field-input", { "name": `last`, "placeholder": `Enter your last name`, "error": true }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("form-control", { "class": `py-5`, "label": `Email` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("field-input", { "name": `email`, "placeholder": `Enter your email`, "type": `email` }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6850,128 +6008,21 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <form-control error="Required">
-              <field-input name="phone" placeholder="Enter phone number" />
+            <form-control class="py-5" label="First Name*">
+              <field-input name="first" placeholder="Enter your first name" />
+            </form-control>
+            <form-control class="py-5" label="Last Name*" error="Last name is required">
+              <field-input name="last" placeholder="Enter your last name" error />
+            </form-control>
+            <form-control class="py-5" label="Email">
+              <field-input name="email" placeholder="Enter your email" type="email" />
             </form-control>
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Control with Checkbox -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `controlWithCheckbox` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Control with Checkbox"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A control wrapping a checkbox with a label and error feedback."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("form-control", { "label": `Agree to Terms`, "error": `Must agree` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("field-checkbox", { "name": `terms`, "value": `yes` }),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <form-control label="Agree to Terms" error="Must agree">
-              <field-checkbox name="terms" value="yes" />
-            </form-control>
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Control with Select -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `controlWithSelect` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Control with Select"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A control with a dropdown select input."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("form-control", { "label": `Country`, "class": `w-200` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("field-select", { "name": `country` }, [
-                          import_Document.default.createText(`
-                  `, false),
-                          import_Document.default.createElement("option", { "value": `` }, [
-                            import_Document.default.createText(`Select a country`, false)
-                          ]),
-                          import_Document.default.createText(`
-                  `, false),
-                          import_Document.default.createElement("option", { "value": `us` }, [
-                            import_Document.default.createText(`United States`, false)
-                          ]),
-                          import_Document.default.createText(`
-                  `, false),
-                          import_Document.default.createElement("option", { "value": `ca` }, [
-                            import_Document.default.createText(`Canada`, false)
-                          ]),
-                          import_Document.default.createText(`
-                `, false)
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <form-control label="Country" class="w-200">
-              <field-select name="country">
-                <option value="">Select a country</option>
-                <option value="us">United States</option>
-                <option value="ca">Canada</option>
-              </field-select>
-            </form-control>
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Navigation -->
           `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
@@ -6980,9 +6031,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Buttons")),
+                      ...this._toNodeList(_("Button")),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6992,8 +6041,6 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       ...this._toNodeList(_("Fieldset")),
-                      import_Document.default.createText(`
-              `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)
@@ -7037,9 +6084,7 @@ var InkAPI = (() => {
     "TableRow_0b3723ad0a2356b54f11": Row_0b3723ad0a2356b54f11,
     "TableCol_f45aa9d13a1588f1d9ab": Col_f45aa9d13a1588f1d9ab,
     "FormControl_7df3c1a799ae50f9a174": Control_7df3c1a799ae50f9a174,
-    "FieldInput_cb7a6224432a087beaf2": Input_cb7a6224432a087beaf2,
-    "FieldCheckbox_22993f1e10483a264a1f": Checkbox_22993f1e10483a264a1f,
-    "FieldSelect_180142206112824ab003": Select_180142206112824ab003
+    "FieldInput_cb7a6224432a087beaf2": Input_cb7a6224432a087beaf2
   };
   var elements = {
     "api-docs": Docs_0ab1bce486b32e7cdafc,
@@ -7054,9 +6099,7 @@ var InkAPI = (() => {
     "table-row": Row_0b3723ad0a2356b54f11,
     "table-col": Col_f45aa9d13a1588f1d9ab,
     "form-control": Control_7df3c1a799ae50f9a174,
-    "field-input": Input_cb7a6224432a087beaf2,
-    "field-checkbox": Checkbox_22993f1e10483a264a1f,
-    "field-select": Select_180142206112824ab003
+    "field-input": Input_cb7a6224432a087beaf2
   };
   var BUILD_ID = "c7200172f32748e6a699";
   import_Emitter.default.once("ready", () => {

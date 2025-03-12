@@ -3584,7 +3584,7 @@ var InkAPI = (() => {
     }
   });
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\badge.ink
+  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\badge.ink
   var badge_exports = {};
   __export(badge_exports, {
     BUILD_ID: () => BUILD_ID,
@@ -3601,7 +3601,7 @@ var InkAPI = (() => {
   var import_Emitter = __toESM(require_Emitter());
   var import_data = __toESM(require_data());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\docs.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\api\docs.ink
   var import_Registry = __toESM(require_Registry());
   var import_Component = __toESM(require_Component());
   var import_ink = __toESM(require_ink());
@@ -3630,7 +3630,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\app.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\app.ink
   var import_Registry2 = __toESM(require_Registry());
   var import_Component2 = __toESM(require_Component());
   var import_ink2 = __toESM(require_ink());
@@ -3684,7 +3684,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\code.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\code.ink
   var import_Registry3 = __toESM(require_Registry());
   var import_Component3 = __toESM(require_Component());
   var import_prismjs = __toESM(require_prism());
@@ -3881,7 +3881,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
   var import_Registry4 = __toESM(require_Registry());
   var import_Component4 = __toESM(require_Component());
 
@@ -3897,7 +3897,7 @@ var InkAPI = (() => {
     return phrase;
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
   var Translate_794a00a5e900fca28310 = class extends import_Component4.default {
     static id = "794a00a5e900fca28310";
     static tagname = "translate";
@@ -3973,7 +3973,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\panel.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\panel.ink
   var import_Registry5 = __toESM(require_Registry());
   var import_Component5 = __toESM(require_Component());
   var Panel_c4c96a14064fc0c4d224 = class extends import_Component5.default {
@@ -4134,7 +4134,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\alert.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\alert.ink
   var import_Registry6 = __toESM(require_Registry());
   var import_Component6 = __toESM(require_Component());
   var import_StyleSet = __toESM(require_StyleSet());
@@ -4182,7 +4182,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\icon.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\icon.ink
   var import_Registry7 = __toESM(require_Registry());
   var import_Component7 = __toESM(require_Component());
   var import_StyleSet2 = __toESM(require_StyleSet());
@@ -4214,7 +4214,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\crumbs.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\crumbs.ink
   var import_Registry8 = __toESM(require_Registry());
   var import_Component8 = __toESM(require_Component());
   var import_StyleSet3 = __toESM(require_StyleSet());
@@ -4377,10 +4377,10 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
   var import_Component14 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\table.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\table.ink
   var import_Registry9 = __toESM(require_Registry());
   var import_Component9 = __toESM(require_Component());
   var import_StyleSet4 = __toESM(require_StyleSet());
@@ -4404,15 +4404,15 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
   var import_Registry14 = __toESM(require_Registry());
   var import_StyleSet9 = __toESM(require_StyleSet());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
   var import_Registry11 = __toESM(require_Registry());
   var import_Component11 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\row.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\row.ink
   var import_Registry10 = __toESM(require_Registry());
   var import_Component10 = __toESM(require_Component());
   var import_StyleSet5 = __toESM(require_StyleSet());
@@ -4435,7 +4435,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
   var import_StyleSet6 = __toESM(require_StyleSet());
   var Thead_afbcee18613ce58fb77c = class extends import_Component11.default {
     static id = "afbcee18613ce58fb77c";
@@ -4458,7 +4458,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
   var import_Registry12 = __toESM(require_Registry());
   var import_Component12 = __toESM(require_Component());
   var import_StyleSet7 = __toESM(require_StyleSet());
@@ -4481,7 +4481,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
   var import_Registry13 = __toESM(require_Registry());
   var import_Component13 = __toESM(require_Component());
   var import_StyleSet8 = __toESM(require_StyleSet());
@@ -4506,7 +4506,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
   var Table_02bc3cbacda5727a0af3 = class extends import_Component14.default {
     static id = "02bc3cbacda5727a0af3";
     static tagname = "table";
@@ -4654,7 +4654,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\head.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\head.ink
   var import_Registry15 = __toESM(require_Registry());
   var import_Component15 = __toESM(require_Component());
   var import_StyleSet10 = __toESM(require_StyleSet());
@@ -4736,7 +4736,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\col.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\col.ink
   var import_Registry16 = __toESM(require_Registry());
   var import_Component16 = __toESM(require_Component());
   var import_StyleSet11 = __toESM(require_StyleSet());
@@ -4808,7 +4808,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\badge.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\badge.ink
   var import_Registry17 = __toESM(require_Registry());
   var import_Component17 = __toESM(require_Component());
   var import_StyleSet12 = __toESM(require_StyleSet());
@@ -4856,7 +4856,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\badge.ink
+  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\badge.ink
   var import_ink4 = __toESM(require_ink());
   var TemplateDocument = class _TemplateDocument extends import_Document2.default {
     static sync() {
@@ -4864,9 +4864,9 @@ var InkAPI = (() => {
       return document2.sync();
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/components/badge.html";
+      const title = _("Ink UI - Badge Component");
+      const description = _("A customizable badge component for displaying small notifications or labels.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -4879,6 +4879,7 @@ var InkAPI = (() => {
       ];
       return [
         import_Document.default.createText(`
+
 `, false),
         import_Document.default.createElement("html", {}, [
           import_Document.default.createText(`
@@ -5507,7 +5508,7 @@ var InkAPI = (() => {
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -5520,7 +5521,7 @@ var InkAPI = (() => {
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -5544,11 +5545,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
@@ -5593,9 +5590,9 @@ var InkAPI = (() => {
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#border` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#combinations` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Border Styles"))
+                        ...this._toNodeList(_("Combinations"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5631,15 +5628,11 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Badge")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("Badge"))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Badge`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
@@ -5657,11 +5650,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Props")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("Props"))
                   ]),
                   import_Document.default.createText(`
           `, false),
@@ -5687,7 +5676,6 @@ var InkAPI = (() => {
                       ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5708,13 +5696,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Displays the badge with a white background and colored border/text"))
+                        ...this._toNodeList(_("Displays the badge with a white background and colored border/text (default: muted)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5735,13 +5722,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Displays the badge with a solid colored background (default if outline/transparent omitted)"))
+                        ...this._toNodeList(_("Displays the badge with a solid colored background and white text (default: muted)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5762,13 +5748,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Displays the badge with a transparent background and colored border/text"))
+                        ...this._toNodeList(_("Displays the badge with a transparent background and colored border/text (default: muted)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5789,13 +5774,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Sets custom padding in pixels (default: "2px 8px")'))
+                        ...this._toNodeList(_('Sets uniform padding in pixels (default: "2px 8px")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5816,13 +5800,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Sets a custom CSS color for background (solid) or text/border (outline/transparent), e.g., "salmon", "#ff0000"'))
+                        ...this._toNodeList(_('Sets a custom CSS color (e.g., "salmon", "#ff0000") for background (solid) or text/border (outline/transparent)'))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5843,13 +5826,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets a predefined info style (blue background)"))
+                        ...this._toNodeList(_("Sets a blue background (var(--info))"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5870,13 +5852,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets a predefined warning style (yellow background)"))
+                        ...this._toNodeList(_("Sets a yellow background (var(--warning))"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5897,13 +5878,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets a predefined success style (green background)"))
+                        ...this._toNodeList(_("Sets a green background (var(--success))"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5924,13 +5904,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets a predefined error style (red background)"))
+                        ...this._toNodeList(_("Sets a red background (var(--error))"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5951,13 +5930,116 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets a predefined muted style (gray background)"))
+                        ...this._toNodeList(_("Sets a gray background (var(--muted))"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`white`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a white background (var(--white))"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`black`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a black background (var(--black))"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`primary`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a theme-defined primary color background (var(--primary))"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`secondary`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets a theme-defined secondary color background (var(--secondary))"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5978,13 +6060,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies a slightly rounded border radius (4px)"))
+                        ...this._toNodeList(_("Applies a 4px border radius"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6005,13 +6086,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies a fully rounded border radius (8px)"))
+                        ...this._toNodeList(_("Applies a 12px border radius"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6032,7 +6112,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies a pill-shaped border radius (9999px)"))
+                        ...this._toNodeList(_("Applies a 10000px border radius for a pill shape"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6047,38 +6127,29 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Types")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("Types"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
                     import_Document.default.createText(`
-            Badges have the following predefined color types:  
-            `, false),
+            Badges have predefined color types: `, false),
                     import_Document.default.createElement("span", { "class": `bg-info tx-white tx-italic p-3` }, [
                       import_Document.default.createText(`info`, false)
                     ]),
-                    import_Document.default.createText(`,  
-            `, false),
+                    import_Document.default.createText(`, `, false),
                     import_Document.default.createElement("span", { "class": `bg-warning tx-black tx-italic p-3` }, [
                       import_Document.default.createText(`warning`, false)
                     ]),
-                    import_Document.default.createText(`,  
-            `, false),
+                    import_Document.default.createText(`, `, false),
                     import_Document.default.createElement("span", { "class": `bg-success tx-white tx-italic p-3` }, [
                       import_Document.default.createText(`success`, false)
                     ]),
-                    import_Document.default.createText(`,  
-            `, false),
+                    import_Document.default.createText(`, `, false),
                     import_Document.default.createElement("span", { "class": `bg-error tx-white tx-italic p-3` }, [
                       import_Document.default.createText(`error`, false)
                     ]),
-                    import_Document.default.createText(`, and  
-            `, false),
+                    import_Document.default.createText(`, and `, false),
                     import_Document.default.createElement("span", { "class": `bg-muted tx-white tx-italic p-3` }, [
                       import_Document.default.createText(`muted`, false)
                     ]),
@@ -6086,19 +6157,14 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-badge", { "info": true, "class": `tx-sm` }, [
-                        import_Document.default.createText(`100`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
+                      import_Document.default.createElement("element-badge", { "info": true }, [
+                        import_Document.default.createText(`Info`, false)
+                      ])
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -6106,24 +6172,17 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-badge info class="tx-sm">100</element-badge>
-          `)
+                    ...this._toNodeList(`<element-badge info>Info</element-badge>`)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-badge", { "warning": true, "class": `tx-sm` }, [
-                        import_Document.default.createText(`200`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
+                      import_Document.default.createElement("element-badge", { "warning": true }, [
+                        import_Document.default.createText(`Warning`, false)
+                      ])
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -6131,24 +6190,17 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-badge warning class="tx-sm">200</element-badge>
-          `)
+                    ...this._toNodeList(`<element-badge warning>Warning</element-badge>`)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-badge", { "success": true, "class": `tx-sm` }, [
-                        import_Document.default.createText(`300`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
+                      import_Document.default.createElement("element-badge", { "success": true }, [
+                        import_Document.default.createText(`Success`, false)
+                      ])
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -6156,24 +6208,17 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-badge success class="tx-sm">300</element-badge>
-          `)
+                    ...this._toNodeList(`<element-badge success>Success</element-badge>`)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-badge", { "error": true, "class": `tx-sm` }, [
-                        import_Document.default.createText(`400`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
+                      import_Document.default.createElement("element-badge", { "error": true }, [
+                        import_Document.default.createText(`Error`, false)
+                      ])
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -6181,24 +6226,17 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-badge error class="tx-sm">400</element-badge>
-          `)
+                    ...this._toNodeList(`<element-badge error>Error</element-badge>`)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-badge", { "muted": true, "class": `tx-sm` }, [
-                        import_Document.default.createText(`500`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
+                      import_Document.default.createElement("element-badge", { "muted": true }, [
+                        import_Document.default.createText(`Muted`, false)
+                      ])
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -6206,9 +6244,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-badge muted class="tx-sm">500</element-badge>
-          `)
+                    ...this._toNodeList(`<element-badge muted>Muted</element-badge>`)
                   ]),
                   import_Document.default.createText(`
 
@@ -6217,33 +6253,22 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Custom Color")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("Custom Color"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Badges can use custom CSS-compatible colors for the background (solid) or text/border (outline/transparent).
-          `, false)
+                    import_Document.default.createText(`Badges support custom CSS colors for background (solid) or text/border (outline/transparent).`, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-badge", { "color": `salmon`, "class": `tx-sm` }, [
-                        import_Document.default.createText(`600`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
+                      import_Document.default.createElement("element-badge", { "color": `salmon` }, [
+                        import_Document.default.createText(`Salmon`, false)
+                      ])
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -6251,24 +6276,17 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-badge color="salmon" class="tx-sm">600</element-badge>
-          `)
+                    ...this._toNodeList(`<element-badge color="salmon">Salmon</element-badge>`)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-badge", { "color": `#ffcc00`, "class": `tx-sm` }, [
-                        import_Document.default.createText(`Hex Color`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
+                      import_Document.default.createElement("element-badge", { "color": `#ff4500` }, [
+                        import_Document.default.createText(`Orange`, false)
+                      ])
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -6276,9 +6294,25 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-badge color="#ffcc00" class="tx-sm">Hex Color</element-badge>
-          `)
+                    ...this._toNodeList(`<element-badge color="#ff4500">Orange</element-badge>`)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createElement("element-badge", { "color": `purple`, "transparent": true }, [
+                        import_Document.default.createText(`Transparent`, false)
+                      ])
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`<element-badge color="purple" transparent>Transparent</element-badge>`)
                   ]),
                   import_Document.default.createText(`
 
@@ -6287,45 +6321,22 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Rounded")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("Rounded"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Badges can be rounded in three ways: `, false),
-                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
-                      import_Document.default.createText(`curved`, false)
-                    ]),
-                    import_Document.default.createText(` (4px), `, false),
-                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
-                      import_Document.default.createText(`rounded`, false)
-                    ]),
-                    import_Document.default.createText(` (8px), or `, false),
-                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
-                      import_Document.default.createText(`pill`, false)
-                    ]),
-                    import_Document.default.createText(` (9999px).
-          `, false)
+                    import_Document.default.createText(`Badges can have curved (4px), rounded (12px), or pill-shaped (10000px) corners.`, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-badge", { "info": true, "curved": true, "class": `tx-sm` }, [
-                        import_Document.default.createText(`100`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
+                      import_Document.default.createElement("element-badge", { "info": true, "curved": true }, [
+                        import_Document.default.createText(`Curved`, false)
+                      ])
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -6333,24 +6344,17 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-badge info curved class="tx-sm">100</element-badge>
-          `)
+                    ...this._toNodeList(`<element-badge info curved>Curved</element-badge>`)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-badge", { "warning": true, "rounded": true, "class": `tx-sm` }, [
-                        import_Document.default.createText(`200`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
+                      import_Document.default.createElement("element-badge", { "warning": true, "rounded": true }, [
+                        import_Document.default.createText(`Rounded`, false)
+                      ])
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -6358,24 +6362,17 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-badge warning rounded class="tx-sm">200</element-badge>
-          `)
+                    ...this._toNodeList(`<element-badge warning rounded>Rounded</element-badge>`)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-badge", { "success": true, "pill": true, "class": `tx-sm` }, [
-                        import_Document.default.createText(`300`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
+                      import_Document.default.createElement("element-badge", { "success": true, "pill": true }, [
+                        import_Document.default.createText(`Pill`, false)
+                      ])
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -6383,9 +6380,7 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-badge success pill class="tx-sm">300</element-badge>
-          `)
+                    ...this._toNodeList(`<element-badge success pill>Pill</element-badge>`)
                   ]),
                   import_Document.default.createText(`
 
@@ -6394,37 +6389,26 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Padding")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("Padding"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            The padding of a badge can be adjusted using the `, false),
+                    import_Document.default.createText(`Adjust padding with the `, false),
                     import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
                       import_Document.default.createText(`padding`, false)
                     ]),
-                    import_Document.default.createText(` prop, defaulting to 2px 8px.
-          `, false)
+                    import_Document.default.createText(` prop (default: 2px 8px).`, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-badge", { "info": true, "padding": `4`, "class": `tx-sm` }, [
+                      import_Document.default.createElement("element-badge", { "info": true, "padding": `4` }, [
                         import_Document.default.createText(`Padding 4`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
+                      ])
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -6432,24 +6416,17 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-badge info padding="4" class="tx-sm">Padding 4</element-badge>
-          `)
+                    ...this._toNodeList(`<element-badge info padding="4">Padding 4</element-badge>`)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-badge", { "success": true, "padding": `10`, "class": `tx-sm` }, [
+                      import_Document.default.createElement("element-badge", { "success": true, "padding": `10` }, [
                         import_Document.default.createText(`Padding 10`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
+                      ])
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -6457,52 +6434,49 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-badge success padding="10" class="tx-sm">Padding 10</element-badge>
-          `)
+                    ...this._toNodeList(`<element-badge success padding="10">Padding 10</element-badge>`)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createElement("element-badge", { "error": true, "padding": `2` }, [
+                        import_Document.default.createText(`Tight`, false)
+                      ])
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`<element-badge error padding="2">Tight</element-badge>`)
                   ]),
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `border` }, []),
+                  import_Document.default.createElement("a", { "name": `combinations` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Border Styles")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("Combinations"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            Badges can be styled with `, false),
-                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
-                      import_Document.default.createText(`outline`, false)
-                    ]),
-                    import_Document.default.createText(` or `, false),
-                    import_Document.default.createElement("span", { "class": `tx-italic p-3` }, [
-                      import_Document.default.createText(`transparent`, false)
-                    ]),
-                    import_Document.default.createText(` properties to modify their appearance.
-          `, false)
+                    import_Document.default.createText(`Combine props and Ink utilities for custom badge styles.`, false)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-badge", { "outline": true, "info": true, "class": `tx-sm` }, [
-                        import_Document.default.createText(`Outline`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
+                      import_Document.default.createElement("element-badge", { "outline": true, "primary": true, "curved": true, "padding": `6`, "class": `tx-sm` }, [
+                        import_Document.default.createText(`Primary Outline`, false)
+                      ])
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -6510,24 +6484,17 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-badge outline info class="tx-sm">Outline</element-badge>
-          `)
+                    ...this._toNodeList(`<element-badge outline primary curved padding="6" class="tx-sm">Primary Outline</element-badge>`)
                   ]),
                   import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("element-badge", { "transparent": true, "info": true, "class": `tx-sm` }, [
-                        import_Document.default.createText(`Transparent`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
+                      import_Document.default.createElement("element-badge", { "transparent": true, "black": true, "pill": true, "class": `tx-bold` }, [
+                        import_Document.default.createText(`Black Pill`, false)
+                      ])
                     ]),
                     import_Document.default.createText(`
           `, false)
@@ -6535,9 +6502,61 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-badge transparent info class="tx-sm">Transparent</element-badge>
-          `)
+                    ...this._toNodeList(`<element-badge transparent black pill class="tx-bold">Black Pill</element-badge>`)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createElement("element-badge", { "color": `#ff4500`, "rounded": true, "class": `tx-italic` }, [
+                        import_Document.default.createText(`Orange Italic`, false)
+                      ])
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`<element-badge color="#ff4500" rounded class="tx-italic">Orange Italic</element-badge>`)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createElement("element-badge", { "white": true, "padding": `8`, "class": `tx-t-2 tx-sm` }, [
+                        import_Document.default.createText(`White Theme`, false)
+                      ])
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`<element-badge white padding="8" class="tx-t-2 tx-sm">White Theme</element-badge>`)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `bg-t-3 pt-10 pb-10 flex flex-center` }, [
+                      import_Document.default.createElement("element-badge", { "secondary": true, "curved": true, "class": `tx-upper` }, [
+                        import_Document.default.createText(`Secondary`, false)
+                      ])
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`<element-badge secondary curved class="tx-upper">Secondary</element-badge>`)
                   ]),
                   import_Document.default.createText(`
 
@@ -6549,8 +6568,6 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
                       ...this._toNodeList(_("Alerts")),
                       import_Document.default.createText(`
             `, false)
@@ -6561,8 +6578,6 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       ...this._toNodeList(_("Crumbs")),
-                      import_Document.default.createText(`
-              `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Country Field Component</title>
+  <meta name="description" content="A dropdown field for selecting countries with flags and search functionality." />
+  <meta property="og:title" content="Ink UI - Country Field Component" />
+  <meta property="og:description" content="A dropdown field for selecting countries with flags and search functionality." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/country.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Country Field Component" />
+  <meta name="twitter:description" content="A dropdown field for selecting countries with flags and search functionality." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -149,17 +149,14 @@
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Country">Country</a>
+            <a class="block tx-t-0" href="#country">Country Field</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicCountry">• Basic Country</a>
-              <a class="block tx-t-1" href="#countryWithValue">• Country with Value</a>
-              <a class="block tx-t-1" href="#customPlaceholder">• Custom Placeholder</a>
-              <a class="block tx-t-1" href="#styledCountry">• Styled Country</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#value">• Initial Value</a>
+              <a class="block tx-t-1" href="#custom">• Custom Styling</a>
             </nav>
           </nav>
         </menu>
@@ -170,120 +167,82 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Country"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Country</h1>
-          <ide-app title="Editor" class="py-20">
-            <ide-code class="scroll-y-auto mb-10 w-full mw-full bg-black tx-white" lang="js" trim>
+          <a name="country"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Country Field</h1>
+          <ide-app title="Country Field" class="py-20">
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
               import Country from '@stackpress/ink-ui/field/country';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
             <table-head>Notes</table-head>
-
             <table-row>
               <table-col>name</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Name attribute for hidden inputs in form submission.</table-col>
+              <table-col>Name attribute for form submission</table-col>
             </table-row>
-
             <table-row>
               <table-col>value</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Initial selected country code (e.g., "US"). Single selection only.</table-col>
+              <table-col>Initial country code (e.g., "US")</table-col>
             </table-row>
-
             <table-row>
               <table-col>placeholder</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Text shown when no country is selected. Defaults to "Select Country".</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>class</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Custom CSS classes for the host element (e.g., "w-200").</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Inline styles for the host element (e.g., "border: 2px solid blue").</table-col>
+              <table-col>Text when no country is selected (default: "Select Country")</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Country -->
-          <a name="basicCountry"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Country</h2>
-          <div class="mb-10">A simple country selector with default placeholder.</div>
-          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex align-center justify-center">
-              <field-country name="country" class="relative z-1"></field-country>
-            </div>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">A simple country dropdown.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-country name="basic"></field-country>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim >
-            &lt;field-country name="country" class="relative z-1" /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-country name="basic" /&gt;
           </ide-code>
 
-          <!-- Country with Value -->
-          <a name="countryWithValue"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Country with Value</h2>
-          <div class="mb-10">A country selector with an initial selected value.</div>
-          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex align-center justify-center">
-              <field-country name="country" value="US" class="relative z-1"></field-country>
-            </div>
+          <a name="value"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Initial Value</h2>
+          <div class="mb-10">Country field with an initial value.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-country name="country" placeholder="Choose Country" value="US"></field-country>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim >
-            &lt;field-country name="country" value="US" class="relative z-1" /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-country name="country" placeholder="Choose Country" value="US" /&gt;
           </ide-code>
 
-          <!-- Custom Placeholder -->
-          <a name="customPlaceholder"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Placeholder</h2>
-          <div class="mb-10">A country selector with a custom placeholder text.</div>
-          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex align-center justify-center">
-              <field-country name="country" placeholder="Choose a Country" class="relative z-1"></field-country>
-            </div>
+          <a name="custom"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Styling</h2>
+          <div class="mb-10">Country field with custom width and z-index.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-country name="country" class="w-200 relative z-1" placeholder="Choose Country" value="US"></field-country>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim >
-            &lt;field-country name="country" placeholder="Choose a Country" class="relative z-1" /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-country  
+              name="country"
+              class="w-200 relative z-1"
+              placeholder="Choose Country" 
+              value="US"
+            /&gt;
           </ide-code>
 
-          <!-- Styled Country -->
-          <a name="styledCountry"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Country</h2>
-          <div class="mb-10">A country selector with custom width and styling.</div>
-          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex align-center justify-center">
-              <field-country name="country" value="CA" class="w-200 relative z-1" style="border-color: var(--primary);"></field-country>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim >
-            &lt;field-country name="country" value="CA" class="w-200 relative z-1" style="border-color: var(--primary);" /&gt;
-          </ide-code>
-
-          <!-- Navigation -->
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/color.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Color
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Color Field
             </a>
-            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/currency.html">
-              Currency
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/input.html">
+              Input Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

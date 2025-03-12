@@ -82,7 +82,7 @@
           <h1 class="tx-primary tx-upper tx-30 py-20">
             {_('Alert')}
           </h1>
-          <ide-app title="Editor" class="py-20">
+          <ide-app title="Alert" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
               import Alert from '@stackpress/ink-ui/element/alert';
             </ide-code>

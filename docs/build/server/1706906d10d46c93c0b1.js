@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\form\fieldset.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\fieldset.ink
   var fieldset_exports = {};
   __export(fieldset_exports, {
     default: () => Fieldset_1706906d10d46c93c0b1
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\form\fieldset.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\fieldset.ink
   var Fieldset_1706906d10d46c93c0b1 = class extends import_Document2.default {
     id() {
       return "1706906d10d46c93c0b1";
@@ -820,9 +820,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
   @ink utilities;`;
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/components/fieldset.html";
+      const title = _("Ink UI - Fieldset Component");
+      const description = _("A component for grouping form fields with a legend and optional multiple rows.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -830,12 +830,8 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Form", href: "/ink/ui/form/index.html" },
+        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
         { label: "Fieldset" }
-      ];
-      const sampleData = [
-        { first: "John", last: "Doe" },
-        { first: "Jane", last: "Smith" }
       ];
       return [
         import_Document.default.createText(`
@@ -1468,7 +1464,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -1481,7 +1477,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -1505,18 +1501,14 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Fieldset` }, [
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#fieldset` }, [
                       ...this._toNodeList(_("Fieldset"))
                     ]),
                     import_Document.default.createText(`
@@ -1530,27 +1522,21 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basicFieldset` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Basic Fieldset"))
+                        ...this._toNodeList(_("Basic Usage"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#multipleFieldset` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#multiple` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Multiple Fieldset"))
+                        ...this._toNodeList(_("Multiple Rows"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#fieldWithErrors` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#custom` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Fieldset with Errors"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styledFieldset` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Styled Fieldset"))
+                        ...this._toNodeList(_("Custom Styling"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1582,7 +1568,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `Fieldset` }, []),
+                  import_Document.default.createElement("a", { "name": `fieldset` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
@@ -1590,7 +1576,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Fieldset`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
@@ -1603,7 +1589,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Props Section -->
           `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
@@ -1612,13 +1597,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ...this._toNodeList(_("Props"))
                   ]),
                   import_Document.default.createText(`
-
           `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Property"))
+                      ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1636,7 +1620,84 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`legend`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Text for the fieldset legend; supports %s for row count"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`name`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Name attribute for the fieldset"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`value`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Object`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Initial values for the fields"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1657,68 +1718,64 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('If true, allows multiple rows with an "Add" button. Inputs become an empty array if undefined.'))
+                        ...this._toNodeList(_('Allows adding multiple rows with an "Add" button'))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
-                `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`inputs`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Object | Array&lt;Object&gt;`, false)
+                        import_Document.default.createText(`Array | Object`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Data for each row. Single object if multiple=false, array if multiple=true. Defaults to [{}] if invalid."))
+                        ...this._toNodeList(_("Initial input values (array for multiple, object for single)"))
                       ]),
                       import_Document.default.createText(`
-                `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-                `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`errors`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Object | Array&lt;Object&gt;`, false)
+                        import_Document.default.createText(`Array | Object`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Error data per row. Matches inputs structure. Defaults to [{}] if invalid."))
+                        ...this._toNodeList(_("Initial error states (array for multiple, object for single)"))
                       ]),
                       import_Document.default.createText(`
-                `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1739,169 +1796,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Text for the "Add" button when multiple=true. Defaults to "Add".'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`display`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Sets display style of the host (e.g., "block", "inline"). Defaults to "block".'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`border`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Applies border styles (e.g., "solid", "dashed"). Handled by Ink UI utilities.'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`radius`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Sets border radius (e.g., "md", "lg"). Handled by Ink UI utilities.'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`button`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Styles the "Add" button (e.g., "primary", "success"). Requires multiple=true.'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`class`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Custom CSS classes for the host element (e.g., "p-10").'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`style`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Inline styles for the host element (e.g., "margin: 10px").'))
+                        ...this._toNodeList(_('Text for the "Add" button (default: "Add")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1911,133 +1806,137 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-
-
-          <!-- Multiple Fieldset -->
-            `, false),
-                  import_Document.default.createElement("a", { "name": `multipleFieldset` }, []),
+          `, false),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
-            `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Multiple Fieldset"))
+                    ...this._toNodeList(_("Basic Usage"))
                   ]),
                   import_Document.default.createText(`
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_('A fieldset with multiple rows and an "Add" button.'))
+                    import_Document.default.createText(`A simple fieldset with a single field.`, false)
                   ]),
                   import_Document.default.createText(`
-
-            <!-- Container with proper spacing -->
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full p-10` }, [
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 min-h-120 flex flex-col flex-center gap-10 p-12 rounded-4` }, [
+                    import_Document.default.createElement("form-fieldset", { "legend": `User Info` }, [
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("form-fieldset", { "legend": `Users`, "multiple": true, "inputs": sampleData, "add": `Add User` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("field-input", { "name": `first`, "placeholder": `First Name` }),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("field-input", { "name": `last`, "placeholder": `Last Name` }),
-                        import_Document.default.createText(`
-                `, false)
-                      ]),
+              `, false),
+                      import_Document.default.createElement("field-input", { "name": `username`, "placeholder": `Enter your username` }),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-            <!-- IDE Code Block -->
-            `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white p-6 rounded-4`, "trim": true, "detab": 4 }, [
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <script>
-                const sampleData = [
-                { first: 'John', last: 'Doe' },
-                { first: 'Jane', last: 'Smith' }
-                ];
-            </script>
-            <form-fieldset legend="Users" multiple inputs={sampleData} add="Add User">
-                <field-input name="first" placeholder="First Name" />
-                <field-input name="last" placeholder="Last Name" />
+            <form-fieldset legend="User Info">
+              <field-input name="username" placeholder="Enter your username" />
             </form-fieldset>
-            `)
+          `)
                   ]),
                   import_Document.default.createText(`
 
-
-
-            <!-- Styled Fieldset -->
-            `, false),
-                  import_Document.default.createElement("a", { "name": `styledFieldset` }, []),
+          `, false),
+                  import_Document.default.createElement("a", { "name": `multiple` }, []),
                   import_Document.default.createText(`
-            `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Styled Fieldset"))
+                    ...this._toNodeList(_("Multiple Rows"))
                   ]),
                   import_Document.default.createText(`
-            `, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_('A multiple fieldset with an "Add" button to append single-input rows.'))
+                    import_Document.default.createText(`A fieldset with multiple rows and an "Add" button.`, false)
                   ]),
                   import_Document.default.createText(`
-            `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 min-h-120 flex flex-col flex-center gap-10 p-12 rounded-4` }, [
+                    import_Document.default.createElement("form-fieldset", { "legend": `Fieldset %s`, "name": `fieldset1`, "multiple": true }, [
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("form-fieldset", { "legend": `Contacts`, "multiple": true, "class": `p-10`, "border": `solid`, "radius": `md`, "add": `New Contact` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("field-input", { "name": `email`, "placeholder": `Email Address`, "class": `w-full` }),
-                        import_Document.default.createText(`
-                `, false)
-                      ]),
+              `, false),
+                      import_Document.default.createElement("field-input", { "name": `first`, "placeholder": `Enter your first name` }),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <form-fieldset legend="Fieldset %s" name="fieldset1" multiple>
+              <field-input name="first" placeholder="Enter your first name" />
+            </form-fieldset>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `custom` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Custom Styling"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`A styled fieldset with initial values and custom "Add" text.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
+                    import_Document.default.createText(`
             `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                    import_Document.default.createElement("form-fieldset", { "legend": `Contact %s`, "name": `contacts`, "multiple": true, "add": `Add Contact`, "class": `p-10 b-solid b-muted rounded`, "inputs": [{ first: "John" }], "errors": [{ first: "Invalid name" }] }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("field-input", { "name": `first`, "placeholder": `Enter first name` }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <form-fieldset 
-                legend="Contacts" 
-                multiple 
-                class="p-10" 
-                border="solid" 
-                radius="md" 
-                add="New Contact"
+              legend="Contact %s" 
+              name="contacts" 
+              multiple 
+              add="Add Contact" 
+              class="p-10 b-solid b-muted rounded" 
+              inputs={[{ first: 'John' }]} 
+              errors={[{ first: 'Invalid name' }]}
             >
-                <field-input name="email" placeholder="Email Address" class="w-full" />
+              <field-input name="first" placeholder="Enter first name" />
             </form-fieldset>
-`)
+          `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Navigation -->
           `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/form/control.html` }, [
+                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/components/form-control.html` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Control")),
+                      ...this._toNodeList(_("Form Control")),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -2047,8 +1946,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       ...this._toNodeList(_("Checkbox")),
-                      import_Document.default.createText(`
-              `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Form Control Component</title>
+  <meta name="description" content="A wrapper component for form fields with labels and error messages." />
+  <meta property="og:title" content="Ink UI - Form Control Component" />
+  <meta property="og:description" content="A wrapper component for form fields with labels and error messages." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/components/control.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Form Control Component" />
+  <meta name="twitter:description" content="A wrapper component for form fields with labels and error messages." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -142,25 +142,21 @@
   
 
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       Formats
     </a>
   
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Control">Control</a>
+            <a class="block tx-t-0" href="#control">Form Control</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicControl">• Basic Control</a>
-              <a class="block tx-t-1" href="#controlWithError">• Control with Error</a>
-              <a class="block tx-t-1" href="#controlWithoutLabel">• Control without Label</a>
-              <a class="block tx-t-1" href="#controlWithCheckbox">• Control with Checkbox</a>
-              <a class="block tx-t-1" href="#controlWithSelect">• Control with Select</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#error">• Error State</a>
+              <a class="block tx-t-1" href="#combined">• Combined Fields</a>
             </nav>
           </nav>
         </menu>
@@ -171,154 +167,95 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Control"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Control</h1>
-          <ide-app title="Editor" class="py-20">
+          <a name="control"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Form Control</h1>
+          <ide-app title="Form Control" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
               import Control from '@stackpress/ink-ui/form/control';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
             <table-head>Notes</table-head>
-
             <table-row>
               <table-col>label</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Text for the label above the slotted content. Omitted if empty or falsy.</table-col>
+              <table-col>Text for the field label</table-col>
             </table-row>
-
             <table-row>
               <table-col>error</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Error message below the slotted content. Shown only if non-empty; sets host color to var(--error) (red).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>class</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Custom CSS classes applied to the host element (e.g., "py-5 tx-bold").</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Inline styles applied to the host element (e.g., "border: 1px solid red").</table-col>
+              <table-col>Error message; sets text color to var(--error) if present</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Control -->
-          <a name="basicControl"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Control</h2>
-          <div class="mb-10">A simple control with a label and an input field.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <form-control label="Email">
-                <field-input name="email" placeholder="Enter your email"></field-input>
-              </form-control>
-            </div>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">A simple form control with a label and input.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <form-control label="First Name">
+              <field-input name="first" placeholder="Enter your first name"></field-input>
+            </form-control>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;form-control label="Email"&gt;
-              &lt;field-input name="email" placeholder="Enter your email" /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;form-control label="First Name"&gt;
+              &lt;field-input name="first" placeholder="Enter your first name" /&gt;
             &lt;/form-control&gt;
           </ide-code>
 
-          <!-- Control with Error -->
-          <a name="controlWithError"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Control with Error</h2>
-          <div class="mb-10">A control displaying an error message below the input.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <form-control class="py-5" label="First Name*" error="Some Error">
-                <field-input name="first" placeholder="Enter your first name" error></field-input>
-              </form-control>
-            </div>
+          <a name="error"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Error State</h2>
+          <div class="mb-10">Display an error message below the field.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <form-control class="py-5" label="First Name*" error="Some Error">
+              <field-input name="first" placeholder="Enter your first name" error></field-input>
+            </form-control>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;form-control class="py-5" label="First Name*" error="Some Error"&gt;
               &lt;field-input name="first" placeholder="Enter your first name" error /&gt;
             &lt;/form-control&gt;
           </ide-code>
 
-          <!-- Control without Label -->
-          <a name="controlWithoutLabel"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Control without Label</h2>
-          <div class="mb-10">A control with no label, only an input and optional error.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <form-control error="Required">
-                <field-input name="phone" placeholder="Enter phone number"></field-input>
-              </form-control>
-            </div>
+          <a name="combined"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Combined Fields</h2>
+          <div class="mb-10">Multiple controls in a form with varying states.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <form-control class="py-5" label="First Name*">
+              <field-input name="first" placeholder="Enter your first name"></field-input>
+            </form-control>
+            <form-control class="py-5" label="Last Name*" error="Last name is required">
+              <field-input name="last" placeholder="Enter your last name" error></field-input>
+            </form-control>
+            <form-control class="py-5" label="Email">
+              <field-input name="email" placeholder="Enter your email" type="email"></field-input>
+            </form-control>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;form-control error="Required"&gt;
-              &lt;field-input name="phone" placeholder="Enter phone number" /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;form-control class="py-5" label="First Name*"&gt;
+              &lt;field-input name="first" placeholder="Enter your first name" /&gt;
+            &lt;/form-control&gt;
+            &lt;form-control class="py-5" label="Last Name*" error="Last name is required"&gt;
+              &lt;field-input name="last" placeholder="Enter your last name" error /&gt;
+            &lt;/form-control&gt;
+            &lt;form-control class="py-5" label="Email"&gt;
+              &lt;field-input name="email" placeholder="Enter your email" type="email" /&gt;
             &lt;/form-control&gt;
           </ide-code>
 
-          <!-- Control with Checkbox -->
-          <a name="controlWithCheckbox"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Control with Checkbox</h2>
-          <div class="mb-10">A control wrapping a checkbox with a label and error feedback.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <form-control label="Agree to Terms" error="Must agree">
-                <field-checkbox name="terms" value="yes"></field-checkbox>
-              </form-control>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;form-control label="Agree to Terms" error="Must agree"&gt;
-              &lt;field-checkbox name="terms" value="yes" /&gt;
-            &lt;/form-control&gt;
-          </ide-code>
-
-          <!-- Control with Select -->
-          <a name="controlWithSelect"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Control with Select</h2>
-          <div class="mb-10">A control with a dropdown select input.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <form-control label="Country" class="w-200">
-                <field-select name="country">
-                  <option value="">Select a country</option>
-                  <option value="us">United States</option>
-                  <option value="ca">Canada</option>
-                </field-select>
-              </form-control>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;form-control label="Country" class="w-200"&gt;
-              &lt;field-select name="country"&gt;
-                &lt;option value=""&gt;Select a country&lt;/option&gt;
-                &lt;option value="us"&gt;United States&lt;/option&gt;
-                &lt;option value="ca"&gt;Canada&lt;/option&gt;
-              &lt;/field-select&gt;
-            &lt;/form-control&gt;
-          </ide-code>
-
-          <!-- Navigation -->
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/form/button.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Buttons
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Button
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/form/fieldset.html">
-              Fieldset
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Fieldset<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

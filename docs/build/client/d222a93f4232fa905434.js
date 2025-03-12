@@ -4896,7 +4896,7 @@ var InkAPI = (() => {
     }
   });
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\format\index.ink
+  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\format\index.ink
   var format_exports = {};
   __export(format_exports, {
     BUILD_ID: () => BUILD_ID,
@@ -4913,7 +4913,7 @@ var InkAPI = (() => {
   var import_Emitter = __toESM(require_Emitter());
   var import_data = __toESM(require_data());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\docs.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\api\docs.ink
   var import_Registry = __toESM(require_Registry());
   var import_Component = __toESM(require_Component());
   var import_ink = __toESM(require_ink());
@@ -4942,7 +4942,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
   var import_Registry2 = __toESM(require_Registry());
   var import_Component2 = __toESM(require_Component());
 
@@ -4958,7 +4958,7 @@ var InkAPI = (() => {
     return phrase;
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
   var Translate_794a00a5e900fca28310 = class extends import_Component2.default {
     static id = "794a00a5e900fca28310";
     static tagname = "translate";
@@ -5034,7 +5034,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\panel.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\panel.ink
   var import_Registry3 = __toESM(require_Registry());
   var import_Component3 = __toESM(require_Component());
   var Panel_c4c96a14064fc0c4d224 = class extends import_Component3.default {
@@ -5195,7 +5195,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\code.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\code.ink
   var import_Registry4 = __toESM(require_Registry());
   var import_Component4 = __toESM(require_Component());
   var import_prismjs = __toESM(require_prism());
@@ -5382,7 +5382,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\color.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\color.ink
   var import_Registry5 = __toESM(require_Registry());
   var import_Component5 = __toESM(require_Component());
   var import_StyleSet = __toESM(require_StyleSet());
@@ -5447,7 +5447,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\country.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\country.ink
   var import_Registry6 = __toESM(require_Registry());
   var import_Component6 = __toESM(require_Component());
   var import_StyleSet2 = __toESM(require_StyleSet());
@@ -7660,7 +7660,7 @@ var InkAPI = (() => {
     }
   ];
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\country.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\country.ink
   var Country_84527986f2bf5b7ba376 = class extends import_Component6.default {
     static id = "84527986f2bf5b7ba376";
     static tagname = "country";
@@ -7671,7 +7671,7 @@ var InkAPI = (() => {
     template() {
       const { value } = this.props;
       let { flag, text } = this.propsTree;
-      if (!flag && text !== false) {
+      if (flag === void 0 && text !== false) {
         flag = {};
         text = true;
       }
@@ -7726,7 +7726,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\currency.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\currency.ink
   var import_Registry7 = __toESM(require_Registry());
   var import_Component7 = __toESM(require_Component());
   var import_StyleSet3 = __toESM(require_StyleSet());
@@ -7799,7 +7799,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\date.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\date.ink
   var import_Registry8 = __toESM(require_Registry());
   var import_Component8 = __toESM(require_Component());
   var import_StyleSet4 = __toESM(require_StyleSet());
@@ -7860,7 +7860,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\email.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\email.ink
   var import_Registry9 = __toESM(require_Registry());
   var import_Component9 = __toESM(require_Component());
   var import_StyleSet5 = __toESM(require_StyleSet());
@@ -7903,7 +7903,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\formula.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\formula.ink
   var import_Registry10 = __toESM(require_Registry());
   var import_Component10 = __toESM(require_Component());
   var import_StyleSet6 = __toESM(require_StyleSet());
@@ -7947,7 +7947,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\html.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\html.ink
   var import_Registry11 = __toESM(require_Registry());
   var import_Component11 = __toESM(require_Component());
   var import_dompurify = __toESM(require_purify());
@@ -7971,7 +7971,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\image.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\image.ink
   var import_Registry12 = __toESM(require_Registry());
   var import_Component12 = __toESM(require_Component());
   var import_StyleSet7 = __toESM(require_StyleSet());
@@ -8006,7 +8006,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\imagelist.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\imagelist.ink
   var import_Registry13 = __toESM(require_Registry());
   var import_Component13 = __toESM(require_Component());
   var import_StyleSet8 = __toESM(require_StyleSet());
@@ -8047,7 +8047,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\json.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\json.ink
   var import_Registry14 = __toESM(require_Registry());
   var import_Component14 = __toESM(require_Component());
   var import_StyleSet9 = __toESM(require_StyleSet());
@@ -8083,7 +8083,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\link.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\link.ink
   var import_Registry15 = __toESM(require_Registry());
   var import_Component15 = __toESM(require_Component());
   var import_StyleSet10 = __toESM(require_StyleSet());
@@ -8126,7 +8126,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\list.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\list.ink
   var import_Registry16 = __toESM(require_Registry());
   var import_Component16 = __toESM(require_Component());
   var import_StyleSet11 = __toESM(require_StyleSet());
@@ -8198,7 +8198,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\markdown.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\markdown.ink
   var import_Registry17 = __toESM(require_Registry());
   var import_Component17 = __toESM(require_Component());
   var import_StyleSet12 = __toESM(require_StyleSet());
@@ -10274,7 +10274,7 @@ ${text}</tr>
   var parser = _Parser.parse;
   var lexer = _Lexer.lex;
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\markdown.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\markdown.ink
   var import_dompurify2 = __toESM(require_purify());
   var Markdown_a2de941906c20b78a444 = class extends import_Component17.default {
     static id = "a2de941906c20b78a444";
@@ -10299,7 +10299,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\metadata.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\metadata.ink
   var import_Registry18 = __toESM(require_Registry());
   var import_Component18 = __toESM(require_Component());
   var import_StyleSet13 = __toESM(require_StyleSet());
@@ -10399,10 +10399,10 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
   var import_Component24 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\table.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\table.ink
   var import_Registry19 = __toESM(require_Registry());
   var import_Component19 = __toESM(require_Component());
   var import_StyleSet14 = __toESM(require_StyleSet());
@@ -10426,15 +10426,15 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
   var import_Registry24 = __toESM(require_Registry());
   var import_StyleSet19 = __toESM(require_StyleSet());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
   var import_Registry21 = __toESM(require_Registry());
   var import_Component21 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\row.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\row.ink
   var import_Registry20 = __toESM(require_Registry());
   var import_Component20 = __toESM(require_Component());
   var import_StyleSet15 = __toESM(require_StyleSet());
@@ -10457,7 +10457,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
   var import_StyleSet16 = __toESM(require_StyleSet());
   var Thead_afbcee18613ce58fb77c = class extends import_Component21.default {
     static id = "afbcee18613ce58fb77c";
@@ -10480,7 +10480,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
   var import_Registry22 = __toESM(require_Registry());
   var import_Component22 = __toESM(require_Component());
   var import_StyleSet17 = __toESM(require_StyleSet());
@@ -10503,7 +10503,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
   var import_Registry23 = __toESM(require_Registry());
   var import_Component23 = __toESM(require_Component());
   var import_StyleSet18 = __toESM(require_StyleSet());
@@ -10528,7 +10528,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
   var Table_02bc3cbacda5727a0af3 = class extends import_Component24.default {
     static id = "02bc3cbacda5727a0af3";
     static tagname = "table";
@@ -10676,7 +10676,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\col.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\col.ink
   var import_Registry25 = __toESM(require_Registry());
   var import_Component25 = __toESM(require_Component());
   var import_StyleSet20 = __toESM(require_StyleSet());
@@ -10748,7 +10748,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\number.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\number.ink
   var import_Registry26 = __toESM(require_Registry());
   var import_Component26 = __toESM(require_Component());
   var import_StyleSet21 = __toESM(require_StyleSet());
@@ -10792,7 +10792,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\overflow.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\overflow.ink
   var import_Registry27 = __toESM(require_Registry());
   var import_Component27 = __toESM(require_Component());
   var import_StyleSet22 = __toESM(require_StyleSet());
@@ -10841,7 +10841,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\phone.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\phone.ink
   var import_Registry28 = __toESM(require_Registry());
   var import_Component28 = __toESM(require_Component());
   var import_StyleSet23 = __toESM(require_StyleSet());
@@ -10884,7 +10884,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\rating.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\rating.ink
   var import_Registry29 = __toESM(require_Registry());
   var import_Component29 = __toESM(require_Component());
   var import_StyleSet24 = __toESM(require_StyleSet());
@@ -10936,7 +10936,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\separated.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\separated.ink
   var import_Registry30 = __toESM(require_Registry());
   var import_Component30 = __toESM(require_Component());
   var import_StyleSet25 = __toESM(require_StyleSet());
@@ -10988,7 +10988,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\table.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\table.ink
   var import_Registry31 = __toESM(require_Registry());
   var import_Component31 = __toESM(require_Component());
   var import_StyleSet26 = __toESM(require_StyleSet());
@@ -11144,11 +11144,11 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\taglist.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\taglist.ink
   var import_Registry33 = __toESM(require_Registry());
   var import_Component33 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\badge.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\badge.ink
   var import_Registry32 = __toESM(require_Registry());
   var import_Component32 = __toESM(require_Component());
   var import_StyleSet27 = __toESM(require_StyleSet());
@@ -11196,7 +11196,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\taglist.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\taglist.ink
   var import_StyleSet28 = __toESM(require_StyleSet());
   var import_display19 = __toESM(require_display());
   var Taglist_bc16ceebd2a003958ea6 = class extends import_Component33.default {
@@ -11244,7 +11244,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\text.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\text.ink
   var import_Registry34 = __toESM(require_Registry());
   var import_Component34 = __toESM(require_Component());
   var import_StyleSet29 = __toESM(require_StyleSet());
@@ -11283,7 +11283,7 @@ ${text}</tr>
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\format\yesno.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\format\yesno.ink
   var import_Registry35 = __toESM(require_Registry());
   var import_Component35 = __toESM(require_Component());
   var import_StyleSet30 = __toESM(require_StyleSet());
@@ -11314,7 +11314,7 @@ ${text}</tr>
     }
   };
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\format\index.ink
+  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\format\index.ink
   var import_ink2 = __toESM(require_ink());
   var TemplateDocument = class _TemplateDocument extends import_Document2.default {
     static sync() {

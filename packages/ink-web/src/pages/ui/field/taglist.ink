@@ -332,7 +332,7 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Muted Taglist with String Input')}</h2>
           <div class="mb-10">{_('A taglist with muted color theme using a comma-separated string input.')}</div>
           <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
+          <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
               <field-taglist 
                 name="labels" 
                 placeholder="Add labels..." 

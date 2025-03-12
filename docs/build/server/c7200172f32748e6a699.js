@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\form\control.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\control.ink
   var control_exports = {};
   __export(control_exports, {
     default: () => Control_c7200172f32748e6a699
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\form\control.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\control.ink
   var Control_c7200172f32748e6a699 = class extends import_Document2.default {
     id() {
       return "c7200172f32748e6a699";
@@ -820,9 +820,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
   @ink utilities;`;
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/components/control.html";
+      const title = _("Ink UI - Form Control Component");
+      const description = _("A wrapper component for form fields with labels and error messages.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -830,8 +830,8 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Form", href: "/ink/ui/form/index.html" },
-        { label: "Control" }
+        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
+        { label: "Form Control" }
       ];
       return [
         import_Document.default.createText(`
@@ -1464,7 +1464,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -1477,7 +1477,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -1501,19 +1501,15 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Control` }, [
-                      ...this._toNodeList(_("Control"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#control` }, [
+                      ...this._toNodeList(_("Form Control"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1526,33 +1522,21 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basicControl` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Basic Control"))
+                        ...this._toNodeList(_("Basic Usage"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#controlWithError` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#error` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Control with Error"))
+                        ...this._toNodeList(_("Error State"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#controlWithoutLabel` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#combined` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Control without Label"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#controlWithCheckbox` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Control with Checkbox"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#controlWithSelect` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Control with Select"))
+                        ...this._toNodeList(_("Combined Fields"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1584,15 +1568,15 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `Control` }, []),
+                  import_Document.default.createElement("a", { "name": `control` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Control"))
+                    ...this._toNodeList(_("Form Control"))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Form Control`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
@@ -1605,7 +1589,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Props Section -->
           `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
@@ -1615,11 +1598,11 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Property"))
+                      ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1637,7 +1620,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1658,13 +1640,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Text for the label above the slotted content. Omitted if empty or falsy."))
+                        ...this._toNodeList(_("Text for the field label"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1685,61 +1666,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Error message below the slotted content. Shown only if non-empty; sets host color to var(--error) (red)."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`class`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Custom CSS classes applied to the host element (e.g., "py-5 tx-bold").'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`style`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Inline styles applied to the host element (e.g., "border: 1px solid red").'))
+                        ...this._toNodeList(_("Error message; sets text color to var(--error) if present"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1749,34 +1676,27 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Basic Control -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `basicControl` }, []),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Basic Control"))
+                    ...this._toNodeList(_("Basic Usage"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A simple control with a label and an input field."))
+                    import_Document.default.createText(`A simple form control with a label and input.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("form-control", { "label": `First Name` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("form-control", { "label": `Email` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("field-input", { "name": `email`, "placeholder": `Enter your email` }),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
+                      import_Document.default.createElement("field-input", { "name": `first`, "placeholder": `Enter your first name` }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -1785,43 +1705,36 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <form-control label="Email">
-              <field-input name="email" placeholder="Enter your email" />
+            <form-control label="First Name">
+              <field-input name="first" placeholder="Enter your first name" />
             </form-control>
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Control with Error -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `controlWithError` }, []),
+                  import_Document.default.createElement("a", { "name": `error` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Control with Error"))
+                    ...this._toNodeList(_("Error State"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A control displaying an error message below the input."))
+                    import_Document.default.createText(`Display an error message below the field.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("form-control", { "class": `py-5`, "label": `First Name*`, "error": `Some Error` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("form-control", { "class": `py-5`, "label": `First Name*`, "error": `Some Error` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("field-input", { "name": `first`, "placeholder": `Enter your first name`, "error": true }),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
+                      import_Document.default.createElement("field-input", { "name": `first`, "placeholder": `Enter your first name`, "error": true }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -1830,7 +1743,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <form-control class="py-5" label="First Name*" error="Some Error">
               <field-input name="first" placeholder="Enter your first name" error />
@@ -1839,34 +1752,45 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Control without Label -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `controlWithoutLabel` }, []),
+                  import_Document.default.createElement("a", { "name": `combined` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Control without Label"))
+                    ...this._toNodeList(_("Combined Fields"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A control with no label, only an input and optional error."))
+                    import_Document.default.createText(`Multiple controls in a form with varying states.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
+                    import_Document.default.createElement("form-control", { "class": `py-5`, "label": `First Name*` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("form-control", { "error": `Required` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("field-input", { "name": `phone`, "placeholder": `Enter phone number` }),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
+                      import_Document.default.createElement("field-input", { "name": `first`, "placeholder": `Enter your first name` }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("form-control", { "class": `py-5`, "label": `Last Name*`, "error": `Last name is required` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("field-input", { "name": `last`, "placeholder": `Enter your last name`, "error": true }),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("form-control", { "class": `py-5`, "label": `Email` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("field-input", { "name": `email`, "placeholder": `Enter your email`, "type": `email` }),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -1875,128 +1799,21 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <form-control error="Required">
-              <field-input name="phone" placeholder="Enter phone number" />
+            <form-control class="py-5" label="First Name*">
+              <field-input name="first" placeholder="Enter your first name" />
+            </form-control>
+            <form-control class="py-5" label="Last Name*" error="Last name is required">
+              <field-input name="last" placeholder="Enter your last name" error />
+            </form-control>
+            <form-control class="py-5" label="Email">
+              <field-input name="email" placeholder="Enter your email" type="email" />
             </form-control>
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Control with Checkbox -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `controlWithCheckbox` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Control with Checkbox"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A control wrapping a checkbox with a label and error feedback."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("form-control", { "label": `Agree to Terms`, "error": `Must agree` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("field-checkbox", { "name": `terms`, "value": `yes` }),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <form-control label="Agree to Terms" error="Must agree">
-              <field-checkbox name="terms" value="yes" />
-            </form-control>
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Control with Select -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `controlWithSelect` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Control with Select"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A control with a dropdown select input."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("form-control", { "label": `Country`, "class": `w-200` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("field-select", { "name": `country` }, [
-                          import_Document.default.createText(`
-                  `, false),
-                          import_Document.default.createElement("option", { "value": `` }, [
-                            import_Document.default.createText(`Select a country`, false)
-                          ]),
-                          import_Document.default.createText(`
-                  `, false),
-                          import_Document.default.createElement("option", { "value": `us` }, [
-                            import_Document.default.createText(`United States`, false)
-                          ]),
-                          import_Document.default.createText(`
-                  `, false),
-                          import_Document.default.createElement("option", { "value": `ca` }, [
-                            import_Document.default.createText(`Canada`, false)
-                          ]),
-                          import_Document.default.createText(`
-                `, false)
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <form-control label="Country" class="w-200">
-              <field-select name="country">
-                <option value="">Select a country</option>
-                <option value="us">United States</option>
-                <option value="ca">Canada</option>
-              </field-select>
-            </form-control>
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Navigation -->
           `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
@@ -2005,9 +1822,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Buttons")),
+                      ...this._toNodeList(_("Button")),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -2017,8 +1832,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       ...this._toNodeList(_("Fieldset")),
-                      import_Document.default.createText(`
-              `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

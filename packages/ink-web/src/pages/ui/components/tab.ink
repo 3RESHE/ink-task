@@ -6,15 +6,12 @@
 <link rel="import" type="component" href="@/components/ide/code.ink" name="ide-code" />
 <link rel="import" type="component" href="@/components/i18n/translate.ink" name="i18n-translate" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/panel.ink" name="panel-layout" />
-<link rel="import" type="component" href="@stackpress/ink-ui/element/alert.ink" name="element-alert" />
 <link rel="import" type="component" href="@stackpress/ink-ui/element/icon.ink" name="element-icon" />
 <link rel="import" type="component" href="@stackpress/ink-ui/element/crumbs.ink" name="element-crumbs" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table.ink" name="layout-table" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table/head.ink" name="table-head" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table/row.ink" name="table-row" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table/col.ink" name="table-col" />
-<link rel="import" type="component" href="@stackpress/ink-ui/element/badge.ink" name="element-badge" />
-<link rel="import" type="component" href="@stackpress/ink-ui/element/progress.ink" name="element-progress" />
 <link rel="import" type="component" href="@stackpress/ink-ui/element/tab.ink" name="element-tab" />
 
 <style>
@@ -28,9 +25,9 @@
   import { env } from '@stackpress/ink';
   import { _ } from '@/components/i18n';
 
-  const url = '/ink/panel.html';
-  const title = _('Ink UI - Web Components Meets Atomic Styles.');
-  const description = _('Ink UI atomically generates CSS styles and provides out of box web components.');
+  const url = '/ink/ui/components/tab.html';
+  const title = _('Ink UI - Tab Component');
+  const description = _('A tab component for switching between content sections.');
   
   const toggle = () => {
     document.querySelector('panel-layout').toggle('left');
@@ -50,353 +47,253 @@
     <panel-layout>
       <header><html-header /></header>
       <aside left><html-aside /></aside>
-
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            {_('On this page')}
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">{_('On this page')}</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#pager">{_('Tab')}</a>
+            <a class="block tx-t-0" href="#tab">{_('Tab')}</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• {_('Props')}</a>
-              <a class="block tx-t-1" href="#TabExamples">• {_('Tab Examples')}</a>
-              <a class="block tx-t-1" href="#HorizontalTabsWithDifferentActiveState">• {_('Horizontal Tabs with Different Active State')}</a>
-              <a class="block tx-t-1" href="#CustomStyleTabs">• {_('Custom Style Tabs')}</a>
+              <a class="block tx-t-1" href="#basic">• {_('Basic Usage')}</a>
+              <a class="block tx-t-1" href="#styling">• {_('Styling')}</a>
+              <a class="block tx-t-1" href="#multiple">• {_('Multiple Groups')}</a>
             </nav>
           </nav>
         </menu>
       </aside>
-
       <main>
         <api-docs>
           <nav class="p-10 bg-t-3 sticky top-0 z-50">
-            <element-crumbs 
-              crumbs={crumbs} 
-              block 
-              bold 
-              white 
-              sep-muted
-              link-primary
-              spacing={2}
-            />
+            <element-crumbs crumbs={crumbs} block bold white sep-muted link-primary spacing={2} />
           </nav>
 
-          <a name="pager"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">
-            {_('Tab')}
-          </h1>
-          <ide-app title="Editor" class="py-20">
-            <ide-code class="scroll-y-auto" lang="js" trim>
+          <a name="tab"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">{_('Tab')}</h1>
+          <ide-app title="Tab" class="py-20">
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
               import Tab from '@stackpress/ink-ui/element/tab';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Props')}</h2>
-          <layout-table 
-            top
-            head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
-            body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" 
-            odd="bg-t-0"
-            even="bg-t-1"
-          >
-            <table-head>{_('Property')}</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>{_('Name')}</table-head>
             <table-head>{_('Type')}</table-head>
             <table-head>{_('Required')}</table-head>
             <table-head>{_('Notes')}</table-head>
-
             <table-row>
               <table-col>group</table-col>
               <table-col>String</table-col>
               <table-col>Yes</table-col>
-              <table-col>{_('Groups tabs together. Only one tab in a group can be active at a time. Must be unique per tab set (e.g., "http", "user").')}</table-col>
+              <table-col>{_('Groups tabs together; only one tab per group can be active')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>selector</table-col>
               <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>{_('CSS selector for content to show/hide when this tab is active (e.g., "#user-profile"). Leave empty if no content is controlled.')}</table-col>
+              <table-col>Yes</table-col>
+              <table-col>{_('CSS selector for content to show/hide (e.g., "#content-id")')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>active</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Space-separated class names applied when the tab is active (e.g., "bg-black tx-white"). Use atomic styles for customization.')}</table-col>
+              <table-col>{_('Space-separated classes for active state (default: "")')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>inactive</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Space-separated class names applied when the tab is inactive (e.g., "bg-t-1 tx-muted"). Contrasts with `active` for visual feedback.')}</table-col>
+              <table-col>{_('Space-separated classes for inactive state (default: "")')}</table-col>
             </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>{_('Inline CSS for the tab’s `<a>` element (e.g., "padding: 12px;"). Overrides default styles like `height: 100%`.')}</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>class</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>{_('Additional class names for the `<a>` element. Complements `active`/`inactive` classes.')}</table-col>
-            </table-row>
-
             <table-row>
               <table-col>on</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Sets the tab as active on mount. Only one tab per group should have `on`. Use as an attribute (e.g., `on=""`).')}</table-col>
+              <table-col>{_('Sets tab as initially active')}</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Tab Examples -->
-          <a name="TabExamples"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Tab Examples')}</h2>
-          <div class="mb-10">
-            {_('Tabs group related content and toggle visibility using the `selector` prop. The `active` and `inactive` props style the tab states. Below are examples of horizontal tab layouts with content control.')}
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Basic Usage')}</h2>
+          <div class="mb-10">Basic tab setup with content switching.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <div class="flex">
+              <element-tab group="basic" selector="#tab1-content" on class="p-10">Tab 1</element-tab>
+              <element-tab group="basic" selector="#tab2-content" class="p-10">Tab 2</element-tab>
+            </div>
+            <div id="tab1-content" class="p-10 bg-t-1">Content for Tab 1</div>
+            <div id="tab2-content" class="p-10 bg-t-1" style="display: none;">Content for Tab 2</div>
           </div>
-
-          <div class="bg-t-3 h-120 flex flex-center">
-            <element-tab 
-              on
-              class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-              active="bg-black tx-white"
-              inactive="bg-t-1 tx-muted"  
-              group="http" 
-              selector="#http-index-ts"
-            >
-              Index.ts
-            </element-tab>
-            <element-tab 
-              class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-              active="bg-black tx-white"
-              inactive="bg-t-1 tx-muted"  
-              group="http" 
-              selector="#http-page-ink"
-            >
-              Page.ink
-            </element-tab>
-            <element-tab 
-              class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-              active="bg-black tx-white"
-              inactive="bg-t-1 tx-muted"  
-              group="http" 
-              selector="#http-package-json"
-            >
-              Package.json
-            </element-tab>
-          </div>
-          <div id="http-index-ts" class="p-10 bg-t-1">Content for Index.ts</div>
-          <div id="http-page-ink" class="p-10 bg-t-1" style="display: none;">Content for Page.ink</div>
-          <div id="http-package-json" class="p-10 bg-t-1" style="display: none;">Content for Package.json</div>
-
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="flex">
+              <element-tab group="basic" selector="#tab1-content" on class="p-10">Tab 1</element-tab>
+              <element-tab group="basic" selector="#tab2-content" class="p-10">Tab 2</element-tab>
+            </div>
+            <div id="tab1-content" class="p-10 bg-t-1">Content for Tab 1</div>
+            <div id="tab2-content" class="p-10 bg-t-1" style="display: none;">Content for Tab 2</div>
+          `}</ide-code>
+
+          <a name="styling"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Styling')}</h2>
+          <div class="mb-10">Customize active and inactive states with classes.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <div class="flex">
               <element-tab 
                 on
                 class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
                 active="bg-black tx-white"
                 inactive="bg-t-1 tx-muted"  
-                group="http" 
-                selector="#http-index-ts"
-              >
-                Index.ts
-              </element-tab>
+                group="styled" 
+                selector="#styled-tab1"
+              >Tab 1</element-tab>
               <element-tab 
                 class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
                 active="bg-black tx-white"
                 inactive="bg-t-1 tx-muted"  
-                group="http" 
-                selector="#http-page-ink"
-              >
-                Page.ink
-              </element-tab>
+                group="styled" 
+                selector="#styled-tab2"
+              >Tab 2</element-tab>
               <element-tab 
                 class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
                 active="bg-black tx-white"
                 inactive="bg-t-1 tx-muted"  
-                group="http" 
-                selector="#http-package-json"
-              >
-                Package.json
-              </element-tab>
+                group="styled" 
+                selector="#styled-tab3"
+              >Tab 3</element-tab>
             </div>
-            <div id="http-index-ts" class="p-10 bg-t-1">Content for Index.ts</div>
-            <div id="http-page-ink" class="p-10 bg-t-1" style="display: none;">Content for Page.ink</div>
-            <div id="http-package-json" class="p-10 bg-t-1" style="display: none;">Content for Package.json</div>
-          `}</ide-code>
-
-          <!-- Horizontal Tabs with Different Active State -->
-          <a name="HorizontalTabsWithDifferentActiveState"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Horizontal Tabs with Different Active State')}</h2>
-          <div class="mb-10">
-            {_('This example uses a red active state for a "user" group, with content toggling between profile, settings, and notifications.')}
+            <div id="styled-tab1" class="p-10 bg-t-1">Content for Tab 1</div>
+            <div id="styled-tab2" class="p-10 bg-t-1" style="display: none;">Content for Tab 2</div>
+            <div id="styled-tab3" class="p-10 bg-t-1" style="display: none;">Content for Tab 3</div>
           </div>
-
-          <div class="bg-t-3 h-120 flex flex-center">
-            <element-tab 
-              on
-              class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-              active="bg-red-500 tx-white"
-              inactive="bg-gray-300 tx-muted"  
-              group="user" 
-              selector="#user-profile"
-            >
-              Profile
-            </element-tab>
-            <element-tab 
-              class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-              active="bg-red-500 tx-white"
-              inactive="bg-gray-300 tx-muted"  
-              group="user" 
-              selector="#user-settings"
-            >
-              Settings
-            </element-tab>
-            <element-tab 
-              class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-              active="bg-red-500 tx-white"
-              inactive="bg-gray-300 tx-muted"  
-              group="user" 
-              selector="#user-notifications"
-            >
-              Notifications
-            </element-tab>
-          </div>
-          <div id="user-profile" class="p-10 bg-t-1">User Profile Content</div>
-          <div id="user-settings" class="p-10 bg-t-1" style="display: none;">Settings Content</div>
-          <div id="user-notifications" class="p-10 bg-t-1" style="display: none;">Notifications Content</div>
-
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="flex">
               <element-tab 
                 on
                 class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-                active="bg-red-500 tx-white"
-                inactive="bg-gray-300 tx-muted"  
-                group="user" 
-                selector="#user-profile"
-              >
-                Profile
-              </element-tab>
+                active="bg-black tx-white"
+                inactive="bg-t-1 tx-muted"  
+                group="styled" 
+                selector="#styled-tab1"
+              >Tab 1</element-tab>
               <element-tab 
                 class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-                active="bg-red-500 tx-white"
-                inactive="bg-gray-300 tx-muted"  
-                group="user" 
-                selector="#user-settings"
-              >
-                Settings
-              </element-tab>
+                active="bg-black tx-white"
+                inactive="bg-t-1 tx-muted"  
+                group="styled" 
+                selector="#styled-tab2"
+              >Tab 2</element-tab>
               <element-tab 
                 class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-                active="bg-red-500 tx-white"
-                inactive="bg-gray-300 tx-muted"  
-                group="user" 
-                selector="#user-notifications"
-              >
-                Notifications
-              </element-tab>
+                active="bg-black tx-white"
+                inactive="bg-t-1 tx-muted"  
+                group="styled" 
+                selector="#styled-tab3"
+              >Tab 3</element-tab>
             </div>
-            <div id="user-profile" class="p-10 bg-t-1">User Profile Content</div>
-            <div id="user-settings" class="p-10 bg-t-1" style="display: none;">Settings Content</div>
-            <div id="user-notifications" class="p-10 bg-t-1" style="display: none;">Notifications Content</div>
+            <div id="styled-tab1" class="p-10 bg-t-1">Content for Tab 1</div>
+            <div id="styled-tab2" class="p-10 bg-t-1" style="display: none;">Content for Tab 2</div>
+            <div id="styled-tab3" class="p-10 bg-t-1" style="display: none;">Content for Tab 3</div>
           `}</ide-code>
 
-          <!-- Custom Style Tabs -->
-          <a name="CustomStyleTabs"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Custom Style Tabs')}</h2>
-          <div class="mb-10">
-            {_('Use the `style` prop for inline CSS overrides, combined with `active`/`inactive` classes for state-specific styling. This example adds rounded corners and custom padding.')}
+          <a name="multiple"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Multiple Groups')}</h2>
+          <div class="mb-10">Use different groups to manage separate tab sets.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <div class="mb-20">
+              <div class="flex">
+                <element-tab 
+                  on
+                  class="p-10 bg-t-2 tx-primary mr-5 rounded-t"
+                  active="bg-primary tx-white"
+                  inactive="bg-t-2 tx-muted"  
+                  group="group1" 
+                  selector="#group1-tab1"
+                >Group 1 - Tab 1</element-tab>
+                <element-tab 
+                  class="p-10 bg-t-2 tx-primary mr-5 rounded-t"
+                  active="bg-primary tx-white"
+                  inactive="bg-t-2 tx-muted"  
+                  group="group1" 
+                  selector="#group1-tab2"
+                >Group 1 - Tab 2</element-tab>
+              </div>
+              <div id="group1-tab1" class="p-10 bg-t-1">Content for Group 1 - Tab 1</div>
+              <div id="group1-tab2" class="p-10 bg-t-1" style="display: none;">Content for Group 1 - Tab 2</div>
+            </div>
+            <div>
+              <div class="flex">
+                <element-tab 
+                  on
+                  class="p-10 bg-t-2 tx-primary mr-5 rounded-t"
+                  active="bg-success tx-white"
+                  inactive="bg-t-2 tx-muted"  
+                  group="group2" 
+                  selector="#group2-tab1"
+                >Group 2 - Tab 1</element-tab>
+                <element-tab 
+                  class="p-10 bg-t-2 tx-primary mr-5 rounded-t"
+                  active="bg-success tx-white"
+                  inactive="bg-t-2 tx-muted"  
+                  group="group2" 
+                  selector="#group2-tab2"
+                >Group 2 - Tab 2</element-tab>
+              </div>
+              <div id="group2-tab1" class="p-10 bg-t-1">Content for Group 2 - Tab 1</div>
+              <div id="group2-tab2" class="p-10 bg-t-1" style="display: none;">Content for Group 2 - Tab 2</div>
+            </div>
           </div>
-
-          <div class="bg-t-3 h-120 flex flex-center">
-            <element-tab 
-              on
-              style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-              active="bg-green-500 tx-white"
-              inactive="bg-gray-300 tx-primary"  
-              group="custom" 
-              selector="#custom-tab-1"
-            >
-              Tab A
-            </element-tab>
-            <element-tab 
-              style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-              active="bg-green-500 tx-white"
-              inactive="bg-gray-300 tx-primary"  
-              group="custom" 
-              selector="#custom-tab-2"
-            >
-              Tab B
-            </element-tab>
-            <element-tab 
-              style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-              active="bg-green-500 tx-white"
-              inactive="bg-gray-300 tx-primary"  
-              group="custom" 
-              selector="#custom-tab-3"
-            >
-              Tab C
-            </element-tab>
-          </div>
-          <div id="custom-tab-1" class="p-10 bg-t-1">Content for Tab A</div>
-          <div id="custom-tab-2" class="p-10 bg-t-1" style="display: none;">Content for Tab B</div>
-          <div id="custom-tab-3" class="p-10 bg-t-1" style="display: none;">Content for Tab C</div>
-
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <div class="bg-t-3 h-120 flex flex-center">
-              <element-tab 
-                on
-                style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-                active="bg-green-500 tx-white"
-                inactive="bg-gray-300 tx-primary"  
-                group="custom" 
-                selector="#custom-tab-1"
-              >
-                Tab A
-              </element-tab>
-              <element-tab 
-                style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-                active="bg-green-500 tx-white"
-                inactive="bg-gray-300 tx-primary"  
-                group="custom" 
-                selector="#custom-tab-2"
-              >
-                Tab B
-              </element-tab>
-              <element-tab 
-                style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-                active="bg-green-500 tx-white"
-                inactive="bg-gray-300 tx-primary"  
-                group="custom" 
-                selector="#custom-tab-3"
-              >
-                Tab C
-              </element-tab>
+            <div class="mb-20">
+              <div class="flex">
+                <element-tab 
+                  on
+                  class="p-10 bg-t-2 tx-primary mr-5 rounded-t"
+                  active="bg-primary tx-white"
+                  inactive="bg-t-2 tx-muted"  
+                  group="group1" 
+                  selector="#group1-tab1"
+                >Group 1 - Tab 1</element-tab>
+                <element-tab 
+                  class="p-10 bg-t-2 tx-primary mr-5 rounded-t"
+                  active="bg-primary tx-white"
+                  inactive="bg-t-2 tx-muted"  
+                  group="group1" 
+                  selector="#group1-tab2"
+                >Group 1 - Tab 2</element-tab>
+              </div>
+              <div id="group1-tab1" class="p-10 bg-t-1">Content for Group 1 - Tab 1</div>
+              <div id="group1-tab2" class="p-10 bg-t-1" style="display: none;">Content for Group 1 - Tab 2</div>
             </div>
-            <div id="custom-tab-1" class="p-10 bg-t-1">Content for Tab A</div>
-            <div id="custom-tab-2" class="p-10 bg-t-1" style="display: none;">Content for Tab B</div>
-            <div id="custom-tab-3" class="p-10 bg-t-1" style="display: none;">Content for Tab C</div>
+            <div>
+              <div class="flex">
+                <element-tab 
+                  on
+                  class="p-10 bg-t-2 tx-primary mr-5 rounded-t"
+                  active="bg-success tx-white"
+                  inactive="bg-t-2 tx-muted"  
+                  group="group2" 
+                  selector="#group2-tab1"
+                >Group 2 - Tab 1</element-tab>
+                <element-tab 
+                  class="p-10 bg-t-2 tx-primary mr-5 rounded-t"
+                  active="bg-success tx-white"
+                  inactive="bg-t-2 tx-muted"  
+                  group="group2" 
+                  selector="#group2-tab2"
+                >Group 2 - Tab 2</element-tab>
+              </div>
+              <div id="group2-tab1" class="p-10 bg-t-1">Content for Group 2 - Tab 1</div>
+              <div id="group2-tab2" class="p-10 bg-t-1" style="display: none;">Content for Group 2 - Tab 2</div>
+            </div>
           `}</ide-code>
 
-          <!-- Navigation -->
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/progress.html">
-              <element-icon name="chevron-left" theme="tx-1" />
-              {_('Progress Bars')}
+              <element-icon name="chevron-left" theme="tx-1" />{_('Progress')}
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/table.html">
-              {_('Tables')}
-              <element-icon name="chevron-right" theme="tx-1" />
+              {_('Tables')}<element-icon name="chevron-right" theme="tx-1" />
             </a>
           </nav>
           <footer class="foot"></footer>

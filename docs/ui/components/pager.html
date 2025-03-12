@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Pager Component</title>
+  <meta name="description" content="A pagination component for navigating through a set of items." />
+  <meta property="og:title" content="Ink UI - Pager Component" />
+  <meta property="og:description" content="A pagination component for navigating through a set of items." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/components/pager.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Pager Component" />
+  <meta name="twitter:description" content="A pagination component for navigating through a set of items." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -142,24 +142,22 @@
   
 
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       Formats
     </a>
   
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
             <a class="block tx-t-0" href="#pager">Pager</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basic">• Basic Pagination</a>
-              <a class="block tx-t-1" href="#range-radius">• Range &amp; Radius</a>
-              <a class="block tx-t-1" href="#controls">• Navigation Controls</a>
-              <a class="block tx-t-1" href="#styling">• Styling Options</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#controls">• Controls</a>
+              <a class="block tx-t-1" href="#styling">• Styling</a>
+              <a class="block tx-t-1" href="#custom">• Customizations</a>
             </nav>
           </nav>
         </menu>
@@ -172,7 +170,7 @@
 
           <a name="pager"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">Pager</h1>
-          <ide-app title="Editor" class="py-20">
+          <ide-app title="Pager" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
               import Pager from '@stackpress/ink-ui/element/pager';
             </ide-code>
@@ -185,244 +183,282 @@
             <table-head>Type</table-head>
             <table-head>Required</table-head>
             <table-head>Notes</table-head>
-
             <table-row>
               <table-col>total</table-col>
               <table-col>Number</table-col>
               <table-col>No</table-col>
-              <table-col>Total items to paginate (default: 0)</table-col>
+              <table-col>Total number of items (default: 0)</table-col>
             </table-row>
-
             <table-row>
               <table-col>start</table-col>
               <table-col>Number</table-col>
               <table-col>No</table-col>
-              <table-col>Starting offset (default: 0)</table-col>
+              <table-col>Starting index of current range (default: 0)</table-col>
             </table-row>
-
             <table-row>
               <table-col>range</table-col>
               <table-col>Number</table-col>
               <table-col>No</table-col>
               <table-col>Items per page (default: 50)</table-col>
             </table-row>
-
             <table-row>
               <table-col>radius</table-col>
               <table-col>Number</table-col>
               <table-col>No</table-col>
-              <table-col>Pages shown around current page (default: 2)</table-col>
+              <table-col>Number of pages shown before/after current page (default: 2)</table-col>
             </table-row>
-
             <table-row>
               <table-col>next</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Show "next" button</table-col>
+              <table-col>Shows next page button</table-col>
             </table-row>
-
             <table-row>
               <table-col>prev</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Show "previous" button</table-col>
+              <table-col>Shows previous page button</table-col>
             </table-row>
-
             <table-row>
               <table-col>rewind</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Show "rewind to first" button</table-col>
+              <table-col>Shows first page button</table-col>
             </table-row>
-
             <table-row>
               <table-col>forward</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Show "forward to last" button</table-col>
+              <table-col>Shows last page button</table-col>
             </table-row>
-
             <table-row>
               <table-col>link</table-col>
               <table-col>Object</table-col>
               <table-col>No</table-col>
-              <table-col>Styles for page links (e.g., { color: "var(--primary)" })</table-col>
+              <table-col>Sets link color (e.g., { primary: true })</table-col>
             </table-row>
-
             <table-row>
               <table-col>control</table-col>
               <table-col>Object</table-col>
               <table-col>No</table-col>
-              <table-col>Styles for navigation icons (e.g., { color: "var(--info)" })</table-col>
+              <table-col>Sets control icon props (e.g., { info: true })</table-col>
             </table-row>
-
             <table-row>
               <table-col>border</table-col>
               <table-col>Object</table-col>
               <table-col>No</table-col>
-              <table-col>Border styles (e.g., { color: "var(--muted)" })</table-col>
+              <table-col>Sets border color (e.g., { black: true })</table-col>
             </table-row>
-
             <table-row>
               <table-col>background</table-col>
               <table-col>Object</table-col>
               <table-col>No</table-col>
-              <table-col>Background styles (e.g., { color: "var(--info)" })</table-col>
+              <table-col>Sets background color (e.g., { info: true })</table-col>
             </table-row>
-
             <table-row>
               <table-col>square</table-col>
               <table-col>Number</table-col>
               <table-col>No</table-col>
-              <table-col>Width/height of controls/links in pixels (default: 0, no square)</table-col>
+              <table-col>Sets width and height in pixels for square layout (default: 0)</table-col>
             </table-row>
-
             <table-row>
               <table-col>size</table-col>
-              <table-col>Number</table-col>
+              <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Custom font/icon size in pixels</table-col>
+              <table-col>Sets font size (e.g., "md", "lg")</table-col>
             </table-row>
-
             <table-row>
-              <table-col>xs, sm, md, lg, xl, xl2, xl3, xl4, xl5</table-col>
+              <table-col>xs</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Predefined size variants (escalating from extra-small to extra-large)</table-col>
+              <table-col>Sets font size to 10px</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>sm</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 12px</table-col>
+            </table-row>
+            <table-row>
+              <table-col>md</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 14px</table-col>
+            </table-row>
+            <table-row>
+              <table-col>lg</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 16px</table-col>
+            </table-row>
+            <table-row>
+              <table-col>xl</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 18px</table-col>
+            </table-row>
+            <table-row>
+              <table-col>xl2</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 20px</table-col>
+            </table-row>
+            <table-row>
+              <table-col>xl3</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 22px</table-col>
+            </table-row>
+            <table-row>
+              <table-col>xl4</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 24px</table-col>
+            </table-row>
+            <table-row>
+              <table-col>xl5</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 26px</table-col>
+            </table-row>
             <table-row>
               <table-col>color</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Default text/icon color (e.g., "red", "var(--primary)")</table-col>
+              <table-col>Sets text color (e.g., "salmon", "#ff0000")</table-col>
             </table-row>
-
             <table-row>
-              <table-col>white, black, info, warning, success, error, muted, primary, secondary</table-col>
+              <table-col>white</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Predefined color variants</table-col>
+              <table-col>Sets text color to var(--white)</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>black</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets text color to var(--black)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>info</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets text color to var(--info)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>warning</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets text color to var(--warning)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>success</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets text color to var(--success)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>error</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets text color to var(--error)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>muted</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets text color to var(--muted)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>primary</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets text color to var(--primary)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>secondary</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets text color to var(--secondary)</table-col>
+            </table-row>
             <table-row>
               <table-col>bold</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Bold text for current page</table-col>
+              <table-col>Makes current page number bold</table-col>
             </table-row>
-
             <table-row>
               <table-col>underline</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Underline page links</table-col>
+              <table-col>Underlines page links</table-col>
             </table-row>
-
             <table-row>
               <table-col>page</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Callback when a page is selected (default: no-op)</table-col>
+              <table-col>Callback function when a page is selected (receives page number)</table-col>
             </table-row>
           </layout-table>
 
           <a name="basic"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Pagination</h2>
-          <div class="mb-10">A simple pager with default settings:</div>
-
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-pager   next prev ></element-pager>
-            </div>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">Simple pagination with page numbers.</div>
+          <div class="bg-t-3 p-10">
+            <element-pager   ></element-pager>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-pager total={100} range={10} next prev page={console.log} /&gt;
-          </ide-code>
-
-          <a name="range-radius"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Range &amp; Radius</h2>
-          <div class="mb-10">Customize items per page ("range") and visible pages ("radius"):</div>
-
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-pager     next prev ></element-pager>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-pager total={500} range={100} radius={1} start={200} next prev page={console.log} /&gt;
+            &lt;element-pager total={500} range={100} start={0} /&gt;
           </ide-code>
 
           <a name="controls"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Navigation Controls</h2>
-          <div class="mb-10">Add rewind and forward buttons for full navigation:</div>
-
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-pager   rewind forward next prev ></element-pager>
-            </div>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Controls</h2>
+          <div class="mb-10">Add navigation controls for first, previous, next, and last pages.</div>
+          <div class="bg-t-3 p-10">
+            <element-pager    rewind prev next forward></element-pager>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-pager total={1000} range={50} rewind forward next prev page={console.log} /&gt;
-          </ide-code>
-
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-pager   next prev ></element-pager>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-pager total={500} range={50} next prev page={console.log} /&gt;
+            &lt;element-pager total={500} range={100} start={90} rewind prev next forward /&gt;
           </ide-code>
 
           <a name="styling"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Styling Options</h2>
-          <div class="mb-10">Style the pager with colors, borders, and square shapes:</div>
-
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-pager   next prev rewind forward     bold ></element-pager>
-            </div>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Styling</h2>
+          <div class="mb-10">Customize colors, borders, and text styles.</div>
+          <div class="bg-t-3 p-10">
+            <element-pager    white bold underline  ></element-pager>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-pager 
-              total={1000} 
-              range={50} 
-              next prev rewind forward 
-              link={{ color: 'var(--primary)' }} 
-              background={{ color: 'var(--info)' }} 
-              border={{ color: 'var(--muted)' }} 
-              square={40} 
-              bold 
-              page={console.log} 
-            /&gt;
+            &lt;element-pager total={500} range={100} start={90} white bold underline background={ { info: true } } border={ { black: true } } /&gt;
+          </ide-code>
+          <div class="bg-t-3 p-10">
+            <element-pager       ></element-pager>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-pager total={500} range={100} start={90} link={ { primary: true } } control={ { muted: true } } background={ { white: true } } border={ { muted: true } } /&gt;
           </ide-code>
 
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-pager   next prev color="var(--success)" underline  ></element-pager>
-            </div>
+          <a name="custom"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Customizations</h2>
+          <div class="mb-10">Combine size, radius, square layout, and callback functionality.</div>
+          <div class="bg-t-3 p-10">
+            <element-pager     next prev rewind forward white bold underline    ></element-pager>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-pager 
-              total={500} 
-              range={50} 
-              next prev 
-              color="var(--success)" 
-              underline 
-              square={30} 
-              page={console.log} 
-            /&gt;
+            &lt;element-pager total={500} range={100} start={90} show={3} next prev rewind forward white bold underline background={ { info: true } } border={ { black: true } } square={40} select={console.log} /&gt;
+          </ide-code>
+          <div class="bg-t-3 p-10">
+            <element-pager     lg next prev   ></element-pager>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-pager total={1000} range={200} start={400} radius={1} lg next prev background={ { muted: true } } square={30} select={console.log} /&gt;
           </ide-code>
 
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/notify.html">
-              <element-icon name="chevron-left" color="var(--tx-1)"></element-icon>
-              Notify
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Notify
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/panel.html">
-              Panels
-              <element-icon name="chevron-right" color="var(--tx-1)"></element-icon>
+              Panels<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

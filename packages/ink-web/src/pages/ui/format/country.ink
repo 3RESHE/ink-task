@@ -64,7 +64,6 @@
               <a class="block tx-t-1" href="#largeCountry">• {_('Large Country Display')}</a>
               <a class="block tx-t-1" href="#extraLargeCountry">• {_('Extra Large Country Display')}</a>
               <a class="block tx-t-1" href="#coloredCountry">• {_('Colored Country Display')}</a>
-
             </nav>
           </nav>
         </menu>
@@ -87,14 +86,16 @@
           <h1 class="tx-primary tx-upper tx-30 py-20">{_('Country')}</h1>
           <ide-app title="Country" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import Country from '@stackpress/ink-ui/format/country';
+              {`
+                import Country from '@stackpress/ink-ui/format/country';
+              `}
             </ide-code>
           </ide-app>
 
           <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Props')}</h2>
-          <p class="mb-20">{_('The `<format-country>` component displays a country flag and/or name based on a country code. Use Ink utilities via the `class` prop for responsive styling.')}</p>
+          <p class="mb-20">{_('The `<format-country>` component displays a country flag and/or name based on a country code. Use Ink utilities via the `class` prop for responsive styling. Setting `flag={false}` explicitly hides the flag, while `text={false}` hides the country name. If `flag` is an object (e.g., `{ size: "md" }`), it specifies custom sizing.')}</p>
           <layout-table 
             top
             head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
@@ -116,30 +117,30 @@
 
             <table-row>
               <table-col>flag</table-col>
-              <table-col>Object | Boolean</table-col>
+              <table-col>Boolean | Object</table-col>
               <table-col>No</table-col>
-              <table-col>{_('If true, displays the country flag. If an object, specifies sizing (e.g., `{ size: "md" }`). Defaults to false.')}</table-col>
+              <table-col>{_('If `true` or an object (e.g., `{ size: "md" }`), displays the country flag (default is enabled). If `false`, hides the flag.')}</table-col>
             </table-row>
 
             <table-row>
               <table-col>text</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('If true, displays the country name. Defaults to true.')}</table-col>
+              <table-col>{_('If `true`, displays the country name (default). If `false`, hides the name.')}</table-col>
             </table-row>
 
             <table-row>
               <table-col>flag-*</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Size modifier for the flag (e.g., "sm", "md", "lg"). Sets height (default: 16px if `flag` is true).')}</table-col>
+              <table-col>{_('Size modifier for the flag (e.g., "xs", "md", "lg"). Sets height (default: 16px if `flag` is true).')}</table-col>
             </table-row>
 
             <table-row>
               <table-col>text-*</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Size modifier for the text (e.g., "sm", "md", "lg"). Sets font-size (default: inherited if `text` is true).')}</table-col>
+              <table-col>{_('Size modifier for the text (e.g., "xs", "md", "lg"). Sets font-size (default: inherited if `text` is true).')}</table-col>
             </table-row>
 
             <table-row>
@@ -295,7 +296,6 @@
               class="p-4 tx-center bg-t-1 rounded" 
             />
           `}</ide-code>
-
 
           <!-- Navigation -->
           <nav class="flex">

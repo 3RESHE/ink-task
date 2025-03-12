@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\format\yesno.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\format\yesno.ink
   var yesno_exports = {};
   __export(yesno_exports, {
     default: () => Yesno_9b388b6f37f54ec0360f
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\format\yesno.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\format\yesno.ink
   var Yesno_9b388b6f37f54ec0360f = class extends import_Document2.default {
     id() {
       return "9b388b6f37f54ec0360f";

@@ -3498,24 +3498,6 @@ var InkAPI = (() => {
     }
   });
 
-  // ../../node_modules/@stackpress/ink-ui/utilities/style/curve.js
-  var require_curve = __commonJS({
-    "../../node_modules/@stackpress/ink-ui/utilities/style/curve.js"(exports) {
-      "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.default = curve;
-      function curve(props3, styles, initial = false, selector = ":host") {
-        const { curve: curve2, curved, rounded, pill } = props3;
-        const style = curve2 ? `${curve2}px` : curved ? "4px" : rounded ? "12px" : pill ? "10000px" : initial;
-        if (style) {
-          styles.add(selector, "border-radius", style);
-          styles.add(selector, "overflow", "hidden");
-        }
-        return curve2 ? "curve" : curved ? "curved" : rounded ? "rounded" : pill ? "pill" : "initial";
-      }
-    }
-  });
-
   // ../../node_modules/@stackpress/ink-ui/utilities/style/display.js
   var require_display = __commonJS({
     "../../node_modules/@stackpress/ink-ui/utilities/style/display.js"(exports) {
@@ -3584,6 +3566,24 @@ var InkAPI = (() => {
     }
   });
 
+  // ../../node_modules/@stackpress/ink-ui/utilities/style/curve.js
+  var require_curve = __commonJS({
+    "../../node_modules/@stackpress/ink-ui/utilities/style/curve.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", { value: true });
+      exports.default = curve;
+      function curve(props3, styles, initial = false, selector = ":host") {
+        const { curve: curve2, curved, rounded, pill } = props3;
+        const style = curve2 ? `${curve2}px` : curved ? "4px" : rounded ? "12px" : pill ? "10000px" : initial;
+        if (style) {
+          styles.add(selector, "border-radius", style);
+          styles.add(selector, "overflow", "hidden");
+        }
+        return curve2 ? "curve" : curved ? "curved" : rounded ? "rounded" : pill ? "pill" : "initial";
+      }
+    }
+  });
+
   // ../../node_modules/@stackpress/ink-ui/utilities/style/padding.js
   var require_padding = __commonJS({
     "../../node_modules/@stackpress/ink-ui/utilities/style/padding.js"(exports) {
@@ -3631,7 +3631,7 @@ var InkAPI = (() => {
     }
   });
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\notify.ink
+  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\notify.ink
   var notify_exports = {};
   __export(notify_exports, {
     BUILD_ID: () => BUILD_ID,
@@ -3648,7 +3648,7 @@ var InkAPI = (() => {
   var import_Emitter = __toESM(require_Emitter());
   var import_data = __toESM(require_data());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\docs.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\api\docs.ink
   var import_Registry = __toESM(require_Registry());
   var import_Component = __toESM(require_Component());
   var import_ink = __toESM(require_ink());
@@ -3677,7 +3677,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\app.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\app.ink
   var import_Registry2 = __toESM(require_Registry());
   var import_Component2 = __toESM(require_Component());
   var import_ink2 = __toESM(require_ink());
@@ -3731,7 +3731,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\code.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\code.ink
   var import_Registry3 = __toESM(require_Registry());
   var import_Component3 = __toESM(require_Component());
   var import_prismjs = __toESM(require_prism());
@@ -3928,7 +3928,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
   var import_Registry4 = __toESM(require_Registry());
   var import_Component4 = __toESM(require_Component());
 
@@ -3944,7 +3944,7 @@ var InkAPI = (() => {
     return phrase;
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
   var Translate_794a00a5e900fca28310 = class extends import_Component4.default {
     static id = "794a00a5e900fca28310";
     static tagname = "translate";
@@ -4020,7 +4020,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\panel.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\panel.ink
   var import_Registry5 = __toESM(require_Registry());
   var import_Component5 = __toESM(require_Component());
   var Panel_c4c96a14064fc0c4d224 = class extends import_Component5.default {
@@ -4181,62 +4181,14 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\alert.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\icon.ink
   var import_Registry6 = __toESM(require_Registry());
   var import_Component6 = __toESM(require_Component());
   var import_StyleSet = __toESM(require_StyleSet());
   var import_color = __toESM(require_color());
-  var import_curve = __toESM(require_curve());
   var import_display = __toESM(require_display());
-  var Alert_ba827f6c1d3753161701 = class extends import_Component6.default {
-    static id = "ba827f6c1d3753161701";
-    static tagname = "alert";
-    static classname = "Alert_ba827f6c1d3753161701";
-    styles() {
-      return ``;
-    }
-    template() {
-      const {
-        //layouts
-        outline,
-        solid,
-        transparent,
-        //padding
-        padding
-      } = this.props;
-      const styles = new import_StyleSet.default();
-      this.styles = () => styles.toString();
-      (0, import_display.default)(this.props, styles, "block", ":host");
-      styles.add(":host", "padding", padding ? `${padding}px` : "16px");
-      (0, import_curve.default)(this.props, styles, false, ":host");
-      if (outline || transparent) {
-        (0, import_color.default)(this.props, styles, "var(--muted)", ":host", "color");
-        (0, import_color.default)(this.props, styles, "var(--muted)", ":host", "border-color");
-        styles.add(":host", "border-style", "solid");
-        styles.add(":host", "border-width", "1px");
-        if (outline) {
-          styles.add(":host", "background-color", "var(--white)");
-        }
-      } else {
-        styles.add(":host", "color", "var(--white)");
-        (0, import_color.default)(this.props, styles, "var(--muted)", ":host", "background-color");
-      }
-      return () => [
-        import_Registry6.default.createText(`
-`, false),
-        import_Registry6.default.createElement("slot", {}, []).element
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\icon.ink
-  var import_Registry7 = __toESM(require_Registry());
-  var import_Component7 = __toESM(require_Component());
-  var import_StyleSet2 = __toESM(require_StyleSet());
-  var import_color2 = __toESM(require_color());
-  var import_display2 = __toESM(require_display());
   var import_size = __toESM(require_size());
-  var Icon_33cb84912ffcb000a388 = class extends import_Component7.default {
+  var Icon_33cb84912ffcb000a388 = class extends import_Component6.default {
     static id = "33cb84912ffcb000a388";
     static tagname = "icon";
     static classname = "Icon_33cb84912ffcb000a388";
@@ -4245,32 +4197,32 @@ var InkAPI = (() => {
     }
     template() {
       const { name, solid, brand } = this.props;
-      const styles = new import_StyleSet2.default();
+      const styles = new import_StyleSet.default();
       this.styles = () => styles.toString();
-      (0, import_display2.default)(this.props, styles, "inline-block", ":host");
-      (0, import_color2.default)(this.props, styles, false, ":host", "color");
+      (0, import_display.default)(this.props, styles, "inline-block", ":host");
+      (0, import_color.default)(this.props, styles, false, ":host", "color");
       (0, import_size.default)(this.props, styles, false, ":host", "font-size");
       const iconClass = ["fa-fw", `fa-${name}`];
       iconClass.push(brand ? "fa-brands" : "fa-solid");
       return () => [
-        import_Registry7.default.createElement("link", { "rel": `stylesheet`, "type": `text/css`, "href": `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css` }).element,
-        import_Registry7.default.createText(`
+        import_Registry6.default.createElement("link", { "rel": `stylesheet`, "type": `text/css`, "href": `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css` }).element,
+        import_Registry6.default.createText(`
 `, false),
-        import_Registry7.default.createElement("i", { "class": iconClass.join(" ") }, []).element
+        import_Registry6.default.createElement("i", { "class": iconClass.join(" ") }, []).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\crumbs.ink
-  var import_Registry8 = __toESM(require_Registry());
-  var import_Component8 = __toESM(require_Component());
-  var import_StyleSet3 = __toESM(require_StyleSet());
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\crumbs.ink
+  var import_Registry7 = __toESM(require_Registry());
+  var import_Component7 = __toESM(require_Component());
+  var import_StyleSet2 = __toESM(require_StyleSet());
   var import_bold = __toESM(require_bold());
-  var import_color3 = __toESM(require_color());
-  var import_display3 = __toESM(require_display());
+  var import_color2 = __toESM(require_color());
+  var import_display2 = __toESM(require_display());
   var import_size2 = __toESM(require_size());
   var import_underline = __toESM(require_underline());
-  var Crumbs_e4598fe781cc66b1ce2c = class extends import_Component8.default {
+  var Crumbs_e4598fe781cc66b1ce2c = class extends import_Component7.default {
     static id = "e4598fe781cc66b1ce2c";
     static tagname = "crumbs";
     static classname = "Crumbs_e4598fe781cc66b1ce2c";
@@ -4310,17 +4262,17 @@ var InkAPI = (() => {
         //others
         spacing = 0
       } = this.propsTree;
-      const styles = new import_StyleSet3.default();
+      const styles = new import_StyleSet2.default();
       this.styles = () => styles.toString();
-      const display = (0, import_display3.default)(this.props, styles, "block", ":host");
+      const display = (0, import_display2.default)(this.props, styles, "block", ":host");
       if (display === "flex" || display === "inline-flex") {
         styles.add(":host", "align-items", "center");
       }
       (0, import_size2.default)(this.props, styles, false, ":host", "font-size");
-      (0, import_color3.default)(this.props, styles, false, ":host", "color");
+      (0, import_color2.default)(this.props, styles, false, ":host", "color");
       styles.add("a", "cursor", "pointer");
       if (link) {
-        (0, import_color3.default)(link, styles, false, "a", "color");
+        (0, import_color2.default)(link, styles, false, "a", "color");
       }
       (0, import_underline.default)(this.props, styles, "a");
       if (spacing) {
@@ -4376,62 +4328,62 @@ var InkAPI = (() => {
         secondary
       };
       return () => [
-        import_Registry8.default.createText(`
+        import_Registry7.default.createText(`
 `, false),
         ...Object.entries(crumbs).map(([index, crumb]) => [
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
   `, false),
           ...!!crumb.icon ? [
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...iconProps, "name": crumb.icon }).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...iconProps, "name": crumb.icon }).element,
+            import_Registry7.default.createText(`
   `, false)
           ] : [],
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
   `, false),
           ...!!(crumb.href && crumb.label) ? [
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createElement("a", { "href": crumb.href }, [
+            import_Registry7.default.createElement("a", { "href": crumb.href }, [
               ...this._toNodeList(crumb.label)
             ]).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
   `, false)
           ] : !!crumb.label ? [
             ,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createElement("span", {}, [
+            import_Registry7.default.createElement("span", {}, [
               ...this._toNodeList(crumb.label)
             ]).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
   `, false)
           ] : [],
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
   `, false),
           ...!!(index < crumbs.length - 1) ? [
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...sepProps, "name": `chevron-right`, "class": `sep` }).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...sepProps, "name": `chevron-right`, "class": `sep` }).element,
+            import_Registry7.default.createText(`
   `, false)
           ] : [],
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
 `, false)
         ]).flat()
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
-  var import_Component14 = __toESM(require_Component());
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
+  var import_Component13 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\table.ink
-  var import_Registry9 = __toESM(require_Registry());
-  var import_Component9 = __toESM(require_Component());
-  var import_StyleSet4 = __toESM(require_StyleSet());
-  var Table_cb9231b6c52140a254d4 = class extends import_Component9.default {
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\table.ink
+  var import_Registry8 = __toESM(require_Registry());
+  var import_Component8 = __toESM(require_Component());
+  var import_StyleSet3 = __toESM(require_StyleSet());
+  var Table_cb9231b6c52140a254d4 = class extends import_Component8.default {
     static id = "cb9231b6c52140a254d4";
     static tagname = "table";
     static classname = "Table_cb9231b6c52140a254d4";
@@ -4439,10 +4391,41 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet4.default();
+      const styles = new import_StyleSet3.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table");
       styles.add(":host", "width", "100%");
+      return () => [
+        import_Registry8.default.createText(`
+`, false),
+        import_Registry8.default.createElement("slot", {}, []).element
+      ];
+    }
+  };
+
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
+  var import_Registry13 = __toESM(require_Registry());
+  var import_StyleSet8 = __toESM(require_StyleSet());
+
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
+  var import_Registry10 = __toESM(require_Registry());
+  var import_Component10 = __toESM(require_Component());
+
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\row.ink
+  var import_Registry9 = __toESM(require_Registry());
+  var import_Component9 = __toESM(require_Component());
+  var import_StyleSet4 = __toESM(require_StyleSet());
+  var Row_0b3723ad0a2356b54f11 = class extends import_Component9.default {
+    static id = "0b3723ad0a2356b54f11";
+    static tagname = "row";
+    static classname = "Row_0b3723ad0a2356b54f11";
+    styles() {
+      return ``;
+    }
+    template() {
+      const styles = new import_StyleSet4.default();
+      this.styles = () => styles.toString();
+      styles.add(":host", "display", "table-row");
       return () => [
         import_Registry9.default.createText(`
 `, false),
@@ -4451,40 +4434,9 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
-  var import_Registry14 = __toESM(require_Registry());
-  var import_StyleSet9 = __toESM(require_StyleSet());
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
-  var import_Registry11 = __toESM(require_Registry());
-  var import_Component11 = __toESM(require_Component());
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\row.ink
-  var import_Registry10 = __toESM(require_Registry());
-  var import_Component10 = __toESM(require_Component());
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
   var import_StyleSet5 = __toESM(require_StyleSet());
-  var Row_0b3723ad0a2356b54f11 = class extends import_Component10.default {
-    static id = "0b3723ad0a2356b54f11";
-    static tagname = "row";
-    static classname = "Row_0b3723ad0a2356b54f11";
-    styles() {
-      return ``;
-    }
-    template() {
-      const styles = new import_StyleSet5.default();
-      this.styles = () => styles.toString();
-      styles.add(":host", "display", "table-row");
-      return () => [
-        import_Registry10.default.createText(`
-`, false),
-        import_Registry10.default.createElement("slot", {}, []).element
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
-  var import_StyleSet6 = __toESM(require_StyleSet());
-  var Thead_afbcee18613ce58fb77c = class extends import_Component11.default {
+  var Thead_afbcee18613ce58fb77c = class extends import_Component10.default {
     static id = "afbcee18613ce58fb77c";
     static tagname = "thead";
     static classname = "Thead_afbcee18613ce58fb77c";
@@ -4492,24 +4444,24 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet6.default();
+      const styles = new import_StyleSet5.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-header-group");
       return () => [
-        import_Registry11.default.createText(`
+        import_Registry10.default.createText(`
 `, false),
-        import_Registry11.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
-          import_Registry11.default.createElement("slot", {}, []).element
+        import_Registry10.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
+          import_Registry10.default.createElement("slot", {}, []).element
         ]).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
-  var import_Registry12 = __toESM(require_Registry());
-  var import_Component12 = __toESM(require_Component());
-  var import_StyleSet7 = __toESM(require_StyleSet());
-  var Tbody_95f498c1427be6bf7334 = class extends import_Component12.default {
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
+  var import_Registry11 = __toESM(require_Registry());
+  var import_Component11 = __toESM(require_Component());
+  var import_StyleSet6 = __toESM(require_StyleSet());
+  var Tbody_95f498c1427be6bf7334 = class extends import_Component11.default {
     static id = "95f498c1427be6bf7334";
     static tagname = "tbody";
     static classname = "Tbody_95f498c1427be6bf7334";
@@ -4517,22 +4469,22 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet7.default();
+      const styles = new import_StyleSet6.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-row-group");
       return () => [
-        import_Registry12.default.createText(`
+        import_Registry11.default.createText(`
 `, false),
-        import_Registry12.default.createElement("slot", {}, []).element
+        import_Registry11.default.createElement("slot", {}, []).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
-  var import_Registry13 = __toESM(require_Registry());
-  var import_Component13 = __toESM(require_Component());
-  var import_StyleSet8 = __toESM(require_StyleSet());
-  var Tfoot_874bedd042c5f2db7353 = class extends import_Component13.default {
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
+  var import_Registry12 = __toESM(require_Registry());
+  var import_Component12 = __toESM(require_Component());
+  var import_StyleSet7 = __toESM(require_StyleSet());
+  var Tfoot_874bedd042c5f2db7353 = class extends import_Component12.default {
     static id = "874bedd042c5f2db7353";
     static tagname = "tfoot";
     static classname = "Tfoot_874bedd042c5f2db7353";
@@ -4540,21 +4492,21 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet8.default();
+      const styles = new import_StyleSet7.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-footer-group");
       return () => [
-        import_Registry13.default.createText(`
+        import_Registry12.default.createText(`
 `, false),
-        import_Registry13.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
-          import_Registry13.default.createElement("slot", {}, []).element
+        import_Registry12.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
+          import_Registry12.default.createElement("slot", {}, []).element
         ]).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
-  var Table_02bc3cbacda5727a0af3 = class extends import_Component14.default {
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
+  var Table_02bc3cbacda5727a0af3 = class extends import_Component13.default {
     static id = "02bc3cbacda5727a0af3";
     static tagname = "table";
     static classname = "Table_02bc3cbacda5727a0af3";
@@ -4581,7 +4533,7 @@ var InkAPI = (() => {
       const bodyList = typeof body === "string" ? body.split(" ").filter(Boolean) : [];
       const oddList = typeof odd === "string" ? odd.split(" ").filter(Boolean) : [];
       const evenList = typeof even === "string" ? even.split(" ").filter(Boolean) : [];
-      const styles = new import_StyleSet9.default();
+      const styles = new import_StyleSet8.default();
       this.styles = () => styles.toString();
       styles.add(":host", "width", "100%");
       if (sticky) {
@@ -4651,7 +4603,7 @@ var InkAPI = (() => {
       }
       this.innerText = "";
       headers.length && this.appendChild(
-        import_Registry14.default.createComponent(
+        import_Registry13.default.createComponent(
           "table-thead",
           Thead_afbcee18613ce58fb77c,
           {},
@@ -4659,7 +4611,7 @@ var InkAPI = (() => {
         ).element
       );
       rows.length && this.appendChild(
-        import_Registry14.default.createComponent(
+        import_Registry13.default.createComponent(
           "table-tbody",
           Tbody_95f498c1427be6bf7334,
           {},
@@ -4667,7 +4619,7 @@ var InkAPI = (() => {
         ).element
       );
       footers.length && this.appendChild(
-        import_Registry14.default.createComponent(
+        import_Registry13.default.createComponent(
           "table-tfoot",
           Tfoot_874bedd042c5f2db7353,
           {},
@@ -4675,37 +4627,37 @@ var InkAPI = (() => {
         ).element
       );
       return () => [
-        import_Registry14.default.createText(`
+        import_Registry13.default.createText(`
 `, false),
         ...!!sticky ? [
-          import_Registry14.default.createText(`
+          import_Registry13.default.createText(`
   `, false),
-          import_Registry14.default.createComponent("table-wrapper", Table_cb9231b6c52140a254d4, {}, [
-            import_Registry14.default.createText(`
+          import_Registry13.default.createComponent("table-wrapper", Table_cb9231b6c52140a254d4, {}, [
+            import_Registry13.default.createText(`
     `, false),
-            import_Registry14.default.createElement("slot", {}, []).element,
-            import_Registry14.default.createText(`
+            import_Registry13.default.createElement("slot", {}, []).element,
+            import_Registry13.default.createText(`
   `, false)
           ]).element,
-          import_Registry14.default.createText(`
+          import_Registry13.default.createText(`
 `, false)
         ] : true ? [
           ,
-          import_Registry14.default.createText(`
+          import_Registry13.default.createText(`
   `, false),
-          import_Registry14.default.createElement("slot", {}, []).element,
-          import_Registry14.default.createText(`
+          import_Registry13.default.createElement("slot", {}, []).element,
+          import_Registry13.default.createText(`
 `, false)
         ] : []
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\head.ink
-  var import_Registry15 = __toESM(require_Registry());
-  var import_Component15 = __toESM(require_Component());
-  var import_StyleSet10 = __toESM(require_StyleSet());
-  var Head_d8755504d9458a2c21da = class extends import_Component15.default {
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\head.ink
+  var import_Registry14 = __toESM(require_Registry());
+  var import_Component14 = __toESM(require_Component());
+  var import_StyleSet9 = __toESM(require_StyleSet());
+  var Head_d8755504d9458a2c21da = class extends import_Component14.default {
     static id = "d8755504d9458a2c21da";
     static tagname = "head";
     static classname = "Head_d8755504d9458a2c21da";
@@ -4726,7 +4678,7 @@ var InkAPI = (() => {
         left,
         right
       } = this.propsCamel;
-      const styles = new import_StyleSet10.default();
+      const styles = new import_StyleSet9.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-cell");
       styles.add(":host([top])", "position", "sticky");
@@ -4742,6 +4694,78 @@ var InkAPI = (() => {
       } else {
         styles.add(":host([top])", "top", "0");
       }
+      if (typeof left === "string" || typeof left === "number") {
+        styles.add(":host([left])", "left", left);
+      } else {
+        styles.add(":host([left])", "left", "0");
+      }
+      if (typeof right === "string" || typeof right === "number") {
+        styles.add(":host([right])", "right", right);
+      } else {
+        styles.add(":host([right])", "right", "0");
+      }
+      if (nowrap) {
+        styles.add(":host", "white-space", "nowrap");
+      }
+      if (wrap1) {
+        styles.add(".wrap", "width", "100px");
+      } else if (wrap2) {
+        styles.add(".wrap", "width", "200px");
+      } else if (wrap3) {
+        styles.add(".wrap", "width", "300px");
+      } else if (wrap4) {
+        styles.add(".wrap", "width", "400px");
+      } else if (wrap5) {
+        styles.add(".wrap", "width", "500px");
+      }
+      return () => [
+        import_Registry14.default.createText(`
+`, false),
+        import_Registry14.default.createElement("slot", {}, []).element,
+        import_Registry14.default.createText(`
+`, false),
+        ...!!(wrap1 || wrap2 || wrap3 || wrap4 || wrap5) ? [
+          import_Registry14.default.createText(`
+  `, false),
+          import_Registry14.default.createElement("div", { "class": `wrap` }, []).element,
+          import_Registry14.default.createText(`
+`, false)
+        ] : []
+      ];
+    }
+  };
+
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\col.ink
+  var import_Registry15 = __toESM(require_Registry());
+  var import_Component15 = __toESM(require_Component());
+  var import_StyleSet10 = __toESM(require_StyleSet());
+  var Col_f45aa9d13a1588f1d9ab = class extends import_Component15.default {
+    static id = "f45aa9d13a1588f1d9ab";
+    static tagname = "col";
+    static classname = "Col_f45aa9d13a1588f1d9ab";
+    styles() {
+      return ``;
+    }
+    template() {
+      const {
+        //wrapping
+        nowrap,
+        wrap1,
+        wrap2,
+        wrap3,
+        wrap4,
+        wrap5,
+        //sticky
+        left,
+        right
+      } = this.propsCamel;
+      const styles = new import_StyleSet10.default();
+      this.styles = () => styles.toString();
+      styles.add(":host", "display", "table-cell");
+      styles.add(":host([left])", "position", "sticky");
+      styles.add(":host([left])", "z-index", "2");
+      styles.add(":host([right])", "position", "sticky");
+      styles.add(":host([right])", "z-index", "2");
       if (typeof left === "string" || typeof left === "number") {
         styles.add(":host([left])", "left", left);
       } else {
@@ -4783,82 +4807,60 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\col.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\notify.ink
+  var import_Component17 = __toESM(require_Component());
+  var import_Registry17 = __toESM(require_Registry());
+  var import_StyleSet12 = __toESM(require_StyleSet());
+
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\alert.ink
   var import_Registry16 = __toESM(require_Registry());
   var import_Component16 = __toESM(require_Component());
   var import_StyleSet11 = __toESM(require_StyleSet());
-  var Col_f45aa9d13a1588f1d9ab = class extends import_Component16.default {
-    static id = "f45aa9d13a1588f1d9ab";
-    static tagname = "col";
-    static classname = "Col_f45aa9d13a1588f1d9ab";
+  var import_color3 = __toESM(require_color());
+  var import_curve = __toESM(require_curve());
+  var import_display3 = __toESM(require_display());
+  var Alert_ba827f6c1d3753161701 = class extends import_Component16.default {
+    static id = "ba827f6c1d3753161701";
+    static tagname = "alert";
+    static classname = "Alert_ba827f6c1d3753161701";
     styles() {
       return ``;
     }
     template() {
       const {
-        //wrapping
-        nowrap,
-        wrap1,
-        wrap2,
-        wrap3,
-        wrap4,
-        wrap5,
-        //sticky
-        left,
-        right
-      } = this.propsCamel;
+        //layouts
+        outline,
+        solid,
+        transparent,
+        //padding
+        padding
+      } = this.props;
       const styles = new import_StyleSet11.default();
       this.styles = () => styles.toString();
-      styles.add(":host", "display", "table-cell");
-      styles.add(":host([left])", "position", "sticky");
-      styles.add(":host([left])", "z-index", "2");
-      styles.add(":host([right])", "position", "sticky");
-      styles.add(":host([right])", "z-index", "2");
-      if (typeof left === "string" || typeof left === "number") {
-        styles.add(":host([left])", "left", left);
+      (0, import_display3.default)(this.props, styles, "block", ":host");
+      styles.add(":host", "padding", padding ? `${padding}px` : "16px");
+      (0, import_curve.default)(this.props, styles, false, ":host");
+      if (outline || transparent) {
+        (0, import_color3.default)(this.props, styles, "var(--muted)", ":host", "color");
+        (0, import_color3.default)(this.props, styles, "var(--muted)", ":host", "border-color");
+        styles.add(":host", "border-style", "solid");
+        styles.add(":host", "border-width", "1px");
+        if (outline) {
+          styles.add(":host", "background-color", "var(--white)");
+        }
       } else {
-        styles.add(":host([left])", "left", "0");
-      }
-      if (typeof right === "string" || typeof right === "number") {
-        styles.add(":host([right])", "right", right);
-      } else {
-        styles.add(":host([right])", "right", "0");
-      }
-      if (nowrap) {
-        styles.add(":host", "white-space", "nowrap");
-      }
-      if (wrap1) {
-        styles.add(".wrap", "width", "100px");
-      } else if (wrap2) {
-        styles.add(".wrap", "width", "200px");
-      } else if (wrap3) {
-        styles.add(".wrap", "width", "300px");
-      } else if (wrap4) {
-        styles.add(".wrap", "width", "400px");
-      } else if (wrap5) {
-        styles.add(".wrap", "width", "500px");
+        styles.add(":host", "color", "var(--white)");
+        (0, import_color3.default)(this.props, styles, "var(--muted)", ":host", "background-color");
       }
       return () => [
         import_Registry16.default.createText(`
 `, false),
-        import_Registry16.default.createElement("slot", {}, []).element,
-        import_Registry16.default.createText(`
-`, false),
-        ...!!(wrap1 || wrap2 || wrap3 || wrap4 || wrap5) ? [
-          import_Registry16.default.createText(`
-  `, false),
-          import_Registry16.default.createElement("div", { "class": `wrap` }, []).element,
-          import_Registry16.default.createText(`
-`, false)
-        ] : []
+        import_Registry16.default.createElement("slot", {}, []).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\notify.ink
-  var import_Component17 = __toESM(require_Component());
-  var import_Registry17 = __toESM(require_Registry());
-  var import_StyleSet12 = __toESM(require_StyleSet());
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\notify.ink
   var Notify_ed7723389528abddbe70 = class extends import_Component17.default {
     static id = "ed7723389528abddbe70";
     static tagname = "notify";
@@ -5003,7 +5005,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\form\button.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\form\button.ink
   var import_Registry18 = __toESM(require_Registry());
   var import_Component18 = __toESM(require_Component());
   var import_StyleSet13 = __toESM(require_StyleSet());
@@ -5155,7 +5157,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\notify.ink
+  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\notify.ink
   var import_ink4 = __toESM(require_ink());
   var TemplateDocument = class _TemplateDocument extends import_Document2.default {
     static sync() {
@@ -5163,9 +5165,9 @@ var InkAPI = (() => {
       return document2.sync();
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/components/notify.html";
+      const title = _("Ink UI - Notify Component");
+      const description = _("A customizable notification component with dismissible alerts and progress bars.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -5178,6 +5180,7 @@ var InkAPI = (() => {
       ];
       return [
         import_Document.default.createText(`
+
 `, false),
         import_Document.default.createElement("html", {}, [
           import_Document.default.createText(`
@@ -5835,111 +5838,105 @@ var InkAPI = (() => {
                 ]
               ]),
               import_Document.default.createText(`
-
-
-        `, false),
+      `, false),
               import_Document.default.createElement("aside", { "right": true }, [
                 import_Document.default.createText(`
         `, false),
                 import_Document.default.createElement("menu", { "class": `m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto` }, [
                   import_Document.default.createText(`
-            `, false),
+          `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-            `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
-            `, false),
+          `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `# Notify` }, [
-                      ...this._toNodeList(_(" Notify"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#notify` }, [
+                      ...this._toNodeList(_("Notify"))
                     ]),
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("nav", { "class": `pl-20` }, [
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#props` }, [
                         import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Props"))
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#variants` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Notification Variants"))
+                        ...this._toNodeList(_("Variants"))
                       ]),
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#postion` }, [
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#position` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Customizing Notification Position"))
+                        ...this._toNodeList(_("Position"))
                       ]),
                       import_Document.default.createText(`
-                `, false),
+              `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#timeout` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Custom Timeout"))
+                        ...this._toNodeList(_("Timeout"))
                       ]),
                       import_Document.default.createText(`
-                `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#icons` }, [
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#dismiss` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Notifications with Icon"))
+                        ...this._toNodeList(_("Dismiss"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#stacked` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Stacked"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-            `, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
         `, false)
                 ]),
                 import_Document.default.createText(`
-        `, false)
+      `, false)
               ]),
               import_Document.default.createText(`
-
-
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
-      `, false),
+        `, false),
                 import_Document.default.createElement("api-docs", {}, [
                   import_Document.default.createText(`
-        `, false),
+          `, false),
                   import_Document.default.createElement("nav", { "class": `p-10 bg-t-3 sticky top-0 z-50` }, [
                     import_Document.default.createText(`
-          `, false),
-                    import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
-                    import_Document.default.createText(`
-      `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-        `, false),
-                  import_Document.default.createElement("a", { "name": `Notify` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_(" Notify")),
+                    import_Document.default.createElement("element-crumbs", { "crumbs": crumbs, "block": true, "bold": true, "white": true, "sep-muted": true, "link-primary": true, "spacing": 2 }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
+
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20 ` }, [
+                  import_Document.default.createElement("a", { "name": `notify` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Notify"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-app", { "title": `Notify`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
+                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
               import Notify from '@stackpress/ink-ui/element/notify';
             `, false)
@@ -5949,810 +5946,553 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-                `, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
-                `, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-                `, false),
-                    ...this._toNodeList(_("Props")),
-                    import_Document.default.createText(`
-                `, false)
+                    ...this._toNodeList(_("Props"))
                   ]),
                   import_Document.default.createText(`
-
-             `, false),
+          `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Type"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Required"))
                     ]),
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-head", {}, [
                       ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`top`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Positions the notification at the top (default is bottom)."))
+                        ...this._toNodeList(_("Positions notifications 20px from the top (default: bottom 20px)"))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`left`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Aligns the notification to the left (default is right)."))
+                        ...this._toNodeList(_("Aligns notifications 20px from the left (default: right 20px)"))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`center`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Centers the notification horizontally."))
+                        ...this._toNodeList(_("Centers notifications horizontally"))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`smooth`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`No`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Controls transition smoothness (default: 10ms)."))
+                        ...this._toNodeList(_("Sets interval for opacity and progress updates in milliseconds (default: 10)"))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`type`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Yes`, false)
+                        import_Document.default.createText(`Yes (for notify)`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Required for notify method. Defines the notification type: "info", "warning", "error", "success", "primary", "secondary", "muted".'))
+                        ...this._toNodeList(_('Defines notification type: "info", "warning", "error", "success", "primary", "secondary", "muted"'))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`message`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Yes`, false)
+                        import_Document.default.createText(`Yes (for notify)`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Required for notify method. Sets the notification message."))
+                        ...this._toNodeList(_("Sets the notification message content"))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`timeout`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`Number`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
+                        import_Document.default.createText(`No (for notify)`, false)
                       ]),
                       import_Document.default.createText(`
-    `, false),
+              `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Optional for notify method. Duration before the notification disappears (default: 5000ms)."))
+                        ...this._toNodeList(_("Duration in milliseconds before auto-dismissal (default: 5000)"))
                       ]),
                       import_Document.default.createText(`
-  `, false)
+            `, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `variants` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    ...this._toNodeList(_("Notification Variants")),
-                    import_Document.default.createText(`
-`, false)
+                    ...this._toNodeList(_("Variants"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-  Notifications can have different variants: 
-  `, false),
-                    import_Document.default.createElement("span", { "class": `tx-info tx-italic p-3` }, [
-                      import_Document.default.createText(`info`, false)
-                    ]),
-                    import_Document.default.createText(`,
-  `, false),
-                    import_Document.default.createElement("span", { "class": `tx-warning tx-italic p-3` }, [
-                      import_Document.default.createText(`warning`, false)
-                    ]),
-                    import_Document.default.createText(`,
-  `, false),
-                    import_Document.default.createElement("span", { "class": `tx-success tx-italic p-3` }, [
-                      import_Document.default.createText(`success`, false)
-                    ]),
-                    import_Document.default.createText(`,
-  `, false),
-                    import_Document.default.createElement("span", { "class": `tx-error tx-italic p-3` }, [
-                      import_Document.default.createText(`error`, false)
-                    ]),
-                    import_Document.default.createText(`,
-  `, false),
-                    import_Document.default.createElement("span", { "class": `tx-primary tx-italic p-3` }, [
-                      import_Document.default.createText(`primary`, false)
-                    ]),
-                    import_Document.default.createText(`,
-  `, false),
-                    import_Document.default.createElement("span", { "class": `tx-secondary tx-italic p-3` }, [
-                      import_Document.default.createText(`secondary`, false)
-                    ]),
-                    import_Document.default.createText(`,
-  `, false),
-                    import_Document.default.createElement("span", { "class": `tx-muted tx-italic p-3` }, [
-                      import_Document.default.createText(`muted`, false)
-                    ]),
-                    import_Document.default.createText(`.
-`, false)
+                    import_Document.default.createText(`Notifications support multiple variants with distinct styles and icons.`, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("element-notify", {}),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `grid gap-10` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
-    const notify = document.querySelector('element-notify');
-    if (notify) {
-      notify.innerHTML = ''; 
-      notify.notify('info', 'Information alert!');
-    }
-  ` }, [
-                      import_Document.default.createText(`
-    Show Info
-  `, false)
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = '';
+                notify.notify('info', 'Information alert!');
+              }
+            ` }, [
+                      import_Document.default.createText(`Show Info`, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
-                    import_Document.default.createElement("element-button", { "md": true, "secondary": true, "curved": true, "solid": true, "onclick": `
-    const notify = document.querySelector('element-notify');
-    if (notify) {
-      notify.innerHTML = ''; 
-      notify.notify('secondary', 'Secondary alert!');
-    }
-  ` }, [
-                      import_Document.default.createText(`
-    Show Secondary
-  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("element-button", { "md": true, "warning": true, "curved": true, "solid": true, "onclick": `
-    const notify = document.querySelector('element-notify');
-    if (notify) {
-      notify.innerHTML = ''; 
-      notify.notify('warning', 'Warning alert!');
-    }
-  ` }, [
-                      import_Document.default.createText(`
-    Show Warning
-  `, false)
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = '';
+                notify.notify('warning', 'Warning alert!');
+              }
+            ` }, [
+                      import_Document.default.createText(`Show Warning`, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("element-button", { "md": true, "success": true, "curved": true, "solid": true, "onclick": `
-    const notify = document.querySelector('element-notify');
-    if (notify) {
-      notify.innerHTML = ''; 
-      notify.notify('success', 'Success alert!');
-    }
-  ` }, [
-                      import_Document.default.createText(`
-    Show Success
-  `, false)
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = '';
+                notify.notify('success', 'Success alert!');
+              }
+            ` }, [
+                      import_Document.default.createText(`Show Success`, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("element-button", { "md": true, "error": true, "curved": true, "solid": true, "onclick": `
-    const notify = document.querySelector('element-notify');
-    if (notify) {
-      notify.innerHTML = ''; 
-      notify.notify('error', 'Error alert!');
-    }
-  ` }, [
-                      import_Document.default.createText(`
-    Show Error
-  `, false)
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = '';
+                notify.notify('error', 'Error alert!');
+              }
+            ` }, [
+                      import_Document.default.createText(`Show Error`, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "primary": true, "curved": true, "solid": true, "onclick": `
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = '';
+                notify.notify('primary', 'Primary alert!');
+              }
+            ` }, [
+                      import_Document.default.createText(`Show Primary`, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "secondary": true, "curved": true, "solid": true, "onclick": `
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = '';
+                notify.notify('secondary', 'Secondary alert!');
+              }
+            ` }, [
+                      import_Document.default.createText(`Show Secondary`, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
                     import_Document.default.createElement("element-button", { "md": true, "muted": true, "curved": true, "solid": true, "onclick": `
-    const notify = document.querySelector('element-notify');
-    if (notify) {
-      notify.innerHTML = ''; 
-      notify.notify('muted', 'Muted alert!');
-    }
-  ` }, [
-                      import_Document.default.createText(`
-    Show Muted
-  `, false)
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = '';
+                notify.notify('muted', 'Muted alert!');
+              }
+            ` }, [
+                      import_Document.default.createText(`Show Muted`, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 mt-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-  <element-button md info curved solid onclick="document.querySelector('element-notify').notify('info', 'Information alert!')">
-    Show Info
-  </element-button>
-  <element-notify/>
-`)
+            <element-notify />
+            <element-button md info curved solid onclick="document.querySelector('element-notify').notify('info', 'Information alert!')">
+              Show Info
+            </element-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `position` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    ...this._toNodeList(_("Customizing Notification Position")),
-                    import_Document.default.createText(`
-`, false)
+                    ...this._toNodeList(_("Position"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-  Set notifications to appear at different positions using `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`top`, false)
-                    ]),
-                    import_Document.default.createText(`, `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`left`, false)
-                    ]),
-                    import_Document.default.createText(`, or `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`center`, false)
-                    ]),
-                    import_Document.default.createText(`.
-`, false)
+                    import_Document.default.createText(`Customize notification position with top, left, or center alignment.`, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("element-notify", { "top": true }),
                   import_Document.default.createText(`
-`, false),
-                  import_Document.default.createElement("element-notify", { "right": true }),
-                  import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("element-notify", { "left": true }),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("element-notify", { "center": true }),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
+                  import_Document.default.createElement("element-notify", {}),
+                  import_Document.default.createText(`
+          `, false),
                   import_Document.default.createElement("div", { "class": `grid gap-10` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
-    document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
-    document.querySelector('element-notify[top]').notify('info', 'Notification at the top!');
-  ` }, [
-                      import_Document.default.createText(`
-    Show Top
-  `, false)
+              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = '');
+              document.querySelector('element-notify[top]').notify('info', 'Top notification!');
+            ` }, [
+                      import_Document.default.createText(`Show Top`, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
-    document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
-    document.querySelector('element-notify[right]').notify('info', 'Notification on the right!');
-  ` }, [
-                      import_Document.default.createText(`
-    Show Right
-  `, false)
+              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = '');
+              document.querySelector('element-notify[left]').notify('info', 'Left notification!');
+            ` }, [
+                      import_Document.default.createText(`Show Left`, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
-    document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
-    document.querySelector('element-notify[left]').notify('info', 'Notification on the left!');
-  ` }, [
-                      import_Document.default.createText(`
-    Show Left
-  `, false)
+              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = '');
+              document.querySelector('element-notify[center]').notify('info', 'Centered notification!');
+            ` }, [
+                      import_Document.default.createText(`Show Center`, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
-                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "outline": true, "onclick": `
-    document.querySelectorAll('element-notify').forEach(el => el.innerHTML = ''); 
-    document.querySelector('element-notify[center]').notify('info', 'Centered notification!');
-  ` }, [
-                      import_Document.default.createText(`
-    Show Center
-  `, false)
+            `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
+              document.querySelectorAll('element-notify').forEach(el => el.innerHTML = '');
+              document.querySelector('element-notify:not([top]):not([left]):not([center])').notify('info', 'Bottom right notification!');
+            ` }, [
+                      import_Document.default.createText(`Show Bottom Right`, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-  <div class="grid gap-10">
-    <element-button md info curved solid onclick="document.querySelector('element-notify[top]').notify('info', 'Notification at the top!')">
-      Show Top
-    </element-button>
-    <element-button md info curved solid onclick="document.querySelector('element-notify[right]').notify('info', 'Notification on the right!')">
-      Show Right
-    </element-button>
-    <element-button md info curved solid onclick="document.querySelector('element-notify[left]').notify('info', 'Notification on the left!')">
-      Show Left
-    </element-button>
-    <element-button md info curved solid outline onclick="document.querySelector('element-notify[center]').notify('info', 'Centered notification!')">
-      Show Center
-    </element-button>
-  </div>
-  <element-notify top/>
-  <element-notify right/>
-  <element-notify left/>
-  <element-notify center/>
-`)
+            <element-notify top />
+            <element-button md info curved solid onclick="document.querySelector('element-notify[top]').notify('info', 'Top notification!')">
+              Show Top
+            </element-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `timeout` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    ...this._toNodeList(_("Custom Timeout")),
-                    import_Document.default.createText(`
-`, false)
+                    ...this._toNodeList(_("Timeout"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-  Control how long notifications stay visible using a timeout value.
-`, false)
+                    import_Document.default.createText(`Adjust how long notifications remain visible.`, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
-                  import_Document.default.createElement("element-notify", {}, []),
+          `, false),
+                  import_Document.default.createElement("element-notify", {}),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `grid gap-10` }, [
                     import_Document.default.createText(`
-  `, false),
+            `, false),
                     import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
-    const notify = document.querySelector('element-notify');
-    if (notify) {
-      notify.innerHTML = ''; 
-      notify.notify('info', 'This disappears in 8 seconds!', 8000);
-    }
-  ` }, [
-                      import_Document.default.createText(`
-    Show 8s Notification
-  `, false)
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = '';
+                notify.notify('info', 'This lasts 8 seconds!', 8000);
+              }
+            ` }, [
+                      import_Document.default.createText(`Show 8s Notification`, false)
                     ]),
                     import_Document.default.createText(`
-
-  `, false),
+            `, false),
                     import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
-    const notify = document.querySelector('element-notify');
-    if (notify) {
-      notify.innerHTML = ''; 
-      notify.notify('info', 'Quick 3-second alert!', 3000);
-    }
-  ` }, [
-                      import_Document.default.createText(`
-    Show 3s Notification
-  `, false)
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = '';
+                notify.notify('info', 'Quick 3-second alert!', 3000);
+              }
+            ` }, [
+                      import_Document.default.createText(`Show 3s Notification`, false)
                     ]),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-  <element-button md info curved solid onclick="document.querySelector('element-notify').notify('info', 'This disappears in 8 seconds!', 8000)">
-    Show 8s Notification
-  </element-button>
-  <element-notify/>
-`)
+            <element-notify />
+            <element-button md info curved solid onclick="document.querySelector('element-notify').notify('info', 'This lasts 8 seconds!', 8000)">
+              Show 8s Notification
+            </element-button>
+          `)
                   ]),
                   import_Document.default.createText(`
 
-`, false),
+          `, false),
                   import_Document.default.createElement("a", { "name": `dismiss` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    ...this._toNodeList(_("Dismissible Notifications")),
-                    import_Document.default.createText(`
-`, false)
+                    ...this._toNodeList(_("Dismiss"))
                   ]),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-  Notifications can be manually dismissed using a close button.
-`, false)
+                    import_Document.default.createText(`Notifications include a close button for manual dismissal.`, false)
                   ]),
                   import_Document.default.createText(`
-
-`, false),
-                  import_Document.default.createElement("element-notify", {}, []),
+          `, false),
+                  import_Document.default.createElement("element-notify", {}),
                   import_Document.default.createText(`
-
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `grid gap-10` }, [
                     import_Document.default.createText(`
-  `, false),
-                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "outline": true, "onclick": `
-    const notify = document.querySelector('element-notify');
-    if (notify) {
-      notify.innerHTML = ''; 
-      notify.notify('info', 'Click the close icon to dismiss!');
-    }
-  ` }, [
-                      import_Document.default.createText(`
-    Show Dismissible
-  `, false)
-                    ]),
-                    import_Document.default.createText(`
-`, false)
-                  ]),
-                  import_Document.default.createText(`
-
-`, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-  <element-button md info curved solid outline onclick="document.querySelector('element-notify').notify('info', 'Click the close icon to dismiss!')">
-    Show Dismissible
-  </element-button>
-  <element-notify/>
-`)
-                  ]),
-                  import_Document.default.createText(`
-
-`, false),
-                  import_Document.default.createElement("a", { "name": `icons` }, []),
-                  import_Document.default.createText(`
-`, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    ...this._toNodeList(_("Notifications with Icons")),
-                    import_Document.default.createText(`
-`, false)
-                  ]),
-                  import_Document.default.createText(`
-
-`, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-  Notifications can include icons using `, false),
-                    import_Document.default.createElement("code", {}, [
-                      import_Document.default.createText(`interface-icon`, false)
-                    ]),
-                    import_Document.default.createText(`.
-`, false)
-                  ]),
-                  import_Document.default.createText(`
-
-`, false),
-                  import_Document.default.createElement("element-notify", {}, []),
-                  import_Document.default.createText(`
-
-`, false),
-                  import_Document.default.createElement("div", { "class": `grid gap-10` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
-    const notify = document.querySelector('element-notify');
-    if (notify) {
-      notify.innerHTML = ''; 
-      notify.notify('info', '\u2139\uFE0F Info with icon!');
-    }
-  ` }, [
-                      import_Document.default.createText(`
-    Show Info Icon
-  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-  `, false),
-                    import_Document.default.createElement("element-button", { "md": true, "warning": true, "curved": true, "solid": true, "onclick": `
-    const notify = document.querySelector('element-notify');
-    if (notify) {
-      notify.innerHTML = ''; 
-      notify.notify('warning', '\u26A0\uFE0F Warning with icon!');
-    }
-  ` }, [
-                      import_Document.default.createText(`
-    Show Warning Icon
-  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-  `, false),
-                    import_Document.default.createElement("element-button", { "md": true, "success": true, "curved": true, "solid": true, "onclick": `
-    const notify = document.querySelector('element-notify');
-    if (notify) {
-      notify.innerHTML = ''; 
-      notify.notify('success', '\u2705 Success with icon!');
-    }
-  ` }, [
-                      import_Document.default.createText(`
-    Show Success Icon
-  `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-  `, false),
-                    import_Document.default.createElement("element-button", { "md": true, "error": true, "curved": true, "solid": true, "onclick": `
-    const notify = document.querySelector('element-notify');
-    if (notify) {
-      notify.innerHTML = ''; 
-      notify.notify('error', '\u274C Error with icon!');
-    }
-  ` }, [
-                      import_Document.default.createText(`
-    Show Error Icon
-  `, false)
-                    ]),
-                    import_Document.default.createText(`
-`, false)
-                  ]),
-                  import_Document.default.createText(`
-
-`, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-  <element-button md info curved solid onclick="document.querySelector('element-notify').notify('info', '\u2139\uFE0F Info with icon!')">
-    Show Info Icon
-  </element-button>
-`)
-                  ]),
-                  import_Document.default.createText(`
-
-
-`, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    ...this._toNodeList(_("Stacked Notifications")),
-                    import_Document.default.createText(`
-`, false)
-                  ]),
-                  import_Document.default.createText(`
-
-`, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-  Trigger multiple notifications to see them stack.
-`, false)
-                  ]),
-                  import_Document.default.createText(`
-
-`, false),
-                  import_Document.default.createElement("element-notify", {}, []),
-                  import_Document.default.createText(`
-
-`, false),
-                  import_Document.default.createElement("div", { "class": `grid gap-10` }, [
-                    import_Document.default.createText(`
-  `, false),
-                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
-    const notify = document.querySelector('element-notify');
-    if (notify) {
-      notify.innerHTML = ''; 
-      notify.notify('info', 'First notification!');
-      setTimeout(() => notify.notify('success', 'Second notification!'), 1000);
-      setTimeout(() => notify.notify('warning', 'Third notification!'), 2000);
-    }
-  ` }, [
-                      import_Document.default.createText(`
-    Show Stacked Notifications
-  `, false)
-                    ]),
-                    import_Document.default.createText(`
-`, false)
-                  ]),
-                  import_Document.default.createText(`
-
-`, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-  <element-button md info curved solid onclick="const notify = document.querySelector('element-notify'); notify.notify('info', 'First notification!'); 
-  setTimeout(() => notify.notify('success', 'Second notification!'), 1000); 
-  setTimeout(() => notify.notify('warning', 'Third notification!'), 2000);">
-    Show Stacked Notifications
-  </element-button>
-  <element-notify/>
-`)
-                  ]),
-                  import_Document.default.createText(`
-
-
-
-
-
-
-
-
             `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = '';
+                notify.notify('info', 'Click the close icon to dismiss!');
+              }
+            ` }, [
+                      import_Document.default.createText(`Show Dismissible`, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-notify />
+            <element-button md info curved solid onclick="document.querySelector('element-notify').notify('info', 'Click the close icon to dismiss!')">
+              Show Dismissible
+            </element-button>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `stacked` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Stacked"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Trigger multiple notifications to stack them vertically.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("element-notify", {}),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `grid gap-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("element-button", { "md": true, "info": true, "curved": true, "solid": true, "onclick": `
+              const notify = document.querySelector('element-notify');
+              if (notify) {
+                notify.innerHTML = '';
+                notify.notify('info', 'First notification!');
+                setTimeout(() => notify.notify('success', 'Second notification!'), 1000);
+                setTimeout(() => notify.notify('warning', 'Third notification!'), 2000);
+              }
+            ` }, [
+                      import_Document.default.createText(`Show Stacked Notifications`, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <element-notify />
+            <element-button md info curved solid onclick="const notify = document.querySelector('element-notify'); notify.notify('info', 'First notification!'); setTimeout(() => notify.notify('success', 'Second notification!'), 1000); setTimeout(() => notify.notify('warning', 'Third notification!'), 2000);">
+              Show Stacked Notifications
+            </element-button>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),
@@ -6760,9 +6500,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Loaders")),
+                      ...this._toNodeList(_("Loader")),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6771,9 +6509,7 @@ var InkAPI = (() => {
                     import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/components/pager.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Pagers")),
-                      import_Document.default.createText(`
-              `, false),
+                      ...this._toNodeList(_("Pager")),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)
@@ -6794,8 +6530,6 @@ var InkAPI = (() => {
     `, false)
             ]),
             import_Document.default.createText(`
-
-  
   `, false)
           ]),
           import_Document.default.createText(`
@@ -6810,7 +6544,6 @@ var InkAPI = (() => {
     "IdeCode_5387662ecbed97347dd0": Code_5387662ecbed97347dd0,
     "I18nTranslate_794a00a5e900fca28310": Translate_794a00a5e900fca28310,
     "PanelLayout_c4c96a14064fc0c4d224": Panel_c4c96a14064fc0c4d224,
-    "ElementAlert_ba827f6c1d3753161701": Alert_ba827f6c1d3753161701,
     "ElementIcon_33cb84912ffcb000a388": Icon_33cb84912ffcb000a388,
     "ElementCrumbs_e4598fe781cc66b1ce2c": Crumbs_e4598fe781cc66b1ce2c,
     "InterfaceIcon_33cb84912ffcb000a388": Icon_33cb84912ffcb000a388,
@@ -6828,7 +6561,6 @@ var InkAPI = (() => {
     "ide-code": Code_5387662ecbed97347dd0,
     "i18n-translate": Translate_794a00a5e900fca28310,
     "panel-layout": Panel_c4c96a14064fc0c4d224,
-    "element-alert": Alert_ba827f6c1d3753161701,
     "element-icon": Icon_33cb84912ffcb000a388,
     "element-crumbs": Crumbs_e4598fe781cc66b1ce2c,
     "layout-table": Table_02bc3cbacda5727a0af3,

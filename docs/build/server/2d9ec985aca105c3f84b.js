@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\form\index.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\index.ink
   var form_exports = {};
   __export(form_exports, {
     default: () => Index_2d9ec985aca105c3f84b
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\form\index.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\index.ink
   var Index_2d9ec985aca105c3f84b = class extends import_Document2.default {
     id() {
       return "2d9ec985aca105c3f84b";
@@ -1838,22 +1838,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/input.html` }, [
                           import_Document.default.createText(`
                   Input
-                `, false)
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, []),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("a", { "class": `block tx-center tx-primary p-10 b-solid b-t-3 b-1`, "href": `/ink/ui/field/knob.html` }, [
-                          import_Document.default.createText(`
-                  Knob
                 `, false)
                         ]),
                         import_Document.default.createText(`

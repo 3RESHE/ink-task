@@ -6,16 +6,12 @@
 <link rel="import" type="component" href="@/components/ide/code.ink" name="ide-code" />
 <link rel="import" type="component" href="@/components/i18n/translate.ink" name="i18n-translate" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/panel.ink" name="panel-layout" />
-<link rel="import" type="component" href="@stackpress/ink-ui/element/alert.ink" name="element-alert" />
 <link rel="import" type="component" href="@stackpress/ink-ui/element/icon.ink" name="element-icon" />
 <link rel="import" type="component" href="@stackpress/ink-ui/element/crumbs.ink" name="element-crumbs" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table.ink" name="layout-table" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table/head.ink" name="table-head" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table/row.ink" name="table-row" />
 <link rel="import" type="component" href="@stackpress/ink-ui/layout/table/col.ink" name="table-col" />
-<link rel="import" type="component" href="@stackpress/ink-ui/element/badge.ink" name="element-badge" />
-<link rel="import" type="component" href="@stackpress/ink-ui/element/progress.ink" name="element-progress" />
-<link rel="import" type="component" href="@stackpress/ink-ui/element/tab.ink" name="element-tab" />
 <link rel="import" type="component" href="@stackpress/ink-ui/element/tooltip.ink" name="element-tip" />
 
 <style>
@@ -29,9 +25,9 @@
   import { env } from '@stackpress/ink';
   import { _ } from '@/components/i18n';
 
-  const url = '/ink/panel.html';
-  const title = _('Ink UI - Web Components Meets Atomic Styles.');
-  const description = _('Ink UI atomically generates CSS styles and provides out of box web components.');
+  const url = '/ink/ui/components/tooltip.html';
+  const title = _('Ink UI - Tooltip Component');
+  const description = _('A customizable tooltip component that appears on hover.');
   
   const toggle = () => {
     document.querySelector('panel-layout').toggle('left');
@@ -41,7 +37,7 @@
     { icon: 'book', label: 'Docs', href: '/ink/docs/index.html' },
     { icon: 'icons', label: 'UI', href: '/ink/ui/index.html' },
     { icon: 'icons', label: 'Components', href: '/ink/ui/index.html' },
-    { label: 'Tooltips' }
+    { label: 'Tooltip' }
   ];
 </script>
 
@@ -51,448 +47,255 @@
     <panel-layout>
       <header><html-header /></header>
       <aside left><html-aside /></aside>
-
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            {_('On this page')}
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">{_('On this page')}</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#pager">{_('Tooltips')}</a>
+            <a class="block tx-t-0" href="#tooltip">{_('Tooltip')}</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• {_('Props')}</a>
-              <a class="block tx-t-1" href="#TooltipWithInfoBackground">• {_('Info Background')}</a>
-              <a class="block tx-t-1" href="#TooltipWithSuccessBackground">• {_('Success Background')}</a>
-              <a class="block tx-t-1" href="#TooltipWithErrorBackground">• {_('Error Background')}</a>
-              <a class="block tx-t-1" href="#TooltipWithWarningBackground">• {_('Warning Background')}</a>
-              <a class="block tx-t-1" href="#TooltipWithCenteredTextAndCurvedBorder">• {_('Centered Text and Curved Border')}</a>
-              <a class="block tx-t-1" href="#TooltipWithCustomCurve">• {_('Custom Curve Radius')}</a>
-              <a class="block tx-t-1" href="#TooltipWithMultiPosition">• {_('Multi-Position Tooltip')}</a>
+              <a class="block tx-t-1" href="#basic">• {_('Basic Usage')}</a>
+              <a class="block tx-t-1" href="#position">• {_('Position')}</a>
+              <a class="block tx-t-1" href="#styling">• {_('Styling')}</a>
             </nav>
           </nav>
         </menu>
       </aside>
-
       <main>
         <api-docs>
           <nav class="p-10 bg-t-3 sticky top-0 z-50">
-            <element-crumbs 
-              crumbs={crumbs} 
-              block 
-              bold 
-              white 
-              sep-muted
-              link-primary
-              spacing={2}
-            />
+            <element-crumbs crumbs={crumbs} block bold white sep-muted link-primary spacing={2} />
           </nav>
 
-          <a name="pager"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">
-            {_('Tooltips')}
-          </h1>
-          <ide-app title="Editor" class="py-20">
-            <ide-code class="scroll-y-auto" lang="js" trim>
+          <a name="tooltip"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">{_('Tooltip')}</h1>
+          <ide-app title="Tooltip" class="py-20">
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
               import Tooltip from '@stackpress/ink-ui/element/tooltip';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Props')}
-          </h2>
-          <layout-table 
-            top
-            head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
-            body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" 
-            odd="bg-t-0"
-            even="bg-t-1"
-          >
-            <table-head>{_('Property')}</table-head>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Props')}</h2>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>{_('Name')}</table-head>
             <table-head>{_('Type')}</table-head>
             <table-head>{_('Required')}</table-head>
             <table-head>{_('Notes')}</table-head>
-
             <table-row>
               <table-col>top</table-col>
-              <table-col>Boolean/String/Number</table-col>
+              <table-col>Boolean | Number | String</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Positions the tooltip at the top. Can be a boolean, number (px), or string (e.g., "10px").')}</table-col>
+              <table-col>{_('Position from top (true = 0px, number = px, string = custom)')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>bottom</table-col>
-              <table-col>Boolean/String/Number</table-col>
+              <table-col>Boolean | Number | String</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Positions the tooltip at the bottom. Can be a boolean, number (px), or string (e.g., "10px").')}</table-col>
+              <table-col>{_('Position from bottom (true = 0px, number = px, string = custom)')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>left</table-col>
-              <table-col>Boolean/String/Number</table-col>
+              <table-col>Boolean | Number | String</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Positions the tooltip to the left. Can be a boolean, number (px), or string (e.g., "10px").')}</table-col>
+              <table-col>{_('Position from left (true = 0px, number = px, string = custom)')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>right</table-col>
-              <table-col>Boolean/String/Number</table-col>
+              <table-col>Boolean | Number | String</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Positions the tooltip to the right. Can be a boolean, number (px), or string (e.g., "10px").')}</table-col>
+              <table-col>{_('Position from right (true = 0px, number = px, string = custom)')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>color</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Sets the tooltip text color (e.g., "info", "primary", "success").')}</table-col>
+              <table-col>{_('Text color (e.g., "salmon", "#ff0000")')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>white</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Sets the tooltip text to white.')}</table-col>
+              <table-col>{_('Sets text color to var(--white)')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>black</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Sets the tooltip text to black.')}</table-col>
+              <table-col>{_('Sets text color to var(--black)')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>info</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Sets the tooltip text to an informational color (blue).')}</table-col>
+              <table-col>{_('Sets text color to var(--info)')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>warning</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Sets the tooltip text to a warning color (yellow).')}</table-col>
+              <table-col>{_('Sets text color to var(--warning)')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>success</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Sets the tooltip text to a success color (green).')}</table-col>
+              <table-col>{_('Sets text color to var(--success)')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>error</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Sets the tooltip text to an error color (red).')}</table-col>
+              <table-col>{_('Sets text color to var(--error)')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>muted</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Sets the tooltip text to a muted color (gray).')}</table-col>
+              <table-col>{_('Sets text color to var(--muted)')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>primary</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Sets the tooltip text to a primary color (brand color).')}</table-col>
+              <table-col>{_('Sets text color to var(--primary)')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>secondary</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Sets the tooltip text to a secondary color.')}</table-col>
+              <table-col>{_('Sets text color to var(--secondary)')}</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>background</table-col>
+              <table-col>Object</table-col>
+              <table-col>No</table-col>
+              <table-col>{_('Background color (e.g., { info: true })')}</table-col>
+            </table-row>
             <table-row>
               <table-col>curved</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Applies a curved border to the tooltip.')}</table-col>
+              <table-col>{_('Sets border-radius to 4px')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>curve</table-col>
               <table-col>Number</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Specifies the radius of the tooltip\'s border.')}</table-col>
+              <table-col>{_('Sets custom border-radius in pixels')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>center</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Centers the tooltip text.')}</table-col>
+              <table-col>{_('Centers text horizontally')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>padding</table-col>
               <table-col>Number</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Sets the padding inside the tooltip (in pixels).')}</table-col>
+              <table-col>{_('Sets padding in pixels')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>opacity</table-col>
               <table-col>Number</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Adjusts the opacity of the tooltip (0-100).')}</table-col>
+              <table-col>{_('Sets opacity (0-100)')}</table-col>
             </table-row>
-
             <table-row>
               <table-col>width</table-col>
-              <table-col>String/Number</table-col>
+              <table-col>String | Number</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Sets the width of the tooltip. If "auto", it adjusts automatically. Can also be a number (px).')}</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>background</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>{_('Sets the background color of the tooltip.')}</table-col>
+              <table-col>{_('Sets width ("auto" or pixels, default: "auto")')}</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Tooltip with Info Background -->
-          <a name="TooltipWithInfoBackground"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Tooltip with Info Background')}
-          </h2>
-          <div class="mb-10">
-            {_('This example demonstrates a tooltip with an info background. It appears above the text with curved corners, some padding, and an opacity of 80%. The tooltip shows when you hover over the "Hover me!" text, positioned above it.')}
-          </div>
-          <div class="bg-t-3 h-120 flex flex-center p-20 mb-20">
-            <div class="tx-center tooltip-trigger">
-              Hover me!
-              <element-tip 
-                background-info
-                curved
-                top="-30"
-                left="50"
-                padding="5"
-                opacity="80"
-                width="150"
-              >
-                This is the first and last name
-              </element-tip>
-            </div>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Basic Usage')}</h2>
+          <div class="mb-10">A simple tooltip that appears on hover.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <span class="relative inline-block p-10">
+              Hover me
+              <element-tip background={ { muted: true } } top="-30" left="0" padding="5">Tooltip text</element-tip>
+            </span>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <element-tip 
-              background-info
-              curved
-              top="-30"
-              left="50"
-              padding="5"
-              opacity="80"
-              width="150"
-            >
-              This is the first and last name
-            </element-tip>
+            <span class="relative inline-block p-10">
+              Hover me
+              <element-tip background={ { muted: true } } top="-30" left="0" padding="5">Tooltip text</element-tip>
+            </span>
           `}</ide-code>
 
-          <!-- Tooltip with Success Background -->
-          <a name="TooltipWithSuccessBackground"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Tooltip with Success Background')}
-          </h2>
-          <div class="mb-10">
-            {_('This example shows a tooltip with a success background (green). The tooltip is positioned to the bottom-right of the element, with a subtle curve and padding.')}
-          </div>
-          <div class="bg-t-3 h-120 flex flex-center p-20 mb-20">
-            <div class="tx-center tooltip-trigger">
-              Hover me to see success tooltip!
-              <element-tip 
-                background-success
-                curved
-                bottom="10"
-                right="10"
-                padding="10"
-                opacity="90"
-              >
-                Successfully completed!
-              </element-tip>
-            </div>
+          <a name="position"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Position')}</h2>
+          <div class="mb-10">Adjust tooltip position with top, bottom, left, or right.</div>
+          <div class="bg-t-3 p-10 mb-10 flex gap-20">
+            <span class="relative inline-block p-10">
+              Top
+              <element-tip background={ { info: true } } top="-30" left="0" padding="5">Top Tooltip</element-tip>
+            </span>
+            <span class="relative inline-block p-10">
+              Bottom
+              <element-tip background={ { info: true } } bottom="-30" left="0" padding="5">Bottom Tooltip</element-tip>
+            </span>
+            <span class="relative inline-block p-10">
+              Left
+              <element-tip background={ { info: true } } top="0" left="-100" padding="5">Left Tooltip</element-tip>
+            </span>
+            <span class="relative inline-block p-10">
+              Right
+              <element-tip background={ { info: true } } top="0" right="-100" padding="5">Right Tooltip</element-tip>
+            </span>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <element-tip 
-              background-success
-              curved
-              bottom="10"
-              right="10"
-              padding="10"
-              opacity="90"
-            >
-              Successfully completed!
-            </element-tip>
+            <span class="relative inline-block p-10">
+              Top
+              <element-tip background={ { info: true } } top="-30" left="0" padding="5">Top Tooltip</element-tip>
+            </span>
+            <span class="relative inline-block p-10">
+              Bottom
+              <element-tip background={ { info: true } } bottom="-30" left="0" padding="5">Bottom Tooltip</element-tip>
+            </span>
           `}</ide-code>
 
-          <!-- Tooltip with Error Background -->
-          <a name="TooltipWithErrorBackground"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Tooltip with Error Background')}
-          </h2>
-          <div class="mb-10">
-            {_('This example demonstrates a tooltip with an error background (red) that appears on hover. The tooltip has custom width, and the text is displayed with some padding and a background color. It appears above the text and is aligned centrally.')}
-          </div>
-          <div class="bg-t-3 h-120 flex flex-center p-20 mb-20">
-            <div class="tx-center tooltip-trigger">
-              Hover me to see error tooltip!
-              <element-tip 
-                background-error
-                curved
-                top="20"
-                left="50"
-                padding="8"
-                opacity="95"
-                width="180"
-              >
-                An error has occurred.
-              </element-tip>
-            </div>
+          <a name="styling"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">{_('Styling')}</h2>
+          <div class="mb-10">Customize appearance with colors, curves, padding, and more.</div>
+          <div class="bg-t-3 p-10 mb-10 flex gap-20">
+            <span class="relative inline-block p-10">
+              Info
+              <element-tip background={ { info: true } } curved top="-15" left="50" padding="5">This is the first and last name</element-tip>
+            </span>
+            <span class="relative inline-block p-10">
+              Success
+              <element-tip background={ { success: true } } curve="10" top="-30" left="0" padding="10" white>Success Tooltip</element-tip>
+            </span>
+            <span class="relative inline-block p-10">
+              Warning
+              <element-tip background={ { warning: true } } curved top="-30" left="0" padding="5" opacity="80">Warning Tooltip</element-tip>
+            </span>
+            <span class="relative inline-block p-10">
+              Custom Width
+              <element-tip background={ { primary: true } } curved top="-30" left="0" padding="5" width="150">Custom Width Tooltip</element-tip>
+            </span>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <element-tip 
-              background-error
-              curved
-              top="20"
-              left="50"
-              padding="8"
-              opacity="95"
-              width="180"
-            >
-              An error has occurred.
-            </element-tip>
+            <span class="relative inline-block p-10">
+              Info
+              <element-tip background={ { info: true } } curved top="-15" left="50" padding="5">This is the first and last name</element-tip>
+            </span>
+            <span class="relative inline-block p-10">
+              Success
+              <element-tip background={ { success: true } } curve="10" top="-30" left="0" padding="10" white>Success Tooltip</element-tip>
+            </span>
           `}</ide-code>
 
-          <!-- Tooltip with Warning Background -->
-          <a name="TooltipWithWarningBackground"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Tooltip with Warning Background')}
-          </h2>
-          <div class="mb-10">
-            {_('This example features a tooltip with a warning background (yellow). It appears to the right of the trigger element and has a larger font size for better visibility.')}
-          </div>
-          <div class="bg-t-3 h-120 flex flex-center p-20 mb-20">
-            <div class="tx-center tooltip-trigger">
-              Hover me to see warning tooltip!
-              <element-tip 
-                background-warning
-                curved
-                right="20"
-                padding="12"
-                opacity="85"
-                width="200"
-              >
-                Please take caution!
-              </element-tip>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <element-tip 
-              background-warning
-              curved
-              right="20"
-              padding="12"
-              opacity="85"
-              width="200"
-            >
-              Please take caution!
-            </element-tip>
-          `}</ide-code>
-
-          <!-- Tooltip with Centered Text and Curved Border -->
-          <a name="TooltipWithCenteredTextAndCurvedBorder"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Tooltip with Centered Text and Curved Border')}
-          </h2>
-          <div class="mb-10">
-            {_('This example demonstrates a tooltip with a centered alignment, and the tooltip has a curved border. The tooltip will be displayed above the text, with subtle styling.')}
-          </div>
-          <div class="bg-t-3 h-120 flex flex-center p-20 mb-20">
-            <div class="tx-center tooltip-trigger">
-              Hover over me!
-              <element-tip 
-                background-muted
-                curved
-                top="-20"
-                padding="8"
-                opacity="80"
-                width="120"
-                center
-              >
-                Information about this text.
-              </element-tip>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <element-tip 
-              background-muted
-              curved
-              top="-20"
-              padding="8"
-              opacity="80"
-              width="120"
-              center
-            >
-              Information about this text.
-            </element-tip>
-          `}</ide-code>
-
-          <!-- Tooltip with Custom Curve Radius -->
-          <a name="TooltipWithCustomCurve"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">
-            {_('Tooltip with Custom Curve Radius')}
-          </h2>
-          <div class="mb-10">
-            {_('This example shows a tooltip with a custom border radius (10px) using the `curve` prop and a primary background. It appears below the trigger text.')}
-          </div>
-          <div class="bg-t-3 h-120 flex flex-center p-20 mb-20">
-            <div class="tx-center tooltip-trigger">
-              Hover me for custom curve!
-              <element-tip 
-                background-primary
-                curve="10"
-                bottom="10"
-                padding="10"
-                opacity="90"
-                width="160"
-              >
-                Custom radius tooltip!
-              </element-tip>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <element-tip 
-              background-primary
-              curve="10"
-              bottom="10"
-              padding="10"
-              opacity="90"
-              width="160"
-            >
-              Custom radius tooltip!
-            </element-tip>
-          `}</ide-code>
-
-          <!-- Navigation -->
           <nav class="flex">
-            <a class="tx-primary py-40" href="/ink/ui/components/table.html">
-              <element-icon name="chevron-left" theme="tx-1" />
-              {_('Tables')}
+            <a class="tx-primary py-40" href="/ink/ui/components/tab.html">
+              <element-icon name="chevron-left" theme="tx-1" />{_('Tab')}
             </a>
-            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/alert.html">
-              {_('Alerts')}
-              <element-icon name="chevron-right" theme="tx-1" />
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/form/index.html">
+              {_('Forms')}<element-icon name="chevron-right" theme="tx-1" />
             </a>
           </nav>
           <footer class="foot"></footer>

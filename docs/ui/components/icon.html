@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Icon Component</title>
+  <meta name="description" content="A customizable icon component using Font Awesome icons." />
+  <meta property="og:title" content="Ink UI - Icon Component" />
+  <meta property="og:description" content="A customizable icon component using Font Awesome icons." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/components/icon.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Icon Component" />
+  <meta name="twitter:description" content="A customizable icon component using Font Awesome icons." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -142,23 +142,22 @@
   
 
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       Formats
     </a>
   
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#icons">Icons</a>
+            <a class="block tx-t-0" href="#icon">Icon</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#colors">• Colors</a>
+              <a class="block tx-t-1" href="#sizes">• Sizes</a>
               <a class="block tx-t-1" href="#types">• Types</a>
-              <a class="block tx-t-1" href="#size">• Size</a>
-              <a class="block tx-t-1" href="#color">• Color</a>
             </nav>
           </nav>
         </menu>
@@ -169,9 +168,9 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="icons"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Icons</h1>
-          <ide-app title="Editor" class="py-20">
+          <a name="icon"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Icon</h1>
+          <ide-app title="Icon" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
               import Icon from '@stackpress/ink-ui/element/icon';
             </ide-code>
@@ -184,153 +183,222 @@
             <table-head>Type</table-head>
             <table-head>Required</table-head>
             <table-head>Notes</table-head>
-
             <table-row>
               <table-col>name</table-col>
               <table-col>String</table-col>
               <table-col>Yes</table-col>
-              <table-col>Font Awesome icon name (e.g., "home", "github", "bell")</table-col>
+              <table-col>Font Awesome icon name (e.g., "info-circle", "star")</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>solid</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Uses solid icon style (default)</table-col>
+            </table-row>
             <table-row>
               <table-col>brand</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Uses brand style for logos (e.g., "github", "twitter"); defaults to solid style otherwise</table-col>
+              <table-col>Uses brand icon style (overrides solid)</table-col>
             </table-row>
-
             <table-row>
               <table-col>size</table-col>
-              <table-col>Number</table-col>
+              <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Custom font size in pixels (e.g., 16, 32)</table-col>
+              <table-col>Sets custom font size (e.g., "md", "lg")</table-col>
             </table-row>
-
             <table-row>
-              <table-col>xs, sm, md, lg, xl, xl2, xl3, xl4, xl5</table-col>
+              <table-col>xs</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Predefined size variants (escalating from extra-small to extra-large)</table-col>
+              <table-col>Sets font size to 10px</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>sm</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 12px</table-col>
+            </table-row>
+            <table-row>
+              <table-col>md</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 14px</table-col>
+            </table-row>
+            <table-row>
+              <table-col>lg</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 16px</table-col>
+            </table-row>
+            <table-row>
+              <table-col>xl</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 18px</table-col>
+            </table-row>
+            <table-row>
+              <table-col>xl2</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 20px</table-col>
+            </table-row>
+            <table-row>
+              <table-col>xl3</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 22px</table-col>
+            </table-row>
+            <table-row>
+              <table-col>xl4</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 24px</table-col>
+            </table-row>
+            <table-row>
+              <table-col>xl5</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets font size to 26px</table-col>
+            </table-row>
             <table-row>
               <table-col>color</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Custom CSS color (e.g., "red", "#facc15", "info")</table-col>
+              <table-col>Sets custom color (e.g., "salmon", "#ff0000")</table-col>
+            </table-row>
+            <table-row>
+              <table-col>white</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets color to var(--white)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>black</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets color to var(--black)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>info</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets color to var(--info)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>warning</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets color to var(--warning)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>success</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets color to var(--success)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>error</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets color to var(--error)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>muted</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets color to var(--muted)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>primary</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets color to var(--primary)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>secondary</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets color to var(--secondary)</table-col>
             </table-row>
           </layout-table>
 
-          <a name="types"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Types</h2>
-          <div class="mb-10">Icons can be solid (default) or brand-specific (e.g., logos):</div>
-
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-icon name="user"></element-icon>
-            </div>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">Basic icons with default solid style.</div>
+          <div class="bg-t-3 p-10 flex gap-10">
+            <element-icon name="star"></element-icon>
+            <element-icon name="heart"></element-icon>
+            <element-icon name="bell"></element-icon>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-icon name="user" /&gt;
+            &lt;element-icon name="star" /&gt;
+            &lt;element-icon name="heart" /&gt;
+            &lt;element-icon name="bell" /&gt;
           </ide-code>
 
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-icon name="steam" brand></element-icon>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-icon name="steam" brand /&gt;
-          </ide-code>
-
-                    <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-icon name="github" brand></element-icon>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-icon name="github" brand /&gt;
-          </ide-code>
-
-          <a name="size"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Size</h2>
-          <div class="mb-10">Control icon size with custom values or predefined variants:</div>
-
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-icon name="bell" size="16"></element-icon>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-icon name="bell" size="16" /&gt;
-          </ide-code>
-
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-icon name="bell" size="32"></element-icon>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-icon name="bell" size="32" /&gt;
-          </ide-code>
-
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-icon name="bell" lg></element-icon>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-icon name="bell" lg /&gt;
-          </ide-code>
-
-                    <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-icon name="bell" sm></element-icon>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-icon name="bell" sm /&gt;
-          </ide-code>
-
-          <a name="color"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Color</h2>
-          <div class="mb-10">Apply custom colors to icons:</div>
-
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-icon name="heart" color="red"></element-icon>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-icon name="heart" color="red" /&gt;
-          </ide-code>
-
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-icon name="star" color="#facc15"></element-icon>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;element-icon name="star" color="#facc15" /&gt;
-          </ide-code>
-
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 pt-10 pb-10 flex flex-center">
-              <element-icon name="info-circle" info></element-icon>
-            </div>
+          <a name="colors"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Colors</h2>
+          <div class="mb-10">Customize icon colors with predefined or custom values.</div>
+          <div class="bg-t-3 p-10 flex gap-10">
+            <element-icon name="info-circle" info></element-icon>
+            <element-icon name="exclamation-triangle" warning></element-icon>
+            <element-icon name="times-circle" error></element-icon>
+            <element-icon name="check-circle" success></element-icon>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;element-icon name="info-circle" info /&gt;
+            &lt;element-icon name="exclamation-triangle" warning /&gt;
+            &lt;element-icon name="times-circle" error /&gt;
+            &lt;element-icon name="check-circle" success /&gt;
+          </ide-code>
+          <div class="bg-t-3 p-10 flex gap-10">
+            <element-icon name="star" color="purple"></element-icon>
+            <element-icon name="heart" color="#ff4500"></element-icon>
+            <element-icon name="bell" primary></element-icon>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-icon name="star" color="purple" /&gt;
+            &lt;element-icon name="heart" color="#ff4500" /&gt;
+            &lt;element-icon name="bell" primary /&gt;
+          </ide-code>
+
+          <a name="sizes"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Sizes</h2>
+          <div class="mb-10">Adjust icon sizes with predefined options.</div>
+          <div class="bg-t-3 p-10 flex gap-10 align-center">
+            <element-icon name="star" sm></element-icon>
+            <element-icon name="star" md></element-icon>
+            <element-icon name="star" lg></element-icon>
+            <element-icon name="star" xl2></element-icon>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-icon name="star" sm /&gt;
+            &lt;element-icon name="star" md /&gt;
+            &lt;element-icon name="star" lg /&gt;
+            &lt;element-icon name="star" xl2 /&gt;
+          </ide-code>
+
+          <a name="types"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Types</h2>
+          <div class="mb-10">Use solid or brand icon styles.</div>
+          <div class="bg-t-3 p-10 flex gap-10">
+            <element-icon name="star" solid></element-icon>
+            <element-icon name="twitter" brand></element-icon>
+            <element-icon name="github" brand></element-icon>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;element-icon name="star" solid /&gt;
+            &lt;element-icon name="twitter" brand /&gt;
+            &lt;element-icon name="github" brand /&gt;
           </ide-code>
 
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/crumbs.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Crumbs
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Crumbs
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/loader.html">
-              Loaders
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Loader<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

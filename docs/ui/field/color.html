@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Color Field Component</title>
+  <meta name="description" content="A color picker field with synchronized input for form integration." />
+  <meta property="og:title" content="Ink UI - Color Field Component" />
+  <meta property="og:description" content="A color picker field with synchronized input for form integration." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/color.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Color Field Component" />
+  <meta name="twitter:description" content="A color picker field with synchronized input for form integration." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -142,23 +142,21 @@
   
 
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       Formats
     </a>
   
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Color">Color</a>
+            <a class="block tx-t-0" href="#color">Color Field</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicColor">• Basic Color</a>
-              <a class="block tx-t-1" href="#colorWithValue">• Color with Value</a>
-              <a class="block tx-t-1" href="#requiredColor">• Required Color</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#states">• States</a>
+              <a class="block tx-t-1" href="#custom">• Custom Styling</a>
             </nav>
           </nav>
         </menu>
@@ -169,135 +167,110 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Color"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Color</h1>
-          <ide-app title="Editor" class="py-20">
-            <ide-code class="scroll-y-auto mb-10 w-full mw-full bg-black tx-white" lang="js" trim>
+          <a name="color"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Color Field</h1>
+          <ide-app title="Color Field" class="py-20">
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
               import Color from '@stackpress/ink-ui/field/color';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
             <table-head>Notes</table-head>
-
             <table-row>
               <table-col>autocomplete</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Sets autocomplete behavior (e.g., "off"). Synced to both inputs.</table-col>
+              <table-col>Autocomplete attribute (e.g., "off")</table-col>
             </table-row>
-
             <table-row>
               <table-col>disabled</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>If true, disables the color picker and text input.</table-col>
+              <table-col>Disables the color picker</table-col>
             </table-row>
-
             <table-row>
               <table-col>name</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Name attribute for form submission.</table-col>
+              <table-col>Name attribute for form submission</table-col>
             </table-row>
-
             <table-row>
               <table-col>readonly</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>If true, makes both inputs read-only.</table-col>
+              <table-col>Makes the color picker read-only</table-col>
             </table-row>
-
             <table-row>
               <table-col>required</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>If true, marks both inputs as required for form validation.</table-col>
+              <table-col>Marks the field as required</table-col>
             </table-row>
-
             <table-row>
               <table-col>value</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Initial color value (e.g., "#ff0000"). Synced between picker and text input.</table-col>
+              <table-col>Initial color value (e.g., "#ff0000")</table-col>
             </table-row>
-
             <table-row>
-              <table-col>display</table-col>
+              <table-col>placeholder</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Sets display style of the host (e.g., "inline-block", "block"). Defaults to "inline-block".</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>class</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Custom CSS classes for the host element (e.g., "w-200").</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Inline styles for the host element (e.g., "border: 2px solid blue").</table-col>
+              <table-col>Placeholder text for the text input</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Color -->
-          <a name="basicColor"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Color</h2>
-          <div class="mb-10">A simple color picker with a text input.</div>
-          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex align-center justify-center">
-              <field-color name="color"></field-color>
-            </div>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">A simple color field with a placeholder.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-color name="color" placeholder="Enter color"></field-color>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim >
-            &lt;field-color name="color" /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-color name="color" placeholder="Enter color" /&gt;
           </ide-code>
 
-          <!-- Color with Value -->
-          <a name="colorWithValue"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Color with Value</h2>
-          <div class="mb-10">A color picker with an initial value.</div>
-          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex align-center justify-center">
-              <field-color name="color" value="#ff0000"></field-color>
-            </div>
+          <a name="states"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">States</h2>
+          <div class="mb-10">Color field with different states: value, disabled, required.</div>
+          <div class="bg-t-3 p-10 mb-10 flex gap-20">
+            <field-color name="valued" value="#ff0000" placeholder="Red"></field-color>
+            <field-color name="disabled" disabled placeholder="Disabled"></field-color>
+            <field-color name="required" required placeholder="Required"></field-color>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim >
-            &lt;field-color name="color" value="#ff0000" /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-color name="valued" value="#ff0000" placeholder="Red" /&gt;
+            &lt;field-color name="disabled" disabled placeholder="Disabled" /&gt;
+            &lt;field-color name="required" required placeholder="Required" /&gt;
           </ide-code>
 
-          <!-- Required Color -->
-          <a name="requiredColor"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Required Color</h2>
-          <div class="mb-10">A color field marked as required for form validation.</div>
-          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex align-center justify-center">
-              <field-color name="color" required class="w-200"></field-color>
-            </div>
+          <a name="custom"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Styling</h2>
+          <div class="mb-10">Color field with custom styling and initial value.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-color name="custom" value="#00ff00" placeholder="Enter a color" class="rounded b-solid b-primary p-5"></field-color>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black tx-white" trim >
-            &lt;field-color name="color" required class="w-200" /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-color 
+              name="custom" 
+              value="#00ff00" 
+              placeholder="Enter a color" 
+              class="rounded b-solid b-primary p-5" 
+            /&gt;
           </ide-code>
 
-          <!-- Navigation -->
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/checkbox.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Checkbox
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Checkbox Field
             </a>
-            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/country.html">
-              Country
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/input.html">
+              Input Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

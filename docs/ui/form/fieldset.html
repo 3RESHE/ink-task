@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Fieldset Component</title>
+  <meta name="description" content="A component for grouping form fields with a legend and optional multiple rows." />
+  <meta property="og:title" content="Ink UI - Fieldset Component" />
+  <meta property="og:description" content="A component for grouping form fields with a legend and optional multiple rows." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/components/fieldset.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Fieldset Component" />
+  <meta name="twitter:description" content="A component for grouping form fields with a legend and optional multiple rows." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -142,24 +142,21 @@
   
 
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       Formats
     </a>
   
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Fieldset">Fieldset</a>
+            <a class="block tx-t-0" href="#fieldset">Fieldset</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicFieldset">• Basic Fieldset</a>
-              <a class="block tx-t-1" href="#multipleFieldset">• Multiple Fieldset</a>
-              <a class="block tx-t-1" href="#fieldWithErrors">• Fieldset with Errors</a>
-              <a class="block tx-t-1" href="#styledFieldset">• Styled Fieldset</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#multiple">• Multiple Rows</a>
+              <a class="block tx-t-1" href="#custom">• Custom Styling</a>
             </nav>
           </nav>
         </menu>
@@ -170,162 +167,121 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Fieldset"></a>
+          <a name="fieldset"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">Fieldset</h1>
-          <ide-app title="Editor" class="py-20">
+          <ide-app title="Fieldset" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
               import Fieldset from '@stackpress/ink-ui/form/fieldset';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
             <table-head>Notes</table-head>
-
+            <table-row>
+              <table-col>legend</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Text for the fieldset legend; supports %s for row count</table-col>
+            </table-row>
+            <table-row>
+              <table-col>name</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Name attribute for the fieldset</table-col>
+            </table-row>
+            <table-row>
+              <table-col>value</table-col>
+              <table-col>Object</table-col>
+              <table-col>No</table-col>
+              <table-col>Initial values for the fields</table-col>
+            </table-row>
             <table-row>
               <table-col>multiple</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>If true, allows multiple rows with an "Add" button. Inputs become an empty array if undefined.</table-col>
+              <table-col>Allows adding multiple rows with an "Add" button</table-col>
             </table-row>
-
-                <table-row>
-                <table-col>inputs</table-col>
-                <table-col>Object | Array&lt;Object&gt;</table-col>
-                <table-col>No</table-col>
-                <table-col>Data for each row. Single object if multiple=false, array if multiple=true. Defaults to [{}] if invalid.</table-col>
-                </table-row>
-
-                <table-row>
-                <table-col>errors</table-col>
-                <table-col>Object | Array&lt;Object&gt;</table-col>
-                <table-col>No</table-col>
-                <table-col>Error data per row. Matches inputs structure. Defaults to [{}] if invalid.</table-col>
-                </table-row>
-
-
+            <table-row>
+              <table-col>inputs</table-col>
+              <table-col>Array | Object</table-col>
+              <table-col>No</table-col>
+              <table-col>Initial input values (array for multiple, object for single)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>errors</table-col>
+              <table-col>Array | Object</table-col>
+              <table-col>No</table-col>
+              <table-col>Initial error states (array for multiple, object for single)</table-col>
+            </table-row>
             <table-row>
               <table-col>add</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Text for the "Add" button when multiple=true. Defaults to "Add".</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>display</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Sets display style of the host (e.g., "block", "inline"). Defaults to "block".</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>border</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Applies border styles (e.g., "solid", "dashed"). Handled by Ink UI utilities.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>radius</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Sets border radius (e.g., "md", "lg"). Handled by Ink UI utilities.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>button</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Styles the "Add" button (e.g., "primary", "success"). Requires multiple=true.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>class</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Custom CSS classes for the host element (e.g., "p-10").</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Inline styles for the host element (e.g., "margin: 10px").</table-col>
+              <table-col>Text for the "Add" button (default: "Add")</table-col>
             </table-row>
           </layout-table>
 
-
-
-          <!-- Multiple Fieldset -->
-            <a name="multipleFieldset"></a>
-            <h2 class="tx-primary tx-upper tx-30 py-20">Multiple Fieldset</h2>
-            <div class="mb-10">A fieldset with multiple rows and an "Add" button.</div>
-
-            <!-- Container with proper spacing -->
-            <div class="basis-third-10 lg-basis-half-10 md-basis-full p-10">
-            <div class="bg-t-3 min-h-120 flex flex-col flex-center gap-10 p-12 rounded-4">
-                <form-fieldset legend="Users" multiple  add="Add User">
-                <field-input name="first" placeholder="First Name"></field-input>
-                <field-input name="last" placeholder="Last Name"></field-input>
-                </form-fieldset>
-            </div>
-            </div>
-
-            <!-- IDE Code Block -->
-            <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white p-6 rounded-4" trim >
-            &lt;script&gt;
-                const sampleData = [
-                { first: 'John', last: 'Doe' },
-                { first: 'Jane', last: 'Smith' }
-                ];
-            &lt;/script&gt;
-            &lt;form-fieldset legend="Users" multiple inputs={sampleData} add="Add User"&gt;
-                &lt;field-input name="first" placeholder="First Name" /&gt;
-                &lt;field-input name="last" placeholder="Last Name" /&gt;
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">A simple fieldset with a single field.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <form-fieldset legend="User Info">
+              <field-input name="username" placeholder="Enter your username"></field-input>
+            </form-fieldset>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;form-fieldset legend="User Info"&gt;
+              &lt;field-input name="username" placeholder="Enter your username" /&gt;
             &lt;/form-fieldset&gt;
-            </ide-code>
+          </ide-code>
 
+          <a name="multiple"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Multiple Rows</h2>
+          <div class="mb-10">A fieldset with multiple rows and an "Add" button.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <form-fieldset legend="Fieldset %s" name="fieldset1" multiple>
+              <field-input name="first" placeholder="Enter your first name"></field-input>
+            </form-fieldset>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;form-fieldset legend="Fieldset %s" name="fieldset1" multiple&gt;
+              &lt;field-input name="first" placeholder="Enter your first name" /&gt;
+            &lt;/form-fieldset&gt;
+          </ide-code>
 
-
-            <!-- Styled Fieldset -->
-            <a name="styledFieldset"></a>
-            <h2 class="tx-primary tx-upper tx-30 py-20">Styled Fieldset</h2>
-            <div class="mb-10">A multiple fieldset with an "Add" button to append single-input rows.</div>
-            <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 min-h-120 flex flex-col flex-center gap-10 p-12 rounded-4">
-                <form-fieldset legend="Contacts" multiple class="p-10" border="solid" radius="md" add="New Contact">
-                <field-input name="email" placeholder="Email Address" class="w-full"></field-input>
-                </form-fieldset>
-            </div>
-            </div>
-            <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
+          <a name="custom"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Styling</h2>
+          <div class="mb-10">A styled fieldset with initial values and custom "Add" text.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <form-fieldset legend="Contact %s" name="contacts" multiple add="Add Contact" class="p-10 b-solid b-muted rounded"  >
+              <field-input name="first" placeholder="Enter first name"></field-input>
+            </form-fieldset>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;form-fieldset 
-                legend="Contacts" 
-                multiple 
-                class="p-10" 
-                border="solid" 
-                radius="md" 
-                add="New Contact"
+              legend="Contact %s" 
+              name="contacts" 
+              multiple 
+              add="Add Contact" 
+              class="p-10 b-solid b-muted rounded" 
+              inputs={[{ first: 'John' }]} 
+              errors={[{ first: 'Invalid name' }]}
             &gt;
-                &lt;field-input name="email" placeholder="Email Address" class="w-full" /&gt;
+              &lt;field-input name="first" placeholder="Enter first name" /&gt;
             &lt;/form-fieldset&gt;
-</ide-code>
+          </ide-code>
 
-          <!-- Navigation -->
           <nav class="flex">
-            <a class="tx-primary py-40" href="/ink/ui/form/control.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Control
+            <a class="tx-primary py-40" href="/ink/ui/components/form-control.html">
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Form Control
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/checkbox.html">
-              Checkbox
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Checkbox<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

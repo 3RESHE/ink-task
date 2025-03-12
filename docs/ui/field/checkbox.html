@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Checkbox Field Component</title>
+  <meta name="description" content="A customizable checkbox field with label and state management." />
+  <meta property="og:title" content="Ink UI - Checkbox Field Component" />
+  <meta property="og:description" content="A customizable checkbox field with label and state management." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/checkbox.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Checkbox Field Component" />
+  <meta name="twitter:description" content="A customizable checkbox field with label and state management." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -149,22 +149,14 @@
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Checkbox">Checkbox</a>
+            <a class="block tx-t-0" href="#checkbox">Checkbox Field</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicCheckbox">• Basic Checkbox</a>
-              <a class="block tx-t-1" href="#checkedCheckbox">• Checked Checkbox</a>
-              <a class="block tx-t-1" href="#disabledCheckbox">• Disabled Checkbox</a>
-              <a class="block tx-t-1" href="#styledCheckbox">• Styled Checkbox</a>
-              <a class="block tx-t-1" href="#checkboxWithHandler">• Checkbox with Handler</a>
-              <a class="block tx-t-1" href="#requiredCheckbox">• Required Checkbox</a>
-              <a class="block tx-t-1" href="#checkboxWithValue">• Checkbox with Value</a>
-              <a class="block tx-t-1" href="#shapeColorCombo">• Shape and Color Combo</a>
-              <a class="block tx-t-1" href="#multipleCheckboxes">• Multiple Checkboxes in Form</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#states">• States</a>
+              <a class="block tx-t-1" href="#custom">• Custom Styling</a>
             </nav>
           </nav>
         </menu>
@@ -175,260 +167,184 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Checkbox"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Checkbox</h1>
-          <ide-app title="Editor" class="py-20">
+          <a name="checkbox"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Checkbox Field</h1>
+          <ide-app title="Checkbox Field" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
               import Checkbox from '@stackpress/ink-ui/field/checkbox';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
             <table-head>Notes</table-head>
-
-            <table-row>
-              <table-col>label</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Text displayed next to the checkbox. Defaults to an empty string.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>checked</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>If true, the checkbox is initially checked.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>disabled</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>If true, disables the checkbox.</table-col>
-            </table-row>
-
             <table-row>
               <table-col>name</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Name attribute for form submission.</table-col>
+              <table-col>Name attribute for the checkbox</table-col>
             </table-row>
-
             <table-row>
-              <table-col>readonly</table-col>
-              <table-col>Boolean</table-col>
+              <table-col>label</table-col>
+              <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>If true, makes the checkbox read-only.</table-col>
+              <table-col>Text displayed next to the checkbox (default: "")</table-col>
             </table-row>
-
-            <table-row>
-              <table-col>required</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>If true, marks the checkbox as required for form validation.</table-col>
-            </table-row>
-
             <table-row>
               <table-col>value</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Value submitted when the checkbox is checked.</table-col>
+              <table-col>Value attribute when checked</table-col>
             </table-row>
-
             <table-row>
-              <table-col>click</table-col>
-              <table-col>Function</table-col>
+              <table-col>checked</table-col>
+              <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Custom click event handler for the checkbox.</table-col>
+              <table-col>Initial checked state</table-col>
             </table-row>
-
             <table-row>
-              <table-col>display</table-col>
-              <table-col>String</table-col>
+              <table-col>disabled</table-col>
+              <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Sets display style of the host (e.g., "inline-block", "block"). Defaults to "inline-block".</table-col>
+              <table-col>Disables the checkbox</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>readonly</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Makes the checkbox read-only</table-col>
+            </table-row>
+            <table-row>
+              <table-col>required</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Marks the checkbox as required</table-col>
+            </table-row>
+            <table-row>
+              <table-col>white</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets checkbox color to var(--white)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>black</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets checkbox color to var(--black)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>info</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets checkbox color to var(--info)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>warning</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets checkbox color to var(--warning)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>success</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets checkbox color to var(--success)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>error</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets checkbox color to var(--error)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>muted</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets checkbox color to var(--muted)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>primary</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets checkbox color to var(--primary)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>secondary</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets checkbox color to var(--secondary)</table-col>
+            </table-row>
             <table-row>
               <table-col>orange</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>If true, applies an orange color variant to the checkbox.</table-col>
+              <table-col>Sets checkbox color to orange (custom utility)</table-col>
             </table-row>
-
             <table-row>
-              <table-col>rounded</table-col>
-              <table-col>Boolean</table-col>
+              <table-col>update</table-col>
+              <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>If true, applies rounded styling to the checkbox.</table-col>
+              <table-col>Callback function on change (receives event)</table-col>
             </table-row>
-
             <table-row>
-              <table-col>square</table-col>
-              <table-col>Boolean</table-col>
+              <table-col>click</table-col>
+              <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>If true, applies square styling to the checkbox (assumed supported by setStyles).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>class</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Custom CSS classes for the host element (e.g., "mr-10").</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Inline styles for the host element (e.g., "margin: 10px").</table-col>
+              <table-col>Custom click handler</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Checkbox -->
-          <a name="basicCheckbox"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Checkbox</h2>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
           <div class="mb-10">A simple checkbox with a label.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-checkbox name="active" label="Active"></field-checkbox>
-            </div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-checkbox name="basic" label="Agree to terms"></field-checkbox>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-checkbox name="active" label="Active" /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-checkbox name="basic" label=" Agree to terms" /&gt;
           </ide-code>
 
-          <!-- Checked Checkbox -->
-          <a name="checkedCheckbox"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Checked Checkbox</h2>
-          <div class="mb-10">A checkbox that is initially checked.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-checkbox name="agree" label="I Agree" checked></field-checkbox>
-            </div>
+          <a name="states"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">States</h2>
+          <div class="mb-10">Checkbox with different states: checked, disabled, required.</div>
+          <div class="bg-t-3 p-10 mb-10 flex gap-20">
+            <field-checkbox name="checked" label="Checked" value="yes" checked></field-checkbox>
+            <field-checkbox name="disabled" label="Disabled" disabled></field-checkbox>
+            <field-checkbox name="required" label="Required" required></field-checkbox>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-checkbox name="agree" label="I Agree" checked /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-checkbox name="checked" label="Checked" value="yes" checked /&gt;
+            &lt;field-checkbox name="disabled" label="Disabled" disabled /&gt;
+            &lt;field-checkbox name="required" label="Required" required /&gt;
           </ide-code>
 
-          <!-- Disabled Checkbox -->
-          <a name="disabledCheckbox"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Disabled Checkbox</h2>
-          <div class="mb-10">A disabled checkbox that cannot be interacted with.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-checkbox name="terms" label="Accept Terms" disabled></field-checkbox>
-            </div>
+          <a name="custom"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Styling</h2>
+          <div class="mb-10">Checkbox with custom color and update callback.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-checkbox name="checkbox" label="Active?" value="yes" checked orange ></field-checkbox>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-checkbox name="terms" label="Accept Terms" disabled /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-checkbox 
+              name="checkbox" 
+              label="Active?" 
+              value="yes" 
+              checked 
+              orange
+              update={console.log}
+            /&gt;
           </ide-code>
 
-          <!-- Styled Checkbox -->
-          <a name="styledCheckbox"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Checkbox</h2>
-          <div class="mb-10">A checkbox with custom styling, such as color and shape variants.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-checkbox name="subscribe" label="Subscribe" orange rounded></field-checkbox>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-checkbox name="subscribe" label="Subscribe" orange rounded /&gt;
-          </ide-code>
-
-          <!-- Checkbox with Handler -->
-          <a name="checkboxWithHandler"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Checkbox with Handler</h2>
-          <div class="mb-10">A checkbox with a custom click event handler.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-checkbox name="notify" label="Notify Me" ></field-checkbox>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;script&gt;
-              const handleClick = (e) =&gt; console.log('Clicked:', e.target.checked);
-            &lt;/script&gt;
-            &lt;field-checkbox name="notify" label="Notify Me" click={handleClick} /&gt;
-          </ide-code>
-
-          <!-- Required Checkbox -->
-          <a name="requiredCheckbox"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Required Checkbox</h2>
-          <div class="mb-10">A checkbox marked as required for form submission.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-checkbox name="consent" label="Consent Required" required></field-checkbox>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-checkbox name="consent" label="Consent Required" required /&gt;
-          </ide-code>
-
-          <!-- Checkbox with Value -->
-          <a name="checkboxWithValue"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Checkbox with Value</h2>
-          <div class="mb-10">A checkbox with a specific value logged on change.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-checkbox name="feature" label="Enable Feature" value="feature_on" ></field-checkbox>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;script&gt;
-              const logValue = (e) =&gt; console.log('Value:', e.target.checked ? e.target.value : 'unchecked');
-            &lt;/script&gt;
-            &lt;field-checkbox name="feature" label="Enable Feature" value="feature_on" click={logValue} /&gt;
-          </ide-code>
-
-          <!-- Shape and Color Combo -->
-          <a name="shapeColorCombo"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Shape and Color Combo</h2>
-          <div class="mb-10">A checkbox combining different shapes and colors.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center gap-20">
-              <field-checkbox name="option1" label="Rounded Orange" orange rounded></field-checkbox>
-              <field-checkbox name="option2" label="Square Default" square></field-checkbox>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-checkbox name="option1" label="Rounded Orange" orange rounded /&gt;
-            &lt;field-checkbox name="option2" label="Square Default" square /&gt;
-          </ide-code>
-
-          <!-- Multiple Checkboxes in Form -->
-          <a name="multipleCheckboxes"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Multiple Checkboxes in Form</h2>
-          <div class="mb-10">A group of checkboxes in a form with varied states and styles.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center flex-col gap-10">
-              <field-checkbox name="hobbies" label="Reading" value="reading" checked orange rounded></field-checkbox>
-              <field-checkbox name="hobbies" label="Gaming" value="gaming"></field-checkbox>
-              <field-checkbox name="hobbies" label="Traveling" value="traveling" disabled></field-checkbox>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-checkbox name="hobbies" label="Reading" value="reading" checked orange rounded /&gt;
-            &lt;field-checkbox name="hobbies" label="Gaming" value="gaming" /&gt;
-            &lt;field-checkbox name="hobbies" label="Traveling" value="traveling" disabled /&gt;
-          </ide-code>
-
-          <!-- Navigation -->
           <nav class="flex">
-            <a class="tx-primary py-40" href="/ink/ui/form/fieldset.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Fieldset
+            <a class="tx-primary py-40" href="/ink/ui/components/fieldset.html">
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Fieldset
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/color.html">
-              Color
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Color<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

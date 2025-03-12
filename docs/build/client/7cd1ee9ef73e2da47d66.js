@@ -757,7 +757,7 @@ var InkAPI = (() => {
         decoder.innerHTML = value;
         return decoder.value;
       };
-      var ClientRegistry22 = class _ClientRegistry {
+      var ClientRegistry18 = class _ClientRegistry {
         static get elements() {
           return this._elements;
         }
@@ -875,8 +875,8 @@ var InkAPI = (() => {
           return Array.from(children4).filter((child) => typeof child !== "undefined").map((child) => typeof child === "string" ? this.createText(child) : child instanceof Element_1.default ? child.element : child);
         }
       };
-      ClientRegistry22._elements = /* @__PURE__ */ new Map();
-      exports.default = ClientRegistry22;
+      ClientRegistry18._elements = /* @__PURE__ */ new Map();
+      exports.default = ClientRegistry18;
     }
   });
 
@@ -958,7 +958,7 @@ var InkAPI = (() => {
       var Registry_1 = __importDefault(require_Registry());
       var Emitter_1 = __importDefault(require_Emitter());
       var data_1 = __importDefault(require_data());
-      var ClientComponent21 = class _ClientComponent extends HTMLElement {
+      var ClientComponent17 = class _ClientComponent extends HTMLElement {
         static get registered() {
           return customElements.getName(this);
         }
@@ -1279,7 +1279,7 @@ var InkAPI = (() => {
           }
         }
       };
-      exports.default = ClientComponent21;
+      exports.default = ClientComponent17;
     }
   });
 
@@ -1581,9 +1581,9 @@ var InkAPI = (() => {
       exports.styleset = styleset;
       var StyleMap_1 = __importDefault(require_StyleMap());
       function styleset(styles = {}) {
-        return new StyleSet16(Object.entries(styles));
+        return new StyleSet12(Object.entries(styles));
       }
-      var StyleSet16 = class extends Map {
+      var StyleSet12 = class extends Map {
         add(selector, property, values) {
           if (!this.has(selector)) {
             this.set(selector, new StyleMap_1.default());
@@ -1616,7 +1616,7 @@ var InkAPI = (() => {
           return styleset2.join("");
         }
       };
-      exports.default = StyleSet16;
+      exports.default = StyleSet12;
     }
   });
 
@@ -3498,24 +3498,6 @@ var InkAPI = (() => {
     }
   });
 
-  // ../../node_modules/@stackpress/ink-ui/utilities/style/curve.js
-  var require_curve = __commonJS({
-    "../../node_modules/@stackpress/ink-ui/utilities/style/curve.js"(exports) {
-      "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.default = curve;
-      function curve(props3, styles, initial = false, selector = ":host") {
-        const { curve: curve2, curved, rounded, pill } = props3;
-        const style = curve2 ? `${curve2}px` : curved ? "4px" : rounded ? "12px" : pill ? "10000px" : initial;
-        if (style) {
-          styles.add(selector, "border-radius", style);
-          styles.add(selector, "overflow", "hidden");
-        }
-        return curve2 ? "curve" : curved ? "curved" : rounded ? "rounded" : pill ? "pill" : "initial";
-      }
-    }
-  });
-
   // ../../node_modules/@stackpress/ink-ui/utilities/style/display.js
   var require_display = __commonJS({
     "../../node_modules/@stackpress/ink-ui/utilities/style/display.js"(exports) {
@@ -3584,11 +3566,11 @@ var InkAPI = (() => {
     }
   });
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\tooltip.ink
+  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\tooltip.ink
   var tooltip_exports = {};
   __export(tooltip_exports, {
     BUILD_ID: () => BUILD_ID,
-    ClientRegistry: () => import_Registry21.default,
+    ClientRegistry: () => import_Registry17.default,
     TemplateDocument: () => TemplateDocument,
     components: () => components,
     data: () => import_data.default,
@@ -3597,11 +3579,11 @@ var InkAPI = (() => {
   });
   var import_Document = __toESM(require_Document());
   var import_Document2 = __toESM(require_Document2());
-  var import_Registry21 = __toESM(require_Registry());
+  var import_Registry17 = __toESM(require_Registry());
   var import_Emitter = __toESM(require_Emitter());
   var import_data = __toESM(require_data());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\docs.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\api\docs.ink
   var import_Registry = __toESM(require_Registry());
   var import_Component = __toESM(require_Component());
   var import_ink = __toESM(require_ink());
@@ -3630,7 +3612,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\app.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\app.ink
   var import_Registry2 = __toESM(require_Registry());
   var import_Component2 = __toESM(require_Component());
   var import_ink2 = __toESM(require_ink());
@@ -3684,7 +3666,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\code.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\code.ink
   var import_Registry3 = __toESM(require_Registry());
   var import_Component3 = __toESM(require_Component());
   var import_prismjs = __toESM(require_prism());
@@ -3881,7 +3863,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
   var import_Registry4 = __toESM(require_Registry());
   var import_Component4 = __toESM(require_Component());
 
@@ -3897,7 +3879,7 @@ var InkAPI = (() => {
     return phrase;
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
   var Translate_794a00a5e900fca28310 = class extends import_Component4.default {
     static id = "794a00a5e900fca28310";
     static tagname = "translate";
@@ -3973,7 +3955,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\panel.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\panel.ink
   var import_Registry5 = __toESM(require_Registry());
   var import_Component5 = __toESM(require_Component());
   var Panel_c4c96a14064fc0c4d224 = class extends import_Component5.default {
@@ -4134,62 +4116,14 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\alert.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\icon.ink
   var import_Registry6 = __toESM(require_Registry());
   var import_Component6 = __toESM(require_Component());
   var import_StyleSet = __toESM(require_StyleSet());
   var import_color = __toESM(require_color());
-  var import_curve = __toESM(require_curve());
   var import_display = __toESM(require_display());
-  var Alert_ba827f6c1d3753161701 = class extends import_Component6.default {
-    static id = "ba827f6c1d3753161701";
-    static tagname = "alert";
-    static classname = "Alert_ba827f6c1d3753161701";
-    styles() {
-      return ``;
-    }
-    template() {
-      const {
-        //layouts
-        outline,
-        solid,
-        transparent,
-        //padding
-        padding
-      } = this.props;
-      const styles = new import_StyleSet.default();
-      this.styles = () => styles.toString();
-      (0, import_display.default)(this.props, styles, "block", ":host");
-      styles.add(":host", "padding", padding ? `${padding}px` : "16px");
-      (0, import_curve.default)(this.props, styles, false, ":host");
-      if (outline || transparent) {
-        (0, import_color.default)(this.props, styles, "var(--muted)", ":host", "color");
-        (0, import_color.default)(this.props, styles, "var(--muted)", ":host", "border-color");
-        styles.add(":host", "border-style", "solid");
-        styles.add(":host", "border-width", "1px");
-        if (outline) {
-          styles.add(":host", "background-color", "var(--white)");
-        }
-      } else {
-        styles.add(":host", "color", "var(--white)");
-        (0, import_color.default)(this.props, styles, "var(--muted)", ":host", "background-color");
-      }
-      return () => [
-        import_Registry6.default.createText(`
-`, false),
-        import_Registry6.default.createElement("slot", {}, []).element
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\icon.ink
-  var import_Registry7 = __toESM(require_Registry());
-  var import_Component7 = __toESM(require_Component());
-  var import_StyleSet2 = __toESM(require_StyleSet());
-  var import_color2 = __toESM(require_color());
-  var import_display2 = __toESM(require_display());
   var import_size = __toESM(require_size());
-  var Icon_33cb84912ffcb000a388 = class extends import_Component7.default {
+  var Icon_33cb84912ffcb000a388 = class extends import_Component6.default {
     static id = "33cb84912ffcb000a388";
     static tagname = "icon";
     static classname = "Icon_33cb84912ffcb000a388";
@@ -4198,32 +4132,32 @@ var InkAPI = (() => {
     }
     template() {
       const { name, solid, brand } = this.props;
-      const styles = new import_StyleSet2.default();
+      const styles = new import_StyleSet.default();
       this.styles = () => styles.toString();
-      (0, import_display2.default)(this.props, styles, "inline-block", ":host");
-      (0, import_color2.default)(this.props, styles, false, ":host", "color");
+      (0, import_display.default)(this.props, styles, "inline-block", ":host");
+      (0, import_color.default)(this.props, styles, false, ":host", "color");
       (0, import_size.default)(this.props, styles, false, ":host", "font-size");
       const iconClass = ["fa-fw", `fa-${name}`];
       iconClass.push(brand ? "fa-brands" : "fa-solid");
       return () => [
-        import_Registry7.default.createElement("link", { "rel": `stylesheet`, "type": `text/css`, "href": `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css` }).element,
-        import_Registry7.default.createText(`
+        import_Registry6.default.createElement("link", { "rel": `stylesheet`, "type": `text/css`, "href": `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css` }).element,
+        import_Registry6.default.createText(`
 `, false),
-        import_Registry7.default.createElement("i", { "class": iconClass.join(" ") }, []).element
+        import_Registry6.default.createElement("i", { "class": iconClass.join(" ") }, []).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\crumbs.ink
-  var import_Registry8 = __toESM(require_Registry());
-  var import_Component8 = __toESM(require_Component());
-  var import_StyleSet3 = __toESM(require_StyleSet());
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\crumbs.ink
+  var import_Registry7 = __toESM(require_Registry());
+  var import_Component7 = __toESM(require_Component());
+  var import_StyleSet2 = __toESM(require_StyleSet());
   var import_bold = __toESM(require_bold());
-  var import_color3 = __toESM(require_color());
-  var import_display3 = __toESM(require_display());
+  var import_color2 = __toESM(require_color());
+  var import_display2 = __toESM(require_display());
   var import_size2 = __toESM(require_size());
   var import_underline = __toESM(require_underline());
-  var Crumbs_e4598fe781cc66b1ce2c = class extends import_Component8.default {
+  var Crumbs_e4598fe781cc66b1ce2c = class extends import_Component7.default {
     static id = "e4598fe781cc66b1ce2c";
     static tagname = "crumbs";
     static classname = "Crumbs_e4598fe781cc66b1ce2c";
@@ -4263,17 +4197,17 @@ var InkAPI = (() => {
         //others
         spacing = 0
       } = this.propsTree;
-      const styles = new import_StyleSet3.default();
+      const styles = new import_StyleSet2.default();
       this.styles = () => styles.toString();
-      const display = (0, import_display3.default)(this.props, styles, "block", ":host");
+      const display = (0, import_display2.default)(this.props, styles, "block", ":host");
       if (display === "flex" || display === "inline-flex") {
         styles.add(":host", "align-items", "center");
       }
       (0, import_size2.default)(this.props, styles, false, ":host", "font-size");
-      (0, import_color3.default)(this.props, styles, false, ":host", "color");
+      (0, import_color2.default)(this.props, styles, false, ":host", "color");
       styles.add("a", "cursor", "pointer");
       if (link) {
-        (0, import_color3.default)(link, styles, false, "a", "color");
+        (0, import_color2.default)(link, styles, false, "a", "color");
       }
       (0, import_underline.default)(this.props, styles, "a");
       if (spacing) {
@@ -4329,62 +4263,62 @@ var InkAPI = (() => {
         secondary
       };
       return () => [
-        import_Registry8.default.createText(`
+        import_Registry7.default.createText(`
 `, false),
         ...Object.entries(crumbs).map(([index, crumb]) => [
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
   `, false),
           ...!!crumb.icon ? [
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...iconProps, "name": crumb.icon }).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...iconProps, "name": crumb.icon }).element,
+            import_Registry7.default.createText(`
   `, false)
           ] : [],
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
   `, false),
           ...!!(crumb.href && crumb.label) ? [
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createElement("a", { "href": crumb.href }, [
+            import_Registry7.default.createElement("a", { "href": crumb.href }, [
               ...this._toNodeList(crumb.label)
             ]).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
   `, false)
           ] : !!crumb.label ? [
             ,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createElement("span", {}, [
+            import_Registry7.default.createElement("span", {}, [
               ...this._toNodeList(crumb.label)
             ]).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
   `, false)
           ] : [],
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
   `, false),
           ...!!(index < crumbs.length - 1) ? [
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...sepProps, "name": `chevron-right`, "class": `sep` }).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...sepProps, "name": `chevron-right`, "class": `sep` }).element,
+            import_Registry7.default.createText(`
   `, false)
           ] : [],
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
 `, false)
         ]).flat()
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
-  var import_Component14 = __toESM(require_Component());
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
+  var import_Component13 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\table.ink
-  var import_Registry9 = __toESM(require_Registry());
-  var import_Component9 = __toESM(require_Component());
-  var import_StyleSet4 = __toESM(require_StyleSet());
-  var Table_cb9231b6c52140a254d4 = class extends import_Component9.default {
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\table.ink
+  var import_Registry8 = __toESM(require_Registry());
+  var import_Component8 = __toESM(require_Component());
+  var import_StyleSet3 = __toESM(require_StyleSet());
+  var Table_cb9231b6c52140a254d4 = class extends import_Component8.default {
     static id = "cb9231b6c52140a254d4";
     static tagname = "table";
     static classname = "Table_cb9231b6c52140a254d4";
@@ -4392,10 +4326,41 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet4.default();
+      const styles = new import_StyleSet3.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table");
       styles.add(":host", "width", "100%");
+      return () => [
+        import_Registry8.default.createText(`
+`, false),
+        import_Registry8.default.createElement("slot", {}, []).element
+      ];
+    }
+  };
+
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
+  var import_Registry13 = __toESM(require_Registry());
+  var import_StyleSet8 = __toESM(require_StyleSet());
+
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
+  var import_Registry10 = __toESM(require_Registry());
+  var import_Component10 = __toESM(require_Component());
+
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\row.ink
+  var import_Registry9 = __toESM(require_Registry());
+  var import_Component9 = __toESM(require_Component());
+  var import_StyleSet4 = __toESM(require_StyleSet());
+  var Row_0b3723ad0a2356b54f11 = class extends import_Component9.default {
+    static id = "0b3723ad0a2356b54f11";
+    static tagname = "row";
+    static classname = "Row_0b3723ad0a2356b54f11";
+    styles() {
+      return ``;
+    }
+    template() {
+      const styles = new import_StyleSet4.default();
+      this.styles = () => styles.toString();
+      styles.add(":host", "display", "table-row");
       return () => [
         import_Registry9.default.createText(`
 `, false),
@@ -4404,40 +4369,9 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
-  var import_Registry14 = __toESM(require_Registry());
-  var import_StyleSet9 = __toESM(require_StyleSet());
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
-  var import_Registry11 = __toESM(require_Registry());
-  var import_Component11 = __toESM(require_Component());
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\row.ink
-  var import_Registry10 = __toESM(require_Registry());
-  var import_Component10 = __toESM(require_Component());
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
   var import_StyleSet5 = __toESM(require_StyleSet());
-  var Row_0b3723ad0a2356b54f11 = class extends import_Component10.default {
-    static id = "0b3723ad0a2356b54f11";
-    static tagname = "row";
-    static classname = "Row_0b3723ad0a2356b54f11";
-    styles() {
-      return ``;
-    }
-    template() {
-      const styles = new import_StyleSet5.default();
-      this.styles = () => styles.toString();
-      styles.add(":host", "display", "table-row");
-      return () => [
-        import_Registry10.default.createText(`
-`, false),
-        import_Registry10.default.createElement("slot", {}, []).element
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
-  var import_StyleSet6 = __toESM(require_StyleSet());
-  var Thead_afbcee18613ce58fb77c = class extends import_Component11.default {
+  var Thead_afbcee18613ce58fb77c = class extends import_Component10.default {
     static id = "afbcee18613ce58fb77c";
     static tagname = "thead";
     static classname = "Thead_afbcee18613ce58fb77c";
@@ -4445,24 +4379,24 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet6.default();
+      const styles = new import_StyleSet5.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-header-group");
       return () => [
-        import_Registry11.default.createText(`
+        import_Registry10.default.createText(`
 `, false),
-        import_Registry11.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
-          import_Registry11.default.createElement("slot", {}, []).element
+        import_Registry10.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
+          import_Registry10.default.createElement("slot", {}, []).element
         ]).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
-  var import_Registry12 = __toESM(require_Registry());
-  var import_Component12 = __toESM(require_Component());
-  var import_StyleSet7 = __toESM(require_StyleSet());
-  var Tbody_95f498c1427be6bf7334 = class extends import_Component12.default {
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
+  var import_Registry11 = __toESM(require_Registry());
+  var import_Component11 = __toESM(require_Component());
+  var import_StyleSet6 = __toESM(require_StyleSet());
+  var Tbody_95f498c1427be6bf7334 = class extends import_Component11.default {
     static id = "95f498c1427be6bf7334";
     static tagname = "tbody";
     static classname = "Tbody_95f498c1427be6bf7334";
@@ -4470,22 +4404,22 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet7.default();
+      const styles = new import_StyleSet6.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-row-group");
       return () => [
-        import_Registry12.default.createText(`
+        import_Registry11.default.createText(`
 `, false),
-        import_Registry12.default.createElement("slot", {}, []).element
+        import_Registry11.default.createElement("slot", {}, []).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
-  var import_Registry13 = __toESM(require_Registry());
-  var import_Component13 = __toESM(require_Component());
-  var import_StyleSet8 = __toESM(require_StyleSet());
-  var Tfoot_874bedd042c5f2db7353 = class extends import_Component13.default {
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
+  var import_Registry12 = __toESM(require_Registry());
+  var import_Component12 = __toESM(require_Component());
+  var import_StyleSet7 = __toESM(require_StyleSet());
+  var Tfoot_874bedd042c5f2db7353 = class extends import_Component12.default {
     static id = "874bedd042c5f2db7353";
     static tagname = "tfoot";
     static classname = "Tfoot_874bedd042c5f2db7353";
@@ -4493,21 +4427,21 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet8.default();
+      const styles = new import_StyleSet7.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-footer-group");
       return () => [
-        import_Registry13.default.createText(`
+        import_Registry12.default.createText(`
 `, false),
-        import_Registry13.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
-          import_Registry13.default.createElement("slot", {}, []).element
+        import_Registry12.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
+          import_Registry12.default.createElement("slot", {}, []).element
         ]).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
-  var Table_02bc3cbacda5727a0af3 = class extends import_Component14.default {
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
+  var Table_02bc3cbacda5727a0af3 = class extends import_Component13.default {
     static id = "02bc3cbacda5727a0af3";
     static tagname = "table";
     static classname = "Table_02bc3cbacda5727a0af3";
@@ -4534,7 +4468,7 @@ var InkAPI = (() => {
       const bodyList = typeof body === "string" ? body.split(" ").filter(Boolean) : [];
       const oddList = typeof odd === "string" ? odd.split(" ").filter(Boolean) : [];
       const evenList = typeof even === "string" ? even.split(" ").filter(Boolean) : [];
-      const styles = new import_StyleSet9.default();
+      const styles = new import_StyleSet8.default();
       this.styles = () => styles.toString();
       styles.add(":host", "width", "100%");
       if (sticky) {
@@ -4604,7 +4538,7 @@ var InkAPI = (() => {
       }
       this.innerText = "";
       headers.length && this.appendChild(
-        import_Registry14.default.createComponent(
+        import_Registry13.default.createComponent(
           "table-thead",
           Thead_afbcee18613ce58fb77c,
           {},
@@ -4612,7 +4546,7 @@ var InkAPI = (() => {
         ).element
       );
       rows.length && this.appendChild(
-        import_Registry14.default.createComponent(
+        import_Registry13.default.createComponent(
           "table-tbody",
           Tbody_95f498c1427be6bf7334,
           {},
@@ -4620,7 +4554,7 @@ var InkAPI = (() => {
         ).element
       );
       footers.length && this.appendChild(
-        import_Registry14.default.createComponent(
+        import_Registry13.default.createComponent(
           "table-tfoot",
           Tfoot_874bedd042c5f2db7353,
           {},
@@ -4628,37 +4562,37 @@ var InkAPI = (() => {
         ).element
       );
       return () => [
-        import_Registry14.default.createText(`
+        import_Registry13.default.createText(`
 `, false),
         ...!!sticky ? [
-          import_Registry14.default.createText(`
+          import_Registry13.default.createText(`
   `, false),
-          import_Registry14.default.createComponent("table-wrapper", Table_cb9231b6c52140a254d4, {}, [
-            import_Registry14.default.createText(`
+          import_Registry13.default.createComponent("table-wrapper", Table_cb9231b6c52140a254d4, {}, [
+            import_Registry13.default.createText(`
     `, false),
-            import_Registry14.default.createElement("slot", {}, []).element,
-            import_Registry14.default.createText(`
+            import_Registry13.default.createElement("slot", {}, []).element,
+            import_Registry13.default.createText(`
   `, false)
           ]).element,
-          import_Registry14.default.createText(`
+          import_Registry13.default.createText(`
 `, false)
         ] : true ? [
           ,
-          import_Registry14.default.createText(`
+          import_Registry13.default.createText(`
   `, false),
-          import_Registry14.default.createElement("slot", {}, []).element,
-          import_Registry14.default.createText(`
+          import_Registry13.default.createElement("slot", {}, []).element,
+          import_Registry13.default.createText(`
 `, false)
         ] : []
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\head.ink
-  var import_Registry15 = __toESM(require_Registry());
-  var import_Component15 = __toESM(require_Component());
-  var import_StyleSet10 = __toESM(require_StyleSet());
-  var Head_d8755504d9458a2c21da = class extends import_Component15.default {
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\head.ink
+  var import_Registry14 = __toESM(require_Registry());
+  var import_Component14 = __toESM(require_Component());
+  var import_StyleSet9 = __toESM(require_StyleSet());
+  var Head_d8755504d9458a2c21da = class extends import_Component14.default {
     static id = "d8755504d9458a2c21da";
     static tagname = "head";
     static classname = "Head_d8755504d9458a2c21da";
@@ -4679,7 +4613,7 @@ var InkAPI = (() => {
         left,
         right
       } = this.propsCamel;
-      const styles = new import_StyleSet10.default();
+      const styles = new import_StyleSet9.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-cell");
       styles.add(":host([top])", "position", "sticky");
@@ -4695,6 +4629,78 @@ var InkAPI = (() => {
       } else {
         styles.add(":host([top])", "top", "0");
       }
+      if (typeof left === "string" || typeof left === "number") {
+        styles.add(":host([left])", "left", left);
+      } else {
+        styles.add(":host([left])", "left", "0");
+      }
+      if (typeof right === "string" || typeof right === "number") {
+        styles.add(":host([right])", "right", right);
+      } else {
+        styles.add(":host([right])", "right", "0");
+      }
+      if (nowrap) {
+        styles.add(":host", "white-space", "nowrap");
+      }
+      if (wrap1) {
+        styles.add(".wrap", "width", "100px");
+      } else if (wrap2) {
+        styles.add(".wrap", "width", "200px");
+      } else if (wrap3) {
+        styles.add(".wrap", "width", "300px");
+      } else if (wrap4) {
+        styles.add(".wrap", "width", "400px");
+      } else if (wrap5) {
+        styles.add(".wrap", "width", "500px");
+      }
+      return () => [
+        import_Registry14.default.createText(`
+`, false),
+        import_Registry14.default.createElement("slot", {}, []).element,
+        import_Registry14.default.createText(`
+`, false),
+        ...!!(wrap1 || wrap2 || wrap3 || wrap4 || wrap5) ? [
+          import_Registry14.default.createText(`
+  `, false),
+          import_Registry14.default.createElement("div", { "class": `wrap` }, []).element,
+          import_Registry14.default.createText(`
+`, false)
+        ] : []
+      ];
+    }
+  };
+
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\col.ink
+  var import_Registry15 = __toESM(require_Registry());
+  var import_Component15 = __toESM(require_Component());
+  var import_StyleSet10 = __toESM(require_StyleSet());
+  var Col_f45aa9d13a1588f1d9ab = class extends import_Component15.default {
+    static id = "f45aa9d13a1588f1d9ab";
+    static tagname = "col";
+    static classname = "Col_f45aa9d13a1588f1d9ab";
+    styles() {
+      return ``;
+    }
+    template() {
+      const {
+        //wrapping
+        nowrap,
+        wrap1,
+        wrap2,
+        wrap3,
+        wrap4,
+        wrap5,
+        //sticky
+        left,
+        right
+      } = this.propsCamel;
+      const styles = new import_StyleSet10.default();
+      this.styles = () => styles.toString();
+      styles.add(":host", "display", "table-cell");
+      styles.add(":host([left])", "position", "sticky");
+      styles.add(":host([left])", "z-index", "2");
+      styles.add(":host([right])", "position", "sticky");
+      styles.add(":host([right])", "z-index", "2");
       if (typeof left === "string" || typeof left === "number") {
         styles.add(":host([left])", "left", left);
       } else {
@@ -4736,283 +4742,12 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\col.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\tooltip.ink
   var import_Registry16 = __toESM(require_Registry());
   var import_Component16 = __toESM(require_Component());
   var import_StyleSet11 = __toESM(require_StyleSet());
-  var Col_f45aa9d13a1588f1d9ab = class extends import_Component16.default {
-    static id = "f45aa9d13a1588f1d9ab";
-    static tagname = "col";
-    static classname = "Col_f45aa9d13a1588f1d9ab";
-    styles() {
-      return ``;
-    }
-    template() {
-      const {
-        //wrapping
-        nowrap,
-        wrap1,
-        wrap2,
-        wrap3,
-        wrap4,
-        wrap5,
-        //sticky
-        left,
-        right
-      } = this.propsCamel;
-      const styles = new import_StyleSet11.default();
-      this.styles = () => styles.toString();
-      styles.add(":host", "display", "table-cell");
-      styles.add(":host([left])", "position", "sticky");
-      styles.add(":host([left])", "z-index", "2");
-      styles.add(":host([right])", "position", "sticky");
-      styles.add(":host([right])", "z-index", "2");
-      if (typeof left === "string" || typeof left === "number") {
-        styles.add(":host([left])", "left", left);
-      } else {
-        styles.add(":host([left])", "left", "0");
-      }
-      if (typeof right === "string" || typeof right === "number") {
-        styles.add(":host([right])", "right", right);
-      } else {
-        styles.add(":host([right])", "right", "0");
-      }
-      if (nowrap) {
-        styles.add(":host", "white-space", "nowrap");
-      }
-      if (wrap1) {
-        styles.add(".wrap", "width", "100px");
-      } else if (wrap2) {
-        styles.add(".wrap", "width", "200px");
-      } else if (wrap3) {
-        styles.add(".wrap", "width", "300px");
-      } else if (wrap4) {
-        styles.add(".wrap", "width", "400px");
-      } else if (wrap5) {
-        styles.add(".wrap", "width", "500px");
-      }
-      return () => [
-        import_Registry16.default.createText(`
-`, false),
-        import_Registry16.default.createElement("slot", {}, []).element,
-        import_Registry16.default.createText(`
-`, false),
-        ...!!(wrap1 || wrap2 || wrap3 || wrap4 || wrap5) ? [
-          import_Registry16.default.createText(`
-  `, false),
-          import_Registry16.default.createElement("div", { "class": `wrap` }, []).element,
-          import_Registry16.default.createText(`
-`, false)
-        ] : []
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\badge.ink
-  var import_Registry17 = __toESM(require_Registry());
-  var import_Component17 = __toESM(require_Component());
-  var import_StyleSet12 = __toESM(require_StyleSet());
-  var import_color4 = __toESM(require_color());
-  var import_curve2 = __toESM(require_curve());
-  var import_display4 = __toESM(require_display());
-  var Badge_04e709456157a0a384e7 = class extends import_Component17.default {
-    static id = "04e709456157a0a384e7";
-    static tagname = "badge";
-    static classname = "Badge_04e709456157a0a384e7";
-    styles() {
-      return ``;
-    }
-    template() {
-      const {
-        //layouts
-        outline,
-        solid,
-        transparent,
-        //padding
-        padding
-      } = this.props;
-      const styles = new import_StyleSet12.default();
-      this.styles = () => styles.toString();
-      (0, import_display4.default)(this.props, styles, "inline-block", ":host");
-      styles.add(":host", "padding", padding ? `${padding}px` : "2px 8px");
-      (0, import_curve2.default)(this.props, styles, false, ":host");
-      if (outline || transparent) {
-        (0, import_color4.default)(this.props, styles, "var(--muted)", ":host", "color");
-        (0, import_color4.default)(this.props, styles, "var(--muted)", ":host", "border-color");
-        styles.add(":host", "border-style", "solid");
-        styles.add(":host", "border-width", "1px");
-        if (outline) {
-          styles.add(":host", "background-color", "var(--white)");
-        }
-      } else {
-        styles.add(":host", "color", "var(--white)");
-        (0, import_color4.default)(this.props, styles, "var(--muted)", ":host", "background-color");
-      }
-      return () => [
-        import_Registry17.default.createText(`
-`, false),
-        import_Registry17.default.createElement("slot", {}, []).element
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\progress.ink
-  var import_Registry18 = __toESM(require_Registry());
-  var import_Component18 = __toESM(require_Component());
-  var import_StyleSet13 = __toESM(require_StyleSet());
-  var import_color5 = __toESM(require_color());
-  var import_display5 = __toESM(require_display());
-  var Progress_8f478149e608bd67287e = class extends import_Component18.default {
-    static id = "8f478149e608bd67287e";
-    static tagname = "progress";
-    static classname = "Progress_8f478149e608bd67287e";
-    static observedAttributes = ["width"];
-    styles() {
-      return ``;
-    }
-    template() {
-      const { width = 0, height = 20, bg } = this.propsTree;
-      const styles = new import_StyleSet13.default();
-      this.styles = () => styles.toString();
-      const children4 = this.originalChildren;
-      styles.add(":host", "position", "relative");
-      styles.add(":host", "overflow", "hidden");
-      styles.add(":host", "height", `${height}px`);
-      (0, import_display5.default)(this.props, styles, "block", ":host");
-      styles.add(".bar", "height", "100%");
-      if (!isNaN(Number(width))) {
-        styles.add(".bar", "width", `${Math.min(
-          Math.max(Number(width), 0),
-          100
-        )}%`);
-      }
-      styles.add(".bar", "transition", "width 500ms");
-      if (bg) {
-        (0, import_color5.default)(bg, styles, false, ":host", "background-color");
-      }
-      (0, import_color5.default)(this.props, styles, false, ".bar", "background-color");
-      styles.add(".label", "position", "absolute");
-      styles.add(".label", "top", "0");
-      styles.add(".label", "bottom", "0");
-      styles.add(".label", "left", "0");
-      styles.add(".label", "right", "0");
-      styles.add(".label", "display", "flex");
-      styles.add(".label", "align-items", "center");
-      styles.add(".label", "justify-content", "center");
-      styles.add(".label", "text-align", "center");
-      this.on("attributechange", (e) => {
-        const { action, name, value, target } = e.detail;
-        if (name !== "width") return;
-        const bar = target.shadowRoot?.querySelector("div.bar");
-        if (!bar) return;
-        if (action === "remove") {
-          bar.style.width = "0%";
-          return;
-        }
-        if (isNaN(parseFloat(value))) return;
-        bar.style.width = `${Math.min(
-          Math.max(parseFloat(value), 0),
-          100
-        )}%`;
-      });
-      return () => [
-        import_Registry18.default.createText(`
-`, false),
-        import_Registry18.default.createElement("div", { "class": `bar` }, []).element,
-        import_Registry18.default.createText(`
-`, false),
-        ...!!children4.length ? [
-          import_Registry18.default.createText(`
-  `, false),
-          import_Registry18.default.createElement("div", { "class": `label` }, [
-            import_Registry18.default.createElement("slot", {}, []).element
-          ]).element,
-          import_Registry18.default.createText(`
-`, false)
-        ] : []
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\tab.ink
-  var import_Registry19 = __toESM(require_Registry());
-  var import_Component19 = __toESM(require_Component());
-  var import_StyleSet14 = __toESM(require_StyleSet());
-  var Tab_773b62de7e46341aea2d = class extends import_Component19.default {
-    static id = "773b62de7e46341aea2d";
-    static tagname = "tab";
-    static classname = "Tab_773b62de7e46341aea2d";
-    styles() {
-      return ``;
-    }
-    template() {
-      const handlers = {
-        init: () => {
-          const on = this.hasAttribute("on");
-          this.classList.remove(...on ? inactiveList : activeList);
-          this.classList.add(...on ? activeList : inactiveList);
-          Array.from(document.querySelectorAll(selector)).forEach((content) => {
-            content.style.display = on ? "block" : "none";
-          });
-        },
-        activate: () => {
-          Array.from(document.querySelectorAll(`[group="${group}"]`)).forEach((tab) => {
-            const subselector = tab.getAttribute("selector");
-            if (selector === subselector && !tab.hasAttribute("on")) {
-              tab.setAttribute("on", "");
-              Array.from(document.querySelectorAll(selector)).forEach((content) => {
-                content.style.display = "block";
-              });
-              typeof tab.render === "function" && tab.render();
-            } else if (selector !== subselector && tab.hasAttribute("on")) {
-              tab.removeAttribute("on");
-              Array.from(document.querySelectorAll(subselector)).forEach((content) => {
-                content.style.display = "none";
-              });
-              typeof tab.render === "function" && tab.render();
-            }
-          });
-        }
-      };
-      const {
-        group,
-        selector = "",
-        active = "",
-        inactive = "",
-        //dont need these
-        style,
-        "class": _2,
-        //get the rest
-        ...attributes
-      } = this.props;
-      const activeList = active.split(" ");
-      const inactiveList = inactive.split(" ");
-      const styles = new import_StyleSet14.default();
-      this.styles = () => styles.toString();
-      styles.add(":host", "cursor", "pointer");
-      styles.add("a", "display", "block");
-      styles.add("a", "height", "100%");
-      styles.add("a", "width", "100%");
-      return () => [
-        import_Registry19.default.createText(`
-`, false),
-        import_Registry19.default.createElement("a", { ...attributes, "click": handlers.activate, "mount": handlers.init }, [
-          import_Registry19.default.createText(`
-  `, false),
-          import_Registry19.default.createElement("slot", {}, []).element,
-          import_Registry19.default.createText(`
-`, false)
-        ]).element
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\tooltip.ink
-  var import_Registry20 = __toESM(require_Registry());
-  var import_Component20 = __toESM(require_Component());
-  var import_StyleSet15 = __toESM(require_StyleSet());
-  var import_color6 = __toESM(require_color());
-  var Tooltip_d05b34b2fdaa8443ca0f = class extends import_Component20.default {
+  var import_color3 = __toESM(require_color());
+  var Tooltip_d05b34b2fdaa8443ca0f = class extends import_Component16.default {
     static id = "d05b34b2fdaa8443ca0f";
     static tagname = "tooltip";
     static classname = "Tooltip_d05b34b2fdaa8443ca0f";
@@ -5072,19 +4807,19 @@ var InkAPI = (() => {
         //sub-props
         background
       } = this.propsTree;
-      const styles = new import_StyleSet15.default();
+      const styles = new import_StyleSet11.default();
       this.styles = () => styles.toString();
       styles.add(":host", "position", "relative");
       styles.add(":host", "display", "block");
       styles.add(":host", "width", "100%");
-      (0, import_color6.default)(this.props, styles, false, ":host", "color");
+      (0, import_color3.default)(this.props, styles, false, ":host", "color");
       if (center) {
         styles.add(":host", "text-align", "center");
       }
       styles.add("div", "position", "absolute");
       styles.add("div", "display", "none");
       if (background) {
-        (0, import_color6.default)(background, styles, false, "div", "background-color");
+        (0, import_color3.default)(background, styles, false, "div", "background-color");
       }
       if (padding) {
         styles.add("div", "padding", `${padding}px`);
@@ -5135,20 +4870,20 @@ var InkAPI = (() => {
         styles.add("div", "width", `${width}px`);
       }
       return () => [
-        import_Registry20.default.createText(`
+        import_Registry16.default.createText(`
 `, false),
-        import_Registry20.default.createElement("div", { "mount": handlers.mount, "unmount": handlers.unmount }, [
-          import_Registry20.default.createText(`
+        import_Registry16.default.createElement("div", { "mount": handlers.mount, "unmount": handlers.unmount }, [
+          import_Registry16.default.createText(`
   `, false),
-          import_Registry20.default.createElement("slot", {}, []).element,
-          import_Registry20.default.createText(`
+          import_Registry16.default.createElement("slot", {}, []).element,
+          import_Registry16.default.createText(`
 `, false)
         ]).element
       ];
     }
   };
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\tooltip.ink
+  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\tooltip.ink
   var import_ink4 = __toESM(require_ink());
   var TemplateDocument = class _TemplateDocument extends import_Document2.default {
     static sync() {
@@ -5156,9 +4891,9 @@ var InkAPI = (() => {
       return document2.sync();
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/components/tooltip.html";
+      const title = _("Ink UI - Tooltip Component");
+      const description = _("A customizable tooltip component that appears on hover.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -5167,7 +4902,7 @@ var InkAPI = (() => {
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
         { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
-        { label: "Tooltips" }
+        { label: "Tooltip" }
       ];
       return [
         import_Document.default.createText(`
@@ -5800,7 +5535,7 @@ var InkAPI = (() => {
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -5813,7 +5548,7 @@ var InkAPI = (() => {
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -5829,7 +5564,6 @@ var InkAPI = (() => {
                 ]
               ]),
               import_Document.default.createText(`
-
       `, false),
               import_Document.default.createElement("aside", { "right": true }, [
                 import_Document.default.createText(`
@@ -5838,19 +5572,15 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#pager` }, [
-                      ...this._toNodeList(_("Tooltips"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#tooltip` }, [
+                      ...this._toNodeList(_("Tooltip"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -5863,45 +5593,21 @@ var InkAPI = (() => {
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TooltipWithInfoBackground` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Info Background"))
+                        ...this._toNodeList(_("Basic Usage"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TooltipWithSuccessBackground` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#position` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Success Background"))
+                        ...this._toNodeList(_("Position"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TooltipWithErrorBackground` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styling` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Error Background"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TooltipWithWarningBackground` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Warning Background"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TooltipWithCenteredTextAndCurvedBorder` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Centered Text and Curved Border"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TooltipWithCustomCurve` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Custom Curve Radius"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TooltipWithMultiPosition` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Multi-Position Tooltip"))
+                        ...this._toNodeList(_("Styling"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5916,7 +5622,6 @@ var InkAPI = (() => {
       `, false)
               ]),
               import_Document.default.createText(`
-
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
@@ -5934,22 +5639,18 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `pager` }, []),
+                  import_Document.default.createElement("a", { "name": `tooltip` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Tooltips")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("Tooltip"))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Tooltip`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
+                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
               import Tooltip from '@stackpress/ink-ui/element/tooltip';
             `, false)
@@ -5959,17 +5660,12 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Props Section -->
           `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Props")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("Props"))
                   ]),
                   import_Document.default.createText(`
           `, false),
@@ -5977,7 +5673,7 @@ var InkAPI = (() => {
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Property"))
+                      ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -5995,7 +5691,6 @@ var InkAPI = (() => {
                       ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6006,7 +5701,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean/String/Number`, false)
+                        import_Document.default.createText(`Boolean | Number | String`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -6016,13 +5711,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Positions the tooltip at the top. Can be a boolean, number (px), or string (e.g., "10px").'))
+                        ...this._toNodeList(_("Position from top (true = 0px, number = px, string = custom)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6033,7 +5727,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean/String/Number`, false)
+                        import_Document.default.createText(`Boolean | Number | String`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -6043,13 +5737,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Positions the tooltip at the bottom. Can be a boolean, number (px), or string (e.g., "10px").'))
+                        ...this._toNodeList(_("Position from bottom (true = 0px, number = px, string = custom)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6060,7 +5753,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean/String/Number`, false)
+                        import_Document.default.createText(`Boolean | Number | String`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -6070,13 +5763,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Positions the tooltip to the left. Can be a boolean, number (px), or string (e.g., "10px").'))
+                        ...this._toNodeList(_("Position from left (true = 0px, number = px, string = custom)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6087,7 +5779,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean/String/Number`, false)
+                        import_Document.default.createText(`Boolean | Number | String`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -6097,13 +5789,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Positions the tooltip to the right. Can be a boolean, number (px), or string (e.g., "10px").'))
+                        ...this._toNodeList(_("Position from right (true = 0px, number = px, string = custom)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6124,13 +5815,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Sets the tooltip text color (e.g., "info", "primary", "success").'))
+                        ...this._toNodeList(_('Text color (e.g., "salmon", "#ff0000")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6151,13 +5841,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the tooltip text to white."))
+                        ...this._toNodeList(_("Sets text color to var(--white)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6178,13 +5867,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the tooltip text to black."))
+                        ...this._toNodeList(_("Sets text color to var(--black)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6205,13 +5893,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the tooltip text to an informational color (blue)."))
+                        ...this._toNodeList(_("Sets text color to var(--info)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6232,13 +5919,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the tooltip text to a warning color (yellow)."))
+                        ...this._toNodeList(_("Sets text color to var(--warning)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6259,13 +5945,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the tooltip text to a success color (green)."))
+                        ...this._toNodeList(_("Sets text color to var(--success)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6286,13 +5971,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the tooltip text to an error color (red)."))
+                        ...this._toNodeList(_("Sets text color to var(--error)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6313,13 +5997,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the tooltip text to a muted color (gray)."))
+                        ...this._toNodeList(_("Sets text color to var(--muted)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6340,13 +6023,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the tooltip text to a primary color (brand color)."))
+                        ...this._toNodeList(_("Sets text color to var(--primary)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6367,13 +6049,38 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the tooltip text to a secondary color."))
+                        ...this._toNodeList(_("Sets text color to var(--secondary)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`background`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Object`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Background color (e.g., { info: true })"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6394,13 +6101,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Applies a curved border to the tooltip."))
+                        ...this._toNodeList(_("Sets border-radius to 4px"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6421,13 +6127,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Specifies the radius of the tooltip's border."))
+                        ...this._toNodeList(_("Sets custom border-radius in pixels"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6448,13 +6153,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Centers the tooltip text."))
+                        ...this._toNodeList(_("Centers text horizontally"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6475,13 +6179,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the padding inside the tooltip (in pixels)."))
+                        ...this._toNodeList(_("Sets padding in pixels"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6502,13 +6205,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Adjusts the opacity of the tooltip (0-100)."))
+                        ...this._toNodeList(_("Sets opacity (0-100)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6519,7 +6221,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String/Number`, false)
+                        import_Document.default.createText(`String | Number`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -6529,34 +6231,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Sets the width of the tooltip. If "auto", it adjusts automatically. Can also be a number (px).'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`background`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the background color of the tooltip."))
+                        ...this._toNodeList(_('Sets width ("auto" or pixels, default: "auto")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6566,40 +6241,29 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Tooltip with Info Background -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `TooltipWithInfoBackground` }, []),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Tooltip with Info Background")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("Basic Usage"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_('This example demonstrates a tooltip with an info background. It appears above the text with curved corners, some padding, and an opacity of 80%. The tooltip shows when you hover over the "Hover me!" text, positioned above it.')),
-                    import_Document.default.createText(`
-          `, false)
+                    import_Document.default.createText(`A simple tooltip that appears on hover.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center p-20 mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `tx-center tooltip-trigger` }, [
+                    import_Document.default.createElement("span", { "class": `relative inline-block p-10` }, [
                       import_Document.default.createText(`
-              Hover me!
+              Hover me
               `, false),
-                      import_Document.default.createElement("element-tip", { "background-info": true, "curved": true, "top": `-30`, "left": `50`, "padding": `5`, "opacity": `80`, "width": `150` }, [
-                        import_Document.default.createText(`
-                This is the first and last name
-              `, false)
+                      import_Document.default.createElement("element-tip", { "background": { muted: true }, "top": `-30`, "left": `0`, "padding": `5` }, [
+                        import_Document.default.createText(`Tooltip text`, false)
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6611,55 +6275,73 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-tip 
-              background-info
-              curved
-              top="-30"
-              left="50"
-              padding="5"
-              opacity="80"
-              width="150"
-            >
-              This is the first and last name
-            </element-tip>
+            <span class="relative inline-block p-10">
+              Hover me
+              <element-tip background={ { muted: true } } top="-30" left="0" padding="5">Tooltip text</element-tip>
+            </span>
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Tooltip with Success Background -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `TooltipWithSuccessBackground` }, []),
+                  import_Document.default.createElement("a", { "name": `position` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Tooltip with Success Background")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("Position"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("This example shows a tooltip with a success background (green). The tooltip is positioned to the bottom-right of the element, with a subtle curve and padding.")),
-                    import_Document.default.createText(`
-          `, false)
+                    import_Document.default.createText(`Adjust tooltip position with top, bottom, left, or right.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center p-20 mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10 flex gap-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `tx-center tooltip-trigger` }, [
+                    import_Document.default.createElement("span", { "class": `relative inline-block p-10` }, [
                       import_Document.default.createText(`
-              Hover me to see success tooltip!
+              Top
               `, false),
-                      import_Document.default.createElement("element-tip", { "background-success": true, "curved": true, "bottom": `10`, "right": `10`, "padding": `10`, "opacity": `90` }, [
-                        import_Document.default.createText(`
-                Successfully completed!
-              `, false)
+                      import_Document.default.createElement("element-tip", { "background": { info: true }, "top": `-30`, "left": `0`, "padding": `5` }, [
+                        import_Document.default.createText(`Top Tooltip`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("span", { "class": `relative inline-block p-10` }, [
+                      import_Document.default.createText(`
+              Bottom
+              `, false),
+                      import_Document.default.createElement("element-tip", { "background": { info: true }, "bottom": `-30`, "left": `0`, "padding": `5` }, [
+                        import_Document.default.createText(`Bottom Tooltip`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("span", { "class": `relative inline-block p-10` }, [
+                      import_Document.default.createText(`
+              Left
+              `, false),
+                      import_Document.default.createElement("element-tip", { "background": { info: true }, "top": `0`, "left": `-100`, "padding": `5` }, [
+                        import_Document.default.createText(`Left Tooltip`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("span", { "class": `relative inline-block p-10` }, [
+                      import_Document.default.createText(`
+              Right
+              `, false),
+                      import_Document.default.createElement("element-tip", { "background": { info: true }, "top": `0`, "right": `-100`, "padding": `5` }, [
+                        import_Document.default.createText(`Right Tooltip`, false)
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6671,54 +6353,77 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-tip 
-              background-success
-              curved
-              bottom="10"
-              right="10"
-              padding="10"
-              opacity="90"
-            >
-              Successfully completed!
-            </element-tip>
+            <span class="relative inline-block p-10">
+              Top
+              <element-tip background={ { info: true } } top="-30" left="0" padding="5">Top Tooltip</element-tip>
+            </span>
+            <span class="relative inline-block p-10">
+              Bottom
+              <element-tip background={ { info: true } } bottom="-30" left="0" padding="5">Bottom Tooltip</element-tip>
+            </span>
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Tooltip with Error Background -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `TooltipWithErrorBackground` }, []),
+                  import_Document.default.createElement("a", { "name": `styling` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Tooltip with Error Background")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("Styling"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("This example demonstrates a tooltip with an error background (red) that appears on hover. The tooltip has custom width, and the text is displayed with some padding and a background color. It appears above the text and is aligned centrally.")),
-                    import_Document.default.createText(`
-          `, false)
+                    import_Document.default.createText(`Customize appearance with colors, curves, padding, and more.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center p-20 mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10 flex gap-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `tx-center tooltip-trigger` }, [
+                    import_Document.default.createElement("span", { "class": `relative inline-block p-10` }, [
                       import_Document.default.createText(`
-              Hover me to see error tooltip!
+              Info
               `, false),
-                      import_Document.default.createElement("element-tip", { "background-error": true, "curved": true, "top": `20`, "left": `50`, "padding": `8`, "opacity": `95`, "width": `180` }, [
-                        import_Document.default.createText(`
-                An error has occurred.
-              `, false)
+                      import_Document.default.createElement("element-tip", { "background": { info: true }, "curved": true, "top": `-15`, "left": `50`, "padding": `5` }, [
+                        import_Document.default.createText(`This is the first and last name`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("span", { "class": `relative inline-block p-10` }, [
+                      import_Document.default.createText(`
+              Success
+              `, false),
+                      import_Document.default.createElement("element-tip", { "background": { success: true }, "curve": `10`, "top": `-30`, "left": `0`, "padding": `10`, "white": true }, [
+                        import_Document.default.createText(`Success Tooltip`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("span", { "class": `relative inline-block p-10` }, [
+                      import_Document.default.createText(`
+              Warning
+              `, false),
+                      import_Document.default.createElement("element-tip", { "background": { warning: true }, "curved": true, "top": `-30`, "left": `0`, "padding": `5`, "opacity": `80` }, [
+                        import_Document.default.createText(`Warning Tooltip`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("span", { "class": `relative inline-block p-10` }, [
+                      import_Document.default.createText(`
+              Custom Width
+              `, false),
+                      import_Document.default.createElement("element-tip", { "background": { primary: true }, "curved": true, "top": `-30`, "left": `0`, "padding": `5`, "width": `150` }, [
+                        import_Document.default.createText(`Custom Width Tooltip`, false)
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6730,222 +6435,36 @@ var InkAPI = (() => {
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <element-tip 
-              background-error
-              curved
-              top="20"
-              left="50"
-              padding="8"
-              opacity="95"
-              width="180"
-            >
-              An error has occurred.
-            </element-tip>
+            <span class="relative inline-block p-10">
+              Info
+              <element-tip background={ { info: true } } curved top="-15" left="50" padding="5">This is the first and last name</element-tip>
+            </span>
+            <span class="relative inline-block p-10">
+              Success
+              <element-tip background={ { success: true } } curve="10" top="-30" left="0" padding="10" white>Success Tooltip</element-tip>
+            </span>
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Tooltip with Warning Background -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `TooltipWithWarningBackground` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Tooltip with Warning Background")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("This example features a tooltip with a warning background (yellow). It appears to the right of the trigger element and has a larger font size for better visibility.")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center p-20 mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `tx-center tooltip-trigger` }, [
-                      import_Document.default.createText(`
-              Hover me to see warning tooltip!
-              `, false),
-                      import_Document.default.createElement("element-tip", { "background-warning": true, "curved": true, "right": `20`, "padding": `12`, "opacity": `85`, "width": `200` }, [
-                        import_Document.default.createText(`
-                Please take caution!
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-tip 
-              background-warning
-              curved
-              right="20"
-              padding="12"
-              opacity="85"
-              width="200"
-            >
-              Please take caution!
-            </element-tip>
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Tooltip with Centered Text and Curved Border -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `TooltipWithCenteredTextAndCurvedBorder` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Tooltip with Centered Text and Curved Border")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("This example demonstrates a tooltip with a centered alignment, and the tooltip has a curved border. The tooltip will be displayed above the text, with subtle styling.")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center p-20 mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `tx-center tooltip-trigger` }, [
-                      import_Document.default.createText(`
-              Hover over me!
-              `, false),
-                      import_Document.default.createElement("element-tip", { "background-muted": true, "curved": true, "top": `-20`, "padding": `8`, "opacity": `80`, "width": `120`, "center": true }, [
-                        import_Document.default.createText(`
-                Information about this text.
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-tip 
-              background-muted
-              curved
-              top="-20"
-              padding="8"
-              opacity="80"
-              width="120"
-              center
-            >
-              Information about this text.
-            </element-tip>
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Tooltip with Custom Curve Radius -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `TooltipWithCustomCurve` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Tooltip with Custom Curve Radius")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("This example shows a tooltip with a custom border radius (10px) using the `curve` prop and a primary background. It appears below the trigger text.")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center p-20 mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `tx-center tooltip-trigger` }, [
-                      import_Document.default.createText(`
-              Hover me for custom curve!
-              `, false),
-                      import_Document.default.createElement("element-tip", { "background-primary": true, "curve": `10`, "bottom": `10`, "padding": `10`, "opacity": `90`, "width": `160` }, [
-                        import_Document.default.createText(`
-                Custom radius tooltip!
-              `, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <element-tip 
-              background-primary
-              curve="10"
-              bottom="10"
-              padding="10"
-              opacity="90"
-              width="160"
-            >
-              Custom radius tooltip!
-            </element-tip>
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Navigation -->
           `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/components/table.html` }, [
+                    import_Document.default.createElement("a", { "class": `tx-primary py-40`, "href": `/ink/ui/components/tab.html` }, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Tables")),
+                      ...this._toNodeList(_("Tab")),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/components/alert.html` }, [
+                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/form/index.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Alerts")),
-                      import_Document.default.createText(`
-              `, false),
+                      ...this._toNodeList(_("Forms")),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)
@@ -6980,7 +6499,6 @@ var InkAPI = (() => {
     "IdeCode_5387662ecbed97347dd0": Code_5387662ecbed97347dd0,
     "I18nTranslate_794a00a5e900fca28310": Translate_794a00a5e900fca28310,
     "PanelLayout_c4c96a14064fc0c4d224": Panel_c4c96a14064fc0c4d224,
-    "ElementAlert_ba827f6c1d3753161701": Alert_ba827f6c1d3753161701,
     "ElementIcon_33cb84912ffcb000a388": Icon_33cb84912ffcb000a388,
     "ElementCrumbs_e4598fe781cc66b1ce2c": Crumbs_e4598fe781cc66b1ce2c,
     "InterfaceIcon_33cb84912ffcb000a388": Icon_33cb84912ffcb000a388,
@@ -6989,9 +6507,6 @@ var InkAPI = (() => {
     "TableHead_d8755504d9458a2c21da": Head_d8755504d9458a2c21da,
     "TableRow_0b3723ad0a2356b54f11": Row_0b3723ad0a2356b54f11,
     "TableCol_f45aa9d13a1588f1d9ab": Col_f45aa9d13a1588f1d9ab,
-    "ElementBadge_04e709456157a0a384e7": Badge_04e709456157a0a384e7,
-    "ElementProgress_8f478149e608bd67287e": Progress_8f478149e608bd67287e,
-    "ElementTab_773b62de7e46341aea2d": Tab_773b62de7e46341aea2d,
     "ElementTip_d05b34b2fdaa8443ca0f": Tooltip_d05b34b2fdaa8443ca0f
   };
   var elements = {
@@ -7000,16 +6515,12 @@ var InkAPI = (() => {
     "ide-code": Code_5387662ecbed97347dd0,
     "i18n-translate": Translate_794a00a5e900fca28310,
     "panel-layout": Panel_c4c96a14064fc0c4d224,
-    "element-alert": Alert_ba827f6c1d3753161701,
     "element-icon": Icon_33cb84912ffcb000a388,
     "element-crumbs": Crumbs_e4598fe781cc66b1ce2c,
     "layout-table": Table_02bc3cbacda5727a0af3,
     "table-head": Head_d8755504d9458a2c21da,
     "table-row": Row_0b3723ad0a2356b54f11,
     "table-col": Col_f45aa9d13a1588f1d9ab,
-    "element-badge": Badge_04e709456157a0a384e7,
-    "element-progress": Progress_8f478149e608bd67287e,
-    "element-tab": Tab_773b62de7e46341aea2d,
     "element-tip": Tooltip_d05b34b2fdaa8443ca0f
   };
   var BUILD_ID = "7cd1ee9ef73e2da47d66";

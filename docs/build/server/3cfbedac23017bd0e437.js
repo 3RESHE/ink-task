@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\format\country.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\format\country.ink
   var country_exports = {};
   __export(country_exports, {
     default: () => Country_3cfbedac23017bd0e437
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\format\country.ink
+  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\format\country.ink
   var Country_3cfbedac23017bd0e437 = class extends import_Document2.default {
     id() {
       return "3cfbedac23017bd0e437";
@@ -1573,7 +1573,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                         ...this._toNodeList(_("Colored Country Display"))
                       ]),
                       import_Document.default.createText(`
-
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1616,7 +1615,11 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Country from '@stackpress/ink-ui/format/country';
+              `, false),
+                      ...this._toNodeList(`
+                import Country from '@stackpress/ink-ui/format/country';
+              `),
+                      import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1635,7 +1638,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("p", { "class": `mb-20` }, [
-                    ...this._toNodeList(_("The `<format-country>` component displays a country flag and/or name based on a country code. Use Ink utilities via the `class` prop for responsive styling."))
+                    ...this._toNodeList(_('The `<format-country>` component displays a country flag and/or name based on a country code. Use Ink utilities via the `class` prop for responsive styling. Setting `flag={false}` explicitly hides the flag, while `text={false}` hides the country name. If `flag` is an object (e.g., `{ size: "md" }`), it specifies custom sizing.'))
                   ]),
                   import_Document.default.createText(`
           `, false),
@@ -1699,7 +1702,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Object | Boolean`, false)
+                        import_Document.default.createText(`Boolean | Object`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -1709,7 +1712,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('If true, displays the country flag. If an object, specifies sizing (e.g., `{ size: "md" }`). Defaults to false.'))
+                        ...this._toNodeList(_('If `true` or an object (e.g., `{ size: "md" }`), displays the country flag (default is enabled). If `false`, hides the flag.'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1736,7 +1739,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("If true, displays the country name. Defaults to true."))
+                        ...this._toNodeList(_("If `true`, displays the country name (default). If `false`, hides the name."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1763,7 +1766,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Size modifier for the flag (e.g., "sm", "md", "lg"). Sets height (default: 16px if `flag` is true).'))
+                        ...this._toNodeList(_('Size modifier for the flag (e.g., "xs", "md", "lg"). Sets height (default: 16px if `flag` is true).'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1790,7 +1793,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Size modifier for the text (e.g., "sm", "md", "lg"). Sets font-size (default: inherited if `text` is true).'))
+                        ...this._toNodeList(_('Size modifier for the text (e.g., "xs", "md", "lg"). Sets font-size (default: inherited if `text` is true).'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -2237,7 +2240,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
           `)
                   ]),
                   import_Document.default.createText(`
-
 
           <!-- Navigation -->
           `, false),

@@ -757,7 +757,7 @@ var InkAPI = (() => {
         decoder.innerHTML = value;
         return decoder.value;
       };
-      var ClientRegistry21 = class _ClientRegistry {
+      var ClientRegistry18 = class _ClientRegistry {
         static get elements() {
           return this._elements;
         }
@@ -875,8 +875,8 @@ var InkAPI = (() => {
           return Array.from(children4).filter((child) => typeof child !== "undefined").map((child) => typeof child === "string" ? this.createText(child) : child instanceof Element_1.default ? child.element : child);
         }
       };
-      ClientRegistry21._elements = /* @__PURE__ */ new Map();
-      exports.default = ClientRegistry21;
+      ClientRegistry18._elements = /* @__PURE__ */ new Map();
+      exports.default = ClientRegistry18;
     }
   });
 
@@ -958,7 +958,7 @@ var InkAPI = (() => {
       var Registry_1 = __importDefault(require_Registry());
       var Emitter_1 = __importDefault(require_Emitter());
       var data_1 = __importDefault(require_data());
-      var ClientComponent20 = class _ClientComponent extends HTMLElement {
+      var ClientComponent17 = class _ClientComponent extends HTMLElement {
         static get registered() {
           return customElements.getName(this);
         }
@@ -1279,7 +1279,7 @@ var InkAPI = (() => {
           }
         }
       };
-      exports.default = ClientComponent20;
+      exports.default = ClientComponent17;
     }
   });
 
@@ -1581,9 +1581,9 @@ var InkAPI = (() => {
       exports.styleset = styleset;
       var StyleMap_1 = __importDefault(require_StyleMap());
       function styleset(styles = {}) {
-        return new StyleSet15(Object.entries(styles));
+        return new StyleSet12(Object.entries(styles));
       }
-      var StyleSet15 = class extends Map {
+      var StyleSet12 = class extends Map {
         add(selector, property, values) {
           if (!this.has(selector)) {
             this.set(selector, new StyleMap_1.default());
@@ -1616,7 +1616,7 @@ var InkAPI = (() => {
           return styleset2.join("");
         }
       };
-      exports.default = StyleSet15;
+      exports.default = StyleSet12;
     }
   });
 
@@ -3498,24 +3498,6 @@ var InkAPI = (() => {
     }
   });
 
-  // ../../node_modules/@stackpress/ink-ui/utilities/style/curve.js
-  var require_curve = __commonJS({
-    "../../node_modules/@stackpress/ink-ui/utilities/style/curve.js"(exports) {
-      "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.default = curve;
-      function curve(props3, styles, initial = false, selector = ":host") {
-        const { curve: curve2, curved, rounded, pill } = props3;
-        const style = curve2 ? `${curve2}px` : curved ? "4px" : rounded ? "12px" : pill ? "10000px" : initial;
-        if (style) {
-          styles.add(selector, "border-radius", style);
-          styles.add(selector, "overflow", "hidden");
-        }
-        return curve2 ? "curve" : curved ? "curved" : rounded ? "rounded" : pill ? "pill" : "initial";
-      }
-    }
-  });
-
   // ../../node_modules/@stackpress/ink-ui/utilities/style/display.js
   var require_display = __commonJS({
     "../../node_modules/@stackpress/ink-ui/utilities/style/display.js"(exports) {
@@ -3584,11 +3566,11 @@ var InkAPI = (() => {
     }
   });
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\tab.ink
+  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\tab.ink
   var tab_exports = {};
   __export(tab_exports, {
     BUILD_ID: () => BUILD_ID,
-    ClientRegistry: () => import_Registry20.default,
+    ClientRegistry: () => import_Registry17.default,
     TemplateDocument: () => TemplateDocument,
     components: () => components,
     data: () => import_data.default,
@@ -3597,11 +3579,11 @@ var InkAPI = (() => {
   });
   var import_Document = __toESM(require_Document());
   var import_Document2 = __toESM(require_Document2());
-  var import_Registry20 = __toESM(require_Registry());
+  var import_Registry17 = __toESM(require_Registry());
   var import_Emitter = __toESM(require_Emitter());
   var import_data = __toESM(require_data());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\docs.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\api\docs.ink
   var import_Registry = __toESM(require_Registry());
   var import_Component = __toESM(require_Component());
   var import_ink = __toESM(require_ink());
@@ -3630,7 +3612,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\app.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\app.ink
   var import_Registry2 = __toESM(require_Registry());
   var import_Component2 = __toESM(require_Component());
   var import_ink2 = __toESM(require_ink());
@@ -3684,7 +3666,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\code.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\ide\code.ink
   var import_Registry3 = __toESM(require_Registry());
   var import_Component3 = __toESM(require_Component());
   var import_prismjs = __toESM(require_prism());
@@ -3881,7 +3863,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
   var import_Registry4 = __toESM(require_Registry());
   var import_Component4 = __toESM(require_Component());
 
@@ -3897,7 +3879,7 @@ var InkAPI = (() => {
     return phrase;
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
   var Translate_794a00a5e900fca28310 = class extends import_Component4.default {
     static id = "794a00a5e900fca28310";
     static tagname = "translate";
@@ -3973,7 +3955,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\panel.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\panel.ink
   var import_Registry5 = __toESM(require_Registry());
   var import_Component5 = __toESM(require_Component());
   var Panel_c4c96a14064fc0c4d224 = class extends import_Component5.default {
@@ -4134,62 +4116,14 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\alert.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\icon.ink
   var import_Registry6 = __toESM(require_Registry());
   var import_Component6 = __toESM(require_Component());
   var import_StyleSet = __toESM(require_StyleSet());
   var import_color = __toESM(require_color());
-  var import_curve = __toESM(require_curve());
   var import_display = __toESM(require_display());
-  var Alert_ba827f6c1d3753161701 = class extends import_Component6.default {
-    static id = "ba827f6c1d3753161701";
-    static tagname = "alert";
-    static classname = "Alert_ba827f6c1d3753161701";
-    styles() {
-      return ``;
-    }
-    template() {
-      const {
-        //layouts
-        outline,
-        solid,
-        transparent,
-        //padding
-        padding
-      } = this.props;
-      const styles = new import_StyleSet.default();
-      this.styles = () => styles.toString();
-      (0, import_display.default)(this.props, styles, "block", ":host");
-      styles.add(":host", "padding", padding ? `${padding}px` : "16px");
-      (0, import_curve.default)(this.props, styles, false, ":host");
-      if (outline || transparent) {
-        (0, import_color.default)(this.props, styles, "var(--muted)", ":host", "color");
-        (0, import_color.default)(this.props, styles, "var(--muted)", ":host", "border-color");
-        styles.add(":host", "border-style", "solid");
-        styles.add(":host", "border-width", "1px");
-        if (outline) {
-          styles.add(":host", "background-color", "var(--white)");
-        }
-      } else {
-        styles.add(":host", "color", "var(--white)");
-        (0, import_color.default)(this.props, styles, "var(--muted)", ":host", "background-color");
-      }
-      return () => [
-        import_Registry6.default.createText(`
-`, false),
-        import_Registry6.default.createElement("slot", {}, []).element
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\icon.ink
-  var import_Registry7 = __toESM(require_Registry());
-  var import_Component7 = __toESM(require_Component());
-  var import_StyleSet2 = __toESM(require_StyleSet());
-  var import_color2 = __toESM(require_color());
-  var import_display2 = __toESM(require_display());
   var import_size = __toESM(require_size());
-  var Icon_33cb84912ffcb000a388 = class extends import_Component7.default {
+  var Icon_33cb84912ffcb000a388 = class extends import_Component6.default {
     static id = "33cb84912ffcb000a388";
     static tagname = "icon";
     static classname = "Icon_33cb84912ffcb000a388";
@@ -4198,32 +4132,32 @@ var InkAPI = (() => {
     }
     template() {
       const { name, solid, brand } = this.props;
-      const styles = new import_StyleSet2.default();
+      const styles = new import_StyleSet.default();
       this.styles = () => styles.toString();
-      (0, import_display2.default)(this.props, styles, "inline-block", ":host");
-      (0, import_color2.default)(this.props, styles, false, ":host", "color");
+      (0, import_display.default)(this.props, styles, "inline-block", ":host");
+      (0, import_color.default)(this.props, styles, false, ":host", "color");
       (0, import_size.default)(this.props, styles, false, ":host", "font-size");
       const iconClass = ["fa-fw", `fa-${name}`];
       iconClass.push(brand ? "fa-brands" : "fa-solid");
       return () => [
-        import_Registry7.default.createElement("link", { "rel": `stylesheet`, "type": `text/css`, "href": `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css` }).element,
-        import_Registry7.default.createText(`
+        import_Registry6.default.createElement("link", { "rel": `stylesheet`, "type": `text/css`, "href": `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css` }).element,
+        import_Registry6.default.createText(`
 `, false),
-        import_Registry7.default.createElement("i", { "class": iconClass.join(" ") }, []).element
+        import_Registry6.default.createElement("i", { "class": iconClass.join(" ") }, []).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\crumbs.ink
-  var import_Registry8 = __toESM(require_Registry());
-  var import_Component8 = __toESM(require_Component());
-  var import_StyleSet3 = __toESM(require_StyleSet());
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\crumbs.ink
+  var import_Registry7 = __toESM(require_Registry());
+  var import_Component7 = __toESM(require_Component());
+  var import_StyleSet2 = __toESM(require_StyleSet());
   var import_bold = __toESM(require_bold());
-  var import_color3 = __toESM(require_color());
-  var import_display3 = __toESM(require_display());
+  var import_color2 = __toESM(require_color());
+  var import_display2 = __toESM(require_display());
   var import_size2 = __toESM(require_size());
   var import_underline = __toESM(require_underline());
-  var Crumbs_e4598fe781cc66b1ce2c = class extends import_Component8.default {
+  var Crumbs_e4598fe781cc66b1ce2c = class extends import_Component7.default {
     static id = "e4598fe781cc66b1ce2c";
     static tagname = "crumbs";
     static classname = "Crumbs_e4598fe781cc66b1ce2c";
@@ -4263,17 +4197,17 @@ var InkAPI = (() => {
         //others
         spacing = 0
       } = this.propsTree;
-      const styles = new import_StyleSet3.default();
+      const styles = new import_StyleSet2.default();
       this.styles = () => styles.toString();
-      const display = (0, import_display3.default)(this.props, styles, "block", ":host");
+      const display = (0, import_display2.default)(this.props, styles, "block", ":host");
       if (display === "flex" || display === "inline-flex") {
         styles.add(":host", "align-items", "center");
       }
       (0, import_size2.default)(this.props, styles, false, ":host", "font-size");
-      (0, import_color3.default)(this.props, styles, false, ":host", "color");
+      (0, import_color2.default)(this.props, styles, false, ":host", "color");
       styles.add("a", "cursor", "pointer");
       if (link) {
-        (0, import_color3.default)(link, styles, false, "a", "color");
+        (0, import_color2.default)(link, styles, false, "a", "color");
       }
       (0, import_underline.default)(this.props, styles, "a");
       if (spacing) {
@@ -4329,62 +4263,62 @@ var InkAPI = (() => {
         secondary
       };
       return () => [
-        import_Registry8.default.createText(`
+        import_Registry7.default.createText(`
 `, false),
         ...Object.entries(crumbs).map(([index, crumb]) => [
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
   `, false),
           ...!!crumb.icon ? [
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...iconProps, "name": crumb.icon }).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...iconProps, "name": crumb.icon }).element,
+            import_Registry7.default.createText(`
   `, false)
           ] : [],
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
   `, false),
           ...!!(crumb.href && crumb.label) ? [
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createElement("a", { "href": crumb.href }, [
+            import_Registry7.default.createElement("a", { "href": crumb.href }, [
               ...this._toNodeList(crumb.label)
             ]).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
   `, false)
           ] : !!crumb.label ? [
             ,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createElement("span", {}, [
+            import_Registry7.default.createElement("span", {}, [
               ...this._toNodeList(crumb.label)
             ]).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
   `, false)
           ] : [],
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
   `, false),
           ...!!(index < crumbs.length - 1) ? [
-            import_Registry8.default.createText(`
+            import_Registry7.default.createText(`
     `, false),
-            import_Registry8.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...sepProps, "name": `chevron-right`, "class": `sep` }).element,
-            import_Registry8.default.createText(`
+            import_Registry7.default.createComponent("interface-icon", Icon_33cb84912ffcb000a388, { ...sepProps, "name": `chevron-right`, "class": `sep` }).element,
+            import_Registry7.default.createText(`
   `, false)
           ] : [],
-          import_Registry8.default.createText(`
+          import_Registry7.default.createText(`
 `, false)
         ]).flat()
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
-  var import_Component14 = __toESM(require_Component());
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
+  var import_Component13 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\table.ink
-  var import_Registry9 = __toESM(require_Registry());
-  var import_Component9 = __toESM(require_Component());
-  var import_StyleSet4 = __toESM(require_StyleSet());
-  var Table_cb9231b6c52140a254d4 = class extends import_Component9.default {
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\table.ink
+  var import_Registry8 = __toESM(require_Registry());
+  var import_Component8 = __toESM(require_Component());
+  var import_StyleSet3 = __toESM(require_StyleSet());
+  var Table_cb9231b6c52140a254d4 = class extends import_Component8.default {
     static id = "cb9231b6c52140a254d4";
     static tagname = "table";
     static classname = "Table_cb9231b6c52140a254d4";
@@ -4392,10 +4326,41 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet4.default();
+      const styles = new import_StyleSet3.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table");
       styles.add(":host", "width", "100%");
+      return () => [
+        import_Registry8.default.createText(`
+`, false),
+        import_Registry8.default.createElement("slot", {}, []).element
+      ];
+    }
+  };
+
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
+  var import_Registry13 = __toESM(require_Registry());
+  var import_StyleSet8 = __toESM(require_StyleSet());
+
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
+  var import_Registry10 = __toESM(require_Registry());
+  var import_Component10 = __toESM(require_Component());
+
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\row.ink
+  var import_Registry9 = __toESM(require_Registry());
+  var import_Component9 = __toESM(require_Component());
+  var import_StyleSet4 = __toESM(require_StyleSet());
+  var Row_0b3723ad0a2356b54f11 = class extends import_Component9.default {
+    static id = "0b3723ad0a2356b54f11";
+    static tagname = "row";
+    static classname = "Row_0b3723ad0a2356b54f11";
+    styles() {
+      return ``;
+    }
+    template() {
+      const styles = new import_StyleSet4.default();
+      this.styles = () => styles.toString();
+      styles.add(":host", "display", "table-row");
       return () => [
         import_Registry9.default.createText(`
 `, false),
@@ -4404,40 +4369,9 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
-  var import_Registry14 = __toESM(require_Registry());
-  var import_StyleSet9 = __toESM(require_StyleSet());
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
-  var import_Registry11 = __toESM(require_Registry());
-  var import_Component11 = __toESM(require_Component());
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\row.ink
-  var import_Registry10 = __toESM(require_Registry());
-  var import_Component10 = __toESM(require_Component());
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\thead.ink
   var import_StyleSet5 = __toESM(require_StyleSet());
-  var Row_0b3723ad0a2356b54f11 = class extends import_Component10.default {
-    static id = "0b3723ad0a2356b54f11";
-    static tagname = "row";
-    static classname = "Row_0b3723ad0a2356b54f11";
-    styles() {
-      return ``;
-    }
-    template() {
-      const styles = new import_StyleSet5.default();
-      this.styles = () => styles.toString();
-      styles.add(":host", "display", "table-row");
-      return () => [
-        import_Registry10.default.createText(`
-`, false),
-        import_Registry10.default.createElement("slot", {}, []).element
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\thead.ink
-  var import_StyleSet6 = __toESM(require_StyleSet());
-  var Thead_afbcee18613ce58fb77c = class extends import_Component11.default {
+  var Thead_afbcee18613ce58fb77c = class extends import_Component10.default {
     static id = "afbcee18613ce58fb77c";
     static tagname = "thead";
     static classname = "Thead_afbcee18613ce58fb77c";
@@ -4445,24 +4379,24 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet6.default();
+      const styles = new import_StyleSet5.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-header-group");
       return () => [
-        import_Registry11.default.createText(`
+        import_Registry10.default.createText(`
 `, false),
-        import_Registry11.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
-          import_Registry11.default.createElement("slot", {}, []).element
+        import_Registry10.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
+          import_Registry10.default.createElement("slot", {}, []).element
         ]).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
-  var import_Registry12 = __toESM(require_Registry());
-  var import_Component12 = __toESM(require_Component());
-  var import_StyleSet7 = __toESM(require_StyleSet());
-  var Tbody_95f498c1427be6bf7334 = class extends import_Component12.default {
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tbody.ink
+  var import_Registry11 = __toESM(require_Registry());
+  var import_Component11 = __toESM(require_Component());
+  var import_StyleSet6 = __toESM(require_StyleSet());
+  var Tbody_95f498c1427be6bf7334 = class extends import_Component11.default {
     static id = "95f498c1427be6bf7334";
     static tagname = "tbody";
     static classname = "Tbody_95f498c1427be6bf7334";
@@ -4470,22 +4404,22 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet7.default();
+      const styles = new import_StyleSet6.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-row-group");
       return () => [
-        import_Registry12.default.createText(`
+        import_Registry11.default.createText(`
 `, false),
-        import_Registry12.default.createElement("slot", {}, []).element
+        import_Registry11.default.createElement("slot", {}, []).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
-  var import_Registry13 = __toESM(require_Registry());
-  var import_Component13 = __toESM(require_Component());
-  var import_StyleSet8 = __toESM(require_StyleSet());
-  var Tfoot_874bedd042c5f2db7353 = class extends import_Component13.default {
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\tfoot.ink
+  var import_Registry12 = __toESM(require_Registry());
+  var import_Component12 = __toESM(require_Component());
+  var import_StyleSet7 = __toESM(require_StyleSet());
+  var Tfoot_874bedd042c5f2db7353 = class extends import_Component12.default {
     static id = "874bedd042c5f2db7353";
     static tagname = "tfoot";
     static classname = "Tfoot_874bedd042c5f2db7353";
@@ -4493,21 +4427,21 @@ var InkAPI = (() => {
       return ``;
     }
     template() {
-      const styles = new import_StyleSet8.default();
+      const styles = new import_StyleSet7.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-footer-group");
       return () => [
-        import_Registry13.default.createText(`
+        import_Registry12.default.createText(`
 `, false),
-        import_Registry13.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
-          import_Registry13.default.createElement("slot", {}, []).element
+        import_Registry12.default.createComponent("table-row", Row_0b3723ad0a2356b54f11, {}, [
+          import_Registry12.default.createElement("slot", {}, []).element
         ]).element
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table.ink
-  var Table_02bc3cbacda5727a0af3 = class extends import_Component14.default {
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table.ink
+  var Table_02bc3cbacda5727a0af3 = class extends import_Component13.default {
     static id = "02bc3cbacda5727a0af3";
     static tagname = "table";
     static classname = "Table_02bc3cbacda5727a0af3";
@@ -4534,7 +4468,7 @@ var InkAPI = (() => {
       const bodyList = typeof body === "string" ? body.split(" ").filter(Boolean) : [];
       const oddList = typeof odd === "string" ? odd.split(" ").filter(Boolean) : [];
       const evenList = typeof even === "string" ? even.split(" ").filter(Boolean) : [];
-      const styles = new import_StyleSet9.default();
+      const styles = new import_StyleSet8.default();
       this.styles = () => styles.toString();
       styles.add(":host", "width", "100%");
       if (sticky) {
@@ -4604,7 +4538,7 @@ var InkAPI = (() => {
       }
       this.innerText = "";
       headers.length && this.appendChild(
-        import_Registry14.default.createComponent(
+        import_Registry13.default.createComponent(
           "table-thead",
           Thead_afbcee18613ce58fb77c,
           {},
@@ -4612,7 +4546,7 @@ var InkAPI = (() => {
         ).element
       );
       rows.length && this.appendChild(
-        import_Registry14.default.createComponent(
+        import_Registry13.default.createComponent(
           "table-tbody",
           Tbody_95f498c1427be6bf7334,
           {},
@@ -4620,7 +4554,7 @@ var InkAPI = (() => {
         ).element
       );
       footers.length && this.appendChild(
-        import_Registry14.default.createComponent(
+        import_Registry13.default.createComponent(
           "table-tfoot",
           Tfoot_874bedd042c5f2db7353,
           {},
@@ -4628,37 +4562,37 @@ var InkAPI = (() => {
         ).element
       );
       return () => [
-        import_Registry14.default.createText(`
+        import_Registry13.default.createText(`
 `, false),
         ...!!sticky ? [
-          import_Registry14.default.createText(`
+          import_Registry13.default.createText(`
   `, false),
-          import_Registry14.default.createComponent("table-wrapper", Table_cb9231b6c52140a254d4, {}, [
-            import_Registry14.default.createText(`
+          import_Registry13.default.createComponent("table-wrapper", Table_cb9231b6c52140a254d4, {}, [
+            import_Registry13.default.createText(`
     `, false),
-            import_Registry14.default.createElement("slot", {}, []).element,
-            import_Registry14.default.createText(`
+            import_Registry13.default.createElement("slot", {}, []).element,
+            import_Registry13.default.createText(`
   `, false)
           ]).element,
-          import_Registry14.default.createText(`
+          import_Registry13.default.createText(`
 `, false)
         ] : true ? [
           ,
-          import_Registry14.default.createText(`
+          import_Registry13.default.createText(`
   `, false),
-          import_Registry14.default.createElement("slot", {}, []).element,
-          import_Registry14.default.createText(`
+          import_Registry13.default.createElement("slot", {}, []).element,
+          import_Registry13.default.createText(`
 `, false)
         ] : []
       ];
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\head.ink
-  var import_Registry15 = __toESM(require_Registry());
-  var import_Component15 = __toESM(require_Component());
-  var import_StyleSet10 = __toESM(require_StyleSet());
-  var Head_d8755504d9458a2c21da = class extends import_Component15.default {
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\head.ink
+  var import_Registry14 = __toESM(require_Registry());
+  var import_Component14 = __toESM(require_Component());
+  var import_StyleSet9 = __toESM(require_StyleSet());
+  var Head_d8755504d9458a2c21da = class extends import_Component14.default {
     static id = "d8755504d9458a2c21da";
     static tagname = "head";
     static classname = "Head_d8755504d9458a2c21da";
@@ -4679,7 +4613,7 @@ var InkAPI = (() => {
         left,
         right
       } = this.propsCamel;
-      const styles = new import_StyleSet10.default();
+      const styles = new import_StyleSet9.default();
       this.styles = () => styles.toString();
       styles.add(":host", "display", "table-cell");
       styles.add(":host([top])", "position", "sticky");
@@ -4695,6 +4629,78 @@ var InkAPI = (() => {
       } else {
         styles.add(":host([top])", "top", "0");
       }
+      if (typeof left === "string" || typeof left === "number") {
+        styles.add(":host([left])", "left", left);
+      } else {
+        styles.add(":host([left])", "left", "0");
+      }
+      if (typeof right === "string" || typeof right === "number") {
+        styles.add(":host([right])", "right", right);
+      } else {
+        styles.add(":host([right])", "right", "0");
+      }
+      if (nowrap) {
+        styles.add(":host", "white-space", "nowrap");
+      }
+      if (wrap1) {
+        styles.add(".wrap", "width", "100px");
+      } else if (wrap2) {
+        styles.add(".wrap", "width", "200px");
+      } else if (wrap3) {
+        styles.add(".wrap", "width", "300px");
+      } else if (wrap4) {
+        styles.add(".wrap", "width", "400px");
+      } else if (wrap5) {
+        styles.add(".wrap", "width", "500px");
+      }
+      return () => [
+        import_Registry14.default.createText(`
+`, false),
+        import_Registry14.default.createElement("slot", {}, []).element,
+        import_Registry14.default.createText(`
+`, false),
+        ...!!(wrap1 || wrap2 || wrap3 || wrap4 || wrap5) ? [
+          import_Registry14.default.createText(`
+  `, false),
+          import_Registry14.default.createElement("div", { "class": `wrap` }, []).element,
+          import_Registry14.default.createText(`
+`, false)
+        ] : []
+      ];
+    }
+  };
+
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\layout\table\col.ink
+  var import_Registry15 = __toESM(require_Registry());
+  var import_Component15 = __toESM(require_Component());
+  var import_StyleSet10 = __toESM(require_StyleSet());
+  var Col_f45aa9d13a1588f1d9ab = class extends import_Component15.default {
+    static id = "f45aa9d13a1588f1d9ab";
+    static tagname = "col";
+    static classname = "Col_f45aa9d13a1588f1d9ab";
+    styles() {
+      return ``;
+    }
+    template() {
+      const {
+        //wrapping
+        nowrap,
+        wrap1,
+        wrap2,
+        wrap3,
+        wrap4,
+        wrap5,
+        //sticky
+        left,
+        right
+      } = this.propsCamel;
+      const styles = new import_StyleSet10.default();
+      this.styles = () => styles.toString();
+      styles.add(":host", "display", "table-cell");
+      styles.add(":host([left])", "position", "sticky");
+      styles.add(":host([left])", "z-index", "2");
+      styles.add(":host([right])", "position", "sticky");
+      styles.add(":host([right])", "z-index", "2");
       if (typeof left === "string" || typeof left === "number") {
         styles.add(":host([left])", "left", left);
       } else {
@@ -4736,209 +4742,11 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\table\col.ink
+  // ink-component-resolver:C:\Users\anetu\dev\ink-task\node_modules\@stackpress\ink-ui\element\tab.ink
   var import_Registry16 = __toESM(require_Registry());
   var import_Component16 = __toESM(require_Component());
   var import_StyleSet11 = __toESM(require_StyleSet());
-  var Col_f45aa9d13a1588f1d9ab = class extends import_Component16.default {
-    static id = "f45aa9d13a1588f1d9ab";
-    static tagname = "col";
-    static classname = "Col_f45aa9d13a1588f1d9ab";
-    styles() {
-      return ``;
-    }
-    template() {
-      const {
-        //wrapping
-        nowrap,
-        wrap1,
-        wrap2,
-        wrap3,
-        wrap4,
-        wrap5,
-        //sticky
-        left,
-        right
-      } = this.propsCamel;
-      const styles = new import_StyleSet11.default();
-      this.styles = () => styles.toString();
-      styles.add(":host", "display", "table-cell");
-      styles.add(":host([left])", "position", "sticky");
-      styles.add(":host([left])", "z-index", "2");
-      styles.add(":host([right])", "position", "sticky");
-      styles.add(":host([right])", "z-index", "2");
-      if (typeof left === "string" || typeof left === "number") {
-        styles.add(":host([left])", "left", left);
-      } else {
-        styles.add(":host([left])", "left", "0");
-      }
-      if (typeof right === "string" || typeof right === "number") {
-        styles.add(":host([right])", "right", right);
-      } else {
-        styles.add(":host([right])", "right", "0");
-      }
-      if (nowrap) {
-        styles.add(":host", "white-space", "nowrap");
-      }
-      if (wrap1) {
-        styles.add(".wrap", "width", "100px");
-      } else if (wrap2) {
-        styles.add(".wrap", "width", "200px");
-      } else if (wrap3) {
-        styles.add(".wrap", "width", "300px");
-      } else if (wrap4) {
-        styles.add(".wrap", "width", "400px");
-      } else if (wrap5) {
-        styles.add(".wrap", "width", "500px");
-      }
-      return () => [
-        import_Registry16.default.createText(`
-`, false),
-        import_Registry16.default.createElement("slot", {}, []).element,
-        import_Registry16.default.createText(`
-`, false),
-        ...!!(wrap1 || wrap2 || wrap3 || wrap4 || wrap5) ? [
-          import_Registry16.default.createText(`
-  `, false),
-          import_Registry16.default.createElement("div", { "class": `wrap` }, []).element,
-          import_Registry16.default.createText(`
-`, false)
-        ] : []
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\badge.ink
-  var import_Registry17 = __toESM(require_Registry());
-  var import_Component17 = __toESM(require_Component());
-  var import_StyleSet12 = __toESM(require_StyleSet());
-  var import_color4 = __toESM(require_color());
-  var import_curve2 = __toESM(require_curve());
-  var import_display4 = __toESM(require_display());
-  var Badge_04e709456157a0a384e7 = class extends import_Component17.default {
-    static id = "04e709456157a0a384e7";
-    static tagname = "badge";
-    static classname = "Badge_04e709456157a0a384e7";
-    styles() {
-      return ``;
-    }
-    template() {
-      const {
-        //layouts
-        outline,
-        solid,
-        transparent,
-        //padding
-        padding
-      } = this.props;
-      const styles = new import_StyleSet12.default();
-      this.styles = () => styles.toString();
-      (0, import_display4.default)(this.props, styles, "inline-block", ":host");
-      styles.add(":host", "padding", padding ? `${padding}px` : "2px 8px");
-      (0, import_curve2.default)(this.props, styles, false, ":host");
-      if (outline || transparent) {
-        (0, import_color4.default)(this.props, styles, "var(--muted)", ":host", "color");
-        (0, import_color4.default)(this.props, styles, "var(--muted)", ":host", "border-color");
-        styles.add(":host", "border-style", "solid");
-        styles.add(":host", "border-width", "1px");
-        if (outline) {
-          styles.add(":host", "background-color", "var(--white)");
-        }
-      } else {
-        styles.add(":host", "color", "var(--white)");
-        (0, import_color4.default)(this.props, styles, "var(--muted)", ":host", "background-color");
-      }
-      return () => [
-        import_Registry17.default.createText(`
-`, false),
-        import_Registry17.default.createElement("slot", {}, []).element
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\progress.ink
-  var import_Registry18 = __toESM(require_Registry());
-  var import_Component18 = __toESM(require_Component());
-  var import_StyleSet13 = __toESM(require_StyleSet());
-  var import_color5 = __toESM(require_color());
-  var import_display5 = __toESM(require_display());
-  var Progress_8f478149e608bd67287e = class extends import_Component18.default {
-    static id = "8f478149e608bd67287e";
-    static tagname = "progress";
-    static classname = "Progress_8f478149e608bd67287e";
-    static observedAttributes = ["width"];
-    styles() {
-      return ``;
-    }
-    template() {
-      const { width = 0, height = 20, bg } = this.propsTree;
-      const styles = new import_StyleSet13.default();
-      this.styles = () => styles.toString();
-      const children4 = this.originalChildren;
-      styles.add(":host", "position", "relative");
-      styles.add(":host", "overflow", "hidden");
-      styles.add(":host", "height", `${height}px`);
-      (0, import_display5.default)(this.props, styles, "block", ":host");
-      styles.add(".bar", "height", "100%");
-      if (!isNaN(Number(width))) {
-        styles.add(".bar", "width", `${Math.min(
-          Math.max(Number(width), 0),
-          100
-        )}%`);
-      }
-      styles.add(".bar", "transition", "width 500ms");
-      if (bg) {
-        (0, import_color5.default)(bg, styles, false, ":host", "background-color");
-      }
-      (0, import_color5.default)(this.props, styles, false, ".bar", "background-color");
-      styles.add(".label", "position", "absolute");
-      styles.add(".label", "top", "0");
-      styles.add(".label", "bottom", "0");
-      styles.add(".label", "left", "0");
-      styles.add(".label", "right", "0");
-      styles.add(".label", "display", "flex");
-      styles.add(".label", "align-items", "center");
-      styles.add(".label", "justify-content", "center");
-      styles.add(".label", "text-align", "center");
-      this.on("attributechange", (e) => {
-        const { action, name, value, target } = e.detail;
-        if (name !== "width") return;
-        const bar = target.shadowRoot?.querySelector("div.bar");
-        if (!bar) return;
-        if (action === "remove") {
-          bar.style.width = "0%";
-          return;
-        }
-        if (isNaN(parseFloat(value))) return;
-        bar.style.width = `${Math.min(
-          Math.max(parseFloat(value), 0),
-          100
-        )}%`;
-      });
-      return () => [
-        import_Registry18.default.createText(`
-`, false),
-        import_Registry18.default.createElement("div", { "class": `bar` }, []).element,
-        import_Registry18.default.createText(`
-`, false),
-        ...!!children4.length ? [
-          import_Registry18.default.createText(`
-  `, false),
-          import_Registry18.default.createElement("div", { "class": `label` }, [
-            import_Registry18.default.createElement("slot", {}, []).element
-          ]).element,
-          import_Registry18.default.createText(`
-`, false)
-        ] : []
-      ];
-    }
-  };
-
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\tab.ink
-  var import_Registry19 = __toESM(require_Registry());
-  var import_Component19 = __toESM(require_Component());
-  var import_StyleSet14 = __toESM(require_StyleSet());
-  var Tab_773b62de7e46341aea2d = class extends import_Component19.default {
+  var Tab_773b62de7e46341aea2d = class extends import_Component16.default {
     static id = "773b62de7e46341aea2d";
     static tagname = "tab";
     static classname = "Tab_773b62de7e46341aea2d";
@@ -4987,27 +4795,27 @@ var InkAPI = (() => {
       } = this.props;
       const activeList = active.split(" ");
       const inactiveList = inactive.split(" ");
-      const styles = new import_StyleSet14.default();
+      const styles = new import_StyleSet11.default();
       this.styles = () => styles.toString();
       styles.add(":host", "cursor", "pointer");
       styles.add("a", "display", "block");
       styles.add("a", "height", "100%");
       styles.add("a", "width", "100%");
       return () => [
-        import_Registry19.default.createText(`
+        import_Registry16.default.createText(`
 `, false),
-        import_Registry19.default.createElement("a", { ...attributes, "click": handlers.activate, "mount": handlers.init }, [
-          import_Registry19.default.createText(`
+        import_Registry16.default.createElement("a", { ...attributes, "click": handlers.activate, "mount": handlers.init }, [
+          import_Registry16.default.createText(`
   `, false),
-          import_Registry19.default.createElement("slot", {}, []).element,
-          import_Registry19.default.createText(`
+          import_Registry16.default.createElement("slot", {}, []).element,
+          import_Registry16.default.createText(`
 `, false)
         ]).element
       ];
     }
   };
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\components\tab.ink
+  // ink-document-client-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\tab.ink
   var import_ink4 = __toESM(require_ink());
   var TemplateDocument = class _TemplateDocument extends import_Document2.default {
     static sync() {
@@ -5015,9 +4823,9 @@ var InkAPI = (() => {
       return document2.sync();
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/components/tab.html";
+      const title = _("Ink UI - Tab Component");
+      const description = _("A tab component for switching between content sections.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -5659,7 +5467,7 @@ var InkAPI = (() => {
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -5672,7 +5480,7 @@ var InkAPI = (() => {
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -5688,7 +5496,6 @@ var InkAPI = (() => {
                 ]
               ]),
               import_Document.default.createText(`
-
       `, false),
               import_Document.default.createElement("aside", { "right": true }, [
                 import_Document.default.createText(`
@@ -5697,18 +5504,14 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#pager` }, [
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#tab` }, [
                       ...this._toNodeList(_("Tab"))
                     ]),
                     import_Document.default.createText(`
@@ -5722,21 +5525,21 @@ var InkAPI = (() => {
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#TabExamples` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Tab Examples"))
+                        ...this._toNodeList(_("Basic Usage"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#HorizontalTabsWithDifferentActiveState` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styling` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Horizontal Tabs with Different Active State"))
+                        ...this._toNodeList(_("Styling"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#CustomStyleTabs` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#multiple` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Custom Style Tabs"))
+                        ...this._toNodeList(_("Multiple Groups"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5751,7 +5554,6 @@ var InkAPI = (() => {
       `, false)
               ]),
               import_Document.default.createText(`
-
       `, false),
               import_Document.default.createElement("main", {}, [
                 import_Document.default.createText(`
@@ -5769,22 +5571,18 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `pager` }, []),
+                  import_Document.default.createElement("a", { "name": `tab` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Tab")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("Tab"))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Tab`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto`, "lang": `js`, "trim": true }, [
+                    import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
               import Tab from '@stackpress/ink-ui/element/tab';
             `, false)
@@ -5794,7 +5592,6 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Props Section -->
           `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
@@ -5808,7 +5605,7 @@ var InkAPI = (() => {
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Property"))
+                      ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -5826,7 +5623,6 @@ var InkAPI = (() => {
                       ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5847,13 +5643,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Groups tabs together. Only one tab in a group can be active at a time. Must be unique per tab set (e.g., "http", "user").'))
+                        ...this._toNodeList(_("Groups tabs together; only one tab per group can be active"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5869,18 +5664,17 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
+                        import_Document.default.createText(`Yes`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('CSS selector for content to show/hide when this tab is active (e.g., "#user-profile"). Leave empty if no content is controlled.'))
+                        ...this._toNodeList(_('CSS selector for content to show/hide (e.g., "#content-id")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5901,13 +5695,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Space-separated class names applied when the tab is active (e.g., "bg-black tx-white"). Use atomic styles for customization.'))
+                        ...this._toNodeList(_('Space-separated classes for active state (default: "")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5928,67 +5721,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Space-separated class names applied when the tab is inactive (e.g., "bg-t-1 tx-muted"). Contrasts with `active` for visual feedback.'))
+                        ...this._toNodeList(_('Space-separated classes for inactive state (default: "")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`style`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Inline CSS for the tab\u2019s `<a>` element (e.g., "padding: 12px;"). Overrides default styles like `height: 100%`.'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`class`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Additional class names for the `<a>` element. Complements `active`/`inactive` classes."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6009,7 +5747,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Sets the tab as active on mount. Only one tab per group should have `on`. Use as an attribute (e.g., `on=""`).'))
+                        ...this._toNodeList(_("Sets tab as initially active"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6019,313 +5757,285 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Tab Examples -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `TabExamples` }, []),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Tab Examples"))
+                    ...this._toNodeList(_("Basic Usage"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Basic tab setup with content switching.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_("Tabs group related content and toggle visibility using the `selector` prop. The `active` and `inactive` props style the tab states. Below are examples of horizontal tab layouts with content control.")),
+                    import_Document.default.createElement("div", { "class": `flex` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "group": `basic`, "selector": `#tab1-content`, "on": true, "class": `p-10` }, [
+                        import_Document.default.createText(`Tab 1`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "group": `basic`, "selector": `#tab2-content`, "class": `p-10` }, [
+                        import_Document.default.createText(`Tab 2`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "id": `tab1-content`, "class": `p-10 bg-t-1` }, [
+                      import_Document.default.createText(`Content for Tab 1`, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "id": `tab2-content`, "class": `p-10 bg-t-1`, "style": `display: none;` }, [
+                      import_Document.default.createText(`Content for Tab 2`, false)
+                    ]),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-tab", { "on": true, "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-muted`, "group": `http`, "selector": `#http-index-ts` }, [
-                      import_Document.default.createText(`
-              Index.ts
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-muted`, "group": `http`, "selector": `#http-page-ink` }, [
-                      import_Document.default.createText(`
-              Page.ink
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-muted`, "group": `http`, "selector": `#http-package-json` }, [
-                      import_Document.default.createText(`
-              Package.json
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "id": `http-index-ts`, "class": `p-10 bg-t-1` }, [
-                    import_Document.default.createText(`Content for Index.ts`, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "id": `http-page-ink`, "class": `p-10 bg-t-1`, "style": `display: none;` }, [
-                    import_Document.default.createText(`Content for Page.ink`, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "id": `http-package-json`, "class": `p-10 bg-t-1`, "style": `display: none;` }, [
-                    import_Document.default.createText(`Content for Package.json`, false)
-                  ]),
-                  import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <div class="bg-t-3 h-120 flex flex-center">
+            <div class="flex">
+              <element-tab group="basic" selector="#tab1-content" on class="p-10">Tab 1</element-tab>
+              <element-tab group="basic" selector="#tab2-content" class="p-10">Tab 2</element-tab>
+            </div>
+            <div id="tab1-content" class="p-10 bg-t-1">Content for Tab 1</div>
+            <div id="tab2-content" class="p-10 bg-t-1" style="display: none;">Content for Tab 2</div>
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `styling` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Styling"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Customize active and inactive states with classes.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "class": `flex` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "on": true, "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-muted`, "group": `styled`, "selector": `#styled-tab1` }, [
+                        import_Document.default.createText(`Tab 1`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-muted`, "group": `styled`, "selector": `#styled-tab2` }, [
+                        import_Document.default.createText(`Tab 2`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-black tx-white`, "inactive": `bg-t-1 tx-muted`, "group": `styled`, "selector": `#styled-tab3` }, [
+                        import_Document.default.createText(`Tab 3`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "id": `styled-tab1`, "class": `p-10 bg-t-1` }, [
+                      import_Document.default.createText(`Content for Tab 1`, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "id": `styled-tab2`, "class": `p-10 bg-t-1`, "style": `display: none;` }, [
+                      import_Document.default.createText(`Content for Tab 2`, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", { "id": `styled-tab3`, "class": `p-10 bg-t-1`, "style": `display: none;` }, [
+                      import_Document.default.createText(`Content for Tab 3`, false)
+                    ]),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <div class="flex">
               <element-tab 
                 on
                 class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
                 active="bg-black tx-white"
                 inactive="bg-t-1 tx-muted"  
-                group="http" 
-                selector="#http-index-ts"
-              >
-                Index.ts
-              </element-tab>
+                group="styled" 
+                selector="#styled-tab1"
+              >Tab 1</element-tab>
               <element-tab 
                 class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
                 active="bg-black tx-white"
                 inactive="bg-t-1 tx-muted"  
-                group="http" 
-                selector="#http-page-ink"
-              >
-                Page.ink
-              </element-tab>
+                group="styled" 
+                selector="#styled-tab2"
+              >Tab 2</element-tab>
               <element-tab 
                 class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
                 active="bg-black tx-white"
                 inactive="bg-t-1 tx-muted"  
-                group="http" 
-                selector="#http-package-json"
-              >
-                Package.json
-              </element-tab>
+                group="styled" 
+                selector="#styled-tab3"
+              >Tab 3</element-tab>
             </div>
-            <div id="http-index-ts" class="p-10 bg-t-1">Content for Index.ts</div>
-            <div id="http-page-ink" class="p-10 bg-t-1" style="display: none;">Content for Page.ink</div>
-            <div id="http-package-json" class="p-10 bg-t-1" style="display: none;">Content for Package.json</div>
+            <div id="styled-tab1" class="p-10 bg-t-1">Content for Tab 1</div>
+            <div id="styled-tab2" class="p-10 bg-t-1" style="display: none;">Content for Tab 2</div>
+            <div id="styled-tab3" class="p-10 bg-t-1" style="display: none;">Content for Tab 3</div>
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Horizontal Tabs with Different Active State -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `HorizontalTabsWithDifferentActiveState` }, []),
+                  import_Document.default.createElement("a", { "name": `multiple` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Horizontal Tabs with Different Active State"))
+                    ...this._toNodeList(_("Multiple Groups"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Use different groups to manage separate tab sets.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    ...this._toNodeList(_('This example uses a red active state for a "user" group, with content toggling between profile, settings, and notifications.')),
+                    import_Document.default.createElement("div", { "class": `mb-20` }, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `flex` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "on": true, "class": `p-10 bg-t-2 tx-primary mr-5 rounded-t`, "active": `bg-primary tx-white`, "inactive": `bg-t-2 tx-muted`, "group": `group1`, "selector": `#group1-tab1` }, [
+                          import_Document.default.createText(`Group 1 - Tab 1`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "class": `p-10 bg-t-2 tx-primary mr-5 rounded-t`, "active": `bg-primary tx-white`, "inactive": `bg-t-2 tx-muted`, "group": `group1`, "selector": `#group1-tab2` }, [
+                          import_Document.default.createText(`Group 1 - Tab 2`, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "id": `group1-tab1`, "class": `p-10 bg-t-1` }, [
+                        import_Document.default.createText(`Content for Group 1 - Tab 1`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "id": `group1-tab2`, "class": `p-10 bg-t-1`, "style": `display: none;` }, [
+                        import_Document.default.createText(`Content for Group 1 - Tab 2`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("div", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "class": `flex` }, [
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "on": true, "class": `p-10 bg-t-2 tx-primary mr-5 rounded-t`, "active": `bg-success tx-white`, "inactive": `bg-t-2 tx-muted`, "group": `group2`, "selector": `#group2-tab1` }, [
+                          import_Document.default.createText(`Group 2 - Tab 1`, false)
+                        ]),
+                        import_Document.default.createText(`
+                `, false),
+                        import_Document.default.createElement("element-tab", { "class": `p-10 bg-t-2 tx-primary mr-5 rounded-t`, "active": `bg-success tx-white`, "inactive": `bg-t-2 tx-muted`, "group": `group2`, "selector": `#group2-tab2` }, [
+                          import_Document.default.createText(`Group 2 - Tab 2`, false)
+                        ]),
+                        import_Document.default.createText(`
+              `, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "id": `group2-tab1`, "class": `p-10 bg-t-1` }, [
+                        import_Document.default.createText(`Content for Group 2 - Tab 1`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("div", { "id": `group2-tab2`, "class": `p-10 bg-t-1`, "style": `display: none;` }, [
+                        import_Document.default.createText(`Content for Group 2 - Tab 2`, false)
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-tab", { "on": true, "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-red-500 tx-white`, "inactive": `bg-gray-300 tx-muted`, "group": `user`, "selector": `#user-profile` }, [
-                      import_Document.default.createText(`
-              Profile
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-red-500 tx-white`, "inactive": `bg-gray-300 tx-muted`, "group": `user`, "selector": `#user-settings` }, [
-                      import_Document.default.createText(`
-              Settings
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-tab", { "class": `relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0`, "active": `bg-red-500 tx-white`, "inactive": `bg-gray-300 tx-muted`, "group": `user`, "selector": `#user-notifications` }, [
-                      import_Document.default.createText(`
-              Notifications
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "id": `user-profile`, "class": `p-10 bg-t-1` }, [
-                    import_Document.default.createText(`User Profile Content`, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "id": `user-settings`, "class": `p-10 bg-t-1`, "style": `display: none;` }, [
-                    import_Document.default.createText(`Settings Content`, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "id": `user-notifications`, "class": `p-10 bg-t-1`, "style": `display: none;` }, [
-                    import_Document.default.createText(`Notifications Content`, false)
-                  ]),
-                  import_Document.default.createText(`
-
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <div class="bg-t-3 h-120 flex flex-center">
-              <element-tab 
-                on
-                class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-                active="bg-red-500 tx-white"
-                inactive="bg-gray-300 tx-muted"  
-                group="user" 
-                selector="#user-profile"
-              >
-                Profile
-              </element-tab>
-              <element-tab 
-                class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-                active="bg-red-500 tx-white"
-                inactive="bg-gray-300 tx-muted"  
-                group="user" 
-                selector="#user-settings"
-              >
-                Settings
-              </element-tab>
-              <element-tab 
-                class="relative ml-2 p-10 ct-sm b-solid b-t-1 bx-1 bt-1 bb-0"
-                active="bg-red-500 tx-white"
-                inactive="bg-gray-300 tx-muted"  
-                group="user" 
-                selector="#user-notifications"
-              >
-                Notifications
-              </element-tab>
+            <div class="mb-20">
+              <div class="flex">
+                <element-tab 
+                  on
+                  class="p-10 bg-t-2 tx-primary mr-5 rounded-t"
+                  active="bg-primary tx-white"
+                  inactive="bg-t-2 tx-muted"  
+                  group="group1" 
+                  selector="#group1-tab1"
+                >Group 1 - Tab 1</element-tab>
+                <element-tab 
+                  class="p-10 bg-t-2 tx-primary mr-5 rounded-t"
+                  active="bg-primary tx-white"
+                  inactive="bg-t-2 tx-muted"  
+                  group="group1" 
+                  selector="#group1-tab2"
+                >Group 1 - Tab 2</element-tab>
+              </div>
+              <div id="group1-tab1" class="p-10 bg-t-1">Content for Group 1 - Tab 1</div>
+              <div id="group1-tab2" class="p-10 bg-t-1" style="display: none;">Content for Group 1 - Tab 2</div>
             </div>
-            <div id="user-profile" class="p-10 bg-t-1">User Profile Content</div>
-            <div id="user-settings" class="p-10 bg-t-1" style="display: none;">Settings Content</div>
-            <div id="user-notifications" class="p-10 bg-t-1" style="display: none;">Notifications Content</div>
+            <div>
+              <div class="flex">
+                <element-tab 
+                  on
+                  class="p-10 bg-t-2 tx-primary mr-5 rounded-t"
+                  active="bg-success tx-white"
+                  inactive="bg-t-2 tx-muted"  
+                  group="group2" 
+                  selector="#group2-tab1"
+                >Group 2 - Tab 1</element-tab>
+                <element-tab 
+                  class="p-10 bg-t-2 tx-primary mr-5 rounded-t"
+                  active="bg-success tx-white"
+                  inactive="bg-t-2 tx-muted"  
+                  group="group2" 
+                  selector="#group2-tab2"
+                >Group 2 - Tab 2</element-tab>
+              </div>
+              <div id="group2-tab1" class="p-10 bg-t-1">Content for Group 2 - Tab 1</div>
+              <div id="group2-tab2" class="p-10 bg-t-1" style="display: none;">Content for Group 2 - Tab 2</div>
+            </div>
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Custom Style Tabs -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `CustomStyleTabs` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Custom Style Tabs"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("Use the `style` prop for inline CSS overrides, combined with `active`/`inactive` classes for state-specific styling. This example adds rounded corners and custom padding.")),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-tab", { "on": true, "style": `padding: 12px 24px; border-radius: 8px; font-size: 16px;`, "active": `bg-green-500 tx-white`, "inactive": `bg-gray-300 tx-primary`, "group": `custom`, "selector": `#custom-tab-1` }, [
-                      import_Document.default.createText(`
-              Tab A
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-tab", { "style": `padding: 12px 24px; border-radius: 8px; font-size: 16px;`, "active": `bg-green-500 tx-white`, "inactive": `bg-gray-300 tx-primary`, "group": `custom`, "selector": `#custom-tab-2` }, [
-                      import_Document.default.createText(`
-              Tab B
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("element-tab", { "style": `padding: 12px 24px; border-radius: 8px; font-size: 16px;`, "active": `bg-green-500 tx-white`, "inactive": `bg-gray-300 tx-primary`, "group": `custom`, "selector": `#custom-tab-3` }, [
-                      import_Document.default.createText(`
-              Tab C
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "id": `custom-tab-1`, "class": `p-10 bg-t-1` }, [
-                    import_Document.default.createText(`Content for Tab A`, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "id": `custom-tab-2`, "class": `p-10 bg-t-1`, "style": `display: none;` }, [
-                    import_Document.default.createText(`Content for Tab B`, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "id": `custom-tab-3`, "class": `p-10 bg-t-1`, "style": `display: none;` }, [
-                    import_Document.default.createText(`Content for Tab C`, false)
-                  ]),
-                  import_Document.default.createText(`
-
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
-                    ...this._toNodeList(`
-            <div class="bg-t-3 h-120 flex flex-center">
-              <element-tab 
-                on
-                style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-                active="bg-green-500 tx-white"
-                inactive="bg-gray-300 tx-primary"  
-                group="custom" 
-                selector="#custom-tab-1"
-              >
-                Tab A
-              </element-tab>
-              <element-tab 
-                style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-                active="bg-green-500 tx-white"
-                inactive="bg-gray-300 tx-primary"  
-                group="custom" 
-                selector="#custom-tab-2"
-              >
-                Tab B
-              </element-tab>
-              <element-tab 
-                style="padding: 12px 24px; border-radius: 8px; font-size: 16px;"
-                active="bg-green-500 tx-white"
-                inactive="bg-gray-300 tx-primary"  
-                group="custom" 
-                selector="#custom-tab-3"
-              >
-                Tab C
-              </element-tab>
-            </div>
-            <div id="custom-tab-1" class="p-10 bg-t-1">Content for Tab A</div>
-            <div id="custom-tab-2" class="p-10 bg-t-1" style="display: none;">Content for Tab B</div>
-            <div id="custom-tab-3" class="p-10 bg-t-1" style="display: none;">Content for Tab C</div>
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Navigation -->
           `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
@@ -6334,9 +6044,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Progress Bars")),
+                      ...this._toNodeList(_("Progress")),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6346,8 +6054,6 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       ...this._toNodeList(_("Tables")),
-                      import_Document.default.createText(`
-              `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)
@@ -6382,7 +6088,6 @@ var InkAPI = (() => {
     "IdeCode_5387662ecbed97347dd0": Code_5387662ecbed97347dd0,
     "I18nTranslate_794a00a5e900fca28310": Translate_794a00a5e900fca28310,
     "PanelLayout_c4c96a14064fc0c4d224": Panel_c4c96a14064fc0c4d224,
-    "ElementAlert_ba827f6c1d3753161701": Alert_ba827f6c1d3753161701,
     "ElementIcon_33cb84912ffcb000a388": Icon_33cb84912ffcb000a388,
     "ElementCrumbs_e4598fe781cc66b1ce2c": Crumbs_e4598fe781cc66b1ce2c,
     "InterfaceIcon_33cb84912ffcb000a388": Icon_33cb84912ffcb000a388,
@@ -6391,8 +6096,6 @@ var InkAPI = (() => {
     "TableHead_d8755504d9458a2c21da": Head_d8755504d9458a2c21da,
     "TableRow_0b3723ad0a2356b54f11": Row_0b3723ad0a2356b54f11,
     "TableCol_f45aa9d13a1588f1d9ab": Col_f45aa9d13a1588f1d9ab,
-    "ElementBadge_04e709456157a0a384e7": Badge_04e709456157a0a384e7,
-    "ElementProgress_8f478149e608bd67287e": Progress_8f478149e608bd67287e,
     "ElementTab_773b62de7e46341aea2d": Tab_773b62de7e46341aea2d
   };
   var elements = {
@@ -6401,15 +6104,12 @@ var InkAPI = (() => {
     "ide-code": Code_5387662ecbed97347dd0,
     "i18n-translate": Translate_794a00a5e900fca28310,
     "panel-layout": Panel_c4c96a14064fc0c4d224,
-    "element-alert": Alert_ba827f6c1d3753161701,
     "element-icon": Icon_33cb84912ffcb000a388,
     "element-crumbs": Crumbs_e4598fe781cc66b1ce2c,
     "layout-table": Table_02bc3cbacda5727a0af3,
     "table-head": Head_d8755504d9458a2c21da,
     "table-row": Row_0b3723ad0a2356b54f11,
     "table-col": Col_f45aa9d13a1588f1d9ab,
-    "element-badge": Badge_04e709456157a0a384e7,
-    "element-progress": Progress_8f478149e608bd67287e,
     "element-tab": Tab_773b62de7e46341aea2d
   };
   var BUILD_ID = "44b41ad21d429f0b435e";

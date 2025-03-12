@@ -9,7 +9,8 @@
   const { value } = this.props;
   //sub-props (box size, text size)
   let { flag, text } = this.propsTree;
-  if (!flag && text !== false) {
+  // Only set defaults if flag is undefined (not explicitly false), preserve flag={false}
+  if (flag === undefined && text !== false) {
     flag = {};
     text = true;
   }
