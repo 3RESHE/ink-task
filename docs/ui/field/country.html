@@ -155,9 +155,8 @@
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
               <a class="block tx-t-1" href="#basic">• Basic Usage</a>
-              <a class="block tx-t-1" href="#value">• Initial Value</a>
-              <a class="block tx-t-1" href="#custom">• Custom Styling</a>
-            </nav>
+              <a class="block tx-t-1" href="#events">• Events</a>
+                 </nav>
           </nav>
         </menu>
       </aside>
@@ -190,59 +189,112 @@
             </table-row>
             <table-row>
               <table-col>value</table-col>
-              <table-col>String</table-col>
+              <table-col>String | Array</table-col>
               <table-col>No</table-col>
-              <table-col>Initial country code (e.g., "US")</table-col>
+              <table-col>Initial selected country code(s) (e.g., "US")</table-col>
             </table-row>
             <table-row>
               <table-col>placeholder</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Text when no country is selected (default: "Select Country")</table-col>
+              <table-col>Placeholder text when no country is selected (default: "Select Country")</table-col>
+            </table-row>
+            <table-row>
+              <table-col>open</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Callback when dropdown opens</table-col>
+            </table-row>
+            <table-row>
+              <table-col>close</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Callback when dropdown closes</table-col>
+            </table-row>
+            <table-row>
+              <table-col>filter</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Callback when search input changes</table-col>
+            </table-row>
+            <table-row>
+              <table-col>select</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Callback when a country is selected</table-col>
+            </table-row>
+            <table-row>
+              <table-col>remove</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Callback when a country is removed</table-col>
+            </table-row>
+            <table-row>
+              <table-col>add</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Callback when add button is clicked (if enabled)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>clear</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Callback when clear button is clicked</table-col>
+            </table-row>
+            <table-row>
+              <table-col>change</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Callback when selection changes</table-col>
+            </table-row>
+            <table-row>
+              <table-col>update</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Callback for general updates</table-col>
             </table-row>
           </layout-table>
 
           <a name="basic"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
-          <div class="mb-10">A simple country dropdown.</div>
+          <div class="mb-10">A simple country selector with a placeholder.</div>
           <div class="bg-t-3 p-10 mb-10">
-            <field-country name="basic"></field-country>
+            <field-country name="country" placeholder="Choose a Country"></field-country>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;field-country name="basic" /&gt;
+            &lt;field-country name="country" placeholder="Choose a Country" /&gt;
           </ide-code>
 
-          <a name="value"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Initial Value</h2>
-          <div class="mb-10">Country field with an initial value.</div>
+          <a name="events"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Events</h2>
+          <div class="mb-10">Country field with event handlers for interaction logging.</div>
           <div class="bg-t-3 p-10 mb-10">
-            <field-country name="country" placeholder="Choose Country" value="US"></field-country>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;field-country name="country" placeholder="Choose Country" value="US" /&gt;
-          </ide-code>
-
-          <a name="custom"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Styling</h2>
-          <div class="mb-10">Country field with custom width and z-index.</div>
-          <div class="bg-t-3 p-10 mb-10">
-            <field-country name="country" class="w-200 relative z-1" placeholder="Choose Country" value="US"></field-country>
+            <field-country name="country" placeholder="Choose Country" value="US"         ></field-country>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-country  
               name="country"
-              class="w-200 relative z-1"
               placeholder="Choose Country" 
               value="US"
+              open={(e) =&gt; console.log('open', e)}
+              close={(e) =&gt; console.log('close', e)}
+              filter={(e) =&gt; console.log('filter', e)}
+              select={(e) =&gt; console.log('select', e)}
+              remove={(e) =&gt; console.log('remove', e)}
+              add={(e) =&gt; console.log('add', e)}
+              clear={(e) =&gt; console.log('clear', e)}
+              change={(e) =&gt; console.log('change', e)}
+              update={(e) =&gt; console.log('update', e)}
             /&gt;
           </ide-code>
+
 
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/color.html">
               <element-icon name="chevron-left" theme="tx-1"></element-icon>Color Field
             </a>
-            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/input.html">
-              Input Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/currency.html">
+              Currency<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

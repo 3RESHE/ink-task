@@ -251,7 +251,7 @@
               <element-icon name="chevron-left" theme="tx-1" />{_('Fieldset')}
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/color.html">
-              {_('Color')}<element-icon name="chevron-right" theme="tx-1" />
+              {_('Color Field')}<element-icon name="chevron-right" theme="tx-1" />
             </a>
           </nav>
           <footer class="foot"></footer>

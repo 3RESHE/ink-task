@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - File Field Component</title>
+  <meta name="description" content="A file upload field with preview and upload handling." />
+  <meta property="og:title" content="Ink UI - File Field Component" />
+  <meta property="og:description" content="A file upload field with preview and upload handling." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/file.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - File Field Component" />
+  <meta name="twitter:description" content="A file upload field with preview and upload handling." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -142,28 +142,22 @@
   
 
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       Formats
     </a>
   
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#File">File</a>
+            <a class="block tx-t-0" href="#file">File Field</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicFile">• Basic File Input</a>
-              <a class="block tx-t-1" href="#imageFile">• Image-Only File Input</a>
-              <a class="block tx-t-1" href="#fileWithValue">• File with Initial URL</a>
-              <a class="block tx-t-1" href="#fileWithUploading">• File with Custom Uploading Text</a>
-              <a class="block tx-t-1" href="#fileWithChange">• File with Change Event</a>
-              <a class="block tx-t-1" href="#fileWithUpdate">• File with Update Callback</a>
-              <a class="block tx-t-1" href="#fileWithUpload">• File with Upload Handler</a>
-              <a class="block tx-t-1" href="#styledFile">• Styled File Input</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#image">• Image Preview</a>
+              <a class="block tx-t-1" href="#image-mode">• Image Mode</a>
+              <a class="block tx-t-1" href="#custom">• Custom Upload</a>
             </nav>
           </nav>
         </menu>
@@ -174,220 +168,129 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="File"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">File</h1>
-          <ide-app title="Editor" class="py-20">
+          <a name="file"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">File Field</h1>
+          <ide-app title="File Field" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import File from '@stackpress/ink-ui/field/file';
+              import FileField from '@stackpress/ink-ui/field/file';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <p class="mb-20">The `&lt;field-file&gt;` component provides a file upload interface with states for selection, uploading, and display. Below are its props and their roles:</p>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
-            <table-head>Description</table-head>
-
+            <table-head>Notes</table-head>
             <table-row>
               <table-col>name</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Sets the name attribute for a hidden `&lt;input&gt;` that stores the uploaded file URL, integrating with forms.</table-col>
+              <table-col>Name attribute for form submission</table-col>
             </table-row>
-
-            <table-row>
-              <table-col>image</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>When present, restricts the file input to image types (sets `accept="image/*"`) and displays a preview of the uploaded image.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>uploading</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Custom text displayed while a file is uploading. Defaults to "Uploading...". Useful for localization or branding.</table-col>
-            </table-row>
-
             <table-row>
               <table-col>value</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Initial URL of a file, bypassing the upload step. Displays the file link and optional image preview.</table-col>
+              <table-col>Initial file URL</table-col>
             </table-row>
-
             <table-row>
-              <table-col>change</table-col>
-              <table-col>Function</table-col>
+              <table-col>image</table-col>
+              <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Called when a file is selected, receiving the change event. Useful for tracking file selection before upload.</table-col>
+              <table-col>Restricts to images and shows preview</table-col>
             </table-row>
-
             <table-row>
-              <table-col>update</table-col>
-              <table-col>Function</table-col>
+              <table-col>uploading</table-col>
+              <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Callback invoked with the uploaded file URL after a successful upload. Ideal for updating state or triggering actions.</table-col>
+              <table-col>Text during upload (default: "Uploading...")</table-col>
             </table-row>
-
             <table-row>
               <table-col>upload</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Handles file upload logic. Takes the selected file and a callback to set the URL. Required for uploading functionality.</table-col>
+              <table-col>Upload handler (file, next) =&gt; void; next receives URL</table-col>
             </table-row>
-
             <table-row>
-              <table-col>class</table-col>
-              <table-col>String</table-col>
+              <table-col>change</table-col>
+              <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Custom CSS classes applied to the component’s host element, allowing layout and style adjustments.</table-col>
+              <table-col>Callback for change event (receives ChangeEvent)</table-col>
             </table-row>
-
             <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
+              <table-col>update</table-col>
+              <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Inline styles applied to the host element, overriding default styles for precise control.</table-col>
+              <table-col>Callback with uploaded file URL</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic File Input -->
-          <a name="basicFile"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic File Input</h2>
-          <div class="mb-10">A minimal file input with a form name, ready to accept any file type and store its URL in a hidden input once uploaded.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex flex-center">
-              <field-file name="file"></field-file>
-            </div>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">A simple file field without upload handling.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-file name="basic-file" class="block w-250"></field-file>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-file name="file" /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-file name="basic-file" class="block w-250" /&gt;
           </ide-code>
 
-          <!-- Image-Only File Input -->
-          <a name="imageFile"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Image-Only File Input</h2>
-          <div class="mb-10">Restricts the input to image files and previews the uploaded image. The `image` prop ensures only images are selectable.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex flex-center">
-              <field-file name="file" image></field-file>
-            </div>
+          <a name="image"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Image Preview</h2>
+          <div class="mb-10">File field with image restriction and preview.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-file name="image-file" image class="block w-250" value="https://images.wsj.net/im-580612/8SR"></field-file>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-file name="file" image /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-file 
+              name="image-file" 
+              image={true} 
+              class="block w-250" 
+              value="https://images.wsj.net/im-580612/8SR" 
+            /&gt;
           </ide-code>
 
-          <!-- File with Initial URL -->
-          <a name="fileWithValue"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">File with Initial URL</h2>
-          <div class="mb-10">Displays an existing file URL with a clickable link and reset option. The `value` prop sets the initial state, skipping upload.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex flex-center">
-              <field-file name="file" value="https://images.wsj.net/im-580612/8SR" image></field-file>
-            </div>
+
+          <a name="image-mode"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Image Mode</h2>
+          <div class="mb-10">File field restricted to images with preview.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-file name="image-file" image  class="w-250"></field-file>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-file name="file" value="https://images.wsj.net/im-580612/8SR" image /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-file name="image-file" image={true} upload={fileupload} class="w-250" /&gt;
           </ide-code>
 
-          <!-- File with Custom Uploading Text -->
-          <a name="fileWithUploading"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">File with Custom Uploading Text</h2>
-          <div class="mb-10">Customizes the text shown during upload with the `uploading` prop. Pair with `upload` to see it in action (simulated here).</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex flex-center">
-              <field-file name="file" uploading="Processing your file..." ></field-file>
-            </div>
+          <a name="custom"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Upload</h2>
+          <div class="mb-10">File field with custom upload function and update callback.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-file name="custom-file" class="block w-250 rounded b-solid b-primary"  ></field-file>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;script&gt;
-              const handleUpload = (file, callback) =&gt; {
-                setTimeout(() =&gt; callback("https://example.com/uploads/" + file.name), 1000);
+              const fileupload = (file, next) =&gt; {
+                setTimeout(() =&gt; {
+                  next('https://images.wsj.net/im-580612/8SR');
+                }, 5000);
               };
             &lt;/script&gt;
-            &lt;field-file name="file" uploading="Processing your file..." upload={handleUpload} /&gt;
+            &lt;field-file 
+              name="custom-file" 
+              class="block w-250 rounded b-solid b-primary" 
+              upload={fileupload} 
+              update={(url) =&gt; console.log('Uploaded URL:', url)}
+            /&gt;
           </ide-code>
 
-          <!-- File with Change Event -->
-          <a name="fileWithChange"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">File with Change Event</h2>
-          <div class="mb-10">Triggers a `change` handler when a file is selected, logging the file name. Useful for pre-upload validation or feedback.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex flex-center">
-              <field-file name="file" ></field-file>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;script&gt;
-              const handleChange = (e) =&gt; console.log('Selected file:', e.target.files[0]?.name);
-            &lt;/script&gt;
-            &lt;field-file name="file" change={handleChange} /&gt;
-          </ide-code>
-
-          <!-- File with Update Callback -->
-          <a name="fileWithUpdate"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">File with Update Callback</h2>
-          <div class="mb-10">Calls the `update` function with the uploaded URL after upload completes. Requires `upload` to process the file.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex flex-center">
-              <field-file name="file"  ></field-file>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;script&gt;
-              const handleUpdate = (url) =&gt; console.log('Uploaded URL:', url);
-              const handleUpload = (file, callback) =&gt; {
-                setTimeout(() =&gt; callback("https://example.com/uploads/" + file.name), 1000);
-              };
-            &lt;/script&gt;
-            &lt;field-file name="file" update={handleUpdate} upload={handleUpload} /&gt;
-          </ide-code>
-
-          <!-- File with Upload Handler -->
-          <a name="fileWithUpload"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">File with Upload Handler</h2>
-          <div class="mb-10">Uses the `upload` prop to handle file uploads, simulating a 1-second delay before returning a URL.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex flex-center">
-              <field-file name="file" ></field-file>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;script&gt;
-              const handleUpload = (file, callback) =&gt; {
-                setTimeout(() =&gt; callback("https://example.com/uploads/" + file.name), 1000);
-              };
-            &lt;/script&gt;
-            &lt;field-file name="file" upload={handleUpload} /&gt;
-          </ide-code>
-
-          <!-- Styled File Input -->
-          <a name="styledFile"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Styled File Input</h2>
-          <div class="mb-10">Customizes appearance with `class` and `style`, adjusting width and border for a unique look.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex flex-center">
-              <field-file name="file" class="w-300" style="border: 2px dashed #007bff;"></field-file>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-file name="file" class="w-300" style="border: 2px dashed #007bff;" /&gt;
-          </ide-code>
-
-          <!-- Navigation -->
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/editor.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Editor
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Editor Field
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/filelist.html">
-              Filelist
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Filelist Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

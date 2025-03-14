@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Input Field Component</title>
+  <meta name="description" content="A customizable input field with various types and attributes." />
+  <meta property="og:title" content="Ink UI - Input Field Component" />
+  <meta property="og:description" content="A customizable input field with various types and attributes." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/input.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Input Field Component" />
+  <meta name="twitter:description" content="A customizable input field with various types and attributes." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -142,28 +142,21 @@
   
 
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       Formats
     </a>
   
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Input">Input</a>
+            <a class="block tx-t-0" href="#input">Input Field</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicInput">• Basic Text Input</a>
-              <a class="block tx-t-1" href="#fileInput">• File Input</a>
-              <a class="block tx-t-1" href="#checkboxInput">• Checkbox Input</a>
-              <a class="block tx-t-1" href="#numberInput">• Number Input</a>
-              <a class="block tx-t-1" href="#inputWithValidation">• Input with Validation</a>
-              <a class="block tx-t-1" href="#inputWithChange">• Input with Change Event</a>
-              <a class="block tx-t-1" href="#inputWithUpdate">• Input with Update Callback</a>
-              <a class="block tx-t-1" href="#styledInput">• Styled Input</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#states">• States</a>
+              <a class="block tx-t-1" href="#custom">• Custom Styling</a>
             </nav>
           </nav>
         </menu>
@@ -174,284 +167,175 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Input"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Input</h1>
-          <ide-app title="Input" class="py-20">
+          <a name="input"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Input Field</h1>
+          <ide-app title="Input Field" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import Input from '@stackpress/ink-ui/field/input';
+              import InputField from '@stackpress/ink-ui/field/input';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <p class="mb-20">The `&lt;field-input&gt;` component is a flexible wrapper for native `&lt;input&gt;` elements, supporting various types and attributes. Here’s how its props work:</p>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
-            <table-head>Description</table-head>
-
-            <table-row>
-              <table-col>type</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Sets the input type (e.g., "text", "file", "checkbox", "number"). Defaults to "text" if unset.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>name</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Name attribute for form submission, tying the input to form data.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>value</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Initial value of the input. For "checkbox" or "radio", use "checked" instead.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>placeholder</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Hint text shown when the input is empty, guiding user input.</table-col>
-            </table-row>
-
+            <table-head>Notes</table-head>
             <table-row>
               <table-col>accept</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>File types allowed for "file" inputs (e.g., "image/*"). Ignored for other types.</table-col>
+              <table-col>File types for file input (e.g., "image/*")</table-col>
             </table-row>
-
             <table-row>
               <table-col>autocomplete</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Controls browser autofill behavior (e.g., "on", "off", "email").</table-col>
+              <table-col>Autocomplete attribute (e.g., "on", "off")</table-col>
             </table-row>
-
             <table-row>
               <table-col>checked</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Sets initial checked state for "checkbox" or "radio" inputs.</table-col>
+              <table-col>Initial checked state for checkbox/radio</table-col>
             </table-row>
-
             <table-row>
               <table-col>disabled</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Disables the input, preventing interaction.</table-col>
+              <table-col>Disables the input</table-col>
             </table-row>
-
             <table-row>
               <table-col>max</table-col>
-              <table-col>String/Number</table-col>
+              <table-col>String | Number</table-col>
               <table-col>No</table-col>
-              <table-col>Maximum value for numeric or date inputs (e.g., "100").</table-col>
+              <table-col>Maximum value for number/range inputs</table-col>
             </table-row>
-
             <table-row>
               <table-col>min</table-col>
-              <table-col>String/Number</table-col>
+              <table-col>String | Number</table-col>
               <table-col>No</table-col>
-              <table-col>Minimum value for numeric or date inputs (e.g., "0").</table-col>
+              <table-col>Minimum value for number/range inputs</table-col>
             </table-row>
-
             <table-row>
               <table-col>multiple</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Allows multiple file selections for "file" inputs.</table-col>
+              <table-col>Allows multiple values (e.g., for file inputs)</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>name</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Name attribute for form submission</table-col>
+            </table-row>
             <table-row>
               <table-col>pattern</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Regex pattern for input validation (e.g., "[0-9]{3}").</table-col>
+              <table-col>Regex pattern for validation (e.g., "[A-Za-z]+")</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>placeholder</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Placeholder text</table-col>
+            </table-row>
             <table-row>
               <table-col>readonly</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Makes the input read-only, allowing viewing but not editing.</table-col>
+              <table-col>Makes the input read-only</table-col>
             </table-row>
-
             <table-row>
               <table-col>required</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Marks the input as required for form submission.</table-col>
+              <table-col>Marks the input as required</table-col>
             </table-row>
-
             <table-row>
               <table-col>step</table-col>
-              <table-col>String/Number</table-col>
+              <table-col>String | Number</table-col>
               <table-col>No</table-col>
-              <table-col>Increment step for numeric inputs (e.g., "0.1").</table-col>
+              <table-col>Step increment for number/range inputs</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>type</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Input type (e.g., "text", "email", "number", default: "text")</table-col>
+            </table-row>
+            <table-row>
+              <table-col>value</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Initial value</table-col>
+            </table-row>
             <table-row>
               <table-col>change</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Custom handler for change events, receiving the event object.</table-col>
+              <table-col>Callback for change event</table-col>
             </table-row>
-
             <table-row>
               <table-col>update</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Callback with the current input value after changes.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>class</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>CSS classes for the host element, styled via default utilities.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Inline styles for the host element, overriding defaults.</table-col>
+              <table-col>Callback for value updates</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Text Input -->
-          <a name="basicInput"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Text Input</h2>
-          <div class="mb-10">A simple text input with a name and placeholder, ideal for basic form fields like usernames or comments.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex justify-center align-center">
-              <field-input name="text" placeholder="Enter text"></field-input>
-            </div>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">A simple text input with placeholder and initial value.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-input name="first" placeholder="Enter your first name" value="Tony"></field-input>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-input name="text" placeholder="Enter text" /&gt;
-          </ide-code>
-
-          <!-- File Input -->
-          <a name="fileInput"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">File Input</h2>
-          <div class="mb-10">A file input with `accept` and `multiple`, allowing selection of multiple images for upload.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex justify-center align-center">
-              <field-input type="file" name="files" accept="image/*" multiple></field-input>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-input type="file" name="files" accept="image/*" multiple /&gt;
-          </ide-code>
-
-          <!-- Checkbox Input -->
-          <a name="checkboxInput"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Checkbox Input</h2>
-          <div class="mb-10">A checkbox with an initial checked state, useful for toggles or boolean form options.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex justify-center align-center">
-              <field-input type="checkbox" name="agree" checked></field-input>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-input type="checkbox" name="agree" checked /&gt;
-          </ide-code>
-
-          <!-- Number Input -->
-          <a name="numberInput"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Number Input</h2>
-          <div class="mb-10">A numeric input with `min`, `max`, and `step`, perfect for controlled ranges like quantities.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex justify-center align-center">
-              <field-input type="number" name="quantity" min="0" max="100" step="5" value="10"></field-input>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-input type="number" name="quantity" min="0" max="100" step="5" value="10" /&gt;
-          </ide-code>
-
-          <!-- Input with Validation -->
-          <a name="inputWithValidation"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Input with Validation</h2>
-          <div class="mb-10">A text input with `pattern` and `required`, enforcing a three-digit format (e.g., "123").</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex justify-center align-center">
-              <field-input type="text" name="code" pattern="[0-9]{3}" required placeholder="Enter 3 digits"></field-input>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-input type="text" name="code" pattern="[0-9]{3}" required placeholder="Enter 3 digits" /&gt;
-          </ide-code>
-
-          <!-- Input with Change Event -->
-          <a name="inputWithChange"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Input with Change Event</h2>
-          <div class="mb-10">Logs changes with the `change` prop, capturing user input for real-time feedback or validation.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex justify-center align-center">
-              <field-input name="text"  placeholder="Type here"></field-input>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;script&gt;
-              const handleChange = (e) =&gt; console.log('Change event:', e.target.value);
-            &lt;/script&gt;
-            &lt;field-input name="text" change={handleChange} placeholder="Type here" /&gt;
-          </ide-code>
-
-          <!-- Input with Update Callback -->
-          <a name="inputWithUpdate"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Input with Update Callback</h2>
-          <div class="mb-10">Uses `update` to track the current value, ideal for syncing state or triggering actions.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex justify-center align-center">
-              <field-input name="text"  placeholder="Type here"></field-input>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;script&gt;
-              const handleUpdate = (value) =&gt; console.log('Updated value:', value);
-            &lt;/script&gt;
-            &lt;field-input name="text" update={handleUpdate} placeholder="Type here" /&gt;
-          </ide-code>
-
-          <!-- Styled Input -->
-          <a name="styledInput"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Input</h2>
-          <div class="mb-10">A minimalist styled input with a wide layout, soft border, and hover effect via `class` and `style`.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-100 flex justify-center align-center">
-              <field-input name="text" class="w-300 bg-white tx-t-1 rounded-5" style="border: 1px solid #e0e0e0; padding: 8px; transition: border-color 0.3s ease;" onmouseover="this.style.borderColor='#888888'" onmouseout="this.style.borderColor='#e0e0e0'" placeholder="Enter text"></field-input>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-input 
-              name="text" 
-              class="w-300 bg-white tx-t-1 rounded-5" 
-              style="border: 1px solid #e0e0e0; padding: 8px; transition: border-color 0.3s ease;" 
-              onmouseover="this.style.borderColor='#888888'" 
-              onmouseout="this.style.borderColor='#e0e0e0'" 
-              placeholder="Enter text" 
+              name="first"
+              placeholder="Enter your first name" 
+              value="Tony"
             /&gt;
           </ide-code>
 
-          <!-- Navigation -->
+          <a name="states"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">States</h2>
+          <div class="mb-10">Input field with different states: disabled, required, readonly.</div>
+          <div class="bg-t-3 p-10 mb-10 flex gap-20">
+            <field-input name="disabled-input" disabled placeholder="Disabled"></field-input>
+            <field-input name="required-input" required placeholder="Required"></field-input>
+            <field-input name="readonly-input" readonly value="Read Only"></field-input>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-input name="disabled-input" disabled placeholder="Disabled" /&gt;
+            &lt;field-input name="required-input" required placeholder="Required" /&gt;
+            &lt;field-input name="readonly-input" readonly value="Read Only" /&gt;
+          </ide-code>
+
+          <a name="custom"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Styling</h2>
+          <div class="mb-10">Input field with custom styling and change callback.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-input name="custom-input" placeholder="Enter text" value="custom" class="w-200 rounded b-solid b-primary p-5" ></field-input>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-input 
+              name="custom-input" 
+              placeholder="Enter text" 
+              value="custom" 
+              class="w-200 rounded b-solid b-primary p-5"
+              change={(e) =&gt; console.log('Changed to:', e.target.value)}
+            /&gt;
+          </ide-code>
+
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/filelist.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Filelist
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Filelist Field
             </a>
-            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/knob.html">
-              Knob
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/number.html">
+              Number Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

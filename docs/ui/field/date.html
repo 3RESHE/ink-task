@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Date Field Component</title>
+  <meta name="description" content="A date picker field with ISO date formatting and change handling." />
+  <meta property="og:title" content="Ink UI - Date Field Component" />
+  <meta property="og:description" content="A date picker field with ISO date formatting and change handling." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/date.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Date Field Component" />
+  <meta name="twitter:description" content="A date picker field with ISO date formatting and change handling." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -142,30 +142,21 @@
   
 
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       Formats
     </a>
   
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Date">Date</a>
+            <a class="block tx-t-0" href="#date">Date Field</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicDate">• Basic Date (name)</a>
-              <a class="block tx-t-1" href="#dateWithValue">• Date with Value</a>
-              <a class="block tx-t-1" href="#disabledDate">• Disabled Date</a>
-              <a class="block tx-t-1" href="#readonlyDate">• Readonly Date</a>
-              <a class="block tx-t-1" href="#requiredDate">• Required Date</a>
-              <a class="block tx-t-1" href="#autocompleteDate">• Autocomplete Date</a>
-              <a class="block tx-t-1" href="#patternDate">• Pattern Date</a>
-              <a class="block tx-t-1" href="#changeDate">• Date with Change</a>
-              <a class="block tx-t-1" href="#updateDate">• Date with Update</a>
-              <a class="block tx-t-1" href="#styledDate">• Styled Date (class, style)</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#states">• States</a>
+              <a class="block tx-t-1" href="#custom">• Custom Styling</a>
             </nav>
           </nav>
         </menu>
@@ -176,253 +167,129 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Date"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Date</h1>
-          <ide-app title="Editor" class="py-20">
+          <a name="date"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Date Field</h1>
+          <ide-app title="Date Field" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import Date from '@stackpress/ink-ui/field/date';
+              import DateField from '@stackpress/ink-ui/field/date';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
             <table-head>Notes</table-head>
-
             <table-row>
               <table-col>autocomplete</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Sets autocomplete behavior (e.g., "off").</table-col>
+              <table-col>Autocomplete attribute (e.g., "off")</table-col>
             </table-row>
-
             <table-row>
               <table-col>disabled</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>If true, disables the date input.</table-col>
+              <table-col>Disables the date picker</table-col>
             </table-row>
-
             <table-row>
               <table-col>name</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Name attribute for form submission.</table-col>
+              <table-col>Name attribute for form submission</table-col>
             </table-row>
-
             <table-row>
               <table-col>pattern</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Validation pattern, though less relevant for type="date".</table-col>
+              <table-col>Regex pattern for validation (e.g., "[0-9]{4}-[0-9]{2}-[0-9]{2}")</table-col>
             </table-row>
-
             <table-row>
               <table-col>readonly</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>If true, makes the date input read-only.</table-col>
+              <table-col>Makes the date picker read-only</table-col>
             </table-row>
-
             <table-row>
               <table-col>required</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>If true, marks the date input as required.</table-col>
+              <table-col>Marks the field as required</table-col>
             </table-row>
-
             <table-row>
               <table-col>value</table-col>
               <table-col>String | Date</table-col>
               <table-col>No</table-col>
-              <table-col>Initial date value (e.g., "2025-03-07" or Date object). Normalized to "YYYY-MM-DD".</table-col>
+              <table-col>Initial date value (e.g., "2020-01-01" or Date object), converted to YYYY-MM-DD</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>placeholder</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Placeholder text for the date input</table-col>
+            </table-row>
             <table-row>
               <table-col>change</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Custom change event handler, receives the event.</table-col>
+              <table-col>Callback for change event (receives ChangeEvent)</table-col>
             </table-row>
-
             <table-row>
               <table-col>update</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Callback with normalized date string (e.g., "2025-03-07").</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>class</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Custom CSS classes for the host element (e.g., "w-200").</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Inline styles for the host element (e.g., "border: 2px solid blue").</table-col>
+              <table-col>Callback with formatted date string (YYYY-MM-DD)</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Date (name) -->
-          <a name="basicDate"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Date (name)</h2>
-          <div class="mb-10">A simple date picker with a form name.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-date name="date"></field-date>
-            </div>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">A simple date field with a placeholder.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-date name="basic-date" placeholder="Select a date"></field-date>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-date name="date" /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-date name="basic-date" placeholder="Select a date" /&gt;
           </ide-code>
 
-          <!-- Date with Value -->
-          <a name="dateWithValue"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Date with Value</h2>
-          <div class="mb-10">A date picker with an initial value.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-date name="date" value="2025-03-07"></field-date>
-            </div>
+          <a name="states"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">States</h2>
+          <div class="mb-10">Date field with different states: value, disabled, required.</div>
+          <div class="bg-t-3 p-10 mb-10 flex gap-20">
+            <field-date name="valued-date" value="2023-06-15" placeholder="With Value"></field-date>
+            <field-date name="disabled-date" disabled placeholder="Disabled"></field-date>
+            <field-date name="required-date" required placeholder="Required"></field-date>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-date name="date" value="2025-03-07" /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-date name="valued-date" value="2023-06-15" placeholder="With Value" /&gt;
+            &lt;field-date name="disabled-date" disabled placeholder="Disabled" /&gt;
+            &lt;field-date name="required-date" required placeholder="Required" /&gt;
           </ide-code>
 
-          <!-- Disabled Date -->
-          <a name="disabledDate"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Disabled Date</h2>
-          <div class="mb-10">A disabled date picker with a value.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-date name="date" value="2025-03-07" disabled></field-date>
-            </div>
+          <a name="custom"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Styling</h2>
+          <div class="mb-10">Date field with custom styling, initial value, and update callback.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-date name="custom-date" placeholder="Enter date" value="2020-01-01"  class="rounded b-solid b-primary p-5 w-200"></field-date>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-date name="date" value="2025-03-07" disabled /&gt;
-          </ide-code>
-
-          <!-- Readonly Date -->
-          <a name="readonlyDate"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Readonly Date</h2>
-          <div class="mb-10">A read-only date picker with a value.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-date name="date" value="2025-03-07" readonly></field-date>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-date name="date" value="2025-03-07" readonly /&gt;
-          </ide-code>
-
-          <!-- Required Date -->
-          <a name="requiredDate"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Required Date</h2>
-          <div class="mb-10">A date picker marked as required.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-date name="date" required></field-date>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-date name="date" required /&gt;
-          </ide-code>
-
-          <!-- Autocomplete Date -->
-          <a name="autocompleteDate"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Autocomplete Date</h2>
-          <div class="mb-10">A date picker with autocomplete disabled.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-date name="date" autocomplete="off"></field-date>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-date name="date" autocomplete="off" /&gt;
-          </ide-code>
-
-          <!-- Pattern Date -->
-          <a name="patternDate"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Pattern Date</h2>
-          <div class="mb-10">A date picker with a pattern (though less effective for type="date").</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-date name="date" pattern="d{4}-d{2}-d{2}"></field-date>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-date name="date" pattern="\d{4}-\d{2}-\d{2}" /&gt;
-          </ide-code>
-
-          <!-- Date with Change -->
-          <a name="changeDate"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Date with Change</h2>
-          <div class="mb-10">A date picker with a custom change handler.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-date name="date" ></field-date>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;script&gt;
-              const handleChange = (e) =&gt; console.log('Change event:', e.target.value);
-            &lt;/script&gt;
-            &lt;field-date name="date" change={handleChange} /&gt;
-          </ide-code>
-
-          <!-- Date with Update -->
-          <a name="updateDate"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Date with Update</h2>
-          <div class="mb-10">A date picker with an update callback.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full">
-            <div class="bg-t-3 h-120 flex justify-center align-center">
-              <field-date name="date" ></field-date>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;script&gt;
-              const handleUpdate = (date) =&gt; console.log('Updated date:', date);
-            &lt;/script&gt;
-            &lt;field-date name="date" update={handleUpdate} /&gt;
-          </ide-code>
-
-          <!-- Styled Date (class, style) -->
-          <a name="styledDate"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Date (class, style)</h2>
-          <div class="mb-10">A styled date picker with custom class and inline styles.</div>
-          <div class="basis-calc-third-10 lg-basis-calc-half-10 md-basis-full py-20">
-            <div class="bg-t-0 h-200 flex align-center justify-center rounded-10 shadow-2 b-solid b-t-2 transition-all duration-300 hover:shadow-4 hover:bg-t-1">
-              <field-date name="date" value="2025-03-07" class="w-250 relative z-1 bg-white rounded-5 tx-t-1 p-10 tx-16 b-solid b-primary" style="border-width: 2px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--primary-dark)'; this.style.boxShadow='0 2px 8px var(--t-3)'" onmouseout="this.style.borderColor='var(--primary)'; this.style.boxShadow='none'"></field-date>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-20 w-full mw-full bg-black tx-white rounded-5 p-15 tx-14 tx-lh-20 shadow-1" trim >
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-date 
-              name="date" 
-              value="2025-03-07" 
-              class="w-250 relative z-1 bg-white rounded-5 tx-t-1 p-10 tx-16 b-solid b-primary" 
-              style="border-width: 2px; transition: all 0.3s ease;" 
-              onmouseover="this.style.borderColor='var(--primary-dark)'; this.style.boxShadow='0 2px 8px var(--t-3)'" 
-              onmouseout="this.style.borderColor='var(--primary)'; this.style.boxShadow='none'" 
+              name="custom-date" 
+              placeholder="Enter date" 
+              value="2020-01-01" 
+              update={(date) =&gt; console.log('Updated date:', date)}
+              class="rounded b-solid b-primary p-5 w-200"
             /&gt;
           </ide-code>
 
-          <!-- Navigation -->
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/currency.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Currency
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Currency Field
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/datetime.html">
-              Datetime
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Datetime Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

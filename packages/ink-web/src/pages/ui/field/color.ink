@@ -175,7 +175,7 @@
               <element-icon name="chevron-left" theme="tx-1" />{_('Checkbox Field')}
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/input.html">
-              {_('Input Field')}<element-icon name="chevron-right" theme="tx-1" />
+              {_('Country Field')}<element-icon name="chevron-right" theme="tx-1" />
             </a>
           </nav>
           <footer class="foot"></footer>

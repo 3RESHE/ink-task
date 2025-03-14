@@ -5180,9 +5180,9 @@ var InkAPI = (() => {
       return document2.sync();
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/field/filelist.html";
+      const title = _("Ink UI - Filelist Field Component");
+      const description = _("A multi-file upload field with preview and list management.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -5190,12 +5190,13 @@ var InkAPI = (() => {
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Form", href: "/ink/ui/form/index.html" },
-        { label: "Filelist" }
+        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
+        { label: "Filelist Field" }
       ];
-      const handleChange = (e) => console.log("Selected files:", Array.from(e.target.files).map((f) => f.name));
-      const handleUpload = (files, callback) => {
-        setTimeout(() => callback(files.map((f) => `https://example.com/uploads/${f.name}`)), 1e3);
+      const filelistupload = (files, next) => {
+        setTimeout(() => {
+          next(files.map((file, i) => "https://images.wsj.net/im-580612/8SR"));
+        }, 1e3);
       };
       return [
         import_Document.default.createText(`
@@ -5828,7 +5829,7 @@ var InkAPI = (() => {
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -5841,7 +5842,7 @@ var InkAPI = (() => {
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -5865,19 +5866,15 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Filelist` }, [
-                      ...this._toNodeList(_("Filelist"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#filelist` }, [
+                      ...this._toNodeList(_("Filelist Field"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -5890,45 +5887,27 @@ var InkAPI = (() => {
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basicFilelist` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Basic Filelist Input"))
+                        ...this._toNodeList(_("Basic Usage"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#imageFilelist` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#image-mode` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Image-Only Filelist"))
+                        ...this._toNodeList(_("Image Mode"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#filelistWithValue` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#default-values` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Filelist with Initial URLs"))
+                        ...this._toNodeList(_("Default Values"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#filelistWithUploading` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#custom` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Filelist with Custom Uploading Text"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#filelistWithChange` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Filelist with Change Event"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#filelistWithUpload` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Filelist with Upload Handler"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styledFilelist` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Styled Filelist Input"))
+                        ...this._toNodeList(_("Custom Upload"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5960,20 +5939,20 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `Filelist` }, []),
+                  import_Document.default.createElement("a", { "name": `filelist` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Filelist"))
+                    ...this._toNodeList(_("Filelist Field"))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Filelist Field`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Filelist from '@stackpress/ink-ui/field/filelist';
+              import FilelistField from '@stackpress/ink-ui/field/filelist';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -5981,7 +5960,6 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Props Section -->
           `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
@@ -5991,16 +5969,11 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("p", { "class": `mb-20` }, [
-                    ...this._toNodeList(_("The `<field-filelist>` component allows uploading and managing multiple files, displaying them as a list with optional previews. Here\u2019s how each prop shapes its behavior:"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Property"))
+                      ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -6015,10 +5988,9 @@ var InkAPI = (() => {
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Description"))
+                      ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6039,67 +6011,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the name attribute for hidden `<input>` elements, one per uploaded URL, enabling form submission of multiple files."))
+                        ...this._toNodeList(_("Name attribute for form submission"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`image`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Restricts the input to image files (`accept="image/*"`) and shows a 32px-high preview for each uploaded image.'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`uploading`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Text shown when files are being uploaded. Defaults to "Uploading...". Customize it for clarity or localization.'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6120,24 +6037,23 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Initial array of file URLs to display. Defaults to an empty array. Each URL gets a link and optional preview."))
+                        ...this._toNodeList(_("Initial array of file URLs (default: [])"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`change`, false)
+                        import_Document.default.createText(`image`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Function`, false)
+                        import_Document.default.createText(`Boolean`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -6147,13 +6063,38 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Triggered when files are selected, receiving the change event. Useful for pre-upload processing or logging."))
+                        ...this._toNodeList(_("Restricts to images and shows previews"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`uploading`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Text during upload (default: "Uploading...")'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6174,24 +6115,23 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Handles uploading multiple files. Receives an array of files and a callback to return their URLs. Essential for upload functionality."))
+                        ...this._toNodeList(_("Upload handler (files, next) => void; next receives URL array"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`class`, false)
+                        import_Document.default.createText(`change`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
+                        import_Document.default.createText(`Function`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -6201,24 +6141,23 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom CSS classes for the host element, allowing layout tweaks like width or spacing."))
+                        ...this._toNodeList(_("Callback for change event (receives ChangeEvent)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`style`, false)
+                        import_Document.default.createText(`update`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
+                        import_Document.default.createText(`Function`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -6228,7 +6167,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Inline styles for the host element, overriding defaults for precise visual control."))
+                        ...this._toNodeList(_("Callback with updated URL array (not implemented in source)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6237,293 +6176,157 @@ var InkAPI = (() => {
           `, false)
                   ]),
                   import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("p", { "class": `mt-20 tx-muted` }, [
-                    ...this._toNodeList(_("Note: The `update` prop exists but is unused in the current implementation. It\u2019s included for potential future enhancements."))
-                  ]),
-                  import_Document.default.createText(`
 
-          <!-- Basic Filelist Input -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `basicFilelist` }, []),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Basic Filelist Input"))
+                    ...this._toNodeList(_("Basic Usage"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A simple multi-file input with a form name. It accepts any file type and stores URLs in hidden inputs for form submission."))
+                    import_Document.default.createText(`A simple filelist field without upload handling.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-150 flex justify-center align-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-filelist", { "name": `files` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-filelist", { "name": `basic-filelist`, "class": `block w-250` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <field-filelist name="files" />
+            <field-filelist name="basic-filelist" class="block w-250" />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Image-Only Filelist -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `imageFilelist` }, []),
+                  import_Document.default.createElement("a", { "name": `image-mode` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Image-Only Filelist"))
+                    ...this._toNodeList(_("Image Mode"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Limits selection to images and previews them after upload. The `image` prop ensures only image files are accepted."))
+                    import_Document.default.createText(`Filelist field restricted to images, showing previews of uploaded files after a mock upload (uses a static URL for demo; replace upload function for real URLs).`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-150 flex justify-center align-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-filelist", { "name": `files`, "image": true }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-filelist", { "name": `image-filelist`, "image": true, "upload": filelistupload, "class": `block w-250` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <field-filelist name="files" image />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Filelist with Initial URLs -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `filelistWithValue` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Filelist with Initial URLs"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Displays a pre-populated list of URLs using the `value` prop. Each URL has a link and preview (if `image`), with a remove option."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-150 flex justify-center align-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-filelist", { "name": `files`, "image": true, "value": ["https://images.wsj.net/im-580612/8SR", "https://images.wsj.net/im-580612/8SR"] }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
+            <script>
+              const filelistupload = (files, next) => {
+                setTimeout(() => {
+                  next(files.map((file, i) => 'https://images.wsj.net/im-580612/8SR'));
+                }, 1000);
+              };
+            <\/script>
             <field-filelist 
-              name="files" 
-              image 
-              value={["https://example.com/image1.jpg", "https://example.com/image2.jpg"]} 
+              name="image-filelist" 
+              image={true} 
+              upload={filelistupload} 
+              class="block w-250" 
             />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Filelist with Custom Uploading Text -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `filelistWithUploading` }, []),
+                  import_Document.default.createElement("a", { "name": `default-values` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Filelist with Custom Uploading Text"))
+                    ...this._toNodeList(_("Default Values"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Shows custom text during upload via `uploading`. Pair with `upload` to see it while files process (simulated here)."))
+                    import_Document.default.createText(`Filelist field with preloaded image URLs and removal options.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-150 flex justify-center align-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-filelist", { "name": `files`, "uploading": `Processing files...`, "upload": handleUpload }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-filelist", { "name": `default-filelist`, "image": true, "class": `block w-250`, "value": ["https://images.wsj.net/im-580612/8SR", "https://images.wsj.net/im-580612/8SR"] }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <field-filelist 
+              name="default-filelist" 
+              image={true} 
+              class="block w-250" 
+              value={['https://example.com/sample1.jpg', 'https://example.com/sample2.jpg']} 
+            />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `custom` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Custom Upload"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Filelist field with custom upload function and update callback.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-filelist", { "name": `custom-filelist`, "image": true, "class": `block w-250 rounded b-solid b-primary`, "upload": filelistupload, "update": (urls) => console.log("Uploaded URLs:", urls) }),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <script>
-              const handleUpload = (files, callback) => {
-                setTimeout(() => callback(files.map(f => "https://example.com/uploads/" + f.name)), 1000);
+              const filelistupload = (files, next) => {
+                setTimeout(() => {
+                  next(files.map((file, i) => 'https://images.wsj.net/im-580612/8SR'));
+                }, 1000);
               };
             <\/script>
-            <field-filelist name="files" uploading="Processing files..." upload={handleUpload} />
+            <field-filelist 
+              name="custom-filelist" 
+              image={true}
+              class="block w-250 rounded b-solid b-primary" 
+              upload={filelistupload} 
+              update={(urls) => console.log('Uploaded URLs:', urls)}
+            />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Filelist with Change Event -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `filelistWithChange` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Filelist with Change Event"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Logs selected file names with the `change` prop. Great for pre-upload validation or user feedback."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-150 flex justify-center align-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-filelist", { "name": `files`, "change": handleChange }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <script>
-              const handleChange = (e) => console.log('Selected files:', Array.from(e.target.files).map(f => f.name));
-            <\/script>
-            <field-filelist name="files" change={handleChange} />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Filelist with Upload Handler -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `filelistWithUpload` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Filelist with Upload Handler"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Uses `upload` to process multiple files, adding their URLs to the list after a simulated 1-second delay."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-150 flex justify-center align-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-filelist", { "name": `files`, "upload": handleUpload }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <script>
-              const handleUpload = (files, callback) => {
-                setTimeout(() => callback(files.map(f => "https://example.com/uploads/" + f.name)), 1000);
-              };
-            <\/script>
-            <field-filelist name="files" upload={handleUpload} />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-        <!-- Styled Filelist Input -->
-        `, false),
-                  import_Document.default.createElement("a", { "name": `styledFilelist` }, []),
-                  import_Document.default.createText(`
-        `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Styled Filelist Input"))
-                  ]),
-                  import_Document.default.createText(`
-        `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Customizes the file list with a wider layout, rounded corners, and a vibrant border using `class` and `style`. Enhances visibility for multiple files."))
-                  ]),
-                  import_Document.default.createText(`
-        `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full` }, [
-                    import_Document.default.createText(`
-        `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-150 flex justify-center align-center` }, [
-                      import_Document.default.createText(`
-            `, false),
-                      import_Document.default.createElement("field-filelist", { "name": `files`, "class": `w-400 bg-t-0 rounded-10`, "style": `border: 3px solid #ff4081; padding: 10px;` }),
-                      import_Document.default.createText(`
-        `, false)
-                    ]),
-                    import_Document.default.createText(`
-        `, false)
-                  ]),
-                  import_Document.default.createText(`
-        `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-        <field-filelist 
-            name="files" 
-            class="w-400 bg-t-0 rounded-10" 
-            style="border: 3px solid #ff4081; padding: 10px;" 
-        />
-        `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Navigation -->
           `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
@@ -6532,9 +6335,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("File")),
+                      ...this._toNodeList(_("File Field")),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6543,9 +6344,7 @@ var InkAPI = (() => {
                     import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/field/input.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Input")),
-                      import_Document.default.createText(`
-              `, false),
+                      ...this._toNodeList(_("Input Field")),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)
@@ -6603,7 +6402,8 @@ var InkAPI = (() => {
     "table-head": Head_d8755504d9458a2c21da,
     "table-row": Row_0b3723ad0a2356b54f11,
     "table-col": Col_f45aa9d13a1588f1d9ab,
-    "field-filelist": Filelist_1bad9ce547117f592df7
+    "field-filelist": Filelist_1bad9ce547117f592df7,
+    "field-input": Input_cb7a6224432a087beaf2
   };
   var BUILD_ID = "54eaa3f1487cfb2eb86c";
   import_Emitter.default.once("ready", () => {
