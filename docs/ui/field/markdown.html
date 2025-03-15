@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Markdown Field Component</title>
+  <meta name="description" content="A markdown editor with live preview using CodeMirror and Marked." />
+  <meta property="og:title" content="Ink UI - Markdown Field Component" />
+  <meta property="og:description" content="A markdown editor with live preview using CodeMirror and Marked." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/markdown.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Markdown Field Component" />
+  <meta name="twitter:description" content="A markdown editor with live preview using CodeMirror and Marked." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -149,19 +149,14 @@
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Markdown">Markdown</a>
+            <a class="block tx-t-0" href="#markdown">Markdown Field</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicMarkdown">• Basic Markdown Editor</a>
-              <a class="block tx-t-1" href="#markdownWithValue">• Markdown with Initial Value</a>
-              <a class="block tx-t-1" href="#markdownWithNumbers">• Markdown with Line Numbers</a>
-              <a class="block tx-t-1" href="#markdownWithChange">• Markdown with Change Event</a>
-              <a class="block tx-t-1" href="#markdownWithUpdate">• Markdown with Update Callback</a>
-              <a class="block tx-t-1" href="#styledMarkdown">• Styled Markdown Editor</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#preview">• Preview Mode</a>
+              <a class="block tx-t-1" href="#custom">• Custom Styling</a>
             </nav>
           </nav>
         </menu>
@@ -172,177 +167,103 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Markdown"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Markdown</h1>
-          <ide-app title="Editor" class="py-20">
+          <a name="markdown"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Markdown Field</h1>
+          <ide-app title="Markdown Field" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import Markdown from '@stackpress/ink-ui/field/markdown';
+              import MarkdownField from '@stackpress/ink-ui/field/markdown';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <p class="mb-20">The `&lt;field-markdown&gt;` component provides a Markdown editor with edit and preview modes. Below are its props and their roles:</p>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
-            <table-head>Description</table-head>
-
+            <table-head>Notes</table-head>
             <table-row>
               <table-col>name</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Name attribute for form submission, tied to a hidden textarea.</table-col>
+              <table-col>Name attribute for form submission</table-col>
             </table-row>
-
             <table-row>
               <table-col>value</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Initial Markdown content to display in the editor.</table-col>
+              <table-col>Initial markdown content</table-col>
             </table-row>
-
             <table-row>
               <table-col>numbers</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>If true, displays line numbers in the editor for better navigation.</table-col>
+              <table-col>Show line numbers in editor (default: false)</table-col>
             </table-row>
-
             <table-row>
               <table-col>change</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Handler called with the change event when content is edited.</table-col>
+              <table-col>Callback for change event (receives ChangeEvent)</table-col>
             </table-row>
-
             <table-row>
               <table-col>update</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Callback invoked with the current Markdown content on change.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>class</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Custom CSS classes applied to the host element.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Inline styles applied to the host element (e.g., "min-height: 200px").</table-col>
+              <table-col>Callback with updated markdown string</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Markdown Editor -->
-          <a name="basicMarkdown"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Markdown Editor</h2>
-          <div class="mb-10">A minimal Markdown editor with a form name, featuring edit and preview modes toggled via hover buttons.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-markdown name="markdown" style="min-height: 200px;"></field-markdown>
-            </div>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">A simple markdown editor with initial content.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-markdown name="basic-markdown" value="# Hello World" class="w-200 h-80 block"></field-markdown>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-markdown name="markdown" /&gt;
-          </ide-code>
-
-          <!-- Markdown with Initial Value -->
-          <a name="markdownWithValue"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Markdown with Initial Value</h2>
-          <div class="mb-10">Loads the editor with initial Markdown content using the `value` prop, ready for editing or previewing.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-markdown name="markdown"  style="min-height: 200px;"></field-markdown>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-markdown name="markdown" value="# Hello
-**Bold** text" /&gt;
-          </ide-code>
-
-          <!-- Markdown with Line Numbers -->
-          <a name="markdownWithNumbers"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Markdown with Line Numbers</h2>
-          <div class="mb-10">Adds line numbers to the editor with the `numbers` prop, aiding in longer Markdown documents.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-markdown name="markdown" numbers  style="min-height: 200px;"></field-markdown>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-markdown name="markdown" numbers value="# Title
-Line 1
-Line 2" /&gt;
-          </ide-code>
-
-          <!-- Markdown with Change Event -->
-          <a name="markdownWithChange"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Markdown with Change Event</h2>
-          <div class="mb-10">Logs changes via the `change` prop, capturing editor input for real-time tracking or validation.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-markdown name="markdown"  value="Edit me" style="min-height: 200px;"></field-markdown>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;script&gt;
-              const handleChange = (e) =&gt; console.log('Change event:', e.target.value);
-            &lt;/script&gt;
-            &lt;field-markdown name="markdown" change={handleChange} value="Edit me" /&gt;
-          </ide-code>
-
-          <!-- Markdown with Update Callback -->
-          <a name="markdownWithUpdate"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Markdown with Update Callback</h2>
-          <div class="mb-10">Uses the `update` prop to track Markdown content changes, ideal for syncing with external state.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-markdown name="markdown"  value="Update me" style="min-height: 200px;"></field-markdown>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;script&gt;
-              const handleUpdate = (value) =&gt; console.log('Updated Markdown:', value);
-            &lt;/script&gt;
-            &lt;field-markdown name="markdown" update={handleUpdate} value="Update me" /&gt;
-          </ide-code>
-
-          <!-- Styled Markdown Editor -->
-          <a name="styledMarkdown"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Markdown Editor</h2>
-          <div class="mb-10">A minimalist styled editor with a wide layout, soft border, and hover effect, enhancing usability and aesthetics.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-markdown name="markdown" class="w-400 bg-white tx-t-1" style="border: 1px solid #e0e0e0; padding: 10px; transition: border-color 0.3s ease; min-height: 200px;" onmouseover="this.style.borderColor='#888888'" onmouseout="this.style.borderColor='#e0e0e0'" value="# Styled Markdown"></field-markdown>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-markdown 
-              name="markdown" 
-              class="w-400 bg-white tx-t-1" 
-              style="border: 1px solid #e0e0e0; padding: 10px; transition: border-color 0.3s ease; min-height: 200px;" 
-              onmouseover="this.style.borderColor='#888888'" 
-              onmouseout="this.style.borderColor='#e0e0e0'" 
-              value="# Styled Markdown"
+              name="basic-markdown" 
+              value="# Hello World" 
+              class="w-200 h-80 block"
             /&gt;
           </ide-code>
 
-          <!-- Navigation -->
+          <a name="preview"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Preview Mode</h2>
+          <div class="mb-10">Markdown field with preview toggle (hover to see buttons).</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-markdown name="preview-markdown" value="*Italic* and **Bold** text" class="w-200 h-80 block"></field-markdown>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-markdown 
+              name="preview-markdown" 
+              value="*Italic* and **Bold** text" 
+              class="w-200 h-80 block"
+            /&gt;
+          </ide-code>
+
+          <a name="custom"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Styling</h2>
+          <div class="mb-10">Markdown field with custom styling, line numbers, and update callback.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-markdown class="w-200 h-80 block b-solid b-primary rounded" numbers name="custom-markdown" value="**I AM BOLD**" ></field-markdown>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-markdown 
+              class="w-200 h-80 block b-solid b-primary rounded"
+              numbers={true}
+              name="custom-markdown" 
+              value="**I AM BOLD**" 
+              update={(value) =&gt; console.log('Updated markdown:', value)}
+            /&gt;
+          </ide-code>
+
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/input.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Input
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Input Field
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/mask.html">
-              Mask
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Mask Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

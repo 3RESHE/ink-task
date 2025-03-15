@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Number Field Component</title>
+  <meta name="description" content="A formatted number input with min/max/step constraints." />
+  <meta property="og:title" content="Ink UI - Number Field Component" />
+  <meta property="og:description" content="A formatted number input with min/max/step constraints." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/number.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Number Field Component" />
+  <meta name="twitter:description" content="A formatted number input with min/max/step constraints." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -142,24 +142,21 @@
   
 
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       Formats
     </a>
   
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Number">Number</a>
+            <a class="block tx-t-0" href="#number">Number Field</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicNumber">• Basic Number Input</a>
-              <a class="block tx-t-1" href="#numberWithRange">• Number with Range</a>
-              <a class="block tx-t-1" href="#formattedNumber">• Formatted Number</a>
-              <a class="block tx-t-1" href="#styledNumber">• Styled Number Input</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#formatting">• Formatting Options</a>
+              <a class="block tx-t-1" href="#custom">• Custom Styling</a>
             </nav>
           </nav>
         </menu>
@@ -170,248 +167,197 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Number"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Number</h1>
-          <ide-app title="Number" class="py-20">
+          <a name="number"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Number Field</h1>
+          <ide-app title="Number Field" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import Number from '@stackpress/ink-ui/field/number';
+              import NumberField from '@stackpress/ink-ui/field/number';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <p class="mb-20">The `&lt;field-number&gt;` component enhances a number input with formatting and validation. Below are its props:</p>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
-            <table-head>Description</table-head>
-
-            <table-row>
-              <table-col>name</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Name attribute for form submission.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>value</table-col>
-              <table-col>String/Number</table-col>
-              <table-col>No</table-col>
-              <table-col>Initial value of the number input (numeric only).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>min</table-col>
-              <table-col>String/Number</table-col>
-              <table-col>No</table-col>
-              <table-col>Minimum allowed value (numeric only).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>max</table-col>
-              <table-col>String/Number</table-col>
-              <table-col>No</table-col>
-              <table-col>Maximum allowed value (numeric only).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>step</table-col>
-              <table-col>String/Number</table-col>
-              <table-col>No</table-col>
-              <table-col>Step interval for increment/decrement (numeric).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>separator</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Thousands separator (defaults to ",").</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>decimal</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Decimal separator (defaults to ".").</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>absolute</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Forces absolute values (defaults to false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>change</table-col>
-              <table-col>Function</table-col>
-              <table-col>No</table-col>
-              <table-col>Custom handler for change events (numeric only).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>update</table-col>
-              <table-col>Function</table-col>
-              <table-col>No</table-col>
-              <table-col>Callback with the formatted numeric value.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>background</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Background color for the host element (prefer `bg-*` utilities).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>border</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Border color for the host element (prefer `b-*` utilities).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>error</table-col>
-              <table-col>Boolean/String</table-col>
-              <table-col>No</table-col>
-              <table-col>Toggles error state (Boolean) or sets error message (String) for styling/validation.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>class</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>CSS classes for the host element (use Ink utilities).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Inline styles (prefer Ink utilities instead).</table-col>
-            </table-row>
-
+            <table-head>Notes</table-head>
             <table-row>
               <table-col>autocomplete</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Controls browser autofill behavior.</table-col>
+              <table-col>Autocomplete attribute (e.g., "on", "off")</table-col>
             </table-row>
-
             <table-row>
               <table-col>disabled</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Disables the input.</table-col>
+              <table-col>Disables the input</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>max</table-col>
+              <table-col>String | Number</table-col>
+              <table-col>No</table-col>
+              <table-col>Maximum value</table-col>
+            </table-row>
+            <table-row>
+              <table-col>min</table-col>
+              <table-col>String | Number</table-col>
+              <table-col>No</table-col>
+              <table-col>Minimum value</table-col>
+            </table-row>
+            <table-row>
+              <table-col>name</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Name attribute for form submission</table-col>
+            </table-row>
             <table-row>
               <table-col>pattern</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Regex pattern for HTML5 validation (numeric).</table-col>
+              <table-col>Regex pattern for validation</table-col>
             </table-row>
-
             <table-row>
               <table-col>placeholder</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Placeholder text for the input.</table-col>
+              <table-col>Placeholder text</table-col>
             </table-row>
-
             <table-row>
               <table-col>readonly</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Makes the input read-only.</table-col>
+              <table-col>Makes the input read-only</table-col>
             </table-row>
-
             <table-row>
               <table-col>required</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Marks the input as required.</table-col>
+              <table-col>Marks the input as required</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>step</table-col>
+              <table-col>String | Number</table-col>
+              <table-col>No</table-col>
+              <table-col>Step increment (determines decimal places)</table-col>
+            </table-row>
             <table-row>
               <table-col>type</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Input type (defaults to "number" for numeric input only).</table-col>
+              <table-col>Input type (default: "text", not "number")</table-col>
+            </table-row>
+            <table-row>
+              <table-col>value</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Initial value</table-col>
+            </table-row>
+            <table-row>
+              <table-col>separator</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Thousands separator (default: ",")</table-col>
+            </table-row>
+            <table-row>
+              <table-col>decimal</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Decimal point character (default: ".")</table-col>
+            </table-row>
+            <table-row>
+              <table-col>absolute</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Forces positive values (default: false)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>background</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Background color (default: "var(--white)")</table-col>
+            </table-row>
+            <table-row>
+              <table-col>border</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Border color (default: "var(--black)")</table-col>
+            </table-row>
+            <table-row>
+              <table-col>change</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Callback for change event</table-col>
+            </table-row>
+            <table-row>
+              <table-col>update</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Callback with numeric value as string</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Number Input -->
-          <a name="basicNumber"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Number Input</h2>
-          <div class="mb-10">A simple number input accepting only numeric values.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-number name="quantity" value="1234"></field-number>
-            </div>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">A simple number input with constraints.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-number name="basic-number" min="0" max="100" step="1" value="50"></field-number>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-number name="quantity" value="1234" /&gt;
-          </ide-code>
-
-          <!-- Number with Range -->
-          <a name="numberWithRange"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Number with Range</h2>
-          <div class="mb-10">A number input with `min`, `max`, and `step` constraints, accepting only numeric values.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-number name="price" value="50" min="0" max="100" step="5"></field-number>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-number name="price" value="50" min="0" max="100" step="5" /&gt;
-          </ide-code>
-
-          <!-- Formatted Number -->
-          <a name="formattedNumber"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Formatted Number</h2>
-          <div class="mb-10">A number input with custom `separator` and `decimal` formatting, accepting only numeric values.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-number name="amount" value="1234567.89" separator="." decimal=","></field-number>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-number name="amount" value="1234567.89" separator="." decimal="," /&gt;
-          </ide-code>
-
-          <!-- Styled Number Input -->
-          <a name="styledNumber"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Number Input</h2>
-          <div class="mb-10">A styled number input with error state, background, border, and Ink utilities.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-number name="quantity" value="1234" error class="w-200 bg-muted b-primary c-5 p-5 transition-300" style="box-shadow: 0 2px 6px var(--t-1);" onmouseover="this.style.boxShadow='0 4px 12px var(--t-3)'" onmouseout="this.style.boxShadow='0 2px 6px var(--t-1)'"></field-number>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-number 
-              name="quantity" 
-              value="1234" 
-              error
-              class="w-200 bg-muted b-primary c-5 p-5 transition-300" 
-              style="box-shadow: 0 2px 6px var(--t-1);"
-              onmouseover="this.style.boxShadow='0 4px 12px var(--t-3)'" 
-              onmouseout="this.style.boxShadow='0 2px 6px var(--t-1)'" 
+              name="basic-number"
+              min="0" 
+              max="100" 
+              step="1" 
+              value="50"
             /&gt;
           </ide-code>
 
-          <!-- Navigation -->
+          <a name="formatting"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Formatting Options</h2>
+          <div class="mb-10">Number field with custom separator and decimal formatting.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-number name="format-number" min="0" max="10000" step="0.01" value="1234.56" separator=" " decimal="," absolute></field-number>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-number 
+              name="format-number"
+              min="0" 
+              max="10000" 
+              step="0.01" 
+              value="1234.56"
+              separator=" " 
+              decimal=","
+              absolute={true}
+            /&gt;
+          </ide-code>
+
+          <a name="custom"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Styling</h2>
+          <div class="mb-10">Number field with custom styling and update callback.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-number name="custom-number" min="0" max="10000" step="0.01" value="1234.56" class="w-200 rounded b-solid b-primary p-5" background="var(--gray-light)" ></field-number>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-number 
+              name="custom-number"
+              min="0" 
+              max="10000" 
+              step="0.01" 
+              value="1234.56" 
+              class="w-200 rounded b-solid b-primary p-5"
+              background="var(--gray-light)"
+              update={(value) =&gt; console.log('Updated to:', value)}
+            /&gt;
+          </ide-code>
+
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/metadata.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Metadata
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Metadata Field
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/password.html">
-              Password
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Password Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

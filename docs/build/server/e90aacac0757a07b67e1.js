@@ -820,9 +820,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
   @ink utilities;`;
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/field/password.html";
+      const title = _("Ink UI - Password Field Component");
+      const description = _("A password input with a toggle for visibility.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -830,11 +830,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Form", href: "/ink/ui/form/index.html" },
-        { label: "Password" }
+        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
+        { label: "Password Field" }
       ];
-      const handleChange = (e) => console.log("Change event:", e.target.value);
-      const handleUpdate = (value) => console.log("Updated value:", value);
       return [
         import_Document.default.createText(`
 
@@ -1466,7 +1464,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -1479,7 +1477,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -1503,19 +1501,15 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Password` }, [
-                      ...this._toNodeList(_("Password"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#password` }, [
+                      ...this._toNodeList(_("Password Field"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1528,21 +1522,21 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basicPassword` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Basic Password Input"))
+                        ...this._toNodeList(_("Basic Usage"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#passwordWithAttributes` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#toggle` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Password with Attributes"))
+                        ...this._toNodeList(_("Visibility Toggle"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styledPassword` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#custom` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Styled Password Input"))
+                        ...this._toNodeList(_("Custom Styling"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1574,20 +1568,20 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `Password` }, []),
+                  import_Document.default.createElement("a", { "name": `password` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Password"))
+                    ...this._toNodeList(_("Password Field"))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Password`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Password Field`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Password from '@stackpress/ink-ui/field/password';
+              import PasswordField from '@stackpress/ink-ui/field/password';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1595,7 +1589,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Props Section -->
           `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
@@ -1605,16 +1598,11 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("p", { "class": `mb-20` }, [
-                    ...this._toNodeList(_("The `<field-password>` component enhances a password input with a toggle to show/hide the password. Below are its props:"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Property"))
+                      ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1629,64 +1617,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Description"))
+                      ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`name`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Name attribute for form submission."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`value`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Initial value of the password input."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1707,13 +1640,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Controls browser autofill behavior (e.g., "off").'))
+                        ...this._toNodeList(_('Autocomplete attribute (e.g., "new-password")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1734,13 +1666,38 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Disables the input."))
+                        ...this._toNodeList(_("Disables the input"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`name`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Name attribute for form submission"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1761,40 +1718,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Regex pattern for HTML5 validation."))
+                        ...this._toNodeList(_("Regex pattern for validation"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`placeholder`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Placeholder text for the input."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1815,13 +1744,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Makes the input read-only."))
+                        ...this._toNodeList(_("Makes the input read-only"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1842,13 +1770,38 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Marks the input as required."))
+                        ...this._toNodeList(_("Marks the input as required"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`value`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Initial password value"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1869,13 +1822,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom handler for change events."))
+                        ...this._toNodeList(_("Callback for change event"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1896,61 +1848,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Callback with the updated password value."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`class`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("CSS classes for the host element (use Ink utilities)."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`style`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Inline styles (prefer Ink utilities instead)."))
+                        ...this._toNodeList(_("Callback with updated value"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1960,130 +1858,108 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Basic Password Input -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `basicPassword` }, []),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Basic Password Input"))
+                    ...this._toNodeList(_("Basic Usage"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A basic password input with show/hide toggle."))
+                    import_Document.default.createText(`A simple password input with placeholder.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-password", { "name": `password`, "value": `secret123` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-password", { "name": `basic-password`, "placeholder": `Enter password` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <field-password name="password" value="secret123" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Password with Attributes -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `passwordWithAttributes` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Password with Attributes"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A password input with additional attributes like `required` and `autocomplete`."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-password", { "name": `password`, "value": `secret123`, "required": true, "autocomplete": `off` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <field-password 
-              name="password" 
-              value="secret123" 
-              required 
-              autocomplete="off" 
+              name="basic-password" 
+              placeholder="Enter password"
             />
           `)
                   ]),
                   import_Document.default.createText(`
 
-<!-- Styled Password Input -->
-`, false),
-                  import_Document.default.createElement("a", { "name": `styledPassword` }, []),
+          `, false),
+                  import_Document.default.createElement("a", { "name": `toggle` }, []),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Styled Password Input"))
+                    ...this._toNodeList(_("Visibility Toggle"))
                   ]),
                   import_Document.default.createText(`
-`, false),
+          `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A styled password input with enhanced toggle appearance using Ink utilities."))
+                    import_Document.default.createText(`Password field with initial value and toggle visibility.`, false)
                   ]),
                   import_Document.default.createText(`
-`, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
-  `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("field-password", { "name": `password`, "value": `secret123`, "class": `w-200 bg-secondary b-primary c-5 p-5 transition-300 tx-muted hover:tx-primary`, "style": `box-shadow: 0 2px 6px var(--t-1);`, "onmouseover": `this.style.boxShadow='0 4px 12px var(--t-3)'`, "onmouseout": `this.style.boxShadow='0 2px 6px var(--t-1)'` }),
-                      import_Document.default.createText(`
-  `, false)
-                    ]),
+            `, false),
+                    import_Document.default.createElement("field-password", { "name": `toggle-password`, "value": `secret123`, "placeholder": `Enter password` }),
                     import_Document.default.createText(`
-`, false)
+          `, false)
                   ]),
                   import_Document.default.createText(`
-`, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-  <field-password 
-    name="password" 
-    value="secret123" 
-    class="w-200 bg-secondary b-primary c-5 p-5 transition-300 tx-muted hover:tx-primary" 
-    style="box-shadow: 0 2px 6px var(--t-1);"
-    onmouseover="this.style.boxShadow='0 4px 12px var(--t-3)'" 
-    onmouseout="this.style.boxShadow='0 2px 6px var(--t-1)'" 
-  />
-`)
+            <field-password 
+              name="toggle-password" 
+              value="secret123" 
+              placeholder="Enter password"
+            />
+          `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Navigation -->
+          `, false),
+                  import_Document.default.createElement("a", { "name": `custom` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Custom Styling"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Password field with custom styling and update callback.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-password", { "name": `custom-password`, "placeholder": `Enter password`, "class": `w-200 rounded b-solid b-primary p-5`, "update": (value) => console.log("Updated to:", value) }),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <field-password 
+              name="custom-password" 
+              placeholder="Enter password" 
+              class="w-200 rounded b-solid b-primary p-5"
+              update={(value) => console.log('Updated to:', value)}
+            />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
           `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
@@ -2092,9 +1968,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Number")),
+                      ...this._toNodeList(_("Number Field")),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -2103,9 +1977,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/field/radio.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Radio")),
-                      import_Document.default.createText(`
-              `, false),
+                      ...this._toNodeList(_("Radio Field")),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

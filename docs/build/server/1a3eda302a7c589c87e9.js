@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\field\checkbox.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\field\checkbox.ink
   var checkbox_exports = {};
   __export(checkbox_exports, {
     default: () => Checkbox_1a3eda302a7c589c87e9
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\field\checkbox.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\field\checkbox.ink
   var Checkbox_1a3eda302a7c589c87e9 = class extends import_Document2.default {
     id() {
       return "1a3eda302a7c589c87e9";
@@ -1534,6 +1534,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ]),
                       import_Document.default.createText(`
               `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#shape` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Shape"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
                       import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#custom` }, [
                         import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Custom Styling"))
@@ -2067,6 +2073,58 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`rounded`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets checkbox to a rounded square shape"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`circle`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Sets checkbox to a circular shape"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`update`, false)
                       ]),
                       import_Document.default.createText(`
@@ -2187,6 +2245,44 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
           `, false),
+                  import_Document.default.createElement("a", { "name": `shape` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Shape"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Checkbox with different shapes: default (square), rounded, circle.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10 flex gap-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-checkbox", { "name": `square`, "label": `Square`, "value": `yes`, "checked": true }),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-checkbox", { "name": `rounded`, "label": `Rounded`, "value": `yes`, "rounded": true, "checked": true }),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-checkbox", { "name": `circle`, "label": `Circle`, "value": `yes`, "circle": true, "checked": true }),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <field-checkbox name="square" label="Square" value="yes" checked />
+            <field-checkbox name="rounded" label="Rounded" value="yes" rounded checked />
+            <field-checkbox name="circle" label="Circle" value="yes" circle checked />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
                   import_Document.default.createElement("a", { "name": `custom` }, []),
                   import_Document.default.createText(`
           `, false),
@@ -2203,7 +2299,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("field-checkbox", { "name": `checkbox`, "label": `Active?`, "value": `yes`, "checked": true, "orange": true, "update": console.log }),
+                    import_Document.default.createElement("field-checkbox", { "name": `custom`, "label": `Active?`, "value": `yes`, "checked": true, "orange": true, "update": (e) => console.log("Checkbox changed:", e.target.checked) }),
                     import_Document.default.createText(`
           `, false)
                   ]),
@@ -2212,12 +2308,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <field-checkbox 
-              name="checkbox" 
+              name="custom" 
               label="Active?" 
               value="yes" 
               checked 
               orange
-              update={console.log}
+              update={(e) => console.log('Checkbox changed:', e.target.checked)}
             />
           `)
                   ]),
@@ -2240,7 +2336,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/field/color.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Color")),
+                      ...this._toNodeList(_("Color Field")),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

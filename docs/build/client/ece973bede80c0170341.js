@@ -4832,9 +4832,9 @@ var InkAPI = (() => {
       return document2.sync();
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/field/rating.html";
+      const title = _("Ink UI - Rating Field Component");
+      const description = _("A star-based rating input with clickable stars.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -4842,11 +4842,9 @@ var InkAPI = (() => {
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Form", href: "/ink/ui/form/index.html" },
-        { label: "Rating" }
+        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
+        { label: "Rating Field" }
       ];
-      const handleChange = (e) => console.log("Change event:", e.target.value);
-      const handleUpdate = (value) => console.log("Updated value:", value);
       return [
         import_Document.default.createText(`
 
@@ -5478,7 +5476,7 @@ var InkAPI = (() => {
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -5491,7 +5489,7 @@ var InkAPI = (() => {
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -5515,19 +5513,15 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Rating` }, [
-                      ...this._toNodeList(_("Rating"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#rating` }, [
+                      ...this._toNodeList(_("Rating Field"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -5540,21 +5534,21 @@ var InkAPI = (() => {
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basicRating` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Basic Rating Input"))
+                        ...this._toNodeList(_("Basic Rating"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#customMaxRating` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#custom-max` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Rating with Custom Max"))
+                        ...this._toNodeList(_("Custom Max Stars"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styledRating` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styled` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Styled Rating Input"))
+                        ...this._toNodeList(_("Custom Size and Color"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5586,20 +5580,20 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `Rating` }, []),
+                  import_Document.default.createElement("a", { "name": `rating` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Rating"))
+                    ...this._toNodeList(_("Rating Field"))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Rating`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Rating Field`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Rating from '@stackpress/ink-ui/field/rating';
+              import RatingField from '@stackpress/ink-ui/field/rating';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -5607,7 +5601,6 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Props Section -->
           `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
@@ -5618,15 +5611,15 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("p", { "class": `mb-20` }, [
-                    ...this._toNodeList(_("The `<field-rating>` component provides a star-based rating system for user input. Below are its props:"))
+                    ...this._toNodeList(_("The `<field-rating>` component allows users to set a rating using stars. Below are its supported props:"))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Property"))
+                      ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -5641,10 +5634,9 @@ var InkAPI = (() => {
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Description"))
+                      ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5665,13 +5657,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Name attribute for form submission."))
+                        ...this._toNodeList(_("Name attribute for form submission"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5682,7 +5673,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String/Number`, false)
+                        import_Document.default.createText(`String | Number`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -5692,13 +5683,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Initial rating value (defaults to 0)."))
+                        ...this._toNodeList(_("Initial rating value (default: 0)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5709,7 +5699,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String/Number`, false)
+                        import_Document.default.createText(`String | Number`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -5719,121 +5709,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Maximum number of stars (defaults to 5)."))
+                        ...this._toNodeList(_("Maximum number of stars (default: 5)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`disabled`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Disables the rating input."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`required`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Marks the input as required."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`change`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Function`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom handler for change events, receiving the selected value."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`update`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Function`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Callback with the updated rating value."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5854,13 +5735,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("CSS classes for the host element (use Ink utilities)."))
+                        ...this._toNodeList(_("CSS classes for styling (e.g., size, color via Ink utilities)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5881,7 +5761,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Inline styles (prefer Ink utilities instead)."))
+                        ...this._toNodeList(_("Inline styles (prefer Ink utilities)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5891,124 +5771,101 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Basic Rating Input -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `basicRating` }, []),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Basic Rating Input"))
+                    ...this._toNodeList(_("Basic Rating"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A basic rating input with 5 stars."))
+                    import_Document.default.createText(`A basic rating input with 5 stars.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10 flex justify-center` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-rating", { "name": `rating`, "value": `3` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-rating", { "name": `basic-rating`, "value": `3` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <field-rating name="rating" value="3" />
+            <field-rating name="basic-rating" value="3" />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Rating with Custom Max -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `customMaxRating` }, []),
+                  import_Document.default.createElement("a", { "name": `custom-max` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Rating with Custom Max"))
+                    ...this._toNodeList(_("Custom Max Stars"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A rating input with a custom maximum number of stars."))
+                    import_Document.default.createText(`Rating input with a custom maximum number of stars.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10 flex justify-center` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-rating", { "name": `rating`, "value": `4`, "max": `7` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-rating", { "name": `custom-rating`, "value": `4`, "max": `7` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <field-rating name="rating" value="4" max="7" />
+            <field-rating name="custom-rating" value="4" max="7" />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Styled Rating Input -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `styledRating` }, []),
+                  import_Document.default.createElement("a", { "name": `styled` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Styled Rating Input"))
+                    ...this._toNodeList(_("Custom Size and Color"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A styled rating input with custom size, color, and hover effects using Ink utilities."))
+                    import_Document.default.createText(`Rating input styled with larger size and custom color.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10 flex justify-center` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-rating", { "name": `rating`, "value": `3`, "max": `5`, "class": `flex gap-10 tx-24 tx-primary transition-300 hover:scale-105 hover:tx-t-2`, "style": `cursor: pointer;` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-rating", { "name": `styled-rating`, "value": `2`, "max": `5`, "class": `tx-24 tx-primary hover:tx-t-2 transition-300` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <field-rating 
-              name="rating" 
-              value="3" 
+              name="styled-rating" 
+              value="2" 
               max="5" 
-              class="flex gap-10 tx-24 tx-primary transition-300 hover:scale-105 hover:tx-t-2" 
-              style="cursor: pointer;"
+              class="tx-24 tx-primary hover:tx-t-2 transition-300"
             />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Navigation -->
           `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
@@ -6017,9 +5874,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Range")),
+                      ...this._toNodeList(_("Range Field")),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6028,9 +5883,7 @@ var InkAPI = (() => {
                     import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/field/select.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Select")),
-                      import_Document.default.createText(`
-              `, false),
+                      ...this._toNodeList(_("Select Field")),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

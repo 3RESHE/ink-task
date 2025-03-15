@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Metadata Field Component</title>
+  <meta name="description" content="A key-value pair input field for metadata with dynamic rows." />
+  <meta property="og:title" content="Ink UI - Metadata Field Component" />
+  <meta property="og:description" content="A key-value pair input field for metadata with dynamic rows." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/metadata.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Metadata Field Component" />
+  <meta name="twitter:description" content="A key-value pair input field for metadata with dynamic rows." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -142,24 +142,21 @@
   
 
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       Formats
     </a>
   
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Metadata">Metadata</a>
+            <a class="block tx-t-0" href="#metadata">Metadata Field</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicMetadata">• Basic Metadata</a>
-              <a class="block tx-t-1" href="#metadataWithValues">• Metadata with Initial Values</a>
-              <a class="block tx-t-1" href="#customAddButton">• Custom Add Button Text</a>
-              <a class="block tx-t-1" href="#styledMetadata">• Styled Metadata</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#initial">• Initial Values</a>
+              <a class="block tx-t-1" href="#custom">• Custom Styling</a>
             </nav>
           </nav>
         </menu>
@@ -170,127 +167,94 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Metadata"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Metadata</h1>
-          <ide-app title="Metadata" class="py-20">
+          <a name="metadata"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Metadata Field</h1>
+          <ide-app title="Metadata Field" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import Metadata from '@stackpress/ink-ui/field/metadata';
+              import MetadataField from '@stackpress/ink-ui/field/metadata';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <p class="mb-20">The `&lt;field-metadata&gt;` component allows dynamic addition and removal of key-value pairs for form submission. Below are its props:</p>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
-            <table-head>Description</table-head>
-
+            <table-head>Notes</table-head>
             <table-row>
               <table-col>name</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Base name for form submission (e.g., `metadata[key]`).</table-col>
+              <table-col>Base name for form submission (e.g., "metadata[key]")</table-col>
             </table-row>
-
-            <table-row>
-              <table-col>add</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Text for the "Add" button. Defaults to "Add".</table-col>
-            </table-row>
-
             <table-row>
               <table-col>value</table-col>
               <table-col>Object</table-col>
               <table-col>No</table-col>
-              <table-col>Initial key-value pairs to populate the component. Defaults to `{}`.</table-col>
+              <table-col>Initial key-value pairs (default: {})</table-col>
             </table-row>
-
             <table-row>
-              <table-col>class</table-col>
+              <table-col>add</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>CSS classes for the host element, styled via default utilities.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Inline styles for the host element, overriding defaults.</table-col>
+              <table-col>Text for the add button (default: "Add")</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Metadata -->
-          <a name="basicMetadata"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Metadata</h2>
-          <div class="mb-10">A simple metadata field with default settings, allowing users to add key-value pairs.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-metadata name="metadata"></field-metadata>
-            </div>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">A simple metadata field with default add button.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-metadata name="basic-metadata" class="w-250"></field-metadata>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-metadata name="metadata" /&gt;
-          </ide-code>
-
-          <!-- Metadata with Initial Values -->
-          <a name="metadataWithValues"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Metadata with Initial Values</h2>
-          <div class="mb-10">Pre-populates the metadata field with initial key-value pairs using the `value` prop.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-metadata name="metadata" ></field-metadata>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-metadata name="metadata" value={{ "author": "John Doe", "date": "2023-10-01" }} /&gt;
-          </ide-code>
-
-          <!-- Custom Add Button Text -->
-          <a name="customAddButton"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Add Button Text</h2>
-          <div class="mb-10">Customizes the "Add" button text using the `add` prop.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-metadata name="metadata" add="Add New Pair"></field-metadata>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-metadata name="metadata" add="Add New Pair" /&gt;
-          </ide-code>
-
-          <!-- Styled Metadata -->
-          <a name="styledMetadata"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Metadata</h2>
-          <div class="mb-10">Applies custom styles to the metadata field using `class` and `style` props.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-metadata name="metadata" class="w-300 bg-white tx-t-1 c-10 p-15 b-solid b-t-2 transition-300 hover:b-primary" style="border-color: var(--t-2); background: linear-gradient(135deg, #ffffff, #f9f9f9); box-shadow: 0 2px 6px var(--t-1);" onmouseover="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-3)'" onmouseout="this.style.borderColor='var(--t-2)'; this.style.boxShadow='0 2px 6px var(--t-1)'"></field-metadata>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-metadata 
-              name="metadata" 
-              class="w-300 bg-white tx-t-1 c-10 p-15 b-solid b-t-2 transition-300 hover:b-primary" 
-              style="border-color: var(--t-2); background: linear-gradient(135deg, #ffffff, #f9f9f9); box-shadow: 0 2px 6px var(--t-1);" 
-              onmouseover="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-3)'" 
-              onmouseout="this.style.borderColor='var(--t-2)'; this.style.boxShadow='0 2px 6px var(--t-1)'" 
+              name="basic-metadata" 
+              class="w-250"
             /&gt;
           </ide-code>
 
-          <!-- Navigation -->
+          <a name="initial"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Initial Values</h2>
+          <div class="mb-10">Metadata field with preloaded key-value pairs.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-metadata name="initial-metadata" class="w-250" ></field-metadata>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-metadata 
+              name="initial-metadata" 
+              class="w-250"
+              value={{"title": "Home", "description": "Welcome page"}}
+            /&gt;
+          </ide-code>
+
+          <a name="custom"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Styling</h2>
+          <div class="mb-10">Metadata field with custom styling, placeholder, and update callback.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-metadata class="w-250 b-solid b-primary rounded" name="custom-metadata" placeholder="Enter text"  add="Add New" ></field-metadata>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;script&gt;
+              const initialMetadata = { "title": "Home", "description": "Welcome page" };
+            &lt;/script&gt;
+            &lt;field-metadata 
+              class="w-250 b-solid b-primary rounded"
+              name="custom-metadata" 
+              placeholder="Enter text" 
+              value={initialMetadata} 
+              add="Add New"
+              update={(value) =&gt; console.log('Updated metadata:', value)}
+            /&gt;
+          </ide-code>
+
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/mask.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Mask
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Mask Field
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/number.html">
-              Number
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Number Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

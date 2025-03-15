@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Mask Field Component</title>
+  <meta name="description" content="A masked input field using Inputmask for formatted input." />
+  <meta property="og:title" content="Ink UI - Mask Field Component" />
+  <meta property="og:description" content="A masked input field using Inputmask for formatted input." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/mask.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Mask Field Component" />
+  <meta name="twitter:description" content="A masked input field using Inputmask for formatted input." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -142,30 +142,25 @@
   
 
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       Formats
     </a>
   
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Mask">Mask</a>
+            <a class="block tx-t-0" href="#mask">Mask Field</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicMask">• Basic Phone Mask</a>
-              <a class="block tx-t-1" href="#aliasMask">• Alias Mask (Date)</a>
-              <a class="block tx-t-1" href="#regexMask">• Regex Mask</a>
-              <a class="block tx-t-1" href="#numericMask">• Numeric Input Mask</a>
-              <a class="block tx-t-1" href="#maskWithPlaceholder">• Mask with Placeholder</a>
-              <a class="block tx-t-1" href="#maskWithValidation">• Mask with Validation</a>
-              <a class="block tx-t-1" href="#maskWithChange">• Mask with Change Event</a>
-              <a class="block tx-t-1" href="#maskWithUpdate">• Mask with Update Callback</a>
-              <a class="block tx-t-1" href="#maskWithError">• Mask with Error Handling</a>
-              <a class="block tx-t-1" href="#styledMask">• Styled Mask</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#custom-mask">• Custom Mask</a>
+              <a class="block tx-t-1" href="#alias">• Alias Mask</a>
+              <a class="block tx-t-1" href="#numeric">• Numeric Input</a>
+              <a class="block tx-t-1" href="#alignment">• Right Alignment</a>
+              <a class="block tx-t-1" href="#repeat">• Repeated Mask</a>
+              <a class="block tx-t-1" href="#styling">• Styling</a>
             </nav>
           </nav>
         </menu>
@@ -176,335 +171,238 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Mask"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Mask</h1>
-          <ide-app title="Mask" class="py-20">
+          <a name="mask"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Mask Field</h1>
+          <ide-app title="Mask Field" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import Mask from '@stackpress/ink-ui/field/mask';
+              import MaskField from '@stackpress/ink-ui/field/mask';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <p class="mb-20">The `&lt;field-mask&gt;` component enhances inputs with custom masks using the `Inputmask` library. Below are its props for controlling masking and input behavior:</p>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
-            <table-head>Description</table-head>
-
-            <table-row>
-              <table-col>name</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Name attribute for form submission, linking the input to form data.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>value</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Initial value of the masked input (e.g., "1234567890" for a phone mask).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>mask</table-col>
-              <table-col>String/Array</table-col>
-              <table-col>No</table-col>
-              <table-col>Custom mask pattern (e.g., "(999) 999-9999"). Use "9" for digits, "A" for letters, etc.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>regex</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Regex pattern for masking (e.g., "^[0-9]{4}$" for 4 digits). Overrides `mask` if set.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>alias</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Predefined mask alias (e.g., "phone", "date", "email"). Simplifies common formats.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>repeat</table-col>
-              <table-col>Number</table-col>
-              <table-col>No</table-col>
-              <table-col>Repeats the mask pattern a specified number of times.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>greedy</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Forces the mask to be fully completed before allowing input to proceed.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>numericInput</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Fills numeric masks from right to left, ideal for numbers like currency.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>rightAlign</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Aligns input text to the right within the field.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>definitions</table-col>
-              <table-col>Object</table-col>
-              <table-col>No</table-col>
-              <table-col>Custom mask character definitions (e.g., { "X": "[A-Z]" }). Extends mask syntax.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>placeholder</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Hint text shown when the input is empty, guiding user input (e.g., "(123) 456-7890").</table-col>
-            </table-row>
-
+            <table-head>Notes</table-head>
             <table-row>
               <table-col>autocomplete</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Controls browser autofill behavior (e.g., "off", "tel").</table-col>
+              <table-col>Autocomplete attribute (e.g., "on", "off")</table-col>
             </table-row>
-
             <table-row>
               <table-col>disabled</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Disables the input, preventing interaction.</table-col>
+              <table-col>Disables the input</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>name</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Name attribute for form submission</table-col>
+            </table-row>
             <table-row>
               <table-col>pattern</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Regex pattern for HTML5 validation (e.g., "[0-9]{10}"). Works alongside mask.</table-col>
+              <table-col>Regex pattern for validation</table-col>
             </table-row>
-
             <table-row>
               <table-col>readonly</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Makes the input read-only, displaying the mask without edits.</table-col>
+              <table-col>Makes the input read-only</table-col>
             </table-row>
-
             <table-row>
               <table-col>required</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Marks the input as required for form submission.</table-col>
+              <table-col>Marks the input as required</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>value</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Initial value</table-col>
+            </table-row>
+            <table-row>
+              <table-col>mask</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Mask pattern (e.g., "999-999-9999")</table-col>
+            </table-row>
+            <table-row>
+              <table-col>regex</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Regex pattern for mask (alternative to mask)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>alias</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Predefined mask alias (e.g., "phone", "email")</table-col>
+            </table-row>
+            <table-row>
+              <table-col>repeat</table-col>
+              <table-col>Number</table-col>
+              <table-col>No</table-col>
+              <table-col>Number of times to repeat mask</table-col>
+            </table-row>
+            <table-row>
+              <table-col>greedy</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Greedy masking behavior</table-col>
+            </table-row>
+            <table-row>
+              <table-col>numericInput</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Forces numeric input</table-col>
+            </table-row>
+            <table-row>
+              <table-col>rightAlign</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Aligns input to the right</table-col>
+            </table-row>
+            <table-row>
+              <table-col>definitions</table-col>
+              <table-col>Object</table-col>
+              <table-col>No</table-col>
+              <table-col>Custom mask definitions</table-col>
+            </table-row>
             <table-row>
               <table-col>change</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Custom handler for change events, receiving the event object.</table-col>
+              <table-col>Callback for change event</table-col>
             </table-row>
-
             <table-row>
               <table-col>update</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Callback with the current masked value after changes.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>error</table-col>
-              <table-col>Function</table-col>
-              <table-col>No</table-col>
-              <table-col>Callback to handle errors, receiving an error message when validation fails.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>class</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>CSS classes for the host element, styled via default utilities.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Inline styles for the host element, overriding defaults.</table-col>
+              <table-col>Callback for value updates</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Phone Mask -->
-          <a name="basicMask"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Phone Mask</h2>
-          <div class="mb-10">A simple phone number mask using the `mask` prop, formatting input as "(999) 999-9999".</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-mask name="phone" mask="(999) 999-9999"></field-mask>
-            </div>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">A simple masked input for a phone number.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-mask name="phone" mask="999-999-9999" placeholder="999-999-9999"></field-mask>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-mask name="phone" mask="(999) 999-9999" /&gt;
-          </ide-code>
-
-          <!-- Alias Mask (Date) -->
-          <a name="aliasMask"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Alias Mask (Date)</h2>
-          <div class="mb-10">Uses the `alias` prop for a predefined date mask, formatting as "mm/dd/yyyy".</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-mask name="date" alias="datetime" mask="mm/dd/yyyy"></field-mask>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-mask name="date" alias="datetime" mask="mm/dd/yyyy" /&gt;
-          </ide-code>
-
-          <!-- Regex Mask -->
-          <a name="regexMask"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Regex Mask</h2>
-          <div class="mb-10">Applies a regex mask with `regex`, restricting input to exactly 4 digits (e.g., "1234").</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-mask name="code" regex="^[0-9]{4}$"></field-mask>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-mask name="code" regex="^[0-9]{4}$" /&gt;
-          </ide-code>
-
-          <!-- Numeric Input Mask -->
-          <a name="numericMask"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Numeric Input Mask</h2>
-          <div class="mb-10">A numeric mask with `numericInput` for right-to-left entry, ideal for currency or codes.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-mask name="amount" mask="9999" numericInput></field-mask>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-mask name="amount" mask="9999" numericInput /&gt;
-          </ide-code>
-
-          <!-- Mask with Placeholder -->
-          <a name="maskWithPlaceholder"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Mask with Placeholder</h2>
-          <div class="mb-10">Adds a `placeholder` to guide the user on the expected format of the phone mask.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-mask name="phone" mask="(999) 999-9999" placeholder="(123) 456-7890"></field-mask>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-mask name="phone" mask="(999) 999-9999" placeholder="(123) 456-7890" /&gt;
-          </ide-code>
-
-          <!-- Mask with Validation -->
-          <a name="maskWithValidation"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Mask with Validation</h2>
-          <div class="mb-10">Combines a phone mask with `required` and `pattern` for form validation, ensuring the input matches the mask format.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-mask name="phone" mask="(999) 999-9999" required pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}"></field-mask>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-mask name="phone" mask="(999) 999-9999" required pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}" /&gt;
-          </ide-code>
-
-          <!-- Mask with Change Event -->
-          <a name="maskWithChange"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Mask with Change Event</h2>
-          <div class="mb-10">Logs changes with the `change` prop, capturing masked input for real-time feedback.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-mask name="phone" mask="(999) 999-9999" ></field-mask>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;script&gt;
-              const handleChange = (e) =&gt; console.log('Change event:', e.target.value);
-            &lt;/script&gt;
-            &lt;field-mask name="phone" mask="(999) 999-9999" change={handleChange} /&gt;
-          </ide-code>
-
-          <!-- Mask with Update Callback -->
-          <a name="maskWithUpdate"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Mask with Update Callback</h2>
-          <div class="mb-10">Tracks masked value changes with `update`, syncing with external state.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-mask name="phone" mask="(999) 999-9999" ></field-mask>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;script&gt;
-              const handleUpdate = (value) =&gt; console.log('Updated value:', value);
-            &lt;/script&gt;
-            &lt;field-mask name="phone" mask="(999) 999-9999" update={handleUpdate} /&gt;
-          </ide-code>
-
-          <!-- Mask with Error Handling -->
-          <a name="maskWithError"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Mask with Error Handling</h2>
-          <div class="mb-10">Uses the `error` prop to handle invalid input by validating the phone number format on change.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-mask name="phone" mask="(999) 999-9999"  ></field-mask>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-mask 
               name="phone" 
-              mask="(999) 999-9999" 
-              change={(e) =&gt; {
-                const value = e.target.value;
-                const isValid = /^(d{3}) d{3}-d{4}$/.test(value);
-                if (!isValid &amp;&amp; value.length === 14) {
-                  e.target.error('Invalid phone number format. Expected: (123) 456-7890');
-                }
-              }}
-              error={(message) =&gt; console.log('Error:', message)}
+              mask="999-999-9999" 
+              placeholder="999-999-9999" 
             /&gt;
           </ide-code>
 
-          <!-- Styled Mask -->
-          <a name="styledMask"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Mask</h2>
-          <div class="mb-10">A minimalist styled mask with a wide layout, soft border, and hover effect via `class` and `style`.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-mask name="phone" mask="(999) 999-9999" class="w-300 bg-primary tx-t-1" style="border: 1px solid #e0e0e0; padding: 8px; transition: border-color 0.3s ease;" onmouseover="this.style.borderColor='#888888'" onmouseout="this.style.borderColor='#e0e0e0'"></field-mask>
-            </div>
+          <a name="custom-mask"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Mask</h2>
+          <div class="mb-10">Masked input with a custom date format and numeric input.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-mask name="date" mask="99/99/9999" placeholder="MM/DD/YYYY" numericInput></field-mask>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-mask 
-              name="phone" 
-              mask="(999) 999-9999" 
-              class="w-300 bg-primary tx-t-1" 
-              style="border: 1px solid #e0e0e0; padding: 8px; transition: border-color 0.3s ease;" 
-              onmouseover="this.style.borderColor='#888888'" 
-              onmouseout="this.style.borderColor='#e0e0e0'" 
+              name="date" 
+              mask="99/99/9999" 
+              placeholder="MM/DD/YYYY" 
+              numericInput={true}
             /&gt;
           </ide-code>
 
-          <!-- Navigation -->
+          <a name="alias"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Alias Mask</h2>
+          <div class="mb-10">Masked input using a predefined alias for email.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-mask name="email" alias="email" placeholder="user@domain.com"></field-mask>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-mask 
+              name="email" 
+              alias="email" 
+              placeholder="user@domain.com" 
+            /&gt;
+          </ide-code>
+
+          <a name="numeric"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Numeric Input</h2>
+          <div class="mb-10">Masked input restricted to numbers with a disabled state.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-mask name="numeric" mask="9999-9999" numericInput placeholder="1234-5678" disabled></field-mask>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-mask 
+              name="numeric" 
+              mask="9999-9999" 
+              numericInput={true} 
+              placeholder="1234-5678" 
+              disabled={true}
+            /&gt;
+          </ide-code>
+
+          <a name="alignment"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Right Alignment</h2>
+          <div class="mb-10">Masked input aligned to the right with a currency mask.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-mask name="currency" mask="$ 999.99" placeholder="$ 123.45" rightAlign numericInput></field-mask>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-mask 
+              name="currency" 
+              mask="$ 999.99" 
+              placeholder="$ 123.45" 
+              rightAlign={true} 
+              numericInput={true}
+            /&gt;
+          </ide-code>
+
+          <a name="repeat"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Repeated Mask</h2>
+          <div class="mb-10">Masked input with a repeating pattern and greedy behavior.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-mask name="repeat" mask="9"  greedy placeholder="12345"></field-mask>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-mask 
+              name="repeat" 
+              mask="9" 
+              repeat={5} 
+              greedy={true} 
+              placeholder="12345" 
+            /&gt;
+          </ide-code>
+
+          <a name="styling"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Styling</h2>
+          <div class="mb-10">Masked input with custom styling and change callback.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-mask name="custom-phone" mask="(999) 999-9999" placeholder="(999) 999-9999" class="w-200 rounded b-solid b-primary p-5" ></field-mask>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-mask 
+              name="custom-phone" 
+              mask="(999) 999-9999" 
+              placeholder="(999) 999-9999" 
+              class="w-200 rounded b-solid b-primary p-5"
+              change={(e) =&gt; console.log('Changed to:', e.target.value)}
+            /&gt;
+          </ide-code>
+
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/markdown.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Markdown
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Markdown Field
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/metadata.html">
-              Metadata
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Metadata Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

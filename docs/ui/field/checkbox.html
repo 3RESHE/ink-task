@@ -156,6 +156,7 @@
               <a class="block tx-t-1" href="#props">• Props</a>
               <a class="block tx-t-1" href="#basic">• Basic Usage</a>
               <a class="block tx-t-1" href="#states">• States</a>
+              <a class="block tx-t-1" href="#shape">• Shape</a>
               <a class="block tx-t-1" href="#custom">• Custom Styling</a>
             </nav>
           </nav>
@@ -285,6 +286,18 @@
               <table-col>Sets checkbox color to orange (custom utility)</table-col>
             </table-row>
             <table-row>
+              <table-col>rounded</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets checkbox to a rounded square shape</table-col>
+            </table-row>
+            <table-row>
+              <table-col>circle</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Sets checkbox to a circular shape</table-col>
+            </table-row>
+            <table-row>
               <table-col>update</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
@@ -322,20 +335,34 @@
             &lt;field-checkbox name="required" label="Required" required /&gt;
           </ide-code>
 
+          <a name="shape"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Shape</h2>
+          <div class="mb-10">Checkbox with different shapes: default (square), rounded, circle.</div>
+          <div class="bg-t-3 p-10 mb-10 flex gap-20">
+            <field-checkbox name="square" label="Square" value="yes" checked></field-checkbox>
+            <field-checkbox name="rounded" label="Rounded" value="yes" rounded checked></field-checkbox>
+            <field-checkbox name="circle" label="Circle" value="yes" circle checked></field-checkbox>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-checkbox name="square" label="Square" value="yes" checked /&gt;
+            &lt;field-checkbox name="rounded" label="Rounded" value="yes" rounded checked /&gt;
+            &lt;field-checkbox name="circle" label="Circle" value="yes" circle checked /&gt;
+          </ide-code>
+
           <a name="custom"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Custom Styling</h2>
           <div class="mb-10">Checkbox with custom color and update callback.</div>
           <div class="bg-t-3 p-10 mb-10">
-            <field-checkbox name="checkbox" label="Active?" value="yes" checked orange ></field-checkbox>
+            <field-checkbox name="custom" label="Active?" value="yes" checked orange ></field-checkbox>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-checkbox 
-              name="checkbox" 
+              name="custom" 
               label="Active?" 
               value="yes" 
               checked 
               orange
-              update={console.log}
+              update={(e) =&gt; console.log('Checkbox changed:', e.target.checked)}
             /&gt;
           </ide-code>
 
@@ -344,7 +371,7 @@
               <element-icon name="chevron-left" theme="tx-1"></element-icon>Fieldset
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/color.html">
-              Color<element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Color Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

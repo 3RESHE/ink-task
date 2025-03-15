@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\field\range.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\field\range.ink
   var range_exports = {};
   __export(range_exports, {
     default: () => Range_284a2ae5ba093968738a
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\field\range.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\field\range.ink
   var Range_284a2ae5ba093968738a = class extends import_Document2.default {
     id() {
       return "284a2ae5ba093968738a";
@@ -820,9 +820,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
   @ink utilities;`;
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/field/range.html";
+      const title = _("Ink UI - Range Field Component");
+      const description = _("A range slider with synchronized number input for precise control.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -830,11 +830,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Form", href: "/ink/ui/form/index.html" },
-        { label: "Range" }
+        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
+        { label: "Range Field" }
       ];
-      const handleChange = (e) => console.log("Change event:", e.target.value);
-      const handleUpdate = (value) => console.log("Updated value:", value);
       return [
         import_Document.default.createText(`
 
@@ -1503,19 +1501,15 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Range` }, [
-                      ...this._toNodeList(_("Range"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#range` }, [
+                      ...this._toNodeList(_("Range Field"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1528,21 +1522,27 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basicRange` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Basic Range Input"))
+                        ...this._toNodeList(_("Basic Usage"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#rangeWithLimits` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#custom-range` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Range with Limits"))
+                        ...this._toNodeList(_("Custom Range"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styledRange` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#disabled` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Styled Range Input"))
+                        ...this._toNodeList(_("Disabled State"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styled` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Styled Range"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1574,20 +1574,20 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `Range` }, []),
+                  import_Document.default.createElement("a", { "name": `range` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Range"))
+                    ...this._toNodeList(_("Range Field"))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Range`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Range Field`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Range from '@stackpress/ink-ui/field/range';
+              import RangeField from '@stackpress/ink-ui/field/range';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1595,7 +1595,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Props Section -->
           `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
@@ -1605,16 +1604,11 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("p", { "class": `mb-20` }, [
-                    ...this._toNodeList(_("The `<field-range>` component provides a range slider input for selecting a numeric value within a defined range. Below are its props:"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Property"))
+                      ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1629,226 +1623,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Description"))
+                      ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`name`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Name attribute for form submission."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`value`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String/Number`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Initial value of the range input."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`min`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String/Number`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Minimum value (defaults to 0)."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`max`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String/Number`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Maximum value (defaults to 100)."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`step`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String/Number`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Step interval (defaults to 1)."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`width`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String/Number`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Width of the range slider in pixels (defaults to browser default)."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`change`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Function`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom handler for change events, receiving the selected value."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`update`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Function`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Callback with the updated numeric value."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1869,13 +1646,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Controls browser autofill behavior."))
+                        ...this._toNodeList(_('Autocomplete attribute (e.g., "off")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1896,13 +1672,38 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Disables the input."))
+                        ...this._toNodeList(_("Disables both inputs"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`name`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Name attribute for form submission"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1923,13 +1724,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Makes the input read-only."))
+                        ...this._toNodeList(_("Makes both inputs read-only"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1950,24 +1750,23 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Marks the input as required."))
+                        ...this._toNodeList(_("Marks the input as required"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`class`, false)
+                        import_Document.default.createText(`value`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
+                        import_Document.default.createText(`String | Number`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -1977,24 +1776,23 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("CSS classes for the host element (use Ink utilities)."))
+                        ...this._toNodeList(_("Initial value"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`style`, false)
+                        import_Document.default.createText(`min`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
+                        import_Document.default.createText(`String | Number`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -2004,7 +1802,85 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Inline styles (prefer Ink utilities instead)."))
+                        ...this._toNodeList(_("Minimum value (default: 0)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`max`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String | Number`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Maximum value (default: 100)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`step`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String | Number`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Step increment (default: 1)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`width`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String | Number`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Width of the number input in pixels (default: 60)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -2014,131 +1890,166 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Basic Range Input -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `basicRange` }, []),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Basic Range Input"))
+                    ...this._toNodeList(_("Basic Usage"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A basic range input with default settings."))
+                    import_Document.default.createText(`A basic range slider with default settings.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-range", { "name": `volume`, "value": `50` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-range", { "name": `basic-range`, "min": `0`, "max": `100`, "step": `10`, "value": `0` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <field-range name="volume" value="50" />
+            <field-range 
+              name="basic-range" 
+              min="0" 
+              max="100" 
+              step="10" 
+              value="0"
+            />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Range with Limits -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `rangeWithLimits` }, []),
+                  import_Document.default.createElement("a", { "name": `custom-range` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Range with Limits"))
+                    ...this._toNodeList(_("Custom Range"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A range input with custom `min`, `max`, and `step` settings."))
+                    import_Document.default.createText(`Range slider with custom min, max, step, and wider number input.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-range", { "name": `temperature`, "value": `25`, "min": `0`, "max": `50`, "step": `5` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-range", { "name": `custom-range`, "min": `-50`, "max": `50`, "step": `5`, "value": `25`, "width": `80` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <field-range 
-              name="temperature" 
-              value="25" 
-              min="0" 
+              name="custom-range" 
+              min="-50" 
               max="50" 
               step="5" 
+              value="25" 
+              width="80"
             />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Styled Range Input -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `styledRange` }, []),
+                  import_Document.default.createElement("a", { "name": `disabled` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Styled Range Input"))
+                    ...this._toNodeList(_("Disabled State"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A styled range input with custom width, dynamic styling, and smooth transitions using Ink utilities and inline styles."))
+                    import_Document.default.createText(`Range slider in disabled and readonly states.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10 flex gap-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-range", { "name": `brightness`, "value": `75`, "class": `w-300 bg-transparent tx-t-1 h-8 c-5 transition-300`, "style": `background: linear-gradient(to right, var(--primary) 75%, var(--t-2) 75%); accent-color: var(--primary); cursor: pointer;`, "onmouseover": `this.style.boxShadow='0 2px 8px var(--t-3)'; this.style.opacity='0.9'`, "onmouseout": `this.style.boxShadow='none'; this.style.opacity='1'` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-range", { "name": `disabled-range`, "min": `0`, "max": `100`, "step": `10`, "value": `50`, "disabled": true }),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-range", { "name": `readonly-range`, "min": `0`, "max": `100`, "step": `10`, "value": `75`, "readonly": true }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <field-range 
-              name="brightness" 
+              name="disabled-range" 
+              min="0" 
+              max="100" 
+              step="10" 
+              value="50" 
+              disabled
+            />
+            <field-range 
+              name="readonly-range" 
+              min="0" 
+              max="100" 
+              step="10" 
               value="75" 
-              class="w-300 bg-transparent tx-t-1 h-8 c-5 transition-300" 
-              style="background: linear-gradient(to right, var(--primary) 75%, var(--t-2) 75%); accent-color: var(--primary); cursor: pointer;" 
-              onmouseover="this.style.boxShadow='0 2px 8px var(--t-3)'; this.style.opacity='0.9'" 
-              onmouseout="this.style.boxShadow='none'; this.style.opacity='1'" 
+              readonly
             />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Navigation -->
+          `, false),
+                  import_Document.default.createElement("a", { "name": `styled` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Styled Range"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Range slider with custom styling and required attribute.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-range", { "name": `styled-range`, "min": `0`, "max": `200`, "step": `1`, "value": `100`, "width": `100`, "class": `w-300 rounded b-solid b-primary bg-white p-10`, "required": true }),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <field-range 
+              name="styled-range" 
+              min="0" 
+              max="200" 
+              step="1" 
+              value="100" 
+              width="100"
+              class="w-300 rounded b-solid b-primary bg-white p-10"
+              required
+            />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
           `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
@@ -2147,9 +2058,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Radio")),
+                      ...this._toNodeList(_("Radio Field")),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -2158,9 +2067,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/field/rating.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Rating")),
-                      import_Document.default.createText(`
-              `, false),
+                      ...this._toNodeList(_("Rating Field")),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

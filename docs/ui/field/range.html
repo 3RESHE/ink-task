@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Range Field Component</title>
+  <meta name="description" content="A range slider with synchronized number input for precise control." />
+  <meta property="og:title" content="Ink UI - Range Field Component" />
+  <meta property="og:description" content="A range slider with synchronized number input for precise control." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/range.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Range Field Component" />
+  <meta name="twitter:description" content="A range slider with synchronized number input for precise control." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -149,16 +149,15 @@
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Range">Range</a>
+            <a class="block tx-t-0" href="#range">Range Field</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicRange">• Basic Range Input</a>
-              <a class="block tx-t-1" href="#rangeWithLimits">• Range with Limits</a>
-              <a class="block tx-t-1" href="#styledRange">• Styled Range Input</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#custom-range">• Custom Range</a>
+              <a class="block tx-t-1" href="#disabled">• Disabled State</a>
+              <a class="block tx-t-1" href="#styled">• Styled Range</a>
             </nav>
           </nav>
         </menu>
@@ -169,184 +168,167 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Range"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Range</h1>
-          <ide-app title="Range" class="py-20">
+          <a name="range"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Range Field</h1>
+          <ide-app title="Range Field" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import Range from '@stackpress/ink-ui/field/range';
+              import RangeField from '@stackpress/ink-ui/field/range';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <p class="mb-20">The `&lt;field-range&gt;` component provides a range slider input for selecting a numeric value within a defined range. Below are its props:</p>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
-            <table-head>Description</table-head>
-
-            <table-row>
-              <table-col>name</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Name attribute for form submission.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>value</table-col>
-              <table-col>String/Number</table-col>
-              <table-col>No</table-col>
-              <table-col>Initial value of the range input.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>min</table-col>
-              <table-col>String/Number</table-col>
-              <table-col>No</table-col>
-              <table-col>Minimum value (defaults to 0).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>max</table-col>
-              <table-col>String/Number</table-col>
-              <table-col>No</table-col>
-              <table-col>Maximum value (defaults to 100).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>step</table-col>
-              <table-col>String/Number</table-col>
-              <table-col>No</table-col>
-              <table-col>Step interval (defaults to 1).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>width</table-col>
-              <table-col>String/Number</table-col>
-              <table-col>No</table-col>
-              <table-col>Width of the range slider in pixels (defaults to browser default).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>change</table-col>
-              <table-col>Function</table-col>
-              <table-col>No</table-col>
-              <table-col>Custom handler for change events, receiving the selected value.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>update</table-col>
-              <table-col>Function</table-col>
-              <table-col>No</table-col>
-              <table-col>Callback with the updated numeric value.</table-col>
-            </table-row>
-
+            <table-head>Notes</table-head>
             <table-row>
               <table-col>autocomplete</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Controls browser autofill behavior.</table-col>
+              <table-col>Autocomplete attribute (e.g., "off")</table-col>
             </table-row>
-
             <table-row>
               <table-col>disabled</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Disables the input.</table-col>
+              <table-col>Disables both inputs</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>name</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Name attribute for form submission</table-col>
+            </table-row>
             <table-row>
               <table-col>readonly</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Makes the input read-only.</table-col>
+              <table-col>Makes both inputs read-only</table-col>
             </table-row>
-
             <table-row>
               <table-col>required</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Marks the input as required.</table-col>
+              <table-col>Marks the input as required</table-col>
             </table-row>
-
             <table-row>
-              <table-col>class</table-col>
-              <table-col>String</table-col>
+              <table-col>value</table-col>
+              <table-col>String | Number</table-col>
               <table-col>No</table-col>
-              <table-col>CSS classes for the host element (use Ink utilities).</table-col>
+              <table-col>Initial value</table-col>
             </table-row>
-
             <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
+              <table-col>min</table-col>
+              <table-col>String | Number</table-col>
               <table-col>No</table-col>
-              <table-col>Inline styles (prefer Ink utilities instead).</table-col>
+              <table-col>Minimum value (default: 0)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>max</table-col>
+              <table-col>String | Number</table-col>
+              <table-col>No</table-col>
+              <table-col>Maximum value (default: 100)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>step</table-col>
+              <table-col>String | Number</table-col>
+              <table-col>No</table-col>
+              <table-col>Step increment (default: 1)</table-col>
+            </table-row>
+            <table-row>
+              <table-col>width</table-col>
+              <table-col>String | Number</table-col>
+              <table-col>No</table-col>
+              <table-col>Width of the number input in pixels (default: 60)</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Range Input -->
-          <a name="basicRange"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Range Input</h2>
-          <div class="mb-10">A basic range input with default settings.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-range name="volume" value="50"></field-range>
-            </div>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">A basic range slider with default settings.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-range name="basic-range" min="0" max="100" step="10" value="0"></field-range>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-range name="volume" value="50" /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-range 
+              name="basic-range" 
+              min="0" 
+              max="100" 
+              step="10" 
+              value="0"
+            /&gt;
           </ide-code>
 
-          <!-- Range with Limits -->
-          <a name="rangeWithLimits"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Range with Limits</h2>
-          <div class="mb-10">A range input with custom `min`, `max`, and `step` settings.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-range name="temperature" value="25" min="0" max="50" step="5"></field-range>
-            </div>
+          <a name="custom-range"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Range</h2>
+          <div class="mb-10">Range slider with custom min, max, step, and wider number input.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-range name="custom-range" min="-50" max="50" step="5" value="25" width="80"></field-range>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-range 
-              name="temperature" 
-              value="25" 
-              min="0" 
+              name="custom-range" 
+              min="-50" 
               max="50" 
               step="5" 
+              value="25" 
+              width="80"
             /&gt;
           </ide-code>
 
-          <!-- Styled Range Input -->
-          <a name="styledRange"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Range Input</h2>
-          <div class="mb-10">A styled range input with custom width, dynamic styling, and smooth transitions using Ink utilities and inline styles.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-range name="brightness" value="75" class="w-300 bg-transparent tx-t-1 h-8 c-5 transition-300" style="background: linear-gradient(to right, var(--primary) 75%, var(--t-2) 75%); accent-color: var(--primary); cursor: pointer;" onmouseover="this.style.boxShadow='0 2px 8px var(--t-3)'; this.style.opacity='0.9'" onmouseout="this.style.boxShadow='none'; this.style.opacity='1'"></field-range>
-            </div>
+          <a name="disabled"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Disabled State</h2>
+          <div class="mb-10">Range slider in disabled and readonly states.</div>
+          <div class="bg-t-3 p-10 mb-10 flex gap-20">
+            <field-range name="disabled-range" min="0" max="100" step="10" value="50" disabled></field-range>
+            <field-range name="readonly-range" min="0" max="100" step="10" value="75" readonly></field-range>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-range 
-              name="brightness" 
+              name="disabled-range" 
+              min="0" 
+              max="100" 
+              step="10" 
+              value="50" 
+              disabled
+            /&gt;
+            &lt;field-range 
+              name="readonly-range" 
+              min="0" 
+              max="100" 
+              step="10" 
               value="75" 
-              class="w-300 bg-transparent tx-t-1 h-8 c-5 transition-300" 
-              style="background: linear-gradient(to right, var(--primary) 75%, var(--t-2) 75%); accent-color: var(--primary); cursor: pointer;" 
-              onmouseover="this.style.boxShadow='0 2px 8px var(--t-3)'; this.style.opacity='0.9'" 
-              onmouseout="this.style.boxShadow='none'; this.style.opacity='1'" 
+              readonly
             /&gt;
           </ide-code>
 
-          <!-- Navigation -->
+          <a name="styled"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Range</h2>
+          <div class="mb-10">Range slider with custom styling and required attribute.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-range name="styled-range" min="0" max="200" step="1" value="100" width="100" class="w-300 rounded b-solid b-primary bg-white p-10" required></field-range>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-range 
+              name="styled-range" 
+              min="0" 
+              max="200" 
+              step="1" 
+              value="100" 
+              width="100"
+              class="w-300 rounded b-solid b-primary bg-white p-10"
+              required
+            /&gt;
+          </ide-code>
+
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/radio.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Radio
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Radio Field
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/rating.html">
-              Rating
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Rating Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

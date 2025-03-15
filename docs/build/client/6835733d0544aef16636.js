@@ -6344,10 +6344,10 @@ var InkAPI = (() => {
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/field/number.html` }, [
+                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/field/markdown.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Number Field")),
+                      ...this._toNodeList(_("Markdown Field")),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

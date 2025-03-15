@@ -5118,9 +5118,9 @@ var InkAPI = (() => {
       return document2.sync();
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/field/metadata.html";
+      const title = _("Ink UI - Metadata Field Component");
+      const description = _("A key-value pair input field for metadata with dynamic rows.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -5128,9 +5128,10 @@ var InkAPI = (() => {
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Form", href: "/ink/ui/form/index.html" },
-        { label: "Metadata" }
+        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
+        { label: "Metadata Field" }
       ];
+      const initialMetadata = { "title": "Home", "description": "Welcome page" };
       return [
         import_Document.default.createText(`
 
@@ -5762,7 +5763,7 @@ var InkAPI = (() => {
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -5775,7 +5776,7 @@ var InkAPI = (() => {
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -5799,19 +5800,15 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Metadata` }, [
-                      ...this._toNodeList(_("Metadata"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#metadata` }, [
+                      ...this._toNodeList(_("Metadata Field"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -5824,27 +5821,21 @@ var InkAPI = (() => {
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basicMetadata` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Basic Metadata"))
+                        ...this._toNodeList(_("Basic Usage"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#metadataWithValues` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#initial` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Metadata with Initial Values"))
+                        ...this._toNodeList(_("Initial Values"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#customAddButton` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#custom` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Custom Add Button Text"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styledMetadata` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Styled Metadata"))
+                        ...this._toNodeList(_("Custom Styling"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -5876,20 +5867,20 @@ var InkAPI = (() => {
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `Metadata` }, []),
+                  import_Document.default.createElement("a", { "name": `metadata` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Metadata"))
+                    ...this._toNodeList(_("Metadata Field"))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Metadata`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Metadata Field`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Metadata from '@stackpress/ink-ui/field/metadata';
+              import MetadataField from '@stackpress/ink-ui/field/metadata';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -5897,7 +5888,6 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Props Section -->
           `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
@@ -5907,16 +5897,11 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("p", { "class": `mb-20` }, [
-                    ...this._toNodeList(_("The `<field-metadata>` component allows dynamic addition and removal of key-value pairs for form submission. Below are its props:"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Property"))
+                      ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -5931,10 +5916,9 @@ var InkAPI = (() => {
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Description"))
+                      ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -5955,40 +5939,12 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Base name for form submission (e.g., `metadata[key]`)."))
+                        ...this._toNodeList(_('Base name for form submission (e.g., "metadata[key]")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`add`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Text for the "Add" button. Defaults to "Add".'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -6009,19 +5965,18 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Initial key-value pairs to populate the component. Defaults to `{}`."))
+                        ...this._toNodeList(_("Initial key-value pairs (default: {})"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`class`, false)
+                        import_Document.default.createText(`add`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -6036,34 +5991,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("CSS classes for the host element, styled via default utilities."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`style`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Inline styles for the host element, overriding defaults."))
+                        ...this._toNodeList(_('Text for the add button (default: "Add")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -6073,161 +6001,113 @@ var InkAPI = (() => {
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Basic Metadata -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `basicMetadata` }, []),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Basic Metadata"))
+                    ...this._toNodeList(_("Basic Usage"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A simple metadata field with default settings, allowing users to add key-value pairs."))
+                    import_Document.default.createText(`A simple metadata field with default add button.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-metadata", { "name": `metadata` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-metadata", { "name": `basic-metadata`, "class": `w-250` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <field-metadata name="metadata" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Metadata with Initial Values -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `metadataWithValues` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Metadata with Initial Values"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Pre-populates the metadata field with initial key-value pairs using the `value` prop."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-metadata", { "name": `metadata`, "value": { "author": "John Doe", "date": "2023-10-01" } }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <field-metadata name="metadata" value={{ "author": "John Doe", "date": "2023-10-01" }} />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Custom Add Button Text -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `customAddButton` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Custom Add Button Text"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_('Customizes the "Add" button text using the `add` prop.'))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-metadata", { "name": `metadata`, "add": `Add New Pair` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <field-metadata name="metadata" add="Add New Pair" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Styled Metadata -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `styledMetadata` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Styled Metadata"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Applies custom styles to the metadata field using `class` and `style` props."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-metadata", { "name": `metadata`, "class": `w-300 bg-white tx-t-1 c-10 p-15 b-solid b-t-2 transition-300 hover:b-primary`, "style": `border-color: var(--t-2); background: linear-gradient(135deg, #ffffff, #f9f9f9); box-shadow: 0 2px 6px var(--t-1);`, "onmouseover": `this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-3)'`, "onmouseout": `this.style.borderColor='var(--t-2)'; this.style.boxShadow='0 2px 6px var(--t-1)'` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <field-metadata 
-              name="metadata" 
-              class="w-300 bg-white tx-t-1 c-10 p-15 b-solid b-t-2 transition-300 hover:b-primary" 
-              style="border-color: var(--t-2); background: linear-gradient(135deg, #ffffff, #f9f9f9); box-shadow: 0 2px 6px var(--t-1);" 
-              onmouseover="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-3)'" 
-              onmouseout="this.style.borderColor='var(--t-2)'; this.style.boxShadow='0 2px 6px var(--t-1)'" 
+              name="basic-metadata" 
+              class="w-250"
             />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Navigation -->
+          `, false),
+                  import_Document.default.createElement("a", { "name": `initial` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Initial Values"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Metadata field with preloaded key-value pairs.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-metadata", { "name": `initial-metadata`, "class": `w-250`, "value": { "title": "Home", "description": "Welcome page" } }),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <field-metadata 
+              name="initial-metadata" 
+              class="w-250"
+              value={{"title": "Home", "description": "Welcome page"}}
+            />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `custom` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Custom Styling"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Metadata field with custom styling, placeholder, and update callback.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-metadata", { "class": `w-250 b-solid b-primary rounded`, "name": `custom-metadata`, "placeholder": `Enter text`, "value": initialMetadata, "add": `Add New`, "update": (value) => console.log("Updated metadata:", value) }),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <script>
+              const initialMetadata = { "title": "Home", "description": "Welcome page" };
+            <\/script>
+            <field-metadata 
+              class="w-250 b-solid b-primary rounded"
+              name="custom-metadata" 
+              placeholder="Enter text" 
+              value={initialMetadata} 
+              add="Add New"
+              update={(value) => console.log('Updated metadata:', value)}
+            />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
           `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
@@ -6236,9 +6116,7 @@ var InkAPI = (() => {
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Mask")),
+                      ...this._toNodeList(_("Mask Field")),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -6247,9 +6125,7 @@ var InkAPI = (() => {
                     import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/field/number.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Number")),
-                      import_Document.default.createText(`
-              `, false),
+                      ...this._toNodeList(_("Number Field")),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

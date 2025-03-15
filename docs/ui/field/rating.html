@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Rating Field Component</title>
+  <meta name="description" content="A star-based rating input with clickable stars." />
+  <meta property="og:title" content="Ink UI - Rating Field Component" />
+  <meta property="og:description" content="A star-based rating input with clickable stars." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/rating.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Rating Field Component" />
+  <meta name="twitter:description" content="A star-based rating input with clickable stars." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -142,23 +142,21 @@
   
 
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       Formats
     </a>
   
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Rating">Rating</a>
+            <a class="block tx-t-0" href="#rating">Rating Field</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicRating">• Basic Rating Input</a>
-              <a class="block tx-t-1" href="#customMaxRating">• Rating with Custom Max</a>
-              <a class="block tx-t-1" href="#styledRating">• Styled Rating Input</a>
+              <a class="block tx-t-1" href="#basic">• Basic Rating</a>
+              <a class="block tx-t-1" href="#custom-max">• Custom Max Stars</a>
+              <a class="block tx-t-1" href="#styled">• Custom Size and Color</a>
             </nav>
           </nav>
         </menu>
@@ -169,142 +167,95 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Rating"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Rating</h1>
-          <ide-app title="Rating" class="py-20">
+          <a name="rating"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Rating Field</h1>
+          <ide-app title="Rating Field" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import Rating from '@stackpress/ink-ui/field/rating';
+              import RatingField from '@stackpress/ink-ui/field/rating';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <p class="mb-20">The `&lt;field-rating&gt;` component provides a star-based rating system for user input. Below are its props:</p>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <p class="mb-20">The `&lt;field-rating&gt;` component allows users to set a rating using stars. Below are its supported props:</p>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
-            <table-head>Description</table-head>
-
+            <table-head>Notes</table-head>
             <table-row>
               <table-col>name</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Name attribute for form submission.</table-col>
+              <table-col>Name attribute for form submission</table-col>
             </table-row>
-
             <table-row>
               <table-col>value</table-col>
-              <table-col>String/Number</table-col>
+              <table-col>String | Number</table-col>
               <table-col>No</table-col>
-              <table-col>Initial rating value (defaults to 0).</table-col>
+              <table-col>Initial rating value (default: 0)</table-col>
             </table-row>
-
             <table-row>
               <table-col>max</table-col>
-              <table-col>String/Number</table-col>
+              <table-col>String | Number</table-col>
               <table-col>No</table-col>
-              <table-col>Maximum number of stars (defaults to 5).</table-col>
+              <table-col>Maximum number of stars (default: 5)</table-col>
             </table-row>
-
-            <table-row>
-              <table-col>disabled</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Disables the rating input.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>required</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Marks the input as required.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>change</table-col>
-              <table-col>Function</table-col>
-              <table-col>No</table-col>
-              <table-col>Custom handler for change events, receiving the selected value.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>update</table-col>
-              <table-col>Function</table-col>
-              <table-col>No</table-col>
-              <table-col>Callback with the updated rating value.</table-col>
-            </table-row>
-
             <table-row>
               <table-col>class</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>CSS classes for the host element (use Ink utilities).</table-col>
+              <table-col>CSS classes for styling (e.g., size, color via Ink utilities)</table-col>
             </table-row>
-
             <table-row>
               <table-col>style</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Inline styles (prefer Ink utilities instead).</table-col>
+              <table-col>Inline styles (prefer Ink utilities)</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Rating Input -->
-          <a name="basicRating"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Rating Input</h2>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Rating</h2>
           <div class="mb-10">A basic rating input with 5 stars.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-rating name="rating" value="3"></field-rating>
-            </div>
+          <div class="bg-t-3 p-10 mb-10 flex justify-center">
+            <field-rating name="basic-rating" value="3"></field-rating>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-rating name="rating" value="3" /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-rating name="basic-rating" value="3" /&gt;
           </ide-code>
 
-          <!-- Rating with Custom Max -->
-          <a name="customMaxRating"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Rating with Custom Max</h2>
-          <div class="mb-10">A rating input with a custom maximum number of stars.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-rating name="rating" value="4" max="7"></field-rating>
-            </div>
+          <a name="custom-max"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Max Stars</h2>
+          <div class="mb-10">Rating input with a custom maximum number of stars.</div>
+          <div class="bg-t-3 p-10 mb-10 flex justify-center">
+            <field-rating name="custom-rating" value="4" max="7"></field-rating>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-rating name="rating" value="4" max="7" /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-rating name="custom-rating" value="4" max="7" /&gt;
           </ide-code>
 
-          <!-- Styled Rating Input -->
-          <a name="styledRating"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Rating Input</h2>
-          <div class="mb-10">A styled rating input with custom size, color, and hover effects using Ink utilities.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-rating name="rating" value="3" max="5" class="flex gap-10 tx-24 tx-primary transition-300 hover:scale-105 hover:tx-t-2" style="cursor: pointer;"></field-rating>
-            </div>
+          <a name="styled"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Size and Color</h2>
+          <div class="mb-10">Rating input styled with larger size and custom color.</div>
+          <div class="bg-t-3 p-10 mb-10 flex justify-center">
+            <field-rating name="styled-rating" value="2" max="5" class="tx-24 tx-primary hover:tx-t-2 transition-300"></field-rating>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-rating 
-              name="rating" 
-              value="3" 
+              name="styled-rating" 
+              value="2" 
               max="5" 
-              class="flex gap-10 tx-24 tx-primary transition-300 hover:scale-105 hover:tx-t-2" 
-              style="cursor: pointer;"
+              class="tx-24 tx-primary hover:tx-t-2 transition-300"
             /&gt;
           </ide-code>
 
-          <!-- Navigation -->
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/range.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Range
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Range Field
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/select.html">
-              Select
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Select Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

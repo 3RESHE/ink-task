@@ -244,8 +244,8 @@
             <a class="tx-primary py-40" href="/ink/ui/field/filelist.html">
               <element-icon name="chevron-left" theme="tx-1" />{_('Filelist Field')}
             </a>
-            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/number.html">
-              {_('Number Field')}<element-icon name="chevron-right" theme="tx-1" />
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/markdown.html">
+              {_('Markdown Field')}<element-icon name="chevron-right" theme="tx-1" />
             </a>
           </nav>
           <footer class="foot"></footer>

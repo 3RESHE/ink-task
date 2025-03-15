@@ -820,9 +820,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
   @ink utilities;`;
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/field/mask.html";
+      const title = _("Ink UI - Mask Field Component");
+      const description = _("A masked input field using Inputmask for formatted input.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -830,11 +830,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Form", href: "/ink/ui/form/index.html" },
-        { label: "Mask" }
+        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
+        { label: "Mask Field" }
       ];
-      const handleChange = (e) => console.log("Change event:", e.target.value);
-      const handleUpdate = (value) => console.log("Updated value:", value);
       return [
         import_Document.default.createText(`
 
@@ -1466,7 +1464,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -1479,7 +1477,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -1503,19 +1501,15 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Mask` }, [
-                      ...this._toNodeList(_("Mask"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#mask` }, [
+                      ...this._toNodeList(_("Mask Field"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1528,63 +1522,45 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basicMask` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Basic Phone Mask"))
+                        ...this._toNodeList(_("Basic Usage"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#aliasMask` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#custom-mask` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Alias Mask (Date)"))
+                        ...this._toNodeList(_("Custom Mask"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#regexMask` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#alias` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Regex Mask"))
+                        ...this._toNodeList(_("Alias Mask"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#numericMask` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#numeric` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Numeric Input Mask"))
+                        ...this._toNodeList(_("Numeric Input"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#maskWithPlaceholder` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#alignment` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Mask with Placeholder"))
+                        ...this._toNodeList(_("Right Alignment"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#maskWithValidation` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#repeat` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Mask with Validation"))
+                        ...this._toNodeList(_("Repeated Mask"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#maskWithChange` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styling` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Mask with Change Event"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#maskWithUpdate` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Mask with Update Callback"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#maskWithError` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Mask with Error Handling"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styledMask` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Styled Mask"))
+                        ...this._toNodeList(_("Styling"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1616,20 +1592,20 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `Mask` }, []),
+                  import_Document.default.createElement("a", { "name": `mask` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Mask"))
+                    ...this._toNodeList(_("Mask Field"))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Mask`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Mask Field`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Mask from '@stackpress/ink-ui/field/mask';
+              import MaskField from '@stackpress/ink-ui/field/mask';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1637,7 +1613,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Props Section -->
           `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
@@ -1647,16 +1622,11 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("p", { "class": `mb-20` }, [
-                    ...this._toNodeList(_("The `<field-mask>` component enhances inputs with custom masks using the `Inputmask` library. Below are its props for controlling masking and input behavior:"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Property"))
+                      ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1671,307 +1641,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Description"))
+                      ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`name`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Name attribute for form submission, linking the input to form data."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`value`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Initial value of the masked input (e.g., "1234567890" for a phone mask).'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`mask`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String/Array`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Custom mask pattern (e.g., "(999) 999-9999"). Use "9" for digits, "A" for letters, etc.'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`regex`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Regex pattern for masking (e.g., "^[0-9]{4}$" for 4 digits). Overrides `mask` if set.'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`alias`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Predefined mask alias (e.g., "phone", "date", "email"). Simplifies common formats.'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`repeat`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Number`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Repeats the mask pattern a specified number of times."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`greedy`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Forces the mask to be fully completed before allowing input to proceed."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`numericInput`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Fills numeric masks from right to left, ideal for numbers like currency."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`rightAlign`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Aligns input text to the right within the field."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`definitions`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Object`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Custom mask character definitions (e.g., { "X": "[A-Z]" }). Extends mask syntax.'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`placeholder`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Hint text shown when the input is empty, guiding user input (e.g., "(123) 456-7890").'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1992,13 +1664,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Controls browser autofill behavior (e.g., "off", "tel").'))
+                        ...this._toNodeList(_('Autocomplete attribute (e.g., "on", "off")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -2019,13 +1690,38 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Disables the input, preventing interaction."))
+                        ...this._toNodeList(_("Disables the input"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`name`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Name attribute for form submission"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -2046,13 +1742,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Regex pattern for HTML5 validation (e.g., "[0-9]{10}"). Works alongside mask.'))
+                        ...this._toNodeList(_("Regex pattern for validation"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -2073,13 +1768,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Makes the input read-only, displaying the mask without edits."))
+                        ...this._toNodeList(_("Makes the input read-only"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -2100,13 +1794,246 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Marks the input as required for form submission."))
+                        ...this._toNodeList(_("Marks the input as required"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`value`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Initial value"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`mask`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Mask pattern (e.g., "999-999-9999")'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`regex`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Regex pattern for mask (alternative to mask)"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`alias`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Predefined mask alias (e.g., "phone", "email")'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`repeat`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Number`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Number of times to repeat mask"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`greedy`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Greedy masking behavior"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`numericInput`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Forces numeric input"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`rightAlign`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Aligns input to the right"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`definitions`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Object`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Custom mask definitions"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -2127,13 +2054,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom handler for change events, receiving the event object."))
+                        ...this._toNodeList(_("Callback for change event"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -2154,88 +2080,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Callback with the current masked value after changes."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`error`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Function`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Callback to handle errors, receiving an error message when validation fails."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`class`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("CSS classes for the host element, styled via default utilities."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`style`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Inline styles for the host element, overriding defaults."))
+                        ...this._toNodeList(_("Callback for value updates"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -2245,407 +2090,253 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Basic Phone Mask -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `basicMask` }, []),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Basic Phone Mask"))
+                    ...this._toNodeList(_("Basic Usage"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_('A simple phone number mask using the `mask` prop, formatting input as "(999) 999-9999".'))
+                    import_Document.default.createText(`A simple masked input for a phone number.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-mask", { "name": `phone`, "mask": `(999) 999-9999` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-mask", { "name": `phone`, "mask": `999-999-9999`, "placeholder": `999-999-9999` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <field-mask name="phone" mask="(999) 999-9999" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Alias Mask (Date) -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `aliasMask` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Alias Mask (Date)"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_('Uses the `alias` prop for a predefined date mask, formatting as "mm/dd/yyyy".'))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-mask", { "name": `date`, "alias": `datetime`, "mask": `mm/dd/yyyy` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <field-mask name="date" alias="datetime" mask="mm/dd/yyyy" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Regex Mask -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `regexMask` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Regex Mask"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_('Applies a regex mask with `regex`, restricting input to exactly 4 digits (e.g., "1234").'))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-mask", { "name": `code`, "regex": `^[0-9]{4}$` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <field-mask name="code" regex="^[0-9]{4}$" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Numeric Input Mask -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `numericMask` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Numeric Input Mask"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A numeric mask with `numericInput` for right-to-left entry, ideal for currency or codes."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-mask", { "name": `amount`, "mask": `9999`, "numericInput": true }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <field-mask name="amount" mask="9999" numericInput />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Mask with Placeholder -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `maskWithPlaceholder` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Mask with Placeholder"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Adds a `placeholder` to guide the user on the expected format of the phone mask."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-mask", { "name": `phone`, "mask": `(999) 999-9999`, "placeholder": `(123) 456-7890` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <field-mask name="phone" mask="(999) 999-9999" placeholder="(123) 456-7890" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Mask with Validation -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `maskWithValidation` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Mask with Validation"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Combines a phone mask with `required` and `pattern` for form validation, ensuring the input matches the mask format."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-mask", { "name": `phone`, "mask": `(999) 999-9999`, "required": true, "pattern": `([0-9]{3}) [0-9]{3}-[0-9]{4}` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <field-mask name="phone" mask="(999) 999-9999" required pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Mask with Change Event -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `maskWithChange` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Mask with Change Event"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Logs changes with the `change` prop, capturing masked input for real-time feedback."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-mask", { "name": `phone`, "mask": `(999) 999-9999`, "change": handleChange }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <script>
-              const handleChange = (e) => console.log('Change event:', e.target.value);
-            </script>
-            <field-mask name="phone" mask="(999) 999-9999" change={handleChange} />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Mask with Update Callback -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `maskWithUpdate` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Mask with Update Callback"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Tracks masked value changes with `update`, syncing with external state."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-mask", { "name": `phone`, "mask": `(999) 999-9999`, "update": handleUpdate }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <script>
-              const handleUpdate = (value) => console.log('Updated value:', value);
-            </script>
-            <field-mask name="phone" mask="(999) 999-9999" update={handleUpdate} />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Mask with Error Handling -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `maskWithError` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Mask with Error Handling"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Uses the `error` prop to handle invalid input by validating the phone number format on change."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-mask", { "name": `phone`, "mask": `(999) 999-9999`, "change": (e) => {
-                        const value = e.target.value;
-                        const isValid = /^\(\d{3}\) \d{3}-\d{4}$/.test(value);
-                        if (!isValid && value.length === 14) {
-                          e.target.error("Invalid phone number format. Expected: (123) 456-7890");
-                        }
-                      }, "error": (message) => console.log("Error:", message) }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <field-mask 
               name="phone" 
-              mask="(999) 999-9999" 
-              change={(e) => {
-                const value = e.target.value;
-                const isValid = /^(d{3}) d{3}-d{4}$/.test(value);
-                if (!isValid && value.length === 14) {
-                  e.target.error('Invalid phone number format. Expected: (123) 456-7890');
-                }
-              }}
-              error={(message) => console.log('Error:', message)}
+              mask="999-999-9999" 
+              placeholder="999-999-9999" 
             />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Styled Mask -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `styledMask` }, []),
+                  import_Document.default.createElement("a", { "name": `custom-mask` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Styled Mask"))
+                    ...this._toNodeList(_("Custom Mask"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A minimalist styled mask with a wide layout, soft border, and hover effect via `class` and `style`."))
+                    import_Document.default.createText(`Masked input with a custom date format and numeric input.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-mask", { "name": `phone`, "mask": `(999) 999-9999`, "class": `w-300 bg-primary tx-t-1`, "style": `border: 1px solid #e0e0e0; padding: 8px; transition: border-color 0.3s ease;`, "onmouseover": `this.style.borderColor='#888888'`, "onmouseout": `this.style.borderColor='#e0e0e0'` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-mask", { "name": `date`, "mask": `99/99/9999`, "placeholder": `MM/DD/YYYY`, "numericInput": true }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <field-mask 
-              name="phone" 
-              mask="(999) 999-9999" 
-              class="w-300 bg-primary tx-t-1" 
-              style="border: 1px solid #e0e0e0; padding: 8px; transition: border-color 0.3s ease;" 
-              onmouseover="this.style.borderColor='#888888'" 
-              onmouseout="this.style.borderColor='#e0e0e0'" 
+              name="date" 
+              mask="99/99/9999" 
+              placeholder="MM/DD/YYYY" 
+              numericInput={true}
             />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Navigation -->
+          `, false),
+                  import_Document.default.createElement("a", { "name": `alias` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Alias Mask"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Masked input using a predefined alias for email.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-mask", { "name": `email`, "alias": `email`, "placeholder": `user@domain.com` }),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <field-mask 
+              name="email" 
+              alias="email" 
+              placeholder="user@domain.com" 
+            />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `numeric` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Numeric Input"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Masked input restricted to numbers with a disabled state.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-mask", { "name": `numeric`, "mask": `9999-9999`, "numericInput": true, "placeholder": `1234-5678`, "disabled": true }),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <field-mask 
+              name="numeric" 
+              mask="9999-9999" 
+              numericInput={true} 
+              placeholder="1234-5678" 
+              disabled={true}
+            />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `alignment` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Right Alignment"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Masked input aligned to the right with a currency mask.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-mask", { "name": `currency`, "mask": `$ 999.99`, "placeholder": `$ 123.45`, "rightAlign": true, "numericInput": true }),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <field-mask 
+              name="currency" 
+              mask="$ 999.99" 
+              placeholder="$ 123.45" 
+              rightAlign={true} 
+              numericInput={true}
+            />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `repeat` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Repeated Mask"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Masked input with a repeating pattern and greedy behavior.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-mask", { "name": `repeat`, "mask": `9`, "repeat": 5, "greedy": true, "placeholder": `12345` }),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <field-mask 
+              name="repeat" 
+              mask="9" 
+              repeat={5} 
+              greedy={true} 
+              placeholder="12345" 
+            />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `styling` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Styling"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Masked input with custom styling and change callback.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-mask", { "name": `custom-phone`, "mask": `(999) 999-9999`, "placeholder": `(999) 999-9999`, "class": `w-200 rounded b-solid b-primary p-5`, "change": (e) => console.log("Changed to:", e.target.value) }),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <field-mask 
+              name="custom-phone" 
+              mask="(999) 999-9999" 
+              placeholder="(999) 999-9999" 
+              class="w-200 rounded b-solid b-primary p-5"
+              change={(e) => console.log('Changed to:', e.target.value)}
+            />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
           `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
@@ -2654,9 +2345,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Markdown")),
+                      ...this._toNodeList(_("Markdown Field")),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -2665,9 +2354,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/field/metadata.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Metadata")),
-                      import_Document.default.createText(`
-              `, false),
+                      ...this._toNodeList(_("Metadata Field")),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

@@ -820,9 +820,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
   @ink utilities;`;
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/field/radio.html";
+      const title = _("Ink UI - Radio Field Component");
+      const description = _("A radio button input with customizable label, shape, and style.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -830,10 +830,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Form", href: "/ink/ui/form/index.html" },
-        { label: "Radio" }
+        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
+        { label: "Radio Field" }
       ];
-      const handleChange = (e) => console.log("Change event:", e.target.value);
       return [
         import_Document.default.createText(`
 
@@ -1465,7 +1464,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ...!!(url === "/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -1478,7 +1477,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ,
                       import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/formats/index.html` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
                         import_Document.default.createText(`
       `, false),
                         ...this._toNodeList(_("Formats")),
@@ -1502,19 +1501,15 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Radio` }, [
-                      ...this._toNodeList(_("Radio"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#radio` }, [
+                      ...this._toNodeList(_("Radio Field"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1527,25 +1522,31 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basicRadio` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#simple` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Basic Radio Group"))
+                        ...this._toNodeList(_("Simple Radio"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#radioWithDefault` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#group` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Radio with Default Selection"))
+                        ...this._toNodeList(_("Styled Group"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#disabledRadio` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#disabled` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Disabled Radio Button"))
+                        ...this._toNodeList(_("Disabled and Readonly"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styledRadio` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#required` }, [
+                        import_Document.default.createText(`\u2022 `, false),
+                        ...this._toNodeList(_("Required Group"))
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styled` }, [
                         import_Document.default.createText(`\u2022 `, false),
                         ...this._toNodeList(_("Styled Radio Button"))
                       ]),
@@ -1579,20 +1580,20 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `Radio` }, []),
+                  import_Document.default.createElement("a", { "name": `radio` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Radio"))
+                    ...this._toNodeList(_("Radio Field"))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Radio`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Radio Field`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Radio from '@stackpress/ink-ui/field/radio';
+              import RadioField from '@stackpress/ink-ui/field/radio';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1600,7 +1601,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Props Section -->
           `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
@@ -1610,16 +1610,11 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("p", { "class": `mb-20` }, [
-                    ...this._toNodeList(_("The `<field-radio>` component provides a radio button input for selecting a single option from a group. Below are its props:"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Property"))
+                      ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1634,64 +1629,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Description"))
+                      ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`name`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Name attribute linking radio buttons in a group for form submission."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`value`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Value of the radio button, submitted when selected."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1712,13 +1652,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Sets the initial checked state of the radio button."))
+                        ...this._toNodeList(_("Initial checked state"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1739,13 +1678,64 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Disables the radio button, preventing interaction."))
+                        ...this._toNodeList(_("Disables the radio"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`name`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Name attribute for form submission and grouping"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`readonly`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Prevents changing the radio state"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1766,13 +1756,64 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Marks the radio group as required (enforced at form level)."))
+                        ...this._toNodeList(_("Marks the radio group as required in a form"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`value`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Value of the radio option"))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`label`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Text label for the radio (default: "")'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1793,51 +1834,23 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom handler for change events, receiving the selected value."))
+                        ...this._toNodeList(_("Callback for change event"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`class`, false)
+                        import_Document.default.createText(`update`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("CSS classes for the host element (use Ink utilities)."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`style`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
+                        import_Document.default.createText(`Function`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -1847,7 +1860,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Inline styles for the host element (prefer Ink utilities)."))
+                        ...this._toNodeList(_("Callback with updated value"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1857,144 +1870,189 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Basic Radio Group -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `basicRadio` }, []),
+                  import_Document.default.createElement("a", { "name": `simple` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Basic Radio Group"))
+                    ...this._toNodeList(_("Simple Radio"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A simple radio group with multiple options."))
+                    import_Document.default.createText(`A basic radio button with a square shape.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-radio", { "name": `option`, "value": `yes` }, [
-                        import_Document.default.createText(`Yes`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-radio", { "name": `option`, "value": `no` }, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-radio", { "name": `simple-radio`, "label": `Agree`, "value": `agree`, "style": `border-radius: 0;` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <field-radio name="option" value="yes">Yes</field-radio>
-            <field-radio name="option" value="no">No</field-radio>
+            <field-radio 
+              name="simple-radio" 
+              label=" Agree" 
+              value="agree"
+              style="border-radius: 0;"
+            />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Radio with Default Selection -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `radioWithDefault` }, []),
+                  import_Document.default.createElement("a", { "name": `group` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Radio with Default Selection"))
+                    ...this._toNodeList(_("Styled Group"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A radio group with a pre-selected option using the `checked` prop."))
+                    import_Document.default.createText(`A group of radio buttons with rounded shapes, spacing, and update callback.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10 flex gap-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-radio", { "name": `choice`, "value": `yes`, "checked": true }, [
-                        import_Document.default.createText(`Yes`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-radio", { "name": `choice`, "value": `no` }, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-radio", { "name": `group-radio`, "label": `Yes`, "value": `yes`, "checked": true, "rounded": true, "class": `p-5`, "update": (value) => console.log("Selected:", value) }),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-radio", { "name": `group-radio`, "label": `No`, "value": `no`, "rounded": true, "class": `p-5`, "update": (value) => console.log("Selected:", value) }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <field-radio name="choice" value="yes" checked>Yes</field-radio>
-            <field-radio name="choice" value="no">No</field-radio>
+            <field-radio 
+              name="group-radio" 
+              label="Yes" 
+              value="yes" 
+              checked
+              rounded
+              class="p-5"
+              update={(value) => console.log('Selected:', value)}
+            />
+            <field-radio 
+              name="group-radio" 
+              label="No" 
+              value="no"
+              rounded
+              class="p-5"
+              update={(value) => console.log('Selected:', value)}
+            />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Disabled Radio Button -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `disabledRadio` }, []),
+                  import_Document.default.createElement("a", { "name": `disabled` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Disabled Radio Button"))
+                    ...this._toNodeList(_("Disabled and Readonly"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A radio group with a disabled option."))
+                    import_Document.default.createText(`Radio buttons demonstrating disabled and readonly states.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10 flex gap-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-radio", { "name": `status`, "value": `active` }, [
-                        import_Document.default.createText(`Active`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-radio", { "name": `status`, "value": `inactive`, "disabled": true }, [
-                        import_Document.default.createText(`Inactive`, false)
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-radio", { "name": `state-radio`, "label": `Enabled`, "value": `enabled`, "checked": true }),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-radio", { "name": `state-radio`, "label": `Disabled`, "value": `disabled`, "disabled": true }),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-radio", { "name": `state-radio`, "label": `Readonly`, "value": `readonly`, "readonly": true }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <field-radio name="status" value="active">Active</field-radio>
-            <field-radio name="status" value="inactive" disabled>Inactive</field-radio>
+            <field-radio 
+              name="state-radio" 
+              label="Enabled" 
+              value="enabled" 
+              checked
+            />
+            <field-radio 
+              name="state-radio" 
+              label="Disabled" 
+              value="disabled"
+              disabled
+            />
+            <field-radio 
+              name="state-radio" 
+              label="Readonly" 
+              value="readonly"
+              readonly
+            />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Styled Radio Button -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `styledRadio` }, []),
+                  import_Document.default.createElement("a", { "name": `required` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Required Group"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`A group of radio buttons marked as required.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10 flex gap-20` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-radio", { "name": `required-radio`, "label": `Option A`, "value": `a`, "required": true }),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-radio", { "name": `required-radio`, "label": `Option B`, "value": `b`, "required": true }),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <field-radio 
+              name="required-radio" 
+              label="Option A" 
+              value="a" 
+              required
+            />
+            <field-radio 
+              name="required-radio" 
+              label="Option B" 
+              value="b"
+              required
+            />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `styled` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
@@ -2003,53 +2061,46 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A styled radio group with custom `class` and `style` props."))
+                    import_Document.default.createText(`A styled radio group with custom class and style props, including hover effects.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10 flex gap-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-radio", { "name": `option`, "value": `yes`, "label": `Yes`, "class": `flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2`, "style": `border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;`, "onmouseover": `this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'`, "onmouseout": `this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'` }),
-                      import_Document.default.createText(`
-                            `, false),
-                      import_Document.default.createElement("field-radio", { "name": `option`, "value": `no`, "label": `No`, "class": `flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2`, "style": `border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;`, "onmouseover": `this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'`, "onmouseout": `this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-radio", { "name": `styled-radio`, "value": `yes`, "label": `Yes`, "class": `flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2`, "style": `border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;`, "onmouseover": `this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'`, "onmouseout": `this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'` }),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-radio", { "name": `styled-radio`, "value": `no`, "label": `No`, "class": `flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2`, "style": `border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;`, "onmouseover": `this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'`, "onmouseout": `this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-    <field-radio 
-        name="option" 
-        value="yes" 
-        label="Yes" 
-        class="flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2" 
-        style="border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;" 
-        onmouseover="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'" 
-        onmouseout="this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'" 
-      />
-    <field-radio 
-        name="option" 
-        value="no" 
-        label="No" 
-        class="flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2" 
-        style="border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;" 
-        onmouseover="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'" 
-        onmouseout="this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'" 
-      />
+            <field-radio 
+              name="styled-radio" 
+              value="yes" 
+              label="Yes" 
+              class="flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2" 
+              style="border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;"
+              onmouseover="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'" 
+              onmouseout="this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'" 
+            />
+            <field-radio 
+              name="styled-radio" 
+              value="no" 
+              label="No" 
+              class="flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2" 
+              style="border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;"
+              onmouseover="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'" 
+              onmouseout="this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'" 
+            />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Navigation -->
           `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
@@ -2058,9 +2109,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Password")),
+                      ...this._toNodeList(_("Password Field")),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -2069,9 +2118,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/field/range.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Range")),
-                      import_Document.default.createText(`
-              `, false),
+                      ...this._toNodeList(_("Range Field")),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

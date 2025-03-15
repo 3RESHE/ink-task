@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\field\markdown.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\field\markdown.ink
   var markdown_exports = {};
   __export(markdown_exports, {
     default: () => Markdown_fcadfa06c1c41030eb3c
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\field\markdown.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\field\markdown.ink
   var Markdown_fcadfa06c1c41030eb3c = class extends import_Document2.default {
     id() {
       return "fcadfa06c1c41030eb3c";
@@ -820,9 +820,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
   @ink utilities;`;
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/field/markdown.html";
+      const title = _("Ink UI - Markdown Field Component");
+      const description = _("A markdown editor with live preview using CodeMirror and Marked.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -830,11 +830,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Form", href: "/ink/ui/form/index.html" },
-        { label: "Markdown" }
+        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
+        { label: "Markdown Field" }
       ];
-      const handleChange = (e) => console.log("Change event:", e.target.value);
-      const handleUpdate = (value) => console.log("Updated Markdown:", value);
       return [
         import_Document.default.createText(`
 
@@ -1503,19 +1501,15 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Markdown` }, [
-                      ...this._toNodeList(_("Markdown"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#markdown` }, [
+                      ...this._toNodeList(_("Markdown Field"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1528,39 +1522,21 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basicMarkdown` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Basic Markdown Editor"))
+                        ...this._toNodeList(_("Basic Usage"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#markdownWithValue` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#preview` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Markdown with Initial Value"))
+                        ...this._toNodeList(_("Preview Mode"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#markdownWithNumbers` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#custom` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Markdown with Line Numbers"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#markdownWithChange` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Markdown with Change Event"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#markdownWithUpdate` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Markdown with Update Callback"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styledMarkdown` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Styled Markdown Editor"))
+                        ...this._toNodeList(_("Custom Styling"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1592,20 +1568,20 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `Markdown` }, []),
+                  import_Document.default.createElement("a", { "name": `markdown` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Markdown"))
+                    ...this._toNodeList(_("Markdown Field"))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Editor`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Markdown Field`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Markdown from '@stackpress/ink-ui/field/markdown';
+              import MarkdownField from '@stackpress/ink-ui/field/markdown';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1613,7 +1589,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Props Section -->
           `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
@@ -1623,16 +1598,11 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("p", { "class": `mb-20` }, [
-                    ...this._toNodeList(_("The `<field-markdown>` component provides a Markdown editor with edit and preview modes. Below are its props and their roles:"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Property"))
+                      ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1647,10 +1617,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Description"))
+                      ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1671,13 +1640,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Name attribute for form submission, tied to a hidden textarea."))
+                        ...this._toNodeList(_("Name attribute for form submission"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1698,13 +1666,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Initial Markdown content to display in the editor."))
+                        ...this._toNodeList(_("Initial markdown content"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1725,13 +1692,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("If true, displays line numbers in the editor for better navigation."))
+                        ...this._toNodeList(_("Show line numbers in editor (default: false)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1752,13 +1718,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Handler called with the change event when content is edited."))
+                        ...this._toNodeList(_("Callback for change event (receives ChangeEvent)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1779,61 +1744,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Callback invoked with the current Markdown content on change."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`class`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom CSS classes applied to the host element."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`style`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Inline styles applied to the host element (e.g., "min-height: 200px").'))
+                        ...this._toNodeList(_("Callback with updated markdown string"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1843,248 +1754,110 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Basic Markdown Editor -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `basicMarkdown` }, []),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Basic Markdown Editor"))
+                    ...this._toNodeList(_("Basic Usage"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A minimal Markdown editor with a form name, featuring edit and preview modes toggled via hover buttons."))
+                    import_Document.default.createText(`A simple markdown editor with initial content.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-markdown", { "name": `markdown`, "style": `min-height: 200px;` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("field-markdown", { "name": `basic-markdown`, "value": `# Hello World`, "class": `w-200 h-80 block` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <field-markdown name="markdown" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Markdown with Initial Value -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `markdownWithValue` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Markdown with Initial Value"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Loads the editor with initial Markdown content using the `value` prop, ready for editing or previewing."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-markdown", { "name": `markdown`, "value": `# Hello
-**Bold** text`, "style": `min-height: 200px;` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <field-markdown name="markdown" value="# Hello
-**Bold** text" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Markdown with Line Numbers -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `markdownWithNumbers` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Markdown with Line Numbers"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Adds line numbers to the editor with the `numbers` prop, aiding in longer Markdown documents."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-markdown", { "name": `markdown`, "numbers": true, "value": `# Title
-Line 1
-Line 2`, "style": `min-height: 200px;` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <field-markdown name="markdown" numbers value="# Title
-Line 1
-Line 2" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Markdown with Change Event -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `markdownWithChange` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Markdown with Change Event"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Logs changes via the `change` prop, capturing editor input for real-time tracking or validation."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-markdown", { "name": `markdown`, "change": handleChange, "value": `Edit me`, "style": `min-height: 200px;` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <script>
-              const handleChange = (e) => console.log('Change event:', e.target.value);
-            </script>
-            <field-markdown name="markdown" change={handleChange} value="Edit me" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Markdown with Update Callback -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `markdownWithUpdate` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Markdown with Update Callback"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("Uses the `update` prop to track Markdown content changes, ideal for syncing with external state."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-markdown", { "name": `markdown`, "update": handleUpdate, "value": `Update me`, "style": `min-height: 200px;` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <script>
-              const handleUpdate = (value) => console.log('Updated Markdown:', value);
-            </script>
-            <field-markdown name="markdown" update={handleUpdate} value="Update me" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Styled Markdown Editor -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `styledMarkdown` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Styled Markdown Editor"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A minimalist styled editor with a wide layout, soft border, and hover effect, enhancing usability and aesthetics."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg-basis-half-10 md-basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("field-markdown", { "name": `markdown`, "class": `w-400 bg-white tx-t-1`, "style": `border: 1px solid #e0e0e0; padding: 10px; transition: border-color 0.3s ease; min-height: 200px;`, "onmouseover": `this.style.borderColor='#888888'`, "onmouseout": `this.style.borderColor='#e0e0e0'`, "value": `# Styled Markdown` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <field-markdown 
-              name="markdown" 
-              class="w-400 bg-white tx-t-1" 
-              style="border: 1px solid #e0e0e0; padding: 10px; transition: border-color 0.3s ease; min-height: 200px;" 
-              onmouseover="this.style.borderColor='#888888'" 
-              onmouseout="this.style.borderColor='#e0e0e0'" 
-              value="# Styled Markdown"
+              name="basic-markdown" 
+              value="# Hello World" 
+              class="w-200 h-80 block"
             />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Navigation -->
+          `, false),
+                  import_Document.default.createElement("a", { "name": `preview` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Preview Mode"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Markdown field with preview toggle (hover to see buttons).`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-markdown", { "name": `preview-markdown`, "value": `*Italic* and **Bold** text`, "class": `w-200 h-80 block` }),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <field-markdown 
+              name="preview-markdown" 
+              value="*Italic* and **Bold** text" 
+              class="w-200 h-80 block"
+            />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
+          `, false),
+                  import_Document.default.createElement("a", { "name": `custom` }, []),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
+                    ...this._toNodeList(_("Custom Styling"))
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `mb-10` }, [
+                    import_Document.default.createText(`Markdown field with custom styling, line numbers, and update callback.`, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("field-markdown", { "class": `w-200 h-80 block b-solid b-primary rounded`, "numbers": true, "name": `custom-markdown`, "value": `**I AM BOLD**`, "update": (value) => console.log("Updated markdown:", value) }),
+                    import_Document.default.createText(`
+          `, false)
+                  ]),
+                  import_Document.default.createText(`
+          `, false),
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
+                    ...this._toNodeList(`
+            <field-markdown 
+              class="w-200 h-80 block b-solid b-primary rounded"
+              numbers={true}
+              name="custom-markdown" 
+              value="**I AM BOLD**" 
+              update={(value) => console.log('Updated markdown:', value)}
+            />
+          `)
+                  ]),
+                  import_Document.default.createText(`
+
           `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
@@ -2093,9 +1866,7 @@ Line 2" />
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Input")),
+                      ...this._toNodeList(_("Input Field")),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -2104,9 +1875,7 @@ Line 2" />
                     import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/field/mask.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Mask")),
-                      import_Document.default.createText(`
-              `, false),
+                      ...this._toNodeList(_("Mask Field")),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

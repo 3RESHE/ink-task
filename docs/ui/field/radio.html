@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Radio Field Component</title>
+  <meta name="description" content="A radio button input with customizable label, shape, and style." />
+  <meta property="og:title" content="Ink UI - Radio Field Component" />
+  <meta property="og:description" content="A radio button input with customizable label, shape, and style." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/radio.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Radio Field Component" />
+  <meta name="twitter:description" content="A radio button input with customizable label, shape, and style." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -142,24 +142,23 @@
   
 
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       Formats
     </a>
   
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Radio">Radio</a>
+            <a class="block tx-t-0" href="#radio">Radio Field</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicRadio">• Basic Radio Group</a>
-              <a class="block tx-t-1" href="#radioWithDefault">• Radio with Default Selection</a>
-              <a class="block tx-t-1" href="#disabledRadio">• Disabled Radio Button</a>
-              <a class="block tx-t-1" href="#styledRadio">• Styled Radio Button</a>
+              <a class="block tx-t-1" href="#simple">• Simple Radio</a>
+              <a class="block tx-t-1" href="#group">• Styled Group</a>
+              <a class="block tx-t-1" href="#disabled">• Disabled and Readonly</a>
+              <a class="block tx-t-1" href="#required">• Required Group</a>
+              <a class="block tx-t-1" href="#styled">• Styled Radio Button</a>
             </nav>
           </nav>
         </menu>
@@ -170,166 +169,204 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Radio"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Radio</h1>
-          <ide-app title="Radio" class="py-20">
+          <a name="radio"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Radio Field</h1>
+          <ide-app title="Radio Field" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import Radio from '@stackpress/ink-ui/field/radio';
+              import RadioField from '@stackpress/ink-ui/field/radio';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <p class="mb-20">The `&lt;field-radio&gt;` component provides a radio button input for selecting a single option from a group. Below are its props:</p>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
-            <table-head>Description</table-head>
-
-            <table-row>
-              <table-col>name</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Name attribute linking radio buttons in a group for form submission.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>value</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Value of the radio button, submitted when selected.</table-col>
-            </table-row>
-
+            <table-head>Notes</table-head>
             <table-row>
               <table-col>checked</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Sets the initial checked state of the radio button.</table-col>
+              <table-col>Initial checked state</table-col>
             </table-row>
-
             <table-row>
               <table-col>disabled</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Disables the radio button, preventing interaction.</table-col>
+              <table-col>Disables the radio</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>name</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Name attribute for form submission and grouping</table-col>
+            </table-row>
+            <table-row>
+              <table-col>readonly</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Prevents changing the radio state</table-col>
+            </table-row>
             <table-row>
               <table-col>required</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Marks the radio group as required (enforced at form level).</table-col>
+              <table-col>Marks the radio group as required in a form</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>value</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Value of the radio option</table-col>
+            </table-row>
+            <table-row>
+              <table-col>label</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Text label for the radio (default: "")</table-col>
+            </table-row>
             <table-row>
               <table-col>change</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Custom handler for change events, receiving the selected value.</table-col>
+              <table-col>Callback for change event</table-col>
             </table-row>
-
             <table-row>
-              <table-col>class</table-col>
-              <table-col>String</table-col>
+              <table-col>update</table-col>
+              <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>CSS classes for the host element (use Ink utilities).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Inline styles for the host element (prefer Ink utilities).</table-col>
+              <table-col>Callback with updated value</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Radio Group -->
-          <a name="basicRadio"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Radio Group</h2>
-          <div class="mb-10">A simple radio group with multiple options.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-radio name="option" value="yes">Yes</field-radio>
-              <field-radio name="option" value="no">No</field-radio>
-            </div>
+          <a name="simple"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Simple Radio</h2>
+          <div class="mb-10">A basic radio button with a square shape.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-radio name="simple-radio" label="Agree" value="agree" style="border-radius: 0;"></field-radio>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-radio name="option" value="yes"&gt;Yes&lt;/field-radio&gt;
-            &lt;field-radio name="option" value="no"&gt;No&lt;/field-radio&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-radio 
+              name="simple-radio" 
+              label=" Agree" 
+              value="agree"
+              style="border-radius: 0;"
+            /&gt;
           </ide-code>
 
-          <!-- Radio with Default Selection -->
-          <a name="radioWithDefault"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Radio with Default Selection</h2>
-          <div class="mb-10">A radio group with a pre-selected option using the `checked` prop.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-radio name="choice" value="yes" checked>Yes</field-radio>
-              <field-radio name="choice" value="no">No</field-radio>
-            </div>
+          <a name="group"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Group</h2>
+          <div class="mb-10">A group of radio buttons with rounded shapes, spacing, and update callback.</div>
+          <div class="bg-t-3 p-10 mb-10 flex gap-20">
+            <field-radio name="group-radio" label="Yes" value="yes" checked rounded class="p-5" ></field-radio>
+            <field-radio name="group-radio" label="No" value="no" rounded class="p-5" ></field-radio>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-radio name="choice" value="yes" checked&gt;Yes&lt;/field-radio&gt;
-            &lt;field-radio name="choice" value="no"&gt;No&lt;/field-radio&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-radio 
+              name="group-radio" 
+              label="Yes" 
+              value="yes" 
+              checked
+              rounded
+              class="p-5"
+              update={(value) =&gt; console.log('Selected:', value)}
+            /&gt;
+            &lt;field-radio 
+              name="group-radio" 
+              label="No" 
+              value="no"
+              rounded
+              class="p-5"
+              update={(value) =&gt; console.log('Selected:', value)}
+            /&gt;
           </ide-code>
 
-          <!-- Disabled Radio Button -->
-          <a name="disabledRadio"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Disabled Radio Button</h2>
-          <div class="mb-10">A radio group with a disabled option.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-radio name="status" value="active">Active</field-radio>
-              <field-radio name="status" value="inactive" disabled>Inactive</field-radio>
-            </div>
+          <a name="disabled"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Disabled and Readonly</h2>
+          <div class="mb-10">Radio buttons demonstrating disabled and readonly states.</div>
+          <div class="bg-t-3 p-10 mb-10 flex gap-20">
+            <field-radio name="state-radio" label="Enabled" value="enabled" checked></field-radio>
+            <field-radio name="state-radio" label="Disabled" value="disabled" disabled></field-radio>
+            <field-radio name="state-radio" label="Readonly" value="readonly" readonly></field-radio>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-            &lt;field-radio name="status" value="active"&gt;Active&lt;/field-radio&gt;
-            &lt;field-radio name="status" value="inactive" disabled&gt;Inactive&lt;/field-radio&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-radio 
+              name="state-radio" 
+              label="Enabled" 
+              value="enabled" 
+              checked
+            /&gt;
+            &lt;field-radio 
+              name="state-radio" 
+              label="Disabled" 
+              value="disabled"
+              disabled
+            /&gt;
+            &lt;field-radio 
+              name="state-radio" 
+              label="Readonly" 
+              value="readonly"
+              readonly
+            /&gt;
           </ide-code>
 
-          <!-- Styled Radio Button -->
-          <a name="styledRadio"></a>
+          <a name="required"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Required Group</h2>
+          <div class="mb-10">A group of radio buttons marked as required.</div>
+          <div class="bg-t-3 p-10 mb-10 flex gap-20">
+            <field-radio name="required-radio" label="Option A" value="a" required></field-radio>
+            <field-radio name="required-radio" label="Option B" value="b" required></field-radio>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-radio 
+              name="required-radio" 
+              label="Option A" 
+              value="a" 
+              required
+            /&gt;
+            &lt;field-radio 
+              name="required-radio" 
+              label="Option B" 
+              value="b"
+              required
+            /&gt;
+          </ide-code>
+
+          <a name="styled"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Styled Radio Button</h2>
-          <div class="mb-10">A styled radio group with custom `class` and `style` props.</div>
-          <div class="basis-third-10 lg-basis-half-10 md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-radio name="option" value="yes" label="Yes" class="flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2" style="border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'" onmouseout="this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'"></field-radio>
-                            <field-radio name="option" value="no" label="No" class="flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2" style="border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'" onmouseout="this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'"></field-radio>
-            </div>
+          <div class="mb-10">A styled radio group with custom class and style props, including hover effects.</div>
+          <div class="bg-t-3 p-10 mb-10 flex gap-20">
+            <field-radio name="styled-radio" value="yes" label="Yes" class="flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2" style="border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'" onmouseout="this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'"></field-radio>
+            <field-radio name="styled-radio" value="no" label="No" class="flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2" style="border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'" onmouseout="this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'"></field-radio>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
-    &lt;field-radio 
-        name="option" 
-        value="yes" 
-        label="Yes" 
-        class="flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2" 
-        style="border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;" 
-        onmouseover="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'" 
-        onmouseout="this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'" 
-      /&gt;
-    &lt;field-radio 
-        name="option" 
-        value="no" 
-        label="No" 
-        class="flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2" 
-        style="border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;" 
-        onmouseover="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'" 
-        onmouseout="this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'" 
-      /&gt;
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-radio 
+              name="styled-radio" 
+              value="yes" 
+              label="Yes" 
+              class="flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2" 
+              style="border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;"
+              onmouseover="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'" 
+              onmouseout="this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'" 
+            /&gt;
+            &lt;field-radio 
+              name="styled-radio" 
+              value="no" 
+              label="No" 
+              class="flex align-center gap-10 w-200 p-10 rounded-8 bg-white tx-t-1 b-solid b-t-1 transition-all duration-300 hover:b-primary hover:shadow-2" 
+              style="border-color: var(--t-2); transition: border-color 0.3s ease, box-shadow 0.3s ease;"
+              onmouseover="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 4px 12px var(--t-2)'" 
+              onmouseout="this.style.borderColor='var(--t-2)'; this.style.boxShadow='none'" 
+            /&gt;
           </ide-code>
 
-          <!-- Navigation -->
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/password.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Password
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Password Field
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/range.html">
-              Range
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Range Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>
