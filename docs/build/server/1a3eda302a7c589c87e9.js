@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\field\checkbox.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\field\checkbox.ink
   var checkbox_exports = {};
   __export(checkbox_exports, {
     default: () => Checkbox_1a3eda302a7c589c87e9
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\field\checkbox.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\field\checkbox.ink
   var Checkbox_1a3eda302a7c589c87e9 = class extends import_Document2.default {
     id() {
       return "1a3eda302a7c589c87e9";
@@ -821,7 +821,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
     template() {
       const url = "/ink/ui/field/checkbox.html";
-      const title = _("Ink UI - Checkbox Field Component");
+      const title = _("Ink UI - Checkbox Field");
       const description = _("A customizable checkbox field with label and state management.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
@@ -830,7 +830,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
+        { icon: "icons", label: "Forms", href: "/ink/ui/index.html" },
         { label: "Checkbox Field" }
       ];
       return [
@@ -2261,13 +2261,13 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10 flex gap-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("field-checkbox", { "name": `square`, "label": `Square`, "value": `yes`, "checked": true }),
+                    import_Document.default.createElement("field-checkbox", { "name": `square`, "label": `Checked`, "value": `yes`, "checked": true }),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("field-checkbox", { "name": `rounded`, "label": `Rounded`, "value": `yes`, "rounded": true, "checked": true }),
+                    import_Document.default.createElement("field-checkbox", { "name": `rounded`, "label": `Rounded`, "value": `yes`, "rounded": true, "circle": true }),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("field-checkbox", { "name": `circle`, "label": `Circle`, "value": `yes`, "circle": true, "checked": true }),
+                    import_Document.default.createElement("field-checkbox", { "name": `circle`, "label": `Square`, "value": `yes`, "square": true }),
                     import_Document.default.createText(`
           `, false)
                   ]),
@@ -2275,9 +2275,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <field-checkbox name="square" label="Square" value="yes" checked />
-            <field-checkbox name="rounded" label="Rounded" value="yes" rounded checked />
-            <field-checkbox name="circle" label="Circle" value="yes" circle checked />
+            <field-checkbox name="square" label="Checked" value="yes" checked />
+            <field-checkbox name="rounded" label="Rounded" value="yes" rounded circle/>
+            <field-checkbox name="circle" label="Square" value="yes" square />
           `)
                   ]),
                   import_Document.default.createText(`

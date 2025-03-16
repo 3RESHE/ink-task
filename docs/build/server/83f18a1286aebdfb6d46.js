@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\field\datetime.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\field\datetime.ink
   var datetime_exports = {};
   __export(datetime_exports, {
     default: () => Datetime_83f18a1286aebdfb6d46
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\field\datetime.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\field\datetime.ink
   var Datetime_83f18a1286aebdfb6d46 = class extends import_Document2.default {
     id() {
       return "83f18a1286aebdfb6d46";

@@ -26,7 +26,7 @@
   import { _ } from '@/components/i18n';
 
   const url = '/ink/ui/field/color.html';
-  const title = _('Ink UI - Color Field Component');
+  const title = _('Ink UI - Color Field');
   const description = _('A color picker field with synchronized input for form integration.');
   
   const toggle = () => {
@@ -36,7 +36,7 @@
     { icon: 'home', label: 'Home', href: '/ink/index.html' },
     { icon: 'book', label: 'Docs', href: '/ink/docs/index.html' },
     { icon: 'icons', label: 'UI', href: '/ink/ui/index.html' },
-    { icon: 'icons', label: 'Components', href: '/ink/ui/index.html' },
+        { icon: 'icons', label: 'Forms', href: '/ink/ui/form/index.html' },
     { label: 'Color Field' }
   ];
 </script>
@@ -89,22 +89,10 @@
               <table-col>{_('Autocomplete attribute (e.g., "off")')}</table-col>
             </table-row>
             <table-row>
-              <table-col>disabled</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>{_('Disables the color picker')}</table-col>
-            </table-row>
-            <table-row>
               <table-col>name</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
               <table-col>{_('Name attribute for form submission')}</table-col>
-            </table-row>
-            <table-row>
-              <table-col>readonly</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>{_('Makes the color picker read-only')}</table-col>
             </table-row>
             <table-row>
               <table-col>required</table-col>
@@ -116,7 +104,7 @@
               <table-col>value</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>{_('Initial color value (e.g., "#ff0000")')}</table-col>
+              <table-col>{_('Initial color value (e.g., "#ff69b4")')}</table-col>
             </table-row>
             <table-row>
               <table-col>placeholder</table-col>
@@ -138,15 +126,13 @@
 
           <a name="states"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('States')}</h2>
-          <div class="mb-10">Color field with different states: value, disabled, required.</div>
+          <div class="mb-10">Color field with different states: value, required.</div>
           <div class="bg-t-3 p-10 mb-10 flex gap-20">
             <field-color name="valued" value="#ff0000" placeholder="Red" />
-            <field-color name="disabled" disabled placeholder="Disabled" />
             <field-color name="required" required placeholder="Required" />
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <field-color name="valued" value="#ff0000" placeholder="Red" />
-            <field-color name="disabled" disabled placeholder="Disabled" />
             <field-color name="required" required placeholder="Required" />
           `}</ide-code>
 
@@ -156,7 +142,7 @@
           <div class="bg-t-3 p-10 mb-10">
             <field-color 
               name="custom" 
-              value="#00ff00" 
+              value="#ff69b4" 
               placeholder="Enter a color" 
               class="rounded b-solid b-primary p-5" 
             />
@@ -164,7 +150,7 @@
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
             <field-color 
               name="custom" 
-              value="#00ff00" 
+              value="#ff69b4" 
               placeholder="Enter a color" 
               class="rounded b-solid b-primary p-5" 
             />
@@ -174,7 +160,7 @@
             <a class="tx-primary py-40" href="/ink/ui/field/checkbox.html">
               <element-icon name="chevron-left" theme="tx-1" />{_('Checkbox Field')}
             </a>
-            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/input.html">
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/country.html">
               {_('Country Field')}<element-icon name="chevron-right" theme="tx-1" />
             </a>
           </nav>

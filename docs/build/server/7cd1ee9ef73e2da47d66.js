@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\tooltip.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\components\tooltip.ink
   var tooltip_exports = {};
   __export(tooltip_exports, {
     default: () => Tooltip_7cd1ee9ef73e2da47d66
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\tooltip.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\components\tooltip.ink
   var Tooltip_7cd1ee9ef73e2da47d66 = class extends import_Document2.default {
     id() {
       return "7cd1ee9ef73e2da47d66";

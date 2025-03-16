@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\control.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\form\control.ink
   var control_exports = {};
   __export(control_exports, {
     default: () => Control_c7200172f32748e6a699
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\control.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\form\control.ink
   var Control_c7200172f32748e6a699 = class extends import_Document2.default {
     id() {
       return "c7200172f32748e6a699";
@@ -821,7 +821,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
     template() {
       const url = "/ink/ui/components/control.html";
-      const title = _("Ink UI - Form Control Component");
+      const title = _("Ink UI - Form Control");
       const description = _("A wrapper component for form fields with labels and error messages.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
@@ -830,7 +830,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
+        { icon: "icons", label: "Forms", href: "/ink/ui/form/index.html" },
         { label: "Form Control" }
       ];
       return [

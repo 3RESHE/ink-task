@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\field\markdown.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\field\markdown.ink
   var markdown_exports = {};
   __export(markdown_exports, {
     default: () => Markdown_fcadfa06c1c41030eb3c
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\field\markdown.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\field\markdown.ink
   var Markdown_fcadfa06c1c41030eb3c = class extends import_Document2.default {
     id() {
       return "fcadfa06c1c41030eb3c";

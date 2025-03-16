@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\compiler-api.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\docs\compiler-api.ink
   var compiler_api_exports = {};
   __export(compiler_api_exports, {
     default: () => CompilerApi_9e0c82978520cf3fd4e4
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\compiler-api.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\docs\compiler-api.ink
   var CompilerApi_9e0c82978520cf3fd4e4 = class extends import_Document2.default {
     id() {
       return "9e0c82978520cf3fd4e4";
@@ -1027,7 +1027,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ]),
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/index.html") ? [
+                    ...!!(url === "/ink/docs/index.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/index.html` }, [
@@ -1055,7 +1055,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/getting-started.html") ? [
+                    ...!!(url === "/ink/docs/getting-started.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/getting-started.html` }, [
@@ -1093,7 +1093,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ]),
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/markup-syntax.html") ? [
+                    ...!!(url === "/ink/docs/markup-syntax.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/markup-syntax.html` }, [
@@ -1121,7 +1121,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/state-management.html") ? [
+                    ...!!(url === "/ink/docs/state-management.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/state-management.html` }, [
@@ -1149,7 +1149,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/component-strategy.html") ? [
+                    ...!!(url === "/ink/docs/component-strategy.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/component-strategy.html` }, [
@@ -1177,7 +1177,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/compiler-api.html") ? [
+                    ...!!(url === "/ink/docs/compiler-api.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/compiler-api.html` }, [
@@ -1205,7 +1205,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/client-api.html") ? [
+                    ...!!(url === "/ink/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/client-api.html` }, [
@@ -1243,7 +1243,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ]),
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/template-engine.html") ? [
+                    ...!!(url === "/ink/docs/template-engine.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/template-engine.html` }, [
@@ -1271,7 +1271,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/single-page.html") ? [
+                    ...!!(url === "/ink/docs/single-page.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/single-page.html` }, [
@@ -1299,7 +1299,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/static-site.html") ? [
+                    ...!!(url === "/ink/docs/static-site.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/static-site.html` }, [
@@ -1327,7 +1327,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/component-publisher.html") ? [
+                    ...!!(url === "/ink/docs/component-publisher.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/component-publisher.html` }, [
@@ -1355,7 +1355,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/developer-tools.html") ? [
+                    ...!!(url === "/ink/docs/developer-tools.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/developer-tools.html` }, [
@@ -1383,8 +1383,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ] : [],
                     import_Document.default.createText(`
 
-
-    `, false),
+  `, false),
                     import_Document.default.createElement("h6", { "class": `bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper` }, [
                       import_Document.default.createText(`
     `, false),
@@ -1394,7 +1393,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ]),
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/ui/index.html") ? [
+                    ...!!(url === "/ink/ui/index.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/index.html` }, [
@@ -1421,16 +1420,14 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
   `, false)
                     ] : [],
                     import_Document.default.createText(`
-  
-  
   `, false),
-                    ...!!(url === "/docs/state-management.html") ? [
+                    ...!!(url === "/ink/ui/form/index.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/form/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Form")),
+                        ...this._toNodeList(_("Forms")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -1443,7 +1440,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/form/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Form")),
+                        ...this._toNodeList(_("Forms")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -1451,9 +1448,8 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
   `, false)
                     ] : [],
                     import_Document.default.createText(`
-
   `, false),
-                    ...!!(url === "/docs/client-api.html") ? [
+                    ...!!(url === "/ink/ui/format/index.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [

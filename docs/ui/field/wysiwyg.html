@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - WYSIWYG Field Component</title>
+  <meta name="description" content="A rich text editor field with customizable toolbar options and styling, powered by SunEditor." />
+  <meta property="og:title" content="Ink UI - WYSIWYG Field Component" />
+  <meta property="og:description" content="A rich text editor field with customizable toolbar options and styling, powered by SunEditor." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/wysiwyg.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - WYSIWYG Field Component" />
+  <meta name="twitter:description" content="A rich text editor field with customizable toolbar options and styling, powered by SunEditor." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -142,26 +142,23 @@
   
 
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       Formats
     </a>
   
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#WYSIWYG">WYSIWYG</a>
+            <a class="block tx-t-0" href="#wysiwyg">WYSIWYG</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicWYSIWYG">• Basic WYSIWYG Editor</a>
-              <a class="block tx-t-1" href="#styledWYSIWYG">• Styled WYSIWYG Editor</a>
-              <a class="block tx-t-1" href="#minimalWYSIWYG">• Minimal WYSIWYG Editor</a>
-              <a class="block tx-t-1" href="#fullFeaturedWYSIWYG">• Full-Featured WYSIWYG Editor</a>
-              <a class="block tx-t-1" href="#preFilledWYSIWYG">• Pre-filled WYSIWYG Editor</a>
-              <a class="block tx-t-1" href="#disabledWYSIWYG">• Disabled WYSIWYG Editor</a>
+              <a class="block tx-t-1" href="#basic">• Basic WYSIWYG</a>
+              <a class="block tx-t-1" href="#styled">• Styled WYSIWYG</a>
+              <a class="block tx-t-1" href="#minimal">• Minimal WYSIWYG</a>
+              <a class="block tx-t-1" href="#full">• Full-Featured WYSIWYG</a>
+              <a class="block tx-t-1" href="#prefilled">• Pre-filled WYSIWYG</a>
             </nav>
           </nav>
         </menu>
@@ -172,359 +169,319 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="WYSIWYG"></a>
+          <a name="wysiwyg"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">WYSIWYG</h1>
-          <ide-app title="WYSIWYG" class="py-20">
+          <p class="mb-20">The `&lt;field-wysiwyg&gt;` component is a rich text editor built with SunEditor, offering customizable toolbar options and responsive styling via Ink utilities.</p>
+          <ide-app title="WYSIWYG Field" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import WYSIWYG from '@stackpress/ink-ui/field/wysiwyg';
+              import WYSIWYGField from '@stackpress/ink-ui/field/wysiwyg';
             </ide-code>
           </ide-app>
 
           <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <p class="mb-20">The `&lt;field-wysiwyg&gt;` component provides a rich text editor for creating formatted content. Use Ink utilities via the `class` prop to style it responsively. Below are its props:</p>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
+          <p class="mb-20">Customize the editor’s toolbar and behavior with the props below. Use the `class` prop with Ink utilities for responsive styling.</p>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
             <table-head>Property</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
             <table-head>Description</table-head>
 
             <table-row>
-              <table-col>name</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Name attribute for form submission.</table-col>
-            </table-row>
-
-            <table-row>
               <table-col>value</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Initial content for the editor (defaults to "").</table-col>
+              <table-col>Initial content of the editor (defaults to "").</table-col>
             </table-row>
 
             <table-row>
-              <table-col>disabled</table-col>
-              <table-col>Boolean</table-col>
+              <table-col>name</table-col>
+              <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Disables the editor, preventing interaction.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>readonly</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Makes the editor read-only, allowing view only.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>history</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables undo/redo buttons (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>font</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables font family selection (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>size</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables font size selection (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>format</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables format block selection (e.g., headings, paragraph; default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>paragraph</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables paragraph style options (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>blockquote</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables blockquote button (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables text style buttons (bold, italic, etc.; default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>color</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables font color selection (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>highlight</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables highlight color selection (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>text</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables text style options (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>remove</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables remove format button (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>indent</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables indent/outdent buttons (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>align</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables alignment options (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>rule</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables horizontal rule button (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>list</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables ordered/unordered list buttons (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>lineheight</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables line height selection (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>table</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables table creation button (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>link</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables link insertion button (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>image</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables image insertion button (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>video</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables video insertion button (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>audio</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables audio insertion button (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>fullscreen</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables fullscreen toggle button (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>showblocks</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables show blocks toggle button (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>code</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables code view toggle button (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>print</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables preview and print buttons (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>save</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables save and template buttons (default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>dir</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Enables direction toggle buttons (LTR/RTL; default: false).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>change</table-col>
-              <table-col>Function</table-col>
-              <table-col>No</table-col>
-              <table-col>Custom handler for change events, receiving the event.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>update</table-col>
-              <table-col>Function</table-col>
-              <table-col>No</table-col>
-              <table-col>Callback with the updated content.</table-col>
+              <table-col>Name attribute for the underlying `&lt;textarea&gt;` used in form submission.</table-col>
             </table-row>
 
             <table-row>
               <table-col>class</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Ink utility classes for responsive styling (e.g., "w-full p-5 b-solid b-t-3 c-6").</table-col>
+              <table-col>Ink utility classes for styling (e.g., "w-full min-h-200 p-4").</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>change</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Handler for content changes, receives a synthetic event with `target.value`.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>update</table-col>
+              <table-col>Function</table-col>
+              <table-col>No</table-col>
+              <table-col>Callback receiving the updated content string directly.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>history</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds undo/redo buttons to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>font</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds font family selector to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>size</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds font size selector to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>format</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds format block selector (e.g., headings) to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>paragraph</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds paragraph style options to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>blockquote</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds blockquote button to the toolbar.</table-col>
             </table-row>
 
             <table-row>
               <table-col>style</table-col>
-              <table-col>String</table-col>
+              <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Inline styles (use `class` with Ink utilities instead).</table-col>
+              <table-col>Adds bold, italic, underline, etc., buttons to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>color</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds font color selector to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>highlight</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds highlight color selector to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>text</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds text style options to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>remove</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds remove format button to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>indent</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds indent/outdent buttons to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>align</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds alignment options to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>rule</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds horizontal rule button to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>list</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds ordered/unordered list buttons to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>lineheight</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds line height selector to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>table</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds table insertion button to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>link</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds link insertion button to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>image</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds image insertion button to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>video</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds video insertion button to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>audio</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds audio insertion button to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>fullscreen</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds fullscreen toggle button to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>showblocks</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds show blocks toggle button to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>code</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds code view toggle button to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>print</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds preview and print buttons to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>save</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds save and template buttons to the toolbar.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>dir</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds direction toggle buttons (LTR/RTL) to the toolbar.</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic WYSIWYG Editor -->
-          <a name="basicWYSIWYG"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic WYSIWYG Editor</h2>
-          <div class="mb-10">A basic WYSIWYG editor with default Ink styling and common toolbar options.</div>
-          <div class="basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-wysiwyg name="content" history font size format style="cursor: text;" color align list link class="w-full p-4 b-solid b-t-2 c-4 tx-md"  ></field-wysiwyg>
-            </div>
+          <!-- Basic WYSIWYG -->
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic WYSIWYG</h2>
+          <div class="mb-10">A simple WYSIWYG editor with common toolbar options.</div>
+          <div class="bg-t-3 p-10 mb-20">
+            <field-wysiwyg name="basic" history style color align list class="w-full min-h-200"></field-wysiwyg>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
             &lt;field-wysiwyg 
-              name="content" 
+              name="basic" 
+              history 
+              style 
+              color 
+              align 
+              list 
+              class="w-full min-h-200" 
+            /&gt;
+          </ide-code>
+
+          <!-- Styled WYSIWYG -->
+          <a name="styled"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Styled WYSIWYG</h2>
+          <div class="mb-10">A WYSIWYG editor styled with Ink utilities and event handlers.</div>
+          <div class="bg-t-3 p-10 mb-20">
+            <field-wysiwyg name="styled" history font size style color align list link class="w-full min-h-300 p-4 b-solid b-t-2 shadow-md hover:b-primary hover:shadow-lg transition-300"  ></field-wysiwyg>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
+            &lt;field-wysiwyg 
+              name="styled" 
               history 
               font 
               size 
-              format 
               style 
               color 
               align 
               list 
               link 
-              class="w-full p-4 b-solid b-t-2 c-4 tx-md" 
-              style="cursor: text;"
-              change={(e) =&gt; console.log('Change event:', e.target.value)}
-              update={(value) =&gt; console.log('Updated value:', value)}
+              class="w-full min-h-300 p-4 b-solid b-t-2 shadow-md hover:b-primary hover:shadow-lg transition-300" 
+              change={handleChange} 
+              update={handleUpdate} 
             /&gt;
           </ide-code>
 
-          <!-- Styled WYSIWYG Editor -->
-          <a name="styledWYSIWYG"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Styled WYSIWYG Editor</h2>
-          <div class="mb-10">A styled WYSIWYG editor with responsive Ink utilities and hover effects.</div>
-          <div class="basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-wysiwyg name="article" history font size format style="cursor: text;" color align list link class="w-full min-h-300 p-6 b-solid b-t-3 c-6 tx-lg md:vw-90 sm:vw-95 shadow-md bg-white transition-300 hover:b-primary hover:shadow-0-2-8-t-3"  ></field-wysiwyg>
-            </div>
+          <!-- Minimal WYSIWYG -->
+          <a name="minimal"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Minimal WYSIWYG</h2>
+          <div class="mb-10">A minimal WYSIWYG editor with basic formatting options.</div>
+          <div class="bg-t-3 p-10 mb-20">
+            <field-wysiwyg name="minimal" style color class="w-full min-h-150 p-2 b-dashed b-t-1"></field-wysiwyg>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
             &lt;field-wysiwyg 
-              name="article" 
-              history 
-              font 
-              size 
-              format 
+              name="minimal" 
               style 
               color 
-              align 
-              list 
-              link 
-              class="w-full min-h-300 p-6 b-solid b-t-3 c-6 tx-lg md:vw-90 sm:vw-95 shadow-md bg-white transition-300 hover:b-primary hover:shadow-0-2-8-t-3" 
-              style="cursor: text;"
-              change={handleChange}
-              update={handleUpdate}
+              class="w-full min-h-150 p-2 b-dashed b-t-1" 
             /&gt;
           </ide-code>
 
-          <!-- Minimal WYSIWYG Editor -->
-          <a name="minimalWYSIWYG"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Minimal WYSIWYG Editor</h2>
-          <div class="mb-10">A minimal WYSIWYG editor with limited toolbar options and Ink styling.</div>
-          <div class="basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-wysiwyg name="note" style="cursor: text;" color align class="w-full min-h-200 p-4 b-dashed b-t-1 c-4 tx-verdana" ></field-wysiwyg>
-            </div>
+          <!-- Full-Featured WYSIWYG -->
+          <a name="full"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Full-Featured WYSIWYG</h2>
+          <div class="mb-10">A WYSIWYG editor with all toolbar options enabled.</div>
+          <div class="bg-t-3 p-10 mb-20">
+            <field-wysiwyg name="full" history font size format paragraph blockquote style color highlight text remove indent align rule list lineheight table link image video audio fullscreen showblocks code print save dir class="w-full min-h-400 p-6 b-solid b-t-3"  ></field-wysiwyg>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
             &lt;field-wysiwyg 
-              name="note" 
-              style 
-              color 
-              align 
-              class="w-full min-h-200 p-4 b-dashed b-t-1 c-4 tx-verdana" 
-              style="cursor: text;"
-              update={(value) =&gt; console.log('Updated value:', value)}
-            /&gt;
-          </ide-code>
-
-          <!-- Full-Featured WYSIWYG Editor -->
-          <a name="fullFeaturedWYSIWYG"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Full-Featured WYSIWYG Editor</h2>
-          <div class="mb-10">A full-featured WYSIWYG editor with all toolbar options, styled with Ink utilities and hover effects.</div>
-          <div class="basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-wysiwyg name="document" history font size format paragraph blockquote style="cursor: text;" color highlight text remove indent align rule list lineheight table link image video audio fullscreen showblocks code print save dir class="w-full min-h-400 p-8 b-solid b-t-4 c-8 tx-xl md:vw-90 sm:vw-95 lg:shadow-lg transition-300 hover:b-primary"  ></field-wysiwyg>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;field-wysiwyg 
-              name="document" 
+              name="full" 
               history 
               font 
               size 
@@ -552,69 +509,40 @@
               print 
               save 
               dir 
-              class="w-full min-h-400 p-8 b-solid b-t-4 c-8 tx-xl md:vw-90 sm:vw-95 lg:shadow-lg transition-300 hover:b-primary" 
-              style="cursor: text;"
-              change={(e) =&gt; console.log('Change event:', e.target.value)}
-              update={handleUpdate}
+              class="w-full min-h-400 p-6 b-solid b-t-3" 
+              change={handleChange} 
+              update={handleUpdate} 
             /&gt;
           </ide-code>
 
-          <!-- Pre-filled WYSIWYG Editor -->
-          <a name="preFilledWYSIWYG"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Pre-filled WYSIWYG Editor</h2>
-          <div class="mb-10">A WYSIWYG editor pre-filled with initial content, styled with Ink.</div>
-          <div class="basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-wysiwyg name="blog"  history font size style="cursor: text;" color align list link class="w-full min-h-300 p-6 b-solid b-t-3 c-6 tx-md transition-300 hover:b-primary"  ></field-wysiwyg>
-            </div>
+          <!-- Pre-filled WYSIWYG -->
+          <a name="prefilled"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Pre-filled WYSIWYG</h2>
+          <div class="mb-10">A WYSIWYG editor with pre-filled content.</div>
+          <div class="bg-t-3 p-10 mb-20">
+            <field-wysiwyg name="prefilled"  history style color align list class="w-full min-h-200 p-4 b-solid b-t-2" ></field-wysiwyg>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
             &lt;field-wysiwyg 
-              name="blog" 
-              value="&lt;h1&gt;Welcome&lt;/h1&gt;&lt;p&gt;This is a &lt;b&gt;pre-filled&lt;/b&gt; editor with some content.&lt;/p&gt;" 
+              name="prefilled" 
+              value="&lt;h2&gt;Hello World&lt;/h2&gt;&lt;p&gt;This is a &lt;strong&gt;pre-filled&lt;/strong&gt; editor.&lt;/p&gt;" 
               history 
-              font 
-              size 
               style 
               color 
               align 
               list 
-              link 
-              class="w-full min-h-300 p-6 b-solid b-t-3 c-6 tx-md transition-300 hover:b-primary" 
-              style="cursor: text;"
-              change={handleChange}
-              update={(value) =&gt; console.log('Updated value:', value)}
-            /&gt;
-          </ide-code>
-
-          <!-- Disabled WYSIWYG Editor -->
-          <a name="disabledWYSIWYG"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Disabled WYSIWYG Editor</h2>
-          <div class="mb-10">A disabled WYSIWYG editor with pre-filled content and muted styling.</div>
-          <div class="basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-wysiwyg name="lockedContent"  disabled class="w-full min-h-200 p-4 b-solid b-muted c-5 tx-muted" style="cursor: not-allowed;"></field-wysiwyg>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;field-wysiwyg 
-              name="lockedContent" 
-              value="&lt;p&gt;This content is &lt;i&gt;locked&lt;/i&gt; and cannot be edited.&lt;/p&gt;" 
-              disabled 
-              class="w-full min-h-200 p-4 b-solid b-muted c-5 tx-muted" 
-              style="cursor: not-allowed;"
+              class="w-full min-h-200 p-4 b-solid b-t-2" 
+              update={handleUpdate} 
             /&gt;
           </ide-code>
 
           <!-- Navigation -->
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/time.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Time
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Time
             </a>
-            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/text.html">
-              Text
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/format/index.html">
+              Formats<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\format\date.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\format\date.ink
   var date_exports = {};
   __export(date_exports, {
     default: () => Date_a9e540ce91f9cb5b0be2
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\format\date.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\format\date.ink
   var Date_a9e540ce91f9cb5b0be2 = class extends import_Document2.default {
     id() {
       return "a9e540ce91f9cb5b0be2";
@@ -820,9 +820,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
   @ink utilities;`;
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/format/date.html";
+      const title = _("Ink UI - Date Format");
+      const description = _("A component for formatting dates with dayjs, supporting custom patterns, locales, and relative time.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -830,7 +830,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Format", href: "/ink/ui/format/index.html" },
+        { icon: "format", label: "Format", href: "/ink/ui/format/index.html" },
         { label: "Date" }
       ];
       const pastDate = (/* @__PURE__ */ new Date("2024-12-25T10:00:00")).toISOString();
@@ -1397,97 +1397,96 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     `, false),
                     import_Document.default.createElement("h6", { "class": `bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper` }, [
                       import_Document.default.createText(`
-    `, false),
+  `, false),
                       ...this._toNodeList(_("UI")),
                       import_Document.default.createText(`
-  `, false)
+`, false)
                     ]),
                     import_Document.default.createText(`
-  `, false),
+`, false),
                     ...!!(url === "/ui/index.html") ? [
                       import_Document.default.createText(`
-    `, false),
+  `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/index.html` }, [
                         import_Document.default.createText(`
-      `, false),
+    `, false),
                         ...this._toNodeList(_("Components")),
                         import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+`, false)
                     ] : true ? [
                       ,
                       import_Document.default.createText(`
-    `, false),
+  `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/index.html` }, [
                         import_Document.default.createText(`
-      `, false),
+    `, false),
                         ...this._toNodeList(_("Components")),
                         import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
-                    ] : [],
-                    import_Document.default.createText(`
-  
-  
-  `, false),
-                    ...!!(url === "/docs/state-management.html") ? [
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/form/index.html` }, [
-                        import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Form")),
-                        import_Document.default.createText(`
-    `, false)
-                      ]),
-                      import_Document.default.createText(`
-  `, false)
-                    ] : true ? [
-                      ,
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/form/index.html` }, [
-                        import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Form")),
-                        import_Document.default.createText(`
-    `, false)
-                      ]),
-                      import_Document.default.createText(`
-  `, false)
+`, false)
                     ] : [],
                     import_Document.default.createText(`
 
-  `, false),
-                    ...!!(url === "/docs/client-api.html") ? [
+`, false),
+                    ...!!(url === "/ui/form/index.html") ? [
                       import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/form/index.html` }, [
+                        import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
+                        ...this._toNodeList(_("Forms")),
                         import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Formats")),
-                        import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+`, false)
                     ] : true ? [
                       ,
                       import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/form/index.html` }, [
+                        import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
+                        ...this._toNodeList(_("Forms")),
                         import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Formats")),
-                        import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
+`, false)
+                    ] : [],
+                    import_Document.default.createText(`
+
+`, false),
+                    ...!!(url === "/ui/format/index.html") ? [
+                      import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
+                        import_Document.default.createText(`
+    `, false),
+                        ...this._toNodeList(_("Formats")),
+                        import_Document.default.createText(`
   `, false)
+                      ]),
+                      import_Document.default.createText(`
+`, false)
+                    ] : true ? [
+                      ,
+                      import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
+                        import_Document.default.createText(`
+    `, false),
+                        ...this._toNodeList(_("Formats")),
+                        import_Document.default.createText(`
+  `, false)
+                      ]),
+                      import_Document.default.createText(`
+`, false)
                     ] : [],
                     import_Document.default.createText(`
 `, false)
@@ -1503,18 +1502,14 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Date` }, [
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#date` }, [
                       ...this._toNodeList(_("Date"))
                     ]),
                     import_Document.default.createText(`
@@ -1580,7 +1575,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `Date` }, []),
+                  import_Document.default.createElement("a", { "name": `date` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
@@ -1588,12 +1583,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Date`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Date Format`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Date from '@stackpress/ink-ui/format/date';
+              import DateFormat from '@stackpress/ink-ui/format/date';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1612,11 +1607,11 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("p", { "class": `mb-20` }, [
-                    ...this._toNodeList(_("The `<format-date>` component formats dates using the `dayjs` library, supporting the default format, custom Day.js-compatible formats, and relative time displays."))
+                    ...this._toNodeList(_("Customize the date display with the props below. Use Ink utilities via `class` for styling."))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
@@ -1649,7 +1644,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String/Number/Date`, false)
+                        import_Document.default.createText(`String | Date`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -1659,34 +1654,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("The date to format (e.g., ISO string, timestamp). Defaults to the current date."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`locale`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('The locale for formatting (e.g., "en", "fr"). Defaults to "en".'))
+                        ...this._toNodeList(_('Date to format (e.g., "2024-12-25T10:00:00Z" or Date object). Defaults to current date.'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1713,7 +1681,34 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('The date format using Day.js tokens (e.g., "YYYY-MM-DD"). Use "ago" for relative time or "a" for short relative time. Defaults to "MMMM D, YYYY, h:mm:ss a".'))
+                        ...this._toNodeList(_('Dayjs format pattern (e.g., "YYYY-MM-DD") or special values: "ago" for relative time, "a" for short relative time. Defaults to "MMMM D, YYYY, h:mm:ss a".'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`locale`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Dayjs locale (e.g., "en", "fr"). Defaults to "en". Use "short" for abbreviated relative time.'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1740,7 +1735,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Ink utility classes for styling (e.g., "p-4").'))
+                        ...this._toNodeList(_('Ink utility classes for styling (e.g., "tx-md p-4").'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1752,7 +1747,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`style`, false)
+                        import_Document.default.createText(`display`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -1767,7 +1762,88 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Inline styles (use `class` with Ink utilities instead)."))
+                        ...this._toNodeList(_('Display style (e.g., "inline-block", "block"). Defaults to "inline-block".'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`color`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Text color using Ink utilities (e.g., "tx-primary").'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`size`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Font size using Ink utilities (e.g., "tx-md", "tx-lg").'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`bold`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Applies bold font weight if `true`."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1792,16 +1868,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg:basis-half-10 md:basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-date", { "class": `p-4` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("format-date", {}),
                     import_Document.default.createText(`
           `, false)
                   ]),
@@ -1809,7 +1879,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <format-date class="p-4" />
+            <format-date />
           `)
                   ]),
                   import_Document.default.createText(`
@@ -1829,28 +1899,22 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg:basis-half-10 md:basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-20 flex flex-wrap gap-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-date", { "value": pastDate, "format": `YYYY-MM-DD`, "class": `p-4` }),
-                      import_Document.default.createText(` |
-              `, false),
-                      import_Document.default.createElement("format-date", { "value": pastDate, "format": `DD/MM/YYYY`, "class": `p-4` }),
-                      import_Document.default.createText(` |
-              `, false),
-                      import_Document.default.createElement("format-date", { "value": pastDate, "format": `D MMM YYYY`, "class": `p-4` }),
-                      import_Document.default.createText(` |
-              `, false),
-                      import_Document.default.createElement("format-date", { "value": pastDate, "format": `HH:mm:ss`, "class": `p-4` }),
-                      import_Document.default.createText(` |
-              `, false),
-                      import_Document.default.createElement("format-date", { "value": pastDate, "format": `dddd, MMMM D, YYYY`, "class": `p-4` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("format-date", { "value": pastDate, "format": `YYYY-MM-DD` }),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("format-date", { "value": pastDate, "format": `DD/MM/YYYY` }),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("format-date", { "value": pastDate, "format": `D MMM YYYY` }),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("format-date", { "value": pastDate, "format": `HH:mm:ss` }),
+                    import_Document.default.createText(`
+            `, false),
+                    import_Document.default.createElement("format-date", { "value": pastDate, "format": `MMMM D YYYY, h:mm:ss a` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
@@ -1858,11 +1922,11 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
           `, false),
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <format-date value="2024-12-25T10:00:00.000Z" format="YYYY-MM-DD" class="p-4" />
-            <format-date value="2024-12-25T10:00:00.000Z" format="DD/MM/YYYY" class="p-4" />
-            <format-date value="2024-12-25T10:00:00.000Z" format="D MMM YYYY" class="p-4" />
-            <format-date value="2024-12-25T10:00:00.000Z" format="HH:mm:ss" class="p-4" />
-            <format-date value="2024-12-25T10:00:00.000Z" format="dddd, MMMM D, YYYY" class="p-4" />
+            <format-date value="2024-12-25T10:00:00Z" format="YYYY-MM-DD" />
+            <format-date value="2024-12-25T10:00:00Z" format="DD/MM/YYYY" />
+            <format-date value="2024-12-25T10:00:00Z" format="D MMM YYYY" />
+            <format-date value="2024-12-25T10:00:00Z" format="HH:mm:ss" />
+            <format-date value="2024-12-25T10:00:00Z" format="MMMM D YYYY, h:mm:ss a" />
           `)
                   ]),
                   import_Document.default.createText(`
@@ -1882,16 +1946,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg:basis-half-10 md:basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-date", { "value": recentDate, "format": `ago`, "class": `p-4` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("format-date", { "value": recentDate, "format": `ago` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
@@ -1900,7 +1958,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <!-- Assuming the date is 5 minutes ago -->
-            <format-date value={recentDate} format="ago" class="p-4" />
+            <format-date value={recentDate} format="ago" />
           `)
                   ]),
                   import_Document.default.createText(`
@@ -1920,16 +1978,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg:basis-half-10 md:basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-date", { "value": recentDate, "format": `a`, "class": `p-4` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("format-date", { "value": recentDate, "format": `a` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
@@ -1938,7 +1990,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <!-- Assuming the date is 5 minutes ago -->
-            <format-date value={recentDate} format="a" class="p-4" />
+            <format-date value={recentDate} format="a" />
           `)
                   ]),
                   import_Document.default.createText(`
@@ -1952,8 +2004,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
                       ...this._toNodeList(_("Currency")),
                       import_Document.default.createText(`
             `, false)
@@ -1964,8 +2014,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       ...this._toNodeList(_("Email")),
-                      import_Document.default.createText(`
-              `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

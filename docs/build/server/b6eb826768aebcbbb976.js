@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\format\email.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\format\email.ink
   var email_exports = {};
   __export(email_exports, {
     default: () => Email_b6eb826768aebcbbb976
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\format\email.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\format\email.ink
   var Email_b6eb826768aebcbbb976 = class extends import_Document2.default {
     id() {
       return "b6eb826768aebcbbb976";
@@ -820,9 +820,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
   @ink utilities;`;
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/format/email.html";
+      const title = _("Ink UI - Email Format");
+      const description = _("A component for displaying email addresses as clickable mailto links with customizable labels and styles.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -830,7 +830,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Format", href: "/ink/ui/format/index.html" },
+        { icon: "format", label: "Format", href: "/ink/ui/format/index.html" },
         { label: "Email" }
       ];
       return [
@@ -1395,97 +1395,96 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     `, false),
                     import_Document.default.createElement("h6", { "class": `bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper` }, [
                       import_Document.default.createText(`
-    `, false),
+  `, false),
                       ...this._toNodeList(_("UI")),
                       import_Document.default.createText(`
-  `, false)
+`, false)
                     ]),
                     import_Document.default.createText(`
-  `, false),
+`, false),
                     ...!!(url === "/ui/index.html") ? [
                       import_Document.default.createText(`
-    `, false),
+  `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/index.html` }, [
                         import_Document.default.createText(`
-      `, false),
+    `, false),
                         ...this._toNodeList(_("Components")),
                         import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+`, false)
                     ] : true ? [
                       ,
                       import_Document.default.createText(`
-    `, false),
+  `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/index.html` }, [
                         import_Document.default.createText(`
-      `, false),
+    `, false),
                         ...this._toNodeList(_("Components")),
                         import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
-                    ] : [],
-                    import_Document.default.createText(`
-  
-  
-  `, false),
-                    ...!!(url === "/docs/state-management.html") ? [
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/form/index.html` }, [
-                        import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Form")),
-                        import_Document.default.createText(`
-    `, false)
-                      ]),
-                      import_Document.default.createText(`
-  `, false)
-                    ] : true ? [
-                      ,
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/form/index.html` }, [
-                        import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Form")),
-                        import_Document.default.createText(`
-    `, false)
-                      ]),
-                      import_Document.default.createText(`
-  `, false)
+`, false)
                     ] : [],
                     import_Document.default.createText(`
 
-  `, false),
-                    ...!!(url === "/docs/client-api.html") ? [
+`, false),
+                    ...!!(url === "/ui/form/index.html") ? [
                       import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/form/index.html` }, [
+                        import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
+                        ...this._toNodeList(_("Forms")),
                         import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Formats")),
-                        import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+`, false)
                     ] : true ? [
                       ,
                       import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/form/index.html` }, [
+                        import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
+                        ...this._toNodeList(_("Forms")),
                         import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Formats")),
-                        import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
+`, false)
+                    ] : [],
+                    import_Document.default.createText(`
+
+`, false),
+                    ...!!(url === "/ui/format/index.html") ? [
+                      import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
+                        import_Document.default.createText(`
+    `, false),
+                        ...this._toNodeList(_("Formats")),
+                        import_Document.default.createText(`
   `, false)
+                      ]),
+                      import_Document.default.createText(`
+`, false)
+                    ] : true ? [
+                      ,
+                      import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
+                        import_Document.default.createText(`
+    `, false),
+                        ...this._toNodeList(_("Formats")),
+                        import_Document.default.createText(`
+  `, false)
+                      ]),
+                      import_Document.default.createText(`
+`, false)
                     ] : [],
                     import_Document.default.createText(`
 `, false)
@@ -1501,18 +1500,14 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Email` }, [
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#email` }, [
                       ...this._toNodeList(_("Email"))
                     ]),
                     import_Document.default.createText(`
@@ -1526,63 +1521,27 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basicEmail` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Basic Email"))
+                        ...this._toNodeList(_("Basic Usage"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#labeledEmail` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#label` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Labeled Email"))
+                        ...this._toNodeList(_("Custom Label"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#smallEmail` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styled` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Small Email Display"))
+                        ...this._toNodeList(_("Styled Email"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#mediumEmail` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#attributes` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Medium Email Display"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#largeEmail` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Large Email Display"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#coloredEmail` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Colored Email Display"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#noUnderlineEmail` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("No Underline Email"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#blockEmail` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Block Email Display"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#responsiveEmail` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Responsive Email Display"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#enhancedEmail` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Enhanced Email with Attributes"))
+                        ...this._toNodeList(_("Link Attributes"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1614,7 +1573,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `Email` }, []),
+                  import_Document.default.createElement("a", { "name": `email` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
@@ -1622,12 +1581,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Email`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Email Format`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Email from '@stackpress/ink-ui/format/email';
+              import EmailFormat from '@stackpress/ink-ui/format/email';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1646,11 +1605,11 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("p", { "class": `mb-20` }, [
-                    ...this._toNodeList(_("The `<format-email>` component creates a clickable email link (`mailto:`) with customizable styling and additional HTML attributes. The default font-size is 13px, overridable via the `size` prop or `tx-*` classes. The link is underlined by default, controllable via the `underline` prop."))
+                    ...this._toNodeList(_("Customize the email link with the props below. Additional HTML attributes are passed to the `<a>` tag."))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
@@ -1693,7 +1652,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('The email address for the `mailto:` link (e.g., "user@example.com").'))
+                        ...this._toNodeList(_('Email address (e.g., "john@doe.com"). Used in the `mailto:` link and as the default display text.'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1720,142 +1679,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("The display text for the link. Defaults to the `value` if not provided."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`bold`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("If true, applies bold font weight to the text. Defaults to false."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`color`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Sets the text color of the link (e.g., "var(--primary)", "#FF0000"). Defaults to inherited.'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`underline`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("If true, underlines the link. Defaults to true."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`display`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Sets display style (e.g., "inline-block", "block"). Defaults to "inline-block".'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`size`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String/Number`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Sets the font size of the link (e.g., "12px", "1rem"). Defaults to 13px.'))
+                        ...this._toNodeList(_("Custom text to display instead of the email address."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1882,7 +1706,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Ink utility classes for responsive styling (e.g., "p-4", "tx-md", "md:mr-10").'))
+                        ...this._toNodeList(_('Ink utility classes for styling the container (e.g., "tx-md").'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1894,7 +1718,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`style`, false)
+                        import_Document.default.createText(`display`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -1909,7 +1733,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Inline styles (use `class` with Ink utilities instead)."))
+                        ...this._toNodeList(_('Display style for the container (e.g., "inline-block", "block"). Defaults to "inline-block".'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1921,12 +1745,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Other attributes`, false)
+                        import_Document.default.createText(`size`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`-`, false)
+                        import_Document.default.createText(`String`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -1936,7 +1760,115 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Additional HTML attributes (e.g., `target`, `rel`, `title`) are passed to the `<a>` tag."))
+                        ...this._toNodeList(_('Font size using Ink utilities (e.g., "md", "lg"). Defaults to "13px".'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`bold`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Applies bold font weight to the link if `true`."))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`color`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Text color for the link using Ink utilities (e.g., "primary", "secondary").'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`underline`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Underlines the link if `true`."))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`[html-attributes]`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Any`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Additional HTML attributes (e.g., `target`, `rel`) passed to the `<a>` tag."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1946,393 +1878,126 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Basic Email -->
+          <!-- Basic Usage -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `basicEmail` }, []),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Basic Email"))
+                    ...this._toNodeList(_("Basic Usage"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A basic email link with the default 13px font size and underlined text."))
+                    ...this._toNodeList(_("Displays an email address as a clickable mailto link with default styling."))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg:basis-half-10 md:basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-email", { "value": `user@example.com`, "class": `p-4` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("format-email", { "value": `john@doe.com` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <format-email value="user@example.com" class="p-4" />
+            <format-email value="john@doe.com" />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Labeled Email -->
+          <!-- Custom Label -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `labeledEmail` }, []),
+                  import_Document.default.createElement("a", { "name": `label` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Labeled Email"))
+                    ...this._toNodeList(_("Custom Label"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("An email link with a custom label instead of the email address."))
+                    ...this._toNodeList(_("Displays a custom label instead of the email address."))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg:basis-half-10 md:basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-email", { "value": `support@example.com`, "label": `Contact Support`, "class": `p-4` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("format-email", { "value": `jane@doe.com`, "label": `Contact Jane` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <format-email value="support@example.com" label="Contact Support" class="p-4" />
+            <format-email value="jane@doe.com" label="Contact Jane" />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Small Email Display -->
+          <!-- Styled Email -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `smallEmail` }, []),
+                  import_Document.default.createElement("a", { "name": `styled` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Small Email Display"))
+                    ...this._toNodeList(_("Styled Email"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("An email link with a smaller font size using `tx-xs` (10px)."))
+                    ...this._toNodeList(_("Styles the email link with size, color, and underline options."))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg:basis-half-10 md:basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-email", { "value": `small@example.com`, "class": `p-4 tx-xs b-solid b-t-1` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("format-email", { "primary": true, "underline": true, "md": true, "value": `john@doe.com` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <format-email value="small@example.com" class="p-4 tx-xs b-solid b-t-1" />
+            <format-email primary underline md value="john@doe.com" />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Medium Email Display -->
+          <!-- Link Attributes -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `mediumEmail` }, []),
+                  import_Document.default.createElement("a", { "name": `attributes` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Medium Email Display"))
+                    ...this._toNodeList(_("Link Attributes"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("An email link with a medium font size using `tx-md` (14px) and a border."))
+                    ...this._toNodeList(_("Adds additional HTML attributes to the link, like `target` or `rel`."))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg:basis-half-10 md:basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-email", { "value": `medium@example.com`, "class": `p-4 tx-md b-solid b-t-2 c-4` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("format-email", { "value": `support@doe.com`, "target": `_blank`, "rel": `noopener`, "bold": true }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <format-email value="medium@example.com" class="p-4 tx-md b-solid b-t-2 c-4" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Large Email Display -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `largeEmail` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Large Email Display"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("An email link with a larger font size using `tx-lg` (18px) and bold styling."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg:basis-half-10 md:basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-email", { "value": `large@example.com`, "bold": true, "class": `p-4 tx-lg mr-10` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <format-email value="large@example.com" bold class="p-4 tx-lg mr-10" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Colored Email Display -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `coloredEmail` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Colored Email Display"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("An email link with a custom text color using the `color` prop."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg:basis-half-10 md:basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-email", { "value": `color@example.com`, "color": `var(--primary)`, "class": `p-4 tx-center bg-t-1 rounded` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <format-email 
-              value="color@example.com" 
-              color="var(--primary)" 
-              class="p-4 tx-center bg-t-1 rounded" 
-            />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- No Underline Email -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `noUnderlineEmail` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("No Underline Email"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("An email link with the underline removed using `underline={false}`."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg:basis-half-10 md:basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-email", { "value": `nounderline@example.com`, "underline": false, "class": `p-4 b-solid b-t-2 c-4` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <format-email 
-              value="nounderline@example.com" 
-              underline={false} 
-              class="p-4 b-solid b-t-2 c-4" 
-            />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Block Email Display -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `blockEmail` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Block Email Display"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("An email link as a block element with centered text and a background."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg:basis-half-10 md:basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-email", { "value": `block@example.com`, "display": `block`, "class": `p-4 tx-center bg-t-2 rounded` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <format-email 
-              value="block@example.com" 
-              display="block" 
-              class="p-4 tx-center bg-t-2 rounded" 
-            />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Responsive Email Display -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `responsiveEmail` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Responsive Email Display"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("An email link that adjusts font size based on screen size (small on mobile, large on desktop)."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg:basis-half-10 md:basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-email", { "value": `responsive@example.com`, "class": `p-4 md:tx-sm lg:tx-lg` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <format-email 
-              value="responsive@example.com" 
-              class="p-4 md:tx-sm lg:tx-lg" 
-            />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Enhanced Email with Attributes -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `enhancedEmail` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Enhanced Email with Attributes"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("An email link with additional HTML attributes like `target` and `title` for enhanced functionality."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third-10 lg:basis-half-10 md:basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 h-120 flex flex-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-email", { "value": `enhanced@example.com`, "label": `Email Support`, "target": `_blank`, "title": `Opens email client in a new tab`, "class": `p-4 b-solid b-t-2 c-4` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <format-email 
-              value="enhanced@example.com" 
-              label="Email Support" 
-              target="_blank" 
-              title="Opens email client in a new tab" 
-              class="p-4 b-solid b-t-2 c-4" 
-            />
+            <format-email value="support@doe.com" target="_blank" rel="noopener" bold />
           `)
                   ]),
                   import_Document.default.createText(`
@@ -2346,8 +2011,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
                       ...this._toNodeList(_("Date")),
                       import_Document.default.createText(`
             `, false)
@@ -2358,8 +2021,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       ...this._toNodeList(_("Formula")),
-                      import_Document.default.createText(`
-              `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

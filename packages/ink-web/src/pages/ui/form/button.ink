@@ -26,7 +26,7 @@
   import { _ } from '@/components/i18n';
 
   const url = '/ink/ui/components/button.html';
-  const title = _('Ink UI - Button Component');
+  const title = _('Ink UI - Form Button');
   const description = _('A customizable button component for forms and links.');
   
   const toggle = () => {
@@ -36,7 +36,7 @@
     { icon: 'home', label: 'Home', href: '/ink/index.html' },
     { icon: 'book', label: 'Docs', href: '/ink/docs/index.html' },
     { icon: 'icons', label: 'UI', href: '/ink/ui/index.html' },
-    { icon: 'icons', label: 'Components', href: '/ink/ui/index.html' },
+        { icon: 'icons', label: 'Forms', href: '/ink/ui/form/index.html' },
     { label: 'Button' }
   ];
 </script>

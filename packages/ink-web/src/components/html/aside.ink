@@ -130,36 +130,35 @@
 
 
     <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper">
-    {_('UI')}
-  </h6>
-  <if true={url === '/ui/index.html'}>
-    <a class="block tx-info py-10 pl-10 tx-bold" href="/ink/ui/index.html">
-      {_('Components')}
-    </a>
-  <else />
-    <a class="block tx-info py-10 pl-10" href="/ink/ui/index.html">
-      {_('Components')}
-    </a>
-  </if>
-  
-  
-  <if true={url === '/docs/state-management.html'}>
-    <a class="block tx-info py-10 pl-10 tx-bold" href="/ink/ui/form/index.html">
-      {_('Form')}
-    </a>
-  <else />
-    <a class="block tx-info py-10 pl-10" href="/ink/ui/form/index.html">
-      {_('Form')}
-    </a>
-  </if>
+  {_('UI')}
+</h6>
+<if true={url === '/ui/index.html'}>
+  <a class="block tx-info py-10 pl-10 tx-bold" href="/ink/ui/index.html">
+    {_('Components')}
+  </a>
+<else />
+  <a class="block tx-info py-10 pl-10" href="/ink/ui/index.html">
+    {_('Components')}
+  </a>
+</if>
 
-  <if true={url === '/docs/client-api.html'}>
-    <a class="block tx-info py-10 pl-10 tx-bold" href="/ink/ui/format/index.html">
-      {_('Formats')}
-    </a>
-  <else />
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
-      {_('Formats')}
-    </a>
-  </if>
+<if true={url === '/ui/form/index.html'}>
+  <a class="block tx-info py-10 pl-10 tx-bold" href="/ink/ui/form/index.html">
+    {_('Forms')}
+  </a>
+<else />
+  <a class="block tx-info py-10 pl-10" href="/ink/ui/form/index.html">
+    {_('Forms')}
+  </a>
+</if>
+
+<if true={url === '/ui/format/index.html'}>
+  <a class="block tx-info py-10 pl-10 tx-bold" href="/ink/ui/format/index.html">
+    {_('Formats')}
+  </a>
+<else />
+  <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
+    {_('Formats')}
+  </a>
+</if>
 </nav>

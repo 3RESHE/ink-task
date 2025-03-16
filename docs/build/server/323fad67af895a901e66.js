@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\format\code.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\format\code.ink
   var code_exports = {};
   __export(code_exports, {
     default: () => Code_323fad67af895a901e66
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\format\code.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\format\code.ink
   var Code_323fad67af895a901e66 = class extends import_Document2.default {
     id() {
       return "323fad67af895a901e66";
@@ -1400,97 +1400,96 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     `, false),
                     import_Document.default.createElement("h6", { "class": `bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper` }, [
                       import_Document.default.createText(`
-    `, false),
+  `, false),
                       ...this._toNodeList(_("UI")),
                       import_Document.default.createText(`
-  `, false)
+`, false)
                     ]),
                     import_Document.default.createText(`
-  `, false),
+`, false),
                     ...!!(url === "/ui/index.html") ? [
                       import_Document.default.createText(`
-    `, false),
+  `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/index.html` }, [
                         import_Document.default.createText(`
-      `, false),
+    `, false),
                         ...this._toNodeList(_("Components")),
                         import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+`, false)
                     ] : true ? [
                       ,
                       import_Document.default.createText(`
-    `, false),
+  `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/index.html` }, [
                         import_Document.default.createText(`
-      `, false),
+    `, false),
                         ...this._toNodeList(_("Components")),
                         import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
-                    ] : [],
-                    import_Document.default.createText(`
-  
-  
-  `, false),
-                    ...!!(url === "/docs/state-management.html") ? [
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/form/index.html` }, [
-                        import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Form")),
-                        import_Document.default.createText(`
-    `, false)
-                      ]),
-                      import_Document.default.createText(`
-  `, false)
-                    ] : true ? [
-                      ,
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/form/index.html` }, [
-                        import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Form")),
-                        import_Document.default.createText(`
-    `, false)
-                      ]),
-                      import_Document.default.createText(`
-  `, false)
+`, false)
                     ] : [],
                     import_Document.default.createText(`
 
-  `, false),
-                    ...!!(url === "/docs/client-api.html") ? [
+`, false),
+                    ...!!(url === "/ui/form/index.html") ? [
                       import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/form/index.html` }, [
+                        import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
+                        ...this._toNodeList(_("Forms")),
                         import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Formats")),
-                        import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+`, false)
                     ] : true ? [
                       ,
                       import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/form/index.html` }, [
+                        import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
+                        ...this._toNodeList(_("Forms")),
                         import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Formats")),
-                        import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
+`, false)
+                    ] : [],
+                    import_Document.default.createText(`
+
+`, false),
+                    ...!!(url === "/ui/format/index.html") ? [
+                      import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
+                        import_Document.default.createText(`
+    `, false),
+                        ...this._toNodeList(_("Formats")),
+                        import_Document.default.createText(`
   `, false)
+                      ]),
+                      import_Document.default.createText(`
+`, false)
+                    ] : true ? [
+                      ,
+                      import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
+                        import_Document.default.createText(`
+    `, false),
+                        ...this._toNodeList(_("Formats")),
+                        import_Document.default.createText(`
+  `, false)
+                      ]),
+                      import_Document.default.createText(`
+`, false)
                     ] : [],
                     import_Document.default.createText(`
 `, false)
@@ -1617,11 +1616,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
                     ...this._toNodeList(_("Props"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("p", { "class": `mb-20` }, [
-                    ...this._toNodeList(_("The `<format-code>` component displays syntax-highlighted code snippets using Prism.js. Use Ink utilities via the `class` prop for additional styling."))
                   ]),
                   import_Document.default.createText(`
           `, false),
@@ -2072,7 +2066,7 @@ greet('World');";
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Formats Index")),
+                      ...this._toNodeList(_("Formats")),
                       import_Document.default.createText(`
             `, false)
                     ]),

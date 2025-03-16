@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\field\select.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\field\select.ink
   var select_exports = {};
   __export(select_exports, {
     default: () => Select_6c6170f4af919520d780
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\ui\field\select.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\field\select.ink
   var Select_6c6170f4af919520d780 = class extends import_Document2.default {
     id() {
       return "6c6170f4af919520d780";
@@ -820,9 +820,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
   @ink utilities;`;
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/field/select.html";
+      const title = _("Ink UI - Select Field");
+      const description = _("A customizable dropdown select field with search and multiple selection options.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -830,11 +830,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Form", href: "/ink/ui/form/index.html" },
-        { label: "Select" }
+        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
+        { label: "Select Field" }
       ];
-      const handleChange = (e) => console.log("Change event:", e.target.value);
-      const handleUpdate = (value) => console.log("Updated value:", value);
       return [
         import_Document.default.createText(`
 
@@ -1503,19 +1501,15 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Select` }, [
-                      ...this._toNodeList(_("Select"))
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#select` }, [
+                      ...this._toNodeList(_("Select Field"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1528,27 +1522,27 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basicSelect` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Basic Select Input"))
+                        ...this._toNodeList(_("Basic Usage"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#selectWithSearch` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#search` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Select with Search"))
+                        ...this._toNodeList(_("With Search"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#enhancedSelect` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#enhanced` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Enhanced Select Input"))
+                        ...this._toNodeList(_("Enhanced Features"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#styledSelect` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#custom` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Styled Select Input"))
+                        ...this._toNodeList(_("Custom Styling"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1580,20 +1574,20 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `Select` }, []),
+                  import_Document.default.createElement("a", { "name": `select` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Select"))
+                    ...this._toNodeList(_("Select Field"))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Select`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Select Field`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Select from '@stackpress/ink-ui/field/select';
+              import SelectField from '@stackpress/ink-ui/field/select';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1601,7 +1595,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Props Section -->
           `, false),
                   import_Document.default.createElement("a", { "name": `props` }, []),
                   import_Document.default.createText(`
@@ -1611,16 +1604,11 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("p", { "class": `mb-20` }, [
-                    ...this._toNodeList(_('The `<field-select>` component provides a customizable dropdown select input. Options can be defined using `<option>` or `<span class="select-default-option">` tags. Below are its props:'))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Property"))
+                      ...this._toNodeList(_("Name"))
                     ]),
                     import_Document.default.createText(`
             `, false),
@@ -1635,10 +1623,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
-                      ...this._toNodeList(_("Description"))
+                      ...this._toNodeList(_("Notes"))
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1659,13 +1646,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Name attribute for form submission."))
+                        ...this._toNodeList(_("Name attribute for form submission"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1676,7 +1662,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Array/String`, false)
+                        import_Document.default.createText(`String | Array`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -1686,13 +1672,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Initial selected value(s); String for single, Array or JSON string (e.g., "[1, 2]") for multiple.'))
+                        ...this._toNodeList(_("Initial value(s); string for single, array for multiple"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1713,13 +1698,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Placeholder text when no options are selected (defaults to "Choose Option").'))
+                        ...this._toNodeList(_('Text when no option is selected (default: "Choose Option")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1740,13 +1724,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Enables custom option input."))
+                        ...this._toNodeList(_("Enables adding custom options via input"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1767,13 +1750,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Enables search functionality within options."))
+                        ...this._toNodeList(_("Enables search filtering of options"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1794,67 +1776,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Enables multiple selection."))
+                        ...this._toNodeList(_("Allows multiple selections (assumed supported)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`disabled`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Disables the select input."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`required`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Marks the input as required."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1875,13 +1802,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Callback when the dropdown opens."))
+                        ...this._toNodeList(_("Callback when dropdown opens"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1902,13 +1828,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Callback when the dropdown closes."))
+                        ...this._toNodeList(_("Callback when dropdown closes"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1929,13 +1854,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Callback when the search input changes, receiving the event."))
+                        ...this._toNodeList(_("Callback on search input change"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1956,13 +1880,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Callback when an option is selected, receiving the event."))
+                        ...this._toNodeList(_("Callback when an option is selected"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -1983,13 +1906,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Callback when an option is removed, receiving the event."))
+                        ...this._toNodeList(_("Callback when an option is removed"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -2010,13 +1932,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Callback when a custom option is added, receiving the event."))
+                        ...this._toNodeList(_("Callback when a custom option is added"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -2037,13 +1958,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Callback when selections are cleared, receiving the event."))
+                        ...this._toNodeList(_("Callback when selections are cleared"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -2064,13 +1984,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Custom handler for change events, receiving the event."))
+                        ...this._toNodeList(_("Callback on selection change"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -2091,13 +2010,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Callback with the updated value(s)."))
+                        ...this._toNodeList(_("Callback with updated value(s)"))
                       ]),
                       import_Document.default.createText(`
             `, false)
                     ]),
                     import_Document.default.createText(`
-
             `, false),
                     import_Document.default.createElement("table-row", {}, [
                       import_Document.default.createText(`
@@ -2118,34 +2036,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("CSS classes for the host element (use Ink utilities)."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`style`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Inline styles (prefer Ink utilities instead)."))
+                        ...this._toNodeList(_("Custom CSS classes for the host element"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -2155,45 +2046,38 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Basic Select Input -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `basicSelect` }, []),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Basic Select Input"))
+                    ...this._toNodeList(_("Basic Usage"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A basic single-select input with predefined options."))
+                    import_Document.default.createText(`A simple single-select dropdown with options.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
+                    import_Document.default.createElement("field-select", { "name": `color` }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("field-select", { "name": `color` }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("option", { "value": `red` }, [
-                          import_Document.default.createText(`Red`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("option", { "value": `blue` }, [
-                          import_Document.default.createText(`Blue`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("option", { "value": `green` }, [
-                          import_Document.default.createText(`Green`, false)
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
+                      import_Document.default.createElement("option", { "value": `red` }, [
+                        import_Document.default.createText(`Red`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("option", { "value": `blue` }, [
+                        import_Document.default.createText(`Blue`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("option", { "value": `green` }, [
+                        import_Document.default.createText(`Green`, false)
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -2203,7 +2087,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <field-select name="color">
               <option value="red">Red</option>
@@ -2214,60 +2098,43 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Select with Search -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `selectWithSearch` }, []),
+                  import_Document.default.createElement("a", { "name": `search` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Select with Search"))
+                    ...this._toNodeList(_("With Search"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A select input with search functionality and multiple selection."))
+                    import_Document.default.createText(`A select field with search and multiple selection.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
+                    import_Document.default.createElement("field-select", { "name": `fruits`, "value": `["apple", "banana"]`, "search": true, "multiple": true, "filter": (e) => console.log("Filter:", e.target.value) }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("field-select", { "name": `fruits`, "value": `["apple", "banana"]`, "search": true, "multiple": true, "filter": (e) => console.log("Filter event:", e.target.value) }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("option", { "value": `apple` }, [
-                          import_Document.default.createText(`Apple`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("option", { "value": `banana` }, [
-                          import_Document.default.createText(`Banana`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("option", { "value": `orange` }, [
-                          import_Document.default.createText(`Orange`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("option", { "value": `grape` }, [
-                          import_Document.default.createText(`Grape`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("option", { "value": `pineapple` }, [
-                          import_Document.default.createText(`Pineapple`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("option", { "value": `mango` }, [
-                          import_Document.default.createText(`Mango`, false)
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
+                      import_Document.default.createElement("option", { "value": `apple` }, [
+                        import_Document.default.createText(`Apple`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("option", { "value": `banana` }, [
+                        import_Document.default.createText(`Banana`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("option", { "value": `orange` }, [
+                        import_Document.default.createText(`Orange`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("option", { "value": `grape` }, [
+                        import_Document.default.createText(`Grape`, false)
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -2277,72 +2144,63 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <field-select 
               name="fruits" 
               value='["apple", "banana"]' 
               search 
               multiple 
-              filter={(e) => console.log('Filter event:', e.target.value)}
+              filter={(e) => console.log('Filter:', e.target.value)}
             >
               <option value="apple">Apple</option>
               <option value="banana">Banana</option>
               <option value="orange">Orange</option>
               <option value="grape">Grape</option>
-              <option value="pineapple">Pineapple</option>
-              <option value="mango">Mango</option>
             </field-select>
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Enhanced Select Input -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `enhancedSelect` }, []),
+                  import_Document.default.createElement("a", { "name": `enhanced` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Enhanced Select Input"))
+                    ...this._toNodeList(_("Enhanced Features"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("An enhanced select input with multiple features and event handlers."))
+                    import_Document.default.createText(`A select field with search, custom input, multiple selection, and event handlers.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg-basis-half md-basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex flex-col items-center justify-center` }, [
+                    import_Document.default.createElement("field-select", { "class": `w-200 relative z-1`, "name": `select`, "placeholder": `Choose`, "value": `1`, "search": true, "custom": true, "multiple": true, "open": (e) => console.log("Open:", e), "close": (e) => console.log("Close:", e), "filter": (e) => console.log("Filter:", e), "select": (e) => console.log("Select:", e), "remove": (e) => console.log("Remove:", e), "add": (e) => console.log("Add:", e), "clear": (e) => console.log("Clear:", e), "change": (e) => console.log("Change:", e), "update": (e) => console.log("Update:", e) }, [
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("field-select", { "class": `w-200 relative z-1`, "name": `select`, "placeholder": `Choose`, "value": `["1"]`, "search": true, "custom": true, "multiple": true, "open": (e) => console.log("open", e), "close": (e) => console.log("close", e), "filter": (e) => console.log("filter", e), "select": (e) => console.log("select", e), "remove": (e) => console.log("remove", e), "add": (e) => console.log("add", e), "clear": (e) => console.log("clear", e), "change": (e) => console.log("change", e), "update": (e) => console.log("update", e) }, [
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("option", { "value": `1`, "keyword": `option 1` }, [
-                          import_Document.default.createText(`Option 1`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("option", { "value": `4`, "keyword": `option 2` }, [
-                          import_Document.default.createElement("strong", {}, [
-                            import_Document.default.createText(`Option 2`, false)
-                          ])
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("option", { "value": `3`, "keyword": `option 3` }, [
-                          import_Document.default.createText(`Option 3`, false)
-                        ]),
-                        import_Document.default.createText(`
-                `, false),
-                        import_Document.default.createElement("option", { "value": `2`, "keyword": `option 4` }, [
-                          import_Document.default.createText(`Option 4`, false)
-                        ]),
-                        import_Document.default.createText(`
-              `, false)
+                      import_Document.default.createElement("option", { "value": `1`, "keyword": `option 1` }, [
+                        import_Document.default.createText(`Option 1`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("option", { "value": `4`, "keyword": `option 2` }, [
+                        import_Document.default.createElement("strong", {}, [
+                          import_Document.default.createText(`Option 2`, false)
+                        ])
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("option", { "value": `3`, "keyword": `option 3` }, [
+                        import_Document.default.createText(`Option 3`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("option", { "value": `2`, "keyword": `option 4` }, [
+                        import_Document.default.createText(`Option 4`, false)
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -2352,25 +2210,25 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <field-select  
               class="w-200 relative z-1"
               name="select"
               placeholder="Choose" 
-              value='["1"]'
+              value="1"
               search
               custom
               multiple
-              open={(e) => console.log('open', e)}
-              close={(e) => console.log('close', e)}
-              filter={(e) => console.log('filter', e)}
-              select={(e) => console.log('select', e)}
-              remove={(e) => console.log('remove', e)}
-              add={(e) => console.log('add', e)}
-              clear={(e) => console.log('clear', e)}
-              change={(e) => console.log('change', e)}
-              update={(e) => console.log('update', e)}
+              open={(e) => console.log('Open:', e)}
+              close={(e) => console.log('Close:', e)}
+              filter={(e) => console.log('Filter:', e)}
+              select={(e) => console.log('Select:', e)}
+              remove={(e) => console.log('Remove:', e)}
+              add={(e) => console.log('Add:', e)}
+              clear={(e) => console.log('Clear:', e)}
+              change={(e) => console.log('Change:', e)}
+              update={(e) => console.log('Update:', e)}
             >
               <option value="1" keyword="option 1">Option 1</option>
               <option value="4" keyword="option 2"><strong>Option 2</strong></option>
@@ -2381,7 +2239,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Styled Select Input -->
+ <!-- Styled Select Input -->
           `, false),
                   import_Document.default.createElement("a", { "name": `styledSelect` }, []),
                   import_Document.default.createText(`
@@ -2446,7 +2304,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Navigation -->
           `, false),
                   import_Document.default.createElement("nav", { "class": `flex` }, [
                     import_Document.default.createText(`
@@ -2455,9 +2312,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
-                      ...this._toNodeList(_("Rating")),
+                      ...this._toNodeList(_("Rating Field")),
                       import_Document.default.createText(`
             `, false)
                     ]),
@@ -2466,9 +2321,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/field/slug.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Slug")),
-                      import_Document.default.createText(`
-              `, false),
+                      ...this._toNodeList(_("Slug Field")),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

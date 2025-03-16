@@ -26,7 +26,7 @@
   import { _ } from '@/components/i18n';
 
   const url = '/ink/ui/field/datetime.html';
-  const title = _('Ink UI - Datetime Field Component');
+  const title = _('Ink UI - Datetime Field');
   const description = _('A datetime-local picker field with ISO datetime formatting and change handling.');
   
   const toggle = () => {
@@ -36,7 +36,7 @@
     { icon: 'home', label: 'Home', href: '/ink/index.html' },
     { icon: 'book', label: 'Docs', href: '/ink/docs/index.html' },
     { icon: 'icons', label: 'UI', href: '/ink/ui/index.html' },
-    { icon: 'icons', label: 'Components', href: '/ink/ui/index.html' },
+        { icon: 'icons', label: 'Forms', href: '/ink/ui/form/index.html' },
     { label: 'Datetime Field' }
   ];
 </script>

@@ -1,4 +1,7 @@
 <script>
+
+// NEW COUNTRY.ink SOURCE FOR HIDING THE COUNTRY FLAG
+
   import StyleSet from '@stackpress/ink/dist/style/StyleSet';
   import setBold from '../utilities/style/bold';
   import setColor from '../utilities/style/color';

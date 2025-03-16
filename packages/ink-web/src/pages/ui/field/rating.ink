@@ -26,7 +26,7 @@
   import { _ } from '@/components/i18n';
 
   const url = '/ink/panel.html';
-  const title = _('Ink UI - Web Components Meets Atomic Styles.');
+  const title = _('Ink UI - Rating Field');
   const description = _('Ink UI atomically generates CSS styles and provides out of box web components.');
   
   const toggle = () => {
@@ -90,7 +90,6 @@
           <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Props')}</h2>
-          <p class="mb-20">{_('The `<field-rating>` component provides a star-based rating system for user input. Below are its props:')}</p>
           <layout-table 
             top
             head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
@@ -208,7 +207,7 @@
               />
             </div>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={4}>{`
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim detab={12}>{`
             <field-rating 
               name="rating" 
               value="3" 

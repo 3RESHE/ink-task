@@ -26,7 +26,7 @@
   import { _ } from '@/components/i18n';
 
   const url = '/ink/ui/field/country.html';
-  const title = _('Ink UI - Country Field Component');
+  const title = _('Ink UI - Country Field');
   const description = _('A dropdown field for selecting countries with flags and search functionality.');
   
   const toggle = () => {
@@ -36,7 +36,7 @@
     { icon: 'home', label: 'Home', href: '/ink/index.html' },
     { icon: 'book', label: 'Docs', href: '/ink/docs/index.html' },
     { icon: 'icons', label: 'UI', href: '/ink/ui/index.html' },
-    { icon: 'icons', label: 'Components', href: '/ink/ui/index.html' },
+        { icon: 'icons', label: 'Forms', href: '/ink/ui/form/index.html' },
     { label: 'Country Field' }
   ];
 </script>

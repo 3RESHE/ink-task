@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\panel.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\components\panel.ink
   var panel_exports = {};
   __export(panel_exports, {
     default: () => Panel_eb07d2aa35e0a1b4fbd8
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\components\panel.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\components\panel.ink
   var Panel_eb07d2aa35e0a1b4fbd8 = class extends import_Document2.default {
     id() {
       return "eb07d2aa35e0a1b4fbd8";
@@ -821,7 +821,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
     template() {
       const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
+      const title = _("Ink UI - Panel Component");
       const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
@@ -1618,11 +1618,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("p", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("The <panel-layout> component uses slots for its structure. No props are required."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
                   import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
@@ -1850,7 +1845,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
         `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white`, "trim": true, "detab": 2 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
           <div class="h-200 bg-t-3 relative">
             <header class="absolute top-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted">
@@ -1947,7 +1942,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
         `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white`, "trim": true, "detab": 2 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
           <div class="h-300 bg-t-3 relative">
             <header class="absolute top-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted">
@@ -1997,7 +1992,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
           `, false),
                     import_Document.default.createElement("div", { "class": `relative w-80p h-80p b-solid b-t-1` }, [
                       import_Document.default.createText(`
-            <!-- Header -->
+
             `, false),
                       import_Document.default.createElement("header", { "class": `absolute top-0 left-0 right-0 h-50p b-solid b-t-1` }, [
                         import_Document.default.createText(`
@@ -2010,7 +2005,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ]),
                       import_Document.default.createText(`
 
-            <!-- Main Content -->
             `, false),
                       import_Document.default.createElement("main", { "class": `absolute top-50p bottom-0 left-0 right-0 b-solid b-t-1` }, [
                         import_Document.default.createText(`
@@ -2031,16 +2025,16 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
 
 
       `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white`, "trim": true, "detab": 2 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
         <div class="bg-t-3 h-120 flex items-center justify-center">
           <div class="relative w-80p h-80p b-solid b-t-1">
-            <!-- Header -->
+
             <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
               <div class="p-5">Header</div>
             </header>
 
-            <!-- Main Content -->
+
             <main class="absolute top-50p bottom-0 left-0 right-0 b-solid b-t-1">
               <div class="p-5">Main Content</div>
             </main>
@@ -2218,7 +2212,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
         `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white`, "trim": true, "detab": 2 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
           <div class="h-300 bg-t-3 flex flex-col lg-flex-row">
             <header class="h-50 bg-t-1 b-solid b-muted">

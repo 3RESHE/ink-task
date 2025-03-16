@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Switch Field Component</title>
+  <meta name="description" content="A customizable toggle switch field for boolean inputs." />
+  <meta property="og:title" content="Ink UI - Switch Field Component" />
+  <meta property="og:description" content="A customizable toggle switch field for boolean inputs." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/switch.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Switch Field Component" />
+  <meta name="twitter:description" content="A customizable toggle switch field for boolean inputs." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -142,26 +142,22 @@
   
 
   
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/formats/index.html">
+    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
       Formats
     </a>
   
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Switch">Switch</a>
+            <a class="block tx-t-0" href="#switch">Switch Field</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicSwitch">• Basic Switch Input</a>
-              <a class="block tx-t-1" href="#themedSwitch">• Themed Switch Input</a>
-              <a class="block tx-t-1" href="#styledSwitch">• Styled Switch Input</a>
-              <a class="block tx-t-1" href="#yesNoSwitch">• Yes/No Switch with Orange Theme</a>
-              <a class="block tx-t-1" href="#disabledSwitch">• Smooth Sun/Moon Switch (Disabled)</a>
-              <a class="block tx-t-1" href="#customSwitch">• Custom Labeled Switch</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#states">• States</a>
+              <a class="block tx-t-1" href="#styles">• Styles</a>
+              <a class="block tx-t-1" href="#variations">• Variations</a>
             </nav>
           </nav>
         </menu>
@@ -172,306 +168,213 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Switch"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Switch</h1>
-          <ide-app title="Switch" class="py-20">
+          <a name="switch"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Switch Field</h1>
+          <ide-app title="Switch Field" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import Switch from '@stackpress/ink-ui/field/switch';
+              import SwitchField from '@stackpress/ink-ui/field/switch';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <p class="mb-20">The `&lt;field-switch&gt;` component provides a toggle switch with customizable styles and labels. Below are its props:</p>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
-            <table-head>Description</table-head>
-
-            <table-row>
-              <table-col>name</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Name attribute for form submission.</table-col>
-            </table-row>
-
+            <table-head>Notes</table-head>
             <table-row>
               <table-col>checked</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Initial checked state of the switch (default false).</table-col>
+              <table-col>Sets the switch to checked state initially.</table-col>
             </table-row>
-
             <table-row>
               <table-col>disabled</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
               <table-col>Disables the switch.</table-col>
             </table-row>
-
+            <table-row>
+              <table-col>name</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Name attribute for form submission.</table-col>
+            </table-row>
             <table-row>
               <table-col>readonly</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
               <table-col>Makes the switch read-only.</table-col>
             </table-row>
-
             <table-row>
               <table-col>required</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Marks the switch as required.</table-col>
+              <table-col>Marks the switch as required in a form.</table-col>
             </table-row>
-
             <table-row>
               <table-col>value</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Value submitted when checked (default "on").</table-col>
+              <table-col>Value submitted when checked.</table-col>
             </table-row>
-
             <table-row>
               <table-col>label</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Text label displayed next to the switch.</table-col>
+              <table-col>Text displayed next to the switch. Defaults to empty string.</table-col>
             </table-row>
-
-            <table-row>
-              <table-col>onoff</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Displays "ON" and "OFF" labels.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>yesno</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Displays "YES" and "NO" labels.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>checkex</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Displays check (✓) and cross (✖) symbols (default true).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>sunmoon</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Displays sun (☼) and moon (☽) symbols.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>rounded</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Rounds the switch track and knob.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>ridge</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Adds a ridged pattern ("|||") to the knob.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>smooth</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Makes the knob smooth (empty content).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>blue</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Applies blue theme colors.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>orange</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Applies orange theme colors.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>green</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Applies green theme colors.</table-col>
-            </table-row>
-
             <table-row>
               <table-col>change</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Custom handler for change events, receiving the event.</table-col>
+              <table-col>Callback triggered on switch change event.</table-col>
             </table-row>
-
             <table-row>
               <table-col>update</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Callback with the updated checked state (true/false).</table-col>
+              <table-col>Callback triggered with the switch value on change.</table-col>
             </table-row>
-
             <table-row>
-              <table-col>class</table-col>
-              <table-col>String</table-col>
+              <table-col>onoff</table-col>
+              <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>CSS classes for the host element (use Ink utilities).</table-col>
+              <table-col>Displays "ON" and "OFF" in the switch.</table-col>
             </table-row>
-
             <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
+              <table-col>yesno</table-col>
+              <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Inline styles (prefer Ink utilities instead).</table-col>
+              <table-col>Displays "YES" and "NO" in the switch.</table-col>
+            </table-row>
+            <table-row>
+              <table-col>checkex</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Displays check (✓) and cross (✖) symbols in the switch.</table-col>
+            </table-row>
+            <table-row>
+              <table-col>sunmoon</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Displays sun (☼) and moon (☽) symbols in the switch.</table-col>
+            </table-row>
+            <table-row>
+              <table-col>rounded</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Rounds the switch track and thumb.</table-col>
+            </table-row>
+            <table-row>
+              <table-col>ridge</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Adds ridges ("|||") to the switch thumb.</table-col>
+            </table-row>
+            <table-row>
+              <table-col>smooth</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Makes the switch thumb smooth (no content).</table-col>
+            </table-row>
+            <table-row>
+              <table-col>blue</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Applies a blue color scheme to the switch.</table-col>
+            </table-row>
+            <table-row>
+              <table-col>orange</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Applies an orange color scheme to the switch.</table-col>
+            </table-row>
+            <table-row>
+              <table-col>green</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Applies a green color scheme to the switch.</table-col>
+            </table-row>
+            <table-row>
+              <table-col>error</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Indicates an error state (not styled by default).</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Switch Input -->
-          <a name="basicSwitch"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Switch Input</h2>
-          <div class="mb-10">A basic switch input with default check/cross symbols.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-switch name="toggle" label="Toggle Me" ></field-switch>
-            </div>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">A simple switch with a label and default styling.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-switch name="switch" label="Active?"></field-switch>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;field-switch 
-              name="toggle" 
-              label="Toggle Me" 
-              change={(e) =&gt; console.log('Change event:', e.target.checked)}
-            /&gt;
+            &lt;field-switch name="switch" label="Active?" /&gt;
           </ide-code>
 
-          <!-- Themed Switch Input -->
-          <a name="themedSwitch"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Themed Switch Input</h2>
-          <div class="mb-10">A themed switch input with "ON/OFF" labels and green color scheme.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-switch name="themeToggle" label="Theme" onoff green checked ></field-switch>
-            </div>
+          <a name="states"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">States</h2>
+          <div class="mb-10">Switch field with different states.</div>
+          <div class="bg-t-3 p-10 mb-10 flex gap-20">
+            <field-switch name="checked" label="Checked" checked></field-switch>
+            <field-switch name="disabled" label="Disabled" disabled></field-switch>
+            <field-switch name="required" label="Required" required></field-switch>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-switch name="checked" label="Checked" checked /&gt;
+            &lt;field-switch name="disabled" label="Disabled" disabled /&gt;
+            &lt;field-switch name="required" label="Required" required /&gt;
+          </ide-code>
+
+          <a name="styles"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Styles</h2>
+          <div class="mb-10">Switch field with different styling options.</div>
+          <div class="bg-t-3 p-10 mb-10 flex gap-20">
+            <field-switch name="rounded" label="Rounded" rounded></field-switch>
+            <field-switch name="ridge" label="Ridge" ridge></field-switch>
+            <field-switch name="smooth" label="Smooth" smooth></field-switch>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-switch name="rounded" label="Rounded" rounded /&gt;
+            &lt;field-switch name="ridge" label="Ridge" ridge /&gt;
+            &lt;field-switch name="smooth" label="Smooth" smooth /&gt;
+          </ide-code>
+
+          <a name="variations"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Variations</h2>
+          <div class="mb-10">Switch field with different text/symbols and colors.</div>
+          <div class="bg-t-3 p-10 mb-10 flex gap-20 flex-wrap">
+            <field-switch name="onoff" label="On/Off" onoff green></field-switch>
+            <field-switch name="yesno" label="Yes/No" yesno orange></field-switch>
+            <field-switch name="checkex" label="Check/Ex" checkex blue></field-switch>
+            <field-switch name="sunmoon" label="Sun/Moon" sunmoon></field-switch>
+            <field-switch name="custom" label="Custom" value="yes" checked rounded green ></field-switch>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;field-switch name="onoff" label="On/Off" onoff green /&gt;
+            &lt;field-switch name="yesno" label="Yes/No" yesno orange /&gt;
+            &lt;field-switch name="checkex" label="Check/Ex" checkex blue /&gt;
+            &lt;field-switch name="sunmoon" label="Sun/Moon" sunmoon /&gt;
             &lt;field-switch 
-              name="themeToggle" 
-              label="Theme" 
-              onoff 
-              green 
+              name="custom" 
+              label="Custom" 
+              value="yes" 
               checked 
-              change={(e) =&gt; console.log('Change event:', e.target.checked)}
-            /&gt;
-          </ide-code>
-
-          <!-- Styled Switch Input -->
-          <a name="styledSwitch"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Switch Input</h2>
-          <div class="mb-10">A styled switch with sun/moon symbols, rounded corners, and hover effects.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-switch name="modeSwitch" label="Mode" sunmoon rounded blue class="tx-lg tx-t-1 transition-300 hover:scale-105" style="cursor: pointer;"  ></field-switch>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;field-switch 
-              name="modeSwitch" 
-              label="Mode" 
-              sunmoon 
               rounded 
-              blue 
-              class="tx-lg tx-t-1 transition-300 hover:scale-105" 
-              style="cursor: pointer;"
-              change={(e) =&gt; console.log('Change event:', e.target.checked)}
-              update={(value) =&gt; console.log('Updated value:', value)}
+              green 
+              update={(value) =&gt; console.log('Switch updated:', value)}
             /&gt;
           </ide-code>
 
-          <!-- Yes/No Switch with Orange Theme -->
-          <a name="yesNoSwitch"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Yes/No Switch with Orange Theme</h2>
-          <div class="mb-10">A switch with "YES/NO" labels, orange theme, and ridged knob.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-switch name="yesNoSwitch" label="Agree?" yesno orange ridge ></field-switch>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;field-switch 
-              name="yesNoSwitch" 
-              label=" Agree?" 
-              yesno 
-              orange 
-              ridge 
-              change={(e) =&gt; console.log('Change event:', e.target.checked)}
-            /&gt;
-          </ide-code>
-
-          <!-- Smooth Sun/Moon Switch (Disabled) -->
-          <a name="disabledSwitch"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Smooth Sun/Moon Switch (Disabled)</h2>
-          <div class="mb-10">A disabled switch with sun/moon symbols and a smooth knob.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-switch name="disabledSwitch" label="Day/Night" sunmoon smooth disabled checked class="tx-muted"></field-switch>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;field-switch 
-              name="disabledSwitch" 
-              label="Day/Night" 
-              sunmoon 
-              smooth 
-              disabled 
-              checked 
-              class="tx-muted"
-            /&gt;
-          </ide-code>
-
-          <!-- Custom Labeled Switch -->
-          <a name="customSwitch"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Labeled Switch</h2>
-          <div class="mb-10">A switch with custom label, check/cross symbols, custom value, and hover effects.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-switch name="customSwitch" label="Enable Feature" value="enabled" checkex blue checked class="tx-lg tx-t-2 transition-300 hover:shadow-0-2-8-t-3" style="cursor: pointer;"  ></field-switch>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;field-switch 
-              name="customSwitch" 
-              label="Enable Feature" 
-              value="enabled" 
-              checkex 
-              blue 
-              checked 
-              class="tx-lg tx-t-2 transition-300 hover:shadow-0-2-8-t-3" 
-              style="cursor: pointer;"
-              change={(e) =&gt; console.log('Change event:', e.target.checked)}
-              update={(value) =&gt; console.log('Updated value:', value)}
-            /&gt;
-          </ide-code>
-
-          <!-- Navigation -->
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/slug.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Slug
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Slug Field
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/taglist.html">
-              Taglist
-              <element-icon name="chevron-right" theme="/blue"></element-icon>
+              Taglist Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

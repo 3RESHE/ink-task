@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\button.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\form\button.ink
   var button_exports = {};
   __export(button_exports, {
     default: () => Button_dd372da231581b106649
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\button.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\form\button.ink
   var Button_dd372da231581b106649 = class extends import_Document2.default {
     id() {
       return "dd372da231581b106649";
@@ -821,7 +821,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
     template() {
       const url = "/ink/ui/components/button.html";
-      const title = _("Ink UI - Button Component");
+      const title = _("Ink UI - Form Button");
       const description = _("A customizable button component for forms and links.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
@@ -830,7 +830,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
+        { icon: "icons", label: "Forms", href: "/ink/ui/form/index.html" },
         { label: "Button" }
       ];
       return [

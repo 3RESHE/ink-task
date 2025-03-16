@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\format\currency.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\format\currency.ink
   var currency_exports = {};
   __export(currency_exports, {
     default: () => Currency_8ab5148260f8d8076946
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\format\currency.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\format\currency.ink
   var Currency_8ab5148260f8d8076946 = class extends import_Document2.default {
     id() {
       return "8ab5148260f8d8076946";
@@ -820,9 +820,9 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
   @ink utilities;`;
     }
     template() {
-      const url = "/ink/panel.html";
-      const title = _("Ink UI - Web Components Meets Atomic Styles.");
-      const description = _("Ink UI atomically generates CSS styles and provides out of box web components.");
+      const url = "/ink/ui/format/currency.html";
+      const title = _("Ink UI - Currency Format");
+      const description = _("A component for displaying currency flags and names based on currency or country codes.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
       };
@@ -830,7 +830,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Format", href: "/ink/ui/format/index.html" },
+        { icon: "format", label: "Format", href: "/ink/ui/format/index.html" },
         { label: "Currency" }
       ];
       return [
@@ -1395,97 +1395,96 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     `, false),
                     import_Document.default.createElement("h6", { "class": `bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper` }, [
                       import_Document.default.createText(`
-    `, false),
+  `, false),
                       ...this._toNodeList(_("UI")),
                       import_Document.default.createText(`
-  `, false)
+`, false)
                     ]),
                     import_Document.default.createText(`
-  `, false),
+`, false),
                     ...!!(url === "/ui/index.html") ? [
                       import_Document.default.createText(`
-    `, false),
+  `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/index.html` }, [
                         import_Document.default.createText(`
-      `, false),
+    `, false),
                         ...this._toNodeList(_("Components")),
                         import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+`, false)
                     ] : true ? [
                       ,
                       import_Document.default.createText(`
-    `, false),
+  `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/index.html` }, [
                         import_Document.default.createText(`
-      `, false),
+    `, false),
                         ...this._toNodeList(_("Components")),
                         import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
-                    ] : [],
-                    import_Document.default.createText(`
-  
-  
-  `, false),
-                    ...!!(url === "/docs/state-management.html") ? [
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/form/index.html` }, [
-                        import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Form")),
-                        import_Document.default.createText(`
-    `, false)
-                      ]),
-                      import_Document.default.createText(`
-  `, false)
-                    ] : true ? [
-                      ,
-                      import_Document.default.createText(`
-    `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/form/index.html` }, [
-                        import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Form")),
-                        import_Document.default.createText(`
-    `, false)
-                      ]),
-                      import_Document.default.createText(`
-  `, false)
+`, false)
                     ] : [],
                     import_Document.default.createText(`
 
-  `, false),
-                    ...!!(url === "/docs/client-api.html") ? [
+`, false),
+                    ...!!(url === "/ui/form/index.html") ? [
                       import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/form/index.html` }, [
+                        import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
+                        ...this._toNodeList(_("Forms")),
                         import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Formats")),
-                        import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
-  `, false)
+`, false)
                     ] : true ? [
                       ,
                       import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/form/index.html` }, [
+                        import_Document.default.createText(`
     `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
+                        ...this._toNodeList(_("Forms")),
                         import_Document.default.createText(`
-      `, false),
-                        ...this._toNodeList(_("Formats")),
-                        import_Document.default.createText(`
-    `, false)
+  `, false)
                       ]),
                       import_Document.default.createText(`
+`, false)
+                    ] : [],
+                    import_Document.default.createText(`
+
+`, false),
+                    ...!!(url === "/ui/format/index.html") ? [
+                      import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [
+                        import_Document.default.createText(`
+    `, false),
+                        ...this._toNodeList(_("Formats")),
+                        import_Document.default.createText(`
   `, false)
+                      ]),
+                      import_Document.default.createText(`
+`, false)
+                    ] : true ? [
+                      ,
+                      import_Document.default.createText(`
+  `, false),
+                      import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 mb-100`, "href": `/ink/ui/format/index.html` }, [
+                        import_Document.default.createText(`
+    `, false),
+                        ...this._toNodeList(_("Formats")),
+                        import_Document.default.createText(`
+  `, false)
+                      ]),
+                      import_Document.default.createText(`
+`, false)
                     ] : [],
                     import_Document.default.createText(`
 `, false)
@@ -1501,18 +1500,14 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h6", { "class": `tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    ...this._toNodeList(_("On this page")),
-                    import_Document.default.createText(`
-          `, false)
+                    ...this._toNodeList(_("On this page"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("nav", { "class": `tx-14 tx-lh-32` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#Currency` }, [
+                    import_Document.default.createElement("a", { "class": `block tx-t-0`, "href": `#currency` }, [
                       ...this._toNodeList(_("Currency"))
                     ]),
                     import_Document.default.createText(`
@@ -1526,54 +1521,29 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basicCurrency` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#basic` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Basic Currency"))
+                        ...this._toNodeList(_("Basic Usage"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#flagOnlyCurrency` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#flag-only` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Flag-Only Currency"))
+                        ...this._toNodeList(_("Flag Only"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#textOnlyCurrency` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#text-only` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Text-Only Currency"))
+                        ...this._toNodeList(_("Text Only"))
                       ]),
                       import_Document.default.createText(`
               `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#smallCurrency` }, [
+                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#custom` }, [
                         import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Small Currency Display"))
+                        ...this._toNodeList(_("Custom Styling"))
                       ]),
                       import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#mediumCurrency` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Medium Currency Display"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#largeCurrency` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Large Currency Display"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#extraLargeCurrency` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Extra Large Currency Display"))
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("a", { "class": `block tx-t-1`, "href": `#coloredCurrency` }, [
-                        import_Document.default.createText(`\u2022 `, false),
-                        ...this._toNodeList(_("Colored Currency Display"))
-                      ]),
-                      import_Document.default.createText(`
-
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1603,7 +1573,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
 
           `, false),
-                  import_Document.default.createElement("a", { "name": `Currency` }, []),
+                  import_Document.default.createElement("a", { "name": `currency` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h1", { "class": `tx-primary tx-upper tx-30 py-20` }, [
@@ -1611,12 +1581,12 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-app", { "title": `Currency`, "class": `py-20` }, [
+                  import_Document.default.createElement("ide-app", { "title": `Currency Format`, "class": `py-20` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "lang": `js`, "trim": true }, [
                       import_Document.default.createText(`
-              import Currency from '@stackpress/ink-ui/format/currency';
+              import CurrencyFormat from '@stackpress/ink-ui/format/currency';
             `, false)
                     ]),
                     import_Document.default.createText(`
@@ -1634,12 +1604,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("p", { "class": `mb-20` }, [
-                    ...this._toNodeList(_("The `<format-currency>` component displays a country flag and currency name based on a currency code. Use Ink utilities via the `class` prop for responsive styling. Note: Flag sizes default to 16px and text sizes map to font-size based on Ink's `xsizes` (e.g., xs: 10px, md: 14px, xl: 22px)."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-1`, "even": `bg-t-0` }, [
+                  import_Document.default.createElement("layout-table", { "top": true, "head": `py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0`, "body": `py-16 px-12 b-solid b-black bt-1 bb-0 bx-0`, "odd": `bg-t-0`, "even": `bg-t-1` }, [
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("table-head", {}, [
@@ -1682,7 +1647,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('The currency code (e.g., "usd", "php") to display. Special case: "usd" maps to "US" country code.'))
+                        ...this._toNodeList(_('Three-letter currency code (e.g., "usd", "eur"). "usd" maps to "US" country code. Case-insensitive.'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1699,7 +1664,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Object | Boolean`, false)
+                        import_Document.default.createText(`Boolean | Object`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -1709,7 +1674,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('If true, displays the country flag. If an object, specifies sizing (e.g., `{ size: "md" }`). Defaults to false.'))
+                        ...this._toNodeList(_("Displays the country flag. If `true`, uses default size (16px). If an object, accepts size props (e.g., `sm`, `lg`). Set to `false` to hide."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1736,142 +1701,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("If true, displays the currency name. Defaults to true."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`flag-*`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Size modifier for the flag (e.g., "xs", "md", "xl"). Sets height (default: 16px if `flag` is true).'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`text-*`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Size modifier for the text (e.g., "sm", "lg", "2xl"). Sets font-size (e.g., sm: 12px, lg: 18px).'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`bold`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("If true, applies bold font weight to the text. Defaults to false."))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`color`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Sets the text color (e.g., "var(--primary)", "#FF0000"). Defaults to inherited.'))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`display`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`String`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Sets display style (e.g., "inline-flex", "block"). Defaults to "inline-flex".'))
+                        ...this._toNodeList(_("Displays the currency name. Defaults to `true` if `flag` is unset; set to `false` to hide."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1898,7 +1728,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Ink utility classes for responsive styling (e.g., "p-4", "md:mr-10").'))
+                        ...this._toNodeList(_('Ink utility classes for styling the container (e.g., "flex gap-10").'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1910,7 +1740,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`style`, false)
+                        import_Document.default.createText(`display`, false)
                       ]),
                       import_Document.default.createText(`
               `, false),
@@ -1925,7 +1755,88 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Inline styles (use `class` with Ink utilities instead)."))
+                        ...this._toNodeList(_('Display style (e.g., "inline-flex", "block"). Defaults to "inline-flex".'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`color`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Text color using Ink utilities (e.g., "tx-primary").'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`size`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`String`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_('Font size using Ink utilities (e.g., "tx-md", "tx-lg").'))
+                      ]),
+                      import_Document.default.createText(`
+            `, false)
+                    ]),
+                    import_Document.default.createText(`
+
+            `, false),
+                    import_Document.default.createElement("table-row", {}, [
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`bold`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`Boolean`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        import_Document.default.createText(`No`, false)
+                      ]),
+                      import_Document.default.createText(`
+              `, false),
+                      import_Document.default.createElement("table-col", {}, [
+                        ...this._toNodeList(_("Applies bold font weight if `true`."))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1935,304 +1846,130 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Basic Currency -->
+          <!-- Basic Usage -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `basicCurrency` }, []),
+                  import_Document.default.createElement("a", { "name": `basic` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Basic Currency"))
+                    ...this._toNodeList(_("Basic Usage"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A basic currency display with default flag and text sizes."))
+                    ...this._toNodeList(_("Displays a currency flag and name with default settings."))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg:basis-half md:basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex justify-center items-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-currency", { "value": `usd`, "class": `p-4` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("format-currency", { "value": `usd` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <format-currency value="usd" class="p-4" />
+            <format-currency value="usd" />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Flag-Only Currency -->
+          <!-- Flag Only -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `flagOnlyCurrency` }, []),
+                  import_Document.default.createElement("a", { "name": `flag-only` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Flag-Only Currency"))
+                    ...this._toNodeList(_("Flag Only"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A currency display with only the flag, no name."))
+                    ...this._toNodeList(_("Shows only the country flag, hiding the currency name."))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg:basis-half md:basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex justify-center items-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-currency", { "flag": true, "value": `php`, "text": false, "class": `p-4` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("format-currency", { "value": `eur`, "flag": true, "text": false }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <format-currency flag value="php" text={false} class="p-4" />
+            <format-currency value="eur" flag text={false} />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Text-Only Currency -->
+          <!-- Text Only -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `textOnlyCurrency` }, []),
+                  import_Document.default.createElement("a", { "name": `text-only` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Text-Only Currency"))
+                    ...this._toNodeList(_("Text Only"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A currency display with only the name, no flag."))
+                    ...this._toNodeList(_("Shows only the currency name, hiding the flag."))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg:basis-half md:basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex justify-center items-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-currency", { "value": `eur`, "flag": false, "text": true, "class": `p-4` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("format-currency", { "value": `jpy`, "flag": false, "text": true }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
-            <format-currency value="eur" flag={false} text class="p-4" />
+            <format-currency value="jpy" flag={false} text />
           `)
                   ]),
                   import_Document.default.createText(`
 
-          <!-- Small Currency Display -->
+          <!-- Custom Styling -->
           `, false),
-                  import_Document.default.createElement("a", { "name": `smallCurrency` }, []),
+                  import_Document.default.createElement("a", { "name": `custom` }, []),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Small Currency Display"))
+                    ...this._toNodeList(_("Custom Styling"))
                   ]),
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A currency display with small flag and text sizes."))
+                    ...this._toNodeList(_("Customizes the flag size, text size, and adds styling with Ink utilities."))
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg:basis-half md:basis-full mb-20` }, [
+                  import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-20` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex justify-center items-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-currency", { "flag-xs": true, "text-xs": true, "value": `jpy`, "class": `p-4 b-solid b-t-1` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
+                    import_Document.default.createElement("format-currency", { "value": `usd`, "flag-lg": true, "text-lg": true, "class": `gap-10 tx-primary bold` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <format-currency flag-xs text-xs value="jpy" class="p-4 b-solid b-t-1" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Medium Currency Display -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `mediumCurrency` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Medium Currency Display"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A currency display with medium flag and text sizes, with a border."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg:basis-half md:basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex justify-center items-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-currency", { "flag-md": true, "text-md": true, "value": `gbp`, "class": `p-4 b-solid b-t-2 c-4` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <format-currency flag-md text-md value="gbp" class="p-4 b-solid b-t-2 c-4" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Large Currency Display -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `largeCurrency` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Large Currency Display"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A currency display with large flag and text sizes."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg:basis-half md:basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex justify-center items-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-currency", { "flag-lg": true, "text-lg": true, "value": `cad`, "class": `p-4 mr-10` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <format-currency flag-lg text-lg value="cad" class="p-4 mr-10" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Extra Large Currency Display -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `extraLargeCurrency` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Extra Large Currency Display"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A currency display with extra-large flag and text sizes, bolded."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg:basis-half md:basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex justify-center items-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-currency", { "flag-xl": true, "text-xl": true, "bold": true, "value": `aud`, "class": `p-4 b-solid b-t-3 c-6 shadow-2-4-6-8-000000` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
-                    ...this._toNodeList(`
-            <format-currency flag-xl text-xl bold value="aud" class="p-4 b-solid b-t-3 c-6 shadow-2-4-6-8-000000" />
-          `)
-                  ]),
-                  import_Document.default.createText(`
-
-          <!-- Colored Currency Display -->
-          `, false),
-                  import_Document.default.createElement("a", { "name": `coloredCurrency` }, []),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("h2", { "class": `tx-primary tx-upper tx-30 py-20` }, [
-                    ...this._toNodeList(_("Colored Currency Display"))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    ...this._toNodeList(_("A currency display with a custom text color and block display."))
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("div", { "class": `basis-third lg:basis-half md:basis-full mb-20` }, [
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("div", { "class": `bg-t-3 p-10 flex justify-center items-center` }, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("format-currency", { "flag-md": true, "text-md": true, "value": `chf`, "color": `var(--primary)`, "display": `block`, "class": `p-4 tx-center bg-t-1 rounded` }),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-          `, false)
-                  ]),
-                  import_Document.default.createText(`
-          `, false),
-                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 4 }, [
+                  import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full bg-black text-white`, "lang": `html`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <format-currency 
-              flag-md 
-              text-md 
-              value="chf" 
-              color="var(--primary)" 
-              display="block" 
-              class="p-4 tx-center bg-t-1 rounded" 
+              value="usd" 
+              flag-lg 
+              text-lg 
+              class="gap-10 tx-primary bold" 
             />
           `)
                   ]),
@@ -2247,8 +1984,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-left`, "theme": `tx-1` }),
-                      import_Document.default.createText(`
-              `, false),
                       ...this._toNodeList(_("Country")),
                       import_Document.default.createText(`
             `, false)
@@ -2259,8 +1994,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       ...this._toNodeList(_("Date")),
-                      import_Document.default.createText(`
-              `, false),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

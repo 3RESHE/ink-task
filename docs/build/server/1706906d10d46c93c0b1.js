@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\fieldset.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\form\fieldset.ink
   var fieldset_exports = {};
   __export(fieldset_exports, {
     default: () => Fieldset_1706906d10d46c93c0b1
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\form\fieldset.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\form\fieldset.ink
   var Fieldset_1706906d10d46c93c0b1 = class extends import_Document2.default {
     id() {
       return "1706906d10d46c93c0b1";
@@ -821,7 +821,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
     template() {
       const url = "/ink/ui/components/fieldset.html";
-      const title = _("Ink UI - Fieldset Component");
+      const title = _("Ink UI - Form Fieldset");
       const description = _("A component for grouping form fields with a legend and optional multiple rows.");
       const toggle = () => {
         document.querySelector("panel-layout").toggle("left");
@@ -830,7 +830,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
         { icon: "home", label: "Home", href: "/ink/index.html" },
         { icon: "book", label: "Docs", href: "/ink/docs/index.html" },
         { icon: "icons", label: "UI", href: "/ink/ui/index.html" },
-        { icon: "icons", label: "Components", href: "/ink/ui/index.html" },
+        { icon: "icons", label: "Forms", href: "/ink/ui/form/index.html" },
         { label: "Fieldset" }
       ];
       return [

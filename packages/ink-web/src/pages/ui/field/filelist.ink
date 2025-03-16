@@ -27,7 +27,7 @@
   import { _ } from '@/components/i18n';
 
   const url = '/ink/ui/field/filelist.html';
-  const title = _('Ink UI - Filelist Field Component');
+  const title = _('Ink UI - Filelist Field');
   const description = _('A multi-file upload field with preview and list management.');
   
   const toggle = () => {
@@ -37,7 +37,7 @@
     { icon: 'home', label: 'Home', href: '/ink/index.html' },
     { icon: 'book', label: 'Docs', href: '/ink/docs/index.html' },
     { icon: 'icons', label: 'UI', href: '/ink/ui/index.html' },
-    { icon: 'icons', label: 'Components', href: '/ink/ui/index.html' },
+        { icon: 'icons', label: 'Forms', href: '/ink/ui/form/index.html' },
     { label: 'Filelist Field' }
   ];
 

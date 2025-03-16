@@ -26,7 +26,7 @@
   import { _ } from '@/components/i18n';
 
   const url = '/ink/panel.html';
-  const title = _('Ink UI - Web Components Meets Atomic Styles.');
+  const title = _('Ink UI - Code Format');
   const description = _('Ink UI atomically generates CSS styles and provides out of box web components.');
   
   const toggle = () => {
@@ -95,7 +95,6 @@
           <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Props')}</h2>
-          <p class="mb-20">{_('The `<format-code>` component displays syntax-highlighted code snippets using Prism.js. Use Ink utilities via the `class` prop for additional styling.')}</p>
           <layout-table 
             top
             head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
@@ -240,7 +239,7 @@
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/format/index.html">
               <element-icon name="chevron-left" theme="tx-1" />
-              {_('Formats Index')}
+              {_('Formats')}
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/format/color.html">
               {_('Color')}

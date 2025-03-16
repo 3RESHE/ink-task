@@ -27,7 +27,7 @@
   import { _ } from '@/components/i18n';
 
   const url = '/ink/ui/components/control.html';
-  const title = _('Ink UI - Form Control Component');
+  const title = _('Ink UI - Form Control');
   const description = _('A wrapper component for form fields with labels and error messages.');
   
   const toggle = () => {
@@ -37,7 +37,7 @@
     { icon: 'home', label: 'Home', href: '/ink/index.html' },
     { icon: 'book', label: 'Docs', href: '/ink/docs/index.html' },
     { icon: 'icons', label: 'UI', href: '/ink/ui/index.html' },
-    { icon: 'icons', label: 'Components', href: '/ink/ui/index.html' },
+        { icon: 'icons', label: 'Forms', href: '/ink/ui/form/index.html' },
     { label: 'Form Control' }
   ];
 </script>

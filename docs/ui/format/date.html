@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Date Format</title>
+  <meta name="description" content="A component for formatting dates with dayjs, supporting custom patterns, locales, and relative time." />
+  <meta property="og:title" content="Ink UI - Date Format" />
+  <meta property="og:description" content="A component for formatting dates with dayjs, supporting custom patterns, locales, and relative time." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/format/date.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Date Format" />
+  <meta name="twitter:description" content="A component for formatting dates with dayjs, supporting custom patterns, locales, and relative time." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -126,34 +126,31 @@
 
 
     <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper">
-    UI
-  </h6>
-  
-    <a class="block tx-info py-10 pl-10" href="/ink/ui/index.html">
-      Components
-    </a>
-  
-  
-  
-  
-    <a class="block tx-info py-10 pl-10" href="/ink/ui/form/index.html">
-      Form
-    </a>
-  
+  UI
+</h6>
 
-  
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
-      Formats
-    </a>
-  
+  <a class="block tx-info py-10 pl-10" href="/ink/ui/index.html">
+    Components
+  </a>
+
+
+
+  <a class="block tx-info py-10 pl-10" href="/ink/ui/form/index.html">
+    Forms
+  </a>
+
+
+
+  <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
+    Formats
+  </a>
+
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Date">Date</a>
+            <a class="block tx-t-0" href="#date">Date</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
               <a class="block tx-t-1" href="#defaultFormat">• Default Format</a>
@@ -170,19 +167,19 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Date"></a>
+          <a name="date"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">Date</h1>
-          <ide-app title="Date" class="py-20">
+          <ide-app title="Date Format" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import Date from '@stackpress/ink-ui/format/date';
+              import DateFormat from '@stackpress/ink-ui/format/date';
             </ide-code>
           </ide-app>
 
           <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <p class="mb-20">The `&lt;format-date&gt;` component formats dates using the `dayjs` library, supporting the default format, custom Day.js-compatible formats, and relative time displays.</p>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
+          <p class="mb-20">Customize the date display with the props below. Use Ink utilities via `class` for styling.</p>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
             <table-head>Property</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
@@ -190,37 +187,58 @@
 
             <table-row>
               <table-col>value</table-col>
-              <table-col>String/Number/Date</table-col>
+              <table-col>String | Date</table-col>
               <table-col>No</table-col>
-              <table-col>The date to format (e.g., ISO string, timestamp). Defaults to the current date.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>locale</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>The locale for formatting (e.g., "en", "fr"). Defaults to "en".</table-col>
+              <table-col>Date to format (e.g., "2024-12-25T10:00:00Z" or Date object). Defaults to current date.</table-col>
             </table-row>
 
             <table-row>
               <table-col>format</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>The date format using Day.js tokens (e.g., "YYYY-MM-DD"). Use "ago" for relative time or "a" for short relative time. Defaults to "MMMM D, YYYY, h:mm:ss a".</table-col>
+              <table-col>Dayjs format pattern (e.g., "YYYY-MM-DD") or special values: "ago" for relative time, "a" for short relative time. Defaults to "MMMM D, YYYY, h:mm:ss a".</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>locale</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Dayjs locale (e.g., "en", "fr"). Defaults to "en". Use "short" for abbreviated relative time.</table-col>
             </table-row>
 
             <table-row>
               <table-col>class</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Ink utility classes for styling (e.g., "p-4").</table-col>
+              <table-col>Ink utility classes for styling (e.g., "tx-md p-4").</table-col>
             </table-row>
 
             <table-row>
-              <table-col>style</table-col>
+              <table-col>display</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Inline styles (use `class` with Ink utilities instead).</table-col>
+              <table-col>Display style (e.g., "inline-block", "block"). Defaults to "inline-block".</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>color</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Text color using Ink utilities (e.g., "tx-primary").</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>size</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Font size using Ink utilities (e.g., "tx-md", "tx-lg").</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>bold</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Applies bold font weight if `true`.</table-col>
             </table-row>
           </layout-table>
 
@@ -228,73 +246,63 @@
           <a name="defaultFormat"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Default Format</h2>
           <div class="mb-10">Displays the current date in the default format (MMMM D, YYYY, h:mm:ss a).</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-date class="p-4"></format-date>
-            </div>
+          <div class="bg-t-3 p-10 mb-20">
+            <format-date></format-date>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;format-date class="p-4" /&gt;
+            &lt;format-date /&gt;
           </ide-code>
 
           <!-- Custom Formats -->
           <a name="customFormats"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Custom Formats</h2>
           <div class="mb-10">Displays a specific date in various Day.js-compatible formats.</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-date value="2024-12-25T02:00:00.000Z" format="YYYY-MM-DD" class="p-4"></format-date> |
-              <format-date value="2024-12-25T02:00:00.000Z" format="DD/MM/YYYY" class="p-4"></format-date> |
-              <format-date value="2024-12-25T02:00:00.000Z" format="D MMM YYYY" class="p-4"></format-date> |
-              <format-date value="2024-12-25T02:00:00.000Z" format="HH:mm:ss" class="p-4"></format-date> |
-              <format-date value="2024-12-25T02:00:00.000Z" format="dddd, MMMM D, YYYY" class="p-4"></format-date>
-            </div>
+          <div class="bg-t-3 p-10 mb-20 flex flex-wrap gap-20">
+            <format-date value="2024-12-25T02:00:00.000Z" format="YYYY-MM-DD"></format-date>
+            <format-date value="2024-12-25T02:00:00.000Z" format="DD/MM/YYYY"></format-date>
+            <format-date value="2024-12-25T02:00:00.000Z" format="D MMM YYYY"></format-date>
+            <format-date value="2024-12-25T02:00:00.000Z" format="HH:mm:ss"></format-date>
+            <format-date value="2024-12-25T02:00:00.000Z" format="MMMM D YYYY, h:mm:ss a"></format-date>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;format-date value="2024-12-25T10:00:00.000Z" format="YYYY-MM-DD" class="p-4" /&gt;
-            &lt;format-date value="2024-12-25T10:00:00.000Z" format="DD/MM/YYYY" class="p-4" /&gt;
-            &lt;format-date value="2024-12-25T10:00:00.000Z" format="D MMM YYYY" class="p-4" /&gt;
-            &lt;format-date value="2024-12-25T10:00:00.000Z" format="HH:mm:ss" class="p-4" /&gt;
-            &lt;format-date value="2024-12-25T10:00:00.000Z" format="dddd, MMMM D, YYYY" class="p-4" /&gt;
+            &lt;format-date value="2024-12-25T10:00:00Z" format="YYYY-MM-DD" /&gt;
+            &lt;format-date value="2024-12-25T10:00:00Z" format="DD/MM/YYYY" /&gt;
+            &lt;format-date value="2024-12-25T10:00:00Z" format="D MMM YYYY" /&gt;
+            &lt;format-date value="2024-12-25T10:00:00Z" format="HH:mm:ss" /&gt;
+            &lt;format-date value="2024-12-25T10:00:00Z" format="MMMM D YYYY, h:mm:ss a" /&gt;
           </ide-code>
 
           <!-- Relative Time (Ago) -->
           <a name="relativeTimeAgo"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Relative Time (Ago)</h2>
           <div class="mb-10">Displays a date as relative time using the "ago" format.</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-date value="2025-03-11T13:26:43.865Z" format="ago" class="p-4"></format-date>
-            </div>
+          <div class="bg-t-3 p-10 mb-20">
+            <format-date value="2025-03-16T17:36:10.712Z" format="ago"></format-date>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
             &lt;!-- Assuming the date is 5 minutes ago --&gt;
-            &lt;format-date value={recentDate} format="ago" class="p-4" /&gt;
+            &lt;format-date value={recentDate} format="ago" /&gt;
           </ide-code>
 
           <!-- Short Relative Time -->
           <a name="shortRelativeTime"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Short Relative Time</h2>
           <div class="mb-10">Displays a date as short relative time using the "a" format.</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-date value="2025-03-11T13:26:43.865Z" format="a" class="p-4"></format-date>
-            </div>
+          <div class="bg-t-3 p-10 mb-20">
+            <format-date value="2025-03-16T17:36:10.712Z" format="a"></format-date>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
             &lt;!-- Assuming the date is 5 minutes ago --&gt;
-            &lt;format-date value={recentDate} format="a" class="p-4" /&gt;
+            &lt;format-date value={recentDate} format="a" /&gt;
           </ide-code>
 
           <!-- Navigation -->
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/format/currency.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Currency
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Currency
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/format/email.html">
-              Email
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Email<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

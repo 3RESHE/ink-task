@@ -787,7 +787,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\field\color.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\field\color.ink
   var color_exports = {};
   __export(color_exports, {
     default: () => Color_96f51e2a11b53018a04f
@@ -808,7 +808,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\anetu\dev\ink-task\packages\ink-web\src\pages\ui\field\color.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\ui\field\color.ink
   var Color_96f51e2a11b53018a04f = class extends import_Document2.default {
     id() {
       return "96f51e2a11b53018a04f";
@@ -1651,32 +1651,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`disabled`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Disables the color picker"))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
                         import_Document.default.createText(`name`, false)
                       ]),
                       import_Document.default.createText(`
@@ -1693,32 +1667,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
               `, false),
                       import_Document.default.createElement("table-col", {}, [
                         ...this._toNodeList(_("Name attribute for form submission"))
-                      ]),
-                      import_Document.default.createText(`
-            `, false)
-                    ]),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("table-row", {}, [
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`readonly`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`Boolean`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        import_Document.default.createText(`No`, false)
-                      ]),
-                      import_Document.default.createText(`
-              `, false),
-                      import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_("Makes the color picker read-only"))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1770,7 +1718,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                       import_Document.default.createText(`
               `, false),
                       import_Document.default.createElement("table-col", {}, [
-                        ...this._toNodeList(_('Initial color value (e.g., "#ff0000")'))
+                        ...this._toNodeList(_('Initial color value (e.g., "#ff69b4")'))
                       ]),
                       import_Document.default.createText(`
             `, false)
@@ -1846,7 +1794,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createText(`
           `, false),
                   import_Document.default.createElement("div", { "class": `mb-10` }, [
-                    import_Document.default.createText(`Color field with different states: value, disabled, required.`, false)
+                    import_Document.default.createText(`Color field with different states: value, required.`, false)
                   ]),
                   import_Document.default.createText(`
           `, false),
@@ -1854,9 +1802,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("field-color", { "name": `valued`, "value": `#ff0000`, "placeholder": `Red` }),
-                    import_Document.default.createText(`
-            `, false),
-                    import_Document.default.createElement("field-color", { "name": `disabled`, "disabled": true, "placeholder": `Disabled` }),
                     import_Document.default.createText(`
             `, false),
                     import_Document.default.createElement("field-color", { "name": `required`, "required": true, "placeholder": `Required` }),
@@ -1868,7 +1813,6 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("ide-code", { "class": `scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white`, "trim": true, "detab": 12 }, [
                     ...this._toNodeList(`
             <field-color name="valued" value="#ff0000" placeholder="Red" />
-            <field-color name="disabled" disabled placeholder="Disabled" />
             <field-color name="required" required placeholder="Required" />
           `)
                   ]),
@@ -1891,7 +1835,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                   import_Document.default.createElement("div", { "class": `bg-t-3 p-10 mb-10` }, [
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("field-color", { "name": `custom`, "value": `#00ff00`, "placeholder": `Enter a color`, "class": `rounded b-solid b-primary p-5` }),
+                    import_Document.default.createElement("field-color", { "name": `custom`, "value": `#ff69b4`, "placeholder": `Enter a color`, "class": `rounded b-solid b-primary p-5` }),
                     import_Document.default.createText(`
           `, false)
                   ]),
@@ -1901,7 +1845,7 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ...this._toNodeList(`
             <field-color 
               name="custom" 
-              value="#00ff00" 
+              value="#ff69b4" 
               placeholder="Enter a color" 
               class="rounded b-solid b-primary p-5" 
             />
@@ -1923,10 +1867,10 @@ ${document2.replace("__TEMPLATE_DATA__", client)}`;
                     ]),
                     import_Document.default.createText(`
             `, false),
-                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/field/input.html` }, [
+                    import_Document.default.createElement("a", { "class": `flex-grow tx-right tx-primary py-40`, "href": `/ink/ui/field/country.html` }, [
                       import_Document.default.createText(`
               `, false),
-                      ...this._toNodeList(_("Input Field")),
+                      ...this._toNodeList(_("Country Field")),
                       import_Document.default.createElement("element-icon", { "name": `chevron-right`, "theme": `tx-1` }),
                       import_Document.default.createText(`
             `, false)

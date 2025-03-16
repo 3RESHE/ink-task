@@ -189,22 +189,10 @@
               <table-col>Autocomplete attribute (e.g., "off")</table-col>
             </table-row>
             <table-row>
-              <table-col>disabled</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Disables the color picker</table-col>
-            </table-row>
-            <table-row>
               <table-col>name</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
               <table-col>Name attribute for form submission</table-col>
-            </table-row>
-            <table-row>
-              <table-col>readonly</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Makes the color picker read-only</table-col>
             </table-row>
             <table-row>
               <table-col>required</table-col>
@@ -216,7 +204,7 @@
               <table-col>value</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Initial color value (e.g., "#ff0000")</table-col>
+              <table-col>Initial color value (e.g., "#ff69b4")</table-col>
             </table-row>
             <table-row>
               <table-col>placeholder</table-col>
@@ -238,15 +226,13 @@
 
           <a name="states"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">States</h2>
-          <div class="mb-10">Color field with different states: value, disabled, required.</div>
+          <div class="mb-10">Color field with different states: value, required.</div>
           <div class="bg-t-3 p-10 mb-10 flex gap-20">
             <field-color name="valued" value="#ff0000" placeholder="Red"></field-color>
-            <field-color name="disabled" disabled placeholder="Disabled"></field-color>
             <field-color name="required" required placeholder="Required"></field-color>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-color name="valued" value="#ff0000" placeholder="Red" /&gt;
-            &lt;field-color name="disabled" disabled placeholder="Disabled" /&gt;
             &lt;field-color name="required" required placeholder="Required" /&gt;
           </ide-code>
 
@@ -254,12 +240,12 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">Custom Styling</h2>
           <div class="mb-10">Color field with custom styling and initial value.</div>
           <div class="bg-t-3 p-10 mb-10">
-            <field-color name="custom" value="#00ff00" placeholder="Enter a color" class="rounded b-solid b-primary p-5"></field-color>
+            <field-color name="custom" value="#ff69b4" placeholder="Enter a color" class="rounded b-solid b-primary p-5"></field-color>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-color 
               name="custom" 
-              value="#00ff00" 
+              value="#ff69b4" 
               placeholder="Enter a color" 
               class="rounded b-solid b-primary p-5" 
             /&gt;
@@ -269,8 +255,8 @@
             <a class="tx-primary py-40" href="/ink/ui/field/checkbox.html">
               <element-icon name="chevron-left" theme="tx-1"></element-icon>Checkbox Field
             </a>
-            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/input.html">
-              Input Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
+            <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/country.html">
+              Country Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

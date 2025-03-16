@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Table Component</title>
+  <meta name="description" content="A customizable table component with sticky headers, columns, and responsive features." />
+  <meta property="og:title" content="Ink UI - Table Component" />
+  <meta property="og:description" content="A customizable table component with sticky headers, columns, and responsive features." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/layout/table.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Table Component" />
+  <meta name="twitter:description" content="A customizable table component with sticky headers, columns, and responsive features." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -147,46 +147,37 @@
     </a>
   
 </nav></aside>
-
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#pager">Table</a>
+            <a class="block tx-t-0" href="#table">Table</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#OutlineExample">• Outline Example</a>
-              <a class="block tx-t-1" href="#TableWithAdditionalColumn">• Table with Additional Column</a>
-              <a class="block tx-t-1" href="#TableWithBorders">• Table with Borders</a>
-              <a class="block tx-t-1" href="#StripedTable">• Striped Table</a>
-              <a class="block tx-t-1" href="#TableWithStatusLabels">• Table with Status Labels</a>
-              <a class="block tx-t-1" href="#ResponsiveTable">• Responsive Table</a>
-              <a class="block tx-t-1" href="#TableWithCustomColumnWidths">• Table with Custom Column Widths</a>
-              <a class="block tx-t-1" href="#TableWithIcons">• Table with Icons</a>
+              <a class="block tx-t-1" href="#outline">• Outline Example</a>
+              <a class="block tx-t-1" href="#borders">• Table with Borders</a>
+              <a class="block tx-t-1" href="#striped">• Striped Table</a>
+              <a class="block tx-t-1" href="#mobile-icon">• Table with Mobile Icon Header</a>
+              <a class="block tx-t-1" href="#sticky-footer">• Table with Sticky Footer</a>
+              <a class="block tx-t-1" href="#sticky-columns">• Table with Sticky Columns</a>
             </nav>
           </nav>
         </menu>
       </aside>
-
       <main>
         <api-docs>
           <nav class="p-10 bg-t-3 sticky top-0 z-50">
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="pager"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">
-            Table
-          </h1>
-          <ide-app title="Editor" class="py-20">
-            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim >
+          <a name="table"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Table</h1>
+          <ide-app title="Table" class="py-20">
+            <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
               import Table from '@stackpress/ink-ui/layout/table';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
           <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
@@ -194,119 +185,101 @@
             <table-head>Type</table-head>
             <table-head>Required</table-head>
             <table-head>Notes</table-head>
-
             <table-row>
               <table-col>top</table-col>
               <table-col>String | Number</table-col>
               <table-col>No</table-col>
-              <table-col>Makes the table header sticky at the top. Accepts a pixel value (e.g., "10") or percentage (e.g., "10%"). Defaults to "0" if no value is provided.</table-col>
+              <table-col>Makes headers sticky at the top (e.g., "10" or "10px"). Defaults to "0".</table-col>
             </table-row>
-
             <table-row>
               <table-col>bottom</table-col>
               <table-col>String | Number</table-col>
               <table-col>No</table-col>
-              <table-col>Makes the table footer sticky at the bottom. Accepts a pixel value (e.g., "10") or percentage (e.g., "10%"). Defaults to "0" if no value is provided.</table-col>
+              <table-col>Makes footers sticky at the bottom (e.g., "10" or "10px"). Defaults to "0".</table-col>
             </table-row>
-
             <table-row>
               <table-col>left</table-col>
               <table-col>String | Number</table-col>
               <table-col>No</table-col>
-              <table-col>Makes the first column sticky on the left. Accepts a pixel value (e.g., "10") or percentage (e.g., "10%"). Defaults to "0" if no value is provided.</table-col>
+              <table-col>Makes first column sticky on the left (e.g., "10" or "10px"). Defaults to "0".</table-col>
             </table-row>
-
             <table-row>
               <table-col>right</table-col>
               <table-col>String | Number</table-col>
               <table-col>No</table-col>
-              <table-col>Makes the last column sticky on the right. Accepts a pixel value (e.g., "10") or percentage (e.g., "10%"). Defaults to "0" if no value is provided.</table-col>
+              <table-col>Makes last column sticky on the right (e.g., "10" or "10px"). Defaults to "0".</table-col>
             </table-row>
-
             <table-row>
               <table-col>head</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Space-separated class names applied to table headers (e.g., "bg-primary tx-white").</table-col>
+              <table-col>Classes for headers (e.g., "bg-primary tx-white").</table-col>
             </table-row>
-
             <table-row>
               <table-col>body</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Space-separated class names applied to all body cells (e.g., "py-12 px-10").</table-col>
+              <table-col>Classes for body cells (e.g., "py-12 px-10").</table-col>
             </table-row>
-
             <table-row>
               <table-col>odd</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Space-separated class names applied to odd-numbered rows in the body (e.g., "bg-t-0").</table-col>
+              <table-col>Classes for odd rows (e.g., "bg-t-0").</table-col>
             </table-row>
-
             <table-row>
               <table-col>even</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Space-separated class names applied to even-numbered rows in the body (e.g., "bg-t-1").</table-col>
+              <table-col>Classes for even rows (e.g., "bg-t-1").</table-col>
             </table-row>
-
             <table-row>
               <table-col>foot</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Space-separated class names applied to table footers (e.g., "bg-t-2").</table-col>
+              <table-col>Classes for footers (e.g., "bg-t-2").</table-col>
             </table-row>
-
             <table-row>
               <table-col>nowrap</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Prevents text wrapping in cells when set (e.g., nowrap=""). Applies to `&lt;table-col&gt;`, `&lt;table-head&gt;`, or `&lt;table-foot&gt;`.)</table-col>
+              <table-col>Prevents text wrapping in cells (e.g., nowrap="").</table-col>
             </table-row>
-
             <table-row>
               <table-col>wrap1</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Sets a fixed width of 100px for cells (e.g., wrap1=""). Applies to `&lt;table-col&gt;`, `&lt;table-head&gt;`, or `&lt;table-foot&gt;`.)</table-col>
+              <table-col>Sets cell width to 100px (e.g., wrap1="").</table-col>
             </table-row>
-
             <table-row>
               <table-col>wrap2</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Sets a fixed width of 200px for cells (e.g., wrap2=""). Applies to `&lt;table-col&gt;`, `&lt;table-head&gt;`, or `&lt;table-foot&gt;`.)</table-col>
+              <table-col>Sets cell width to 200px (e.g., wrap2="").</table-col>
             </table-row>
-
             <table-row>
               <table-col>wrap3</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Sets a fixed width of 300px for cells (e.g., wrap3=""). Applies to `&lt;table-col&gt;`, `&lt;table-head&gt;`, or `&lt;table-foot&gt;`.)</table-col>
+              <table-col>Sets cell width to 300px (e.g., wrap3="").</table-col>
             </table-row>
-
             <table-row>
               <table-col>wrap4</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Sets a fixed width of 400px for cells (e.g., wrap4=""). Applies to `&lt;table-col&gt;`, `&lt;table-head&gt;`, or `&lt;table-foot&gt;`.)</table-col>
+              <table-col>Sets cell width to 400px (e.g., wrap4="").</table-col>
             </table-row>
-
             <table-row>
               <table-col>wrap5</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Sets a fixed width of 500px for cells (e.g., wrap5=""). Applies to `&lt;table-col&gt;`, `&lt;table-head&gt;`, or `&lt;table-foot&gt;`.)</table-col>
+              <table-col>Sets cell width to 500px (e.g., wrap5="").</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Outline Example -->
-          <a name="OutlineExample"></a>
+          <a name="outline"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Outline Example</h2>
-          <div class="mb-10">
-            A simple table using layout-table with alternating row colors.
-          </div>
+          <div class="mb-10">A simple table with alternating row colors.</div>
           <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
             <table-head>Name</table-head>
             <table-head>Role</table-head>
@@ -321,20 +294,9 @@
               <table-col>Designer</table-col>
               <table-col>Pending</table-col>
             </table-row>
-            <table-row>
-              <table-col>Michael Lee</table-col>
-              <table-col>Manager</table-col>
-              <table-col>Inactive</table-col>
-            </table-row>
           </layout-table>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;layout-table 
-              top
-              head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
-              body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" 
-              odd="bg-t-0"
-              even="bg-t-1"
-            &gt;
+            &lt;layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1"&gt;
               &lt;table-head&gt;{_('Name')}&lt;/table-head&gt;
               &lt;table-head&gt;{_('Role')}&lt;/table-head&gt;
               &lt;table-head&gt;{_('Status')}&lt;/table-head&gt;
@@ -348,441 +310,96 @@
                 &lt;table-col&gt;Designer&lt;/table-col&gt;
                 &lt;table-col&gt;Pending&lt;/table-col&gt;
               &lt;/table-row&gt;
-              &lt;table-row&gt;
-                &lt;table-col&gt;Michael Lee&lt;/table-col&gt;
-                &lt;table-col&gt;Manager&lt;/table-col&gt;
-                &lt;table-col&gt;Inactive&lt;/table-col&gt;
-              &lt;/table-row&gt;
             &lt;/layout-table&gt;
           </ide-code>
 
-          <!-- Table with Additional Column -->
-          <a name="TableWithAdditionalColumn"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Table with Additional Column</h2>
-          <div class="mb-10">
-            This example demonstrates a table with a more detailed layout, including an additional column for contact information.
-          </div>
-          <layout-table top head="py-16 px-12 bg-primary tx-white b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-2">
-            <table-head>Employee</table-head>
-            <table-head>Department</table-head>
-            <table-head>Status</table-head>
-            <table-head>Contact</table-head>
-            <table-row>
-              <table-col>Alice Johnson</table-col>
-              <table-col>HR</table-col>
-              <table-col>Active</table-col>
-              <table-col>alice@example.com</table-col>
-            </table-row>
-            <table-row>
-              <table-col>Bob Williams</table-col>
-              <table-col>Engineering</table-col>
-              <table-col>On Leave</table-col>
-              <table-col>bob@example.com</table-col>
-            </table-row>
-            <table-row>
-              <table-col>Sarah Brown</table-col>
-              <table-col>Marketing</table-col>
-              <table-col>Active</table-col>
-              <table-col>sarah@example.com</table-col>
-            </table-row>
-          </layout-table>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;layout-table 
-              top
-              head="py-16 px-12 bg-primary tx-white b-solid b-black bt-1 bb-0 bx-0" 
-              body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" 
-              odd="bg-t-0"
-              even="bg-t-2"
-            &gt;
-              &lt;table-head&gt;{_('Employee')}&lt;/table-head&gt;
-              &lt;table-head&gt;{_('Department')}&lt;/table-head&gt;
-              &lt;table-head&gt;{_('Status')}&lt;/table-head&gt;
-              &lt;table-head&gt;{_('Contact')}&lt;/table-head&gt;
-              &lt;table-row&gt;
-                &lt;table-col&gt;Alice Johnson&lt;/table-col&gt;
-                &lt;table-col&gt;HR&lt;/table-col&gt;
-                &lt;table-col&gt;Active&lt;/table-col&gt;
-                &lt;table-col&gt;alice@example.com&lt;/table-col&gt;
-              &lt;/table-row&gt;
-              &lt;table-row&gt;
-                &lt;table-col&gt;Bob Williams&lt;/table-col&gt;
-                &lt;table-col&gt;Engineering&lt;/table-col&gt;
-                &lt;table-col&gt;On Leave&lt;/table-col&gt;
-                &lt;table-col&gt;bob@example.com&lt;/table-col&gt;
-              &lt;/table-row&gt;
-              &lt;table-row&gt;
-                &lt;table-col&gt;Sarah Brown&lt;/table-col&gt;
-                &lt;table-col&gt;Marketing&lt;/table-col&gt;
-                &lt;table-col&gt;Active&lt;/table-col&gt;
-                &lt;table-col&gt;sarah@example.com&lt;/table-col&gt;
-              &lt;/table-row&gt;
-            &lt;/layout-table&gt;
-          </ide-code>
-
-          <!-- Table with Borders -->
-          <a name="TableWithBorders"></a>
+          <a name="borders"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Table with Borders</h2>
-          <div class="mb-10">
-            This table includes a solid border around all cells for better visibility.
-          </div>
+          <div class="mb-10">A table with borders around all cells.</div>
           <layout-table top head="py-12 px-10 bg-t-1 b-solid b-black bt-1 bx-1" body="py-12 px-10 b-solid b-black bt-1 bx-1" odd="bg-t-0" even="bg-t-1">
             <table-head>ID</table-head>
             <table-head>Name</table-head>
             <table-head>Age</table-head>
-            <table-head>Country</table-head>
             <table-row>
               <table-col>1</table-col>
               <table-col>Emily Watson</table-col>
               <table-col>29</table-col>
-              <table-col>USA</table-col>
             </table-row>
             <table-row>
               <table-col>2</table-col>
               <table-col>Omar Ali</table-col>
               <table-col>35</table-col>
-              <table-col>UAE</table-col>
-            </table-row>
-            <table-row>
-              <table-col>3</table-col>
-              <table-col>Chen Wei</table-col>
-              <table-col>41</table-col>
-              <table-col>China</table-col>
             </table-row>
           </layout-table>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;layout-table 
-              top
-              head="py-12 px-10 bg-t-1 b-solid b-black bt-1 bx-1"
-              body="py-12 px-10 b-solid b-black bt-1 bx-1"
-              odd="bg-t-0"
-              even="bg-t-1"
-            &gt;
+            &lt;layout-table top head="py-12 px-10 bg-t-1 b-solid b-black bt-1 bx-1" body="py-12 px-10 b-solid b-black bt-1 bx-1" odd="bg-t-0" even="bg-t-1"&gt;
               &lt;table-head&gt;{_('ID')}&lt;/table-head&gt;
               &lt;table-head&gt;{_('Name')}&lt;/table-head&gt;
               &lt;table-head&gt;{_('Age')}&lt;/table-head&gt;
-              &lt;table-head&gt;{_('Country')}&lt;/table-head&gt;
               &lt;table-row&gt;
                 &lt;table-col&gt;1&lt;/table-col&gt;
                 &lt;table-col&gt;Emily Watson&lt;/table-col&gt;
                 &lt;table-col&gt;29&lt;/table-col&gt;
-                &lt;table-col&gt;USA&lt;/table-col&gt;
               &lt;/table-row&gt;
               &lt;table-row&gt;
                 &lt;table-col&gt;2&lt;/table-col&gt;
                 &lt;table-col&gt;Omar Ali&lt;/table-col&gt;
                 &lt;table-col&gt;35&lt;/table-col&gt;
-                &lt;table-col&gt;UAE&lt;/table-col&gt;
-              &lt;/table-row&gt;
-              &lt;table-row&gt;
-                &lt;table-col&gt;3&lt;/table-col&gt;
-                &lt;table-col&gt;Chen Wei&lt;/table-col&gt;
-                &lt;table-col&gt;41&lt;/table-col&gt;
-                &lt;table-col&gt;China&lt;/table-col&gt;
               &lt;/table-row&gt;
             &lt;/layout-table&gt;
           </ide-code>
 
-          <!-- Striped Table -->
-          <a name="StripedTable"></a>
+          <a name="striped"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Striped Table</h2>
-          <div class="mb-10">
-            A striped table helps differentiate rows by alternating background colors.
-          </div>
+          <div class="mb-10">A table with alternating row colors for better readability.</div>
           <layout-table top head="py-12 px-10 bg-t-2 tx-white" body="py-12 px-10" odd="bg-t-0" even="bg-t-1">
             <table-head>Product</table-head>
             <table-head>Category</table-head>
             <table-head>Price</table-head>
-            <table-head>Stock</table-head>
             <table-row>
               <table-col>iPhone 13</table-col>
               <table-col>Electronics</table-col>
               <table-col>$799</table-col>
-              <table-col>In Stock</table-col>
             </table-row>
             <table-row>
               <table-col>Nike Sneakers</table-col>
               <table-col>Fashion</table-col>
               <table-col>$120</table-col>
-              <table-col>Limited Stock</table-col>
-            </table-row>
-            <table-row>
-              <table-col>Samsung TV</table-col>
-              <table-col>Electronics</table-col>
-              <table-col>$999</table-col>
-              <table-col>Out of Stock</table-col>
             </table-row>
           </layout-table>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;layout-table 
-              top
-              head="py-12 px-10 bg-t-2 tx-white"
-              body="py-12 px-10"
-              odd="bg-t-0"
-              even="bg-t-1"
-            &gt;
+            &lt;layout-table top head="py-12 px-10 bg-t-2 tx-white" body="py-12 px-10" odd="bg-t-0" even="bg-t-1"&gt;
               &lt;table-head&gt;{_('Product')}&lt;/table-head&gt;
               &lt;table-head&gt;{_('Category')}&lt;/table-head&gt;
               &lt;table-head&gt;{_('Price')}&lt;/table-head&gt;
-              &lt;table-head&gt;{_('Stock')}&lt;/table-head&gt;
               &lt;table-row&gt;
                 &lt;table-col&gt;iPhone 13&lt;/table-col&gt;
                 &lt;table-col&gt;Electronics&lt;/table-col&gt;
                 &lt;table-col&gt;$799&lt;/table-col&gt;
-                &lt;table-col&gt;In Stock&lt;/table-col&gt;
               &lt;/table-row&gt;
               &lt;table-row&gt;
                 &lt;table-col&gt;Nike Sneakers&lt;/table-col&gt;
                 &lt;table-col&gt;Fashion&lt;/table-col&gt;
                 &lt;table-col&gt;$120&lt;/table-col&gt;
-                &lt;table-col&gt;Limited Stock&lt;/table-col&gt;
-              &lt;/table-row&gt;
-              &lt;table-row&gt;
-                &lt;table-col&gt;Samsung TV&lt;/table-col&gt;
-                &lt;table-col&gt;Electronics&lt;/table-col&gt;
-                &lt;table-col&gt;$999&lt;/table-col&gt;
-                &lt;table-col&gt;Out of Stock&lt;/table-col&gt;
               &lt;/table-row&gt;
             &lt;/layout-table&gt;
           </ide-code>
 
-          <!-- Table with Status Labels -->
-          <a name="TableWithStatusLabels"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Table with Status Labels</h2>
-          <div class="mb-10">
-            A table with status labels and buttons for better user experience.
-          </div>
+          <a name="mobile-icon"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Table with Mobile Icon Header</h2>
+          <div class="mb-10">A table where the "Actions" header shows only an icon on mobile screens (≤768px), with text visible on larger screens.</div>
           <layout-table top head="py-12 px-10 bg-primary tx-white" body="py-12 px-10" odd="bg-t-0" even="bg-t-1">
             <table-head>User</table-head>
             <table-head>Email</table-head>
             <table-head>Status</table-head>
-            <table-head>Actions</table-head>
+            <table-head class="mobile-icon-header">
+              <element-icon name="cog" class="tx-white"></element-icon>
+              <span class="text">Actions</span>
+            </table-head>
             <table-row>
               <table-col>John Doe</table-col>
               <table-col>john@example.com</table-col>
-              <table-col><span class="bg-success tx-white py-4 px-8 rounded">Active</span></table-col>
-              <table-col>
-                <button class="bg-primary tx-white py-4 px-8 rounded">Edit</button>
-                <button class="bg-error tx-white py-4 px-8 rounded">Delete</button>
-              </table-col>
-            </table-row>
-            <table-row>
-              <table-col>Mary Jane</table-col>
-              <table-col>mary@example.com</table-col>
-              <table-col><span class="bg-warning tx-white py-4 px-8 rounded">Pending</span></table-col>
-              <table-col>
-                <button class="bg-primary tx-white py-4 px-8 rounded">Edit</button>
-                <button class="bg-error tx-white py-4 px-8 rounded">Delete</button>
-              </table-col>
-            </table-row>
-            <table-row>
-              <table-col>Mike Brown</table-col>
-              <table-col>mike@example.com</table-col>
-              <table-col><span class="bg-error tx-white py-4 px-8 rounded">Suspended</span></table-col>
-              <table-col>
-                <button class="bg-primary tx-white py-4 px-8 rounded">Edit</button>
-                <button class="bg-error tx-white py-4 px-8 rounded">Delete</button>
-              </table-col>
-            </table-row>
-          </layout-table>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;layout-table 
-              top
-              head="py-12 px-10 bg-primary tx-white"
-              body="py-12 px-10"
-              odd="bg-t-0"
-              even="bg-t-1"
-            &gt;
-              &lt;table-head&gt;{_('User')}&lt;/table-head&gt;
-              &lt;table-head&gt;{_('Email')}&lt;/table-head&gt;
-              &lt;table-head&gt;{_('Status')}&lt;/table-head&gt;
-              &lt;table-head&gt;{_('Actions')}&lt;/table-head&gt;
-              &lt;table-row&gt;
-                &lt;table-col&gt;John Doe&lt;/table-col&gt;
-                &lt;table-col&gt;john@example.com&lt;/table-col&gt;
-                &lt;table-col&gt;&lt;span class="bg-success tx-white py-4 px-8 rounded"&gt;Active&lt;/span&gt;&lt;/table-col&gt;
-                &lt;table-col&gt;
-                  &lt;button class="bg-primary tx-white py-4 px-8 rounded"&gt;Edit&lt;/button&gt;
-                  &lt;button class="bg-error tx-white py-4 px-8 rounded"&gt;Delete&lt;/button&gt;
-                &lt;/table-col&gt;
-              &lt;/table-row&gt;
-              &lt;table-row&gt;
-                &lt;table-col&gt;Mary Jane&lt;/table-col&gt;
-                &lt;table-col&gt;mary@example.com&lt;/table-col&gt;
-                &lt;table-col&gt;&lt;span class="bg-warning tx-white py-4 px-8 rounded"&gt;Pending&lt;/span&gt;&lt;/table-col&gt;
-                &lt;table-col&gt;
-                  &lt;button class="bg-primary tx-white py-4 px-8 rounded"&gt;Edit&lt;/button&gt;
-                  &lt;button class="bg-error tx-white py-4 px-8 rounded"&gt;Delete&lt;/button&gt;
-                &lt;/table-col&gt;
-              &lt;/table-row&gt;
-              &lt;table-row&gt;
-                &lt;table-col&gt;Mike Brown&lt;/table-col&gt;
-                &lt;table-col&gt;mike@example.com&lt;/table-col&gt;
-                &lt;table-col&gt;&lt;span class="bg-error tx-white py-4 px-8 rounded"&gt;Suspended&lt;/span&gt;&lt;/table-col&gt;
-                &lt;table-col&gt;
-                  &lt;button class="bg-primary tx-white py-4 px-8 rounded"&gt;Edit&lt;/button&gt;
-                  &lt;button class="bg-error tx-white py-4 px-8 rounded"&gt;Delete&lt;/button&gt;
-                &lt;/table-col&gt;
-              &lt;/table-row&gt;
-            &lt;/layout-table&gt;
-          </ide-code>
-
-          <!-- Responsive Table -->
-          <a name="ResponsiveTable"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Responsive Table</h2>
-          <div class="mb-10">
-            This table is responsive and allows horizontal scrolling on smaller screens when wrapped in an overflow container.
-          </div>
-          <div class="overflow-auto">
-            <layout-table top head="py-12 px-10 bg-primary tx-white" body="py-12 px-10" odd="bg-t-0" even="bg-t-1">
-              <table-head>Order ID</table-head>
-              <table-head>Customer</table-head>
-              <table-head>Total</table-head>
-              <table-head>Date</table-head>
-              <table-head>Status</table-head>
-              <table-row>
-                <table-col>#1001</table-col>
-                <table-col>Jane Smith</table-col>
-                <table-col>$200</table-col>
-                <table-col>2025-02-28</table-col>
-                <table-col><span class="bg-success tx-white py-4 px-8 rounded">Completed</span></table-col>
-              </table-row>
-              <table-row>
-                <table-col>#1002</table-col>
-                <table-col>Robert White</table-col>
-                <table-col>$150</table-col>
-                <table-col>2025-02-27</table-col>
-                <table-col><span class="bg-warning tx-white py-4 px-8 rounded">Pending</span></table-col>
-              </table-row>
-              <table-row>
-                <table-col>#1003</table-col>
-                <table-col>Sarah Connor</table-col>
-                <table-col>$300</table-col>
-                <table-col>2025-02-26</table-col>
-                <table-col><span class="bg-error tx-white py-4 px-8 rounded">Canceled</span></table-col>
-              </table-row>
-            </layout-table>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;div class="overflow-auto"&gt;
-              &lt;layout-table 
-                top
-                head="py-12 px-10 bg-primary tx-white"
-                body="py-12 px-10"
-                odd="bg-t-0"
-                even="bg-t-1"
-              &gt;
-                &lt;table-head&gt;{_('Order ID')}&lt;/table-head&gt;
-                &lt;table-head&gt;{_('Customer')}&lt;/table-head&gt;
-                &lt;table-head&gt;{_('Total')}&lt;/table-head&gt;
-                &lt;table-head&gt;{_('Date')}&lt;/table-head&gt;
-                &lt;table-head&gt;{_('Status')}&lt;/table-head&gt;
-                &lt;table-row&gt;
-                  &lt;table-col&gt;#1001&lt;/table-col&gt;
-                  &lt;table-col&gt;Jane Smith&lt;/table-col&gt;
-                  &lt;table-col&gt;$200&lt;/table-col&gt;
-                  &lt;table-col&gt;2025-02-28&lt;/table-col&gt;
-                  &lt;table-col&gt;&lt;span class="bg-success tx-white py-4 px-8 rounded"&gt;Completed&lt;/span&gt;&lt;/table-col&gt;
-                &lt;/table-row&gt;
-                &lt;table-row&gt;
-                  &lt;table-col&gt;#1002&lt;/table-col&gt;
-                  &lt;table-col&gt;Robert White&lt;/table-col&gt;
-                  &lt;table-col&gt;$150&lt;/table-col&gt;
-                  &lt;table-col&gt;2025-02-27&lt;/table-col&gt;
-                  &lt;table-col&gt;&lt;span class="bg-warning tx-white py-4 px-8 rounded"&gt;Pending&lt;/span&gt;&lt;/table-col&gt;
-                &lt;/table-row&gt;
-                &lt;table-row&gt;
-                  &lt;table-col&gt;#1003&lt;/table-col&gt;
-                  &lt;table-col&gt;Sarah Connor&lt;/table-col&gt;
-                  &lt;table-col&gt;$300&lt;/table-col&gt;
-                  &lt;table-col&gt;2025-02-26&lt;/table-col&gt;
-                  &lt;table-col&gt;&lt;span class="bg-error tx-white py-4 px-8 rounded"&gt;Canceled&lt;/span&gt;&lt;/table-col&gt;
-                &lt;/table-row&gt;
-              &lt;/layout-table&gt;
-            &lt;/div&gt;
-          </ide-code>
-
-          <!-- Table with Custom Column Widths -->
-          <a name="TableWithCustomColumnWidths"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Table with Custom Column Widths</h2>
-          <div class="mb-10">
-            This example demonstrates how to set custom column widths using atomic classes or wrap props.
-          </div>
-          <layout-table top head="py-12 px-10 bg-t-1 b-solid b-black" body="py-12 px-10" odd="bg-t-0" even="bg-t-1">
-            <table-head class="w-10">ID</table-head>
-            <table-head class="w-40">Name</table-head>
-            <table-head class="w-25">Department</table-head>
-            <table-head class="w-25">Salary</table-head>
-            <table-row>
-              <table-col>1</table-col>
-              <table-col>David Green</table-col>
-              <table-col>HR</table-col>
-              <table-col>$50,000</table-col>
-            </table-row>
-            <table-row>
-              <table-col>2</table-col>
-              <table-col>Anna Taylor</table-col>
-              <table-col>IT</table-col>
-              <table-col>$75,000</table-col>
-            </table-row>
-            <table-row>
-              <table-col>3</table-col>
-              <table-col>Michael Scott</table-col>
-              <table-col>Sales</table-col>
-              <table-col>$65,000</table-col>
-            </table-row>
-          </layout-table>
-          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;layout-table 
-              top
-              head="py-12 px-10 bg-t-1 b-solid b-black"
-              body="py-12 px-10"
-              odd="bg-t-0"
-              even="bg-t-1"
-            &gt;
-              &lt;table-head class="w-10"&gt;{_('ID')}&lt;/table-head&gt;
-              &lt;table-head class="w-40"&gt;{_('Name')}&lt;/table-head&gt;
-              &lt;table-head class="w-25"&gt;{_('Department')}&lt;/table-head&gt;
-              &lt;table-head class="w-25"&gt;{_('Salary')}&lt;/table-head&gt;
-              &lt;table-row&gt;
-                &lt;table-col&gt;1&lt;/table-col&gt;
-                &lt;table-col&gt;David Green&lt;/table-col&gt;
-                &lt;table-col&gt;HR&lt;/table-col&gt;
-                &lt;table-col&gt;$50,000&lt;/table-col&gt;
-              &lt;/table-row&gt;
-              &lt;table-row&gt;
-                &lt;table-col&gt;2&lt;/table-col&gt;
-                &lt;table-col&gt;Anna Taylor&lt;/table-col&gt;
-                &lt;table-col&gt;IT&lt;/table-col&gt;
-                &lt;table-col&gt;$75,000&lt;/table-col&gt;
-              &lt;/table-row&gt;
-              &lt;table-row&gt;
-                &lt;table-col&gt;3&lt;/table-col&gt;
-                &lt;table-col&gt;Michael Scott&lt;/table-col&gt;
-                &lt;table-col&gt;Sales&lt;/table-col&gt;
-                &lt;table-col&gt;$65,000&lt;/table-col&gt;
-              &lt;/table-row&gt;
-            &lt;/layout-table&gt;
-          </ide-code>
-
-          <!-- Table with Icons -->
-          <a name="TableWithIcons"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Table with Icons</h2>
-          <div class="mb-10">
-            This table uses element-icon components for statuses and action buttons.
-          </div>
-          <layout-table top head="py-12 px-10 bg-primary tx-white" body="py-12 px-10" odd="bg-t-0" even="bg-t-1">
-            <table-head>User</table-head>
-            <table-head>Email</table-head>
-            <table-head>Status</table-head>
-            <table-head>Actions</table-head>
-            <table-row>
-              <table-col>John Doe</table-col>
-              <table-col>john@example.com</table-col>
-              <table-col>
-                <span class="flex items-center">
-                  <element-icon name="check-circle" class="tx-success mr-6"></element-icon> Active
-                </span>
-              </table-col>
+              <table-col>Active</table-col>
               <table-col>
                 <element-icon name="eye" class="mr-5 tx-info"></element-icon>
                 <element-icon name="edit" class="mr-5 tx-warning"></element-icon>
@@ -792,25 +409,7 @@
             <table-row>
               <table-col>Mary Jane</table-col>
               <table-col>mary@example.com</table-col>
-              <table-col>
-                <span class="flex items-center">
-                  <element-icon name="clock" class="tx-warning mr-6"></element-icon> Pending
-                </span>
-              </table-col>
-              <table-col>
-                <element-icon name="eye" class="mr-5 tx-info"></element-icon>
-                <element-icon name="edit" class="mr-5 tx-warning"></element-icon>
-                <element-icon name="trash" class="tx-error"></element-icon>
-              </table-col>
-            </table-row>
-            <table-row>
-              <table-col>Mike Brown</table-col>
-              <table-col>mike@example.com</table-col>
-              <table-col>
-                <span class="flex items-center">
-                  <element-icon name="times-circle" class="tx-error mr-6"></element-icon> Suspended
-                </span>
-              </table-col>
+              <table-col>Pending</table-col>
               <table-col>
                 <element-icon name="eye" class="mr-5 tx-info"></element-icon>
                 <element-icon name="edit" class="mr-5 tx-warning"></element-icon>
@@ -819,25 +418,18 @@
             </table-row>
           </layout-table>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;layout-table 
-              top
-              head="py-12 px-10 bg-primary tx-white"
-              body="py-12 px-10"
-              odd="bg-t-0"
-              even="bg-t-1"
-            &gt;
+            &lt;layout-table top head="py-12 px-10 bg-primary tx-white" body="py-12 px-10" odd="bg-t-0" even="bg-t-1"&gt;
               &lt;table-head&gt;{_('User')}&lt;/table-head&gt;
               &lt;table-head&gt;{_('Email')}&lt;/table-head&gt;
               &lt;table-head&gt;{_('Status')}&lt;/table-head&gt;
-              &lt;table-head&gt;{_('Actions')}&lt;/table-head&gt;
+              &lt;table-head class="mobile-icon-header"&gt;
+                &lt;element-icon name="cog" class="tx-white" /&gt;
+                &lt;span class="text"&gt;{_('Actions')}&lt;/span&gt;
+              &lt;/table-head&gt;
               &lt;table-row&gt;
                 &lt;table-col&gt;John Doe&lt;/table-col&gt;
                 &lt;table-col&gt;john@example.com&lt;/table-col&gt;
-                &lt;table-col&gt;
-                  &lt;span class="flex items-center"&gt;
-                    &lt;element-icon name="check-circle" class="tx-success mr-6"&gt;&lt;/element-icon&gt; Active
-                  &lt;/span&gt;
-                &lt;/table-col&gt;
+                &lt;table-col&gt;Active&lt;/table-col&gt;
                 &lt;table-col&gt;
                   &lt;element-icon name="eye" class="mr-5 tx-info" /&gt;
                   &lt;element-icon name="edit" class="mr-5 tx-warning" /&gt;
@@ -847,25 +439,7 @@
               &lt;table-row&gt;
                 &lt;table-col&gt;Mary Jane&lt;/table-col&gt;
                 &lt;table-col&gt;mary@example.com&lt;/table-col&gt;
-                &lt;table-col&gt;
-                  &lt;span class="flex items-center"&gt;
-                    &lt;element-icon name="clock" class="tx-warning mr-6"&gt;&lt;/element-icon&gt; Pending
-                  &lt;/span&gt;
-                &lt;/table-col&gt;
-                &lt;table-col&gt;
-                  &lt;element-icon name="eye" class="mr-5 tx-info" /&gt;
-                  &lt;element-icon name="edit" class="mr-5 tx-warning" /&gt;
-                  &lt;element-icon name="trash" class="tx-error" /&gt;
-                &lt;/table-col&gt;
-              &lt;/table-row&gt;
-              &lt;table-row&gt;
-                &lt;table-col&gt;Mike Brown&lt;/table-col&gt;
-                &lt;table-col&gt;mike@example.com&lt;/table-col&gt;
-                &lt;table-col&gt;
-                  &lt;span class="flex items-center"&gt;
-                    &lt;element-icon name="times-circle" class="tx-error mr-6"&gt;&lt;/element-icon&gt; Suspended
-                  &lt;/span&gt;
-                &lt;/table-col&gt;
+                &lt;table-col&gt;Pending&lt;/table-col&gt;
                 &lt;table-col&gt;
                   &lt;element-icon name="eye" class="mr-5 tx-info" /&gt;
                   &lt;element-icon name="edit" class="mr-5 tx-warning" /&gt;
@@ -875,12 +449,9 @@
             &lt;/layout-table&gt;
           </ide-code>
 
-
-          <a name="TableWithStickyFooter"></a>
+          <a name="sticky-footer"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Table with Sticky Footer</h2>
-          <div class="mb-10">
-            This table uses the `bottom` prop to make the footer sticky at the bottom.
-          </div>
+          <div class="mb-10">A table with a sticky footer using the `bottom` prop.</div>
           <layout-table top bottom head="py-12 px-10 bg-primary tx-white" body="py-12 px-10" foot="py-12 px-10 bg-t-2 tx-white" odd="bg-t-0" even="bg-t-1">
             <table-head>ID</table-head>
             <table-head>Name</table-head>
@@ -895,25 +466,12 @@
               <table-col>Blake</table-col>
               <table-col>92</table-col>
             </table-row>
-            <table-row>
-              <table-col>3</table-col>
-              <table-col>Casey</table-col>
-              <table-col>78</table-col>
-            </table-row>
             <table-foot>Total</table-foot>
             <table-foot>-</table-foot>
-            <table-foot>255</table-foot>
+            <table-foot>177</table-foot>
           </layout-table>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-            &lt;layout-table 
-              top
-              bottom
-              head="py-12 px-10 bg-primary tx-white"
-              body="py-12 px-10"
-              foot="py-12 px-10 bg-t-2 tx-white"
-              odd="bg-t-0"
-              even="bg-t-1"
-            &gt;
+            &lt;layout-table top bottom head="py-12 px-10 bg-primary tx-white" body="py-12 px-10" foot="py-12 px-10 bg-t-2 tx-white" odd="bg-t-0" even="bg-t-1"&gt;
               &lt;table-head&gt;{_('ID')}&lt;/table-head&gt;
               &lt;table-head&gt;{_('Name')}&lt;/table-head&gt;
               &lt;table-head&gt;{_('Score')}&lt;/table-head&gt;
@@ -927,205 +485,70 @@
                 &lt;table-col&gt;Blake&lt;/table-col&gt;
                 &lt;table-col&gt;92&lt;/table-col&gt;
               &lt;/table-row&gt;
-              &lt;table-row&gt;
-                &lt;table-col&gt;3&lt;/table-col&gt;
-                &lt;table-col&gt;Casey&lt;/table-col&gt;
-                &lt;table-col&gt;78&lt;/table-col&gt;
-              &lt;/table-row&gt;
               &lt;table-foot&gt;{_('Total')}&lt;/table-foot&gt;
               &lt;table-foot&gt;-&lt;/table-foot&gt;
-              &lt;table-foot&gt;255&lt;/table-foot&gt;
+              &lt;table-foot&gt;177&lt;/table-foot&gt;
             &lt;/layout-table&gt;
           </ide-code>
 
+          <a name="sticky-columns"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Table with Sticky Columns</h2>
+          <div class="mb-10">A table with sticky left and right columns using `left` and `right` props.</div>
+          <div class="overflow-auto">
+            <layout-table top left right head="py-12 px-10 bg-primary tx-white" body="py-12 px-10" odd="bg-t-0" even="bg-t-1">
+              <table-head>ID</table-head>
+              <table-head>First Name</table-head>
+              <table-head>Last Name</table-head>
+              <table-head>Email</table-head>
+              <table-head>Status</table-head>
+              <table-row>
+                <table-col>1</table-col>
+                <table-col>Emma</table-col>
+                <table-col>Wilson</table-col>
+                <table-col>emma@example.com</table-col>
+                <table-col>Active</table-col>
+              </table-row>
+              <table-row>
+                <table-col>2</table-col>
+                <table-col>Liam</table-col>
+                <table-col>Chen</table-col>
+                <table-col>liam@example.com</table-col>
+                <table-col>Pending</table-col>
+              </table-row>
+            </layout-table>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
+            &lt;div class="overflow-auto"&gt;
+              &lt;layout-table top left right head="py-12 px-10 bg-primary tx-white" body="py-12 px-10" odd="bg-t-0" even="bg-t-1"&gt;
+                &lt;table-head&gt;{_('ID')}&lt;/table-head&gt;
+                &lt;table-head&gt;{_('First Name')}&lt;/table-head&gt;
+                &lt;table-head&gt;{_('Last Name')}&lt;/table-head&gt;
+                &lt;table-head&gt;{_('Email')}&lt;/table-head&gt;
+                &lt;table-head&gt;{_('Status')}&lt;/table-head&gt;
+                &lt;table-row&gt;
+                  &lt;table-col&gt;1&lt;/table-col&gt;
+                  &lt;table-col&gt;Emma&lt;/table-col&gt;
+                  &lt;table-col&gt;Wilson&lt;/table-col&gt;
+                  &lt;table-col&gt;emma@example.com&lt;/table-col&gt;
+                  &lt;table-col&gt;Active&lt;/table-col&gt;
+                &lt;/table-row&gt;
+                &lt;table-row&gt;
+                  &lt;table-col&gt;2&lt;/table-col&gt;
+                  &lt;table-col&gt;Liam&lt;/table-col&gt;
+                  &lt;table-col&gt;Chen&lt;/table-col&gt;
+                  &lt;table-col&gt;liam@example.com&lt;/table-col&gt;
+                  &lt;table-col&gt;Pending&lt;/table-col&gt;
+                &lt;/table-row&gt;
+              &lt;/layout-table&gt;
+            &lt;/div&gt;
+          </ide-code>
 
-<a name="TableWithStickyColumns"></a>
-<h2 class="tx-primary tx-upper tx-30 py-20">Table with Sticky Columns</h2>
-<div class="mb-10">
-  This table uses `left` and `right` props to make the first and last columns sticky. Extra columns are added to demonstrate horizontal scrolling within an overflow container.
-</div>
-<div class="overflow-auto">
-  <layout-table top left right head="py-12 px-10 bg-primary tx-white" body="py-12 px-10" odd="bg-t-0" even="bg-t-1">
-    <table-head>ID</table-head>
-    <table-head>First Name</table-head>
-    <table-head>Last Name</table-head>
-    <table-head>Email</table-head>
-    <table-head>Phone</table-head>
-    <table-head>Address</table-head>
-    <table-head>City</table-head>
-    <table-head>Country</table-head>
-    <table-head>Join Date</table-head>
-    <table-head>Status</table-head>
-    <table-row>
-      <table-col>1</table-col>
-      <table-col>Emma</table-col>
-      <table-col>Wilson</table-col>
-      <table-col>emma@example.com</table-col>
-      <table-col>+1-555-123-4567</table-col>
-      <table-col>123 Maple St</table-col>
-      <table-col>New York</table-col>
-      <table-col>USA</table-col>
-      <table-col>2024-01-15</table-col>
-      <table-col>Active</table-col>
-    </table-row>
-    <table-row>
-      <table-col>2</table-col>
-      <table-col>Liam</table-col>
-      <table-col>Chen</table-col>
-      <table-col>liam@example.com</table-col>
-      <table-col>+1-555-987-6543</table-col>
-      <table-col>456 Oak Ave</table-col>
-      <table-col>Toronto</table-col>
-      <table-col>Canada</table-col>
-      <table-col>2024-03-22</table-col>
-      <table-col>Pending</table-col>
-    </table-row>
-    <table-row>
-      <table-col>3</table-col>
-      <table-col>Olivia</table-col>
-      <table-col>Patel</table-col>
-      <table-col>olivia@example.com</table-col>
-      <table-col>+44-20-7946-0958</table-col>
-      <table-col>789 Pine Rd</table-col>
-      <table-col>London</table-col>
-      <table-col>UK</table-col>
-      <table-col>2023-11-10</table-col>
-      <table-col>Inactive</table-col>
-    </table-row>
-  </layout-table>
-</div>
-<ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-  &lt;div class="overflow-auto"&gt;
-    &lt;layout-table 
-      top
-      left
-      right
-      head="py-12 px-10 bg-primary tx-white"
-      body="py-12 px-10"
-      odd="bg-t-0"
-      even="bg-t-1"
-    &gt;
-      &lt;table-head&gt;{_('ID')}&lt;/table-head&gt;
-      &lt;table-head&gt;{_('First Name')}&lt;/table-head&gt;
-      &lt;table-head&gt;{_('Last Name')}&lt;/table-head&gt;
-      &lt;table-head&gt;{_('Email')}&lt;/table-head&gt;
-      &lt;table-head&gt;{_('Phone')}&lt;/table-head&gt;
-      &lt;table-head&gt;{_('Address')}&lt;/table-head&gt;
-      &lt;table-head&gt;{_('City')}&lt;/table-head&gt;
-      &lt;table-head&gt;{_('Country')}&lt;/table-head&gt;
-      &lt;table-head&gt;{_('Join Date')}&lt;/table-head&gt;
-      &lt;table-head&gt;{_('Status')}&lt;/table-head&gt;
-      &lt;table-row&gt;
-        &lt;table-col&gt;1&lt;/table-col&gt;
-        &lt;table-col&gt;Emma&lt;/table-col&gt;
-        &lt;table-col&gt;Wilson&lt;/table-col&gt;
-        &lt;table-col&gt;emma@example.com&lt;/table-col&gt;
-        &lt;table-col&gt;+1-555-123-4567&lt;/table-col&gt;
-        &lt;table-col&gt;123 Maple St&lt;/table-col&gt;
-        &lt;table-col&gt;New York&lt;/table-col&gt;
-        &lt;table-col&gt;USA&lt;/table-col&gt;
-        &lt;table-col&gt;2024-01-15&lt;/table-col&gt;
-        &lt;table-col&gt;Active&lt;/table-col&gt;
-      &lt;/table-row&gt;
-      &lt;table-row&gt;
-        &lt;table-col&gt;2&lt;/table-col&gt;
-        &lt;table-col&gt;Liam&lt;/table-col&gt;
-        &lt;table-col&gt;Chen&lt;/table-col&gt;
-        &lt;table-col&gt;liam@example.com&lt;/table-col&gt;
-        &lt;table-col&gt;+1-555-987-6543&lt;/table-col&gt;
-        &lt;table-col&gt;456 Oak Ave&lt;/table-col&gt;
-        &lt;table-col&gt;Toronto&lt;/table-col&gt;
-        &lt;table-col&gt;Canada&lt;/table-col&gt;
-        &lt;table-col&gt;2024-03-22&lt;/table-col&gt;
-        &lt;table-col&gt;Pending&lt;/table-col&gt;
-      &lt;/table-row&gt;
-      &lt;table-row&gt;
-        &lt;table-col&gt;3&lt;/table-col&gt;
-        &lt;table-col&gt;Olivia&lt;/table-col&gt;
-        &lt;table-col&gt;Patel&lt;/table-col&gt;
-        &lt;table-col&gt;olivia@example.com&lt;/table-col&gt;
-        &lt;table-col&gt;+44-20-7946-0958&lt;/table-col&gt;
-        &lt;table-col&gt;789 Pine Rd&lt;/table-col&gt;
-        &lt;table-col&gt;London&lt;/table-col&gt;
-        &lt;table-col&gt;UK&lt;/table-col&gt;
-        &lt;table-col&gt;2023-11-10&lt;/table-col&gt;
-        &lt;table-col&gt;Inactive&lt;/table-col&gt;
-      &lt;/table-row&gt;
-    &lt;/layout-table&gt;
-  &lt;/div&gt;
-</ide-code>
-
-
-<a name="TableWithCustomColumnWidths"></a>
-<h2 class="tx-primary tx-upper tx-30 py-20">Table with Custom Column Widths</h2>
-<div class="mb-10">
-  This example uses `wrap1` to `wrap5` props to set fixed column widths on `&lt;table-col&gt;` elements.
-</div>
-<layout-table top head="py-12 px-10 bg-t-1 b-solid b-black" body="py-12 px-10" odd="bg-t-0" even="bg-t-1">
-  <table-head wrap1>ID</table-head>
-  <table-head wrap3>Name</table-head>
-  <table-head wrap2>Department</table-head>
-  <table-head wrap2>Salary</table-head>
-  <table-row>
-    <table-col wrap1>1</table-col>
-    <table-col wrap3>David Green</table-col>
-    <table-col wrap2>HR</table-col>
-    <table-col wrap2>$50,000</table-col>
-  </table-row>
-  <table-row>
-    <table-col wrap1>2</table-col>
-    <table-col wrap3>Anna Taylor</table-col>
-    <table-col wrap2>IT</table-col>
-    <table-col wrap2>$75,000</table-col>
-  </table-row>
-  <table-row>
-    <table-col wrap1>3</table-col>
-    <table-col wrap3>Michael Scott</table-col>
-    <table-col wrap2>Sales</table-col>
-    <table-col wrap2>$65,000</table-col>
-  </table-row>
-</layout-table>
-<ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
-  &lt;layout-table 
-    top
-    head="py-12 px-10 bg-t-1 b-solid b-black"
-    body="py-12 px-10"
-    odd="bg-t-0"
-    even="bg-t-1"
-  &gt;
-    &lt;table-head wrap1&gt;{_('ID')}&lt;/table-head&gt;
-    &lt;table-head wrap3&gt;{_('Name')}&lt;/table-head&gt;
-    &lt;table-head wrap2&gt;{_('Department')}&lt;/table-head&gt;
-    &lt;table-head wrap2&gt;{_('Salary')}&lt;/table-head&gt;
-    &lt;table-row&gt;
-      &lt;table-col wrap1&gt;1&lt;/table-col&gt;
-      &lt;table-col wrap3&gt;David Green&lt;/table-col&gt;
-      &lt;table-col wrap2&gt;HR&lt;/table-col&gt;
-      &lt;table-col wrap2&gt;$50,000&lt;/table-col&gt;
-    &lt;/table-row&gt;
-    &lt;table-row&gt;
-      &lt;table-col wrap1&gt;2&lt;/table-col&gt;
-      &lt;table-col wrap3&gt;Anna Taylor&lt;/table-col&gt;
-      &lt;table-col wrap2&gt;IT&lt;/table-col&gt;
-      &lt;table-col wrap2&gt;$75,000&lt;/table-col&gt;
-    &lt;/table-row&gt;
-    &lt;table-row&gt;
-      &lt;table-col wrap1&gt;3&lt;/table-col&gt;
-      &lt;table-col wrap3&gt;Michael Scott&lt;/table-col&gt;
-      &lt;table-col wrap2&gt;Sales&lt;/table-col&gt;
-      &lt;table-col wrap2&gt;$65,000&lt;/table-col&gt;
-    &lt;/table-row&gt;
-  &lt;/layout-table&gt;
-</ide-code>
-          <!-- Navigation -->
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/components/tab.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Tabs
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Tabs
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/components/tooltip.html">
-              Tooltips
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Tooltips<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

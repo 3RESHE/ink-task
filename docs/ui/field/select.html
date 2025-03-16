@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Select Field</title>
+  <meta name="description" content="A customizable dropdown select field with search and multiple selection options." />
+  <meta property="og:title" content="Ink UI - Select Field" />
+  <meta property="og:description" content="A customizable dropdown select field with search and multiple selection options." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/field/select.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Select Field" />
+  <meta name="twitter:description" content="A customizable dropdown select field with search and multiple selection options." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -149,17 +149,15 @@
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Select">Select</a>
+            <a class="block tx-t-0" href="#select">Select Field</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicSelect">• Basic Select Input</a>
-              <a class="block tx-t-1" href="#selectWithSearch">• Select with Search</a>
-              <a class="block tx-t-1" href="#enhancedSelect">• Enhanced Select Input</a>
-              <a class="block tx-t-1" href="#styledSelect">• Styled Select Input</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#search">• With Search</a>
+              <a class="block tx-t-1" href="#enhanced">• Enhanced Features</a>
+              <a class="block tx-t-1" href="#custom">• Custom Styling</a>
             </nav>
           </nav>
         </menu>
@@ -170,172 +168,130 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Select"></a>
-          <h1 class="tx-primary tx-upper tx-30 py-20">Select</h1>
-          <ide-app title="Select" class="py-20">
+          <a name="select"></a>
+          <h1 class="tx-primary tx-upper tx-30 py-20">Select Field</h1>
+          <ide-app title="Select Field" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import Select from '@stackpress/ink-ui/field/select';
+              import SelectField from '@stackpress/ink-ui/field/select';
             </ide-code>
           </ide-app>
 
-          <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <p class="mb-20">The `&lt;field-select&gt;` component provides a customizable dropdown select input. Options can be defined using `&lt;option&gt;` or `&lt;span class="select-default-option"&gt;` tags. Below are its props:</p>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
-            <table-head>Property</table-head>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
+            <table-head>Name</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
-            <table-head>Description</table-head>
-
+            <table-head>Notes</table-head>
             <table-row>
               <table-col>name</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Name attribute for form submission.</table-col>
+              <table-col>Name attribute for form submission</table-col>
             </table-row>
-
             <table-row>
               <table-col>value</table-col>
-              <table-col>Array/String</table-col>
+              <table-col>String | Array</table-col>
               <table-col>No</table-col>
-              <table-col>Initial selected value(s); String for single, Array or JSON string (e.g., "[1, 2]") for multiple.</table-col>
+              <table-col>Initial value(s); string for single, array for multiple</table-col>
             </table-row>
-
             <table-row>
               <table-col>placeholder</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Placeholder text when no options are selected (defaults to "Choose Option").</table-col>
+              <table-col>Text when no option is selected (default: "Choose Option")</table-col>
             </table-row>
-
             <table-row>
               <table-col>custom</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Enables custom option input.</table-col>
+              <table-col>Enables adding custom options via input</table-col>
             </table-row>
-
             <table-row>
               <table-col>search</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Enables search functionality within options.</table-col>
+              <table-col>Enables search filtering of options</table-col>
             </table-row>
-
             <table-row>
               <table-col>multiple</table-col>
               <table-col>Boolean</table-col>
               <table-col>No</table-col>
-              <table-col>Enables multiple selection.</table-col>
+              <table-col>Allows multiple selections (assumed supported)</table-col>
             </table-row>
-
-            <table-row>
-              <table-col>disabled</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Disables the select input.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>required</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>Marks the input as required.</table-col>
-            </table-row>
-
             <table-row>
               <table-col>open</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Callback when the dropdown opens.</table-col>
+              <table-col>Callback when dropdown opens</table-col>
             </table-row>
-
             <table-row>
               <table-col>close</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Callback when the dropdown closes.</table-col>
+              <table-col>Callback when dropdown closes</table-col>
             </table-row>
-
             <table-row>
               <table-col>filter</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Callback when the search input changes, receiving the event.</table-col>
+              <table-col>Callback on search input change</table-col>
             </table-row>
-
             <table-row>
               <table-col>select</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Callback when an option is selected, receiving the event.</table-col>
+              <table-col>Callback when an option is selected</table-col>
             </table-row>
-
             <table-row>
               <table-col>remove</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Callback when an option is removed, receiving the event.</table-col>
+              <table-col>Callback when an option is removed</table-col>
             </table-row>
-
             <table-row>
               <table-col>add</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Callback when a custom option is added, receiving the event.</table-col>
+              <table-col>Callback when a custom option is added</table-col>
             </table-row>
-
             <table-row>
               <table-col>clear</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Callback when selections are cleared, receiving the event.</table-col>
+              <table-col>Callback when selections are cleared</table-col>
             </table-row>
-
             <table-row>
               <table-col>change</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Custom handler for change events, receiving the event.</table-col>
+              <table-col>Callback on selection change</table-col>
             </table-row>
-
             <table-row>
               <table-col>update</table-col>
               <table-col>Function</table-col>
               <table-col>No</table-col>
-              <table-col>Callback with the updated value(s).</table-col>
+              <table-col>Callback with updated value(s)</table-col>
             </table-row>
-
             <table-row>
               <table-col>class</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>CSS classes for the host element (use Ink utilities).</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Inline styles (prefer Ink utilities instead).</table-col>
+              <table-col>Custom CSS classes for the host element</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Select Input -->
-          <a name="basicSelect"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Select Input</h2>
-          <div class="mb-10">A basic single-select input with predefined options.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-select name="color">
-                <option value="red">Red</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-              </field-select>
-            </div>
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">A simple single-select dropdown with options.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-select name="color">
+              <option value="red">Red</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+            </field-select>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-select name="color"&gt;
               &lt;option value="red"&gt;Red&lt;/option&gt;
               &lt;option value="blue"&gt;Blue&lt;/option&gt;
@@ -343,71 +299,61 @@
             &lt;/field-select&gt;
           </ide-code>
 
-          <!-- Select with Search -->
-          <a name="selectWithSearch"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Select with Search</h2>
-          <div class="mb-10">A select input with search functionality and multiple selection.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-select name="fruits"  search multiple >
-                <option value="apple">Apple</option>
-                <option value="banana">Banana</option>
-                <option value="orange">Orange</option>
-                <option value="grape">Grape</option>
-                <option value="pineapple">Pineapple</option>
-                <option value="mango">Mango</option>
-              </field-select>
-            </div>
+          <a name="search"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">With Search</h2>
+          <div class="mb-10">A select field with search and multiple selection.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-select name="fruits"  search multiple >
+              <option value="apple">Apple</option>
+              <option value="banana">Banana</option>
+              <option value="orange">Orange</option>
+              <option value="grape">Grape</option>
+            </field-select>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-select 
               name="fruits" 
               value='["apple", "banana"]' 
               search 
               multiple 
-              filter={(e) =&gt; console.log('Filter event:', e.target.value)}
+              filter={(e) =&gt; console.log('Filter:', e.target.value)}
             &gt;
               &lt;option value="apple"&gt;Apple&lt;/option&gt;
               &lt;option value="banana"&gt;Banana&lt;/option&gt;
               &lt;option value="orange"&gt;Orange&lt;/option&gt;
               &lt;option value="grape"&gt;Grape&lt;/option&gt;
-              &lt;option value="pineapple"&gt;Pineapple&lt;/option&gt;
-              &lt;option value="mango"&gt;Mango&lt;/option&gt;
             &lt;/field-select&gt;
           </ide-code>
 
-          <!-- Enhanced Select Input -->
-          <a name="enhancedSelect"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Enhanced Select Input</h2>
-          <div class="mb-10">An enhanced select input with multiple features and event handlers.</div>
-          <div class="basis-third lg-basis-half md-basis-full mb-20">
-            <div class="bg-t-3 p-10 flex flex-col items-center justify-center">
-              <field-select class="w-200 relative z-1" name="select" placeholder="Choose"  search custom multiple         >
-                <option value="1" keyword="option 1">Option 1</option>
-                <option value="4" keyword="option 2"><strong>Option 2</strong></option>
-                <option value="3" keyword="option 3">Option 3</option>
-                <option value="2" keyword="option 4">Option 4</option>
-              </field-select>
-            </div>
+          <a name="enhanced"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Enhanced Features</h2>
+          <div class="mb-10">A select field with search, custom input, multiple selection, and event handlers.</div>
+          <div class="bg-t-3 p-10 mb-10">
+            <field-select class="w-200 relative z-1" name="select" placeholder="Choose" value="1" search custom multiple         >
+              <option value="1" keyword="option 1">Option 1</option>
+              <option value="4" keyword="option 2"><strong>Option 2</strong></option>
+              <option value="3" keyword="option 3">Option 3</option>
+              <option value="2" keyword="option 4">Option 4</option>
+            </field-select>
           </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" trim >
+          <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim >
             &lt;field-select  
               class="w-200 relative z-1"
               name="select"
               placeholder="Choose" 
-              value='["1"]'
+              value="1"
               search
               custom
               multiple
-              open={(e) =&gt; console.log('open', e)}
-              close={(e) =&gt; console.log('close', e)}
-              filter={(e) =&gt; console.log('filter', e)}
-              select={(e) =&gt; console.log('select', e)}
-              remove={(e) =&gt; console.log('remove', e)}
-              add={(e) =&gt; console.log('add', e)}
-              clear={(e) =&gt; console.log('clear', e)}
-              change={(e) =&gt; console.log('change', e)}
-              update={(e) =&gt; console.log('update', e)}
+              open={(e) =&gt; console.log('Open:', e)}
+              close={(e) =&gt; console.log('Close:', e)}
+              filter={(e) =&gt; console.log('Filter:', e)}
+              select={(e) =&gt; console.log('Select:', e)}
+              remove={(e) =&gt; console.log('Remove:', e)}
+              add={(e) =&gt; console.log('Add:', e)}
+              clear={(e) =&gt; console.log('Clear:', e)}
+              change={(e) =&gt; console.log('Change:', e)}
+              update={(e) =&gt; console.log('Update:', e)}
             &gt;
               &lt;option value="1" keyword="option 1"&gt;Option 1&lt;/option&gt;
               &lt;option value="4" keyword="option 2"&gt;&lt;strong&gt;Option 2&lt;/strong&gt;&lt;/option&gt;
@@ -416,7 +362,7 @@
             &lt;/field-select&gt;
           </ide-code>
 
-          <!-- Styled Select Input -->
+ <!-- Styled Select Input -->
           <a name="styledSelect"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Styled Select Input</h2>
           <div class="mb-10">A styled select input with custom options, styling, and hover effects using Ink utilities.</div>
@@ -443,15 +389,12 @@
             &lt;/field-select&gt;
           </ide-code>
 
-          <!-- Navigation -->
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/field/rating.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Rating
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Rating Field
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/field/slug.html">
-              Slug
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Slug Field<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

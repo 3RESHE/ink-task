@@ -26,7 +26,7 @@
   import { _ } from '@/components/i18n';
 
   const url = '/ink/panel.html';
-  const title = _('Ink UI - Web Components Meets Atomic Styles.');
+  const title = _('Ink UI - Panel Component');
   const description = _('Ink UI atomically generates CSS styles and provides out of box web components.');
   
   const toggle = () => {
@@ -96,7 +96,6 @@
           </ide-app>
              <a name="slots"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Slots')}</h2>
-          <p class="mb-10">{_('The <panel-layout> component uses slots for its structure. No props are required.')}</p>
           <layout-table 
             top 
             head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" 
@@ -164,7 +163,7 @@
           </main>
         </div>
 
-        <ide-code class="scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white" trim detab={2}>{`
+        <ide-code class="scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white" trim detab={12}>{`
           <div class="h-200 bg-t-3 relative">
             <header class="absolute top-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted">
               <div class="p-10">Header</div>
@@ -203,7 +202,7 @@
           </footer>
         </div>
 
-        <ide-code class="scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white" trim detab={2}>{`
+        <ide-code class="scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white" trim detab={12}>{`
           <div class="h-300 bg-t-3 relative">
             <header class="absolute top-0 left-0 right-0 h-50 bg-t-1 b-solid b-muted">
               <div class="p-10">Header</div>
@@ -234,12 +233,11 @@
 
         <div class="bg-t-3 h-120 flex items-center justify-center">
           <div class="relative w-80p h-80p b-solid b-t-1">
-            <!-- Header -->
+
             <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
               <div class="p-5">Header</div>
             </header>
 
-            <!-- Main Content -->
             <main class="absolute top-50p bottom-0 left-0 right-0 b-solid b-t-1">
               <div class="p-5">Main Content</div>
             </main>
@@ -247,15 +245,15 @@
         </div>
 
 
-      <ide-code class="scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white" trim detab={2}>{`
+      <ide-code class="scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white" trim detab={12}>{`
         <div class="bg-t-3 h-120 flex items-center justify-center">
           <div class="relative w-80p h-80p b-solid b-t-1">
-            <!-- Header -->
+
             <header class="absolute top-0 left-0 right-0 h-50p b-solid b-t-1">
               <div class="p-5">Header</div>
             </header>
 
-            <!-- Main Content -->
+
             <main class="absolute top-50p bottom-0 left-0 right-0 b-solid b-t-1">
               <div class="p-5">Main Content</div>
             </main>
@@ -324,7 +322,7 @@
           </aside>
         </div>
 
-        <ide-code class="scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white" trim detab={2}>{`
+        <ide-code class="scroll-y-auto mb-20 w-full max-w-full min-w-full overflow-auto bg-black tx-white" trim detab={12}>{`
           <div class="h-300 bg-t-3 flex flex-col lg-flex-row">
             <header class="h-50 bg-t-1 b-solid b-muted">
               <div class="p-10">Header</div>

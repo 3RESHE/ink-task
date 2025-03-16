@@ -787,7 +787,7 @@ ${document.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\index.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\index.ink
   var pages_exports = {};
   __export(pages_exports, {
     default: () => Index_a00dc923ba7c362cbd00
@@ -808,7 +808,7 @@ ${document.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\index.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\index.ink
   var Index_a00dc923ba7c362cbd00 = class extends import_Document2.default {
     id() {
       return "a00dc923ba7c362cbd00";

@@ -34,7 +34,7 @@
   import { _ } from '@/components/i18n';
 
   const url = '/ink/panel.html';
-  const title = _('Ink UI - Web Components Meets Atomic Styles.');
+  const title = _('Ink UI - Components');
   const description = _('Ink UI atomically generates CSS styles and provides out of box web components.');
   
   const toggle = () => {

@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Color Format Component</title>
+  <meta name="description" content="A component for displaying colors with a swatch and optional text label." />
+  <meta property="og:title" content="Ink UI - Color Format Component" />
+  <meta property="og:description" content="A component for displaying colors with a swatch and optional text label." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/format/color.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Color Format Component" />
+  <meta name="twitter:description" content="A component for displaying colors with a swatch and optional text label." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -126,39 +126,38 @@
 
 
     <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper">
-    UI
-  </h6>
-  
-    <a class="block tx-info py-10 pl-10" href="/ink/ui/index.html">
-      Components
-    </a>
-  
-  
-  
-  
-    <a class="block tx-info py-10 pl-10" href="/ink/ui/form/index.html">
-      Form
-    </a>
-  
+  UI
+</h6>
 
-  
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
-      Formats
-    </a>
-  
+  <a class="block tx-info py-10 pl-10" href="/ink/ui/index.html">
+    Components
+  </a>
+
+
+
+  <a class="block tx-info py-10 pl-10" href="/ink/ui/form/index.html">
+    Forms
+  </a>
+
+
+
+  <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
+    Formats
+  </a>
+
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Color">Color</a>
+            <a class="block tx-t-0" href="#color">Color</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#swatchAndText">• Swatch and Text</a>
-              <a class="block tx-t-1" href="#swatchOnly">• Swatch Only</a>
-              <a class="block tx-t-1" href="#textOnly">• Text Only</a>
+              <a class="block tx-t-1" href="#basic">• Basic Color</a>
+              <a class="block tx-t-1" href="#box-only">• Box Only</a>
+              <a class="block tx-t-1" href="#text-only">• Text Only</a>
+              <a class="block tx-t-1" href="#sized">• Sized Color</a>
+              <a class="block tx-t-1" href="#bold">• Bold Color</a>
             </nav>
           </nav>
         </menu>
@@ -169,114 +168,136 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Color"></a>
+          <a name="color"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">Color</h1>
-          <ide-app title="Color" class="py-20">
+          <ide-app title="Format Color" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import Color from '@stackpress/ink-ui/format/color';
+              import FormatColor from '@stackpress/ink-ui/format/color';
             </ide-code>
           </ide-app>
 
           <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <p class="mb-20">The `&lt;format-color&gt;` component displays a color value as a swatch, text, or both. Use `box-sm`, `box-md`, or `box-lg` to change the size of the color swatch, and `text-sm`, `text-md`, or `text-lg` to adjust the text size.</p>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
+          <p class="mb-20">Configure the color display with these props. Use Ink utilities via `class` for additional styling.</p>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
             <table-head>Property</table-head>
             <table-head>Type</table-head>
-            <table-head>Required</table-head>
+            <table-head>Default</table-head>
             <table-head>Description</table-head>
 
             <table-row>
               <table-col>value</table-col>
               <table-col>String</table-col>
-              <table-col>Yes</table-col>
-              <table-col>The color value to display (e.g., "red", "#FF0000"). Used as the background color of the swatch and text content if `text` is enabled.</table-col>
+              <table-col>-</table-col>
+              <table-col>Color value (e.g., "red", "#FF0000") for the swatch and text label.</table-col>
             </table-row>
 
             <table-row>
               <table-col>box</table-col>
-              <table-col>Object/Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>If true, displays a color swatch. If an object or modifier (e.g., `box-md`), sets the swatch size. Defaults to false unless `text` is enabled.</table-col>
+              <table-col>Boolean | Object</table-col>
+              <table-col>false</table-col>
+              <table-col>Shows a color swatch. If an object, accepts size props (e.g., `box-sm`, `box-md`). Defaults to 16px if true.</table-col>
             </table-row>
 
             <table-row>
               <table-col>text</table-col>
               <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>If true, displays the color value as text. If a modifier (e.g., `text-md`), sets the text size. Defaults to true if `box` is enabled.</table-col>
+              <table-col>false</table-col>
+              <table-col>Shows the color value as text. Automatically enables `box` if set without `box`.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>size</table-col>
+              <table-col>String</table-col>
+              <table-col>-</table-col>
+              <table-col>Text size (e.g., "sm", "md", "lg") applied to the component.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>bold</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>false</table-col>
+              <table-col>Applies bold font weight to the text.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>display</table-col>
+              <table-col>String</table-col>
+              <table-col>"inline-flex"</table-col>
+              <table-col>Display style ("flex", "inline-flex", "block", etc.). Aligns box and text if flex.</table-col>
             </table-row>
 
             <table-row>
               <table-col>class</table-col>
               <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Ink utility classes for styling (e.g., "p-4").</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>style</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Inline styles (use `class` with Ink utilities instead).</table-col>
+              <table-col>-</table-col>
+              <table-col>Ink utility classes for styling (e.g., "p-5 gap-10").</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Swatch and Text -->
-          <a name="swatchAndText"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Swatch and Text</h2>
-          <div class="mb-10">Displays both a color swatch and the color value as text in default and medium sizes.</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-color value="red" class="p-4"></format-color><br />
-              <format-color box-md text-md value="red" class="p-4"></format-color>
-            </div>
+          <!-- Basic Color -->
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Color</h2>
+          <div class="mb-10">A color swatch with its value as text.</div>
+          <div class="bg-t-3 p-10 mb-20">
+            <format-color box-md text-md value="red"></format-color>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;format-color value="red" class="p-4" /&gt;&lt;br /&gt;
-            &lt;format-color box-md text-md value="red" class="p-4" /&gt;
+            &lt;format-color box-md text-md value="red" /&gt;
           </ide-code>
 
-          <!-- Swatch Only -->
-          <a name="swatchOnly"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Swatch Only</h2>
-          <div class="mb-10">Displays only the color swatch, without text, in default and large sizes.</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-color box value="blue"  class="p-4"></format-color><br />
-              <format-color box-lg value="blue"  class="p-4"></format-color>
-            </div>
+          <!-- Box Only -->
+          <a name="box-only"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Box Only</h2>
+          <div class="mb-10">A standalone color swatch without text.</div>
+          <div class="bg-t-3 p-10 mb-20">
+            <format-color box value="#00FF00"></format-color>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;format-color box value="blue" text={false} class="p-4" /&gt;&lt;br /&gt;
-            &lt;format-color box-lg value="blue" text={false} class="p-4" /&gt;
+            &lt;format-color box value="#00FF00" /&gt;
           </ide-code>
 
           <!-- Text Only -->
-          <a name="textOnly"></a>
+          <a name="text-only"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Text Only</h2>
-          <div class="mb-10">Displays only the color value as text, without a swatch, in default and small sizes.</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-color value="green"  text class="p-4"></format-color><br />
-              <format-color value="green"  text-sm class="p-4"></format-color>
-            </div>
+          <div class="mb-10">The color value as text without a swatch.</div>
+          <div class="bg-t-3 p-10 mb-20">
+            <format-color text value="blue" ></format-color>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;format-color value="green" box={false} text class="p-4" /&gt;&lt;br /&gt;
-            &lt;format-color value="green" box={false} text-sm class="p-4" /&gt;
+            &lt;format-color text value="blue" box={false} /&gt;
+          </ide-code>
+
+          <!-- Sized Color -->
+          <a name="sized"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Sized Color</h2>
+          <div class="mb-10">A color display with custom box and text sizes.</div>
+          <div class="bg-t-3 p-10 mb-20">
+            <format-color box-lg text-xl value="purple"></format-color>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
+            &lt;format-color box-lg text-xl value="purple" /&gt;
+          </ide-code>
+
+          <!-- Bold Color -->
+          <a name="bold"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Bold Color</h2>
+          <div class="mb-10">A color with bold text and a swatch.</div>
+          <div class="bg-t-3 p-10 mb-20">
+            <format-color box-sm text-md bold value="#FFA500"></format-color>
+          </div>
+          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
+            &lt;format-color box-sm text-md bold value="#FFA500" /&gt;
           </ide-code>
 
           <!-- Navigation -->
           <nav class="flex">
-            <a class="tx-primary py-40" href="/ink/ui/format/index.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Formats Index
+            <a class="tx-primary py-40" href="/ink/ui/format/code.html">
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Code
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/format/country.html">
-              Country
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Country<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>

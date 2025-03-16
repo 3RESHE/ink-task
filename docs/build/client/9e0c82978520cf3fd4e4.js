@@ -3532,7 +3532,7 @@ var InkAPI = (() => {
     }
   });
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\compiler-api.ink
+  // ink-document-client-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\docs\compiler-api.ink
   var compiler_api_exports = {};
   __export(compiler_api_exports, {
     BUILD_ID: () => BUILD_ID,
@@ -3549,7 +3549,7 @@ var InkAPI = (() => {
   var import_Emitter = __toESM(require_Emitter());
   var import_data = __toESM(require_data());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\layout\panel.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink-task\node_modules\@stackpress\ink-ui\layout\panel.ink
   var import_Registry = __toESM(require_Registry());
   var import_Component = __toESM(require_Component());
   var Panel_c4c96a14064fc0c4d224 = class extends import_Component.default {
@@ -3710,7 +3710,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\node_modules\@stackpress\ink-ui\element\icon.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink-task\node_modules\@stackpress\ink-ui\element\icon.ink
   var import_Registry2 = __toESM(require_Registry());
   var import_Component2 = __toESM(require_Component());
   var import_StyleSet = __toESM(require_StyleSet());
@@ -3742,7 +3742,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\docs.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\components\api\docs.ink
   var import_Registry3 = __toESM(require_Registry());
   var import_Component3 = __toESM(require_Component());
   var import_ink = __toESM(require_ink());
@@ -3771,11 +3771,11 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\ui.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\components\api\ui.ink
   var import_Registry5 = __toESM(require_Registry());
   var import_Component5 = __toESM(require_Component());
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\ide\code.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\components\ide\code.ink
   var import_Registry4 = __toESM(require_Registry());
   var import_Component4 = __toESM(require_Component());
   var import_prismjs = __toESM(require_prism());
@@ -3972,7 +3972,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\ui.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\components\api\ui.ink
   var import_ink3 = __toESM(require_ink());
 
   // src/components/api/types.json
@@ -6203,7 +6203,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\api\ui.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\components\api\ui.ink
   var Ui_2b08d18966ac07e0669a = class extends import_Component5.default {
     static id = "2b08d18966ac07e0669a";
     static tagname = "ui";
@@ -6508,7 +6508,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
   var import_Registry6 = __toESM(require_Registry());
   var import_Component6 = __toESM(require_Component());
 
@@ -6524,7 +6524,7 @@ var InkAPI = (() => {
     return phrase;
   };
 
-  // ink-component-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\components\i18n\translate.ink
+  // ink-component-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\components\i18n\translate.ink
   var Translate_794a00a5e900fca28310 = class extends import_Component6.default {
     static id = "794a00a5e900fca28310";
     static tagname = "translate";
@@ -6600,7 +6600,7 @@ var InkAPI = (() => {
     }
   };
 
-  // ink-document-client-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\docs\compiler-api.ink
+  // ink-document-client-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\docs\compiler-api.ink
   var import_ink4 = __toESM(require_ink());
   var TemplateDocument = class _TemplateDocument extends import_Document2.default {
     static sync() {
@@ -6815,7 +6815,7 @@ var InkAPI = (() => {
                     ]),
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/index.html") ? [
+                    ...!!(url === "/ink/docs/index.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/index.html` }, [
@@ -6843,7 +6843,7 @@ var InkAPI = (() => {
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/getting-started.html") ? [
+                    ...!!(url === "/ink/docs/getting-started.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/getting-started.html` }, [
@@ -6881,7 +6881,7 @@ var InkAPI = (() => {
                     ]),
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/markup-syntax.html") ? [
+                    ...!!(url === "/ink/docs/markup-syntax.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/markup-syntax.html` }, [
@@ -6909,7 +6909,7 @@ var InkAPI = (() => {
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/state-management.html") ? [
+                    ...!!(url === "/ink/docs/state-management.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/state-management.html` }, [
@@ -6937,7 +6937,7 @@ var InkAPI = (() => {
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/component-strategy.html") ? [
+                    ...!!(url === "/ink/docs/component-strategy.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/component-strategy.html` }, [
@@ -6965,7 +6965,7 @@ var InkAPI = (() => {
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/compiler-api.html") ? [
+                    ...!!(url === "/ink/docs/compiler-api.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/compiler-api.html` }, [
@@ -6993,7 +6993,7 @@ var InkAPI = (() => {
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/client-api.html") ? [
+                    ...!!(url === "/ink/docs/client-api.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/client-api.html` }, [
@@ -7031,7 +7031,7 @@ var InkAPI = (() => {
                     ]),
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/template-engine.html") ? [
+                    ...!!(url === "/ink/docs/template-engine.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/template-engine.html` }, [
@@ -7059,7 +7059,7 @@ var InkAPI = (() => {
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/single-page.html") ? [
+                    ...!!(url === "/ink/docs/single-page.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/single-page.html` }, [
@@ -7087,7 +7087,7 @@ var InkAPI = (() => {
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/static-site.html") ? [
+                    ...!!(url === "/ink/docs/static-site.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/static-site.html` }, [
@@ -7115,7 +7115,7 @@ var InkAPI = (() => {
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/component-publisher.html") ? [
+                    ...!!(url === "/ink/docs/component-publisher.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/component-publisher.html` }, [
@@ -7143,7 +7143,7 @@ var InkAPI = (() => {
                     ] : [],
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/docs/developer-tools.html") ? [
+                    ...!!(url === "/ink/docs/developer-tools.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/docs/developer-tools.html` }, [
@@ -7171,8 +7171,7 @@ var InkAPI = (() => {
                     ] : [],
                     import_Document.default.createText(`
 
-
-    `, false),
+  `, false),
                     import_Document.default.createElement("h6", { "class": `bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper` }, [
                       import_Document.default.createText(`
     `, false),
@@ -7182,7 +7181,7 @@ var InkAPI = (() => {
                     ]),
                     import_Document.default.createText(`
   `, false),
-                    ...!!(url === "/ui/index.html") ? [
+                    ...!!(url === "/ink/ui/index.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/index.html` }, [
@@ -7209,16 +7208,14 @@ var InkAPI = (() => {
   `, false)
                     ] : [],
                     import_Document.default.createText(`
-  
-  
   `, false),
-                    ...!!(url === "/docs/state-management.html") ? [
+                    ...!!(url === "/ink/ui/form/index.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/form/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Form")),
+                        ...this._toNodeList(_("Forms")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -7231,7 +7228,7 @@ var InkAPI = (() => {
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10`, "href": `/ink/ui/form/index.html` }, [
                         import_Document.default.createText(`
       `, false),
-                        ...this._toNodeList(_("Form")),
+                        ...this._toNodeList(_("Forms")),
                         import_Document.default.createText(`
     `, false)
                       ]),
@@ -7239,9 +7236,8 @@ var InkAPI = (() => {
   `, false)
                     ] : [],
                     import_Document.default.createText(`
-
   `, false),
-                    ...!!(url === "/docs/client-api.html") ? [
+                    ...!!(url === "/ink/ui/format/index.html") ? [
                       import_Document.default.createText(`
     `, false),
                       import_Document.default.createElement("a", { "class": `block tx-info py-10 pl-10 tx-bold`, "href": `/ink/ui/format/index.html` }, [

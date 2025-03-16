@@ -787,7 +787,7 @@ ${document.replace("__TEMPLATE_DATA__", client)}`;
     }
   });
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\500.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\500.ink
   var __exports = {};
   __export(__exports, {
     default: () => N500_ce266f488bf7fefe4503
@@ -808,7 +808,7 @@ ${document.replace("__TEMPLATE_DATA__", client)}`;
     return phrase;
   };
 
-  // ink-document-server-resolver:C:\Users\Win 10\dev\ink\packages\ink-web\src\pages\500.ink
+  // ink-document-server-resolver:C:\Users\Win 10\dev\ink-task\packages\ink-web\src\pages\500.ink
   var N500_ce266f488bf7fefe4503 = class extends import_Document2.default {
     id() {
       return "ce266f488bf7fefe4503";

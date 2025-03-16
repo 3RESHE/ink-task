@@ -26,7 +26,7 @@
   import { _ } from '@/components/i18n';
 
   const url = '/ink/ui/field/checkbox.html';
-  const title = _('Ink UI - Checkbox Field Component');
+  const title = _('Ink UI - Checkbox Field');
   const description = _('A customizable checkbox field with label and state management.');
   
   const toggle = () => {
@@ -36,7 +36,7 @@
     { icon: 'home', label: 'Home', href: '/ink/index.html' },
     { icon: 'book', label: 'Docs', href: '/ink/docs/index.html' },
     { icon: 'icons', label: 'UI', href: '/ink/ui/index.html' },
-    { icon: 'icons', label: 'Components', href: '/ink/ui/index.html' },
+        { icon: 'icons', label: 'Forms', href: '/ink/ui/form/index.html' },
     { label: 'Checkbox Field' }
   ];
 </script>
@@ -239,14 +239,14 @@
           <h2 class="tx-primary tx-upper tx-30 py-20">{_('Shape')}</h2>
           <div class="mb-10">Checkbox with different shapes: default (square), rounded, circle.</div>
           <div class="bg-t-3 p-10 mb-10 flex gap-20">
-            <field-checkbox name="square" label="Square" value="yes" checked />
-            <field-checkbox name="rounded" label="Rounded" value="yes" rounded checked />
-            <field-checkbox name="circle" label="Circle" value="yes" circle checked />
+            <field-checkbox name="square" label="Checked" value="yes" checked />
+            <field-checkbox name="rounded" label="Rounded" value="yes" rounded circle/>
+            <field-checkbox name="circle" label="Square" value="yes" square />
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" trim detab={12}>{`
-            <field-checkbox name="square" label="Square" value="yes" checked />
-            <field-checkbox name="rounded" label="Rounded" value="yes" rounded checked />
-            <field-checkbox name="circle" label="Circle" value="yes" circle checked />
+            <field-checkbox name="square" label="Checked" value="yes" checked />
+            <field-checkbox name="rounded" label="Rounded" value="yes" rounded circle/>
+            <field-checkbox name="circle" label="Square" value="yes" square />
           `}</ide-code>
 
           <a name="custom"></a>

@@ -28,7 +28,7 @@
   import { _ } from '@/components/i18n';
 
   const url = '/ink/ui/field/markdown.html';
-  const title = _('Ink UI - Markdown Field Component');
+  const title = _('Ink UI - Markdown Field');
   const description = _('A markdown editor with live preview using CodeMirror and Marked.');
   
   const toggle = () => {
@@ -38,7 +38,7 @@
     { icon: 'home', label: 'Home', href: '/ink/index.html' },
     { icon: 'book', label: 'Docs', href: '/ink/docs/index.html' },
     { icon: 'icons', label: 'UI', href: '/ink/ui/index.html' },
-    { icon: 'icons', label: 'Components', href: '/ink/ui/index.html' },
+        { icon: 'icons', label: 'Forms', href: '/ink/ui/form/index.html' },
     { label: 'Markdown Field' }
   ];
 </script>

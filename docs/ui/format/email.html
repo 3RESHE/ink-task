@@ -3,17 +3,17 @@
   <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ink UI - Web Components Meets Atomic Styles.</title>
-  <meta name="description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
-  <meta property="og:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta property="og:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <title>Ink UI - Email Format</title>
+  <meta name="description" content="A component for displaying email addresses as clickable mailto links with customizable labels and styles." />
+  <meta property="og:title" content="Ink UI - Email Format" />
+  <meta property="og:description" content="A component for displaying email addresses as clickable mailto links with customizable labels and styles." />
   <meta property="og:image" content="https://stackpress.github.io/ink/ink-logo.png" />
-  <meta property="og:url" content="https://stackpress.github.io/ink/ink/panel.html" />
+  <meta property="og:url" content="https://stackpress.github.io/ink/ink/ui/format/email.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@stackpress" />
-  <meta name="twitter:title" content="Ink UI - Web Components Meets Atomic Styles." />
-  <meta name="twitter:description" content="Ink UI atomically generates CSS styles and provides out of box web components." />
+  <meta name="twitter:title" content="Ink UI - Email Format" />
+  <meta name="twitter:description" content="A component for displaying email addresses as clickable mailto links with customizable labels and styles." />
   <meta name="twitter:image" content="https://stackpress.github.io/ink/ink-logo.png" />
   <link rel="favicon" href="/ink/favicon.ico" />
   <link rel="shortcut icon" type="image/png" href="/ink/favicon.png" />
@@ -126,46 +126,37 @@
 
 
     <h6 class="bt-1 bt-solid bt-t-1 tx-black tx-14 mb-0 mt-20 pt-20 pb-10 pl-10 tx-upper">
-    UI
-  </h6>
-  
-    <a class="block tx-info py-10 pl-10" href="/ink/ui/index.html">
-      Components
-    </a>
-  
-  
-  
-  
-    <a class="block tx-info py-10 pl-10" href="/ink/ui/form/index.html">
-      Form
-    </a>
-  
+  UI
+</h6>
 
-  
-    <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
-      Formats
-    </a>
-  
+  <a class="block tx-info py-10 pl-10" href="/ink/ui/index.html">
+    Components
+  </a>
+
+
+
+  <a class="block tx-info py-10 pl-10" href="/ink/ui/form/index.html">
+    Forms
+  </a>
+
+
+
+  <a class="block tx-info py-10 pl-10 mb-100" href="/ink/ui/format/index.html">
+    Formats
+  </a>
+
 </nav></aside>
       <aside right>
         <menu class="m-0 px-10 py-20 h-calc-full-40 bg-t-2 scroll-auto">
-          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">
-            On this page
-          </h6>
+          <h6 class="tx-muted tx-14 mb-0 mt-0 pb-10 tx-upper">On this page</h6>
           <nav class="tx-14 tx-lh-32">
-            <a class="block tx-t-0" href="#Email">Email</a>
+            <a class="block tx-t-0" href="#email">Email</a>
             <nav class="pl-20">
               <a class="block tx-t-1" href="#props">• Props</a>
-              <a class="block tx-t-1" href="#basicEmail">• Basic Email</a>
-              <a class="block tx-t-1" href="#labeledEmail">• Labeled Email</a>
-              <a class="block tx-t-1" href="#smallEmail">• Small Email Display</a>
-              <a class="block tx-t-1" href="#mediumEmail">• Medium Email Display</a>
-              <a class="block tx-t-1" href="#largeEmail">• Large Email Display</a>
-              <a class="block tx-t-1" href="#coloredEmail">• Colored Email Display</a>
-              <a class="block tx-t-1" href="#noUnderlineEmail">• No Underline Email</a>
-              <a class="block tx-t-1" href="#blockEmail">• Block Email Display</a>
-              <a class="block tx-t-1" href="#responsiveEmail">• Responsive Email Display</a>
-              <a class="block tx-t-1" href="#enhancedEmail">• Enhanced Email with Attributes</a>
+              <a class="block tx-t-1" href="#basic">• Basic Usage</a>
+              <a class="block tx-t-1" href="#label">• Custom Label</a>
+              <a class="block tx-t-1" href="#styled">• Styled Email</a>
+              <a class="block tx-t-1" href="#attributes">• Link Attributes</a>
             </nav>
           </nav>
         </menu>
@@ -176,19 +167,19 @@
             <element-crumbs  block bold white sep-muted link-primary ></element-crumbs>
           </nav>
 
-          <a name="Email"></a>
+          <a name="email"></a>
           <h1 class="tx-primary tx-upper tx-30 py-20">Email</h1>
-          <ide-app title="Email" class="py-20">
+          <ide-app title="Email Format" class="py-20">
             <ide-code class="scroll-y-auto mb-10 w-full max-w-full min-w-full overflow-auto bg-black text-white" lang="js" trim>
-              import Email from '@stackpress/ink-ui/format/email';
+              import EmailFormat from '@stackpress/ink-ui/format/email';
             </ide-code>
           </ide-app>
 
           <!-- Props Section -->
           <a name="props"></a>
           <h2 class="tx-primary tx-upper tx-30 py-20">Props</h2>
-          <p class="mb-20">The `&lt;format-email&gt;` component creates a clickable email link (`mailto:`) with customizable styling and additional HTML attributes. The default font-size is 13px, overridable via the `size` prop or `tx-*` classes. The link is underlined by default, controllable via the `underline` prop.</p>
-          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-1" even="bg-t-0">
+          <p class="mb-20">Customize the email link with the props below. Additional HTML attributes are passed to the `&lt;a&gt;` tag.</p>
+          <layout-table top head="py-16 px-12 bg-t-1 b-solid b-black bt-1 bb-0 bx-0" body="py-16 px-12 b-solid b-black bt-1 bb-0 bx-0" odd="bg-t-0" even="bg-t-1">
             <table-head>Property</table-head>
             <table-head>Type</table-head>
             <table-head>Required</table-head>
@@ -198,233 +189,117 @@
               <table-col>value</table-col>
               <table-col>String</table-col>
               <table-col>Yes</table-col>
-              <table-col>The email address for the `mailto:` link (e.g., "user@example.com").</table-col>
+              <table-col>Email address (e.g., "john@doe.com"). Used in the `mailto:` link and as the default display text.</table-col>
             </table-row>
 
             <table-row>
               <table-col>label</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>The display text for the link. Defaults to the `value` if not provided.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>bold</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>If true, applies bold font weight to the text. Defaults to false.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>color</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Sets the text color of the link (e.g., "var(--primary)", "#FF0000"). Defaults to inherited.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>underline</table-col>
-              <table-col>Boolean</table-col>
-              <table-col>No</table-col>
-              <table-col>If true, underlines the link. Defaults to true.</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>display</table-col>
-              <table-col>String</table-col>
-              <table-col>No</table-col>
-              <table-col>Sets display style (e.g., "inline-block", "block"). Defaults to "inline-block".</table-col>
-            </table-row>
-
-            <table-row>
-              <table-col>size</table-col>
-              <table-col>String/Number</table-col>
-              <table-col>No</table-col>
-              <table-col>Sets the font size of the link (e.g., "12px", "1rem"). Defaults to 13px.</table-col>
+              <table-col>Custom text to display instead of the email address.</table-col>
             </table-row>
 
             <table-row>
               <table-col>class</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Ink utility classes for responsive styling (e.g., "p-4", "tx-md", "md:mr-10").</table-col>
+              <table-col>Ink utility classes for styling the container (e.g., "tx-md").</table-col>
             </table-row>
 
             <table-row>
-              <table-col>style</table-col>
+              <table-col>display</table-col>
               <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Inline styles (use `class` with Ink utilities instead).</table-col>
+              <table-col>Display style for the container (e.g., "inline-block", "block"). Defaults to "inline-block".</table-col>
             </table-row>
 
             <table-row>
-              <table-col>Other attributes</table-col>
-              <table-col>-</table-col>
+              <table-col>size</table-col>
+              <table-col>String</table-col>
               <table-col>No</table-col>
-              <table-col>Additional HTML attributes (e.g., `target`, `rel`, `title`) are passed to the `&lt;a&gt;` tag.</table-col>
+              <table-col>Font size using Ink utilities (e.g., "md", "lg"). Defaults to "13px".</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>bold</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Applies bold font weight to the link if `true`.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>color</table-col>
+              <table-col>String</table-col>
+              <table-col>No</table-col>
+              <table-col>Text color for the link using Ink utilities (e.g., "primary", "secondary").</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>underline</table-col>
+              <table-col>Boolean</table-col>
+              <table-col>No</table-col>
+              <table-col>Underlines the link if `true`.</table-col>
+            </table-row>
+
+            <table-row>
+              <table-col>[html-attributes]</table-col>
+              <table-col>Any</table-col>
+              <table-col>No</table-col>
+              <table-col>Additional HTML attributes (e.g., `target`, `rel`) passed to the `&lt;a&gt;` tag.</table-col>
             </table-row>
           </layout-table>
 
-          <!-- Basic Email -->
-          <a name="basicEmail"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Email</h2>
-          <div class="mb-10">A basic email link with the default 13px font size and underlined text.</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-email value="user@example.com" class="p-4"></format-email>
-            </div>
+          <!-- Basic Usage -->
+          <a name="basic"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Basic Usage</h2>
+          <div class="mb-10">Displays an email address as a clickable mailto link with default styling.</div>
+          <div class="bg-t-3 p-10 mb-20">
+            <format-email value="john@doe.com"></format-email>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;format-email value="user@example.com" class="p-4" /&gt;
+            &lt;format-email value="john@doe.com" /&gt;
           </ide-code>
 
-          <!-- Labeled Email -->
-          <a name="labeledEmail"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Labeled Email</h2>
-          <div class="mb-10">An email link with a custom label instead of the email address.</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-email value="support@example.com" label="Contact Support" class="p-4"></format-email>
-            </div>
+          <!-- Custom Label -->
+          <a name="label"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Custom Label</h2>
+          <div class="mb-10">Displays a custom label instead of the email address.</div>
+          <div class="bg-t-3 p-10 mb-20">
+            <format-email value="jane@doe.com" label="Contact Jane"></format-email>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;format-email value="support@example.com" label="Contact Support" class="p-4" /&gt;
+            &lt;format-email value="jane@doe.com" label="Contact Jane" /&gt;
           </ide-code>
 
-          <!-- Small Email Display -->
-          <a name="smallEmail"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Small Email Display</h2>
-          <div class="mb-10">An email link with a smaller font size using `tx-xs` (10px).</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-email value="small@example.com" class="p-4 tx-xs b-solid b-t-1"></format-email>
-            </div>
+          <!-- Styled Email -->
+          <a name="styled"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Styled Email</h2>
+          <div class="mb-10">Styles the email link with size, color, and underline options.</div>
+          <div class="bg-t-3 p-10 mb-20">
+            <format-email primary underline md value="john@doe.com"></format-email>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;format-email value="small@example.com" class="p-4 tx-xs b-solid b-t-1" /&gt;
+            &lt;format-email primary underline md value="john@doe.com" /&gt;
           </ide-code>
 
-          <!-- Medium Email Display -->
-          <a name="mediumEmail"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Medium Email Display</h2>
-          <div class="mb-10">An email link with a medium font size using `tx-md` (14px) and a border.</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-email value="medium@example.com" class="p-4 tx-md b-solid b-t-2 c-4"></format-email>
-            </div>
+          <!-- Link Attributes -->
+          <a name="attributes"></a>
+          <h2 class="tx-primary tx-upper tx-30 py-20">Link Attributes</h2>
+          <div class="mb-10">Adds additional HTML attributes to the link, like `target` or `rel`.</div>
+          <div class="bg-t-3 p-10 mb-20">
+            <format-email value="support@doe.com" target="_blank" rel="noopener" bold></format-email>
           </div>
           <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;format-email value="medium@example.com" class="p-4 tx-md b-solid b-t-2 c-4" /&gt;
-          </ide-code>
-
-          <!-- Large Email Display -->
-          <a name="largeEmail"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Large Email Display</h2>
-          <div class="mb-10">An email link with a larger font size using `tx-lg` (18px) and bold styling.</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-email value="large@example.com" bold class="p-4 tx-lg mr-10"></format-email>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;format-email value="large@example.com" bold class="p-4 tx-lg mr-10" /&gt;
-          </ide-code>
-
-          <!-- Colored Email Display -->
-          <a name="coloredEmail"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Colored Email Display</h2>
-          <div class="mb-10">An email link with a custom text color using the `color` prop.</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-email value="color@example.com" color="var(--primary)" class="p-4 tx-center bg-t-1 rounded"></format-email>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;format-email 
-              value="color@example.com" 
-              color="var(--primary)" 
-              class="p-4 tx-center bg-t-1 rounded" 
-            /&gt;
-          </ide-code>
-
-          <!-- No Underline Email -->
-          <a name="noUnderlineEmail"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">No Underline Email</h2>
-          <div class="mb-10">An email link with the underline removed using `underline={false}`.</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-email value="nounderline@example.com"  class="p-4 b-solid b-t-2 c-4"></format-email>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;format-email 
-              value="nounderline@example.com" 
-              underline={false} 
-              class="p-4 b-solid b-t-2 c-4" 
-            /&gt;
-          </ide-code>
-
-          <!-- Block Email Display -->
-          <a name="blockEmail"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Block Email Display</h2>
-          <div class="mb-10">An email link as a block element with centered text and a background.</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-email value="block@example.com" display="block" class="p-4 tx-center bg-t-2 rounded"></format-email>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;format-email 
-              value="block@example.com" 
-              display="block" 
-              class="p-4 tx-center bg-t-2 rounded" 
-            /&gt;
-          </ide-code>
-
-          <!-- Responsive Email Display -->
-          <a name="responsiveEmail"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Responsive Email Display</h2>
-          <div class="mb-10">An email link that adjusts font size based on screen size (small on mobile, large on desktop).</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-email value="responsive@example.com" class="p-4 md:tx-sm lg:tx-lg"></format-email>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;format-email 
-              value="responsive@example.com" 
-              class="p-4 md:tx-sm lg:tx-lg" 
-            /&gt;
-          </ide-code>
-
-          <!-- Enhanced Email with Attributes -->
-          <a name="enhancedEmail"></a>
-          <h2 class="tx-primary tx-upper tx-30 py-20">Enhanced Email with Attributes</h2>
-          <div class="mb-10">An email link with additional HTML attributes like `target` and `title` for enhanced functionality.</div>
-          <div class="basis-third-10 lg:basis-half-10 md:basis-full mb-20">
-            <div class="bg-t-3 h-120 flex flex-center">
-              <format-email value="enhanced@example.com" label="Email Support" target="_blank" title="Opens email client in a new tab" class="p-4 b-solid b-t-2 c-4"></format-email>
-            </div>
-          </div>
-          <ide-code class="scroll-y-auto mb-10 w-full bg-black text-white" lang="html" trim >
-            &lt;format-email 
-              value="enhanced@example.com" 
-              label="Email Support" 
-              target="_blank" 
-              title="Opens email client in a new tab" 
-              class="p-4 b-solid b-t-2 c-4" 
-            /&gt;
+            &lt;format-email value="support@doe.com" target="_blank" rel="noopener" bold /&gt;
           </ide-code>
 
           <!-- Navigation -->
           <nav class="flex">
             <a class="tx-primary py-40" href="/ink/ui/format/date.html">
-              <element-icon name="chevron-left" theme="tx-1"></element-icon>
-              Date
+              <element-icon name="chevron-left" theme="tx-1"></element-icon>Date
             </a>
             <a class="flex-grow tx-right tx-primary py-40" href="/ink/ui/format/formula.html">
-              Formula
-              <element-icon name="chevron-right" theme="tx-1"></element-icon>
+              Formula<element-icon name="chevron-right" theme="tx-1"></element-icon>
             </a>
           </nav>
           <footer class="foot"></footer>
